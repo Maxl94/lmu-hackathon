@@ -1,0 +1,14 @@
+{
+  "name": "tracklist-hackathon-slides",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline workshop slides built from Markdown with Marp",
+  "scripts": {
+    "build": "marp slides.md --html --output index.html",
+    "dev": "marp slides.md --html --server",
+    "pdf": "marp slides.md --html --pdf --allow-local-files --output slides.pdf"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1"
+  }
+}

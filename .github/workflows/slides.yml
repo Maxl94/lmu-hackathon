@@ -1,0 +1,37 @@
+name: Build workshop slides
+
+on:
+  push:
+    paths:
+      - 'slides/**'
+      - '.github/workflows/slides.yml'
+  pull_request:
+    paths:
+      - 'slides/**'
+      - '.github/workflows/slides.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: slides/package-lock.json
+      - name: Install slide tooling
+        run: npm ci
+        working-directory: slides
+      - name: Build browser presentation
+        run: npm run build
+        working-directory: slides
+      - uses: actions/upload-artifact@v4
+        with:
+          name: workshop-slides
+          path: slides/index.html
+          if-no-files-found: error

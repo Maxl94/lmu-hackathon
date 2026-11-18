@@ -1,0 +1,9 @@
+[project]
+name = "tracklist-hackathon"
+version = "0.1.0"
+description = "Optional Python environment for the tracklist discovery workshop"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.0,<2",
+    "python-dotenv>=1.0,<2",
+]
