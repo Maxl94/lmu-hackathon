@@ -262,6 +262,16 @@ npm ci
 npm run build
 ```
 
+For a live preview with speaker notes, use **Marp**, the renderer used by this deck:
+
+```bash
+cd slides
+npm ci
+PORT=3030 npm run dev
+```
+
+Open `http://localhost:3030/slides.md` and press **P** for presenter view (speaker notes and next slide). Use the arrow keys to navigate. The Markdown contains Marp-specific styles; running it with `slidev` ignores those styles and breaks the layout.
+
 GitHub Actions builds the presentation and saves it as a downloadable artifact when slide files change. This runs after the repository is hosted on GitHub; it does not publish a website.
 
 Before the workshop, the organizer should:

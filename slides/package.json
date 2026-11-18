@@ -5,7 +5,7 @@
   "description": "Offline workshop slides built from Markdown with Marp",
   "scripts": {
     "build": "marp slides.md --html --output index.html",
-    "dev": "marp slides.md --html --server",
+    "dev": "marp --html --server .",
     "pdf": "marp slides.md --html --pdf --allow-local-files --output slides.pdf"
   },
   "devDependencies": {
