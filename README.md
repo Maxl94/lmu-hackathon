@@ -2,7 +2,7 @@
 
 **Find the right release. Recover its songs. Show why we should trust the result.**
 
-A four-hour hackathon for master's students, working in 3–4 teams.
+A four-hour hackathon for master's students, working in approximately four teams of four to five people.
 
 [Challenge](#the-challenge) · [Data](#the-data) · [Schedule](#four-hour-workshop) · [Pitch](#your-ten-minute-pitch) · [Python setup](#optional-python-and-gemini) · [Frameworks](#optional-use-a-framework) · [Slides](#slides-and-organizer-checklist)
 
@@ -75,7 +75,7 @@ No verified tracklists are included. Your team decides how to check the results 
 | 03:10–03:50 | Each team presents to everyone for 10 minutes |
 | 03:50–04:00 | Joint discussion, select the strongest project and share takeaways |
 
-Take a short break during the working session when needed. The pitch session starts at 03:10. With three teams, the remaining 10 minutes becomes extra discussion time.
+Take a short break during the working session when needed. The pitch session starts at 03:10.
 
 ## Your ten-minute pitch
 
