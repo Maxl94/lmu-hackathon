@@ -4,7 +4,7 @@
 
 A four-hour hackathon for master's students, working in approximately four teams of four to five people.
 
-[Challenge](#the-challenge) · [Data](#the-data) · [Schedule](#four-hour-workshop) · [Pitch](#your-ten-minute-pitch) · [Python setup](#optional-python-and-gemini) · [Frameworks](#optional-use-a-framework) · [Slides](#slides-and-organizer-checklist)
+[Challenge](#the-challenge) · [Data](#the-data) · [Schedule](#four-hour-workshop) · [Pitch](#your-ten-minute-pitch) · [Getting started](#getting-started-get-the-repository) · [Python setup](#optional-python-and-gemini) · [Frameworks](#optional-use-a-framework) · [Slides](#slides-and-organizer-checklist)
 
 ## Why this matters
 
@@ -102,12 +102,126 @@ Presentation polish is secondary to evidence and judgment. We will share feedbac
 
 ## Start here
 
-1. Open `data/releases.csv` and read [the data section](#the-data). Preserve leading zeros in barcodes.
+1. Get a local copy using [Getting started](#getting-started-get-the-repository), then open `data/releases.csv` and read [the data section](#the-data). Preserve leading zeros in barcodes.
 2. Choose your five records, agree what a correct result would look like and divide the work. Copying these input rows into your tool is fine; automating CSV import is optional.
 3. Get the smallest end-to-end workflow running. Use `work/` for experiments, or your preferred tools.
 4. Capture outputs, sources, failures and rough costs as you go. They are your pitch evidence.
 
 The examples below are optional connection checks. They do not search for tracklists or solve the challenge for you.
+
+## Getting started: get the repository
+
+New to these tools? **Git** downloads the repository and tracks changes. **Python** runs Python scripts. **uv** installs Python and the packages those scripts need. Git and the Python setup are optional if you use a no-code tool; you still need the workshop data.
+
+### 1. Install Git and uv
+
+Choose your operating system below. Run commands one line at a time in the indicated terminal, pressing Enter after each line. Skip tools you already have. Install uv only if you want to use the Python examples.
+
+<details>
+<summary><strong>Windows — PowerShell</strong></summary>
+
+Open **PowerShell** from the Start menu.
+
+Install Git using the [official Git for Windows installer](https://git-scm.com/install/win), or run:
+
+```powershell
+winget install --id Git.Git -e --source winget
+```
+
+Install uv:
+
+```powershell
+winget install --id=astral-sh.uv -e
+```
+
+If `winget` is unavailable, use the Git installer and the Windows instructions in the [official uv installation guide](https://docs.astral.sh/uv/getting-started/installation/).
+
+Close PowerShell and open it again after installation so it can find the new commands.
+
+</details>
+
+<details>
+<summary><strong>macOS — Terminal</strong></summary>
+
+Open **Terminal** using Spotlight (Command + Space, then type “Terminal”).
+
+Install Git through Apple's Command Line Tools and finish the installation dialog:
+
+```bash
+xcode-select --install
+```
+
+If the tools are already installed, continue. Other options are listed in the [official Git installation guide for macOS](https://git-scm.com/install/mac).
+
+Install uv using its [official installer](https://docs.astral.sh/uv/getting-started/installation/):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Close Terminal and open it again after installation.
+
+</details>
+
+<details>
+<summary><strong>Linux — Terminal</strong></summary>
+
+Open your terminal. On Ubuntu or Debian, install Git with:
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+On Fedora, use `sudo dnf install git`. For other distributions, see the [official Git installation guide for Linux](https://git-scm.com/install/linux). Your package manager may ask for your computer password.
+
+Install uv using its [official installer](https://docs.astral.sh/uv/getting-started/installation/):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+If `curl` is missing, install it with your distribution's package manager first. Close your terminal and open it again after installation.
+
+</details>
+
+Check the installation in your new terminal (skip the uv check if you are not using Python):
+
+```bash
+git --version
+uv --version
+```
+
+Each command should print a version number. If a command is not found, restart your terminal first; if it still fails, ask the organizer.
+
+### 2. Download your copy (clone)
+
+Open the [workshop repository on GitHub](https://github.com/cloudIT4IPM/ai4-lmu-hackathon) and confirm you can access it. Then run these commands in your terminal (the same commands work in PowerShell):
+
+```bash
+git clone https://github.com/cloudIT4IPM/ai4-lmu-hackathon.git
+cd ai4-lmu-hackathon
+```
+
+`git clone` creates a folder with the workshop files. `cd` moves your terminal into that folder. This is the **repository root**: you should see `README.md`, `data/` and `pyproject.toml` when you open it in your file manager or editor. Keep this terminal open for the setup below.
+
+If Git asks you to sign in, use the GitHub account that has repository access. A “Repository not found” or permission error can mean that access has not been granted; ask the organizer.
+
+**Without Git:** on the repository page, choose **Code → Download ZIP**, extract it, and open the extracted folder. If you cannot access GitHub, ask the organizer for the workshop ZIP or CSV. To run the Python commands, open a terminal in the extracted folder containing `pyproject.toml`. ZIP downloads do not include Git history; you can skip the Git collaboration instructions.
+
+### 3. Install Python with uv (optional)
+
+For the Python examples, run this from the repository root on **any of the three operating systems**:
+
+```bash
+uv python install 3.12
+```
+
+You do not need to install Python separately before installing uv. The [uv Python installation guide](https://docs.astral.sh/uv/guides/install-python/) explains how it manages Python for you.
+
+If you want a separate Python installation for other work, the [official Python downloads](https://www.python.org/downloads/) provide platform links. For this workshop, use the uv command above so everyone uses the version specified by the repository.
+
+Continue with the environment setup below. If you use another language or a no-code tool, return to [Start here](#start-here).
 
 ## Optional: Python and Gemini
 
@@ -115,13 +229,14 @@ Run **all commands from the repository root**—the folder containing this READM
 
 ### 1. Install the environment
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run:
+After completing [Getting started](#getting-started-get-the-repository), run:
 
 ```bash
 uv sync --locked
+uv run python --version
 ```
 
-This sets up Python 3.12, the Google Gen AI SDK and `python-dotenv`.
+This creates the project environment and installs the Google Gen AI SDK and `python-dotenv`. The final command should print `Python 3.12.x`. No manual environment activation is needed; use `uv run` for the examples below.
 
 ### 2. Configure workshop access
 
@@ -275,6 +390,8 @@ Open `http://localhost:3030/slides.md` and press **P** for presenter view (speak
 GitHub Actions builds the presentation and saves it as a downloadable artifact when slide files change. This runs after the repository is hosted on GitHub; it does not publish a website.
 
 Before the workshop, the organizer should:
+
+- Confirm participants can obtain the repository and data. If GitHub access is unavailable, provide a workshop ZIP or CSV before the session.
 
 - Test a live Vertex AI call using the supplied project, model, location and temporary key. Access is ready only after this succeeds; installing dependencies alone does not confirm it.
 - Confirm the cloud budget and usage limits, and explain them to participants.
