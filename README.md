@@ -29,7 +29,7 @@ For each record, aim to return:
 - Source links that support the release match and tracklist.
 - A clear outcome: a supported match, a case needing review or no match found. Keep technical failures visible too.
 
-**The tools are your choice.** Catalog APIs, automated web search, AI, scripts, no-code workflows or combinations are all welcome. There is no required language, framework or architecture. This repository provides the CSV file and an optional Python/Vertex AI starting point; use other tools you can access.
+**The tools are your choice.** Catalog APIs, automated web search, AI, scripts, no-code workflows or combinations are all welcome. There is no required language, framework or architecture. This repository provides the CSV file and an optional Python/Gemini starting point; use other tools you can access.
 
 Manual checks help you understand the records and evaluate your results. The solution itself must automate discovery. A slide describing a future system or five manually researched tracklists is not the target.
 
@@ -238,22 +238,28 @@ uv run python --version
 
 This creates the project environment and installs the Google Gen AI SDK and `python-dotenv`. The final command should print `Python 3.12.x`. No manual environment activation is needed; use `uv run` for the examples below.
 
-### 2. Configure workshop access
+### 2. Choose your access method
 
-Copy [`.env.example`](.env.example) to `.env` in the repository root. Fill in the project, location and model supplied by the organizer:
+**Start with the Gemini API key unless your team needs Google Cloud access.** Both options below call Gemini; you only need one. The organizer supplies the credentials. You do not need to create a Google Cloud project or service account yourself.
+
+| | Gemini API key — easiest start | Vertex AI — service account |
+| --- | --- | --- |
+| What you receive | A secret API key (text) | A temporary JSON key file |
+| What it connects to | Gemini Developer API | Vertex AI in the workshop Google Cloud project |
+| What to configure | API key and model | Key file path, project, location and model |
+
+These credentials are for different services and are not interchangeable. A Gemini API key does not give you access to the whole Vertex AI Model Garden. Other models on Vertex AI may require separate enablement and their own integration; ask the organizer before relying on them.
+
+Create a file named **`.env`** in the repository root (next to this README). You can copy [`.env.example`](.env.example) and fill in the section you need. Keep the filename exactly `.env`, not `.env.txt`. Both examples explicitly load it with `python-dotenv`, so no terminal `export` commands are needed.
+
+### Option A: Gemini API key
+
+Put these settings in `.env`, replacing the placeholder with the key supplied by the organizer:
 
 ```dotenv
-GOOGLE_CLOUD_PROJECT="PROJECT_ID"
-GOOGLE_CLOUD_LOCATION="LOCATION"
-GOOGLE_GENAI_MODEL="MODEL_ID"
-GOOGLE_APPLICATION_CREDENTIALS="/absolute/path/outside/this/repo/key.json"
+GEMINI_API_KEY="PASTE_YOUR_API_KEY_HERE"
+GOOGLE_GENAI_MODEL="gemini-3.8-flash"
 ```
-
-The organizer supplies a temporary service-account JSON key for the workshop. Keep it **outside the repository** and enter its full path in `GOOGLE_APPLICATION_CREDENTIALS`. On Windows, use forward slashes, for example `C:/Users/YourName/Downloads/key.json`.
-
-Python loads these settings from `.env`; no shell environment setup or separate API key is needed. `.env` is ignored by Git. Do not share or commit the key. Delete your local key after the workshop; the workshop credential will also be deleted after the event.
-
-### 3. Make your first call
 
 Create `work/your_script.py` and paste:
 
@@ -266,13 +272,12 @@ from google import genai
 load_dotenv(".env", override=True)
 
 with genai.Client(
-    vertexai=True,
-    project=os.environ["GOOGLE_CLOUD_PROJECT"],
-    location=os.environ["GOOGLE_CLOUD_LOCATION"],
+    vertexai=False,
+    api_key=os.environ["GEMINI_API_KEY"],
 ) as client:
     response = client.models.generate_content(
         model=os.environ["GOOGLE_GENAI_MODEL"],
-        contents="What information helps distinguish different editions of an album?",
+        contents="Reply with exactly OK.",
     )
     print(response.text)
 ```
@@ -283,89 +288,93 @@ Run it from the repository root:
 uv run python work/your_script.py
 ```
 
-The SDK uses the key referenced by `GOOGLE_APPLICATION_CREDENTIALS`. If the call fails, check the four `.env` values and the key path, or ask the organizer.
+You should see `OK`. You can now replace the prompt with your own question.
 
-This example calls Gemini **without web search**. A generated answer is not source evidence for a tracklist. Each call uses the workshop cloud budget.
+### Option B: Vertex AI with a service-account key
 
-[Google Gen AI SDK documentation](https://googleapis.github.io/python-genai/)
+A **service account** is an identity for software. Its JSON key lets your script use the permissions the organizer has assigned to it in the workshop project. You do not need to sign in with your personal Google account or install the Google Cloud CLI.
 
-## Optional: use a framework
+Save the supplied JSON file **outside the repository**. Put these settings in `.env`, replacing the example path with the full path to your file:
 
-Choose one approach; there is no need to install every framework. The direct Google SDK example above is enough to get started. These alternatives make the same connection check using the same `.env` and service-account key. They do not add search tools automatically.
-
-### LangChain
-
-Install only if you choose this approach:
-
-```bash
-uv add "langchain-google-genai==4.3.7"
+```dotenv
+GOOGLE_CLOUD_PROJECT="lmu-hackathon-dev-2926"
+GOOGLE_CLOUD_LOCATION="global"
+GOOGLE_GENAI_MODEL="gemini-3.8-flash"
+GOOGLE_APPLICATION_CREDENTIALS="/absolute/path/outside/this/repo/key.json"
 ```
 
-Use this in `work/your_script.py`:
+Example paths:
+
+- macOS: `/Users/YourName/Downloads/key.json`
+- Windows: `C:/Users/YourName/Downloads/key.json` (use forward slashes)
+- Linux: `/home/YourName/Downloads/key.json`
+
+Use the filename you actually received. The value is a **local file path**, not a web link or the JSON contents. If an earlier setup uses `SA_KEY_FILE`, rename that setting to `GOOGLE_APPLICATION_CREDENTIALS`.
+
+Paste this alternative into `work/your_script.py`:
 
 ```python
 import os
 
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+from google import genai
+from google.oauth2 import service_account
 
 load_dotenv(".env", override=True)
 
-model = ChatGoogleGenerativeAI(
-    model=os.environ["GOOGLE_GENAI_MODEL"],
+credentials = service_account.Credentials.from_service_account_file(
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"],
+    scopes=["https://www.googleapis.com/auth/cloud-platform"],
+)
+
+with genai.Client(
     vertexai=True,
     project=os.environ["GOOGLE_CLOUD_PROJECT"],
     location=os.environ["GOOGLE_CLOUD_LOCATION"],
-)
-response = model.invoke("What information helps distinguish different editions of an album?")
-print(response.content)
+    credentials=credentials,
+) as client:
+    response = client.models.generate_content(
+        model=os.environ["GOOGLE_GENAI_MODEL"],
+        contents="Reply with exactly OK.",
+    )
+    print(response.text)
 ```
 
-`vertexai=True` selects the cloud backend. The integration uses the key referenced by `GOOGLE_APPLICATION_CREDENTIALS`.
-
-[LangChain Google integration documentation](https://docs.langchain.com/oss/python/integrations/chat/google_generative_ai)
-
-### Pydantic AI
-
-Install only if you choose this approach:
-
-```bash
-uv add "pydantic-ai-slim[google]==2.31.1"
-```
-
-Use this in `work/your_script.py`:
-
-```python
-import os
-
-from dotenv import load_dotenv
-from pydantic_ai import Agent
-from pydantic_ai.models.google import GoogleModel
-from pydantic_ai.providers.google_cloud import GoogleCloudProvider
-
-load_dotenv(".env", override=True)
-
-provider = GoogleCloudProvider(
-    project=os.environ["GOOGLE_CLOUD_PROJECT"],
-    location=os.environ["GOOGLE_CLOUD_LOCATION"],
-)
-model = GoogleModel(os.environ["GOOGLE_GENAI_MODEL"], provider=provider)
-agent = Agent(model)
-result = agent.run_sync("What information helps distinguish different editions of an album?")
-print(result.output)
-```
-
-The cloud provider uses the key referenced by `GOOGLE_APPLICATION_CREDENTIALS`.
-
-[Pydantic AI Google Cloud documentation](https://pydantic.dev/docs/ai/models/google-cloud/)
-
-For either framework, run your chosen script from the repository root:
+Run it with the same command:
 
 ```bash
 uv run python work/your_script.py
 ```
 
-Search tools, structured outputs and further orchestration are choices for your team. Other frameworks and languages are equally welcome.
+You should see `OK`. This example explicitly uses the JSON credentials, even if your `.env` also contains a Gemini API key. The required packages are already installed by `uv sync --locked`.
+
+### If something goes wrong
+
+| Symptom | What to check |
+| --- | --- |
+| `KeyError` for a setting | Check its spelling and value in `.env`. Run the script from the repository root. |
+| Key file not found | Use the full local path and the actual JSON filename. |
+| Invalid API key / unauthenticated | Check that you copied the correct credential for your chosen option; ask the organizer if it has expired or been revoked. |
+| `403` / permission denied | Ask the organizer to check the service account's project permissions and that the Vertex AI API is enabled. |
+| `404` / model not found | Check the model, project and location against the settings above; availability can differ between the two services. |
+| `429` / quota exceeded | Slow down your requests and ask the organizer about the workshop limits. |
+
+Both examples are **connection checks without web search**. A generated answer is not source evidence for a tracklist. Calls consume the workshop API/cloud budget; start small.
+
+Keep API keys, JSON keys and `.env` out of commits, screenshots and presentations. `.env` is ignored by Git. Do not share credentials outside the workshop. The organizer will revoke the workshop credentials after the event; delete your local copies too.
+
+[Google Gen AI SDK documentation](https://googleapis.github.io/python-genai/)
+
+## Optional: use a framework
+
+The Google SDK examples above are enough to start. If your team prefers a framework, choose one and follow its setup guide:
+
+- **[LangChain Google integration](https://docs.langchain.com/oss/python/integrations/chat/google_generative_ai):** model calls and workflows in LangChain.
+- **[Pydantic AI Google models](https://ai.pydantic.dev/models/google/):** agents and structured outputs.
+
+Select the same backend as your chosen option: Gemini Developer API with an API key, or Vertex AI with service-account credentials. Framework configuration differs, so follow the relevant provider instructions. If you use Python, keep `load_dotenv(".env", override=True)` before creating the provider. Search tools are not added automatically.
+
+Other frameworks, languages and no-code tools are equally welcome. Use their credential settings instead of the Python examples, and check that they support your chosen backend.
 
 ## Slides and organizer checklist
 
@@ -393,7 +402,7 @@ Before the workshop, the organizer should:
 
 - Confirm participants can obtain the repository and data. If GitHub access is unavailable, provide a workshop ZIP or CSV before the session.
 
-- Test a live Vertex AI call using the supplied project, model, location and temporary key. Access is ready only after this succeeds; installing dependencies alone does not confirm it.
+- Test both connection examples with the credentials participants will receive: Gemini API key and Vertex AI service-account key. For Vertex AI, enable the API and grant the service account `roles/aiplatform.user` on the workshop project. Access is ready only after the calls succeed; installing dependencies alone does not confirm it.
 - Confirm the cloud budget and usage limits, and explain them to participants.
 - Explain that other tools, including no-code services, require participants' own access. Before the event, check at least one accessible no-code route if participants need it. Help teams check authentication and connections early; do not assume licenses or integrations are available.
 - Be available during the build session to help teams narrow their scope and resolve access blockers.
