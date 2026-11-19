@@ -73,7 +73,7 @@ No verified tracklists are included. Your team decides how to check the results 
 | 00:40–02:50 | Build, run and evaluate your prototype |
 | 02:50–03:10 | Prepare your pitch and demonstration |
 | 03:10–03:50 | Each team presents to everyone for 10 minutes |
-| 03:50–04:00 | Joint discussion, select the strongest project and share takeaways |
+| 03:50–04:00 | Discuss |
 
 Take a short break during the working session when needed. The pitch session starts at 03:10.
 
@@ -90,7 +90,7 @@ Spend most of your time showing the workflow and its results. Slides, a live dem
 
 Each team has the same 10 minutes in front of all participants. Questions follow in the joint discussion.
 
-### How we choose the winner
+### What we will discuss
 
 We will use the same three questions for every team:
 
@@ -98,7 +98,7 @@ We will use the same three questions for every team:
 - **Can the approach repeat?** A demonstrated automated workflow and a credible path to processing 1,000 records.
 - **Are the decisions convincing?** Clear reasoning about value, alternatives, limitations, costs and the next step.
 
-The winner is the project that makes the strongest practical case across these questions. Presentation polish is secondary to evidence and judgment. We will recognize the strongest approach, share feedback and learn from the choices each team made.
+Presentation polish is secondary to evidence and judgment. We will share feedback and learn from the choices each team made.
 
 ## Start here
 
