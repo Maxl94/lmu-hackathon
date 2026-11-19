@@ -12,3 +12,5 @@ credentials/
 *.key
 outputs/
 node_modules/
+lmu-hackathon-dev-2926-e950ef2da5aa.json
+*.json
