@@ -100,8 +100,8 @@ No verified tracklists are included. Your team decides how to check the results 
 | 14:20–14:40 | Choose five records, sketch the approach and agree how to check it |
 | 14:40–16:50 | Build, run and evaluate your prototype |
 | 16:50–17:10 | Prepare your pitch and demonstration |
-| 17:10–17:50 | Each team presents to everyone for 10 minutes |
-| 17:50–18:00 | Discuss |
+| 17:10–17:50 | Team pitches to everyone — 10 minutes each, including Q&A |
+| 17:50–18:00 | Wrap-up |
 
 Take a short break during the working session when needed. The pitch session starts at 17:10.
 
@@ -116,7 +116,7 @@ Spend most of your time showing the workflow and its results. Slides, a live dem
 3. **The choices:** Explain why you chose this method, its strengths and weaknesses, and where human review is needed.
 4. **The economics and next step:** Estimate the cost of processing 1,000 records. Include relevant API/search fees, runtime, setup effort and human review. A rough estimate with stated assumptions is enough. What would you improve next?
 
-Each team has the same 10 minutes in front of all participants. Questions follow in the joint discussion.
+Each team has **10 minutes total, including pitch, demonstration and Q&A**, in front of all participants. Aim for 7 minutes of presentation and demo, then 3 minutes for questions. Be ready to explain your choices and respond to the audience. We finish with a shared wrap-up from 17:50 to 18:00.
 
 ### What we will discuss
 
