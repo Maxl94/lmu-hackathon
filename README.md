@@ -25,13 +25,25 @@ Choose **five varied records** first: include barcode cases and title/artist-onl
 For each record, aim to return:
 
 - The release and edition you matched, with enough detail to distinguish alternatives.
-- Its ordered tracklist, including disc numbers and durations where available.
+- Its ordered tracklist with song titles and performing artists, including disc numbers where available.
 - Source links that support the release match and tracklist.
 - A clear outcome: a supported match, a case needing review or no match found. Keep technical failures visible too.
 
 **The tools are your choice.** Catalog APIs, automated web search, AI, scripts, no-code workflows or combinations are all welcome. There is no required language, framework or architecture. This repository provides the CSV file and an optional Python/Gemini starting point; use other tools you can access.
 
 Manual checks help you understand the records and evaluate your results. The solution itself must automate discovery. A slide describing a future system or five manually researched tracklists is not the target.
+
+### Optional bonus: enrich each track
+
+Once your tracklist discovery works, extend your automated workflow to collect more information for each track:
+
+- **Track length:** duration in `mm:ss` or seconds, for the recording on the matched release.
+- **Credits:** lyricists, composers and producers, where available. Keep these roles separate from the performing artists; do not assume the performer wrote the song.
+- **Other useful metadata:** for example featured artists, recording/version details or an ISRC, where supported by a source.
+
+Include source links for the added information and mark missing or conflicting values explicitly. Do not guess credits or durations. Explain how you checked that the information belongs to the correct track and version.
+
+This is a bonus, not a prerequisite for a good pitch. Prioritize a working discovery workflow before adding enrichment.
 
 ## Build something small, early
 
