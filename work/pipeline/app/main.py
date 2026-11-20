@@ -2,10 +2,11 @@ from contextlib import asynccontextmanager
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from psycopg_pool import ConnectionPool
 
 from app.config import Settings, get_settings
+from app.dashboard import render_record_detail, render_results_table
 from app.discogs_client import DiscogsClient
 from app.extractor import extracted_track_to_out
 from app.models import (
@@ -61,6 +62,23 @@ def create_app(
         ),
         lifespan=lifespan,
     )
+
+    @app.get("/", response_class=HTMLResponse, include_in_schema=False)
+    @app.get("/results", response_class=HTMLResponse, include_in_schema=False)
+    def results_dashboard(
+        request: Request, limit: int = Query(default=100, ge=1, le=500)
+    ) -> HTMLResponse:
+        repo: PipelineRepository = request.app.state.repo
+        records = repo.list_records(limit=limit)
+        return HTMLResponse(content=render_results_table(records))
+
+    @app.get("/results/{input_id}", response_class=HTMLResponse, include_in_schema=False)
+    def record_detail_page(input_id: int, request: Request) -> HTMLResponse:
+        repo: PipelineRepository = request.app.state.repo
+        detail = repo.get_record_detail(input_id)
+        if detail is None:
+            raise HTTPException(status_code=404, detail=f"Input record {input_id} not found.")
+        return HTMLResponse(content=render_record_detail(detail))
 
     @app.get("/health", response_model=HealthResponse)
     def health(request: Request) -> HealthResponse:
