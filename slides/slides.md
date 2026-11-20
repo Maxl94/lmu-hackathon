@@ -55,6 +55,8 @@ style: |
   .automation .method { border:1px solid #8BC0C0; padding:34px 25px; font-size:35px; font-weight:700; text-align:center; color:var(--yellow); }
   .requirements { margin-top:55px; padding-top:25px; border-top:1px solid #74AEAE; display:flex; gap:36px; font-size:23px; }
   .requirements span { flex:1; }
+  .bonus { margin-top:28px; font-size:22px; line-height:1.4; color:#E1F0F0; }
+  .bonus strong { color:var(--yellow); }
   .kit { display:grid; grid-template-columns:430px 1fr; gap:70px; margin-top:52px; }
   .quantity { font-size:156px; letter-spacing:-6px; line-height:.95; font-weight:700; color:var(--petrol); }
   .kit .data-label { font-size:26px; margin-top:20px; }
@@ -133,11 +135,12 @@ We have release information, but some tracklists are missing. An album title, ar
 
 <!-- _class: challenge -->
 <h2>Find the tracklist.<br>Make it repeatable.</h2>
-<div class="automation"><div class="edge">Release information<small>Title · artist · barcode</small></div><div class="arrow">→</div><div class="method">Your automated<br>prototype</div><div class="arrow">→</div><div class="edge">Tracks + sources<small>Ordered songs.<br>Evidence for the match.</small></div></div>
+<div class="automation"><div class="edge">Release information<small>Title · artist · barcode</small></div><div class="arrow">→</div><div class="method">Your automated<br>prototype</div><div class="arrow">→</div><div class="edge">Tracks + sources<small>Song titles + artists.<br>Evidence for the match.</small></div></div>
 <div class="requirements"><span>Match the right edition.</span><span>Check against sources.</span><span>Show uncertainty.</span></div>
+<p class="bonus"><strong>Optional bonus:</strong> Track length + credits<br>Lyricists · composers · producers · more metadata, with sources.</p>
 
 <!--
-The method is yours to choose: catalog APIs, automated web search, AI, scripts, no-code tools, or combinations. Start with five varied records, then test one fresh input. Target the correct edition and ordered tracks, including durations where available and source links. Manual checks are useful for evaluation; manually gathering all tracklists is not the solution. Build a runnable automated prototype using code or no-code tools. Manually entering release information or pressing Run is fine; finding the tracklist should be automated. You may copy the first five inputs from CSV; automating CSV import is optional. If you get stuck, show the work, diagnose the failure and explain what remains. Clearly distinguish what you tested from what you propose.
+The method is yours to choose: catalog APIs, automated web search, AI, scripts, no-code tools, or combinations. Start with five varied records, then test one fresh input. Target the correct edition and ordered tracks with song titles, performing artists and source links. Once the discovery workflow works, optionally enrich tracks with duration (mm:ss or seconds), lyricists, composers, producers and other useful metadata. Match the recording/version, keep roles separate, cite sources and mark missing or conflicting values rather than guessing. The bonus is optional; prioritize a working prototype. Manual checks are useful for evaluation; manually gathering all tracklists is not the solution. Build a runnable automated prototype using code or no-code tools. Manually entering release information or pressing Run is fine; finding the tracklist should be automated. You may copy the first five inputs from CSV; automating CSV import is optional. If you get stuck, show the work, diagnose the failure and explain what remains. Clearly distinguish what you tested from what you propose.
 -->
 
 ---
