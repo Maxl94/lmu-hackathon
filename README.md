@@ -16,9 +16,9 @@ Your work starts at this gap: **build a repeatable process that automatically di
 
 ## The challenge
 
-**Turn five records with missing tracklists into a small, runnable discovery workflow. Then show how you would take it to 1,000.**
+**Turn five records with missing tracklists into a small, runnable discovery workflow. Then explain how it could scale to a hypothetical batch of 1,000.**
 
-Your input is [a CSV file with 1,000 records](data/releases.csv). It has three columns: `barcode`, `album_title` and `album_artist`. Some values may be missing or inconsistent. These are release metadata; the file contains no internal customer data. See [the data section](#the-data) for details.
+Your input is [a development CSV with 25 selected records](data/development.csv). It has three columns: `barcode`, `album_title` and `album_artist`. Some values may be missing or inconsistent. These are release metadata; the file contains no internal customer data. See [the data section](#the-data) for details.
 
 Choose **five varied records** first: include barcode cases and title/artist-only cases where possible. Run the same workflow on these records to develop and evaluate it before attempting a larger batch. Keep track of all five outcomes, including unsuccessful or uncertain ones.
 
@@ -56,13 +56,13 @@ You will need to make decisions, not solve everything:
 - How will you check that the songs belong to this edition?
 - What changes when the workflow runs on 1,000 records: coverage, fees, runtime, source limits or review effort?
 
-Your five chosen cases show what happened in this experiment; they do not establish accuracy or coverage across the full dataset. You do not need a production system or all 1,000 results. A small prototype with honest evidence can teach us more than a large batch of unchecked answers. If the prototype stalls, show what you tried, the actual evidence and the specific blocker. An unsuccessful experiment is useful when you can explain what it rules out and what you would try next.
+Your five chosen cases show what happened in this experiment; they do not establish accuracy or coverage across the full dataset. You do not need a production system or results for all 25 records. The 1,000-record scenario is only a hypothetical scaling and cost exercise; no larger dataset is required. A small prototype with honest evidence can teach us more than a large batch of unchecked answers. If the prototype stalls, show what you tried, the actual evidence and the specific blocker. An unsuccessful experiment is useful when you can explain what it rules out and what you would try next.
 
 ## The data
 
-[`data/releases.csv`](data/releases.csv) contains **1,000 sampled records** whose track information was marked as missing in the source snapshot. This is a starting point for discovery, not a verified catalog or an answer key. The status may have changed since that snapshot.
+[`data/development.csv`](data/development.csv) contains **25 curated development records** whose track information was marked as missing in the source snapshot. This is a starting point for discovery, not a verified catalog or an answer key. The status may have changed since that snapshot.
 
-The CSV uses UTF-8 encoding, commas as separators and a header row with three columns. Treat barcodes as text to preserve leading zeros. Empty fields mean information was not supplied.
+The CSV uses UTF-8 encoding, commas as separators and a header row with three columns. Treat barcodes as text to preserve leading zeros. Empty fields mean information was not supplied. Treat a barcode of `0` as missing too; it is not a usable product identifier.
 
 | Field | Description |
 | --- | --- |
@@ -70,7 +70,21 @@ The CSV uses UTF-8 encoding, commas as separators and a header row with three co
 | `album_title` | Supplied album or product title; may be incomplete |
 | `album_artist` | Supplied artist credit; may be missing or inconsistent |
 
-A reproducible random sample of 1,000 rows was selected from 8,970 distinct eligible metadata combinations, using random seed 42. Only rows marked as requiring track data were selected. Customer, invoice, financial, organizational and operational fields were excluded. Exact duplicate combinations of barcode, title and artist were collapsed. Rows containing explicit organization references, web links or email addresses in these fields were also excluded. Values were otherwise preserved apart from surrounding whitespace.
+The 25 rows were selected from the previous 1,000-row workshop sample to provide varied development cases, rather than a statistically representative benchmark. The larger CSV has been removed from the current repository files. All three supplied field values are preserved exactly; no barcodes were removed to manufacture missing-data cases.
+
+| Development case | Number of rows |
+| --- | --- |
+| Barcode supplied (not validated) | 15 |
+| Barcode empty | 8 |
+| Barcode supplied as `0` (unusable placeholder) | 2 |
+
+The selection includes 17 rows credited to a single act, seven compilation-style rows credited to `Various`, `Various Artists`, `VARIOUS`, `VA` or `Various (Sampler)`, and one explicitly named collaboration. An act may be a band; this is not a count of individual performers. Compilation credits are input clues, not verified track-level artist lists.
+
+Examples range from Foreigner, Die Fantastischen Vier and K.I.Z to Paula Linke, The Hoodie Crows and Matthias Petzold. Familiarity is subjective and is not a difficulty rating: well-known artists can still have ambiguous editions. Live releases, a 2-CD release, vinyl editions, an EP and compilation titles provide different matching challenges. Discoverability and tracklists have not been pre-verified; an unresolved case is a valid outcome.
+
+Choose five cases that include a supplied barcode, an empty or `0` barcode, a single-act release and a compilation. Keep at least one other row untouched for your fresh-input check. Start with a promising case, then test the harder ones.
+
+The original 1,000-row sample was drawn from 8,970 distinct eligible metadata combinations using random seed 42. Only rows marked as requiring track data were selected. Customer, invoice, financial, organizational and operational fields were excluded. Exact duplicate combinations of barcode, title and artist were collapsed. Rows containing explicit organization references, web links or email addresses in these fields were also excluded. Values in that original sample were otherwise preserved apart from surrounding whitespace.
 
 One row does not necessarily equal one unique release. The same album may appear with different identifiers or spellings, and one title can refer to several editions. The data contains real supplied music metadata; it is not synthetic. It is prepared for this workshop. Removing business fields does not establish permission for unrestricted public redistribution; confirm publication permission before making the repository public.
 
@@ -78,16 +92,18 @@ No verified tracklists are included. Your team decides how to check the results 
 
 ## Four-hour workshop
 
+**14:00–18:00.** All times below are clock times.
+
 | Time | Activity |
 | --- | --- |
-| 00:00–00:20 | Introduction, dataset walkthrough and team formation |
-| 00:20–00:40 | Choose five records, sketch the approach and agree how to check it |
-| 00:40–02:50 | Build, run and evaluate your prototype |
-| 02:50–03:10 | Prepare your pitch and demonstration |
-| 03:10–03:50 | Each team presents to everyone for 10 minutes |
-| 03:50–04:00 | Discuss |
+| 14:00–14:20 | Introduction, dataset walkthrough and team formation |
+| 14:20–14:40 | Choose five records, sketch the approach and agree how to check it |
+| 14:40–16:50 | Build, run and evaluate your prototype |
+| 16:50–17:10 | Prepare your pitch and demonstration |
+| 17:10–17:50 | Each team presents to everyone for 10 minutes |
+| 17:50–18:00 | Discuss |
 
-Take a short break during the working session when needed. The pitch session starts at 03:10.
+Take a short break during the working session when needed. The pitch session starts at 17:10.
 
 ## Your ten-minute pitch
 
@@ -114,7 +130,7 @@ Presentation polish is secondary to evidence and judgment. We will share feedbac
 
 ## Start here
 
-1. Get a local copy using [Getting started](#getting-started-get-the-repository), then open `data/releases.csv` and read [the data section](#the-data). Preserve leading zeros in barcodes.
+1. Get a local copy using [Getting started](#getting-started-get-the-repository), then open `data/development.csv` and read [the data section](#the-data). Preserve leading zeros in barcodes.
 2. Choose your five records, agree what a correct result would look like and divide the work. Copying these input rows into your tool is fine; automating CSV import is optional.
 3. Get the smallest end-to-end workflow running. Use `work/` for experiments, or your preferred tools.
 4. Capture outputs, sources, failures and rough costs as you go. They are your pitch evidence.
