@@ -402,7 +402,15 @@ npm run dev
 
 Open **http://localhost:3030** for the slides or **http://localhost:3030/presenter** for presenter view with speaker notes and the next slide. Use the arrow keys to navigate. Stop the server with Ctrl+C. Use this same start command on Windows, macOS and Linux; no global Slidev installation is needed.
 
-To build the browser presentation and preview that build:
+**Alternative: start Slidev directly from the repository root.** After installing the slide dependencies with `npm ci` in `slides/`, if the `slidev` command is already installed globally, run:
+
+```bash
+slidev slides/slides.md
+```
+
+This starts the same presentation on the default port 3030. Choose either this command or `npm run dev`; do not run both servers at once.
+
+To build the browser presentation and preview that build, run these commands from the `slides/` folder:
 
 ```bash
 npm run build
