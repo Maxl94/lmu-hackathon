@@ -99,6 +99,42 @@ CREATE TABLE IF NOT EXISTS input_matches (
     UNIQUE (input_id, discogs_release_id)
 );
 
+CREATE TABLE IF NOT EXISTS agent_fallbacks (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    input_id BIGINT NOT NULL REFERENCES input_records(id) ON DELETE CASCADE,
+    model_name TEXT NOT NULL DEFAULT '',
+    sources_json JSONB NOT NULL DEFAULT '[]'::jsonb,
+    track_count INTEGER NOT NULL DEFAULT 0,
+    tracklist_hash TEXT NOT NULL DEFAULT '',
+    input_tokens INTEGER NOT NULL DEFAULT 0,
+    output_tokens INTEGER NOT NULL DEFAULT 0,
+    cost_usd DOUBLE PRECISION NOT NULL DEFAULT 0.0,
+    raw_json JSONB NOT NULL DEFAULT '{}'::jsonb,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE agent_fallbacks
+    ADD COLUMN IF NOT EXISTS input_tokens INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE agent_fallbacks
+    ADD COLUMN IF NOT EXISTS output_tokens INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE agent_fallbacks
+    ADD COLUMN IF NOT EXISTS cost_usd DOUBLE PRECISION NOT NULL DEFAULT 0.0;
+
+CREATE INDEX IF NOT EXISTS idx_agent_fallbacks_input_created ON agent_fallbacks (input_id, created_at DESC);
+
+CREATE TABLE IF NOT EXISTS agent_fallback_tracks (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    agent_fallback_id BIGINT NOT NULL REFERENCES agent_fallbacks(id) ON DELETE CASCADE,
+    track_order INTEGER NOT NULL,
+    disc_number INTEGER NOT NULL DEFAULT 1,
+    track_number INTEGER NOT NULL,
+    position TEXT NOT NULL DEFAULT '',
+    title TEXT NOT NULL,
+    duration_raw TEXT NOT NULL DEFAULT '',
+    duration_sec INTEGER,
+    UNIQUE (agent_fallback_id, track_order)
+);
+
 CREATE TABLE IF NOT EXISTS lookup_runs (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     input_id BIGINT NOT NULL REFERENCES input_records(id) ON DELETE CASCADE,
@@ -106,6 +142,7 @@ CREATE TABLE IF NOT EXISTS lookup_runs (
     http_code INTEGER NOT NULL,
     source TEXT NOT NULL,
     selected_release_id BIGINT REFERENCES releases(discogs_release_id) ON DELETE SET NULL,
+    selected_agent_fallback_id BIGINT REFERENCES agent_fallbacks(id) ON DELETE SET NULL,
     queries_attempted_json JSONB NOT NULL DEFAULT '[]'::jsonb,
     candidates_checked INTEGER NOT NULL DEFAULT 0,
     evaluation_summary_json JSONB NOT NULL DEFAULT '{}'::jsonb,
@@ -123,3 +160,79 @@ CREATE TABLE IF NOT EXISTS api_cache (
     payload_json JSONB NOT NULL,
     fetched_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+CREATE TABLE IF NOT EXISTS record_reviews (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    input_id BIGINT NOT NULL REFERENCES input_records(id) ON DELETE CASCADE,
+    decision TEXT NOT NULL,
+    reviewer_type TEXT NOT NULL DEFAULT 'human',
+    reviewer_name TEXT NOT NULL DEFAULT '',
+    selected_release_id BIGINT REFERENCES releases(discogs_release_id) ON DELETE SET NULL,
+    selected_agent_fallback_id BIGINT REFERENCES agent_fallbacks(id) ON DELETE SET NULL,
+    note TEXT NOT NULL DEFAULT '',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_record_reviews_input_created ON record_reviews (input_id, created_at DESC);
+
+ALTER TABLE lookup_runs
+    ADD COLUMN IF NOT EXISTS selected_agent_fallback_id BIGINT REFERENCES agent_fallbacks(id) ON DELETE SET NULL;
+
+ALTER TABLE record_reviews
+    ADD COLUMN IF NOT EXISTS selected_agent_fallback_id BIGINT REFERENCES agent_fallbacks(id) ON DELETE SET NULL;
+
+CREATE TABLE IF NOT EXISTS queue_jobs (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    job_type TEXT NOT NULL,
+    label TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'queued',
+    csv_path TEXT NOT NULL DEFAULT '',
+    output_path TEXT NOT NULL DEFAULT '',
+    force_refresh BOOLEAN NOT NULL DEFAULT FALSE,
+    total_items INTEGER NOT NULL DEFAULT 0,
+    completed_items INTEGER NOT NULL DEFAULT 0,
+    matched_count INTEGER NOT NULL DEFAULT 0,
+    needs_review_count INTEGER NOT NULL DEFAULT 0,
+    agent_recovered_count INTEGER NOT NULL DEFAULT 0,
+    not_found_count INTEGER NOT NULL DEFAULT 0,
+    error_count INTEGER NOT NULL DEFAULT 0,
+    cancelled_count INTEGER NOT NULL DEFAULT 0,
+    output_json_path TEXT,
+    output_markdown_path TEXT,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    started_at TIMESTAMPTZ,
+    finished_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS queue_items (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    job_id BIGINT NOT NULL REFERENCES queue_jobs(id) ON DELETE CASCADE,
+    row_number INTEGER NOT NULL DEFAULT 1,
+    input_id BIGINT REFERENCES input_records(id) ON DELETE SET NULL,
+    barcode TEXT NOT NULL DEFAULT '',
+    album_title TEXT NOT NULL DEFAULT '',
+    album_artist TEXT NOT NULL DEFAULT '',
+    force_refresh BOOLEAN NOT NULL DEFAULT FALSE,
+    mode TEXT NOT NULL DEFAULT 'full',
+    stage TEXT NOT NULL DEFAULT 'queued_discogs',
+    worker_name TEXT NOT NULL DEFAULT '',
+    attempt INTEGER NOT NULL DEFAULT 0,
+    status_message TEXT NOT NULL DEFAULT '',
+    context_json JSONB NOT NULL DEFAULT '{}'::jsonb,
+    result_status TEXT,
+    result_http_code INTEGER,
+    result_source TEXT,
+    selected_release_id BIGINT REFERENCES releases(discogs_release_id) ON DELETE SET NULL,
+    selected_agent_fallback_id BIGINT REFERENCES agent_fallbacks(id) ON DELETE SET NULL,
+    track_count INTEGER NOT NULL DEFAULT 0,
+    error_detail TEXT NOT NULL DEFAULT '',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    started_at TIMESTAMPTZ,
+    finished_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_queue_items_stage_id ON queue_items (stage, id ASC);
+CREATE INDEX IF NOT EXISTS idx_queue_items_job_row ON queue_items (job_id, row_number ASC);
+CREATE INDEX IF NOT EXISTS idx_queue_items_input_stage ON queue_items (input_id, stage);

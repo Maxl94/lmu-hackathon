@@ -1,3 +1,4 @@
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -6,8 +7,96 @@ from psycopg.types.json import Jsonb
 from psycopg_pool import ConnectionPool
 
 from app.extractor import ExtractedCredit, ExtractedRelease, ExtractedTrack
-from app.models import NormalizedInput, RecordDetailOut, RecordSummaryOut, ReleaseOut, TrackArtistOut, TrackOut
+from app.models import (
+    AgentFallbackOut,
+    NormalizedInput,
+    QueueItemOut,
+    QueueJobDetailOut,
+    QueueJobOut,
+    QueueStageCountsOut,
+    RecordDetailOut,
+    RecordSummaryOut,
+    ReleaseOut,
+    ReviewOut,
+    ReviewRequest,
+    TrackArtistOut,
+    TrackOut,
+)
 from app.extractor import extracted_track_to_out
+
+
+def _iso_or_none(dt: datetime | None) -> str | None:
+    return dt.isoformat() if dt is not None else None
+
+
+def _row_to_queue_job(row: dict[str, Any]) -> QueueJobOut:
+    total = int(row["total_items"])
+    completed = int(row["completed_items"])
+    progress_pct = round(100.0 * completed / total, 1) if total > 0 else 100.0
+    return QueueJobOut(
+        id=int(row["id"]),
+        job_type=row["job_type"],
+        label=row["label"],
+        status=row["status"],
+        csv_path=row["csv_path"],
+        output_path=row["output_path"],
+        force_refresh=bool(row["force_refresh"]),
+        total_items=total,
+        completed_items=completed,
+        matched_count=int(row["matched_count"]),
+        needs_review_count=int(row["needs_review_count"]),
+        agent_recovered_count=int(row["agent_recovered_count"]),
+        not_found_count=int(row["not_found_count"]),
+        error_count=int(row["error_count"]),
+        cancelled_count=int(row["cancelled_count"]),
+        progress_pct=progress_pct,
+        output_json_path=row["output_json_path"],
+        output_markdown_path=row["output_markdown_path"],
+        created_at=row["created_at"].isoformat(),
+        started_at=_iso_or_none(row["started_at"]),
+        finished_at=_iso_or_none(row["finished_at"]),
+        updated_at=row["updated_at"].isoformat(),
+    )
+
+
+def _row_to_queue_item(row: dict[str, Any]) -> QueueItemOut:
+    started = row.get("started_at")
+    finished = row.get("finished_at")
+    elapsed_sec: float | None = None
+    if started is not None:
+        s_dt = started if started.tzinfo else started.replace(tzinfo=timezone.utc)
+        if finished is not None:
+            e_dt = finished if finished.tzinfo else finished.replace(tzinfo=timezone.utc)
+        else:
+            e_dt = datetime.now(timezone.utc)
+        elapsed_sec = round(max(0.0, (e_dt - s_dt).total_seconds()), 2)
+
+    return QueueItemOut(
+        id=int(row["id"]),
+        job_id=int(row["job_id"]),
+        row_number=int(row["row_number"]),
+        input_id=row["input_id"],
+        barcode=row["barcode"],
+        album_title=row["album_title"],
+        album_artist=row["album_artist"],
+        mode=row["mode"],
+        stage=row["stage"],
+        worker_name=row["worker_name"],
+        attempt=int(row["attempt"]),
+        status_message=row["status_message"],
+        result_status=row["result_status"],
+        result_http_code=row["result_http_code"],
+        result_source=row["result_source"],
+        selected_release_id=row["selected_release_id"],
+        selected_agent_fallback_id=row["selected_agent_fallback_id"],
+        track_count=int(row["track_count"]),
+        error_detail=row["error_detail"],
+        elapsed_sec=elapsed_sec,
+        created_at=row["created_at"].isoformat(),
+        started_at=_iso_or_none(started),
+        finished_at=_iso_or_none(finished),
+        updated_at=row["updated_at"].isoformat(),
+    )
 
 
 class PipelineRepository:
@@ -417,6 +506,130 @@ class PipelineRepository:
                     )
                 return [int(r[0]) for r in cur.fetchall()]
 
+    def save_agent_fallback(
+        self,
+        input_id: int,
+        model_name: str,
+        sources: list[str],
+        tracks: list[tuple[int, TrackOut]],
+        tracklist_hash: str,
+        raw_json: dict[str, Any],
+        input_tokens: int = 0,
+        output_tokens: int = 0,
+        cost_usd: float = 0.0,
+    ) -> AgentFallbackOut:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    INSERT INTO agent_fallbacks (
+                        input_id, model_name, sources_json, track_count, tracklist_hash,
+                        input_tokens, output_tokens, cost_usd, raw_json
+                    )
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    RETURNING id, created_at
+                    """,
+                    (
+                        input_id,
+                        model_name,
+                        Jsonb(sources),
+                        len(tracks),
+                        tracklist_hash,
+                        input_tokens,
+                        output_tokens,
+                        cost_usd,
+                        Jsonb(raw_json),
+                    ),
+                )
+                fb_row = cur.fetchone()
+                fb_id = int(fb_row["id"])
+                for track_number, track in tracks:
+                    cur.execute(
+                        """
+                        INSERT INTO agent_fallback_tracks (
+                            agent_fallback_id, track_order, disc_number, track_number,
+                            position, title, duration_raw, duration_sec
+                        )
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                        """,
+                        (
+                            fb_id,
+                            track.track_order,
+                            track.disc_number,
+                            track_number,
+                            track.position,
+                            track.title,
+                            track.duration_raw,
+                            track.duration_sec,
+                        ),
+                    )
+            conn.commit()
+        return AgentFallbackOut(
+            agent_fallback_id=fb_id,
+            model_name=model_name,
+            sources=list(sources),
+            track_count=len(tracks),
+            tracklist_hash=tracklist_hash,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            cost_usd=cost_usd,
+            created_at=fb_row["created_at"].isoformat(),
+        )
+
+    def get_agent_fallback(
+        self, agent_fallback_id: int
+    ) -> tuple[AgentFallbackOut, list[TrackOut]] | None:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    "SELECT * FROM agent_fallbacks WHERE id = %s",
+                    (agent_fallback_id,),
+                )
+                fb_row = cur.fetchone()
+                if fb_row is None:
+                    return None
+                cur.execute(
+                    """
+                    SELECT * FROM agent_fallback_tracks
+                    WHERE agent_fallback_id = %s
+                    ORDER BY track_order ASC
+                    """,
+                    (agent_fallback_id,),
+                )
+                track_rows = cur.fetchall()
+
+        has_multi_disc = any(int(tr["disc_number"]) > 1 for tr in track_rows)
+        tracks_out = [
+            TrackOut(
+                track_order=int(tr["track_order"]),
+                disc_number=int(tr["disc_number"]),
+                disc_label=f"Disc {tr['disc_number']}" if has_multi_disc else "",
+                position=tr["position"],
+                entry_type="track",
+                parent_position="",
+                title=tr["title"],
+                duration_raw=tr["duration_raw"],
+                duration_sec=tr["duration_sec"],
+                performing_artists=[],
+                performing_artist_display="",
+                has_valid_duration=tr["duration_sec"] is not None,
+                has_resolved_performer=False,
+            )
+            for tr in track_rows
+        ]
+        fb_out = AgentFallbackOut(
+            agent_fallback_id=int(fb_row["id"]),
+            model_name=fb_row["model_name"],
+            sources=list(fb_row["sources_json"] or []),
+            track_count=int(fb_row["track_count"]),
+            tracklist_hash=fb_row["tracklist_hash"],
+            input_tokens=int(fb_row.get("input_tokens") or 0),
+            output_tokens=int(fb_row.get("output_tokens") or 0),
+            cost_usd=float(fb_row.get("cost_usd") or 0.0),
+            created_at=fb_row["created_at"].isoformat(),
+        )
+        return fb_out, tracks_out
+
     def save_matches_and_run(
         self,
         input_id: int,
@@ -431,6 +644,7 @@ class PipelineRepository:
         matches: list[dict[str, Any]],
         error_detail: str = "",
         replace_matches: bool = True,
+        selected_agent_fallback_id: int | None = None,
     ) -> int:
         with self._pool.connection() as conn:
             with conn.cursor() as cur:
@@ -466,10 +680,10 @@ class PipelineRepository:
                     """
                     INSERT INTO lookup_runs (
                         input_id, status, http_code, source, selected_release_id,
-                        queries_attempted_json, candidates_checked,
+                        selected_agent_fallback_id, queries_attempted_json, candidates_checked,
                         evaluation_summary_json, review_reasons_json, error_detail
                     )
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                     RETURNING id
                     """,
                     (
@@ -478,6 +692,7 @@ class PipelineRepository:
                         http_code,
                         source,
                         selected_release_id,
+                        selected_agent_fallback_id,
                         Jsonb(queries_attempted),
                         candidates_checked,
                         Jsonb(evaluation_summary),
@@ -489,11 +704,13 @@ class PipelineRepository:
             conn.commit()
         return run_id
 
-    def list_records(self, limit: int = 100) -> list[RecordSummaryOut]:
+    def list_records(self, limit: int = 100, status: str | None = None) -> list[RecordSummaryOut]:
+        where_clause = "WHERE lr.status = %s" if status else ""
+        params: list[Any] = [status, limit] if status else [limit]
         with self._pool.connection() as conn:
             with conn.cursor(row_factory=dict_row) as cur:
                 cur.execute(
-                    """
+                    f"""
                     SELECT
                         ir.id AS input_id,
                         ir.barcode_raw,
@@ -509,6 +726,11 @@ class PipelineRepository:
                         lr.source AS latest_source,
                         lr.selected_release_id,
                         r.url AS selected_release_url,
+                        lr.selected_agent_fallback_id,
+                        af.sources_json->>0 AS agent_source_url,
+                        COALESCE(af.input_tokens, 0) AS agent_input_tokens,
+                        COALESCE(af.output_tokens, 0) AS agent_output_tokens,
+                        COALESCE(af.cost_usd, 0.0) AS agent_cost_usd,
                         lr.created_at AS latest_checked_at
                     FROM input_records ir
                     LEFT JOIN LATERAL (
@@ -518,10 +740,12 @@ class PipelineRepository:
                         LIMIT 1
                     ) lr ON TRUE
                     LEFT JOIN releases r ON r.discogs_release_id = lr.selected_release_id
+                    LEFT JOIN agent_fallbacks af ON af.id = lr.selected_agent_fallback_id
+                    {where_clause}
                     ORDER BY ir.id DESC
                     LIMIT %s
                     """,
-                    (limit,),
+                    tuple(params),
                 )
                 rows = cur.fetchall()
 
@@ -541,6 +765,11 @@ class PipelineRepository:
                 latest_source=row["latest_source"],
                 selected_release_id=row["selected_release_id"],
                 selected_release_url=row["selected_release_url"],
+                selected_agent_fallback_id=row["selected_agent_fallback_id"],
+                agent_source_url=row["agent_source_url"],
+                agent_input_tokens=int(row.get("agent_input_tokens") or 0),
+                agent_output_tokens=int(row.get("agent_output_tokens") or 0),
+                agent_cost_usd=float(row.get("agent_cost_usd") or 0.0),
                 latest_checked_at=(
                     row["latest_checked_at"].isoformat() if row["latest_checked_at"] else None
                 ),
@@ -568,6 +797,11 @@ class PipelineRepository:
                         lr.source AS latest_source,
                         lr.selected_release_id,
                         r.url AS selected_release_url,
+                        lr.selected_agent_fallback_id,
+                        af.sources_json->>0 AS agent_source_url,
+                        COALESCE(af.input_tokens, 0) AS agent_input_tokens,
+                        COALESCE(af.output_tokens, 0) AS agent_output_tokens,
+                        COALESCE(af.cost_usd, 0.0) AS agent_cost_usd,
                         lr.created_at AS latest_checked_at
                     FROM input_records ir
                     LEFT JOIN LATERAL (
@@ -577,6 +811,7 @@ class PipelineRepository:
                         LIMIT 1
                     ) lr ON TRUE
                     LEFT JOIN releases r ON r.discogs_release_id = lr.selected_release_id
+                    LEFT JOIN agent_fallbacks af ON af.id = lr.selected_agent_fallback_id
                     WHERE ir.id = %s
                     """,
                     (input_id,),
@@ -588,8 +823,8 @@ class PipelineRepository:
                 cur.execute(
                     """
                     SELECT id, status, http_code, source, selected_release_id,
-                           queries_attempted_json, candidates_checked,
-                           evaluation_summary_json, review_reasons_json,
+                           selected_agent_fallback_id, queries_attempted_json,
+                           candidates_checked, evaluation_summary_json, review_reasons_json,
                            error_detail, created_at
                     FROM lookup_runs
                     WHERE input_id = %s
@@ -616,7 +851,33 @@ class PipelineRepository:
                 )
                 matches = cur.fetchall()
 
+                cur.execute(
+                    """
+                    SELECT id, input_id, decision, reviewer_type, reviewer_name,
+                           selected_release_id, selected_agent_fallback_id, note, created_at
+                    FROM record_reviews
+                    WHERE input_id = %s
+                    ORDER BY created_at DESC, id DESC
+                    """,
+                    (input_id,),
+                )
+                reviews = [
+                    ReviewOut(
+                        id=int(rv["id"]),
+                        input_id=int(rv["input_id"]),
+                        decision=rv["decision"],
+                        reviewer_type=rv["reviewer_type"],
+                        reviewer_name=rv["reviewer_name"],
+                        selected_release_id=rv["selected_release_id"],
+                        selected_agent_fallback_id=rv["selected_agent_fallback_id"],
+                        note=rv["note"],
+                        created_at=rv["created_at"].isoformat(),
+                    )
+                    for rv in cur.fetchall()
+                ]
+
         selected_release_out: ReleaseOut | None = None
+        agent_fallback_out: AgentFallbackOut | None = None
         tracks_out: list[TrackOut] = []
         if row["selected_release_id"] is not None:
             extracted = self.get_extracted_release(int(row["selected_release_id"]))
@@ -639,6 +900,10 @@ class PipelineRepository:
                     unscoped_credits=extracted.unscoped_credits,
                 )
                 tracks_out = [extracted_track_to_out(t) for t in extracted.tracks]
+        elif row["selected_agent_fallback_id"] is not None:
+            fb_loaded = self.get_agent_fallback(int(row["selected_agent_fallback_id"]))
+            if fb_loaded is not None:
+                agent_fallback_out, tracks_out = fb_loaded
 
         return RecordDetailOut(
             record=RecordSummaryOut(
@@ -656,12 +921,774 @@ class PipelineRepository:
                 latest_source=row["latest_source"],
                 selected_release_id=row["selected_release_id"],
                 selected_release_url=row["selected_release_url"],
+                selected_agent_fallback_id=row["selected_agent_fallback_id"],
+                agent_source_url=row["agent_source_url"],
+                agent_input_tokens=int(row.get("agent_input_tokens") or 0),
+                agent_output_tokens=int(row.get("agent_output_tokens") or 0),
+                agent_cost_usd=float(row.get("agent_cost_usd") or 0.0),
                 latest_checked_at=(
                     row["latest_checked_at"].isoformat() if row["latest_checked_at"] else None
                 ),
             ),
             runs=runs,
             matches=matches,
+            reviews=reviews,
             selected_release=selected_release_out,
+            agent_fallback=agent_fallback_out,
             tracks=tracks_out,
+        )
+
+    def record_review(self, input_id: int, req: ReviewRequest) -> ReviewOut | None:
+        if req.selected_release_id is not None and req.selected_agent_fallback_id is not None:
+            raise ValueError(
+                "Specify either selected_release_id or selected_agent_fallback_id, not both."
+            )
+
+        decision_to_status = {
+            "confirm": "matched",
+            "deny": "rejected",
+            "request_review": "needs_review",
+        }
+        new_status = decision_to_status[req.decision]
+
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute("SELECT id FROM input_records WHERE id = %s", (input_id,))
+                if cur.fetchone() is None:
+                    return None
+
+                cur.execute(
+                    """
+                    SELECT selected_release_id, selected_agent_fallback_id, candidates_checked
+                    FROM lookup_runs
+                    WHERE input_id = %s
+                    ORDER BY created_at DESC, id DESC
+                    LIMIT 1
+                    """,
+                    (input_id,),
+                )
+                latest_run = cur.fetchone()
+                prev_release_id = (
+                    int(latest_run["selected_release_id"])
+                    if latest_run and latest_run["selected_release_id"] is not None
+                    else None
+                )
+                prev_agent_id = (
+                    int(latest_run["selected_agent_fallback_id"])
+                    if latest_run and latest_run["selected_agent_fallback_id"] is not None
+                    else None
+                )
+                candidates_checked = (
+                    int(latest_run["candidates_checked"]) if latest_run else 0
+                )
+
+                if req.selected_release_id is not None:
+                    cur.execute(
+                        "SELECT discogs_release_id FROM releases WHERE discogs_release_id = %s",
+                        (req.selected_release_id,),
+                    )
+                    if cur.fetchone() is None:
+                        raise ValueError(
+                            f"Release {req.selected_release_id} not found in database."
+                        )
+
+                if req.selected_agent_fallback_id is not None:
+                    cur.execute(
+                        "SELECT id FROM agent_fallbacks WHERE id = %s AND input_id = %s",
+                        (req.selected_agent_fallback_id, input_id),
+                    )
+                    if cur.fetchone() is None:
+                        raise ValueError(
+                            f"Agent fallback {req.selected_agent_fallback_id} not found for input {input_id}."
+                        )
+
+                target_release_id: int | None = None
+                target_agent_id: int | None = None
+
+                if req.decision == "confirm":
+                    if req.selected_release_id is not None:
+                        target_release_id = req.selected_release_id
+                    elif req.selected_agent_fallback_id is not None:
+                        target_agent_id = req.selected_agent_fallback_id
+                    elif prev_release_id is not None:
+                        target_release_id = prev_release_id
+                    elif prev_agent_id is not None:
+                        target_agent_id = prev_agent_id
+                    else:
+                        raise ValueError(
+                            "Cannot confirm a record without a selected release or agent fallback."
+                        )
+
+                    if target_release_id is not None:
+                        cur.execute(
+                            """
+                            UPDATE input_matches
+                            SET is_selected = (discogs_release_id = %s)
+                            WHERE input_id = %s
+                            """,
+                            (target_release_id, input_id),
+                        )
+                    else:
+                        cur.execute(
+                            "UPDATE input_matches SET is_selected = FALSE WHERE input_id = %s",
+                            (input_id,),
+                        )
+                elif req.decision == "deny":
+                    cur.execute(
+                        "UPDATE input_matches SET is_selected = FALSE WHERE input_id = %s",
+                        (input_id,),
+                    )
+                else:
+                    if req.selected_release_id is not None:
+                        target_release_id = req.selected_release_id
+                    elif req.selected_agent_fallback_id is not None:
+                        target_agent_id = req.selected_agent_fallback_id
+                    else:
+                        target_release_id = prev_release_id
+                        target_agent_id = prev_agent_id
+
+                review_reasons = (
+                    [req.note.strip() or "Flagged for review"]
+                    if req.decision == "request_review"
+                    else []
+                )
+
+                cur.execute(
+                    """
+                    INSERT INTO record_reviews (
+                        input_id, decision, reviewer_type, reviewer_name,
+                        selected_release_id, selected_agent_fallback_id, note
+                    )
+                    VALUES (%s, %s, %s, %s, %s, %s, %s)
+                    RETURNING id, input_id, decision, reviewer_type, reviewer_name,
+                              selected_release_id, selected_agent_fallback_id, note, created_at
+                    """,
+                    (
+                        input_id,
+                        req.decision,
+                        req.reviewer_type,
+                        req.reviewer_name.strip(),
+                        target_release_id if req.decision != "deny" else req.selected_release_id,
+                        target_agent_id if req.decision != "deny" else req.selected_agent_fallback_id,
+                        req.note.strip(),
+                    ),
+                )
+                rv = cur.fetchone()
+
+                cur.execute(
+                    """
+                    INSERT INTO lookup_runs (
+                        input_id, status, http_code, source, selected_release_id,
+                        selected_agent_fallback_id, queries_attempted_json, candidates_checked,
+                        evaluation_summary_json, review_reasons_json, error_detail
+                    )
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    """,
+                    (
+                        input_id,
+                        new_status,
+                        200,
+                        f"review:{req.reviewer_type}",
+                        target_release_id,
+                        target_agent_id,
+                        Jsonb([]),
+                        candidates_checked,
+                        Jsonb(
+                            {
+                                "review_decision": req.decision,
+                                "reviewer_name": req.reviewer_name.strip(),
+                            }
+                        ),
+                        Jsonb(review_reasons),
+                        req.note.strip(),
+                    ),
+                )
+            conn.commit()
+
+        return ReviewOut(
+            id=int(rv["id"]),
+            input_id=int(rv["input_id"]),
+            decision=rv["decision"],
+            reviewer_type=rv["reviewer_type"],
+            reviewer_name=rv["reviewer_name"],
+            selected_release_id=rv["selected_release_id"],
+            selected_agent_fallback_id=rv["selected_agent_fallback_id"],
+            note=rv["note"],
+            created_at=rv["created_at"].isoformat(),
+        )
+
+    # ------------------------------------------------------------------ #
+    # Queue operations (PostgreSQL FOR UPDATE SKIP LOCKED)
+    # ------------------------------------------------------------------ #
+
+    def get_input_record(self, input_id: int) -> dict[str, Any] | None:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute("SELECT * FROM input_records WHERE id = %s", (input_id,))
+                return cur.fetchone()
+
+    def has_active_queue_item(self, input_id: int) -> bool:
+        with self._pool.connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    SELECT 1 FROM queue_items
+                    WHERE input_id = %s
+                      AND stage IN ('queued_discogs', 'checking_discogs', 'queued_agent', 'checking_agent')
+                    LIMIT 1
+                    """,
+                    (input_id,),
+                )
+                return cur.fetchone() is not None
+
+    def list_not_found_records_for_agent_retry(self) -> list[dict[str, Any]]:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    SELECT ir.*
+                    FROM input_records ir
+                    JOIN LATERAL (
+                        SELECT status
+                        FROM lookup_runs
+                        WHERE input_id = ir.id
+                        ORDER BY created_at DESC, id DESC
+                        LIMIT 1
+                    ) lr ON TRUE
+                    WHERE lr.status = 'not_found'
+                      AND NOT EXISTS (
+                          SELECT 1 FROM queue_items qi
+                          WHERE qi.input_id = ir.id
+                            AND qi.stage IN ('queued_discogs', 'checking_discogs', 'queued_agent', 'checking_agent')
+                      )
+                    ORDER BY ir.id ASC
+                    """
+                )
+                return cur.fetchall()
+
+    @staticmethod
+    def _recompute_job_summary(cur: Any, job_id: int) -> tuple[dict[str, Any], bool]:
+        cur.execute(
+            """
+            SELECT status, started_at, finished_at, total_items
+            FROM queue_jobs
+            WHERE id = %s
+            FOR UPDATE
+            """,
+            (job_id,),
+        )
+        job_row = cur.fetchone()
+        assert job_row is not None
+        prev_status = str(job_row["status"])
+        prev_started_at = job_row["started_at"]
+        prev_finished_at = job_row["finished_at"]
+        total_items = int(job_row["total_items"])
+
+        cur.execute(
+            """
+            SELECT
+                COUNT(*) FILTER (WHERE stage = 'done') AS done_count,
+                COUNT(*) FILTER (WHERE stage = 'cancelled') AS cancelled_count,
+                COUNT(*) FILTER (WHERE stage IN ('checking_discogs', 'checking_agent')) AS active_count,
+                COUNT(*) FILTER (WHERE stage IN ('queued_discogs', 'queued_agent')) AS queued_count,
+                COUNT(*) FILTER (WHERE stage = 'done' AND result_status = 'matched') AS matched_count,
+                COUNT(*) FILTER (WHERE stage = 'done' AND result_status = 'needs_review') AS needs_review_count,
+                COUNT(*) FILTER (
+                    WHERE stage = 'done'
+                      AND result_source IN ('gemini_agent', 'gemini_agent_fallback', 'discogs_via_agent')
+                ) AS agent_recovered_count,
+                COUNT(*) FILTER (WHERE stage = 'done' AND result_status = 'not_found') AS not_found_count,
+                COUNT(*) FILTER (
+                    WHERE stage = 'done'
+                      AND result_status IN ('upstream_error', 'validation_error')
+                ) AS error_count
+            FROM queue_items
+            WHERE job_id = %s
+            """,
+            (job_id,),
+        )
+        agg = cur.fetchone()
+        done_count = int(agg["done_count"])
+        cancelled_count = int(agg["cancelled_count"])
+        active_count = int(agg["active_count"])
+        queued_count = int(agg["queued_count"])
+        completed_items = done_count + cancelled_count
+
+        if prev_status == "cancelled":
+            new_status = "cancelled"
+            mark_finished = active_count == 0 and queued_count == 0
+        else:
+            if total_items == 0 or (
+                active_count == 0 and queued_count == 0 and completed_items >= total_items
+            ):
+                new_status = "completed"
+                mark_finished = True
+            elif active_count > 0 or completed_items > 0 or prev_started_at is not None:
+                new_status = "running"
+                mark_finished = False
+            else:
+                new_status = "queued"
+                mark_finished = False
+
+        cur.execute(
+            """
+            UPDATE queue_jobs
+            SET status = %s,
+                completed_items = %s,
+                matched_count = %s,
+                needs_review_count = %s,
+                agent_recovered_count = %s,
+                not_found_count = %s,
+                error_count = %s,
+                cancelled_count = %s,
+                started_at = CASE
+                    WHEN started_at IS NOT NULL THEN started_at
+                    WHEN %s IN ('running', 'completed', 'cancelled') THEN NOW()
+                    ELSE NULL
+                END,
+                finished_at = CASE
+                    WHEN %s THEN COALESCE(finished_at, NOW())
+                    ELSE NULL
+                END,
+                updated_at = NOW()
+            WHERE id = %s
+            RETURNING *
+            """,
+            (
+                new_status,
+                completed_items,
+                int(agg["matched_count"]),
+                int(agg["needs_review_count"]),
+                int(agg["agent_recovered_count"]),
+                int(agg["not_found_count"]),
+                int(agg["error_count"]),
+                cancelled_count,
+                new_status,
+                mark_finished,
+                job_id,
+            ),
+        )
+        updated = cur.fetchone()
+        just_finished = prev_finished_at is None and updated["finished_at"] is not None
+        return updated, just_finished
+
+    def create_queue_job(
+        self,
+        job_type: str,
+        label: str,
+        items: list[dict[str, Any]],
+        csv_path: str = "",
+        output_path: str = "",
+        force_refresh: bool = False,
+    ) -> QueueJobOut:
+        total = len(items)
+        initial_status = "completed" if total == 0 else "queued"
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    INSERT INTO queue_jobs (
+                        job_type, label, status, csv_path, output_path, force_refresh,
+                        total_items, completed_items, started_at, finished_at
+                    )
+                    VALUES (
+                        %s, %s, %s, %s, %s, %s, %s, 0,
+                        CASE WHEN %s = 0 THEN NOW() ELSE NULL END,
+                        CASE WHEN %s = 0 THEN NOW() ELSE NULL END
+                    )
+                    RETURNING *
+                    """,
+                    (
+                        job_type,
+                        label,
+                        initial_status,
+                        csv_path,
+                        output_path,
+                        force_refresh,
+                        total,
+                        total,
+                        total,
+                    ),
+                )
+                job_row = cur.fetchone()
+                job_id = int(job_row["id"])
+
+                for idx, item in enumerate(items, start=1):
+                    cur.execute(
+                        """
+                        INSERT INTO queue_items (
+                            job_id, row_number, input_id, barcode, album_title, album_artist,
+                            force_refresh, mode, stage, status_message
+                        )
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                        """,
+                        (
+                            job_id,
+                            int(item.get("row_number", idx)),
+                            item.get("input_id"),
+                            str(item.get("barcode") or ""),
+                            str(item.get("album_title") or ""),
+                            str(item.get("album_artist") or ""),
+                            bool(item.get("force_refresh", force_refresh)),
+                            str(item.get("mode", "full")),
+                            str(item.get("stage", "queued_discogs")),
+                            str(item.get("status_message") or "Waiting in queue"),
+                        ),
+                    )
+            conn.commit()
+        return _row_to_queue_job(job_row)
+
+    def claim_next_queue_item(
+        self,
+        from_stage: str,
+        to_stage: str,
+        worker_name: str,
+        status_message: str,
+    ) -> dict[str, Any] | None:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    SELECT qi.id, qi.job_id
+                    FROM queue_items qi
+                    JOIN queue_jobs qj ON qj.id = qi.job_id
+                    WHERE qi.stage = %s
+                      AND qj.status <> 'cancelled'
+                    ORDER BY qi.id ASC
+                    FOR UPDATE OF qi SKIP LOCKED
+                    LIMIT 1
+                    """,
+                    (from_stage,),
+                )
+                candidate = cur.fetchone()
+                if candidate is None:
+                    conn.rollback()
+                    return None
+
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = %s,
+                        worker_name = %s,
+                        status_message = %s,
+                        started_at = COALESCE(started_at, NOW()),
+                        updated_at = NOW()
+                    WHERE id = %s
+                    RETURNING *
+                    """,
+                    (to_stage, worker_name, status_message, candidate["id"]),
+                )
+                claimed = cur.fetchone()
+
+                cur.execute(
+                    """
+                    UPDATE queue_jobs
+                    SET status = 'running',
+                        started_at = COALESCE(started_at, NOW()),
+                        updated_at = NOW()
+                    WHERE id = %s AND status = 'queued'
+                    """,
+                    (candidate["job_id"],),
+                )
+            conn.commit()
+        return dict(claimed) if claimed is not None else None
+
+    def update_queue_item_progress(
+        self,
+        item_id: int,
+        status_message: str,
+        attempt: int | None = None,
+        input_id: int | None = None,
+    ) -> None:
+        with self._pool.connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET status_message = %s,
+                        attempt = COALESCE(%s, attempt),
+                        input_id = COALESCE(%s, input_id),
+                        updated_at = NOW()
+                    WHERE id = %s
+                    """,
+                    (status_message, attempt, input_id, item_id),
+                )
+            conn.commit()
+
+    def handoff_item_to_agent(
+        self,
+        item_id: int,
+        job_id: int,
+        input_id: int,
+        context: dict[str, Any],
+        status_message: str,
+    ) -> tuple[bool, bool]:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    "SELECT status FROM queue_jobs WHERE id = %s FOR UPDATE",
+                    (job_id,),
+                )
+                job_row = cur.fetchone()
+                if job_row is not None and job_row["status"] == "cancelled":
+                    cur.execute(
+                        """
+                        UPDATE queue_items
+                        SET stage = 'cancelled',
+                            worker_name = '',
+                            input_id = %s,
+                            status_message = 'Cancelled before agent stage',
+                            finished_at = NOW(),
+                            updated_at = NOW()
+                        WHERE id = %s
+                        """,
+                        (input_id, item_id),
+                    )
+                    _, just_finished = self._recompute_job_summary(cur, job_id)
+                    conn.commit()
+                    return False, just_finished
+
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = 'queued_agent',
+                        worker_name = '',
+                        input_id = %s,
+                        context_json = %s,
+                        status_message = %s,
+                        updated_at = NOW()
+                    WHERE id = %s
+                    """,
+                    (input_id, Jsonb(context), status_message, item_id),
+                )
+            conn.commit()
+        return True, False
+
+    def complete_queue_item(
+        self,
+        item_id: int,
+        job_id: int,
+        input_id: int | None,
+        result_status: str,
+        result_http_code: int,
+        result_source: str,
+        selected_release_id: int | None = None,
+        selected_agent_fallback_id: int | None = None,
+        track_count: int = 0,
+        status_message: str = "",
+        error_detail: str = "",
+    ) -> bool:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = 'done',
+                        input_id = COALESCE(%s, input_id),
+                        result_status = %s,
+                        result_http_code = %s,
+                        result_source = %s,
+                        selected_release_id = %s,
+                        selected_agent_fallback_id = %s,
+                        track_count = %s,
+                        status_message = %s,
+                        error_detail = %s,
+                        finished_at = NOW(),
+                        updated_at = NOW()
+                    WHERE id = %s
+                    """,
+                    (
+                        input_id,
+                        result_status,
+                        result_http_code,
+                        result_source,
+                        selected_release_id,
+                        selected_agent_fallback_id,
+                        track_count,
+                        status_message or f"Finished ({result_status})",
+                        error_detail,
+                        item_id,
+                    ),
+                )
+                _, just_finished = self._recompute_job_summary(cur, job_id)
+            conn.commit()
+        return just_finished
+
+    def cancel_queue_job(self, job_id: int) -> QueueJobOut | None:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    "SELECT id, status FROM queue_jobs WHERE id = %s FOR UPDATE",
+                    (job_id,),
+                )
+                job_row = cur.fetchone()
+                if job_row is None:
+                    conn.rollback()
+                    return None
+
+                if job_row["status"] != "completed":
+                    cur.execute(
+                        "UPDATE queue_jobs SET status = 'cancelled', updated_at = NOW() WHERE id = %s",
+                        (job_id,),
+                    )
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = 'cancelled',
+                        status_message = 'Cancelled',
+                        finished_at = NOW(),
+                        updated_at = NOW()
+                    WHERE job_id = %s
+                      AND stage IN ('queued_discogs', 'queued_agent')
+                    """,
+                    (job_id,),
+                )
+                updated_job, _ = self._recompute_job_summary(cur, job_id)
+            conn.commit()
+        return _row_to_queue_job(updated_job)
+
+    def recover_stale_queue_items(self) -> int:
+        total_reset = 0
+        with self._pool.connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = 'queued_discogs',
+                        worker_name = '',
+                        status_message = 'Recovered after restart',
+                        updated_at = NOW()
+                    WHERE stage = 'checking_discogs'
+                    """
+                )
+                total_reset += cur.rowcount or 0
+                cur.execute(
+                    """
+                    UPDATE queue_items
+                    SET stage = 'queued_agent',
+                        worker_name = '',
+                        status_message = 'Recovered after restart',
+                        updated_at = NOW()
+                    WHERE stage = 'checking_agent'
+                    """
+                )
+                total_reset += cur.rowcount or 0
+            conn.commit()
+        return total_reset
+
+    def set_queue_job_report_paths(
+        self, job_id: int, output_json_path: str, output_markdown_path: str
+    ) -> None:
+        with self._pool.connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    UPDATE queue_jobs
+                    SET output_json_path = %s,
+                        output_markdown_path = %s,
+                        updated_at = NOW()
+                    WHERE id = %s
+                    """,
+                    (output_json_path, output_markdown_path, job_id),
+                )
+            conn.commit()
+
+    def get_queue_job(self, job_id: int) -> QueueJobDetailOut | None:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute("SELECT * FROM queue_jobs WHERE id = %s", (job_id,))
+                job_row = cur.fetchone()
+                if job_row is None:
+                    return None
+                cur.execute(
+                    """
+                    SELECT * FROM queue_items
+                    WHERE job_id = %s
+                    ORDER BY row_number ASC, id ASC
+                    """,
+                    (job_id,),
+                )
+                item_rows = cur.fetchall()
+        return QueueJobDetailOut(
+            job=_row_to_queue_job(job_row),
+            items=[_row_to_queue_item(r) for r in item_rows],
+        )
+
+    def list_queue_jobs(
+        self, limit: int = 20, status: str | None = None
+    ) -> list[QueueJobOut]:
+        where_clause = "WHERE status = %s" if status else ""
+        params: tuple[Any, ...] = (status, limit) if status else (limit,)
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    f"""
+                    SELECT * FROM queue_jobs
+                    {where_clause}
+                    ORDER BY id DESC
+                    LIMIT %s
+                    """,
+                    params,
+                )
+                rows = cur.fetchall()
+        return [_row_to_queue_job(r) for r in rows]
+
+    def get_queue_status_snapshot(
+        self, pending_limit: int = 50, jobs_limit: int = 20
+    ) -> tuple[QueueStageCountsOut, list[QueueItemOut], list[QueueItemOut], list[QueueJobOut]]:
+        with self._pool.connection() as conn:
+            with conn.cursor(row_factory=dict_row) as cur:
+                cur.execute(
+                    """
+                    SELECT
+                        COUNT(*) FILTER (WHERE stage = 'queued_discogs') AS queued_discogs,
+                        COUNT(*) FILTER (WHERE stage = 'checking_discogs') AS checking_discogs,
+                        COUNT(*) FILTER (WHERE stage = 'queued_agent') AS queued_agent,
+                        COUNT(*) FILTER (WHERE stage = 'checking_agent') AS checking_agent
+                    FROM queue_items
+                    """
+                )
+                cnt = cur.fetchone()
+
+                cur.execute(
+                    """
+                    SELECT * FROM queue_items
+                    WHERE stage IN ('checking_discogs', 'checking_agent')
+                    ORDER BY started_at ASC NULLS LAST, id ASC
+                    """
+                )
+                active_rows = cur.fetchall()
+
+                cur.execute(
+                    """
+                    SELECT * FROM queue_items
+                    WHERE stage IN ('queued_discogs', 'queued_agent')
+                    ORDER BY id ASC
+                    LIMIT %s
+                    """,
+                    (pending_limit,),
+                )
+                pending_rows = cur.fetchall()
+
+                cur.execute(
+                    """
+                    SELECT * FROM queue_jobs
+                    ORDER BY id DESC
+                    LIMIT %s
+                    """,
+                    (jobs_limit,),
+                )
+                job_rows = cur.fetchall()
+
+        counts = QueueStageCountsOut(
+            queued_discogs=int(cnt["queued_discogs"]),
+            checking_discogs=int(cnt["checking_discogs"]),
+            queued_agent=int(cnt["queued_agent"]),
+            checking_agent=int(cnt["checking_agent"]),
+        )
+        return (
+            counts,
+            [_row_to_queue_item(r) for r in active_rows],
+            [_row_to_queue_item(r) for r in pending_rows],
+            [_row_to_queue_job(r) for r in job_rows],
         )

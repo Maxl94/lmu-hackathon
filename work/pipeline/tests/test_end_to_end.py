@@ -95,7 +95,12 @@ def pg_client():
     baseline_keys = _get_cache_keys()
     _cleanup_test_rows(baseline_keys)
     provider = FakeCatalogProvider()
-    app = create_app(provider=provider)
+    settings = Settings(
+        database_url=get_settings().database_url,
+        enable_agent_fallback=False,
+        enable_queue_workers=False,
+    )
+    app = create_app(settings=settings, provider=provider)
     with TestClient(app) as client:
         yield client, provider, app
     _cleanup_test_rows(baseline_keys)
@@ -128,6 +133,8 @@ def test_real_discogs_client_with_pg_api_cache_and_upc_ean_dedup() -> None:
         database_url=get_settings().database_url,
         discogs_token="test-token",
         discogs_user_agent="TestPipeline/1.0",
+        enable_agent_fallback=False,
+        enable_queue_workers=False,
     )
     pool = ConnectionPool(conninfo=settings.database_url, min_size=1, max_size=2, open=True)
     repo = PipelineRepository(pool)
@@ -463,6 +470,11 @@ def test_batch_csv_and_cli_end_to_end(
     parsed_report = json.loads(out_json.read_text(encoding="utf-8"))
     assert len(parsed_report["details"]) == 4
 
+    cli_settings = Settings(
+        database_url=get_settings().database_url,
+        enable_agent_fallback=False,
+    )
+
     # CLI end-to-end exit codes: 0 (match), 1 (404), 2 (upstream error), and batch subset
     code_ok = cli.main(
         [
@@ -475,6 +487,7 @@ def test_batch_csv_and_cli_end_to_end(
             "Batch Artist",
         ],
         provider=provider,
+        settings=cli_settings,
     )
     assert code_ok == 0
     capsys.readouterr()
@@ -482,6 +495,7 @@ def test_batch_csv_and_cli_end_to_end(
     code_404 = cli.main(
         ["lookup", "--title", "__test_batch_missing", "--artist", "Nobody"],
         provider=provider,
+        settings=cli_settings,
     )
     assert code_404 == 1
     capsys.readouterr()
@@ -490,6 +504,7 @@ def test_batch_csv_and_cli_end_to_end(
     code_batch = cli.main(
         ["batch", "--csv", str(csv_file), "--rows", "1,3", "--output", str(cli_out)],
         provider=provider,
+        settings=cli_settings,
     )
     assert code_batch == 0
     assert cli_out.exists()
@@ -499,6 +514,7 @@ def test_batch_csv_and_cli_end_to_end(
     code_err = cli.main(
         ["lookup", "--title", "__test_cli_outage", "--artist", "Outage"],
         provider=provider,
+        settings=cli_settings,
     )
     assert code_err == 2
     capsys.readouterr()

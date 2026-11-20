@@ -133,6 +133,18 @@ class EvaluationOut(BaseModel):
     rejection_reasons: list[str] = Field(default_factory=list)
 
 
+class AgentFallbackOut(BaseModel):
+    agent_fallback_id: int
+    model_name: str = ""
+    sources: list[str] = Field(default_factory=list)
+    track_count: int = 0
+    tracklist_hash: str = ""
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cost_usd: float = 0.0
+    created_at: str | None = None
+
+
 class LookupSuccessResponse(BaseModel):
     status: Literal["matched", "needs_review"]
     http_code: int = 200
@@ -141,7 +153,8 @@ class LookupSuccessResponse(BaseModel):
     warning: str | None = None
     input_id: int
     normalized_input: NormalizedInput
-    release: ReleaseOut
+    release: ReleaseOut | None = None
+    agent_result: AgentFallbackOut | None = None
     tracks: list[TrackOut]
     alternatives: list[AlternativeEditionOut] = Field(default_factory=list)
     evaluation: EvaluationOut
@@ -176,7 +189,9 @@ class BatchRowOutcome(BaseModel):
     fallback_used: bool = False
     input_id: int | None = None
     discogs_release_id: int | None = None
+    agent_fallback_id: int | None = None
     release_url: str | None = None
+    agent_sources: list[str] = Field(default_factory=list)
     track_count: int = 0
     match_confidence: float | None = None
     duration_coverage: float | None = None
@@ -213,14 +228,42 @@ class RecordSummaryOut(BaseModel):
     latest_source: str | None = None
     selected_release_id: int | None = None
     selected_release_url: str | None = None
+    selected_agent_fallback_id: int | None = None
+    agent_source_url: str | None = None
+    agent_input_tokens: int = 0
+    agent_output_tokens: int = 0
+    agent_cost_usd: float = 0.0
     latest_checked_at: str | None = None
+
+
+class ReviewRequest(BaseModel):
+    decision: Literal["confirm", "deny", "request_review"]
+    reviewer_type: Literal["human", "agent"] = "human"
+    reviewer_name: str = ""
+    selected_release_id: int | None = None
+    selected_agent_fallback_id: int | None = None
+    note: str = ""
+
+
+class ReviewOut(BaseModel):
+    id: int
+    input_id: int
+    decision: str
+    reviewer_type: str
+    reviewer_name: str = ""
+    selected_release_id: int | None = None
+    selected_agent_fallback_id: int | None = None
+    note: str = ""
+    created_at: str
 
 
 class RecordDetailOut(BaseModel):
     record: RecordSummaryOut
     runs: list[dict[str, Any]] = Field(default_factory=list)
     matches: list[dict[str, Any]] = Field(default_factory=list)
+    reviews: list[ReviewOut] = Field(default_factory=list)
     selected_release: ReleaseOut | None = None
+    agent_fallback: AgentFallbackOut | None = None
     tracks: list[TrackOut] = Field(default_factory=list)
 
 
@@ -228,3 +271,83 @@ class HealthResponse(BaseModel):
     status: str
     database_ok: bool
     discogs_token_configured: bool
+    gemini_agent_configured: bool = False
+
+
+class EnqueueLookupRequest(LookupRequest):
+    mode: Literal["full", "agent_only"] = "full"
+
+
+class QueueItemOut(BaseModel):
+    id: int
+    job_id: int
+    row_number: int
+    input_id: int | None = None
+    barcode: str = ""
+    album_title: str = ""
+    album_artist: str = ""
+    mode: str = "full"
+    stage: str
+    worker_name: str = ""
+    attempt: int = 0
+    status_message: str = ""
+    result_status: str | None = None
+    result_http_code: int | None = None
+    result_source: str | None = None
+    selected_release_id: int | None = None
+    selected_agent_fallback_id: int | None = None
+    track_count: int = 0
+    error_detail: str = ""
+    elapsed_sec: float | None = None
+    created_at: str
+    started_at: str | None = None
+    finished_at: str | None = None
+    updated_at: str
+
+
+class QueueJobOut(BaseModel):
+    id: int
+    job_type: str
+    label: str
+    status: str
+    csv_path: str = ""
+    output_path: str = ""
+    force_refresh: bool = False
+    total_items: int = 0
+    completed_items: int = 0
+    matched_count: int = 0
+    needs_review_count: int = 0
+    agent_recovered_count: int = 0
+    not_found_count: int = 0
+    error_count: int = 0
+    cancelled_count: int = 0
+    progress_pct: float = 0.0
+    output_json_path: str | None = None
+    output_markdown_path: str | None = None
+    created_at: str
+    started_at: str | None = None
+    finished_at: str | None = None
+    updated_at: str
+
+
+class QueueJobDetailOut(BaseModel):
+    job: QueueJobOut
+    items: list[QueueItemOut] = Field(default_factory=list)
+
+
+class QueueStageCountsOut(BaseModel):
+    queued_discogs: int = 0
+    checking_discogs: int = 0
+    queued_agent: int = 0
+    checking_agent: int = 0
+
+
+class QueueStatusOut(BaseModel):
+    counts: QueueStageCountsOut
+    active_items: list[QueueItemOut] = Field(default_factory=list)
+    pending_items: list[QueueItemOut] = Field(default_factory=list)
+    recent_jobs: list[QueueJobOut] = Field(default_factory=list)
+    discogs_workers: int = 0
+    agent_workers: int = 0
+    workers_running: bool = False
+    agent_configured: bool = False
