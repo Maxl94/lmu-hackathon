@@ -1,0 +1,52 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tracklist}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tracklist}
+      POSTGRES_DB: ${POSTGRES_DB:-tracklist}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./work/pipeline/sql/init.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tracklist} -d ${POSTGRES_DB:-tracklist}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: ./work/pipeline
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tracklist}:${POSTGRES_PASSWORD:-tracklist}@db:5432/${POSTGRES_DB:-tracklist}
+      DISCOGS_TOKEN: ${DISCOGS_TOKEN:-}
+      DISCOGS_USER_AGENT: ${DISCOGS_USER_AGENT:-LMUTracklistHackathon/1.0}
+      NOT_FOUND_TTL_HOURS: ${NOT_FOUND_TTL_HOURS:-24}
+      MAX_CANDIDATES_TO_FETCH: ${MAX_CANDIDATES_TO_FETCH:-4}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GOOGLE_GENAI_MODEL: ${GOOGLE_GENAI_MODEL:-gemini-3.8-flash}
+      ENABLE_AGENT_FALLBACK: ${ENABLE_AGENT_FALLBACK:-true}
+      AGENT_MAX_ATTEMPTS: ${AGENT_MAX_ATTEMPTS:-3}
+      ENABLE_QUEUE_WORKERS: ${ENABLE_QUEUE_WORKERS:-true}
+      DISCOGS_QUEUE_CONCURRENCY: ${DISCOGS_QUEUE_CONCURRENCY:-1}
+      AGENT_QUEUE_CONCURRENCY: ${AGENT_QUEUE_CONCURRENCY:-2}
+      QUEUE_POLL_INTERVAL_SEC: ${QUEUE_POLL_INTERVAL_SEC:-0.5}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./data:/app/data:ro
+      - ./outputs:/app/outputs
+
+volumes:
+  pgdata:
