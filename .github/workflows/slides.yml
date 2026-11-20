@@ -33,5 +33,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: workshop-slides
-          path: slides/index.html
+          path: slides/dist
           if-no-files-found: error

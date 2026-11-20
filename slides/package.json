@@ -2,13 +2,15 @@
   "name": "tracklist-hackathon-slides",
   "version": "1.0.0",
   "private": true,
-  "description": "Offline workshop slides built from Markdown with Marp",
+  "description": "Workshop slides built with Slidev",
   "scripts": {
-    "build": "marp slides.md --html --output index.html",
-    "dev": "marp --html --server .",
-    "pdf": "marp slides.md --html --pdf --allow-local-files --output slides.pdf"
+    "dev": "slidev slides.md --port 3030",
+    "build": "slidev build slides.md",
+    "preview": "vite preview --port 3030",
+    "pdf": "slidev export slides.md --output slides.pdf"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "4.5.1"
+    "@slidev/cli": "52.18.0",
+    "@slidev/theme-default": "0.25.0"
   }
 }

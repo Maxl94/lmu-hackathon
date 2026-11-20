@@ -1,0 +1,76 @@
+@font-face { font-family: TheSans; src: local("TheSansOfficeLF"); font-weight: 400; }
+@font-face { font-family: TheSans; src: local("TheSansOfficeLF-Bold"); font-weight: 700; }
+.slidev-page .workshop {  --ink: #3F3F3F; --petrol: #007E7F; --yellow: #FFCB05; font-family: TheSans, Arial, sans-serif; background: #FAFAF7; color: var(--ink); padding: 60px 76px; display: flex; flex-direction: column; justify-content: flex-start; place-content: start start; font-size: 28px; line-height: 1.25; }
+.slidev-page .workshop h1, .slidev-page .workshop h2, .slidev-page .workshop h3, .slidev-page .workshop p {  margin: 0; padding: 0; }
+.slidev-page .workshop h1, .slidev-page .workshop h2, .slidev-page .workshop h3 {  color: inherit; font-weight: 700; }
+.slidev-page .workshop h1 {  font-size: 92px; line-height: 1.04; letter-spacing: -2.8px; }
+.slidev-page .workshop h2 {  font-size: 60px; line-height: 1.07; letter-spacing: -1.3px; }
+.slidev-page .workshop h3 {  font-size: 28px; line-height: 1.2; }
+.slidev-page .workshop p {  font-size: 26px; }
+.slidev-page .workshop small {  font-size: 20px; }
+.slidev-page .workshop .label {  font-size: 17px; letter-spacing: 1.4px; text-transform: uppercase; color: #666; }
+.slidev-page .workshop .accent {  color: var(--petrol); }
+.slidev-page .workshop .rule {  height: 1px; background: #D7D7D0; }
+.slidev-page .workshop .brand-logo {  position: absolute; top: 50px; right: 76px; width: 43px; height: auto; }
+.slidev-page .workshop.cover {  border-left: 16px solid var(--yellow); padding-left: 76px; }
+.slidev-page .workshop.cover h1 {  margin-top: 100px; }
+.slidev-page .workshop.cover .question {  color: var(--petrol); }
+.slidev-page .workshop.cover .intro {  margin-top: 44px; font-size: 28px; max-width: 800px; }
+.slidev-page .workshop.cover .event {  position:absolute; left:76px; bottom:58px; font-size:20px; }
+.slidev-page .workshop .flow-diagram {  width: 1128px; height: 370px; margin-top: 30px; }
+.slidev-page .workshop .flow-diagram text {  font-family: TheSans, Arial, sans-serif; }
+.slidev-page .workshop .flow-questions {  display:flex; border-top:1px solid #D7D7D0; padding-top:22px; gap:52px; font-size:24px; }
+.slidev-page .workshop .flow-questions strong {  color:var(--petrol); margin-right:12px; font-size:17px; }
+.slidev-page .workshop .release-layout {  display:grid; grid-template-columns:1fr 80px 1fr; align-items:center; margin-top:52px; }
+.slidev-page .workshop .release-data {  border-top:3px solid var(--petrol); padding-top:23px; }
+.slidev-page .workshop .release-data .album {  font-size:48px; margin:20px 0 3px; font-weight:700; }
+.slidev-page .workshop .release-data .artist {  font-size:27px; }
+.slidev-page .workshop .release-data .identifier {  margin-top:30px; font-family: monospace; font-size:22px; }
+.slidev-page .workshop .release-data .caption {  margin-top:10px; font-size:18px; color:#666; }
+.slidev-page .workshop .release-gap {  text-align:center; font-size:34px; color:var(--petrol); }
+.slidev-page .workshop .tracklist {  padding-left:35px; }
+.slidev-page .workshop .tracklist .label {  margin-bottom:18px; }
+.slidev-page .workshop .tracklist .missing-title {  font-size:33px; font-weight:700; margin-bottom:23px; }
+.slidev-page .workshop .track-row {  display:flex; align-items:center; gap:25px; height:44px; color:#888; font-size:18px; }
+.slidev-page .workshop .track-row i {  display:block; height:1px; background:#C7C7BE; width:100%; }
+.slidev-page .workshop .takeaway {  position:absolute; bottom:79px; left:76px; font-size:27px; }
+.slidev-page .workshop .takeaway mark {  background:var(--yellow); color:var(--ink); padding:3px 9px; }
+.slidev-page .workshop.challenge {  background:var(--petrol); color:#FFF; }
+.slidev-page .workshop.challenge h2 {  font-size:70px; }
+.slidev-page .workshop .automation {  display:grid; grid-template-columns:260px 70px 400px 70px 328px; align-items:center; margin-top:65px; }
+.slidev-page .workshop .automation .edge {  font-size:27px; }
+.slidev-page .workshop .automation small {  display:block; margin-top:13px; color:#C5E3E3; font-size:20px; }
+.slidev-page .workshop .automation .arrow {  text-align:center; font-size:36px; color:#B1D7D7; }
+.slidev-page .workshop .automation .method {  border:1px solid #8BC0C0; padding:34px 25px; font-size:35px; font-weight:700; text-align:center; color:var(--yellow); }
+.slidev-page .workshop .requirements {  margin-top:55px; padding-top:25px; border-top:1px solid #74AEAE; display:flex; gap:36px; font-size:23px; }
+.slidev-page .workshop .requirements span {  flex:1; }
+.slidev-page .workshop .bonus {  margin-top:28px; font-size:22px; line-height:1.4; color:#E1F0F0; }
+.slidev-page .workshop .bonus strong {  color:var(--yellow); }
+.slidev-page .workshop .kit {  display:grid; grid-template-columns:430px 1fr; gap:70px; margin-top:52px; }
+.slidev-page .workshop .quantity {  font-size:156px; letter-spacing:-6px; line-height:.95; font-weight:700; color:var(--petrol); }
+.slidev-page .workshop .kit .data-label {  font-size:26px; margin-top:20px; }
+.slidev-page .workshop .kit .start {  margin-top:38px; font-size:27px; line-height:1.35; }
+.slidev-page .workshop .kit .start strong {  border-bottom:6px solid var(--yellow); }
+.slidev-page .workshop .resource {  padding:0 0 26px; margin-bottom:23px; border-bottom:1px solid #D7D7D0; }
+.slidev-page .workshop .resource p {  font-size:23px; color:#666; margin-top:8px; }
+.slidev-page .workshop .resource:last-child {  border:0; }
+.slidev-page .workshop .schedule {  display:grid; grid-template-columns:300px 1fr; gap:90px; margin-top:44px; }
+.slidev-page .workshop .schedule .focus {  border-top:6px solid var(--yellow); padding-top:25px; }
+.slidev-page .workshop .schedule .focus strong {  display:block; font-size:105px; line-height:1; color:var(--petrol); letter-spacing:-3px; }
+.slidev-page .workshop .schedule .focus p {  font-size:29px; margin-top:13px; }
+.slidev-page .workshop .schedule .focus small {  display:block; margin-top:30px; color:#666; line-height:1.4; }
+.slidev-page .workshop .agenda-row {  display:grid; grid-template-columns:90px 1fr 90px; align-items:center; height:58px; border-bottom:1px solid #D7D7D0; font-size:25px; }
+.slidev-page .workshop .agenda-row .time {  color:#666; font-size:21px; }
+.slidev-page .workshop .agenda-row .duration {  font-size:19px; text-align:right; color:#666; }
+.slidev-page .workshop .agenda-row.build {  background:#E5F1EF; margin-left:-17px; margin-right:-17px; padding:0 17px; color:var(--petrol); font-weight:700; }
+.slidev-page .workshop .agenda-row.pitch {  font-weight:700; }
+.slidev-page .workshop .schedule-note {  margin-top:24px; font-size:18px; color:#666; }
+.slidev-page .workshop .pitch-layout {  display:grid; grid-template-columns:380px 1fr; gap:90px; margin-top:48px; }
+.slidev-page .workshop .pitch-time {  font-size:145px; font-weight:700; line-height:1; letter-spacing:-5px; color:var(--petrol); }
+.slidev-page .workshop .pitch-time span {  font-size:38px; letter-spacing:0; margin-left:10px; }
+.slidev-page .workshop .pitch-sub {  font-size:25px; margin-top:8px; }
+.slidev-page .workshop .pitch-questions {  display:grid; grid-template-columns:1fr 1fr; gap:36px; }
+.slidev-page .workshop .pitch-questions h3 {  font-size:27px; }
+.slidev-page .workshop .pitch-questions p {  font-size:22px; color:#666; margin-top:10px; line-height:1.35; }
+.slidev-page .workshop .closing {  position:absolute; left:76px; right:76px; bottom:68px; padding-top:23px; border-top:6px solid var(--yellow); font-size:28px; font-weight:700; }
+.slidev-page .workshop { position:relative; width:100%; height:100%; box-sizing:border-box; }

@@ -390,25 +390,26 @@ Other frameworks, languages and no-code tools are equally welcome. Use their cre
 
 ## Slides and organizer checklist
 
-Open [slides/index.html](slides/index.html) in a browser to present offline; use the arrow keys to navigate. Its editable source is [slides/slides.md](slides/slides.md). To rebuild it, install Node.js 24 and run:
+The presentation uses **Slidev**. Its editable source is [slides/slides.md](slides/slides.md), with the layout styles in [slides/style.css](slides/style.css).
+
+Install [Node.js 24](https://nodejs.org/en/download), then run from the repository root:
 
 ```bash
 cd slides
 npm ci
+npm run dev
+```
+
+Open **http://localhost:3030** for the slides or **http://localhost:3030/presenter** for presenter view with speaker notes and the next slide. Use the arrow keys to navigate. Stop the server with Ctrl+C. Use this same start command on Windows, macOS and Linux; no global Slidev installation is needed.
+
+To build the browser presentation and preview that build:
+
+```bash
 npm run build
+npm run preview
 ```
 
-For a live preview with speaker notes, use **Marp**, the renderer used by this deck:
-
-```bash
-cd slides
-npm ci
-PORT=3030 npm run dev
-```
-
-Open `http://localhost:3030/slides.md` and press **P** for presenter view (speaker notes and next slide). Use the arrow keys to navigate. The Markdown contains Marp-specific styles; running it with `slidev` ignores those styles and breaks the layout.
-
-GitHub Actions builds the presentation and saves it as a downloadable artifact when slide files change. This runs after the repository is hosted on GitHub; it does not publish a website.
+The build is written to `slides/dist/`. Serve this folder over HTTP; do not open its `index.html` directly as a local file. GitHub Actions builds and uploads the complete folder as the `workshop-slides` artifact when slide files change. It does not publish a website.
 
 Before the workshop, the organizer should:
 
@@ -426,7 +427,7 @@ Before the workshop, the organizer should:
 README.md          Workshop brief and optional setup examples
 data/              CSV release data
 work/              Space for your experiments
-slides/            Markdown source and offline browser presentation
+slides/            Slidev source, styles and presentation tooling
 .github/workflows/ Slide build for GitHub Actions
 pyproject.toml     Optional Python dependencies
 uv.lock            Reproducible dependency versions
