@@ -21,18 +21,26 @@
 .slidev-page .workshop .flow-diagram text {  font-family: TheSans, Arial, sans-serif; }
 .slidev-page .workshop .flow-questions {  display:flex; border-top:1px solid #D7D7D0; padding-top:22px; gap:52px; font-size:24px; }
 .slidev-page .workshop .flow-questions strong {  color:var(--petrol); margin-right:12px; font-size:17px; }
-.slidev-page .workshop .release-layout {  display:grid; grid-template-columns:1fr 80px 1fr; align-items:center; margin-top:52px; }
-.slidev-page .workshop .release-data {  border-top:3px solid var(--petrol); padding-top:23px; }
-.slidev-page .workshop .release-data .album {  font-size:48px; margin:20px 0 3px; font-weight:700; }
-.slidev-page .workshop .release-data .artist {  font-size:27px; }
-.slidev-page .workshop .release-data .identifier {  margin-top:30px; font-family: monospace; font-size:22px; }
-.slidev-page .workshop .release-data .caption {  margin-top:10px; font-size:18px; color:#666; }
-.slidev-page .workshop .release-gap {  text-align:center; font-size:34px; color:var(--petrol); }
-.slidev-page .workshop .tracklist {  padding-left:35px; }
-.slidev-page .workshop .tracklist .label {  margin-bottom:18px; }
-.slidev-page .workshop .tracklist .missing-title {  font-size:33px; font-weight:700; margin-bottom:23px; }
-.slidev-page .workshop .track-row {  display:flex; align-items:center; gap:25px; height:44px; color:#888; font-size:18px; }
-.slidev-page .workshop .track-row i {  display:block; height:1px; background:#C7C7BE; width:100%; }
+.slidev-page .workshop .release-layout { display:grid; grid-template-columns:470px 80px 1fr; align-items:center; margin-top:32px; }
+.slidev-page .workshop .record-product { position:relative; height:205px; margin-top:18px; }
+.slidev-page .workshop .record-disc { position:absolute; left:155px; top:4px; width:195px; height:195px; border-radius:50%; background:repeating-radial-gradient(circle,#252929 0 3px,#3e4444 4px 5px); display:grid; place-items:center; }
+.slidev-page .workshop .disc-label { width:67px; height:67px; border-radius:50%; background:var(--yellow); border:27px solid var(--petrol); box-sizing:border-box; }
+.slidev-page .workshop .record-sleeve { position:relative; width:205px; height:205px; padding:24px; background:var(--petrol); color:white; box-shadow:4px 5px 12px #0002; display:flex; flex-direction:column; border-left:6px solid var(--yellow); }
+.slidev-page .workshop .sleeve-format { font-size:13px; letter-spacing:2px; color:#BBDADA; }
+.slidev-page .workshop .record-sleeve strong { font-size:38px; margin-top:22px; line-height:1.1; }
+.slidev-page .workshop .record-sleeve > span:not(.sleeve-format) { font-size:22px; margin-top:6px; }
+.slidev-page .workshop .record-sleeve small { font-size:12px; margin-top:auto; color:#BBDADA; }
+.slidev-page .workshop .release-data .identifier { margin-top:17px; font-family:monospace; font-size:20px; }
+.slidev-page .workshop .release-data .caption { margin-top:8px; font-size:17px; color:#666; }
+.slidev-page .workshop .release-gap { font-size:38px; color:var(--petrol); }
+.slidev-page .workshop .tracklist .missing-title { font-size:30px; font-weight:700; margin:10px 0 18px; }
+.slidev-page .workshop .track-table { border-top:3px solid var(--petrol); }
+.slidev-page .workshop .track-header, .slidev-page .workshop .track-entry { display:grid; grid-template-columns:42px 1fr 65px; align-items:center; gap:12px; }
+.slidev-page .workshop .track-header { height:32px; font-size:15px; color:#666; }
+.slidev-page .workshop .track-entry { height:62px; border-top:1px solid #D7D7D0; font-size:19px; color:#777; }
+.slidev-page .workshop .track-entry strong { font-size:21px; color:#666; font-weight:400; }
+.slidev-page .workshop .track-entry small { display:block; font-size:16px; margin-top:3px; }
+.slidev-page .workshop .track-caption { font-size:16px; color:#777; margin-top:12px; }
 .slidev-page .workshop .takeaway {  position:absolute; bottom:79px; left:76px; font-size:27px; }
 .slidev-page .workshop .takeaway mark {  background:var(--yellow); color:var(--ink); padding:3px 9px; }
 .slidev-page .workshop.challenge {  background:var(--petrol); color:#FFF; }

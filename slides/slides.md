@@ -51,11 +51,33 @@ Sources: GEMA, “What is GEMA?” https://www.gema.de/en/w/help/gema/organisati
 ---
 
 <h2>Known release.<br><span class="accent">Missing tracklist.</span></h2>
-<div class="release-layout"><div class="release-data"><div class="label">A record from your dataset</div><p class="album">Aspiral</p><p class="artist">EPICA</p><p class="identifier">4065629733131</p><p class="caption">Supplied barcode · edition still to verify</p></div><div class="release-gap">→</div><div class="tracklist"><div class="label">The information we need</div><p class="missing-title">Which songs are on it?</p><div class="track-row">01<i></i></div><div class="track-row">02<i></i></div><div class="track-row">03<i></i></div><div class="track-row">…<i></i></div></div></div>
+<div class="release-layout">
+<div class="release-data">
+<div class="label">Physical release · CD / vinyl</div>
+<div class="record-product" role="img" aria-label="Illustrative record sleeve and disc, not the actual album artwork">
+<div class="record-disc"><div class="disc-label"></div></div>
+<div class="record-sleeve"><span class="sleeve-format">ALBUM</span><strong>Aspiral</strong><span>EPICA</span><small>Illustrative cover</small></div>
+</div>
+<p class="identifier">Barcode: 4065629733131</p>
+<p class="caption">From the dataset · format &amp; edition to verify</p>
+</div>
+<div class="release-gap">→</div>
+<div class="tracklist">
+<div class="label">Missing information</div>
+<p class="missing-title">The songs on this release</p>
+<div class="track-table" role="table" aria-label="Missing tracklist, illustrative rows">
+<div class="track-header" role="row"><span>#</span><span>Song title / artist</span><span>Length</span></div>
+<div class="track-entry" role="row"><span>01</span><div><strong>Unknown song</strong><small>Artist unknown</small></div><span>–:––</span></div>
+<div class="track-entry" role="row"><span>02</span><div><strong>Unknown song</strong><small>Artist unknown</small></div><span>–:––</span></div>
+<div class="track-entry" role="row"><span>03</span><div><strong>Unknown song</strong><small>Artist unknown</small></div><span>–:––</span></div>
+</div>
+<p class="track-caption">Illustrative rows · actual tracks still to discover</p>
+</div>
+</div>
 <p class="takeaway">Same album title. Different editions. <mark>The details matter.</mark></p>
 
 <!--
-We have release information, but some tracklists are missing. An album title, artist or barcode may identify a product, but we still need the songs on the correct edition. Bonus tracks, regional editions and reissues can matter. Without that information, one of the links needed for subsequent allocation is missing. Tracklist recovery is the workshop scope; rights-holder identification and payment calculation are not. The supplied Aspiral / EPICA / 4065629733131 example is an actual row from the workshop CSV, not a verified release match. Empty track lines illustrate missing data; they do not assert the number of songs.
+We have release information, but some tracklists are missing. An album title, artist or barcode may identify a product, but we still need the songs on the correct edition. Bonus tracks, regional editions and reissues can matter. Without that information, one of the links needed for subsequent allocation is missing. Tracklist recovery is the workshop scope; rights-holder identification and payment calculation are not. The supplied Aspiral / EPICA / 4065629733131 example is an actual row from the workshop CSV, not a verified release match. The sleeve and disc are illustrative, not actual album artwork or a claim about the format of this barcode. Unknown track rows illustrate missing information; they do not assert the number of songs. Track length is optional enrichment after the core discovery works.
 -->
 
 ---
