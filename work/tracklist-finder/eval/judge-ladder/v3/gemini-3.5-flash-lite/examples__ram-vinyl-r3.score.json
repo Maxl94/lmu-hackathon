@@ -1,0 +1,90 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:31",
+ "overall": 4.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: NOT MET (no barcode in input). Level 4: Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist: MET (artist 'Daft Punk', title 'Random Access Memories', and format 'Vinyl' are supported by MusicBrainz and Discogs matching the 2013 standard 2xLP release; all standard reissues share the identical tracklist).",
+   "summary": "The edition is unambiguously identified via title, artist, format, label, and catalogue number across two independent database sources without competing tracklists for the standard vinyl edition.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET (MusicBrainz release 4867ceba-ffe7-40c0-a093-45be6c03c655 and Discogs release 4570366 both agree on 13 tracks in identical order from A1 to D4).",
+   "summary": "Two independent database sources completely agree on count, order, and titles.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de): MET (MusicBrainz and Discogs provide independent entries with distinct IDs and identifiers confirming the release).",
+   "summary": "The sources consist of two independent database entries (MusicBrainz and Discogs).",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation warning: artists is empty in the facts check, but the tracks correctly belong to Daft Punk."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.0,
+  "tokens_in": 14915,
+  "tokens_out": 444,
+  "cost_usd": 0.00558,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

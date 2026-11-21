@@ -1,0 +1,118 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:00",
+ "overall": 4.85,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: Barcode 4029759202219 matches exactly; checksum OK. MB release 505bd0d9 (barcode match, 2xCD, earMUSIC 0220221EMU) and Discogs 34259926 (barcode 4 029759 202219, same catno, 2xCD) - two independent database sources with the same barcode. Format CD and artist Jethro Tull match. Digital UPC 4029759205838 release is a different barcode and digital format, so it does not count as competing physical edition. Level 5 conditions MET. Level 5 requires no other edition with same barcode and different tracklist: only one hit for the barcode in search, so MET. Country differs (MB US vs Discogs Europe), a country-entry conflict, not a different edition. Rating 5.",
+   "summary": "Exact barcode match in two independent database sources (MusicBrainz and Discogs) with matching catno, format, and artist, and no other physical edition with this barcode.",
+   "evidence": [
+    "tl-gtin: checksum valid",
+    "tl-discogs search --barcode: 1 hit discogs:release/34259926",
+    "tl-mb search --barcode: 1 release musicbrainz:release/505bd0d9",
+    "tl-discogs release 34259926 barcode and LC 36979",
+    "tl-mb release 505bd0d9 barcode 4029759202219 earMUSIC 0220221EMU"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: Two independent sources of the same 2xCD edition (MB 505bd0d9 and Discogs 34259926) agree on count (9+6=15), order and titles, with only capitalisation differences (Living in the Past vs Living In The Past; Bourée identical). Durations agree within 1 s. Level 5 MET. Note: the printed back cover was unreadable, so printed titles are unverified, but two databases agree which is the 5 bar given spelling variants only.",
+   "summary": "MusicBrainz and Discogs agree on 15 tracks in identical order with matching titles (spelling/capitalisation variants only) and durations within 1 s.",
+   "evidence": [
+    "tl-mb release 505bd0d9 medium 1 (9 tracks) and medium 2 (6 tracks)",
+    "tl-discogs release 34259926 tracks 1-1 to 2-6",
+    "tl-itunes upc 4029759205838 durations agree within 1 s"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Requires database plus independent primary source (read cover/booklet/label print or label information) of the same edition. Two databases (MB, Discogs) MET. Discogs notes contain matrix/runout, SID codes, label code LC 36979 and GEMA/BIEM, which are primary-like identifiers read from the physical disc, plus Discogs notes 'Made in Germany' disc rim text. However the agent states the back cover could not be read, and the image fetch failed (HTTP 403). The Discogs identifiers are database-recorded rather than read by the agent from the object itself. Strictly, primary source read by the agent is not established, so level 5 is NOT clearly MET. Level 4: two independent database entries with differing details (MB ms durations, Discogs notes, matrix codes) MET. Rating 4.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) with differing details agree, but no primary source (cover/booklet) was actually read because image fetches failed.",
+   "evidence": [
+    "tl-mb release 505bd0d9 (database)",
+    "tl-discogs release 34259926 (database, matrix/SID/LC codes)",
+    "tl-vision HTTP 403 error",
+    "tl-caa front only, back=False"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Agent claims 'disc rim text Made in Germany' and 'printed durations unverified'; the rim text is only from Discogs notes, not read by the agent.",
+  "Back cover could not be read (HTTP 403 on Discogs images; CAA front only), so printed titles and durations are unverified; agent acknowledges this.",
+  "Country conflict: MB lists US, Discogs Europe; resolved by agent with reasoning, plausible but not confirmed by a primary source.",
+  "Agent's 'optimal media matrices' and 'GEMA/BIEM' claims are from Discogs database fields, not independently verified.",
+  "Agent states Discogs release title includes subtitle; base title identical, acceptable.",
+  "Agent's reasoning says 'no other physical edition of the 2025 release exists in the release group' - supported by tl-mb group output listing only two releases (one digital, one CD)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 15,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 75,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 1,
+  "agent_confidence": 0.89,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.9,
+  "tokens_in": 13737,
+  "tokens_out": 1505,
+  "cost_usd": 0.00213,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 15,
+   "of": 15
+  }
+ }
+}

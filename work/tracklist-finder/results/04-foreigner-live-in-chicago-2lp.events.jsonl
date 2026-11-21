@@ -1,0 +1,56 @@
+{"ts": 1795185738.37, "event": "run_start", "input": {"title": "LIVE IN CHICAGO (2LP)", "artist": "FOREIGNER", "ean": "4029759205296"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4029759205296): 0 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185738.37, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185742.08, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4029759205296"}
+{"ts": 1795185742.08, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4029759205296", "seconds": 0.0, "ok": true}
+{"ts": 1795185742.09, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4029759205296"}
+{"ts": 1795185742.09, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4029759205296", "seconds": 0.0, "ok": true}
+{"ts": 1795185742.12, "event": "tool_start", "tool": "tl-gtin", "args": "4029759205296"}
+{"ts": 1795185742.12, "event": "tool_end", "tool": "tl-gtin", "args": "4029759205296", "seconds": 0.0, "ok": true}
+{"ts": 1795185744.25, "event": "tool_start", "tool": "tl-discogs", "args": "release 34744227"}
+{"ts": 1795185744.25, "event": "tool_end", "tool": "tl-discogs", "args": "release 34744227", "seconds": 0.0, "ok": true}
+{"ts": 1795185744.25, "event": "tool_start", "tool": "tl-mb", "args": "search --title Live in Chicago --artist Foreigner"}
+{"ts": 1795185744.25, "event": "tool_end", "tool": "tl-mb", "args": "search --title Live in Chicago --artist Foreigner", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.22, "event": "tool_start", "tool": "tl-mb", "args": "release 13ed9b61-194b-4133-81a3-703edec19459"}
+{"ts": 1795185747.22, "event": "tool_end", "tool": "tl-mb", "args": "release 13ed9b61-194b-4133-81a3-703edec19459", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.22, "event": "tool_start", "tool": "tl-mb", "args": "release 0db824ee-9259-4c64-be7f-25130beba083"}
+{"ts": 1795185747.23, "event": "tool_end", "tool": "tl-mb", "args": "release 0db824ee-9259-4c64-be7f-25130beba083", "seconds": 0.0, "ok": true}
+{"ts": 1795185758.12, "event": "tool_start", "tool": "tl-discogs", "args": "versions 896990"}
+{"ts": 1795185758.12, "event": "tool_end", "tool": "tl-discogs", "args": "versions 896990", "seconds": 0.0, "ok": true}
+{"ts": 1795185758.12, "event": "tool_start", "tool": "tl-caa", "args": "13ed9b61-194b-4133-81a3-703edec19459"}
+{"ts": 1795185758.12, "event": "tool_end", "tool": "tl-caa", "args": "13ed9b61-194b-4133-81a3-703edec19459", "seconds": 0.0, "ok": true}
+{"ts": 1795185758.26, "event": "tool_start", "tool": "tl-itunes", "args": "search Foreigner Live in Chicago"}
+{"ts": 1795185758.26, "event": "tool_end", "tool": "tl-itunes", "args": "search Foreigner Live in Chicago", "seconds": 0.0, "ok": true}
+{"ts": 1795185758.4, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Foreigner --title Live in Chicago"}
+{"ts": 1795185758.4, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Foreigner --title Live in Chicago", "seconds": 0.0, "ok": true}
+{"ts": 1795185789.8, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4029759205296"}
+{"ts": 1795185789.8, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4029759205296", "seconds": 0.0, "ok": true}
+{"ts": 1795185789.86, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/ZoqNU5IkUqgp-PNPpryFflHoBjZm6qf0zOz1AwemQ8U/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM0NzQ0MjI3LTE3NTQ0MzY4MzItMzIwMC5qcGVn.jpeg --context Discogs release 34744227 Foreigner Live In Chicago 2LP. Read the title as printed and any tracklist text vis"}
+{"ts": 1795185789.95, "event": "tool_start", "tool": "tl-itunes", "args": "album 1797510964"}
+{"ts": 1795185789.95, "event": "tool_end", "tool": "tl-itunes", "args": "album 1797510964", "seconds": 0.0, "ok": true}
+{"ts": 1795185791.29, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/ZoqNU5IkUqgp-PNPpryFflHoBjZm6qf0zOz1AwemQ8U/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM0NzQ0MjI3LTE3NTQ0MzY4MzItMzIwMC5qcGVn.jpeg --context Discogs release 34744227 Foreigner Live In Chicago 2LP. Read the title as printed and any tracklist text vis", "seconds": 1.4, "ok": false}
+{"ts": 1795185803.15, "event": "tool_start", "tool": "tl-search", "args": "Foreigner \"Live In Chicago\" 2LP 0220529EMU vinyl tracklist"}
+{"ts": 1795185803.15, "event": "tool_start", "tool": "tl-deezer", "args": "upc 4029759205272"}
+{"ts": 1795185803.16, "event": "tool_end", "tool": "tl-deezer", "args": "upc 4029759205272", "seconds": 0.0, "ok": true}
+{"ts": 1795185805.18, "event": "tool_end", "tool": "tl-search", "args": "Foreigner \"Live In Chicago\" 2LP 0220529EMU vinyl tracklist", "seconds": 2.0, "ok": true}
+{"ts": 1795185807.35, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de --grep -i a1|b1|c1|d1|double|starrider|juke|tracklist"}
+{"ts": 1795185807.36, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de --grep -i a1|b1|c1|d1|double|starrider|juke|tracklist", "seconds": 0.0, "ok": false}
+{"ts": 1795185813.76, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de --grep (?i)(a1|b1|c1|d1|double vision|starrider|juke box|tracklist)"}
+{"ts": 1795185813.77, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de --grep (?i)(a1|b1|c1|d1|double vision|starrider|juke box|tracklist)", "seconds": 0.0, "ok": true}
+{"ts": 1795185822.46, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.emp.de/p/live-in-chicago/583437.html --grep (?i)(A1|B1|C1|D1|Double Vision|Starrider|Juke Box|Tracklist|Disc 1)"}
+{"ts": 1795185822.47, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.nervegas.com.au/foreigner-live-in-chicago-2lp --grep (?i)(A1|B1|C1|D1|Double Vision|Starrider|Juke Box|Tracklist)"}
+{"ts": 1795185825.81, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.emp.de/p/live-in-chicago/583437.html --grep (?i)(A1|B1|C1|D1|Double Vision|Starrider|Juke Box|Tracklist|Disc 1)", "seconds": 3.4, "ok": true}
+{"ts": 1795185837.24, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.nervegas.com.au/foreigner-live-in-chicago-2lp --grep (?i)(A1|B1|C1|D1|Double Vision|Starrider|Juke Box|Tracklist)", "seconds": 14.8, "ok": true}
+{"ts": 1795185846.02, "event": "tool_start", "tool": "tl-discogs", "args": "release 33766896"}
+{"ts": 1795185846.02, "event": "tool_end", "tool": "tl-discogs", "args": "release 33766896", "seconds": 0.0, "ok": true}
+{"ts": 1795185862.29, "event": "tool_start", "tool": "tl-vision", "args": "https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg --context Back cover of Foreigner 'Live in Chicago' (earMUSIC 2025 CD, same program as the 2LP). Transcribe the title exactly as printed and every track title with its number, preserving capitalisation."}
+{"ts": 1795185886.62, "event": "tool_end", "tool": "tl-vision", "args": "https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg --context Back cover of Foreigner 'Live in Chicago' (earMUSIC 2025 CD, same program as the 2LP). Transcribe the title exactly as printed and every track title with its number, preserving capitalisation.", "seconds": 24.3, "ok": true}
+{"ts": 1795185985.25, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 23, "steps": 15}
+{"ts": 1795185985.25, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185985.25, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795185985.25, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185994.72, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.75, "error": null}
+{"ts": 1795185994.72, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.75, "tracks": 13, "wall_s": 246.9, "judge_s": 9.5, "cost_usd": 0.0152, "mode": "agent", "errors": []}

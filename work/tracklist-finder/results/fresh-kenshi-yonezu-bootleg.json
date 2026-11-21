@@ -1,0 +1,894 @@
+{
+ "input": {
+  "id": "fresh-kenshi-yonezu-bootleg",
+  "title": "BOOTLEG",
+  "artist": "Kenshi Yonezu",
+  "format": "CD"
+ },
+ "status": "found",
+ "release": {
+  "title": "BOOTLEG",
+  "artist": "米津玄師",
+  "format": "CD",
+  "country": "JP",
+  "year": 2017,
+  "label": "Sony Music Records",
+  "catno": "SRCL-9571",
+  "barcode": "4547366329698",
+  "edition": "通常盤 (Standard Edition), 1×CD",
+  "ids": {
+   "musicbrainz": "02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+   "discogs": "12531413"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "飛燕",
+   "artist": null,
+   "duration_s": 243,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702915"
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "LOSER",
+   "artist": null,
+   "duration_s": 244,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "蔦谷好位置",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "蔦谷好位置",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901602597"
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "ピースサイン",
+   "artist": null,
+   "duration_s": 239,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901701672"
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "砂の惑星",
+   "artist": "米津玄師 + 初音ミク",
+   "duration_s": 240,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "ハチ",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "ハチ",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "ハチ",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "ハチ",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702916"
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "orion",
+   "artist": null,
+   "duration_s": 282,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "蔦谷好位置",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "蔦谷好位置",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901700003"
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "かいじゅうのマーチ",
+   "artist": null,
+   "duration_s": 296,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702917"
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Moonlight",
+   "artist": null,
+   "duration_s": 225,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702918"
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "春雷",
+   "artist": null,
+   "duration_s": 289,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702919"
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "fogbound",
+   "artist": "米津玄師 + 池田エライザ",
+   "duration_s": 255,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702920"
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "ナンバーナイン",
+   "artist": null,
+   "duration_s": 262,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "mabanua",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "mabanua",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901602598"
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "爱丽丝",
+   "artist": null,
+   "duration_s": 190,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "常田大希",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "常田大希",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702921"
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "Nighthawks",
+   "artist": null,
+   "duration_s": 260,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702922"
+  },
+  {
+   "position": "13",
+   "disc": 1,
+   "title": "打上花火",
+   "artist": null,
+   "duration_s": 259,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702923"
+  },
+  {
+   "position": "14",
+   "disc": 1,
+   "title": "灰色と青",
+   "artist": "米津玄師 + 菅田将暉",
+   "duration_s": 332,
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+      "discogs:release/12531413"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1"
+     ]
+    }
+   ],
+   "isrc": "JPU901702924"
+  }
+ ],
+ "artists": [
+  {
+   "name": "米津玄師",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ]
+  },
+  {
+   "name": "初音ミク",
+   "role": "featured",
+   "tracks": [
+    "4"
+   ],
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ]
+  },
+  {
+   "name": "池田エライザ",
+   "role": "featured",
+   "tracks": [
+    "9"
+   ],
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ]
+  },
+  {
+   "name": "菅田将暉",
+   "role": "featured",
+   "tracks": [
+    "14"
+   ],
+   "sources": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413"
+   ]
+  }
+ ],
+ "total_duration_s": 3616,
+ "confidence": 0.8,
+ "sources": [
+  {
+   "id": "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+   "url": "https://musicbrainz.org/release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+   "kind": "database",
+   "note": "Matched Japanese CD edition SRCL-9571 / barcode 4547366329698, durations in ms"
+  },
+  {
+   "id": "discogs:release/12531413",
+   "url": "https://www.discogs.com/release/12531413",
+   "kind": "database",
+   "note": "Same edition: SRCL 9571, barcode 4547366329698, 14 tracks, durations agree within 1 s"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 2",
+   "values": {
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1": "LOSER",
+    "discogs:release/12531413": "Loser"
+   },
+   "resolution": "MusicBrainz CD entry used (uppercase is the official single spelling); Discogs normalises capitalisation"
+  },
+  {
+   "field": "title track 5",
+   "values": {
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1": "orion",
+    "discogs:release/12531413": "Orion"
+   },
+   "resolution": "MusicBrainz CD entry used (lowercase is the official single spelling); Discogs normalises capitalisation"
+  },
+  {
+   "field": "title track 9",
+   "values": {
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1": "fogbound",
+    "discogs:release/12531413": "Fogbound"
+   },
+   "resolution": "MusicBrainz CD entry used (lowercase is the official spelling); Discogs normalises capitalisation"
+  }
+ ],
+ "missing": [
+  "No barcode in the input, so the edition was chosen by format: several Japanese physical editions with identical 14-track CD exist (standard 通常盤 SRCL-9571, limited SRCL 9567~8, CD+DVD SRCL 9569~70). The plain CD without extras was taken.",
+  "Back cover could not be read (Discogs images return HTTP 403, Cover Art Archive has only the front for this release); printed titles/credits were therefore taken from the MusicBrainz CD entry, which Discogs corroborates."
+ ],
+ "alternatives": [
+  {
+   "description": "CD + DVD, Limited Edition, SRCL 9569~70, Japan 2017, barcode 4547366329681, 14 tracks + 4 music videos",
+   "source": "discogs:release/11114145",
+   "why_not": "includes a DVD; input specifies only CD and gives no barcode or limited-edition hint"
+  },
+  {
+   "description": "Limited Edition CD + 12\" sleeve, poster, dummy record, 6 cover prints, SRCL 9567~8, Japan 2017, barcode 4547366329674",
+   "source": "discogs:release/27971019",
+   "why_not": "deluxe box with extra items; input gives no barcode or edition hint"
+  },
+  {
+   "description": "Taiwan CD+DVD edition, catno 19075802642, barcode 190758026428",
+   "source": "discogs:release/12491102",
+   "why_not": "different country/barcode, includes DVD"
+  },
+  {
+   "description": "China 2019 CD edition (Bootleg = 私藏), catno 19075893942, barcode 9787798420036",
+   "source": "discogs:release/36987714",
+   "why_not": "different country and barcode"
+  },
+  {
+   "description": "Digital Media edition, barcode 886446811420, 14 tracks (MusicBrainz)",
+   "source": "musicbrainz:release/2f923832-09d2-4ae9-b1f3-2680ef5a01de",
+   "why_not": "digital only; physical edition preferred"
+  }
+ ],
+ "reasoning": "The input gives only title, artist and format CD. MusicBrainz release group 'BOOTLEG' contains exactly one physical CD: the Japanese standard edition 通常盤 SRCL-9571 (barcode 4547366329698). Discogs lists the same edition as release 12531413 with identical catalogue number, barcode and 14 tracks; all durations agree within 1 s (MB ms values used). Track titles are Japanese as printed on the Japanese CD, romanised titles in the digital edition (Hien, Peace Sign, etc.) were not used. Featured artists on tracks 4, 9 and 14 are credited separately in both databases. The CD+DVD and deluxe editions and the Taiwan/China pressings share the same 14 audio tracks but differ in barcode and extras, so they are recorded as alternatives."
+}

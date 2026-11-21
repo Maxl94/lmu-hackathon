@@ -1,0 +1,126 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:52",
+ "overall": 2.85,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5 (barcode input): NOT MET - input has no barcode. 4 (without barcode: title, artist, format and a further attribute unambiguous in >=2 sources, no other fitting edition with different tracklist): title NOT MET - input 'Jackfruit Traxx 1' matches no source title; sources show 'Traxx Salad Vol. 1' (catno JFXX1, label blurb calls it the first vinyl release of the sublabel). Artist 'Various Artists', format Vinyl, country DE, catno JFXX1 agree across discogs, selectedwax, techno-import, decks.de, so the attribute part is MET. However a competing edition exists: Traxx Salad Vol. 2 (discogs:release/37837974, JFXX2, different tracklist per agent alternatives) - agent dismisses it by the '1' in the title, which is a plausible reading but the input title does not literally match either. Level 4 condition on 'no other edition fitting the input has a different tracklist' is arguably MET only if Vol. 2 is ruled out by the input; the title mismatch means the identification rests on label shorthand. Stopping at level 2: several editions (Vol.1 and Vol.2 under the same label/artist) with different tracklists, and the choice rests on an interpretation of the input title.",
+   "summary": "The input title 'Jackfruit Traxx 1' matches no source literally; identification as 'Traxx Salad Vol. 1' is an inference from label shorthand while the sibling Vol. 2 with a different tracklist exists, so the choice rests on weak signals.",
+   "evidence": [
+    "discogs:release/36475918",
+    "discogs:release/37837974",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html",
+    "web:https://www.decks.de/label/jack-fruit-recordings",
+    "tl-search 'Jackfruit Traxx 1' (no release with that title)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: NOT MET - Discogs tracklist (36475918) and selectedwax and decks.de agree on count and titles for A1/A2/B1/B2, but they are not all independent of each other for titles, and techno-import only gives count (4). Two sources agree on count, order and titles: discogs and selectedwax (and decks.de for positions and titles) - this is >=2 independent sources, so 5 could be arguable, but durations are missing for vinyl-only B1 and the title of B1 has a '(Vinyl Only)' annotation variant. 4: MET-ish - one complete source (discogs) confirmed by second (selectedwax) except small explained deviations ('(Vinyl Only)' annotation on B1). Stopping at 4 because the B1 title variance and missing B1 duration are unresolved, and durations for A1/A2/B2 come from another edition (Bandcamp digital, flagged).",
+   "summary": "Four positions and titles are confirmed by Discogs, selectedwax and decks.de with only an explained '(Vinyl Only)' annotation deviation on B1, while durations are partly taken from the digital edition.",
+   "evidence": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings",
+    "web:https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html",
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 2,
+   "check": "75% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "75% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: NOT MET - no primary source (cover/booklet/label print) was read; the vision call for the Discogs back cover returned HTTP 403. 4: MET - Discogs database entry plus selectedwax and decks.de/techno-import shop pages of the same edition; the Discogs entry is a database, the others are shops, and the bandcamp page is a digital edition (streaming). Two independent database entries are not available (only Discogs holds the physical edition), so the database + collector/shop combination is used. Level 4 condition 'database + specialised collector site' is only partly met (selectedwax and decks.de are shops, not collector sites), so stopping at 3: one good database (Discogs) with supporting shop pages.",
+   "summary": "Discogs is the only database entry for the physical edition, supported only by shop pages, and no primary source was read because the cover image fetch returned HTTP 403.",
+   "evidence": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings",
+    "web:https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html",
+    "tl-vision call returned HTTP 403"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input title 'Jackfruit Traxx 1' does not match any source title; result relabels it as 'Traxx Salad Vol. 1' by shorthand inference (result's own conflict entry).",
+  "Competing edition Traxx Salad Vol. 2 (discogs:release/37837974, JFXX2) exists under the same label and artist; dismissal rests on the '1' in the title only.",
+  "Result's B1 title is recorded as 'No Place Like Heim' while selectedwax and decks.de list '(Vinyl Only)' - treated as annotation, plausible but unverified.",
+  "Durations A1 330s, A2 363s, B2 332s come from the Bandcamp digital edition (bandcamp, 5:30/6:03/5:32), not from the vinyl; flagged in result but total_duration_s 1025 is partial and B1 has no duration.",
+  "Result claims 'Discogs holds exactly one entry' and the label says 'founded 2023' while the Bandcamp page says label founded 2017 - not contradicting the release but not verified.",
+  "Result's 'confidence 0.7' is not justified by a primary source; the cover image read failed (HTTP 403) and no barcode exists.",
+  "Agent's sources list the selectedwax page as 'Coming Soon' / pre-order status in one fetch, while decks.de lists release date 09.02.26 and Discogs 2026-02 - release date inconsistency not discussed.",
+  "Result lists 'credits missing for 4 of 4 tracks' while B2 credits list Remix: Edgar Peng; minor inconsistency."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 4,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 58,
+  "dur_other_edition": 3,
+  "dur_share": 0.75,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "decks.de",
+   "discogs",
+   "jackfruitrec.bandcamp.com",
+   "selectedwax.com",
+   "techno-import.fr"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 2,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 11.1,
+  "tokens_in": 19985,
+  "tokens_out": 2219,
+  "cost_usd": 0.00311,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "missing",
+  "durations_rating": 2,
+  "credits": {
+   "tracks": 0,
+   "of": 4
+  }
+ }
+}

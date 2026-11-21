@@ -1,0 +1,98 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:24",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Eingabe-EAN 888837168626 ist ungültig; Prüfzifferkorrektur ergibt 888837168625, das in MusicBrainz (DE, US, AU, CA, BR) und Discogs (mehrere Pressungen) exakt auftaucht. Die gewählte DE/EU-Ausgabe wird durch MusicBrainz (DE) und Discogs (Europe) bestätigt, Katalognummer und Barcode stimmen, und das Backcover bestätigt Barcode und Katalognummer. Allerdings existieren viele Länderpressungen mit identischer Trackliste, was die Wahl nicht beeinflusst; die Wahl der EU-Pressung ist also unkritisch.",
+   "belege": [
+    "shell #1 (Prüfziffer-Korrektur)",
+    "shell #4 (MB Barcode-Suche, 5 Pressungen)",
+    "shell #5 (Discogs Barcode-Suche)",
+    "shell #6 (MB release DE)",
+    "shell #7 (Discogs release 4729785 Europe)",
+    "image:coverartarchive 5748588554"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Count, Reihenfolge und Titel stimmen zwischen MusicBrainz DE, MusicBrainz US (a8308466) und Discogs 4729785 sowie dem Backcover (13 Titel) überein. Die Dauern weichen bei Track 13 'Contact' (384 s vs. 381 s) ab, was als Konflikt dokumentiert ist; die Dauern sind aber nicht Teil der Tracklist-Bewertung im engeren Sinn, und die Abweichung ist erklärt. Mehrere unabhängige Quellen bestätigen Titel und Reihenfolge.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 (shell #6)",
+    "discogs:release/4729785 (shell #7)",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0 (shell #10)",
+    "image:coverartarchive 5748588554 (shell #9)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 92% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Mehrere Datenbanken (MusicBrainz DE/US, Discogs) plus ein unabhängiges Primärbild (CD-Rückseite mit Barcode, Katalognummer, LC-Code) liegen vor; das Backcover ist eine echte Primärquelle des Tonträgers.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:coverartarchive 5748588554"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Discogs-Dauer Track 13 (6:21) weicht von MusicBrainz CD-TOC (6:24) ab; die Erklärung 'Digital-/Streaming-Version' ist eine Vermutung ohne Beleg in der Evidenz.",
+  "Die Behauptung 'Discogs weicht bei 12 Tracks um ≤1 s ab' ist durch die Tool-Ausgabe nur teilweise gedeckt (z.B. Track 3: 545 vs. 544, Track 4: 228 vs. 229 – plausibel, aber nicht ausdrücklich geprüft).",
+  "Die Behauptung, das Backcover bestätige Titel und Barcode, ist durch die Bildauswertung gedeckt; die Angabe 'Made in EU' ebenfalls.",
+  "Die Prüfziffer-Korrektur ist plausibel, aber der Barcode 888837168625 wurde nicht gegen einen zweiten Tippfehler in anderen Stellen geprüft; die Wahl beruht auf Titel/Artist-Treffern.",
+  "Die Angabe 'Discogs Europe 2013-05-17' ist in der Tool-Ausgabe korrekt, aber der Discogs-Release-Eintrag wird als Europa-Ausgabe bezeichnet, während die Tool-Ausgabe 'Columbia 88883716862; Sony Music 88883716862' zeigt – unkritisch."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.9,
+  "tokens_in": 27025,
+  "tokens_out": 1433,
+  "cost_usd": 0.00342,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

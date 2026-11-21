@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:49",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: INPUT contains barcode '731456031125' (valid UPC-A, tl-gtin): MET. Matches this exact edition (Bravo Hits 30, Polystar 560 311-2, 2xCD, 2000) in >= 2 independent sources: MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 with barcode 0731456031125, discogs:release/1949898 with scanned barcode 731456031125, image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg with printed barcode 731456031125, and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ with EAN 731456031125). Format (CD) and artist match (no artist specified in input; compilation): MET. No other edition with the same barcode and a different tracklist: MET (UK pressing discogs:release/23145932 has the same barcode and identical tracklist; EU pressing discogs:release/26676554 shares master 5994 and catno 560 311-2).",
+   "summary": "The valid UPC-A barcode from the input matches this exact 2xCD edition across MusicBrainz, Discogs, the scanned back cover, and musik-sammler.de with no competing tracklists.",
+   "evidence": [
+    "tl-gtin 731456031125",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "discogs:release/23145932",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/1949898 both list all 40 tracks (20+20) in identical order, with only minor spelling/subtitle differences (e.g., CD1-10 '(Album Version)' in Discogs, CD2-02 'Straßen' vs 'Strassen') that are transparently resolved and documented in conflicts; the back cover scan (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg) and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ further confirm count and order (with 5 duration conflicts resolved plausibly via musik-sammler.de and rounding comparison).",
+   "summary": "MusicBrainz and Discogs entries of the exact same edition agree on all 40 track positions, order, and titles apart from minor documented spelling/subtitle variants, further backed by the back cover and musik-sammler.de.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Two independent database entries are used (discogs:release/1949898 and musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941, with differing details such as track durations and artist/title formatting) plus a read physical back cover scan via tl-vision (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg, independent of Discogs and showing print-specific details differing from MusicBrainz text such as 'Feat. CRAIG DAVID' on CD2-11 and 'DEEJAY ÖTZI' on CD2-18), alongside collector site web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/.",
+   "summary": "The result combines two independent databases (Discogs and MusicBrainz), a read back-cover image via vision as a primary print source, and a specialised collector site (musik-sammler.de) for the same edition.",
+   "evidence": [
+    "discogs:release/1949898",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: the required 'artists' list (listing every distinct artist on the carrier) is missing/empty in the final result.",
+  "The Europe pressing alternative (discogs:release/26676554) was only seen in Discogs search results and never fetched via 'tl-discogs release 26676554' to confirm its tracklist directly.",
+  "Unmentioned data errors on web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ (CD1-10 artist listed as 'Nelly' instead of 'Britney Spears'; CD2-06 lists 'Stieber Twins' instead of 'Luxus Chris') were not logged in 'conflicts', although the agent noted the site contains typos and used it only for duration arbitration."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 26.5,
+  "tokens_in": 41662,
+  "tokens_out": 4660,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

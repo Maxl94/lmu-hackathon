@@ -1,0 +1,96 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:37:56",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4019593960000 matches exactly in MusicBrainz (1 hit) and Discogs (1 hit) = MET; format CD matches = MET; artist Bushido matches = MET; no other edition with same barcode and different tracklist in evidence = MET. Level 5 conditions are all met.",
+   "summary": "The EAN matches exactly in two independent database entries (MusicBrainz and Discogs) with matching format and artist, and no competing edition with the same barcode appears.",
+   "evidence": [
+    "MusicBrainz barcode search: 1 hit, 15996385-5426-416b-95da-0e8846196d3a",
+    "Discogs barcode search: 1 hit, 3057907",
+    "FACTS: ean_checksum_ok true, barcode_match exact, format_match true, artist_similarity 100"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: both MusicBrainz and Discogs list 20 tracks with identical titles and order (verified track by track in the tracks table) = MET. Duration conflicts on tracks 15 and 16 do not affect count, order or titles. Level 5 conditions are met.",
+   "summary": "Two independent sources agree on count (20), order and all titles, and the two duration differences are explained by the documented ms-precision rule.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "Track table: positions 1-20 with sources for both releases",
+    "Sum of durations 3720 s equals total_duration_s"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no primary source (cover, booklet or label print) is cited = NOT MET. Level 4: two independent database entries with differing details (Discogs edition name 'Exclusive 2004 Edition' and duration values differ) = MET. Level 4 conditions are met.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details support the result, but no primary source such as the cover or booklet is cited.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a (kind database)",
+    "discogs:release/3057907 (kind database)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The edition label 'Exclusive 2004 Edition' comes only from the Discogs title; the MusicBrainz entry does not show this edition name, yet the result applies it to the release as a whole.",
+  "Country is given as DE, while Discogs lists 'Germany, Austria, & Switzerland'; this is a minor difference that is not discussed.",
+  "Duration conflicts on track 15 (Vack You!, 2:21 vs 2:18) and track 16 (Sternenstaub, 3:41 vs 3:38) are resolved by a fixed rule, not verified against a primary source.",
+  "The reasoning states it was a 'Schnellweg ohne Agent' (deterministic fast path), so no further competing editions were searched beyond the single barcode hits.",
+  "Catalogue number '40195 9396000-0' contains spaces and a suffix that is not checked against any other source."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 11.5,
+  "tokens_in": 7066,
+  "tokens_out": 2270,
+  "cost_usd": 0.00184,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

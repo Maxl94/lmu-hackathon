@@ -1,0 +1,100 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:06",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 888837168625 (UPC-A, checksum valid per tl-gtin) matches this edition in >=2 independent sources: MET. MusicBrainz f6758afb lists barcode 0888837168625 with Columbia 88883716862, and Discogs 4729785 (Europe, BIEM/GEMA, LC 00162) lists 888837168625. The CAA back-cover read also shows 8 8883-71686-2 5. Format CD and artist Daft Punk match: MET. No other edition with the same barcode has a different tracklist: MET. All barcode hits are 13-track CDs with the same order (MB search shows 5 releases with 13 tracks; Discogs AU 4581879 is identical). The Russian cassette is a different format and unofficial. The iTunes '14 Tracks' header lists only 13 tracks and refers to a digital product, not a CD edition.",
+   "summary": "The barcode matches exactly in MusicBrainz and Discogs (EU/GEMA CD), and every same-barcode CD edition shares the identical 13-track list.",
+   "evidence": [
+    "bin/tl-gtin 888837168625",
+    "bin/tl-mb search --barcode 888837168625",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-discogs search --barcode 888837168625",
+    "bin/tl-vision back cover"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles: MET. MusicBrainz f6758afb, Discogs 4729785 and the back-cover image read all give the same 13 titles in the same order. The only differences are capitalisation and apostrophe variants (Doin’ It Right / Doin' it Right).",
+   "summary": "MusicBrainz, Discogs and the read back cover agree on 13 tracks in identical order, differing only in spelling.",
+   "evidence": [
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-vision back cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database plus an independent primary source of the same edition. The databases are MusicBrainz and Discogs: MET. The primary source is the back-cover print read via vision; it shows barcode 8 8883-71686-2 5, LC 00162 and 'Made in the EU', matching the Discogs EU entry: MET. The image is hosted on CAA linked to the MB entry, but Discogs is independent of it, so a database plus primary source pairing still holds.",
+   "summary": "Two independent databases plus a read back-cover print of the same EU edition.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The MB search output lists f6758afb as FR 2013-05-20, while the release call shows DE 2013-05-17; the agent reports country DE without addressing this inconsistency.",
+  "Track artists (feat. credits, tracks 5-8, 11, 12) appear only in the iTunes output, yet the track sources list only MusicBrainz and Discogs.",
+  "Track 13 'Contact': 384 s is taken from MusicBrainz, but Discogs and iTunes both give 381 s. The reasoning's claim that iTunes confirms durations within ±1–2 s is therefore not accurate for this track, and dur_conflicts=0 overlooks it.",
+  "The iTunes header says '14 Tracks' but lists 13; this is unexplained, though it does not affect the CD edition."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.3,
+  "tokens_in": 13844,
+  "tokens_out": 2090,
+  "cost_usd": 0.09718,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:15",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Input nennt keinen Barcode, nur Titel, Interpret und Format Kassette. Gefunden wurde die Erstauflage 2001 (MusicBrainz ILM 003 und Discogs 1951581) mit Musik-Sammler als dritter Quelle. Die Quellen bestätigen Format, Interpret und Label, doch es gibt sechs Kassetten-Auflagen 2001–2003 mit identischer Trackliste, also ist die Wahl unkritisch. Der Barcode fehlt, daher keine Barcode-Bestätigung; Titel, Interpret, Format und Label/Katalognummer sind aber in mehreren Quellen eindeutig, was Stufe 4 entspricht.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "discogs versions 211928 (6 Kassetten-Auflagen)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Die Trackliste mit 16 Titeln und identischen Dauern (Summe 2979 s) steht in MusicBrainz, Discogs 1951581 und musik-sammler.de (Tape 2001) übereinander. Abweichungen wie 'Nute Bounce' vs. 'Nutte Bounce' oder 'Pitbull' vs. 'Pit Bull' sind reine Schreibvarianten. Drei unabhängige Quellen stimmen also auf Anzahl, Reihenfolge und Titel überein.",
+   "belege": [
+    "tl-mb release 19fd3695",
+    "tl-discogs release 1951581",
+    "tl-scrape musik-sammler.de Tape 2001 (A1–B16)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) und ein Sammlerportal (musik-sammler.de) liefern die Trackliste, dazu ein Bild der J-Card. Die J-Card zeigt Label- und Jahresangaben, aber keine Trackliste, und es gibt keine Primärquelle wie Booklet oder Label-Information mit Trackliste. Damit liegt Datenbank plus Sammlerseite vor, also Stufe 4.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:musik-sammler.de",
+    "image:discogs J-Card"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Kein Barcode vorhanden; die Zuordnung beruht auf Titel, Interpret, Format und Label, nicht auf einem Barcode-Treffer.",
+  "Das Ergebnis behauptet, die Erstauflage sei 'Demo-Album' - dafür gibt es in den Tool-Ausgaben keine Belege.",
+  "Die Behauptung 'Kat.-Nr. 03' bzw. 'ILM 003' ist in Discogs als 'I Luv Money Records 03' gelistet, MusicBrainz nennt 'ILM 003' - kleine Abweichung der Notation, kein inhaltlicher Konflikt.",
+  "Die Discogs-Notiz zur Erstauflage nennt 'King Of Kings' auf dem Tape-Sticker, der Input lautet 'King of Kingz' - beim Titel gibt es keinen Konflikt, weil Stickertext und Coverangabe differieren.",
+  "Die Angabe 'Erstauflage (Limited Edition)' im Ergebnis stützt sich nur auf musik-sammler (Limited Edition) und Discogs (Erstausgabe), was Ausgabe 1 nicht eindeutig macht."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.6,
+  "tokens_in": 30828,
+  "tokens_out": 1311,
+  "cost_usd": 0.00374,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

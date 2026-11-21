@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:33",
+ "overall": 2.8,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: NOT MET - The input does not contain a barcode.\n4: NOT MET - There is another edition fitting the input ('Blasmusik Aus Lohnde (Folge 2)', discogs:release/24154076) which has a different tracklist.\n3: NOT MET - A competing edition is known and has a different tracklist.\n2: MET - Several editions fit the input (Folge 1 and Folge 2) and they have different tracklists (series part 1 vs 2); since the input does not specify the part, the choice of Folge 1 rests on weak signals (direct artist credit vs. subtitle on cover).",
+   "summary": "The input is ambiguous and could refer to either 'Folge 1' or 'Folge 2' of the series, which have different tracklists.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: MET - The Discogs database entry (discogs:release/24165131) and the physical J-card image (image:https://i.discogs.com/aWGAwGdW4IdmMuU_...) agree completely on track count, order, and titles.",
+   "summary": "Two independent sources (database and physical cover) confirm the complete tracklist.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: MET - The agent used a database (Discogs) and an independent primary source (images of the cassette's J-card and label read via tl-vision) of the same edition.",
+   "summary": "The research combines a database with independent primary source readings from physical carrier images.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 18.8,
+  "tokens_in": 24545,
+  "tokens_out": 2720,
+  "cost_usd": 0.08173,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

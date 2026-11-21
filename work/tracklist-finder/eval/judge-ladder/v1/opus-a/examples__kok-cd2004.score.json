@@ -1,0 +1,102 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:39",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Input-Barcode 4019593960000 trifft exakt die 'Exclusive 2004 Edition' (ersguterjunge 40195 9396000-0) in MusicBrainz und Discogs. musik-sammler.de nennt dieselbe EAN, die Rückseite zeigt den Barcode gedruckt. Format CD und Artist stimmen; die übrigen Ausgaben (2003 Aggro, 2001 MC, 2005 2-CD, 2021 Digital) haben andere Barcodes.",
+   "belege": [
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg",
+    "tl-mb group 85fc52d2-14af-3150-a62a-0e07048c4827"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs, musik-sammler.de (gleiche EAN) und die Rückseite stimmen bei Anzahl (20), Reihenfolge und Titeln überein. Es gibt nur Schreibvarianten: Pos. 11 'Pittbull'/'Pitbull', Pos. 15 'Vack You' ohne '!' bei musik-sammler, Groß-/Kleinschreibung.",
+   "belege": [
+    "tl-mb release 15996385-5426-416b-95da-0e8846196d3a",
+    "tl-discogs release 3057907",
+    "tl-scrape musik-sammler.de 44531",
+    "tl-vision Rückseite (2x)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 85% von ≥ 2 Quellen bestätigt, 3 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es liegen zwei Datenbanken (MusicBrainz, Discogs) mit abweichenden Details (z. B. Dauern) vor. Dazu kommen die Sammler-DB musik-sammler.de und eine Primärquelle: die abgelesene Rückseite mit Barcode, Katalognummer und Trackliste.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Pos. 20: Die Lesung des Zusatzes 'ersguterdevin' auf der Rückseite ist laut tl-vision unsicher. Die Datenbanken stützen die Schreibweise jedoch.",
+  "Pos. 10, 15, 16: Discogs weicht bei den Dauern um 2–3 s ab. Übernommen wurden die MusicBrainz-Werte, gestützt durch musik-sammler.de. Das ist dokumentiert, aber nicht durch eine Primärquelle belegt, da die Rückseite keine Dauern enthält.",
+  "Die Confidence im Ergebnis (0.9) weicht von der zuletzt in der Evidenz geschriebenen Datei (0.93) ab. Die finale Änderung ist im Protokoll nicht sichtbar.",
+  "Der Agent hat die Validator-Logik untersucht, um die Warnung zu umgehen, statt die Confidence deutlich zu senken. Das betrifft den Prozess, nicht das inhaltliche Ergebnis.",
+  "Pos. 12/15: hitparade.ch nennt 'feat. Fler' statt 'Frank White' (Alias). Diese Angabe gilt für die 2003er-Ausgabe und wurde korrekt nicht übernommen."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 15.9,
+  "tokens_in": 41543,
+  "tokens_out": 1676,
+  "cost_usd": 0.19969,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

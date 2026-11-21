@@ -1,0 +1,124 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:26",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode in the input (4005902510288, EAN-13 checksum valid) matches this edition in >=2 independent sources: Discogs barcode field (discogs:release/30190112), jpc UPC/EAN (web jpc.de), decks GTIN (web decks.de) - MET. Format CD (2CD) and artist Various match - MET. No other edition with the same barcode: the Vol. 2 alternative has EAN 4018939546533 and a different release - MET. Level 5 conditions all met.",
+   "summary": "The exact input barcode appears on Discogs, jpc.de and decks.de for the same 2CD compilation, with matching format and artist and no competing edition under that barcode.",
+   "evidence": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://www.decks.de/track/various-back_to_the_90s_-_the_biggest_hit_collection/cm5-ip",
+    "tl-mb search barcode: 0 releases",
+    "alternatives: Vol. 2 with EAN 4018939546533"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources agree on count, order and titles only up to spelling variants - NOT MET, because mix names differ (track 1-8 'Hardcore Vibes' vs '(Video Mix)'; 1-12 'Radio Mix' vs 'Stonebridge Radio Edit'; 2-4 'Roy Malone's Radio Edit' vs 'Kings Mix Edit'; 2-14 'Techno Cat' without mix suffix). Level 4: one complete source (Discogs, 40 tracks in 2x20 order) confirmed by a second (music-box, 40 tracks same order) except for explained small deviations (mix-name tags, abbreviations) - MET; jpc and decks confirm most titles. Level 4 met.",
+   "summary": "Discogs is a complete 40-track source that the music-box listing confirms in count and order, with only explained mix-name tag deviations, so it falls short of level 5 because those titles differ beyond spelling.",
+   "evidence": [
+    "discogs:release/30190112 (1-1..2-20)",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html",
+    "web:jpc.de tracklisting",
+    "web:decks.de tracklist"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source (cover/booklet/label print) - NOT MET, cover images unreadable (HTTP 403), jpc/decks are retailers. Level 4: two independent database entries or database + specialised collector site - NOT MET: only Discogs is a database; music-box is a web rip listing, not a specialised collector database; jpc and decks are shops. Level 3: one good database (Discogs) - MET.",
+   "summary": "Discogs is the only database entry, while the other sources are shops or a web rip listing, and no primary print source could be read.",
+   "evidence": [
+    "discogs:release/30190112",
+    "web:jpc.de (shop)",
+    "web:decks.de (shop)",
+    "web:music-box.life (web)",
+    "vision calls on Discogs images returned HTTP 403"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Durations (all 40 tracks) are single-sourced from music-box.life; Discogs, jpc and decks have none.",
+  "Agent states total 9082 s and says it equals 2:31:21, but 2:31:21 is 9081 s; minor arithmetic inconsistency.",
+  "Mix-title conflicts (1-8, 1-12, 2-4, 2-14) were resolved by picking Discogs/jpc spelling; the printed titles remain unverified because the back cover could not be read.",
+  "Country DE and year 2024 are inferred from shops and EAN prefix; Discogs gives neither country nor year; jpc says release 9.2.2024 while music-box says 22-02-2024.",
+  "Track 2-19 artist is listed as CRW with the title 'I Feel Love (DJ JamX & De Leon Remix)'; the credit arrangement is unverified.",
+  "Track 1-4 artist is 'Vincenzo Bellini' on jpc and 'Bellini' on Discogs; the agent used 'Bellini' without explanation.",
+  "Music-box and decks show the same release but with differing titles for 1-4 ('Samba De Janeiro (Radio Edit)' on music-box vs 'Samba De Janeiro' on Discogs), not resolved in the result."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "decks.de",
+   "discogs",
+   "genius",
+   "jpc.de",
+   "music-box.life"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "web"
+  ],
+  "conflicts": 4,
+  "alternatives": 1,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 15.2,
+  "tokens_in": 26182,
+  "tokens_out": 3311,
+  "cost_usd": 0.00427,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 13,
+   "of": 40
+  }
+ }
+}

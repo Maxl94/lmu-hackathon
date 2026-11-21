@@ -1,0 +1,125 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:50",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: Input contains a barcode matching in >= 2 independent sources - NOT MET (input has no barcode; only title, artist, and format are given). Level 4: Barcode match in one source - NOT MET (no barcode); without barcode, title, artist, format and at least one further attribute unambiguous in >= 2 sources and no other fitting edition has a different tracklist - NOT MET (the input specifies only title, artist, and format, and six distinct German cassette pressings from 2001-2003 in Discogs master 211928 - 1st through 6th edition, calls 2 and 7 - plus 2001 and 2003 tapes on musik-sammler.de, call 12, all fit the input; the exact pressing/year/cover is therefore not unambiguous from the input, and MusicBrainz/musik-sammler do not uniquely pin down the 1st pressing vs. the 2nd/3rd 2001 pressings). Level 3: Several editions fit the input but ALL share the same tracklist (repressings) so the choice does not matter - MET (all six Discogs cassette editions 1951581, 18354001, 18354166, 18354289, 17280904, and 4256710 checked in calls 4, 6, 11, and 17, plus MusicBrainz 19fd3695-68df-4e95-884a-da6938aae5cf in call 3 and musik-sammler tape-917995 in call 16, have the identical 16-track tracklist and 49:39 total duration).",
+   "summary": "Six German cassette pressings (2001-2003) fit the barcode-less input, but all share the exact same 16-track tracklist so the choice of pressing does not matter.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "call 2",
+    "call 7",
+    "call 17"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) - MET (three independent sources of the 2001 German cassette edition - musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf in call 3, discogs:release/1951581 in call 4, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ in call 16 - all agree on all 16 tracks A1-B8, exact order, identical track durations summing to 2979 s, and titles, differing only in minor spelling/case/punctuation variants such as Nutte Bounce vs. Nute Bounce, Pit Bull vs. Pitbull, Hast Du Mut? vs. Hast du Mut, and Vack You vs. Vack You!).",
+   "summary": "Three independent sources of the 2001 cassette edition agree completely on track count (16), order (A1-B8), durations, and titles apart from minor spelling and punctuation variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "call 3",
+    "call 4",
+    "call 16"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition - NOT MET (the three images inspected via tl-vision in calls 8-10 are hosted on discogs:release/1951581 rather than an independent primary source, and none of them show a printed tracklist - 0 tracks read). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site - MET (both conditions are satisfied: MusicBrainz 19fd3695-68df-4e95-884a-da6938aae5cf and Discogs 1951581 are clearly independent database entries with differing details such as catalog number ILM 003 vs. 03, side headings, casing/spelling variants, and label credits; additionally, specialised collector site musik-sammler.de tape-917995 provides an independent third confirmation with its own editorial details like A 1.-B 16. numbering and early artist aliases).",
+   "summary": "The result is backed by two clearly independent databases (MusicBrainz and Discogs) plus a specialised collector site (musik-sammler.de), but lacks an independent primary source showing the tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "call 3",
+    "call 4",
+    "call 8",
+    "call 9",
+    "call 10",
+    "call 16"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error in result: the top-level artists list is empty/missing despite featured artists being present on tracks A3, A8, B1, B4, B5, and B8 (Kam One, Joka, Bass Sultan Hengzt, King Orgasmus One, Roulette, Frank White, D-Bo).",
+  "Minor catalog number discrepancy is undocumented: release.catno is set to ILM 003 (from musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf), whereas discogs:release/1951581 lists 03 and the J-card image (call 8) prints ILM1 on the spine and 2001/03 on the flap.",
+  "In sources, the note for web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ states Besetzungen identisch even though track A8 lists early aliases Baktus & Orgasmus instead of Bass Sultan Hengzt & King Orgasmus One (correctly explained in reasoning), and discogs:release/1951581 tool output (call 4) did not report the featured artists on A3, A8, B1, B4, B5, and B8.",
+  "Two secondary images on discogs:release/1951581 (call 4, 202x600 px) were not inspected with tl-vision while checking for a printed J-card tracklist."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 92.1,
+  "tokens_in": 25169,
+  "tokens_out": 11515,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

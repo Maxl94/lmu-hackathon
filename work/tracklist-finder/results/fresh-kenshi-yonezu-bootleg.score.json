@@ -1,0 +1,117 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:53:11",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 14,
+   "of": 14
+  }
+ },
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: MET NOT MET. The input has no barcode, so the barcode condition fails. Level 4: MET for the barcode-free branch. Title, artist and format match, and catalogue number SRCL-9571 and country JP both appear in MusicBrainz (release 02ce8500) and Discogs (12531413). Competing physical editions (Discogs 27971019, 11114145, 12491102, 36987714) are reported with the same 14 tracks or no different tracklist. However, the input does not identify which physical CD is meant: standard, limited, CD+DVD and Taiwan/China pressings all fit the bare title, artist and format. Level 3 describes exactly this case, where several editions fit and share the same tracklist, so the choice does not change the tracklist. Stopped at level 3.",
+   "summary": "Several physical CD editions fit the input with the same 14-track tracklist, so the chosen standard edition SRCL-9571 is plausible but not uniquely determined by the input.",
+   "evidence": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413",
+    "discogs:release/27971019",
+    "discogs:release/11114145",
+    "discogs:release/12491102",
+    "discogs:release/36987714",
+    "tl-mb group c7ff52d0 output"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET. MusicBrainz CD entry and Discogs release 12531413 agree on count (14), order and titles. Differences are only capitalisation (LOSER/Loser, orion/Orion, fogbound/Fogbound) and credit formatting, and durations agree within about 1 s. Stopped at level 5.",
+   "summary": "Two independent databases agree on count, order and titles of the same edition, with only capitalisation and credit-format variants.",
+   "evidence": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1 medium 1",
+    "discogs:release/12531413 tracklist",
+    "sources conflicts list"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. The back cover could not be read (Discogs images return HTTP 403, and the Cover Art Archive has only the front image, which was not read). No primary source was read. Level 4: MET. MusicBrainz and Discogs are two separate database entries with differing details (Discogs label 'Reissue Records' against MusicBrainz 'Sony Music Records', and different duration precision). Stopped at level 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) agree on the edition, but no primary source such as a read booklet or back cover was obtained.",
+   "evidence": [
+    "musicbrainz:release/02ce8500-8e14-48dc-a216-2e2d807a7ee1",
+    "discogs:release/12531413",
+    "tl-discogs images HTTP 403",
+    "tl-vision HTTP 403 errors",
+    "tl-caa 02ce8500 front only"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input has no barcode and asks only for 'CD', so picking the standard 通常盤 SRCL-9571 over the limited or CD+DVD editions is a format-based choice, not a confirmed match.",
+  "The tracklists of Discogs 11114145, 12491102 and 36987714 were not shown in the evidence; they are described only as 14 tracks, so the claim that all physical editions share the tracklist is not fully verified.",
+  "Result lists the release artist as 米津玄師 while the input says Kenshi Yonezu; Discogs confirms the same artist ('Kenshi Yonezu = 米津玄師'), so this is not a contradiction but the artist match rests on that alias link.",
+  "The back cover and printed titles were never read; the result's statement that printed titles were taken from the MusicBrainz CD entry is an inference from database data, not a read print.",
+  "Total duration is inconsistent: the result gives 3616 s while the MusicBrainz medium total is 3615 s and Discogs 3609 s; minor and explained by rounding."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 14,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 0,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 3,
+  "alternatives": 5,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 16.9,
+  "tokens_in": 14765,
+  "tokens_out": 3413,
+  "cost_usd": 0.00318,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ }
+}

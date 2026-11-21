@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:30",
+ "overall": 2.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: NOT MET (no barcode in input or sources). Level 4: NOT MET (unambiguous in 2 sources? No, discogs confirms only a cassette, no CD exists). Level 3: NOT MET (several editions fit? No, only one title exists in databases, and it is a cassette, not a CD). Level 2: MET (Several editions/sources exist for the title, but the format 'CD' in the input contradicts all existing release evidence for this title, which is only a cassette).",
+   "summary": "The input specifies 'CD', but all available evidence identifies the release only as a cassette (MC6109), creating a fundamental format conflict.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET (Multiple sources including discogs and J-Card images confirm the same 10-track list).",
+   "summary": "The tracklist of 10 tracks is consistent across the primary database entry and confirmed by physical inspection of the J-Card.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET (No independent primary source or manufacturer information provided, only database and images). Level 4: MET (Database entry from Discogs + visual evidence from J-Card images hosted on the database).",
+   "summary": "The evidence is supported by a reliable database entry combined with visual confirmation from the cover art.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input requests a CD format, but no CD version of 'Blasmusik aus Lohnde' by Musikverein Lohnde exists according to all research; the only existing medium is a cassette (MC6109)."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 2.3,
+  "tokens_in": 14290,
+  "tokens_out": 522,
+  "cost_usd": 0.00447,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

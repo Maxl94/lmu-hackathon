@@ -1,0 +1,92 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:28",
+ "overall": 3.6,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: MET. The input contains no barcode, but according to level 4/3 conditions: title, artist, format and further attributes (label 'Fred Kersten KG', cat. no. 'MC 6109') are unambiguous in >=2 sources (Discogs database entry and J-card/label images showing the exact release), and no competing edition with a different tracklist is known.",
+   "summary": "The edition is unambiguous and backed by a database entry and multiple image sources of the same release, with no competing editions.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET. >=2 independent sources (Discogs database entry `discogs:release/24165131`, scraped web page `web:...`, and J-card back/inner images `image:...`) agree on the count (10 tracks), order, and titles.",
+   "summary": "Multiple independent sources (database, web scrape, and cover/inlay images) completely agree on count, order, and titles.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: MET. Database entry (`discogs:release/24165131`) combined with independent primary sources (photographs of the physical cassette J-card and label print read via vision tool `image:...`).",
+   "summary": "The sources include both a database entry and direct photographic evidence of the physical cassette J-card and label.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation warning: artists is empty in the agent result format (should list every distinct artist correctly according to schema, though artist name was present in release metadata)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 3.1,
+  "tokens_in": 13227,
+  "tokens_out": 404,
+  "cost_usd": 0.00498,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

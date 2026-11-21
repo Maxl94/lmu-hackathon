@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Dispatcher: bin/tl-<name> (Symlink auf diese Datei) → python -m tracklist.cli.<name>
+ROOT="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+name="$(basename "$0")"
+if [ "$name" = "tl" ]; then
+  mod="${1:?Aufruf: tl <tool> [args] oder tl-<tool> [args]}"; shift
+else
+  mod="${name#tl-}"
+fi
+PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}" exec "$ROOT/.venv/bin/python" -m "tracklist.cli.${mod//-/_}" "$@"

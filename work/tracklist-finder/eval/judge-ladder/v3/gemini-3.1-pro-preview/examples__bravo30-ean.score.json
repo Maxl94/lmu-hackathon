@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:23",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources (MET: MusicBrainz 41b0a392-086e-45b0-9323-db56ba682941, Discogs 1949898, musik-sammler.de 43446); format and artist match (MET: CD, Various Artists); no other edition with the same barcode and a different tracklist (MET: other pressings with this barcode share the same tracklist).",
+   "summary": "The input barcode uniquely identifies this compilation edition across multiple databases.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (MET: MusicBrainz, Discogs, and the back cover image 30859623067-1200.jpg all agree on the 40 tracks and their sequence).",
+   "summary": "The tracklist is fully confirmed by multiple databases and a primary source (back cover).",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source of the same edition (MET: MusicBrainz/Discogs databases + physical back cover image read via vision).",
+   "summary": "The result is backed by major databases and verified against the physical back cover.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The 'release' object is missing the 'artists' list containing all distinct artists on the carrier, resulting in a validation error."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 16.6,
+  "tokens_in": 40454,
+  "tokens_out": 2107,
+  "cost_usd": 0.10619,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

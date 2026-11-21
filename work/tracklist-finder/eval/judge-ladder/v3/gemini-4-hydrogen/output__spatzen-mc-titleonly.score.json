@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:31",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: Input contains a barcode -> NOT MET (input only specifies title and format MC). Level 4: Title, artist, format and further attributes unambiguous in >= 2 sources and no other edition fitting the input has a different tracklist -> NOT MET (input does not specify an artist, and tl-discogs search shows discogs:release/8491193 'Various - Ich Sag's Dir Mit Musik', a 1995 German GEMA Cassette Box Set compilation that fits the title and MC format with a different artist and tracklist, plus uninspected Polish MC discogs:release/16402359). Level 3: Unambiguous or all fitting editions share the same tracklist -> NOT MET (discogs:release/8491193 is a Various Artists compilation with a different tracklist that fits the input and was not ruled out or inspected). Level 2: Several editions fit the input and at least one has a different tracklist (other artist with the same title) -> MET (tl-discogs search returned discogs:release/8491193 alongside the Kastelruther Spatzen MC editions musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987).",
+   "summary": "Because the input omits the artist, the uninspected Various Artists cassette compilation discogs:release/8491193 with the same title also fits the input and has a different tracklist.",
+   "evidence": [
+    "tl-discogs search --title \"Ich sag's dir mit Musik\"",
+    "discogs:release/8491193",
+    "discogs:release/16402359",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 represent the same 1985 Koch Records Special 221 190 cassette edition with barcode 9002722211901 and agree completely on all 12 tracks A1-B6 in count, order, and titles, differing only in capitalization).",
+   "summary": "Two independent database entries for the selected cassette edition agree on track count, order, and all 12 titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source of the same edition -> NOT MET (no primary source such as cover/label print or manufacturer sheet is included in the result sources; web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26 was scraped but not cited and lacks edition-specific side/duration details). Level 4: Two independent database entries recognisable by differing details -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 show independent details including differing track durations on 10 of 12 tracks, catalog number formatting, country strings, and Discogs-only notes and images).",
+   "summary": "The result relies on two independent database entries for the same edition, distinguishable by differing durations, catalog formatting, and metadata.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing edition discogs:release/8491193 (Various - Ich Sag's Dir Mit Musik, 1995 Germany, Cassette Box Set Compilation) and discogs:release/16402359 (Poland, Cassette, AMA 074) from tl-discogs search were neither inspected nor listed in alternatives.",
+  "Validation error: release-level artists array is empty and track-level artist is null on all 12 tracks (A1-B6).",
+  "Nine tracks besides A6 (A1, A3, A5, B1, B2, B3, B4, B5, B6) have 1-3s duration discrepancies between musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 that are not listed in conflicts, and deezer:album/231158 plus lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik actually match Discogs on those 9 tracks and differ on track 10's title ('Sarner-Welle Lied Hallo Freunde')."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 29.7,
+  "tokens_in": 17453,
+  "tokens_out": 5897,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

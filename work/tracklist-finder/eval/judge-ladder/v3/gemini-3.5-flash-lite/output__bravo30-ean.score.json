@@ -1,0 +1,91 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T15:22:27",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The input barcode 731456031125 matches the edition in >= 2 independent sources (MusicBrainz and Discogs); format (CD) and artist (Various Artists) match; no competing edition with a different tracklist. All conditions MET.",
+   "summary": "The edition is confirmed by barcode match in multiple independent database sources with matching format and artist.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources (MusicBrainz and Discogs) agree on count (40 tracks), order, and titles (with minor spelling variants). All conditions MET.",
+   "summary": "Two independent sources fully agree on the complete tracklist of 40 tracks.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: Two independent database entries (MusicBrainz and Discogs) with differing details/IDs confirm the release. All conditions MET.",
+   "summary": "Backed by two independent database entries confirming the release and tracklist.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: artists is empty in the agent result summary, though artist names are present per track."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.5,
+  "tokens_in": 8224,
+  "tokens_out": 298,
+  "cost_usd": 0.00321,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

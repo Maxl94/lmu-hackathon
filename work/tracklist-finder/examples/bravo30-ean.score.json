@@ -1,0 +1,99 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Barcode 731456031125 trifft in MusicBrainz (DE 2000, Polystar 560 311-2, 2×CD), in Discogs 1949898 und auf dem per Vision gelesenen Backcover dieselbe 2×CD-Ausgabe. musik-sammler.de bestätigt EAN und Katalognummer. Format, Titel und Interpret (Various) passen zur Eingabe. Die UK-Pressung 23145932 mit gleichem Barcode wurde abgerufen und hat dieselbe Trackliste; die EU-Pressung trägt dieselbe Katalognummer und denselben Master.",
+   "belege": [
+    "tl-gtin",
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "tl-discogs release 1949898",
+    "tl-discogs release 23145932",
+    "tl-vision Backcover",
+    "tl-scrape musik-sammler.de (EAN)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs 1949898 und das gelesene Backcover stimmen in Anzahl (20+20), Reihenfolge und Titeln überein. Abweichungen sind nur Schreibvarianten bzw. Versionszusätze wie „(Album Version)“ und „Strassen/Straßen“. musik-sammler.de bestätigt zusätzlich die Reihenfolge.",
+   "belege": [
+    "tl-mb release 41b0a392-086e-45b0-9323-db56ba682941",
+    "tl-discogs release 1949898",
+    "tl-vision Backcover",
+    "tl-scrape musik-sammler.de"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 88% von ≥ 2 Quellen bestätigt, 5 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Mit MusicBrainz und Discogs liegen zwei eigenständige Datenbankeinträge vor, die sich in Details unterscheiden (ms-Dauern/ISRCs bzw. Matrix-Angaben). Hinzu kommen eine Primärquelle (Backcover mit Barcode- und Katalognummer-Aufdruck, per Vision gelesen) und eine spezialisierte Sammlerseite.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Discogs-EU-Pressung 26676554 wurde nicht im Detail abgerufen. Die Behauptung „keine abweichende Trackliste“ ist für diese Pressung nicht direkt belegt; sie ist nur über dieselbe Katalognummer und denselben Master plausibel.",
+  "Die Vision-Ausgabe ist ab CD2-14 im Trace gekürzt. Die Cover-Lesungen für CD2-15 bis CD2-20 (z. B. „DEEJAY ÖTZI“, „NILS“) sind daher im sichtbaren Beleg nicht überprüfbar.",
+  "Track 2-19 (Only With You) ist als duration_conflict markiert, obwohl MusicBrainz und Discogs übereinstimmen. Der Konflikt betrifft nur den offensichtlichen musik-sammler-Fehler; musik-sammler.de fehlt aber in den duration_sources dieses Tracks.",
+  "musik-sammler.de enthält weitere Fehler (CD1-10 Interpret „Nelly“ statt Britney Spears, CD2-6 „Stieber Twins“ statt Luxus Chris). Ihre Rolle als Schiedsrichter für die Dauern ist deshalb nur begrenzt belastbar.",
+  "Die Confidence im Ergebnis (0.9) weicht von der geschriebenen Datei (0.93) ab; das ist unerheblich."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exakt",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 45577,
+  "tokens_out": 2245,
+  "cost_usd": 0.22721,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

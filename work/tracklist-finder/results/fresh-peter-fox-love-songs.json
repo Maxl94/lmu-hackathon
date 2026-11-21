@@ -1,0 +1,1072 @@
+{
+ "input": {
+  "id": "fresh-peter-fox-love-songs",
+  "title": "Love Songs",
+  "artist": "Peter Fox",
+  "format": "CD"
+ },
+ "status": "found",
+ "release": {
+  "title": "Love Songs",
+  "artist": "Peter Fox",
+  "format": "CD",
+  "country": "DE",
+  "year": 2023,
+  "label": "Warner Music Central Europe",
+  "catno": "5054197645785",
+  "barcode": "5054197645785",
+  "edition": "Standard CD, 11 tracks, Made in Germany (LC 14666, GEMA/BIEM)",
+  "ids": {
+   "musicbrainz": "cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+   "discogs": "27207474"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Ein Auge blau",
+   "artist": null,
+   "duration_s": 182,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Olli Banjo",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Julian Williams",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Ghanaian Stallion",
+     "role": "writer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Ghanaian Stallion",
+     "role": "producer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9010739"
+     ]
+    }
+   ],
+   "isrc": "DEA622300538"
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Tuff Cookie",
+   "artist": null,
+   "duration_s": 166,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "LAAS",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Bernard Reed",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Cristopher Davids",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Jack Andrew Sibley",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "John Moore",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Liam Ivory",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Sebastian Zenke",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122025"
+     ]
+    }
+   ],
+   "isrc": "DEA622300922"
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Kein Regen in Dubai",
+   "artist": null,
+   "duration_s": 209,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Gunter Papperitz",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Jan Burkamp",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Moses Yoofee",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122026"
+     ]
+    }
+   ],
+   "isrc": "DEA622300923"
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Disney",
+   "artist": null,
+   "duration_s": 222,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "Olli Banjo",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122027"
+     ]
+    }
+   ],
+   "isrc": "DEA622300924"
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Celebration",
+   "artist": "Peter Fox feat. Benji Asare",
+   "duration_s": 260,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    },
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122028"
+     ]
+    }
+   ],
+   "isrc": "DEA622300925"
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Vergessen wie",
+   "artist": null,
+   "duration_s": 224,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "Daniel Stoyanov",
+     "role": "writer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/8879015"
+     ]
+    }
+   ],
+   "isrc": "DEA622300257"
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Dawn of the Dawn",
+   "artist": null,
+   "duration_s": 84,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122029"
+     ]
+    }
+   ],
+   "isrc": "DEA622300926"
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Gegengift",
+   "artist": null,
+   "duration_s": 180,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Teute",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Moses Yoofee",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Kryptik Joe",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Porky (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122030"
+     ]
+    }
+   ],
+   "isrc": "DEA622300927"
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Weisse Fahnen",
+   "artist": null,
+   "duration_s": 215,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Trettmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Moses Yoofee",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Roman Klobe-Barangă",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Dirk Berger",
+     "role": "writer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/8923306"
+     ]
+    }
+   ],
+   "isrc": "DEA622300322"
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Toscana Fanboys",
+   "artist": "Peter Fox feat. Adriano Celentano",
+   "duration_s": 150,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Adriano Celentano",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Benji Asare",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Cracker Mallo",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Emeka E.O.",
+     "role": "writer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Cracker Mallo",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Emeka E.O.",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/9122031"
+     ]
+    }
+   ],
+   "isrc": "DEA620900644"
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Zukunft Pink",
+   "artist": "Peter Fox feat. Inéz",
+   "duration_s": 232,
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Peter Fox",
+     "role": "writer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    },
+    {
+     "name": "capelli",
+     "role": "writer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    },
+    {
+     "name": "Peter Fox",
+     "role": "producer",
+     "sources": [
+      "genius:song/8481543"
+     ]
+    }
+   ],
+   "isrc": "DEA622201528"
+  }
+ ],
+ "artists": [
+  {
+   "name": "Peter Fox",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ]
+  },
+  {
+   "name": "Benji Asare",
+   "role": "featured",
+   "tracks": [
+    "5"
+   ],
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ]
+  },
+  {
+   "name": "Adriano Celentano",
+   "role": "featured",
+   "tracks": [
+    "10"
+   ],
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ]
+  },
+  {
+   "name": "Inéz",
+   "role": "featured",
+   "tracks": [
+    "11"
+   ],
+   "sources": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ]
+  },
+  {
+   "name": "Benjamin Asare",
+   "role": "featured",
+   "tracks": [
+    "5"
+   ],
+   "sources": [
+    "discogs:release/27207474"
+   ]
+  }
+ ],
+ "total_duration_s": 2123,
+ "confidence": 0.95,
+ "sources": [
+  {
+   "id": "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+   "url": "https://musicbrainz.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+   "kind": "database",
+   "note": "barcode 5054197645785, DE CD 2023-05-26, 11 tracks with ms durations and ISRCs"
+  },
+  {
+   "id": "discogs:release/27207474",
+   "url": "https://www.discogs.com/release/27207474-Peter-Fox-2-Love-Songs",
+   "kind": "database",
+   "note": "same barcode and catno, DE CD 2023, GEMA/BIEM, LC 14666, matrix optimal media"
+  },
+  {
+   "id": "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg",
+   "url": "http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg",
+   "kind": "image",
+   "note": "back cover of this release: 11 tracks, printed order and features confirmed, barcode 5054197645785"
+  },
+  {
+   "id": "genius:song/9010739",
+   "url": "https://genius.com/Peter-fox-ein-auge-blau-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122025",
+   "url": "https://genius.com/Peter-fox-tuff-cookie-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122026",
+   "url": "https://genius.com/Peter-fox-kein-regen-in-dubai-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122027",
+   "url": "https://genius.com/Peter-fox-disney-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122028",
+   "url": "https://genius.com/Peter-fox-celebration-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/8879015",
+   "url": "https://genius.com/Peter-fox-vergessen-wie-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122029",
+   "url": "https://genius.com/Peter-fox-dawn-of-the-dawn-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122030",
+   "url": "https://genius.com/Peter-fox-gegengift-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/8923306",
+   "url": "https://genius.com/Peter-fox-weisse-fahnen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9122031",
+   "url": "https://genius.com/Peter-fox-toscana-fanboys-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/8481543",
+   "url": "https://genius.com/Peter-fox-zukunft-pink-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [],
+ "missing": [],
+ "alternatives": [
+  {
+   "description": "Digital Media, 11 tracks, 2023-05-26, barcode 5054197682858 (Warner Music Central Europe)",
+   "source": "musicbrainz:release/4e061086-07ac-4e8e-9861-afe33b0fa40b",
+   "why_not": "digital edition, not a physical carrier; same 11-track tracklist as supporting evidence"
+  },
+  {
+   "description": "Love Songs (deluxe), Digital Media, 14 tracks, 2024-06-21, barcode 5021732395115",
+   "source": "musicbrainz:release/59c2933e-322c-4ee3-90d5-a675e7a37d00",
+   "why_not": "deluxe edition with 3 extra tracks, digital only; input names the plain CD album"
+  }
+ ],
+ "reasoning": "Barcode-free input matched by title/artist/format: MusicBrainz and Discogs both return exactly one physical edition, the German CD on Warner Music Central Europe (barcode 5054197645785, catno identical, LC 14666, GEMA/BIEM), so barcode, label, country and track count all agree. Discogs release carries the identical barcode and matrix string. The back cover of the very same release (Cover Art Archive) confirms all 11 titles in order including the printed 'feat.' credits, so titles follow MusicBrainz spelling (cover is set in all caps); Discogs' title-case variants ('Ein Auge Blau', 'Weisse Fahnen') are pure capitalisation styling, not spelling differences. Durations taken from MusicBrainz ms values, Discogs agrees within 1 s on every track (total 2123 vs 2124 s). Featured artists: Benji Asare (track 5; Discogs gives 'Benjamin Asare', cover prints 'Benji Asare'), Adriano Celentano (10), Inéz (11). The only other editions in the release group are digital (11-track streaming and 14-track deluxe), listed as alternatives per the physical-first rule."
+}

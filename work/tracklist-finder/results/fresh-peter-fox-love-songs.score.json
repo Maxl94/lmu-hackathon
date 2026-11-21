@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:53:56",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 11,
+   "of": 11
+  }
+ },
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode in input? No (input has no barcode) - NOT MET. Level 4: without barcode: title, artist, format, plus label/catno/year/country unambiguous in >=2 sources (MusicBrainz release cdbc45b1 and Discogs 27207474 both show Warner Music Central Europe, catno 5054197645785, DE 2023, CD) - MET; no other edition fitting the input (CD, Peter Fox, Love Songs) with a different tracklist: the other MB releases are digital (4e061086 11 tracks, 59c2933e deluxe 14 tracks, c974d1ca digital 14 tracks) and excluded by physical-first rule; Deezer 'Love Songs (deluxe)' is digital/streaming - MET. Level 4 conditions all met.",
+   "summary": "Without a barcode in the input, title, artist, format, label, catalogue number, country and year agree across MusicBrainz and Discogs, and the only other fitting editions are digital and excluded by the physical-first rule.",
+   "evidence": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "musicbrainz:release/4e061086-07ac-4e8e-9861-afe33b0fa40b",
+    "musicbrainz:release/59c2933e-322c-4ee3-90d5-a675e7a37d00",
+    "bin/tl-mb group ae4a0990-3ef1-4641-a618-65401985b3a0",
+    "deezer:album/600242022"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of same edition agree on count, order, titles - MB (11 tracks, order 1-11) and Discogs (11 tracks, same order and titles, capitalisation differs only) agree; cover back (image) confirms all 11 titles in order - MET. Spelling/capitalisation variants only (e.g. 'Ein Auge Blau' vs 'EIN AUGE BLAU'). Featured-artist credits differ slightly (Benji Asare vs Benjamin Asare) but these are credits, not titles. Level 5 conditions met.",
+   "summary": "Three sources of the same edition (MusicBrainz, Discogs and the printed back cover) agree on 11 tracks in identical order with only capitalisation variants.",
+   "evidence": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print) of same edition - the back cover image is a primary source read by vision and it matches the release; but it is hosted on the Cover Art Archive of the MusicBrainz entry, so independence from MusicBrainz is limited; Discogs is an independent database. Database + primary source criterion arguably MET, but the primary source is a CAA image attached to the same MB release. Level 4: two independent database entries with differing details (MusicBrainz and Discogs: different durations in seconds, Discogs credit spellings, matrix/SID codes only in Discogs) - MET. Rating stops at 4 because the cover image is a derived vision transcription hosted by the database entry chain, not an independent label print read directly.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details confirm the edition, and the cover image adds confirmation but is hosted via the MusicBrainz entry, so it does not count as fully independent primary evidence.",
+   "evidence": [
+    "musicbrainz:release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae",
+    "discogs:release/27207474",
+    "image:http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input has no barcode; edition match rests on title/artist/format plus label/catno/country/year, which is acceptable for level 4 but not barcode-verified.",
+  "Result claims barcode 5054197645785 matches Discogs 'identically' and the cover shows it; the cover is a vision transcription (tl-vision) rather than a direct read, so its reliability is limited.",
+  "Result lists Benji Asare (track 5) and Benjamin Asare as separate featured entries; Discogs spelling 'Benjamin Asare' vs cover 'Benji Asare' is an unresolved name variant (credits only, not titles).",
+  "Result 'sources' list includes Genius song-credit pages (genius:song/*) that were not shown as tool output in the evidence; their claims are unverified here but do not affect the tracklist.",
+  "Result says the deluxe album is '14 tracks' with 3 extra tracks, which conflicts with the 14-track listing in the MB group; minor, digital only and excluded.",
+  "Result claims 'Discogs agrees within 1 s on every track (total 2123 vs 2124 s)' - supported by the tool output (rounded seconds), acceptable.",
+  "Result's track 5 and 10 and 11 featured artists are consistent with MB titles; 'Inéz' spelled with accent is consistent across sources."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 11,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "genius",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 2,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.8,
+  "tokens_in": 14164,
+  "tokens_out": 1819,
+  "cost_usd": 0.00233,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ }
+}

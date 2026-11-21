@@ -1,0 +1,118 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:47",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: input has no barcode - NOT MET. Level 4: barcode match not applicable; without barcode, title/artist/format match and further attributes (label Lucky Dog/City Slang, catno LuckyDog43/Slang50604, year 2025, UK) are confirmed by discogs:release/33266490 and the shop page web:shop.cityslang.com (label/catno partly, shop shows 7-inch single limited 500 copies); but a competing edition exists with a different tracklist? Digital editions are not competing; the physical vinyl is unique in evidence - so level 4 conditions: two sources agreeing on title, artist, format and label/catno: discogs (matrix Slang50604/LuckyDog43) and shop (7-inch, limited 500) agree on format and edition size, but the shop does not show catno or year, so the second source confirms only format/title/edition, which is acceptable as a further attribute. No other physical edition with different tracklist found (tl-discogs versions 3751851 lists only digital releases besides this one). MET, rating 4 candidate. However the vinyl's own tracklist is not confirmed by a physical source beyond the shop, and the Discogs entry is the only physical database entry, so level 4 is met.",
+   "summary": "No barcode, but title, artist, 7-inch vinyl format, catalogue numbers and limited edition are consistent across the Discogs entry and the label shop, with no competing physical edition found.",
+   "evidence": [
+    "discogs:release/33266490",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7",
+    "discogs versions 3751851 output",
+    "tl-discogs search output"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: two independent sources agreeing on count, order and titles of the same vinyl edition - the shop (A/B, 2 tracks) and Discogs (A/AA, 2 tracks) agree on count and titles up to spelling; but the position label differs (AA vs B), so titles agree but order labels differ. Strictly, count and titles agree in >=2 sources - MET for count and titles, position labels differ with explanation. Level 5 requires agreement on order: the agent's explanation for AA vs B is plausible but not fully confirmed. Level 4: one complete source of the same edition (Discogs, durations missing) confirmed by second (shop) except small explained deviations (AA/B label) - MET. Rating 4.",
+   "summary": "Two physical-edition sources (Discogs and label shop) agree on the two titles and their order, with only the side-label difference AA vs B explained; durations are taken from the digital single.",
+   "evidence": [
+    "discogs:release/33266490",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7",
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+    "itunes:album/1791528634",
+    "deezer:album/700328281"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus independent primary source (read cover/booklet/label print) - the back cover could not be read (HTTP 403), so NOT MET. Level 4: two independent database entries or database plus specialised collector site - Discogs (database) plus shop (label shop, not a collector site) and MusicBrainz/iTunes/Deezer (databases for digital edition, not the same edition). Discogs and MusicBrainz are two database entries but for different editions; the label shop is a shop page. Strictly, database + shop is not the level-4 pairing. Level 3: one good database - MET (Discogs entry with matrix detail).",
+   "summary": "The vinyl edition rests on one good physical database entry (Discogs) plus a label shop page; no primary read of the cover or label print was possible, and the durations come from other editions.",
+   "evidence": [
+    "discogs:release/33266490",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7",
+    "tl-vision error HTTP 403"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Durations (237 s / 241 s) for the 7-inch are not documented for the vinyl edition; they come from the digital single (musicbrainz, itunes, deezer) and are flagged duration_other_edition.",
+  "Position labels differ: Discogs A/AA versus shop A/B; agent resolved to AA based on matrix etching, which is plausible but not confirmed by a physical source reading.",
+  "Back cover image could not be read (HTTP 403), so no primary source of the physical edition was used.",
+  "Shop page does not show catalogue number or year, so the label/catno cross-check rests mainly on Discogs.",
+  "Agent's claim that the 7-inch 'matches exactly one physical edition' rests on Discogs versions list, which contains only one vinyl release for master 3751851; this is consistent with the evidence.",
+  "Shop page lists title with lowercase 'edit' and Discogs with 'Edit'; spelling variant only."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 2,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 2,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "itunes",
+   "musicbrainz",
+   "shop.cityslang.com"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 2,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.3,
+  "tokens_in": 11065,
+  "tokens_out": 1652,
+  "cost_usd": 0.00193,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 2,
+   "of": 2
+  }
+ }
+}

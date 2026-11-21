@@ -1,0 +1,123 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:30",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode 614427800718 matches exactly in Discogs 34433917 (scanned barcode), but no second source in the evidence confirms this barcode. The ACT label page confirms only the catalogue number ACTLP 8007-1 and the LP format, and the Juno listing gives only the catno. NOT MET. Level 4: barcode match in one source (Discogs), format and artist match, and the CD (ACT 8007-2, barcode 614427800725) and digital MB edition are excluded by their different barcodes, so no competing edition with a different tracklist fits the input. MET. Stop at 4.",
+   "summary": "The exact barcode matches only the Discogs LP entry in the evidence, with the label page and Juno confirming catno and format, and the CD/digital editions are excluded by their different barcodes.",
+   "evidence": [
+    "discogs:release/34433917",
+    "discogs:release/34461436",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3",
+    "web:https://www.actmusic.com/en/jazz-at-berlin-philharmonic-xvii-gnawa-world-blues/ACTLP-8007-1",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+    "tl-gtin/tl-discogs barcode search"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: Discogs LP (A1-A4, B1-B3) and Juno LP listing (Seite 1 / Seite 2) agree on count (7), order and titles; the only title difference is Gore/Gorée, a spelling variant. Durations conflict, but the tracklist criterion covers count, order and titles. MET. Level 5 is therefore reached, but the unresolved duration conflicts on 6 of 7 tracks and the unverified back cover keep it below the top level. Conservative stop at 4.",
+   "summary": "Two independent vinyl sources agree on count, order and titles, but six track durations conflict and the printed back cover could not be read, so the tracklist is rated just below the top level.",
+   "evidence": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+    "tl-scrape juno output lines Seite 1 / Seite 2",
+    "tl-discogs release 34433917"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 14% confirmed by >= 2 sources, 6 conflicts",
+   "summary": "100% of tracks have a duration, 14% confirmed by >= 2 sources, 6 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: needs database plus an independent primary source (read print, label or manufacturer information) of the same edition. Discogs LP entry is a database. The ACT product page is manufacturer information but was only seen as a product-number snippet and does not show the tracklist; it is not read as a print. Juno is a shop. MET only in part, so not fully met. Level 4: two independent database entries (Discogs LP and MB) are different editions, so NOT MET for the same edition; database plus specialised collector site: no collector site, NOT MET. Level 3: one good database (Discogs LP) MET. Stop at 4 conservatively is not met either, so rating 3 is the strict outcome.",
+   "summary": "The LP tracklist rests on one good database (Discogs) with supporting shop and label pages that do not show a read tracklist, and no independent collector site or readable print.",
+   "evidence": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+    "web:https://www.actmusic.com/en/jazz-at-berlin-philharmonic-xvii-gnawa-world-blues/ACTLP-8007-1",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Back cover of the LP was never read (Discogs image CDN returned 403 in all attempts); printed tracklist and durations are unverified.",
+  "Track durations conflict between Discogs LP and Juno LP for 6 of 7 tracks (e.g. A2 305 s vs 281 s, A4 326 s vs 312 s, B3 546 s vs 538 s); the agent used Discogs values without verifying them.",
+  "The imusic.co page (tool output) lists the tracklist in CD order (Gore Blues, Mrahba, Boom Boom, Ascending Dragon, Purple Haze, Tair, Sidi Bouganga) and is not listed in the result sources, although it was cited in the tool calls.",
+  "The agent renamed track A1 to 'Gorée Blues' from the MB digital entry while the LP sources say 'Gore Blues'; this is a spelling choice, disclosed in the result, but the LP itself is not confirmed to print it that way.",
+  "Artist credits for individual tracks are empty; credits are taken from the CD and digital releases, not from the LP.",
+  "Juno's catno 'ACTLP 80071' lacks the hyphen; the Juno listing does not show a barcode, so the LP barcode is not confirmed there.",
+  "Total duration 2897 s is consistent with the Discogs LP per-track values (sum checked), but it is a single-source figure."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 7,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.143,
+  "dur_conflicts": 6,
+  "source_families": [
+   "actmusic.com",
+   "de.juno.co.uk",
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 21.0,
+  "tokens_in": 24059,
+  "tokens_out": 4081,
+  "cost_usd": 0.00445,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 0,
+   "of": 7
+  }
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:46",
+ "overall": 4.15,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. The input has no barcode, and the result has barcode null. Level 4: MET. Without a barcode, title (Pareidolia EP, input omits 'EP'), artist (Alejandro Mosso), format (7\" vinyl) and further attributes (label Lomidhigh Organic, cat. no. LMHO025, 2025, Denmark) agree across discogs:release/33252435, web:deejay.de shop listing and the SoundCloud label sources. No other Mosso Pareidolia edition with a different tracklist was found; the MB search returned 0 hits and the Discogs title search returned only unrelated artists' Pareidolia releases. Level 4 applies.",
+   "summary": "No barcode is available, so the edition cannot reach level 5, but title, artist, format, label, catalogue number and year are unambiguous across at least two sources with no competing Mosso edition.",
+   "evidence": [
+    "discogs:release/33252435",
+    "web:https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923",
+    "soundcloud:lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025",
+    "tl-discogs search --title Pareidolia --artist \"Alejandro Mosso\" (1 hit)",
+    "tl-mb search (0 releases)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. Count (2) and order (A/B) agree across Discogs, the back-cover read by tl-vision, and deejay.de, but deejay.de names A1 'Original' while Discogs and the cover say 'Pareidolia', which is not a spelling variant. Level 4: MET. One complete source (Discogs: A1 Pareidolia, B1 Pareidolia (Ddalmh Remix)) is confirmed by the back-cover read and by deejay.de B1 'DDALMH Remix'; the A1 naming deviation is explained as the 'Original' version of the same track. Durations (84 s, 92 s) come from SoundCloud uploads only and are not printed on the release.",
+   "summary": "Two track titles and the count/order are confirmed by a complete Discogs entry plus the read back cover, with only the explained 'Original' naming deviation on deejay.de.",
+   "evidence": [
+    "discogs:release/33252435 (tl-discogs release: A1 Pareidolia, B1 Pareidolia (Ddalmh Remix))",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI (tl-vision: A Pareidolia, B Pareidolia (DDALMH Remix))",
+    "web:https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923 (A1 Original, B1 DDALMH Remix)",
+    "soundcloud:lomidhigh-records/a-alejandro-mosso-pareidolia-2 (84023 ms)",
+    "soundcloud:lomidhigh-records/b-alejandro-mosso-pareidolia-1 (92023 ms)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: MET. The database entry discogs:release/33252435 is combined with independent label information: the Lomidhigh Records SoundCloud playlist text (label's own statement of 200 hand-numbered copies, no digital release, 2 tracks, 2:56) and the read back cover (tl-vision). Level 4 and below would also hold, so 5 is the highest supported level.",
+   "summary": "A database entry is combined with label-issued information about the same edition (SoundCloud label playlist text and label uploads), which meets the primary-source condition.",
+   "evidence": [
+    "discogs:release/33252435",
+    "soundcloud:lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025",
+    "web:https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The back-cover image is hosted on Discogs, so it is not fully independent of the database entry; the label-authored SoundCloud text is the independent part of the sources rating.",
+  "deejay.de lists A1 as 'Original' and B1 as 'DDALMH Remix', which does not match the Discogs/cover title 'Pareidolia' for A1; the result does not mention this deviation.",
+  "Durations 84 s and 92 s come only from streaming uploads of the label, not from the physical release; dur_confirmed_share is 0, so the durations are not confirmed by a physical source.",
+  "Result claims 'Discogs and the back cover agree on both track titles' — the back-cover read did confirm this, but the agent's own 'missing' list says Discogs lists no durations.",
+  "Recordsale search result shows a 'Pareidolia EP' by alejandro mosso that the research did not check; it is probably the same edition, but this is not verified."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 2,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "deejay.de",
+   "discogs",
+   "image",
+   "soundcloud"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 16.5,
+  "tokens_in": 24797,
+  "tokens_out": 3408,
+  "cost_usd": 0.00418,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 0,
+   "of": 2
+  }
+ }
+}

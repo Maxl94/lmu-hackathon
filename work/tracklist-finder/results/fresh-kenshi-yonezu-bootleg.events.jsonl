@@ -1,0 +1,37 @@
+{"ts": 1795189864.03, "event": "run_start", "input": {"title": "BOOTLEG", "artist": "Kenshi Yonezu", "format": "CD"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795189864.03, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795189864.03, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795189864.03, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795189864.03, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795189868.43, "event": "tool_start", "tool": "tl-mb", "args": "search --title BOOTLEG --artist Yonezu"}
+{"ts": 1795189868.45, "event": "tool_start", "tool": "tl-mb", "args": "search --title BOOTLEG --artist Kenshi Yonezu --format CD"}
+{"ts": 1795189869.66, "event": "tool_end", "tool": "tl-mb", "args": "search --title BOOTLEG --artist Yonezu", "seconds": 1.2, "ok": true}
+{"ts": 1795189891.57, "event": "tool_end", "tool": "tl-mb", "args": "search --title BOOTLEG --artist Kenshi Yonezu --format CD", "seconds": 23.1, "ok": true}
+{"ts": 1795189891.76, "event": "tool_start", "tool": "tl-discogs", "args": "search --title BOOTLEG --artist Kenshi Yonezu --format CD"}
+{"ts": 1795189892.26, "event": "tool_end", "tool": "tl-discogs", "args": "search --title BOOTLEG --artist Kenshi Yonezu --format CD", "seconds": 0.5, "ok": true}
+{"ts": 1795189893.85, "event": "tool_start", "tool": "tl-mb", "args": "release 2f923832-09d2-4ae9-b1f3-2680ef5a01de"}
+{"ts": 1795189893.86, "event": "tool_start", "tool": "tl-discogs", "args": "release 12531413"}
+{"ts": 1795189894.18, "event": "tool_end", "tool": "tl-mb", "args": "release 2f923832-09d2-4ae9-b1f3-2680ef5a01de", "seconds": 0.3, "ok": true}
+{"ts": 1795189894.39, "event": "tool_end", "tool": "tl-discogs", "args": "release 12531413", "seconds": 0.5, "ok": true}
+{"ts": 1795189901.48, "event": "tool_start", "tool": "tl-discogs", "args": "release 27971019"}
+{"ts": 1795189901.48, "event": "tool_start", "tool": "tl-mb", "args": "group c7ff52d0-1aad-435b-95cd-18988f705e87"}
+{"ts": 1795189901.95, "event": "tool_end", "tool": "tl-mb", "args": "group c7ff52d0-1aad-435b-95cd-18988f705e87", "seconds": 0.5, "ok": true}
+{"ts": 1795189901.98, "event": "tool_end", "tool": "tl-discogs", "args": "release 27971019", "seconds": 0.5, "ok": true}
+{"ts": 1795189902.17, "event": "tool_start", "tool": "tl-discogs", "args": "release 11114145"}
+{"ts": 1795189903.1, "event": "tool_end", "tool": "tl-discogs", "args": "release 11114145", "seconds": 0.9, "ok": true}
+{"ts": 1795189913.95, "event": "tool_start", "tool": "tl-mb", "args": "release 02ce8500-8e14-48dc-a216-2e2d807a7ee1"}
+{"ts": 1795189914.28, "event": "tool_end", "tool": "tl-mb", "args": "release 02ce8500-8e14-48dc-a216-2e2d807a7ee1", "seconds": 0.3, "ok": true}
+{"ts": 1795189932.28, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/ijFbCvOew6Pt6RPpSpEzQ1ztZXTF7Ge0IwRfObloKPg/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTEyNTMxNDEzLTE3MjkwOTcwODUtNzcxOS5qcGVn.jpeg --context Back cover of Kenshi Yonezu CD BOOTLEG (SRCL-9571)? List every printed track title exactly, with track numbe"}
+{"ts": 1795189932.29, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/VjVFQ9Uw5_e6VJGiTGlJWcwY0Z_0stSZUMr41tP8GFU/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTEyNTMxNDEzLTE3MjkwOTcwODYtOTYzOC5qcGVn.jpeg --context Back cover of Kenshi Yonezu CD BOOTLEG (SRCL-9571). List every printed track title exactly, with track numbe"}
+{"ts": 1795189932.5, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/ijFbCvOew6Pt6RPpSpEzQ1ztZXTF7Ge0IwRfObloKPg/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTEyNTMxNDEzLTE3MjkwOTcwODUtNzcxOS5qcGVn.jpeg --context Back cover of Kenshi Yonezu CD BOOTLEG (SRCL-9571)? List every printed track title exactly, with track numbe", "seconds": 0.2, "ok": false}
+{"ts": 1795189932.51, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/VjVFQ9Uw5_e6VJGiTGlJWcwY0Z_0stSZUMr41tP8GFU/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTEyNTMxNDEzLTE3MjkwOTcwODYtOTYzOC5qcGVn.jpeg --context Back cover of Kenshi Yonezu CD BOOTLEG (SRCL-9571). List every printed track title exactly, with track numbe", "seconds": 0.2, "ok": false}
+{"ts": 1795189940.79, "event": "tool_start", "tool": "tl-caa", "args": "--help"}
+{"ts": 1795189940.79, "event": "tool_end", "tool": "tl-caa", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795189940.9, "event": "tool_start", "tool": "tl-caa", "args": "02ce8500-8e14-48dc-a216-2e2d807a7ee1"}
+{"ts": 1795189943.1, "event": "tool_end", "tool": "tl-caa", "args": "02ce8500-8e14-48dc-a216-2e2d807a7ee1", "seconds": 2.2, "ok": true}
+{"ts": 1795189973.95, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 14, "steps": 11}
+{"ts": 1795189973.95, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795189974.32, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 14 tracks, ISRC 14"}
+{"ts": 1795189974.32, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795189991.19, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.85, "error": null}
+{"ts": 1795189991.19, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.85, "tracks": 14, "wall_s": 109.9, "judge_s": 16.9, "cost_usd": 0.0095, "mode": "agent", "errors": []}

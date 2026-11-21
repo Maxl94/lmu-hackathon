@@ -1,0 +1,589 @@
+{
+ "input": {
+  "id": "09-andreas-dorau-rger-mit-der-unsterblichke",
+  "title": "Ärger mit der Unsterblichkeit",
+  "artist": "Andreas Dorau",
+  "ean": "4047179677011"
+ },
+ "status": "found",
+ "release": {
+  "title": "Ärger mit der Unsterblichkeit",
+  "artist": "Andreas Dorau",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2012,
+  "label": "Bureau B",
+  "catno": "BB 114",
+  "barcode": "4047179677011",
+  "edition": "LP, Album, Reissue, Remastered - first ever vinyl issue, with two bonus tracks (B6, B7)",
+  "ids": {
+   "discogs": "5671084"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Warten",
+   "artist": "Andreas Dorau",
+   "duration_s": 224,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Es dreht sich die Welt",
+   "artist": "Andreas Dorau",
+   "duration_s": 256,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Fenstermacher",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "H.P. Milewski",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Geträumt von dir",
+   "artist": "Andreas Dorau",
+   "duration_s": 258,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "H.P. Milewski",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Einsam",
+   "artist": "Andreas Dorau",
+   "duration_s": 299,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A5",
+   "disc": 1,
+   "title": "Die Trottellumme",
+   "artist": "Andreas Dorau",
+   "duration_s": 199,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "W. Müller",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A6",
+   "disc": 1,
+   "title": "Stoned Faces Don't Lie",
+   "artist": "Andreas Dorau",
+   "duration_s": 317,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Die Schande kommt",
+   "artist": "Andreas Dorau",
+   "duration_s": 216,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Tiere im Regen",
+   "artist": "Andreas Dorau",
+   "duration_s": 179,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "W. Müller",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Menschenschicksale",
+   "artist": "Andreas Dorau",
+   "duration_s": 199,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "H.P. Milewski",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Das ist das wirkliche Leben",
+   "artist": "Andreas Dorau",
+   "duration_s": 252,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dorau",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B5",
+   "disc": 1,
+   "title": "Der Wasserfloh",
+   "artist": "Andreas Dorau",
+   "duration_s": 186,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "W. Müller",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Dorau",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    },
+    {
+     "name": "Eckart",
+     "role": "composer",
+     "sources": [
+      "discogs:release/5671084"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B6",
+   "disc": 1,
+   "title": "Die Schande kommt (Dub-Version)",
+   "artist": "Andreas Dorau",
+   "duration_s": 220,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B7",
+   "disc": 1,
+   "title": "Stoned Faces Don't Lie (Gitarrenversion)",
+   "artist": "Andreas Dorau",
+   "duration_s": 215,
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+    "image:discogs-5671084-back"
+   ],
+   "duration_sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Andreas Dorau",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/e0cea3ae-c295-4165-b798-236aefeb4f48"
+     ]
+    },
+    {
+     "name": "Tommi Eckart",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/e0cea3ae-c295-4165-b798-236aefeb4f48"
+     ]
+    },
+    {
+     "name": "Andreas Dorau",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/e0cea3ae-c295-4165-b798-236aefeb4f48"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Andreas Dorau",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/5671084",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668"
+   ]
+  }
+ ],
+ "total_duration_s": 3020,
+ "confidence": 0.95,
+ "sources": [
+  {
+   "id": "discogs:release/5671084",
+   "url": "https://www.discogs.com/release/5671084",
+   "kind": "database",
+   "note": "Exact barcode match; 2012 Vinyl LP, Bureau B BB 114, notes: 'First ever vinyl issue'"
+  },
+  {
+   "id": "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+   "url": "https://musicbrainz.org/release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+   "kind": "database",
+   "note": "Sibling 2012 CD edition (barcode 4047179677028), same 13 tracks and remaster; used to cross-check titles and durations"
+  },
+  {
+   "id": "image:discogs-5671084-back",
+   "url": "https://i.discogs.com/4pDRol3ytCq_1U7C92R2OafA3US0ohezh6LqhpG-_WU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTU2NzEwODQtMTUxMTI5MzUzNi03NDkzLmpwZWc.jpeg",
+   "kind": "image",
+   "note": "Back cover: A1-A6, B1-B5 plus 'Bonustracks' B6-B7, printed durations match Discogs"
+  },
+  {
+   "id": "musicbrainz:release/e0cea3ae-c295-4165-b798-236aefeb4f48",
+   "url": "https://musicbrainz.org/release/e0cea3ae-c295-4165-b798-236aefeb4f48",
+   "kind": "database",
+   "note": "other edition of the same album: work credits"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track B2",
+   "values": {
+    "image:discogs-5671084-back": "Tier im Regen",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668": "Tiere im Regen",
+    "discogs:release/5671084": "Tiere im Regen"
+   },
+   "resolution": "Kept 'Tiere im Regen': two databases agree and the 600 px back-cover read is likely truncated; the printed title could not be confirmed at higher resolution (larger image download was unavailable)."
+  }
+ ],
+ "missing": [
+  "No MusicBrainz entry exists for the vinyl itself (barcode 4047179677011); MB durations come from the 2012 CD sibling of the same remaster and agree within 1 s, so they are used only as cross-check.",
+  "Vinyl has no printed per-track artist credits; all tracks credited to the release artist.",
+  "credits missing for 1 of 13 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "CD, Bureau B BB 114, 2012-10-12, DE, 13 tracks, barcode 4047179677028",
+   "source": "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668",
+   "why_not": "Different barcode (4047179677028) and different format; the input EAN matches the vinyl pressing."
+  },
+  {
+   "description": "CD, Ata Tak WR 53 CD, 1992, DE, 11 tracks, barcode 718750375322",
+   "source": "musicbrainz:release/e0cea3ae-c295-4165-b798-236aefeb4f48",
+   "why_not": "Original CD edition without the two bonus tracks and with a different barcode."
+  },
+  {
+   "description": "CD, 2004-05-10, DE, 11 tracks, no barcode",
+   "source": "musicbrainz:release/1326d638-17f5-40c2-bcb2-5825e7bbfe3e",
+   "why_not": "Different edition (no barcode, 11 tracks, no bonus tracks)."
+  }
+ ],
+ "reasoning": "The EAN 4047179677011 is a valid EAN-13 and matches exactly one Discogs release: the 2012 Bureau B LP reissue (BB 114), described there as the first vinyl issue of the 1992 album. MusicBrainz has no release with this barcode; its 2012 sibling is the CD (4047179677028) of the same remaster with the identical 13 tracks, used for cross-checking. The back cover image (Discogs) confirms the A1-A6 / B1-B7 side layout, that B6-B7 sit under a 'Bonustracks' header, and the printed durations, which match Discogs within rounding while MusicBrainz' millisecond values confirm them within 1 s. Discogs durations were kept since they belong to the matched vinyl release; total 50:20. Release artist only; the vinyl carries no per-track credits. Confidence stays at 0.95 despite the single open conflict: it concerns one word ('Tier' vs 'Tiere') read from a 600 px image while both databases and the sibling CD edition agree, and the edition itself is unambiguous (exact barcode plus printed back cover)."
+}

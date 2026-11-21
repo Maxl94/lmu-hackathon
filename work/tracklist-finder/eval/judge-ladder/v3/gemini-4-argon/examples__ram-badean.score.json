@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:58",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains a barcode (888837168626): MET. After check-digit correction (tool call 1: 888837168626 -> 888837168625), it matches exactly this edition in >= 2 independent sources (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and back cover image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg): MET. Format (CD) and artist (Daft Punk) match: MET. No other edition with the same barcode and a different tracklist (other country pressings with barcode 888837168625 in tool calls 4 and 5 all have 13 identical tracks): MET.",
+   "summary": "After check-digit correction of the input barcode (888837168626 -> 888837168625), the barcode, format, artist, and title match the 2013 standard CD edition across MusicBrainz, Discogs, and the back cover image, with no competing tracklist for this barcode.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count (13 tracks), order (1 to 13), and titles (only minor capitalization/apostrophe variants like 'Doin’ It Right' vs 'Doin' It Right' across musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg): MET.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) and the back cover scan agree completely on the 13 tracks, their order, and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and discogs:release/4729785) + independent primary source (read back cover print via tl-vision in tool call 9: image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg) of the same edition: MET.",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) as well as a primary source (read back cover image of the CD).",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'. Also, featured artists (e.g. Pharrell Williams, Nile Rodgers, Giorgio Moroder, Julian Casablancas, Paul Williams, Todd Edwards, Panda Bear, DJ Falcon) were neither inspected in the booklet scans nor listed.",
+  "For tracks 3 to 8, 10, 11, and 13, discogs:release/4729785 is listed in duration_sources even though the chosen duration_s values (rounded from MusicBrainz ms durations) differ by 1 second (or 3 seconds on track 13) from the Discogs durations."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 17.7,
+  "tokens_in": 25005,
+  "tokens_out": 1414,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

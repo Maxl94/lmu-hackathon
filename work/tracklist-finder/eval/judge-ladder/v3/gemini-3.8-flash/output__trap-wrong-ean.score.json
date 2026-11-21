@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:04",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: MET/NOT MET: NOT MET. The input contains a valid barcode (888837168625), but the result chose an edition with a different barcode (4018939105976). Level 4: MET/NOT MET: NOT MET. Input contains a barcode, which does not match the chosen release. Level 3: MET/NOT MET: NOT MET. Does not fit the input barcode. Level 2: MET/NOT MET: NOT MET. Level 1: 'No edition fits reliably, or the result contradicts the input (other barcode, other format, other artist/title), or not found.' MET: The input barcode 888837168625 belongs to Daft Punk - Random Access Memories, creating an irreconcilable conflict with artist Bushido and title King of Kingz; the result contradicts the input barcode by substituting 4018939105976.",
+   "summary": "The input barcode belongs to Daft Punk, so the chosen Bushido edition directly contradicts the input barcode.",
+   "evidence": [
+    "bin/tl-mb search --barcode 0888837168625",
+    "bin/tl-discogs search --barcode 0888837168625"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' MET: MusicBrainz (c3466232-6040-4dfb-9490-f2b8077dc53a) and Discogs (769288) agree on 16 tracks, order, and titles for this release.",
+   "summary": "Two independent databases agree on all 16 tracks, track order, and titles for this edition.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: 'Database + independent primary source of the same edition.' NOT MET: No primary source (e.g. physical scans read directly or manufacturer page) was consulted beyond database entries. Level 4: 'Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de).' MET: Discogs, MusicBrainz, and musik-sammler.de are all present and confirm the release.",
+   "summary": "Supported by two independent databases (Discogs, MusicBrainz) and a collector site (musik-sammler.de).",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Severe contradiction with input: The input barcode 888837168625 belongs to Daft Punk ('Random Access Memories') rather than Bushido, and the agent replaced it with 4018939105976.",
+  "Validation error: The 'artists' array in the result is empty instead of listing all distinct artists appearing on the carrier."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 16.6,
+  "tokens_in": 11579,
+  "tokens_out": 1850,
+  "cost_usd": 0.01718,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

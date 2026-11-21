@@ -1,0 +1,117 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:46",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains a barcode -> MET: input has ean '731456031125', verified as valid UPC-A in tool call 1 (tl-gtin). (2) Matches exactly this edition in >= 2 independent sources -> MET: matches musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 (barcode 0731456031125, Polystar 560 311-2; calls 3, 5), discogs:release/1949898 (barcode 731456031125, Polystar/WSM/Sony Music Media 560 311-2; calls 2, 6), image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg (printed barcode 731456031125, catno 560 311-2; call 8), and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ (EAN 731456031125, Polystar 560 311-2; call 17). (3) Format and artist match -> MET: input format CD matches 2xCD compilation (Various Artists; title 'Bravo Hits 30' matches 100%). (4) No other edition with the same barcode and a different tracklist -> MET: MusicBrainz returns only 1 release for this barcode (call 3); Discogs returns 3 pressing variants under master 5994 with the same barcode and catno 560 311-2 (call 2), of which discogs:release/23145932 was verified to have an identical tracklist (call 4) and no edition with a differing tracklist is known. All Level 5 conditions MET -> stop at 5.",
+   "summary": "The valid input UPC-A 731456031125, CD format, and title match this exact Polystar 560 311-2 2xCD edition across four independent sources with no competing barcode edition having a different tracklist.",
+   "evidence": [
+    "call 1 (tl-gtin)",
+    "call 2 (tl-discogs search)",
+    "call 3 (tl-mb search)",
+    "call 4 (discogs:release/23145932)",
+    "call 5 (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941)",
+    "call 6 (discogs:release/1949898)",
+    "call 8 (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg)",
+    "call 17 (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET: musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 (call 5), discogs:release/1949898 (call 6), image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg (call 8), and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ (call 12) all agree on 40 tracks (20 on CD1 + 20 on CD2), identical track order, and titles, with only minor spelling/casing variants (e.g. 'Straßen' vs 'Strassen' on CD2-2, Discogs adding '(Album Version)' on CD1-10, and the back cover/musik-sammler omitting version tags); minor artist credit and duration conflicts (4 tracks >2 s between MB and Discogs, plus 1 typo on musik-sammler at CD2-19) are transparently resolved and documented. All Level 5 conditions MET -> stop at 5.",
+   "summary": "All 40 tracks match in count, order, and titles across MusicBrainz, Discogs, the read back cover, and musik-sammler.de, with only minor spelling and formatting variants properly resolved.",
+   "evidence": [
+    "call 5 (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941)",
+    "call 6 (discogs:release/1949898)",
+    "call 8 (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg)",
+    "call 11 (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/)",
+    "call 12 (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> MET: The result uses two clearly independent databases (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 in call 5 and discogs:release/1949898 in call 6, distinguishable by differing durations, artist credits, and matrix notes), a specialised collector site (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/ in calls 11, 12, 17), AND a readable primary source of the same edition—the physical back cover scan read via vision (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg in call 8), which is independent of Discogs/musik-sammler and even differs from MusicBrainz on details (e.g. printing 'Feat. CRAIG DAVID' on CD2-11 and omitting mix tags). All Level 5 conditions MET -> stop at 5.",
+   "summary": "The edition is backed by two independent databases (MusicBrainz and Discogs), a specialised collector site (musik-sammler.de), and a vision-read physical back cover print of the same edition.",
+   "evidence": [
+    "call 5 (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941)",
+    "call 6 (discogs:release/1949898)",
+    "call 8 (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg)",
+    "call 12 (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/)",
+    "call 17 (web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: the top-level 'artists' array is missing/empty in the output (FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once').",
+  "Unsupported claim in alternatives: the agent claims discogs:release/26676554 has 'keine abweichende Trackliste', but never fetched discogs:release/26676554 (only saw its search summary in call 2). Similarly, discogs:release/610930 was never directly inspected via tl-discogs (only inferred from absence in barcode search and snippets in calls 9-10).",
+  "Minor source-attribution imprecision: image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg is listed in 'sources' for all 40 tracks, even though the back cover does not print the parenthetical mix/version designations (e.g. CD1-5, CD1-6, CD1-8, CD1-9, CD1-11, CD1-13, CD1-15 to CD1-17, CD1-19, CD1-20, CD2-2, CD2-4, CD2-6, CD2-9 to CD2-12, CD2-14 to CD2-20), which are sourced only from MusicBrainz and Discogs."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 89.0,
+  "tokens_in": 41662,
+  "tokens_out": 11745,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

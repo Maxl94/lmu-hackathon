@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:14",
+ "overall": 4.0,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Titel, Format MC, Interpret und Jahr 1985 stimmen überein. MusicBrainz (e0d210c6) und Discogs (2297987) nennen dieselbe Barcode-Nummer 9002722211901, zusätzlich stimmen Label-Katalognummer 221 190 und Land AT überein. Das Eingabe-Barcode fehlt, daher reicht Stufe 4 (Titel, Interpret, Format plus weitere Merkmale in mindestens zwei Quellen). Stufe 5 ist nicht erreichbar, weil keine Eingabe-Barcode vorliegt.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs liefern dieselben 12 Titel in identischer Reihenfolge (A1-B6). Deezer, Last.fm und kastelrutherspatzen.de bestätigen Titel und Reihenfolge. Die Titel sind nur in Schreibvarianten abweichend, daher Stufe 5.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 3,
+   "begruendung": "100% der Tracks mit Dauer, 50% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbankeinträge (MusicBrainz und Discogs) mit unterschiedlichen Details, dazu Streaming-Daten und ein Artist-Webseiteneintrag mit Katalognummer. Ein gelesenes Cover oder Booklet fehlt, daher keine Stufe 5.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Dauerunterschiede zwischen MusicBrainz und Discogs bei mehreren Tracks (z.B. A1 199 s vs. 202 s, B5 187 s vs. 185 s, A3 188 s vs. 187 s), vom Agent nur für A6 erwähnt; Gesamtdauer 2226 s vs. 2193 s bleibt unerklärt.",
+  "Dauerkonflikt A6 ist plausibel aufgelöst: MusicBrainz 210 s wird von Deezer und Last.fm (3:30) bestätigt, Discogs 183 s ist vermutlich fehlerhaft.",
+  "Deezer-Titel von Track 10 lautet 'Sarner-Welle Lied Hallo Freunde' und Last.fm-Track 10 ebenso; vermutlich Scraping-Artefakt, im Ergebnis nicht übernommen.",
+  "Die Feldangabe 'edition: Original 1985 Edition' ist nicht durch eine Quelle belegt.",
+  "Drei Kassettenausgaben mit gleicher Tracklist (2297987, 15349631, 24889304) existieren; das Ergebnis erwähnt sie nicht als Alternativen, die Wahl betrifft aber nur das Cover und die Barcode-Zugehörigkeit."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 12.6,
+  "tokens_in": 21125,
+  "tokens_out": 2733,
+  "cost_usd": 0.00348,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

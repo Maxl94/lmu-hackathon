@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:06",
+ "overall": 3.95,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Die Kastelruther-Spatzen-MC D 221 190 mit Barcode 9002722211901 ist durch MusicBrainz, Discogs 2297987 und den J-Card-Scan mit Barcode eindeutig belegt; die übrigen Spatzen-MC-Pressungen (15349631, 24889304, AMA 16402359) haben dieselbe Trackliste. Der Input nennt aber weder Interpret noch Barcode, und es gibt MC-Kompilationen gleichen Titels mit anderer Trackliste (Reader's Digest 8491193, Karussell 7800803). Die Wahl des Künstleralbums ist plausibel, stützt sich aber auch auf den Hinweis in der Input-ID. Daher Stufe 3.",
+   "belege": [
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "image:RGYeyADhu… (J-Card Rückseite)",
+    "discogs:release/8491193",
+    "discogs:release/7800803"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz e0d210c6, Discogs 2297987 und beide J-Card-Scans derselben MC stimmen in Anzahl (12), Reihenfolge A1–B6 und Titeln überein. Es gibt nur Schreibvarianten: 'Hallo ihr/Ihr Freunde' und 'Sarner-Welle Lied/-Lied'.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:VyI96… (J-Card innen)",
+    "image:RGYeyADhu… (J-Card Rückseite)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 83% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es liegen zwei unabhängige Datenbanken vor (MusicBrainz, Discogs) und zusätzlich eine Primärquelle: der gelesene J-Card-Druck mit Barcode, Kat.-Nr. und gedruckten Dauern.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:VyI96…",
+    "image:RGYeyADhu…"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Input enthält nur Titel und Format. Gleichnamige Various-MC-Kompilationen (Reader's Digest 8491193, Karussell 7800803) mit anderer Trackliste existieren. Die Zuordnung zu den Kastelruther Spatzen stützte sich laut Agent u. a. auf die Input-ID 'spatzen-mc-titleonly' und nicht nur auf Belege.",
+  "Die Dauern sind inkonsistent: Der Agent erklärt die gedruckten J-Card-Werte für maßgeblich (A1, A6), übernimmt aber bei A3 (188 statt gedruckt 187), A5 (141/140), B1 (152/150), B2 (239/238), B3 (207/206), B4 (138/136), B5 (187/185) und B6 (196/197) die MusicBrainz-Werte statt der gedruckten.",
+  "Die Begründung behauptet, iTunes bestätige A6 = 3:30. iTunes zeigt jedoch 3:27; nur Deezer zeigt 3:30.",
+  "Die Deezer-Quelle hat UPC 9002723211900 und ist damit die CD-Ausgabe, nicht die MC. Sie taugt nur als Gegenprobe."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.9,
+  "tokens_in": 48364,
+  "tokens_out": 2183,
+  "cost_usd": 0.23712,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,48 @@
+{"ts": 1795186078.66, "event": "run_start", "input": {"title": "Krautrock Eruption (An Introduction To German Electronic Music 1970-1980)", "artist": "Various", "ean": "4015698189711"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186078.66, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4015698189711): 1 hits"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "  musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15 | Krautrock Eruption: An Introduction To German Electronic Music 1970–1980 — Various Artists | 2025-03-21 XW | CD | Official"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "$ MusicBrainz release 30f95ef1-7c0e-430f-9e08-c672ad37da15: 12 tracks, 12 with duration"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "$ Discogs search barcode=4015698189711 format=None: 1 hits"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "  discogs:release/33751572 | Krautrock Eruption (An Introduction To German Electronic Music 1970-1980) | Germany 2025 | 12 tracks, 12 with duration"}
+{"ts": 1795186078.66, "event": "fast_step", "msg": "→ no fast path: 6 duration differences > 2 s between MusicBrainz and Discogs – agent should resolve"}
+{"ts": 1795186078.66, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 6 duration differences > 2 s between MusicBrainz and Discogs – agent should resolve"}
+{"ts": 1795186078.66, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186100.99, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4015698189711"}
+{"ts": 1795186100.99, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4015698189711", "seconds": 0.0, "ok": true}
+{"ts": 1795186100.99, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4015698189711"}
+{"ts": 1795186100.99, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4015698189711", "seconds": 0.0, "ok": true}
+{"ts": 1795186100.99, "event": "tool_start", "tool": "tl-gtin", "args": "4015698189711"}
+{"ts": 1795186100.99, "event": "tool_end", "tool": "tl-gtin", "args": "4015698189711", "seconds": 0.0, "ok": true}
+{"ts": 1795186106.36, "event": "tool_start", "tool": "tl-discogs", "args": "release 33751572"}
+{"ts": 1795186106.36, "event": "tool_end", "tool": "tl-discogs", "args": "release 33751572", "seconds": 0.0, "ok": true}
+{"ts": 1795186106.37, "event": "tool_start", "tool": "tl-mb", "args": "release 30f95ef1-7c0e-430f-9e08-c672ad37da15"}
+{"ts": 1795186106.37, "event": "tool_end", "tool": "tl-mb", "args": "release 30f95ef1-7c0e-430f-9e08-c672ad37da15", "seconds": 0.0, "ok": true}
+{"ts": 1795186173.78, "event": "tool_start", "tool": "tl-discogs", "args": "versions 3814443"}
+{"ts": 1795186173.78, "event": "tool_end", "tool": "tl-discogs", "args": "versions 3814443", "seconds": 0.0, "ok": true}
+{"ts": 1795186173.78, "event": "tool_start", "tool": "tl-caa", "args": "30f95ef1-7c0e-430f-9e08-c672ad37da15"}
+{"ts": 1795186173.79, "event": "tool_end", "tool": "tl-caa", "args": "30f95ef1-7c0e-430f-9e08-c672ad37da15", "seconds": 0.0, "ok": true}
+{"ts": 1795186188.81, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/p_l_DmxnTDaCKz8WKcpx_rnurx-t0AxMz8Xwlt3CTqo/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNzUx/NTcyLTE3NDUwODc5OTAtOTIxMi5qcGVn.jpeg --context Back sleeve of CD 'Krautrock Eruption' Bureau B BB478. Read the printed tracklist: track numbers, titles, a"}
+{"ts": 1795186191.38, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/p_l_DmxnTDaCKz8WKcpx_rnurx-t0AxMz8Xwlt3CTqo/rs:fit/g:sm/q:90/h:535/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNzUx/NTcyLTE3NDUwODc5OTAtOTIxMi5qcGVn.jpeg --context Back sleeve of CD 'Krautrock Eruption' Bureau B BB478. Read the printed tracklist: track numbers, titles, a", "seconds": 2.6, "ok": false}
+{"ts": 1795186198.36, "event": "tool_start", "tool": "tl-discogs", "args": "release 33677340"}
+{"ts": 1795186198.37, "event": "tool_end", "tool": "tl-discogs", "args": "release 33677340", "seconds": 0.0, "ok": true}
+{"ts": 1795186198.37, "event": "tool_start", "tool": "tl-mb", "args": "group 47e01589-9682-4301-aacc-175d6cb64842"}
+{"ts": 1795186198.37, "event": "tool_end", "tool": "tl-mb", "args": "group 47e01589-9682-4301-aacc-175d6cb64842", "seconds": 0.0, "ok": true}
+{"ts": 1795186201.82, "event": "tool_start", "tool": "tl-itunes", "args": "search Various Krautrock Eruption"}
+{"ts": 1795186201.82, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Various Artists --title Krautrock Eruption"}
+{"ts": 1795186204.95, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Various Artists --title Krautrock Eruption", "seconds": 3.1, "ok": true}
+{"ts": 1795186210.77, "event": "tool_end", "tool": "tl-itunes", "args": "search Various Krautrock Eruption", "seconds": 9.0, "ok": true}
+{"ts": 1795186231.26, "event": "tool_start", "tool": "tl-itunes", "args": "--help"}
+{"ts": 1795186231.27, "event": "tool_end", "tool": "tl-itunes", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795186231.41, "event": "tool_start", "tool": "tl-deezer", "args": "--help"}
+{"ts": 1795186231.42, "event": "tool_end", "tool": "tl-deezer", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795186237.49, "event": "tool_start", "tool": "tl-itunes", "args": "album 1793124678 --country de"}
+{"ts": 1795186237.5, "event": "tool_start", "tool": "tl-deezer", "args": "album 704460101"}
+{"ts": 1795186239.54, "event": "tool_end", "tool": "tl-itunes", "args": "album 1793124678 --country de", "seconds": 2.1, "ok": true}
+{"ts": 1795186240.78, "event": "tool_end", "tool": "tl-deezer", "args": "album 704460101", "seconds": 3.3, "ok": true}
+{"ts": 1795186347.12, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 19, "steps": 13}
+{"ts": 1795186347.12, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186347.12, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 12 tracks, ISRC 0"}
+{"ts": 1795186347.12, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186355.1, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 4.4, "error": null}
+{"ts": 1795186355.1, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 4.4, "tracks": 12, "wall_s": 268.5, "judge_s": 8.0, "cost_usd": 0.0418, "mode": "agent", "errors": []}

@@ -1,0 +1,92 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:30",
+ "overall": 4.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: NOT MET (no barcode in input). Level 4: MET - title ('King of Kingz'), artist ('Bushido'), and format ('Kassette') match, and further attributes (label 'I Luv Money Records', cat. no. 'ILM 003', year '2001', country 'DE') are unambiguous across multiple independent sources (MusicBrainz, Discogs, musik-sammler.de). Furthermore, while there are multiple repressing editions, all share the exact same tracklist.",
+   "summary": "The edition is unambiguous across multiple independent sources by title, artist, format, label, cat. no., and year, with all alternative pressings sharing the same tracklist.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET - >= 2 independent sources (MusicBrainz: 19fd3695-68df-4e95-884a-da6938aae5cf, Discogs: 1951581, and musik-sammler.de) agree completely on track count (16), order (A1-B8), and titles.",
+   "summary": "Multiple independent sources completely agree on track count, order, and titles.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: MET - Two independent database entries (MusicBrainz and Discogs) plus a specialised collector site (musik-sammler.de) and image evidence.",
+   "summary": "Multiple independent database entries and a specialised collector site confirm the release.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.0,
+  "tokens_in": 24201,
+  "tokens_out": 394,
+  "cost_usd": 0.00825,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

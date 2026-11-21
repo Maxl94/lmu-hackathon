@@ -1,0 +1,109 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:03",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: input barcode 888837168625 must match this edition -> NOT MET; the barcode belongs to Daft Punk 'Random Access Memories' (tl-mb search --barcode, tl-discogs search --barcode, tl-itunes upc), while the result has barcode 4018939105976. Level 4: barcode match in one source -> NOT MET; without barcode, other fitting editions must not have a different tracklist -> NOT MET, because the Exclusive 2004 Edition (discogs:release/3057907, MB 15996385) has 20 tracks. Level 3: unambiguous or all editions share the same tracklist -> NOT MET. Level 2: several editions fit (16-track 2003 Aggro releases, 20-track 2004 Exclusive) -> fits structurally. However, the result contradicts the input barcode, and the input barcode points to a completely different artist/title. Level 1: result contradicts the input (other barcode) -> MET.",
+   "summary": "The input EAN validly belongs to Daft Punk 'Random Access Memories' and the result carries a different barcode (4018939105976), so the result contradicts the input barcode.",
+   "evidence": [
+    "tl-mb search --barcode 0888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "tl-itunes upc 888837168625",
+    "tl-discogs search --title King of Kingz",
+    "tl-mb search --title King of Kingz"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles -> MET for the chosen Aggro Berlin 2003 edition: MusicBrainz c3466232 and Discogs 769288 both list the same 16 tracks in identical order, with only capitalisation differences. Durations differ by at most 3 s (track 16: 221 vs 218). musik-sammler 505095 confirms a total of 51:26, but its full tracklist was only partly scraped. This rating applies to the chosen edition, not to the barcode in the input.",
+   "summary": "MusicBrainz and Discogs agree on all 16 tracks of the 2003 Aggro Berlin CD.",
+   "evidence": [
+    "bin/tl-mb release c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "bin/tl-discogs release 769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source (cover/label print) -> NOT MET; no booklet or label information was read. Level 4: two independent database entries with differing details -> MET; MusicBrainz and Discogs differ in cat. no. format (AGGRO 004 vs AGGRO004CD) and in durations. The musik-sammler.de collector page adds partial support.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) plus a partial musik-sammler.de collector page support the chosen edition.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input EAN 888837168625 is a valid UPC of Daft Punk 'Random Access Memories' (Columbia 88883716862); the result substitutes a different barcode (4018939105976) for the Bushido CD, which is a direct contradiction with the input.",
+  "The agent declared the input EAN 'falsch' without proof; the input could equally refer to the Daft Punk CD with wrong title/artist metadata.",
+  "Competing editions exist: the 20-track Exclusive 2004 Edition (discogs 3057907, EAN 4019593960000) and the 16-track MZEE.com edition / Discogs 3645154 / 18354424 without barcode.",
+  "musik-sammler.de was only partially scraped (track 1 and total 51:26 visible), so a full tracklist confirmation from it is not evidenced.",
+  "The total duration of 3096 s differs from MB (3095 s) and Discogs (3087 s) sums; this is minor."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 13.9,
+  "tokens_in": 15310,
+  "tokens_out": 1375,
+  "cost_usd": 0.08874,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

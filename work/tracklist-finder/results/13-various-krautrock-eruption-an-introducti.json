@@ -1,0 +1,804 @@
+{
+ "input": {
+  "id": "13-various-krautrock-eruption-an-introducti",
+  "title": "Krautrock Eruption (An Introduction To German Electronic Music 1970-1980)",
+  "artist": "Various",
+  "ean": "4015698189711"
+ },
+ "status": "found",
+ "release": {
+  "title": "Krautrock Eruption: An Introduction To German Electronic Music 1970–1980",
+  "artist": "Various Artists",
+  "format": "CD",
+  "country": "DE",
+  "year": 2025,
+  "label": "Bureau B",
+  "catno": "BB478",
+  "barcode": "4015698189711",
+  "edition": "CD compilation, Bureau B BB478 (Indigo 267192), LC 13875, made in EU, ISBN 978-3-95575-233-0",
+  "ids": {
+   "musicbrainz": "30f95ef1-7c0e-430f-9e08-c672ad37da15",
+   "discogs": "33751572"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Ballet Statique",
+   "artist": "Conrad Schnitzler",
+   "duration_s": 297,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Theo Konrad Schnitzler",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "I’ve Heard That One Before / Watch Your Step",
+   "artist": "Faust",
+   "duration_s": 169,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Arnulf Meifert",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Gunther Wüsthoff",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Joachim Irmler",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Jean-Hervé Peron",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Rudolf Sos-na",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Werner Diermaier",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Foreign Affairs",
+   "artist": "Brian Eno, Dieter Moebius, Hans-Joachim Roedelius",
+   "duration_s": 210,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Brian Eno",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Dieter Moebius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Hans-Joachim Roedelius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Emphasis",
+   "artist": "Harald Grosskopf",
+   "duration_s": 299,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Harald Grosskopf",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "21:32 (bureau b edit)",
+   "artist": "Cluster",
+   "duration_s": 277,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Dieter Moebius",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+     ]
+    },
+    {
+     "name": "Conny Plank",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+     ]
+    },
+    {
+     "name": "Hans‐Joachim Roedelius",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+     ]
+    },
+    {
+     "name": "Konrad Plank",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Dieter Moebius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Hans-Joachim Roedelius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Rastakraut Pasta",
+   "artist": "Dieter Moebius, Conny Plank",
+   "duration_s": 377,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Konrad Plank",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Diester Moebius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Glaubersalz",
+   "artist": "Hans-Joachim Roedelius",
+   "duration_s": 209,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Hans-Joachim Roedelius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Minimal Tape 3/7.2",
+   "artist": "Pyrolator",
+   "duration_s": 262,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Pyrolator",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+     ]
+    },
+    {
+     "name": "Kurt Dahlke",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Himmelblau (bureau b edit)",
+   "artist": "Wolfgang Riechmann",
+   "duration_s": 364,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Wolfgang Riechmann",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Kluster 2 (Electric Music) (bureau b edit)",
+   "artist": "Kluster",
+   "duration_s": 166,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Theo Konrad Schnitzler",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Dieter Moebius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Hans-Joachim Roedelius",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Apricot Brandy II (bureau b edit)",
+   "artist": "Günter Schickert",
+   "duration_s": 322,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Manfred Heuer",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    },
+    {
+     "name": "Günter Schickert",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "Falter-Lamento",
+   "artist": "Asmus Tietchens",
+   "duration_s": 378,
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "duration_sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Asmus Tietchens",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33751572"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Conrad Schnitzler",
+   "role": "main",
+   "tracks": [
+    "1"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Faust",
+   "role": "main",
+   "tracks": [
+    "2"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Brian Eno",
+   "role": "main",
+   "tracks": [
+    "3"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ]
+  },
+  {
+   "name": "Dieter Moebius",
+   "role": "main",
+   "tracks": [
+    "3",
+    "6"
+   ],
+   "sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678",
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+   ]
+  },
+  {
+   "name": "Hans-Joachim Roedelius",
+   "role": "main",
+   "tracks": [
+    "3",
+    "7"
+   ],
+   "sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678",
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+   ]
+  },
+  {
+   "name": "Harald Grosskopf",
+   "role": "main",
+   "tracks": [
+    "4"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Cluster",
+   "role": "main",
+   "tracks": [
+    "5"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Conny Plank",
+   "role": "main",
+   "tracks": [
+    "6"
+   ],
+   "sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678"
+   ]
+  },
+  {
+   "name": "Pyrolator",
+   "role": "main",
+   "tracks": [
+    "8"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Wolfgang Riechmann",
+   "role": "main",
+   "tracks": [
+    "9"
+   ],
+   "sources": [
+    "discogs:release/33751572",
+    "itunes:album/1793124678",
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15"
+   ]
+  },
+  {
+   "name": "Kluster",
+   "role": "main",
+   "tracks": [
+    "10"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Günter Schickert",
+   "role": "main",
+   "tracks": [
+    "11"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  },
+  {
+   "name": "Asmus Tietchens",
+   "role": "main",
+   "tracks": [
+    "12"
+   ],
+   "sources": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572"
+   ]
+  }
+ ],
+ "total_duration_s": 3330,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+   "url": "https://musicbrainz.org/release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+   "kind": "database",
+   "note": "barcode 4015698189711 exact match, CD, 12 tracks, durations in ms"
+  },
+  {
+   "id": "discogs:release/33751572",
+   "url": "https://www.discogs.com/release/33751572",
+   "kind": "database",
+   "note": "barcode 4015698189711 exact match, CD, Bureau B BB478, matrix BB478/optimal media, GEMA, joint artist credits per track"
+  },
+  {
+   "id": "itunes:album/1793124678",
+   "url": "https://music.apple.com/de/album/krautrock-eruption-an-introduction-to-german/1793124678",
+   "kind": "streaming",
+   "note": "digital edition, same 12 tracks; used only as duration cross-check (ms)"
+  },
+  {
+   "id": "deezer:album/704460101",
+   "url": "https://www.deezer.com/album/704460101",
+   "kind": "streaming",
+   "note": "digital edition, UPC 4015698189711, durations to the second, used as rough cross-check only"
+  },
+  {
+   "id": "discogs:release/33677340",
+   "url": "https://www.discogs.com/release/33677340",
+   "kind": "database",
+   "note": "same master, 1xLP (barcode 4015698041187) - confirms track order and joint credits (Eno/Moebius/Roedelius, Moebius/Plank)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "duration track 1",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "296.72",
+    "itunes:album/1793124678": "296.72",
+    "discogs:release/33751572": "303"
+   },
+   "resolution": "Took 297 s: MusicBrainz (ms precision) and iTunes agree exactly, Discogs is the outlier (+6 s)"
+  },
+  {
+   "field": "duration track 3",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "207.133",
+    "discogs:release/33751572": "210",
+    "itunes:album/1793124678": "211.107"
+   },
+   "resolution": "Took 210 s (Discogs, physical CD); iTunes within 1.1 s, MusicBrainz is the outlier (-3 s)"
+  },
+  {
+   "field": "duration track 4",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "295.84",
+    "discogs:release/33751572": "299",
+    "itunes:album/1793124678": "299.267"
+   },
+   "resolution": "Took 299 s (Discogs + iTunes agree); MusicBrainz is the outlier (-3.2 s)"
+  },
+  {
+   "field": "duration track 7",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "203.944",
+    "discogs:release/33751572": "209",
+    "itunes:album/1793124678": "207.307"
+   },
+   "resolution": "Took 209 s (Discogs, physical CD); iTunes within 1.7 s, MusicBrainz is the outlier (-5.1 s)"
+  },
+  {
+   "field": "duration track 8",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "259.64",
+    "discogs:release/33751572": "262",
+    "itunes:album/1793124678": "261.707"
+   },
+   "resolution": "Took 262 s (Discogs, physical CD); iTunes within 0.3 s, MusicBrainz is the outlier (-2.4 s)"
+  },
+  {
+   "field": "duration track 9",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "363.81",
+    "itunes:album/1793124678": "363.81",
+    "discogs:release/33751572": "368"
+   },
+   "resolution": "Took 364 s: MusicBrainz and iTunes agree exactly, Discogs is the outlier (+4 s)"
+  },
+  {
+   "field": "duration track 11",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "321.944",
+    "itunes:album/1793124678": "321.944",
+    "discogs:release/33751572": "324"
+   },
+   "resolution": "Took 322 s: MusicBrainz and iTunes agree exactly, Discogs is the outlier (+2.1 s)"
+  },
+  {
+   "field": "duration track 12",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "371.896",
+    "discogs:release/33751572": "378",
+    "itunes:album/1793124678": "378.4"
+   },
+   "resolution": "Took 378 s (Discogs + iTunes agree); MusicBrainz is the outlier (-6.5 s)"
+  },
+  {
+   "field": "artist track 3",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "Brian Eno",
+    "discogs:release/33751572": "Brian Eno, Dieter Moebius, Hans-Joachim Roedelius",
+    "itunes:album/1793124678": "Brian Eno, Moebius & Roedelius"
+   },
+   "resolution": "Used the joint credit (Discogs and iTunes both list all three performers; taken from the album 'After the Heat'); MusicBrainz only stores one"
+  },
+  {
+   "field": "artist track 6",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "Moebius",
+    "discogs:release/33751572": "Dieter Moebius, Conny Plank",
+    "itunes:album/1793124678": "Moebius & Plank"
+   },
+   "resolution": "Used the duo credit Dieter Moebius, Conny Plank (Discogs/iTunes); MusicBrainz only stores one artist"
+  },
+  {
+   "field": "artist track 7",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "Roedelius",
+    "discogs:release/33751572": "Hans-Joachim Roedelius"
+   },
+   "resolution": "Used the full name Hans-Joachim Roedelius (Discogs); MusicBrainz short form refers to the same artist"
+  },
+  {
+   "field": "artist track 9",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "Riechmann",
+    "discogs:release/33751572": "Wolfgang Riechmann"
+   },
+   "resolution": "Used the full name Wolfgang Riechmann (Discogs); MusicBrainz short form refers to the same artist"
+  },
+  {
+   "field": "country",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "XW",
+    "discogs:release/33751572": "Germany"
+   },
+   "resolution": "DE (German label Bureau B, GEMA rights society, LC 13875); MusicBrainz uses the vague 'worldwide'"
+  },
+  {
+   "field": "year",
+   "values": {
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15": "2025-03-21",
+    "discogs:release/33751572": "2025",
+    "itunes:album/1793124678": "2020-01-01"
+   },
+   "resolution": "2025 (both physical editions agree; iTunes date is a placeholder)"
+  }
+ ],
+ "missing": [
+  "Printed back cover could not be read (Discogs image returned HTTP 403, MusicBrainz has front cover only) - title capitalisation, especially '(bureau b edit)' vs '(Bureau B Edit)', is taken from MusicBrainz",
+  "Duration discrepancies between MusicBrainz and Discogs of up to 6.5 s on 8 of 12 tracks could not be settled by a physical source; per-track majority of sources used"
+ ],
+ "alternatives": [
+  {
+   "description": "1×LP, Bureau B BB478 / Ventil Verlag, 2025 Germany, barcode 4015698041187, 12 tracks (A1-A6, B1-B6)",
+   "source": "discogs:release/33677340",
+   "why_not": "vinyl edition, different barcode; the input barcode belongs to the CD"
+  },
+  {
+   "description": "1×LP, Bureau B BB478LPRT, 2025 Germany, 12 tracks (variant vinyl pressing)",
+   "source": "discogs:release/33707157",
+   "why_not": "vinyl edition, different catalogue number and barcode"
+  }
+ ],
+ "reasoning": "EAN 4015698189711 is a valid EAN-13 and hits exactly one release in MusicBrainz and one in Discogs, both the 2025 Bureau B CD (BB478, GEMA, LC 13875) with the same 12 tracks in the same order - so the edition is unambiguous (physical CD preferred over the LP and the digital versions). Titles follow MusicBrainz (printed cover not readable); artist credits for tracks 3, 6, 7, 9 were completed from the Discogs per-track credits, which are corroborated by the LP entry and iTunes. Durations: MusicBrainz (ms) and the digital edition agree exactly on tracks 1, 2, 5, 6, 9, 10, 11; on tracks 3, 4, 7, 8, 12 MusicBrainz deviates from both Discogs and iTunes by 2-6.5 s, so the majority value (Discogs/iTunes) was taken. Total 55:30."
+}

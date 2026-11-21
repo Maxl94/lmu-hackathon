@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:39:50",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: input barcode 731456031125 (checksum ok) matches MusicBrainz 41b0a392 (DE 2000, CD+CD) and Discogs 23145932 (Germany 2000), two independent database families - MET; format CD and title match - MET; other Discogs editions with the same barcode (1949898, 26676554) are reported with 40 tracks, and the agent states the same tracklist - MET per the evidence summary, although only the track counts are shown explicitly for the alternatives. All conditions MET, so level 5.",
+   "summary": "The barcode matches the edition exactly in MusicBrainz and Discogs, and the format matches; the same-barcode alternatives have the same track count (40).",
+   "evidence": [
+    "MusicBrainz-Suche barcode",
+    "Discogs-Suche barcode=731456031125 format=CD",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - MusicBrainz and Discogs 23145932 both list 40 tracks; titles agree, and the only title conflicts are spelling/suffix variants (track 10 '(Album Version)', tracks 22 and 26 spelling) - MET. Duration deviations of 3-4 s on 4 tracks do not affect count, order or titles. Level 5 reached.",
+   "summary": "MusicBrainz and Discogs agree on 40 tracks in the same order, with only spelling variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover/booklet/label) - NOT MET, no primary source was consulted. Level 4: two independent database entries with differing details - MET: MusicBrainz and Discogs differ in title spellings and durations (e.g. track 5: 3:45 vs 3:49), so they are recognisably independent. Level 4 reached.",
+   "summary": "Two independent databases (MusicBrainz, Discogs) with differing details, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The 'same tracklist' claim for the alternatives discogs:release/1949898 and 26676554 is shown in the evidence only as a track count (40); no title comparison is documented.",
+  "Duration conflicts on disc 1 track 5, disc 1 track 7, disc 2 track 14 and disc 2 track 18 (3-4 s) were resolved by rule in favour of MusicBrainz without further confirmation.",
+  "Track 10 'Album Version' suffix from Discogs was dropped by applying the MusicBrainz-first rule, without verification against the print."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 10.7,
+  "tokens_in": 10526,
+  "tokens_out": 999,
+  "cost_usd": 0.06208,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

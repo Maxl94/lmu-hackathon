@@ -1,0 +1,89 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:24:14",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 731456031125 trifft exakt auf MusicBrainz (41b0a392) und Discogs (23145932), zwei unabhängige Datenbanken. Format CD und Titel passen. Zwei weitere Discogs-Ausgaben (1949898, 26676554) haben denselben Barcode und dieselbe Trackliste, die Wahl ist daher unerheblich.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs stimmen bei 40 Tracks (2×20) in Anzahl, Reihenfolge und Titeln überein. Es gibt nur Schreibweisen-Unterschiede (Tracks 10, 22, 26) und 4 Dauerabweichungen von 3–4 s (Tracks 5, 7, 14, 18), die dokumentiert sind.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 4 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt zwei Datenbanken (MusicBrainz und Discogs), aber keine Primärquelle wie Cover oder Booklet. Discogs und MusicBrainz sind teils voneinander abhängig, ihre Details unterscheiden sich aber (Dauern, Schreibweisen). Damit ist Stufe 4 erreicht, Stufe 5 nicht.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Keine Primärquelle (Cover/Booklet/Label) herangezogen.",
+  "4 Dauerkonflikte (Tracks 1-5, 1-7, 1-14, 2-18) nur per Regel 'MusicBrainz vor Discogs' aufgelöst, nicht inhaltlich geprüft.",
+  "Im Ergebnis ist Track 2-14 als duration_conflict markiert, in der Konfliktliste steht Track 14 (CD1) und 18 (CD1) statt der Positionen der zweiten CD – die Positionsangaben im Konfliktfeld sind unklar (fortlaufend gezählt).",
+  "Die Tracklistenausgabe zeigt nur 40 Tracks, Gesamtdauer 8847 s wurde nicht unabhängig geprüft."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 7.1,
+  "tokens_in": 8663,
+  "tokens_out": 903,
+  "cost_usd": 0.02636,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

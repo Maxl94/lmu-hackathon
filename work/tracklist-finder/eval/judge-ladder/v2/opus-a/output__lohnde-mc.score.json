@@ -1,0 +1,97 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:06",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires barcode match in >=2 sources - NOT MET (input has no barcode; Discogs lists only 'GEMA' under barcodes). Level 4: title, artist, format plus a further attribute in >=2 sources - title/artist/format/label/catno are confirmed by Discogs r24165131 and the cassette shell images (MC 6109, Fred Kersten KG). Condition 'no other edition fitting the input has a different tracklist' NOT MET: the searches (tl-search) show 'Blasmusik Aus Lohnde (Folge 2)' (Discogs r24154076, cassette) with the same title; it is credited to 'Swinging Seelze', and the agent never opened it or checked its tracklist or its relation to the Musikverein. Level 3: 'no competing edition known' NOT MET for the same reason. Level 2: several series parts fit the input title/format, part 2 presumably has a different tracklist; the choice of Folge 1 rests on the artist credit - MET.",
+   "summary": "Folge 1 fits the input artist exactly, but a same-titled cassette 'Blasmusik Aus Lohnde (Folge 2)' exists and was not examined or explicitly ruled out.",
+   "evidence": [
+    "tl-discogs release 24165131",
+    "tl-search \"Blasmusik aus Lohnde Musikverein Lohnde Kassette Trackliste\"",
+    "tl-search \"Blasmusik aus Lohnde MC6109\""
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources agree - NOT fully MET: Discogs r24165131 and the J-card images (tl-vision, back panel 10 tracks; inner panel side 1, 6 tracks) agree on count, order and titles (only capitalisation differs). However, the images are hosted on the same Discogs entry, so they are not fully independent. Level 4: one complete source confirmed by a second, with only small deviations - MET (Discogs plus the J-card reading match exactly, apart from capitalisation).",
+   "summary": "Discogs tracklist (10 tracks) is matched exactly by the vision reading of the J-card scan, but the scan comes from the same Discogs entry.",
+   "evidence": [
+    "tl-discogs release 24165131",
+    "image:...NTctNjE4OC5qcGVn.jpeg (tl-vision)",
+    "image:...NTEtNjY4NS5qcGVn.jpeg (tl-vision)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus independent primary source - NOT MET: the J-card and shell scans are primary print, but they are hosted on the same Discogs entry and are not independent. Level 4: two independent database entries or database plus collector site - NOT MET (MusicBrainz returned 0 results; no musik-sammler entry found). Level 3: one good database, or sources that may have copied from each other (cover images on the same database entry) - MET.",
+   "summary": "Only the Discogs entry plus images hosted on that same entry are available.",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-mb search (0 results)",
+    "tl-vision images from the Discogs entry"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing series part 'Blasmusik Aus Lohnde (Folge 2)' (discogs r24154076, cassette, credited to Swinging Seelze) was not examined; the input does not specify Folge 1, and 'alternatives' is empty despite this.",
+  "Release artist '1925 e. V.' and edition 'Folge 1' are additions not present in the input; Folge 1 was chosen only on the basis of the artist credit.",
+  "The track 'sources' cite the J-card image as independent, but it is hosted on the same Discogs entry.",
+  "The 'tl-discogs versions 24165131' output is erroneous (8 million unrelated versions) and does not support the claim of no other versions."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.9,
+  "tokens_in": 21017,
+  "tokens_out": 2030,
+  "cost_usd": 0.12467,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

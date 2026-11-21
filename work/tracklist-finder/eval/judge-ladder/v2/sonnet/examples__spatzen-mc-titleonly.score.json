@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:57",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5 (barcode matches in >=2 sources): NOT MET. The input has no barcode, only title and format MC. Level 4 (no barcode: title, artist, format and a further attribute unambiguous, no competing edition with a different tracklist): NOT MET. The input has no artist, and competing MC editions with a different tracklist exist. discogs:release/8491193 is a Various 5xMC box (1995, Reader's Digest) with Andy Borg on A1 and a completely different tracklist. discogs:release/7800803 is a Various MC (Karussell 517 745-4) with the same title and different content. Level 3 (only one source, or all fitting editions share the tracklist): NOT MET, because those Various MCs fit title and format but do not share the tracklist. Level 2 (several editions fit, at least one with a different tracklist, choice rests on weak signals): MET. The Kastelruther Spatzen album was chosen because the sample ID suggested it, not because the input says so. The Koch MC barcode edition 2297987 is then picked from three Koch pressings and the Polish AMA pressing, all of which share the tracklist.",
+   "summary": "The input has only title and format MC, and Various-artists MCs with the same title and a different tracklist also fit, so choosing the Spatzen Koch MC rests on weak signals.",
+   "evidence": [
+    "discogs search (step 1)",
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/16402359",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5 (>=2 independent sources of the same edition agree on count, order and titles, spelling variants only): MET. musicbrainz:release/e0d210c6 (MC, barcode 9002722211901) and discogs:release/2297987 (MC, same barcode) both list the same 12 tracks in order A1-B6. The J-card back (read with tl-vision, barcode 9002722211901, cat. no. D 221 190) and the J-card inside page (printed durations) list the same 12 titles in the same order. Differences are only spelling: 'Sarner-Welle Lied' vs 'Sarner-Welle-Lied', and capitalisation. The agent's explanations for the digital-only 'Hallo Freunde' suffix and for the duration conflicts are plausible, and they do not affect count, order or titles.",
+   "summary": "Two databases and two J-card scans of the same barcode edition agree on 12 tracks in order A1-B6, with only spelling variants.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs (J-card back)",
+    "image:VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ (J-card inside)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5 (database + independent primary source of the same edition): MET. Two databases, MusicBrainz and Discogs, were consulted. The J-card back, read by vision, shows barcode 9002722211901 and cat. no. D 221 190, matching this edition. The J-card inside page shows printed tracklist and durations (3'22'', 3'30'', etc.). This is primary print evidence of the same edition, independent of the database entries' data. The images are hosted on the Discogs entry, but they are read directly and the barcode is verified from the print. Deezer and iTunes are only supplementary.",
+   "summary": "MusicBrainz and Discogs are corroborated by directly read J-card scans that show the matching barcode, catalogue number and printed durations.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "tl-vision step 11 and step 28",
+    "tl-vision step 30"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input has no artist, yet the agent fixed on Kastelruther Spatzen. The agent justified this by the sample ID 'spatzen-mc-titleonly', which is a meta-signal and not part of the input. The Various MCs (discogs 8491193 and 7800803) were rejected as 'not the artist album', which the input does not rule out.",
+  "The agent chose the 'Standardpressung with barcode' (2297987) out of several Koch MC pressings. This is harmless for the tracklist, but the input does not distinguish between them.",
+  "The reasoning states 'the only artist album named Ich sag's dir mit Musik' without evidence that no other artist album with this title exists.",
+  "The J-card back (step 11 and step 30) prints no durations. All durations come from the inside J-card scan, MusicBrainz, Discogs and Deezer, and the Deezer entry is dated 2000 and is only the digital album.",
+  "The conflict resolution for B4 (title) is supported by the evidence, but the J-card back reads 'Sarner-Welle-Lied' while the chosen title is 'Sarner-Welle Lied'. This is a spelling difference only."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 21.0,
+  "tokens_in": 50180,
+  "tokens_out": 2558,
+  "cost_usd": 0.12594,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

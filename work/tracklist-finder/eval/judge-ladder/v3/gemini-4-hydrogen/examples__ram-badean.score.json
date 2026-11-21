@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:11",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: Input contains a barcode (888837168626): MET. After check-digit correction via tl-gtin (call 1) to 888837168625, it matches exactly this edition in >= 2 independent sources: MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 in call 6 with barcode 0888837168625, discogs:release/4729785 in call 7 with barcode 888837168625 / 8 8883-71686-2 5, and back cover image via tl-vision in call 9 showing 8 8883-71686-2 5). Format (CD) and artist (Daft Punk) match: MET (calls 6, 7, 9). No other edition with the same barcode and a different tracklist: MET (MB barcode search in call 4 returned 5 CD releases all with 13 tracks, US pressing a8308466-dd18-4912-9192-ccd0eb1878e0 in call 10 has identical 13 tracks and CD-TOC durations, and Discogs barcode search in call 5 returned editions of the same album).",
+   "summary": "After check-digit correction of the input UPC/EAN to 888837168625, MusicBrainz, Discogs, and the physical back cover scan unambiguously identify the same 2013 European standard CD edition with matching format and artist.",
+   "evidence": [
+    "tl-gtin 888837168626",
+    "tl-mb search --barcode 888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 (call 6), discogs:release/4729785 (call 7), and the back cover scan read via tl-vision (call 9) all agree on 13 tracks in identical order, with only capitalization/apostrophe variants (e.g. 'Doin’ It Right' vs 'Doin' it Right'). The 2.6 s duration discrepancy on Track 13 ('Contact': 384 s from CD-TOC in MB vs 381 s in Discogs) is properly documented in conflicts and flagged.",
+   "summary": "MusicBrainz, Discogs, and the back cover image of the same edition agree completely on the count, order, and titles of all 13 tracks.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Two independent database entries are used (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 in call 6 with CD-TOC ms durations and discogs:release/4729785 in call 7 with differing rounded durations, matrix/runout, and EU/Polish distribution details), alongside a primary source read via tl-vision (call 9: back cover print image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg confirming all 13 titles, barcode 8 8883-71686-2 5, catalog number 88883716862, LC 00162, and Made in the EU).",
+   "summary": "The result combines two independent music databases (MusicBrainz and Discogs) with a primary source read directly from the physical back cover scan.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once' (the top-level artists field is missing/empty in the result, and featured artists are not listed)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 21.9,
+  "tokens_in": 25005,
+  "tokens_out": 4259,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

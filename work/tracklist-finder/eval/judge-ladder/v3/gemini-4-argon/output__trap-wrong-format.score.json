@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:40",
+ "overall": 1.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: INPUT contains a barcode -> NOT MET (no barcode in input). Level 4: without barcode, title, artist, format and at least one further attribute unambiguous in >= 2 sources -> NOT MET (format is Cassette in discogs:release/24165131, contradicting input format CD). Level 3: Unambiguous but backed by only one source -> NOT MET (format contradicts input: CD vs. Kassette). Level 2: Several editions fit the input -> NOT MET (no edition fits the input format CD). Level 1: No edition fits reliably, or the result contradicts the input (other barcode, other format, other artist/title), or not found -> MET (the returned edition discogs:release/24165131 is a Cassette/MC, which directly contradicts the requested format 'CD').",
+   "summary": "The selected edition is a cassette (MC6109), which directly contradicts the input format (CD), and no CD edition could be found.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles -> NOT MET (the J-card image is hosted on the same Discogs entry discogs:release/24165131, so they are not independent, and the tracks are from a cassette rather than the requested CD). Level 4: One complete source of the same edition, confirmed by a second one -> NOT MET (only one independent source family, and wrong format). Level 3: Only one source of the same edition, complete and plausible -> MET (if evaluating the chosen cassette edition discogs:release/24165131, its 10-track listing A1-A6, B1-B4 is complete and confirmed by the J-card scan).",
+   "summary": "The tracklist is complete and verified via the cassette J-card image from the single Discogs entry, though it belongs to a cassette rather than a CD.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: Database + independent primary source of the same edition -> NOT MET (the cover image is hosted on the same Discogs release entry, which the rubric under Level 3 explicitly classifies as non-independent). Level 4: Two independent database entries or database + specialised collector site -> NOT MET (only Discogs was found). Level 3: One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) -> MET (discogs:release/24165131 and the J-card image hosted on that same Discogs entry).",
+   "summary": "The result relies on a single Discogs database entry and a J-card scan hosted on that same entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction with input: Input specifies format 'CD', but the result provides a 'Kassette' (discogs:release/24165131, catno MC6109) with cassette positions A1-A6 and B1-B4.",
+  "Validation error: track artists / release artists list is empty across all tracks A1-B4."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 19.8,
+  "tokens_in": 15569,
+  "tokens_out": 1212,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

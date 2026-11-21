@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:39",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: INPUT contains barcode (MET: 888837168625), matches edition in >= 2 sources (NOT MET: input barcode 888837168625 belongs to Daft Punk - Random Access Memories per musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and discogs:release/4581879; result has barcode 4018939105976). Level 4: Barcode match in only one source (NOT MET: 0 sources match input barcode for Bushido) or without barcode (NOT MET: input has barcode). Level 3: Unambiguous (NOT MET: input barcode contradicts artist/title) or several editions share same tracklist (NOT MET: musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 have 20 tracks instead of 16). Level 2: Several editions fit and at least one has different tracklist (NOT MET: result directly contradicts the input barcode). Level 1: Result contradicts the input (other barcode) (MET: input EAN is 888837168625, result barcode is 4018939105976; additionally, even ignoring the barcode, competing CD editions with 16 vs. 20 tracks exist).",
+   "summary": "The result contradicts the input barcode (888837168625 belongs to Daft Punk, while the chosen Bushido release has barcode 4018939105976), and among Bushido CD releases there are competing editions with different track counts (16 vs 20 tracks).",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4581879",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (MET: musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288 both represent the 2003 Aggro Berlin CD with barcode 4018939105976 and agree on all 16 tracks, their order, and titles).",
+   "summary": "Two independent databases (MusicBrainz and Discogs) agree completely on the 16 tracks, their order, and titles for the selected 2003 edition.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (NOT MET: no cover/booklet images or manufacturer primary data were read). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (MET: musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288 are two independent database entries with slightly differing track durations and artist credit formatting, plus musik-sammler.de as collector site).",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) as well as a collector site (musik-sammler.de).",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Severe input contradiction: The input EAN 888837168625 belongs to 'Daft Punk - Random Access Memories', whereas the selected release has barcode 4018939105976.",
+  "Competing editions: When ignoring the wrong input barcode and matching by artist, title, and format (CD), there are multiple editions with different tracklists (e.g., the 2003 16-track edition vs. the 2004 20-track edition 'musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a' / 'discogs:release/3057907', plus a 2004 Demotape CD release 'discogs:release/855286' mentioned in Discogs notes).",
+  "Unsupported source claim: The source note for 'web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/' claims 'Bestätigung Trackliste und Gesamtzeit', but the tool output (--grep 'Track') only scraped track 1 ('Intro') and the total duration, not the full tracklist.",
+  "Validation error from FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 22.1,
+  "tokens_in": 12850,
+  "tokens_out": 1522,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

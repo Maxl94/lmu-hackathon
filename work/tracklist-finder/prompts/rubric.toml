@@ -1,0 +1,51 @@
+# Rating rubric: one source for the judge prompt, the judge's answer schema and the UI.
+# Each level describes observable evidence. The judge picks the highest level whose conditions are ALL met.
+# "by": judge = rated by the reviewer model, code = computed (thresholds live in src/tracklist/scoring.py).
+
+[edition]
+name = "Edition"
+question = "Is it exactly the edition the input refers to?"
+by = "judge"
+weight = 0.50
+[edition.levels]
+"5" = "The INPUT contains a barcode, and it (after check-digit correction if needed) matches exactly this edition in >= 2 independent sources; format and artist match; no other edition with the same barcode and a different tracklist."
+"4" = "Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute (label, cat. no., year, country, cover) unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist."
+"3" = "Unambiguous but backed by only one source (no competing edition known) - or several editions fit but ALL share the same tracklist (e.g. repressings, country editions): the choice does not matter."
+"2" = "Several editions fit the input and at least one of them has a DIFFERENT tracklist (other track count, other tracks, other artist with the same title, series part 1 vs 2); the choice rests on weak signals."
+"1" = "No edition fits reliably, or the result contradicts the input (other barcode, other format, other artist/title), or not found."
+
+[tracklist]
+name = "Tracklist"
+question = "Are count, order and titles right?"
+by = "judge"
+weight = 0.35
+[tracklist.levels]
+"5" = ">= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)."
+"4" = "One complete source of the same edition, confirmed by a second one except for small explained deviations (bonus track, spelling, split tracks)."
+"3" = "Only one source of the same edition, complete and plausible."
+"2" = "Tracklist (partly) taken from another edition, or gaps/unexplained deviations."
+"1" = "Sources contradict each other without explanation, or the tracklist is incomplete/unsupported."
+
+[durations]
+name = "Durations"
+question = "How well are the durations backed? (additional information - does not change the traffic light)"
+by = "code"
+weight = 0.0
+[durations.levels]
+"5" = ">= 90 % of tracks: duration confirmed by >= 2 source families within 2 s."
+"4" = ">= 60 % of tracks confirmed by >= 2 sources, the rest from one source."
+"3" = ">= 90 % of tracks have a duration, mostly from one source only."
+"2" = "50-90 % of tracks have a duration."
+"1" = "Less than 50 % of tracks have a duration."
+
+[sources]
+name = "Sources"
+question = "How good and independent are the sources?"
+by = "judge"
+weight = 0.15
+[sources.levels]
+"5" = "Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition."
+"4" = "Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de)."
+"3" = "One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry)."
+"2" = "Only collector, shop or marketplace pages."
+"1" = "Only web search, forums or unsupported statements."

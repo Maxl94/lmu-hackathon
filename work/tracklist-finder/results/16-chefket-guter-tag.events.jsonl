@@ -1,0 +1,39 @@
+{"ts": 1795186326.09, "event": "run_start", "input": {"title": "GUTER TAG", "artist": "CHEFKET"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186326.09, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186326.09, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186326.09, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186326.09, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186341.36, "event": "tool_start", "tool": "tl-mb", "args": "search --title GUTER TAG --artist CHEFKET"}
+{"ts": 1795186341.36, "event": "tool_end", "tool": "tl-mb", "args": "search --title GUTER TAG --artist CHEFKET", "seconds": 0.0, "ok": true}
+{"ts": 1795186346.9, "event": "tool_start", "tool": "tl-mb", "args": "release ad68439b-6423-4a79-a543-f68edacf5363"}
+{"ts": 1795186346.91, "event": "tool_end", "tool": "tl-mb", "args": "release ad68439b-6423-4a79-a543-f68edacf5363", "seconds": 0.0, "ok": true}
+{"ts": 1795186347.03, "event": "tool_start", "tool": "tl-gtin", "args": "4018939256937"}
+{"ts": 1795186347.03, "event": "tool_end", "tool": "tl-gtin", "args": "4018939256937", "seconds": 0.0, "ok": true}
+{"ts": 1795186347.18, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4018939256937"}
+{"ts": 1795186347.18, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4018939256937", "seconds": 0.0, "ok": true}
+{"ts": 1795186348.82, "event": "tool_start", "tool": "tl-discogs", "args": "release 5204273"}
+{"ts": 1795186348.82, "event": "tool_end", "tool": "tl-discogs", "args": "release 5204273", "seconds": 0.0, "ok": true}
+{"ts": 1795186348.94, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Guter Tag --artist Chefket"}
+{"ts": 1795186349.38, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Guter Tag --artist Chefket", "seconds": 0.4, "ok": true}
+{"ts": 1795186353.6, "event": "tool_start", "tool": "tl-mb", "args": "group 274fb1c6-d2f0-4ccc-8a74-d547a79e1b97"}
+{"ts": 1795186353.61, "event": "tool_end", "tool": "tl-mb", "args": "group 274fb1c6-d2f0-4ccc-8a74-d547a79e1b97", "seconds": 0.0, "ok": true}
+{"ts": 1795186353.73, "event": "tool_start", "tool": "tl-mb", "args": "release 81e77c20-e36b-473b-b42a-f45fe43e7c4a"}
+{"ts": 1795186354.73, "event": "tool_end", "tool": "tl-mb", "args": "release 81e77c20-e36b-473b-b42a-f45fe43e7c4a", "seconds": 1.0, "ok": true}
+{"ts": 1795186354.88, "event": "tool_start", "tool": "tl-discogs", "args": "versions"}
+{"ts": 1795186354.89, "event": "tool_end", "tool": "tl-discogs", "args": "versions", "seconds": 0.0, "ok": false}
+{"ts": 1795186357.78, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/410ccfLof5dOwaCudXuW7wikQ_JYAw-eGhcBShnY0k0/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTUyMDQyNzMtMTUwNTU1Mjg3Ny04ODUyLm1wbw.jpeg --context back cover of Chefket Guter Tag LP, tracklist with positions and durations"}
+{"ts": 1795186359.67, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/410ccfLof5dOwaCudXuW7wikQ_JYAw-eGhcBShnY0k0/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTUyMDQyNzMtMTUwNTU1Mjg3Ny04ODUyLm1wbw.jpeg --context back cover of Chefket Guter Tag LP, tracklist with positions and durations", "seconds": 1.9, "ok": false}
+{"ts": 1795186362.93, "event": "tool_start", "tool": "tl-mb", "args": "release eef84b47-74b8-4b6d-a6c0-131173f5c577"}
+{"ts": 1795186362.93, "event": "tool_end", "tool": "tl-mb", "args": "release eef84b47-74b8-4b6d-a6c0-131173f5c577", "seconds": 0.0, "ok": true}
+{"ts": 1795186363.06, "event": "tool_start", "tool": "tl-itunes", "args": "search Chefket Guter Tag"}
+{"ts": 1795186363.06, "event": "tool_end", "tool": "tl-itunes", "args": "search Chefket Guter Tag", "seconds": 0.0, "ok": true}
+{"ts": 1795186363.2, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Chefket --title Guter Tag"}
+{"ts": 1795186363.2, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Chefket --title Guter Tag", "seconds": 0.0, "ok": true}
+{"ts": 1795186406.13, "event": "tool_start", "tool": "tl-search", "args": "Chefket Guter Tag CC001 Can Can Recordings"}
+{"ts": 1795186456.37, "event": "tool_end", "tool": "tl-search", "args": "Chefket Guter Tag CC001 Can Can Recordings", "seconds": 50.2, "ok": true}
+{"ts": 1795186872.57, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 12, "steps": 13}
+{"ts": 1795186872.57, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186875.01, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186875.01, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186889.13, "event": "phase_end", "phase": "judge", "ok": true, "level": "rot", "overall": 3.45, "error": null}
+{"ts": 1795186889.13, "event": "run_end", "valid": true, "status": "found", "level": "rot", "overall": 3.45, "tracks": 13, "wall_s": 546.5, "judge_s": 14.1, "cost_usd": 0.0101, "mode": "agent", "errors": []}

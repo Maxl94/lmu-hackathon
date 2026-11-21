@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:29",
+ "overall": 3.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5: The INPUT contains a barcode (NOT MET). 4: Barcode match in only one source or without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist (MET: Title, artist, format match. Additional attributes label 'Fred Kersten KG' and cat. no. 'MC 6109' are present in the Discogs database entry and confirmed by images of the J-card/label in the evidence (discogs:release/24165131, images). No other edition known for this specific artist/title/format).",
+   "summary": "The edition is uniquely identified by title, artist, format, label, and catalogue number, backed by a database entry and supporting images of the release.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/RkJSxZMfJe5aqx8T4JhNx85QVeO4lwA57sDfEm1rXzI/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTQtOTgxNS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (NOT MET). 4: One complete source of the same edition, confirmed by a second one except for small explained deviations (MET: The tracklist is fully supported by the Discogs entry and confirmed by multiple high-resolution images of the J-card showing the full contents).",
+   "summary": "The tracklist is confirmed as complete and accurate based on the primary database entry and visual inspection of J-card photographs.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg",
+    "image:https://i.discogs.com/Fkgjp-amgHXM7fspgCj_uyCoZMDY0Lrlv6BfTUy06_g/rs:fit/g:sm/q:90/h:600/w:361/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNjY4NS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source (MET: Discogs database + multiple images of the actual physical J-card and labels verifying the release details).",
+   "summary": "The research provides both a reliable database record and photographic evidence of the physical item (J-card/labels).",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/RkJSxZMfJe5aqx8T4JhNx85QVeO4lwA57sDfEm1rXzI/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTQtOTgxNS5qcGVn.jpeg",
+    "image:https://i.discogs.com/sXl2KgwPKEggkG-YEYn9N0aX4jRLOx_hds7G7AH6nnw/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNDI2MS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The validation warning regarding 'artists is empty' is noted, but the artist 'Musikverein Lohnde 1925 e. V.' is correctly identified in the metadata fields."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 4.8,
+  "tokens_in": 13227,
+  "tokens_out": 1194,
+  "cost_usd": 0.0051,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

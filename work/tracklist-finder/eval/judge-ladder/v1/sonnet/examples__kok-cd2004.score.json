@@ -1,0 +1,99 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:31",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 (Prüfziffer gültig) trifft exakt dieselbe Ausgabe 'Exclusive 2004 Edition' in MusicBrainz (Schritt 2) und Discogs (Schritt 3); musik-sammler.de (Schritt 14) nennt dieselbe EAN, und die CAA-Rückseite zeigt dieselbe Katalognummer und denselben Barcode. Format und Artist passen, andere Ausgaben haben andere Barcodes und Tracklisten.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs, musik-sammler.de und die gedruckte Rückseite liefern dieselben 20 Tracks in gleicher Reihenfolge; abweichend sind nur Schreibweisen ('Pitbull' vs. 'Pittbull', 'Vack You' ohne '!') und Dauern um 1–3 s. Die Titelkonflikte sind erklärt.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 85% von ≥ 2 Quellen bestätigt, 3 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus Sammlerseite musik-sammler.de und eine gelesene Cover-Rückseite (CAA, per Vision). Die Rückseite ist eine echte Primärquelle mit zweimal konsistenter Lesung. MusicBrainz und Discogs sind teilweise voneinander abhängig. Die Dauern sind bei der Rückseite nicht belegt, und eine Vision-Lesung ist nicht so stark wie ein direkt gesehenes Booklet.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Agent konnte das Bild nicht selbst ansehen (Schritt 10); die Rückseite wurde nur per tl-vision gelesen, bei Track 20 mit Vermerk '[unsicher]'.",
+  "Die Dauern sind nicht auf dem Cover gedruckt; die Dauer-Konflikte (Tracks 10, 15, 16) wurden durch Mehrheitsentscheid gelöst, nicht durch eine Primärquelle.",
+  "Die Confidence ist mit 0.9 hoch angesetzt, obwohl der Validator eine Warnung zu offenen Konflikten ausgab.",
+  "Das Ergebnis nennt 'Vack You!' mit Frank White als Artist, wobei hitparade.ch bei einer anderen Ausgabe 'Fler' nennt; für diese Ausgabe ist das jedoch nicht widerlegt.",
+  "Die musik-sammler.de-Dauern weichen bei Track 7 (2:44) und Track 19 (3:56) leicht von den übernommenen Werten ab; das ist im Ergebnis nicht als Konflikt geführt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 9.9,
+  "tokens_in": 41543,
+  "tokens_out": 1355,
+  "cost_usd": 0.09664,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

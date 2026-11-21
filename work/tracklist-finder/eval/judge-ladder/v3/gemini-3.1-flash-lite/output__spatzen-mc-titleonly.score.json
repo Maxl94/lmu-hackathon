@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:28",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: The input contains no barcode, but title, artist, format match and are unambiguous across multiple independent sources (MusicBrainz, Discogs, official Kastelruther Spatzen website) for the cassette release (cat. no. 221 190). No competing editions with a different tracklist exist. Level 4: Conditions of level 5 regarding barcode are not met (none provided), but all conditions for level 4 (title, artist, format, label, cat. no., year, country, cover confirmed) are MET.",
+   "summary": "The edition is unambiguous and verified by multiple sources, though the input lacked a barcode to qualify for level 5.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: Multiple independent sources (MusicBrainz, Discogs, official website, CD-Lexikon, Deezer) agree on the 12-track order and titles. The minor duration conflict for track A6 is explicitly addressed by the agent using three sources to confirm the longer duration. Conditions MET.",
+   "summary": "The tracklist is complete, ordered correctly, and confirmed across all consulted sources.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "https://kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "https://www.cd-lexikon.de/album_kastelruther-spatzen-ich-sags-dir-mit-musik.htm",
+    "https://www.deezer.com/de/album/231158"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: The research uses two major, independent databases (MusicBrainz, Discogs) alongside the artist's official website and a specialized database (CD-Lexikon). These qualify as independent primary sources. Conditions MET.",
+   "summary": "The sources are high-quality, diverse, and independent, providing robust confirmation.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "https://kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "https://www.cd-lexikon.de/album_kastelruther-spatzen-ich-sags-dir-mit-musik.htm"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent's validation warnings noted 'artists is empty'. The result claims artist 'Kastelruther Spatzen', which is correct and present in sources, but the agent failed to map this correctly in its internal representation for every track."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 3.5,
+  "tokens_in": 16230,
+  "tokens_out": 806,
+  "cost_usd": 0.00527,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

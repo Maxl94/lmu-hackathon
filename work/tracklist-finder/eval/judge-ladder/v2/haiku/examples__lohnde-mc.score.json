@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:31",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: barcode - no barcode exists (GEMA-only), NOT MET. Level 4: without barcode, title, artist, format, plus label/catno/country are unambiguous in discogs (24165131) and the j-card/label images (image sources) - title/artist/format MET; label Fred Kersten KG and catno MC 6109 corroborated by discogs and label photos (tl-vision) - MET; but a competing edition Folge 2 (discogs:release/24154076) with the same title and a different tracklist exists and fits the input title (artist credit differs: Swinging Seelze, while the cover names Blasorchester des Musikvereins Lohnde). The rubric says a fitting competing edition with a different tracklist caps the rating at 2; Folge 2 is excluded by the artist credit matching the input 'Musikverein Lohnde' for Folge 1, which is a reasonable but not airtight exclusion. Level 4 requires no other edition fitting the input with a different tracklist - Folge 2 arguably fits the title and the Blasorchester link, so NOT cleanly MET. Level 3 not applicable given competing edition; level 2 applies since Folge 2 with different tracklist is a plausible competitor and the choice rests on the artist-credit signal.",
+   "summary": "Folge 1 is the best fit by artist credit and catalogue data, but Folge 2 (same title, Lohnde cassette, different 10-track list) is a competing edition, so the choice rests on a weak credit signal.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "image:...NTctNjE4OC5qcGVn (j-card back)",
+    "image:...NTQtOTgxNS5qcGVn (label side 1)",
+    "tl-discogs search output (2 hits)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: two independent sources agreeing on count, order and titles of the same edition - Discogs release 24165131 and j-card back image (tl-vision readable: True, 6+4 titles) agree on all 10 titles and order - MET. But the image source is a secondary image of the same Discogs entry as far as the evidence shows, and the image-based reading was done with tl-vision; the two sources are plausibly independent (printed card vs database). Level 5 requires >=2 independent sources; the card image is arguably independent. Rating 5 would be generous given the tracklist of the second source is itself derived from the database listing shown in the same entry; I assess level 4: one complete source confirmed by a second, with no deviations.",
+   "summary": "Ten titles and their order are confirmed by the Discogs listing and the legible printed back card, though the printed card is the only second source and durations are absent.",
+   "evidence": [
+    "discogs:release/24165131 (tl-discogs release)",
+    "image:...NTctNjE4OC5qcGVn (tl-vision readable: True, Seite 1 6 Titel, Seite 2 4 Titel)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus independent primary source (read cover/label print) of the same edition - discogs database entry plus j-card back and label photos read via tl-vision - MET for the primary source. However the label/cover images are hosted on the same Discogs entry, which weakens independence. Level 4 is met at least by database plus specialised collector site? No collector site (musik-sammler.de returned nothing). So level 5 is met only in the lenient reading; I rate level 3: one good database (Discogs) with images from the same database entry, which may have been copied from it.",
+   "summary": "Effectively one database entry (Discogs) with its own images; no independent collector or shop source for the edition was found.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:...NTctNjE4OC5qcGVn",
+    "image:...NTQtOTgxNS5qcGVn",
+    "image:...NTEtNDI2MS5qcGVn",
+    "tl-search outputs (no collector hits)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Year 1991 is derived from the j-card phrase 'im 67st. Jahr seines Bestehens' and the 4-digit postcode, not from a printed date; it is presented as release year in the JSON",
+  "Discogs listing and the agent's tl-vision readings are not truly independent: the printed card images are attached to the same Discogs entry",
+  "No durations for any track; total_duration_s null and all 10 duration_missing flags are correct",
+  "Agent claims 'Nur diese zwei Discogs-Releases existieren weltweit' - not supported by the evidence, only Discogs search and a few web searches were run",
+  "Competing edition Folge 2 (24154076) has a different tracklist (Hello Dolly etc.); the agent excluded it by artist credit, which the evidence supports only partially since the cover names Blasorchester des Musikvereins Lohnde",
+  "Agent's reasoning says 'Cover nennt Blasorchester des Musikvereins Lohnde' for Folge 2, so the artist link to the input is ambiguous, yet the result keeps edition confidence 0.7",
+  "Source note for tracklist claims the j-card back printing is 'ohne Nummerierung'; accepted as consistent with the tl-vision output"
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.8,
+  "tokens_in": 37462,
+  "tokens_out": 1720,
+  "cost_usd": 0.00461,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

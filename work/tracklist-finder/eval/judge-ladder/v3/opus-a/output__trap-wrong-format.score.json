@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:02",
+ "overall": 1.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 2",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: input has no barcode -> NOT MET. Level 4: title/artist match, but format CD NOT MET (only cassette MC6109 found, discogs:release/24165131); additionally competing edition Folge 2 (discogs:release/24154076) with same base title and different tracklist -> NOT MET. Level 3: not unambiguous (format conflict, Folge 1 vs Folge 2) -> NOT MET. Level 2: several editions fit the title (Folge 1 / Folge 2, different tracklists) -> would apply, but Level 1 condition: result contradicts the input format (Kassette instead of CD; FACTS format_match=false) -> the result contradicts the input. Since a format contradiction is explicitly level 1, rating stops at 1.",
+   "summary": "The result is a cassette (MC6109) whereas the input asks for a CD; no CD edition was found, so the result contradicts the input format.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "bin/tl-discogs search --format CD (0 hits)",
+    "bin/tl-mb search (0 releases)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "Level 5: >=2 independent sources of the same edition agree - the Discogs entry and the J-card image read via tl-vision agree on 10 tracks, order and titles; however the image is hosted on the same Discogs entry (not fully independent), and it is the cassette edition, not the requested CD -> NOT MET. Level 4: one complete source confirmed by a second (image) for the cassette -> would be met for the cassette, but the tracklist does not belong to the requested edition (CD) -> NOT MET. Level 3: only one source of the same edition -> NOT MET, since no source of the CD edition exists. Level 2: tracklist taken from another edition (cassette instead of CD) -> MET.",
+   "summary": "The tracklist is consistently backed by Discogs and the J-card, but it comes from the cassette rather than the requested CD edition.",
+   "evidence": [
+    "bin/tl-discogs release 24165131",
+    "bin/tl-vision back-cover image"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source - the J-card image is a primary print but is hosted on the same Discogs entry, so it is not independent; it also belongs to the cassette -> NOT MET. Level 4: two independent databases or a collector site -> MusicBrainz 0 results, musik-sammler not found -> NOT MET. Level 3: one good database (Discogs) plus images from the same entry -> MET.",
+   "summary": "Only Discogs plus cover images from the same Discogs entry; no independent second database.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-mb search (0)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction: input CD, result cassette MC6109 (FACTS format_match=false).",
+  "Competing release 'Blasmusik Aus Lohnde (Folge 2)' (discogs:release/24154076) shares the base title and has a different tracklist; it is excluded only by its differing artist credit (Swinging Seelze), although it is plausibly also connected to the Lohnde association.",
+  "A CD edition (e.g. a reissue) cannot be ruled out; the absence of hits does not prove that none exists.",
+  "No durations at all for tracks A1-B4."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 11.9,
+  "tokens_in": 22124,
+  "tokens_out": 1132,
+  "cost_usd": 0.11114,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

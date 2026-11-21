@@ -1,0 +1,120 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:41",
+ "overall": 3.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "tracklist only level 2"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode in input? No (input has no barcode) - NOT MET. Level 4: without barcode, title/artist/format/label/catno/year unambiguous in >=2 sources (MusicBrainz 3e181b19 and Discogs 16199441 both show Vinyl, FETCH003, Fetch Happened, 2020 UK/GB) - MET; but the competing Discogs test pressing 16061876 shares tracklist presumably, and the competing digital MusicBrainz 8091316c has 10 different tracks (different sequence, no Backwater Blues/Blueprint) - that is a digital edition and is excluded by the physical-first rule, so it does not count as a competing physical edition. Discogs 16061876 is a test pressing with same catno, not verified tracklist; no evidence it differs. Condition 'no other edition fitting the input has a different tracklist' is met for physical editions per evidence. Level 4 MET.",
+   "summary": "Without barcode, the physical 12\" LP FETCH003 (2020, UK, Fetch Happened) is confirmed by MusicBrainz and Discogs, and the only competing physical item (test pressing) is not shown to have a different tracklist, though the digital release is excluded.",
+   "evidence": [
+    "musicbrainz:release/3e181b19-08b7-484d-a8e6-51cfc31e7e34",
+    "discogs:release/16199441",
+    "discogs:release/16061876",
+    "musicbrainz:release/8091316c-3dd0-4e5e-ae26-564c0f1ae131"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "Level 5: >=2 independent sources agree on count, order and titles? MusicBrainz and Discogs agree on count (11) and titles, but disagree on B3/B4 order; the back-cover image (vision read, side b: Backwater Blues, Little Heaven Little Blue, Shadow Pass, Harvest, Blueprint, Rain) agrees with MusicBrainz but the vision output lists side b Shadow Pass before Harvest only in the earlier read; the image read is one source. The Bandcamp text listing (web) and Discogs say Harvest then Shadow Pass - so the order is contested among sources: NOT MET. Level 4: one complete source confirmed by a second except small explained deviations - the B3/B4 swap is a sequence deviation, not a small explained one; NOT MET cleanly. Level 3: one source complete and plausible - MusicBrainz complete with durations, but the order is contested. Level 2: gaps/unexplained deviations - the B3/B4 conflict is explained by the agent via the image, but the image vision output was from a model call and the tool output in the transcript shows side b order Shadow Pass then Harvest only in the first vision output which printed 'side b Shadow Pass' before 'side b Harvest' - consistent with MB. The swap is resolved by one image read; it remains a contested order. Rating 2 due to unresolved B3/B4 order conflict across sources.",
+   "summary": "Count and titles agree across sources, but the order of B3 and B4 conflicts between MusicBrainz/image and Discogs/Bandcamp text, and the resolution rests on a single vision read of the back cover.",
+   "evidence": [
+    "musicbrainz:release/3e181b19-08b7-484d-a8e6-51cfc31e7e34",
+    "discogs:release/16199441",
+    "image:https://f4.bcbits.com/img/0029712290_10.jpg",
+    "web:https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print) of same edition: back cover image read via tl-vision is a primary-ish source of the LP, and MusicBrainz + Discogs are databases - MET for database + image of the same edition. However the image read was partly unreliable (vision output of the image and the side-b order is consistent with MB but the Discogs image fetch failed with HTTP 403). The image is an official Bandcamp package photo, which is a label/manufacturer product photo. Level 5 plausibly MET.",
+   "summary": "Two databases (MusicBrainz and Discogs) plus a read back-cover image of the same LP provide database plus primary-source coverage.",
+   "evidence": [
+    "musicbrainz:release/3e181b19-08b7-484d-a8e6-51cfc31e7e34",
+    "discogs:release/16199441",
+    "image:https://f4.bcbits.com/img/0029712290_10.jpg",
+    "web:https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs release 16199441 lists B3 Harvest / B4 Shadow Pass and the Bandcamp text listing matches Discogs; the agent resolved this via one back-cover vision read, which is a single read not independently verified; tracklist order is contested.",
+  "Sources rating 5 is generous: the back-cover image is a vision-model reading of a Bandcamp package photo, the Discogs image fetches failed (HTTP 403), and the Bandcamp page itself is a shop page; a 4 would be more defensible.",
+  "Durations come only from MusicBrainz (single source); Discogs has none, so durations are unconfirmed.",
+  "Result states 'Discogs and the label's text listing swapped the two tracks', but the Bandcamp text listing is from the artist's shop page, which is a shop source, not independent primary evidence of the LP.",
+  "Result claims the vinyl was 'limited to 250 copies'; supported by MusicBrainz and Discogs notes, fine.",
+  "Agent's 'confidence 0.85' is not justified given the unresolved B3/B4 conflict and missing barcode in input.",
+  "Competing Discogs test pressing 16061876 was dismissed as not retail without evidence of its tracklist; its tracklist was not checked."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 11,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "simonewhite1.bandcamp.com"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "shop"
+  ],
+  "conflicts": 3,
+  "alternatives": 3,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 10.9,
+  "tokens_in": 20747,
+  "tokens_out": 1970,
+  "cost_usd": 0.00306,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 11,
+   "of": 11
+  }
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:35",
+ "overall": 1.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 1 – richtige Ausgabe nicht gesichert",
+  "Trackliste nur Stufe 2",
+  "weniger als die Hälfte der Dauern belegt",
+  "Format im Ergebnis passt nicht zur Eingabe"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 1,
+   "begruendung": "Die Eingabe verlangt eine CD, gefunden wurde nur die Kassette MC6109 (discogs:release/24165131). Eine CD-Ausgabe ist in keiner Quelle belegt. Laut Rubrik ist ein abweichendes Format ein Widerspruch zur Eingabe, daher Stufe 1.",
+   "belege": [
+    "discogs:release/24165131",
+    "tl-discogs search --format CD (0 hits)",
+    "tl-mb search (0 Releases)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 2,
+   "begruendung": "Discogs und die J-Card-Rückseite (Vision) stimmen für die Kassette in allen 10 Titeln und in der Reihenfolge (A1–A6, B1–B4) überein. Die Trackliste stammt jedoch von einem anderen Format als dem angefragten (MC statt CD). Ob eine CD dieselbe Trackliste hätte, ist nicht belegt.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt einen Datenbankeintrag (Discogs) und eine gelesene J-Card-Rückseite als Primärquelle. Das Bild stammt aber vom selben Discogs-Eintrag und ist damit nur eingeschränkt unabhängig. Im Zweifel daher Stufe 4.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Formatwiderspruch: Die Eingabe nennt CD, das Ergebnis ist eine Kassette (MC6109). Eine CD-Ausgabe ist nirgends belegt.",
+  "Die Trackliste gilt nur für die Kassette; die Übertragung auf eine möglicherweise existierende CD ist unbelegt.",
+  "Das Coverbild stammt aus demselben Discogs-Eintrag und ist damit keine vollständig unabhängige Quelle.",
+  "Es gibt keine Spieldauern (dur_share 0)."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 11.7,
+  "tokens_in": 20261,
+  "tokens_out": 1098,
+  "cost_usd": 0.103,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

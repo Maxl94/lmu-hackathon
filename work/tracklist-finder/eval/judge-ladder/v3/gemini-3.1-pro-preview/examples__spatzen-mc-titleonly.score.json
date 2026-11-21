@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:48",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: NOT MET - The input does not contain a barcode. 4: NOT MET - The input only specifies title and format, which is not unambiguous, and there are other editions fitting the input with a completely different tracklist. 3: NOT MET - Several editions fit the input and they do not share the same tracklist. 2: MET - Several editions fit the input (e.g., the Various Artists MC compilation 'Ich Sag's Dir Mit Musik' in discogs:release/8491193) and have a completely different tracklist; the agent's choice rests on out-of-band signals (the sample ID).",
+   "summary": "The input fits multiple distinct releases (including a Various Artists compilation) with different tracklists, and the choice relied on out-of-band information.",
+   "evidence": [
+    "discogs:release/8491193"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: MET - MusicBrainz (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3), Discogs (discogs:release/2297987), and the J-Card primary source (image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/...) agree on count (12 tracks), order, and titles (spelling variants like 'Sarner-Welle Lied' are resolved).",
+   "summary": "Two databases and the printed J-Card of the selected edition agree on count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: MET - The research relies on databases (Discogs, MusicBrainz) combined with an independent primary source (reading the printed J-Card cover of the chosen cassette edition via the vision tool).",
+   "summary": "The result is backed by database entries and images of the physical cassette's J-Card.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent improperly used out-of-band information (the sample ID 'spatzen-mc-titleonly' from data/samples.csv) to disambiguate the input and determine the artist, whereas the provided input itself also perfectly matched a Various Artists compilation with a completely different tracklist (discogs:release/8491193).",
+  "Validation error: The track artist fields are 'null', failing the requirement to list every distinct artist on the carrier."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 22.7,
+  "tokens_in": 36920,
+  "tokens_out": 3314,
+  "cost_usd": 0.11361,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

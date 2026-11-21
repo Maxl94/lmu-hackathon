@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:31",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: Barcode 4019593960000 matches exactly this edition in MusicBrainz (Source 2) and Discogs (Source 3); format CD, artist Bushido, and title match; no other edition with the same barcode has a different tracklist (confirmed in logic 21, 22).",
+   "summary": "The edition is uniquely identified by its barcode in two independent database sources, with consistent metadata.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: The tracklist (20 tracks) is consistent across MusicBrainz (Source 4), Discogs (Source 5), and musik-sammler.de (Source 14); the CAA image (Source 6) confirms the order and titles (spelling variants like 'Pittbull' are explained).",
+   "summary": "The tracklist is complete, ordered correctly, and cross-confirmed by multiple independent sources.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Includes multiple database entries (MusicBrainz, Discogs) and a specialised collector site (musik-sammler.de), plus a primary source (verified physical cover imagery via CAA).",
+   "summary": "Highly reliable and diverse source set combining independent databases, a collector site, and physical cover documentation.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: 'artists is empty' in result; agent should list featured artists on tracks 3, 8, 9, 12, 13, 15."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 3.5,
+  "tokens_in": 35243,
+  "tokens_out": 805,
+  "cost_usd": 0.01002,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

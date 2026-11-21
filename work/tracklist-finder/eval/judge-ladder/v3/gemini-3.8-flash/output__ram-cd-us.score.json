@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:11",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: The INPUT contains a barcode ('888837168625'), which matches this edition exactly in >= 2 independent sources (MusicBrainz f6758afb-ecff-410e-8979-b131cfa3c6d3 and Discogs 4729785); format (CD) and artist (Daft Punk) match; no other edition with the same barcode and a different tracklist exists: MET.",
+   "summary": "The barcode matches the standard CD edition across both MusicBrainz and Discogs with identical 13-track content.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. MusicBrainz f6758afb-ecff-410e-8979-b131cfa3c6d3 and Discogs 4729785 agree completely on all 13 tracks, order, and titles, further corroborated by the back cover image reading.",
+   "summary": "Both independent database sources and the primary back cover scan agree completely on track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Discogs release 4729785 and MusicBrainz release f6758afb-ecff-410e-8979-b131cfa3c6d3 are independent databases, and bin/tl-vision verified the back cover scan confirming the tracklist and barcode print.",
+   "summary": "Independent databases (Discogs and MusicBrainz) are supplemented by visual inspection of the CD back cover print.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent omitted the top-level 'artists' list in the release object as noted in validation errors.",
+  "Tracks without guest features have an empty artist string instead of Daft Punk."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 24.1,
+  "tokens_in": 10711,
+  "tokens_out": 2509,
+  "cost_usd": 0.01919,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

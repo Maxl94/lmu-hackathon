@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:17",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: 'The INPUT contains a barcode' -> NOT MET (input_has_barcode is false; input only has title and format). Level 4: 'Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist' -> NOT MET (input does not specify an artist, and competing MC editions with the exact same title 'Ich sag's dir mit Musik' by Various Artists exist in the evidence, namely discogs:release/8491193 and discogs:release/7800803, which have completely different tracklists). Level 3: 'Unambiguous but backed by only one source (no competing edition known) - or several editions fit but ALL share the same tracklist' -> NOT MET (competing MC editions fitting the input have different tracklists). Level 2: 'Several editions fit the input and at least one of them has a DIFFERENT tracklist (other track count, other tracks, other artist with the same title, series part 1 vs 2); the choice rests on weak signals.' -> MET (the input only provides title 'Ich sag's dir mit Musik' and format 'MC'; besides the Kastelruther Spatzen MC editions, discogs:release/8491193 is a 5xMC box set titled 'Ich Sag's Dir Mit Musik' by Various Artists with a different tracklist, and the agent chose Kastelruther Spatzen based on the internal sample ID 'spatzen-mc-titleonly' and being a single-artist album).",
+   "summary": "Because the input only specifies title and format ('MC'), competing cassette releases with the same title by Various Artists (e.g., discogs:release/8491193) and different tracklists cannot be ruled out by the input alone.",
+   "evidence": [
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/8491193",
+    "discogs:release/7800803"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3, discogs:release/2297987, and the J-card images read via tl-vision in steps 11, 28, and 30 all agree on the 12 tracks A1-B6 in order and title, with only minor hyphenation/capitalization variants like 'Sarner-Welle Lied' vs 'Sarner-Welle-Lied').",
+   "summary": "MusicBrainz, Discogs, and the read J-card images of this exact cassette edition agree completely on track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition.' -> MET (two independent databases, MusicBrainz e0d210c6-ca75-3482-bff4-f33715a070c3 and Discogs 2297987, are supplemented by primary J-card back and inner cover scans of the exact edition read with tl-vision in steps 11, 28, and 30).",
+   "summary": "The result is backed by two database entries (MusicBrainz and Discogs) as well as readable primary J-card images of the exact cassette edition showing the barcode, catalog number, tracklist, and printed durations.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "In step 2, the agent relies on an internal sample ID ('spatzen-mc-titleonly') not present in the official INPUT fields to disambiguate between Kastelruther Spatzen and the Various Artists MC releases with the same title.",
+  "For tracks A3, A5, B1, B2, B3, B4, B5, and B6, the agent selected the MusicBrainz durations (e.g. B1 = 152s, B4 = 138s) rather than the durations printed on the J-card and listed on Discogs (e.g. B1 = 150s, B4 = 136s), while still listing Discogs and the J-card image in duration_sources."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 25.0,
+  "tokens_in": 37746,
+  "tokens_out": 1655,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

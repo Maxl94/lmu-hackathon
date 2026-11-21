@@ -1,0 +1,91 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:32",
+ "overall": 4.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5: The INPUT contains a title and format without barcode. We checked levels 4 down to 3: Title, artist, format and multiple attributes (label Koch-Records Special, catno D 221 190, year 1985, country AT, J-card images) are unambiguous across >= 2 independent sources (MusicBrainz e0d210c6-ca75-3482-bff4-f33715a070c3, Discogs 2297987), and no competing edition with a different tracklist exists. ALL conditions met.",
+   "summary": "Unambiguous edition supported by multiple independent sources with identical tracklists.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources (MusicBrainz, Discogs, and J-Card images) agree on track count (12), order, and titles.",
+   "summary": "Count, order, and titles are fully confirmed by multiple independent sources.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database entries (MusicBrainz, Discogs) combined with primary source data (J-Card scans read via vision tool confirming catalogue number, barcode, and track titles). ALL conditions met.",
+   "summary": "Reliable database entries combined with primary J-Card image verification.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.1,
+  "tokens_in": 36930,
+  "tokens_out": 346,
+  "cost_usd": 0.01194,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

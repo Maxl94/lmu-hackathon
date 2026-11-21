@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:38",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: barcode 888837168618 matches this edition in MB and Discogs, but the input has no barcode, so the level is not met. Level 4: no barcode in input; title, artist and format match, and label/catno/year agree in two sources, but other fitting editions with a different tracklist exist (10th Anniversary 3×LP with 22 tracks, MB 4375c18f; 2014 box set with 34 tracks, MB fc1eb6d6; Drumless 2×LP, discogs 28924120), and the input does not rule them out, so NOT MET. Level 3: not met because competing editions with different tracklists exist. Level 2: MET. Several editions fit the input and at least one has a different tracklist; the choice of the standard 2×LP rests on the agent's inference that the input means the standard album.",
+   "summary": "Several vinyl editions fit the unqualified input and some have different tracklists (22-track 10th Anniversary, 34-track box set), so the choice of the standard 2×LP rests on weak signals and cannot exceed level 2.",
+   "evidence": [
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7",
+    "discogs:release/28924120",
+    "discogs:release/4570366",
+    "discogs:release/9216088",
+    "tl-mb search output",
+    "tl-discogs search output"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MB release 4867ceba and Discogs release 4570366 agree on count (13), order (A1–D4) and titles, with only spelling-level identity; both are independent entries, so MET. Durations differ by up to 2 s (C2 367 vs 369, D4 381 vs 383), which does not affect count, order or titles.",
+   "summary": "Two independent database entries agree exactly on count, order and all 13 titles of the same edition.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 tl-mb release output",
+    "discogs:release/4570366 tl-discogs release output"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no primary source (cover, booklet, label print) was read; only database entries and the Discogs runout note were available, so NOT MET. Level 4: two independent database entries (MusicBrainz and Discogs) with recognisably differing details (ISRCs, runout matrix, release dates), so MET.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) describe the same edition, but no primary source was read.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Edition choice is an inference: input has no barcode, year or country, and 10th Anniversary (MB 4375c18f, 22 tracks) and box set (MB fc1eb6d6, 34 tracks) fit the input with different tracklists; the result labels them alternatives but status is found, not ambiguous.",
+  "MB search listed 4867ceba as 2013-05-20 FR, while the detail call shows 2013-05-17 DE; the result uses DE without noting this discrepancy.",
+  "Discogs durations differ from MB for several tracks (C2 369 vs 367 s, D4 383 vs 381 s, A1 275 vs 274 s); the result calls these rounding, but a 2 s difference is larger than rounding of 1 s and the chosen MB values are used without a per-track explanation.",
+  "Result claims Discogs 4570366 is the 'Erstpressung', but the Discogs notes only say it is the original 2013 release; the first-pressing claim is not verified.",
+  "Alternative 2013 US repress is described as '2013 US-Repress', but the search shows release 9216088 as 2013 US; that is consistent, but the 2021 XE MB release ecf72e5a is neither chosen nor listed as an alternative."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 12.9,
+  "tokens_in": 20127,
+  "tokens_out": 2613,
+  "cost_usd": 0.00332,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

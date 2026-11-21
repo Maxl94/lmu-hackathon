@@ -1,0 +1,662 @@
+{
+ "input": {
+  "id": "fresh-bushido-demotape",
+  "title": "Demotape",
+  "artist": "Bushido",
+  "format": "Kassette"
+ },
+ "status": "found",
+ "release": {
+  "title": "Demotape",
+  "artist": "Bushido",
+  "format": "Kassette",
+  "country": "DE",
+  "year": 1999,
+  "label": "Not On Label (Bushido (2) Self-released)",
+  "catno": null,
+  "barcode": null,
+  "edition": "Limited Edition (self-released demo tape, ca. 50 copies, Berlin)",
+  "ids": {
+   "discogs": "3104522"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Intro",
+   "artist": null,
+   "duration_s": 109,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Schlangen",
+   "artist": null,
+   "duration_s": 208,
+   "sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Illusion",
+   "artist": "Bushido feat. Morpheu",
+   "duration_s": 308,
+   "sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/",
+    "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    },
+    {
+     "name": "Fabrice",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Der Weg Des Kriegers",
+   "artist": "Bushido feat. Vader",
+   "duration_s": 326,
+   "sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "A5",
+   "disc": 1,
+   "title": "Es Tut Weh",
+   "artist": null,
+   "duration_s": 200,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A6",
+   "disc": 1,
+   "title": "Ich Würde Alles Dafür Tun",
+   "artist": null,
+   "duration_s": 261,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A7",
+   "disc": 1,
+   "title": "Worum Es Geht?!",
+   "artist": "Bushido feat. Vader",
+   "duration_s": 194,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A8",
+   "disc": 1,
+   "title": "The Crew...",
+   "artist": "Bushido feat. Vader",
+   "duration_s": 262,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    },
+    {
+     "name": "Mike Vader",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Das Neue Kapitel",
+   "artist": null,
+   "duration_s": 240,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Ehrlich",
+   "artist": null,
+   "duration_s": 210,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "La Force",
+   "artist": "Bushido feat. Demerci, Morpheu & Vader",
+   "duration_s": 285,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Westberlin Untergrund",
+   "artist": "Bushido feat. Ohrgasmus & Vader",
+   "duration_s": 260,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    },
+    {
+     "name": "King Orgasmus One",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B5",
+   "disc": 1,
+   "title": "Die Jagd",
+   "artist": "Bushido feat. Ohrgasmus",
+   "duration_s": 259,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B6",
+   "disc": 1,
+   "title": "Prollletik Poetik",
+   "artist": "Bushido feat. Günny, Ohrgasmus & Tanga Lilly",
+   "duration_s": 296,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "writer",
+     "sources": [
+      "genius:song/3822825"
+     ]
+    },
+    {
+     "name": "King Orgasmus One",
+     "role": "writer",
+     "sources": [
+      "genius:song/3822825"
+     ]
+    },
+    {
+     "name": "Frauenarzt",
+     "role": "writer",
+     "sources": [
+      "genius:song/3822825"
+     ]
+    },
+    {
+     "name": "Bushido",
+     "role": "producer",
+     "sources": [
+      "genius:song/3822825"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B7",
+   "disc": 1,
+   "title": "Outro",
+   "artist": null,
+   "duration_s": 198,
+   "sources": [
+    "discogs:release/3104522"
+   ],
+   "duration_sources": [
+    "discogs:release/3104522"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Bushido",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Bushido",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  },
+  {
+   "name": "Vader",
+   "role": "featured",
+   "tracks": [
+    "A4",
+    "A7",
+    "A8",
+    "B3",
+    "B4"
+   ],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  },
+  {
+   "name": "Morpheu",
+   "role": "featured",
+   "tracks": [
+    "A3",
+    "B3"
+   ],
+   "sources": [
+    "discogs:release/3104522",
+    "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape"
+   ]
+  },
+  {
+   "name": "Demerci",
+   "role": "featured",
+   "tracks": [
+    "B3"
+   ],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  },
+  {
+   "name": "Ohrgasmus",
+   "role": "featured",
+   "tracks": [
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  },
+  {
+   "name": "Günny",
+   "role": "featured",
+   "tracks": [
+    "B6"
+   ],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  },
+  {
+   "name": "Tanga Lilly",
+   "role": "featured",
+   "tracks": [
+    "B6"
+   ],
+   "sources": [
+    "discogs:release/3104522"
+   ]
+  }
+ ],
+ "total_duration_s": 3616,
+ "confidence": 0.8,
+ "sources": [
+  {
+   "id": "discogs:release/3104522",
+   "url": "https://www.discogs.com/release/3104522-Bushido-2-Demotape",
+   "kind": "database",
+   "note": "1999 cassette, limited edition; data quality 'Correct'; notes: only 50-100 copies, Intro/Outro not credited on backcover"
+  },
+  {
+   "id": "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/",
+   "url": "https://www.musik-sammler.de/release/bushido-demotape-tape-917083/",
+   "kind": "collector",
+   "note": "Tape, 1999, limited to 50; printed backcover tracklist without Intro/Outro, 13 tracks, total 57:05"
+  },
+  {
+   "id": "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape",
+   "url": "https://www.theaudiodb.com/album/2417353-Bushido-Demotape",
+   "kind": "database",
+   "note": "original 1999 version tracklist with feat. credits (Illusion feat. Morpheu)"
+  },
+  {
+   "id": "web:https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/",
+   "url": "https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/",
+   "kind": "web",
+   "note": "article on the versions; documents original tape titles vs. 2003 CD re-titles"
+  },
+  {
+   "id": "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8",
+   "url": "https://musicbrainz.org/release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8",
+   "kind": "database",
+   "note": "other edition of the same album: work credits"
+  },
+  {
+   "id": "genius:song/3822825",
+   "url": "https://genius.com/Bushido-prolletik-poetik-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "3:20 (200 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "3:55 (235 s)"
+   },
+   "resolution": "track A5: Discogs cassette entry chosen: its values match the 2003 CD reissue of the same masters (201 s); musik-sammler.de's rounded times deviate up to 40 s."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:21 (261 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:24 (264 s)"
+   },
+   "resolution": "track A6: Discogs cassette entry chosen (2003 CD reissue: 263 s)."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "3:14 (194 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "3:54 (234 s)"
+   },
+   "resolution": "track A7: Discogs cassette entry chosen (2003 CD reissue '10 Vor 12': 196 s); musik-sammler.de value is 40 s longer."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:22 (262 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:27 (267 s)"
+   },
+   "resolution": "track A8: Discogs cassette entry chosen (2003 CD reissue: 265 s)."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:00 (240 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:03 (243 s)"
+   },
+   "resolution": "track B1: Discogs cassette entry chosen."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "3:30 (210 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "3:34 (214 s)"
+   },
+   "resolution": "track B2: Discogs cassette entry chosen (2003 CD reissue: 214 s)."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:45 (285 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:50 (290 s)"
+   },
+   "resolution": "track B3: Discogs cassette entry chosen (2003 CD reissue 'Allstars': 290 s)."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:20 (260 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:26 (266 s)"
+   },
+   "resolution": "track B4: Discogs cassette entry chosen (2003 CD reissue: 265 s)."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:19 (259 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "4:07 (247 s)"
+   },
+   "resolution": "track B5: Discogs cassette entry chosen."
+  },
+  {
+   "field": "duration_s",
+   "values": {
+    "discogs:release/3104522": "4:56 (296 s)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/": "5:20 (320 s)"
+   },
+   "resolution": "track B6: Discogs cassette entry chosen."
+  },
+  {
+   "field": "title track A4",
+   "values": {
+    "discogs:release/3104522": "Der Weg Des Kriegers",
+    "discogs:release/764843": "Westliche Kammer",
+    "web:https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/": "original tape title 'Der Weg Des Kriegers', CD reissue 'Westliche Kammer'"
+   },
+   "resolution": "tape title 'Der Weg Des Kriegers' kept (1999 cassette edition); the 2003 CD reissue renamed the track 'Westliche Kammer' (documented by kiloherz.info)."
+  },
+  {
+   "field": "title track A7",
+   "values": {
+    "discogs:release/3104522": "Worum Es Geht?!",
+    "discogs:release/764843": "10 Vor 12",
+    "web:https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/": "original tape title 'Worum Es Geht?!', CD reissue '10 Vor 12'"
+   },
+   "resolution": "tape title 'Worum Es Geht?!' kept (1999 cassette edition); the 2003 CD reissue renamed the track '10 Vor 12' (documented by kiloherz.info)."
+  },
+  {
+   "field": "title track B3",
+   "values": {
+    "discogs:release/3104522": "La Force",
+    "discogs:release/764843": "Allstars",
+    "web:https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/": "original tape title 'La Force', CD reissue 'Allstars'"
+   },
+   "resolution": "tape title 'La Force' kept (1999 cassette edition); the 2003 CD reissue renamed the track 'Allstars' (documented by kiloherz.info)."
+  },
+  {
+   "field": "title track B6",
+   "values": {
+    "discogs:release/3104522": "Prollletik Poetik",
+    "discogs:release/764843": "Süd Rap Stars",
+    "web:https://kiloherz.info/2014/11/versionen-von-bushidos-demotape/": "original tape title 'Prollletik Poetik', CD reissue 'Süd Rap Stars'"
+   },
+   "resolution": "tape title 'Prollletik Poetik' kept (1999 cassette edition); the 2003 CD reissue renamed the track 'Süd Rap Stars' (documented by kiloherz.info)."
+  },
+  {
+   "field": "artist track A3",
+   "values": {
+    "discogs:release/3104522": "feat. Morpheu",
+    "discogs:release/764843": "feat. Fabrice"
+   },
+   "resolution": "tape credit is 'feat. Morpheu' (Discogs cassette, TheAudioDB, Grokipedia); the 2003 CD reissue credits the same part as 'Fabrice' – apparently the same artist credited under his alias (Genius lists 'Fabrice Morphis')"
+  }
+ ],
+ "missing": [
+  "No barcode on this self-released 1999 demo tape (input gave none).",
+  "Back cover image of the Discogs cassette entry could not be retrieved (HTTP 403), so the printed tracklist was verified via musik-sammler.de (which reproduces the back cover) instead of vision.",
+  "Intro (A1) and Outro (B7) are not credited on the back cover (per Discogs notes); they are listed here as they appear on the tape per Discogs.",
+  "Durations for A5-A8 and B1-B6 differ from musik-sammler.de (see conflicts); no audio rip was timed.",
+  "credits missing for 7 of 15 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "CD, 2003, DE, self-released, limited/numbered 300 copies (Discogs 764843), 15 tracks – re-titled tracks (Westliche Kammer, 10 Vor 12, Allstars, Süd Rap Stars) plus Bonustrack",
+   "source": "discogs:release/764843",
+   "why_not": "CD reissue, not a cassette"
+  },
+  {
+   "description": "MusicBrainz release bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8: 1999 DE, format '?', 14 tracks, marked Bootleg, with the CD reissue titles",
+   "source": "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8",
+   "why_not": "no physical format stated, flagged as bootleg, uses the 2003 CD titles instead of the tape's original titles"
+  },
+  {
+   "description": "CD, 2018, DE, EGJ, 14 tracks (Discogs 31804988)",
+   "source": "discogs:release/31804988",
+   "why_not": "CD reissue 2018, no durations"
+  },
+  {
+   "description": "2×CD 'KoK / Demotape', 2005, ersguterjunge 40195 9396003-1, 16+14 tracks (Discogs 855286 / MB 02cb5388)",
+   "source": "discogs:release/855286",
+   "why_not": "double CD compilation, different edition and tracklist"
+  },
+  {
+   "description": "Digital Media, 2021-04-02, iGroove/ersguterjunge, 14 tracks, barcode 4062851785389 (MusicBrainz 047c39a3)",
+   "source": "musicbrainz:release/047c39a3-ce22-4bdb-a54c-8f30f5c4a7a4",
+   "why_not": "digital re-release, not the 1999 cassette"
+  }
+ ],
+ "reasoning": "Input asks for a cassette, no barcode. Discogs lists exactly one cassette edition of Bushido's 'Demotape' (release/3104522, 1999 DE, self-released, limited, master 368324) and it is the only physical 1999 tape; MusicBrainz has no cassette (its 1999 entry is a format-less bootleg with the 2003 CD titles, so it is an alternative only). Titles and order of the 13 printed tracks are confirmed independently by musik-sammler.de (back-cover reproduction, 13 tracks, no Intro/Outro) and TheAudioDB; the tape itself plays 15 tracks, with Intro/Outro uncredited on the cover. Track titles follow the original 1999 tape, which differ from the 2003 CD reissue (Westliche Kammer, 10 Vor 12, Allstars, Süd Rap Stars) – documented in conflicts. Durations come from the Discogs cassette entry ('Correct' data quality, second-precise values) because musik-sammler.de's rounded times deviate by up to 40 s and the Discogs values match the same masters used on the 2003 CD reissue; deviations are recorded as conflicts. Total 3616 s = 60:16."
+}

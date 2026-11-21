@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:08",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "5: The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources (NOT MET, input barcode 888837168625 matches Daft Punk, not the returned edition). 4: Barcode match in only one source (NOT MET). 3: Unambiguous but backed by only one source (NOT MET). 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (NOT MET). 1: No edition fits reliably, or the result contradicts the input (MET, the returned barcode 4018939105976 contradicts the input barcode 888837168625).",
+   "summary": "The result returns a completely different barcode than the one provided in the input.",
+   "evidence": [
+    "bin/tl-mb search --barcode 0888837168625",
+    "bin/tl-discogs search --barcode 0888837168625"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (MET, MusicBrainz and Discogs both confirm the 16-track tracklist for the 2003 Aggro Berlin CD edition, differing only in minor formatting of featured artists).",
+   "summary": "Two independent database entries agree on the tracklist for the returned edition.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source (NOT MET, no physical cover or booklet was read). 4: Two independent database entries or database + specialised collector site (MET, MusicBrainz and Discogs are used with differing formatting details, alongside musik-sammler.de).",
+   "summary": "The agent used two independent databases and a specialized collector site.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Contradiction with input: The input explicitly provided the EAN 888837168625, but the result returns a release with the EAN 4018939105976.",
+  "Validation error: The agent failed to include the global 'artists' list in the JSON output, containing all distinct artists found on the carrier."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 20.5,
+  "tokens_in": 11579,
+  "tokens_out": 2811,
+  "cost_usd": 0.05689,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

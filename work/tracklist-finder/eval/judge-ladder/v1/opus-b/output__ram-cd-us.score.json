@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:23",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 888837168625 bzw. 0888837168625 passt exakt zu MusicBrainz f6758afb (DE, Columbia 88883716862) und Discogs 4729785 (EU, GEMA/BIEM). Das Rückcover zeigt denselben Barcode und „Made in the EU“. Alle übrigen Treffer mit diesem Barcode (US, AU, CA, BR usw.) haben dieselbe 13-Track-Liste. Format CD und Künstler stimmen.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs 4729785 und die gelesene Rückseite stimmen bei 13 Titeln in Anzahl, Reihenfolge und Schreibweise überein (nur Groß-/Kleinschreibung weicht ab). iTunes bestätigt die Titel ebenfalls.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "itunes:album/617154241"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es liegen zwei unabhängige Datenbanken vor (MusicBrainz und Discogs, mit abweichenden Details). Dazu kommt eine Primärquelle: das per Vision gelesene Rückcover mit Barcode, Kat.-Nr. und Titelliste.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Das Land der MB-Release f6758afb ist widersprüchlich: In der Suche steht FR (2013-05-20), in der Release-Abfrage DE (2013-05-17).",
+  "Die Behauptung „iTunes bestätigt Dauern (±1–2 s)“ stimmt nicht ganz: Bei Pos. 13 (Contact) nennt MB 384 s, iTunes und Discogs dagegen 381 s. Die Abweichung beträgt also 3 s.",
+  "iTunes meldet für das Album 14 Tracks, listet aber nur 13. Dies ist vermutlich eine digitale Abweichung und wurde nicht erklärt.",
+  "Die Bezeichnung „Standard Edition“ ist in den Quellen nicht ausdrücklich belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 16.0,
+  "tokens_in": 12028,
+  "tokens_out": 1529,
+  "cost_usd": 0.07869,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

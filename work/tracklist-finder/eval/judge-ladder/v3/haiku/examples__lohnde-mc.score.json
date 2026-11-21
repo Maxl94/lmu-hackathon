@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:10",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: NOT MET (no barcode in input). 4: barcode-free path requires title, artist, format and one further attribute unambiguous in >=2 sources; title/artist/format match in discogs:release/24165131 and the image sources confirm label Fred Kersten KG and catno MC 6109 (image sources read from cover); but a competing edition exists (discogs:release/24154076, Folge 2, 'Swinging Seelze') with a DIFFERENT tracklist (10 tracks, different titles), and the agent treats it only as a weak-signal alternative based on artist credit. Per rubric, a fitting competing edition with a different tracklist caps the rating at 2 unless the input rules it out. Input 'Musikverein Lohnde' matches Folge 1 credit but the cover of Folge 2 also names Musikverein Lohnde as the Blasorchester, so the input does not clearly rule it out. Result: 2.",
+   "summary": "Input has no barcode and a second Lohnde cassette with a different tracklist (Folge 2, Swinging Seelze, 10 different tracks) fits the title and the Musikverein Lohnde link, so the choice rests on weak artist-credit signals.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "tl-discogs search output (2 Treffer)",
+    "image:…RTI0MTY1MTMxLTE2NjAxOTI4NTctNjE4OC5qcGVn (Folge 1 back cover, tl-vision readable)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: NOT MET (only discogs and one j-card back image read the same list; the image does confirm order and titles, so two sources agree, but the image is a secondary read of the same listing). 4: One complete source confirmed by a second except small deviations: Discogs release 24165131 lists 10 tracks A1–B4, and the tl-vision read of the j-card back shows the same 6+4 titles and order with no deviations; this is a match. Rating 4 is the level where the evidence fits best, since the second source is the image rather than an independent database.",
+   "summary": "Discogs and the printed j-card back agree on all 10 titles and their order with no deviations, but there is no independent second database and no durations.",
+   "evidence": [
+    "discogs:release/24165131 (A1–B4 list)",
+    "image:…NTctNjE4OC5qcGVn tl-vision output (Seite 1: 6 Titel, Seite 2: 4 Titel)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: NOT MET (no independent primary source confirming the edition beyond the back-cover image of the same release; the cover read is a primary source of this edition, but no label print is quoted for the tracklist; the label sleeve photos do confirm catno and label, which partly satisfies primary-source requirements). 4: Database + specialised collector site: NOT MET (musik-sammler.de gave no hit). Two independent database entries: NOT MET (only discogs). 3: One good database (discogs) with images from the same database entry: MET. Rating 3.",
+   "summary": "Essentially one database entry (Discogs release 24165131) with its own images; the cover and label images are hosted on the same Discogs entry, so they cannot count as independent sources.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:…NTctNjE4OC5qcGVn",
+    "image:…NTQtOTgxNS5qcGVn",
+    "image:…NTEtNDI2MS5qcGVn"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Edition: result states Folge 1 credit 'Musikverein Lohnde 1925 e. V.' as matching the input, but the competing Folge 2 cover (image of discogs:release/24154076) also names Musikverein Lohnde; the alternative is dismissed on credit alone without a differentiating input attribute.",
+  "Year 1991 is derived from the j-card text ('im 67st. Jahr seines Bestehens' with 1925 founding), not a printed release year; year is presented as a field value in the release object.",
+  "Durations: all 10 duration_s are null and flagged duration_missing; total_duration_s null; acceptable per evidence but limits completeness.",
+  "Track artist fields are null; the source discogs:release/24165131 gives no per-track artist, consistent with the result.",
+  "Confidence 0.7 is stated but the result lists only one database source, which supports a lower sources rating than the agent implies.",
+  "Result lists the image sources as confirming Discogs tracklist; the tl-vision readings of Folge 1 back show track order by side and no numbering, consistent with the position mapping A1–A6/B1–B4 which the agent assigned itself."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.5,
+  "tokens_in": 37509,
+  "tokens_out": 1546,
+  "cost_usd": 0.00452,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

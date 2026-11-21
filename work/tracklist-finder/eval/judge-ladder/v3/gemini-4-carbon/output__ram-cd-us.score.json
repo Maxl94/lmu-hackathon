@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:42",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains barcode ('888837168625') -> MET; matches this edition in >= 2 independent sources -> MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 has 0888837168625, discogs:release/4729785 has 888837168625, and tl-vision on back cover 5748588554-1200.jpg reads '8 8883-71686-2 5', all Columbia 88883716862 EU/DE CD); format ('CD') and artist ('Daft Punk') match INPUT -> MET; no other edition with the same barcode and a different tracklist -> MET (other regional CD pressings in tl-mb/tl-discogs share the identical 13-track standard tracklist, and tl-itunes lists the same 13 audio tracks).",
+   "summary": "The input UPC/EAN 888837168625 matches the 2013 Columbia standard CD edition of Daft Punk's Random Access Memories across MusicBrainz, Discogs, and the printed back cover, with no competing tracklist for this barcode.",
+   "evidence": [
+    "tl-gtin 888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0",
+    "discogs:release/4581879"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and tl-vision on back cover 5748588554-1200.jpg all show the exact same 13 tracks in identical order, differing only in minor capitalisation/apostrophe styling).",
+   "summary": "MusicBrainz, Discogs, and the read back cover image independently confirm the exact 13-track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> MET (two independent databases—musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 with ISRCs/ms timings and discogs:release/4729785 with SID codes/EU sleeve notes—plus a primary source read via tl-vision from the physical back cover image 5748588554-1200.jpg confirming barcode, catalogue number, label code, and all 13 titles).",
+   "summary": "The result is backed by two independent music databases (MusicBrainz and Discogs) as well as a vision-read scan of the edition's physical back cover.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error (FACTS): the top-level 'artists' array is empty instead of listing every distinct artist on the carrier.",
+  "Tracks 1.5, 1.6, 1.7, 1.8, 1.11, and 1.12 include featured artist credits ('Daft Punk & Julian Casablancas', etc.) taken from tl-itunes (itunes:album/617154241), which do not appear in the tool outputs for the cited sources (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, image:caa:back), while itunes:album/617154241 is omitted from 'sources'.",
+  "Track 1.13 ('Contact') has duration 384 s from musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 (383626 ms), whereas discogs:release/4729785 and itunes:album/617154241 report 381 s (6:21), yet discogs:release/4729785 is listed as confirming duration_sources without noting the 3-second discrepancy.",
+  "Source 'image:caa:back' is listed in release-level 'sources' and confirmed all 13 titles via tl-vision, but was omitted from the per-track 'sources' field on tracks 1.1–1.13."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 40.1,
+  "tokens_in": 11960,
+  "tokens_out": 3728,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

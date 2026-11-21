@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:35",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: The INPUT contains a barcode (NOT MET, input has no barcode). Level 4: Without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources (NOT MET, input provides no further attributes like year or label). Level 3: Several editions fit but ALL share the same tracklist (MET, all 6 Discogs cassette editions of master 211928 share the exact same 16-track tracklist and durations).",
+   "summary": "Multiple cassette editions fit the input, but they all share the exact same tracklist, making the specific edition choice irrelevant.",
+   "evidence": [
+    "discogs:release/1951581",
+    "discogs:release/18354001",
+    "discogs:release/17280904",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/4256710"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (MET, MusicBrainz, Discogs, and Musik-Sammler all agree perfectly on the 16 tracks, order, spelling variants, and durations).",
+   "summary": "Three independent sources agree exactly on the 16 tracks and their durations.",
+   "evidence": [
+    "discogs:release/1951581",
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (NOT MET, image analysis could not find a printed tracklist on the cassette covers/labels). Level 4: Two independent database entries or database + specialised collector site (MET, uses MusicBrainz, Discogs, and the specialized collector site musik-sammler.de).",
+   "summary": "The result is robustly supported by two independent databases and a specialized collector site.",
+   "evidence": [
+    "discogs:release/1951581",
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 21.8,
+  "tokens_in": 24191,
+  "tokens_out": 3581,
+  "cost_usd": 0.09135,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

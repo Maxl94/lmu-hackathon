@@ -1,0 +1,114 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:02",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: INPUT contains a barcode -> NOT MET (input has no barcode). Level 4: Without barcode, title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist -> NOT MET (the input specifies only title, artist, and format 'Kassette', which fits six distinct cassette editions/pressings from 2001 to 2003 on Discogs master 211928 with differing years and cover/sticker details, so no single pressing is unambiguous from the input alone). Level 3: Several editions fit but ALL share the same tracklist (e.g. repressings, country editions): the choice does not matter -> MET (all six cassette pressings discogs:release/1951581, 18354001, 18354166, 18354289, 17280904, 4256710 as well as musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf and musik-sammler.de release 917995 share the exact same 16 tracks and 2979 s total duration).",
+   "summary": "Six German cassette pressings from 2001–2003 fit the barcode-less input, so the specific pressing is not unambiguous, but all six share the exact same 16-track tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, discogs:release/1951581, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ all represent the 2001 cassette edition and agree on all 16 tracks in the same A1–A8 / B1–B8 order and exact track durations, with only minor spelling/punctuation variants such as 'Nute Bounce' vs 'Nutte Bounce', 'Pitbull' vs 'Pit Bull', 'Hast du Mut' vs 'Hast Du Mut?', and 'Vack You!' vs 'Vack You').",
+   "summary": "Two independent databases and musik-sammler.de agree on all 16 tracks, their order, and exact durations, differing only in minor spelling variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> NOT MET (tl-vision in tool calls 8–10 read 0 tracks from the outer J-card and cassette stickers, which are also hosted on discogs:release/1951581 rather than an independent primary tracklist source). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de) -> MET (MusicBrainz and Discogs are clearly independent entries with differing catalogue numbers 'ILM 003' vs '03', different title spellings, and featured-artist credits present only in MusicBrainz, supplemented by the specialised collector site musik-sammler.de with its own numbering 'B 9.'–'B 16.' and alias credit '[Feat. Baktus & Orgasmus]').",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) plus the specialised collector site musik-sammler.de, while cover images yielded no readable tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "tl-vision (calls 8, 9, 10)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: top-level 'artists' list is missing/empty (every distinct main and featured artist on the carrier should be listed once).",
+  "Track artist attribution on A3, A8, B1, B4, B5, B8: discogs:release/1951581 (tool call 4) does not contain featured artist credits in its tracklist output, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ credits 'Baktus & Orgasmus' on A8 instead of 'Bass Sultan Hengzt & King Orgasmus One', contradicting the note in sources[2] ('Besetzungen ... identisch').",
+  "Catalogue number discrepancy left unrecorded: tl-vision on the J-card spine (tool call 8, image from discogs:release/1951581) read 'ILM1' on the spine and '2001/03' on the flap, Discogs lists '03', and MusicBrainz lists 'ILM 003'; the agent chose 'ILM 003' without noting 'ILM1' or logging a conflict.",
+  "Uninspected J-card images: discogs:release/1951581 (tool call 4) listed two wide secondary images (...5366.jpeg and ...7997.jpeg) that the agent skipped before stating that no printed tracklist was shown on the images."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 60.0,
+  "tokens_in": 25169,
+  "tokens_out": 4589,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

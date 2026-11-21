@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:17",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains a barcode -> NOT MET (input_has_barcode is false; input only gives title and format). Level 4: Barcode match in one source -> NOT MET; without barcode, title/artist/format + further attribute unambiguous in >= 2 sources and no other fitting edition has a different tracklist -> NOT MET (artist is not in input, and discogs:release/8491193 'Various - Ich Sag's Dir Mit Musik' from 1995 is a Cassette Box Set compilation fitting both title and format with a different artist and tracklist). Level 3: Unambiguous in one source or all fitting editions share the same tracklist -> NOT MET (discogs:release/8491193 from tl-discogs search fits title and format MC/Cassette with a different artist and compilation tracklist, and was not ruled out by the input or inspected; discogs:release/16402359 Polish cassette was also unchecked). Level 2: Several editions fit the input and at least one has a different tracklist (other artist with the same title), choice rests on weak signals -> MET (both Kastelruther Spatzen 1985 MC musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 / discogs:release/2297987 and Various 1995 Cassette Box Set Compilation discogs:release/8491193 fit the input title 'Ich sag's dir mit Musik' and format 'MC').",
+   "summary": "The input specifies only title and format (MC) without an artist, and the Discogs search contains an unexamined competing cassette compilation by Various Artists with the exact same title (discogs:release/8491193).",
+   "evidence": [
+    "tl-discogs search --title \"Ich sag's dir mit Musik\"",
+    "discogs:release/8491193",
+    "discogs:release/16402359",
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 both represent the 1985 Kastelruther Spatzen Koch-Records Special 221 190 cassette with barcode 9002722211901, show independent details, and agree completely on all 12 tracks A1-B6 in count, order, and titles with only capitalization variants; also confirmed by scraped web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26 citing MC-Nummer 221190).",
+   "summary": "Two independent database entries for the chosen 1985 cassette edition (MusicBrainz and Discogs) agree completely on track count, order, and titles apart from capitalization.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> NOT MET (no cover/booklet/label print was read despite images existing on discogs:release/2297987, and no label/manufacturer source was used; the cited deezer:album/231158 and lastfm:album entries are streaming/web pages for other formats, and the scraped artist page kastelrutherspatzen.de was neither cited in sources nor a label/cover print). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 are two independent database entries for the same edition, recognisable by differing durations on 10 of 12 tracks, different title casing, country scope AT vs DACH, catalog number formatting, and detailed Discogs liner notes/rights society data).",
+   "summary": "The result relies on two clearly independent database entries (MusicBrainz and Discogs) for the same edition, without reading a primary source such as cover or cassette label images.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing edition ignored: tl-discogs search returned discogs:release/8491193 (Various - Ich Sag's Dir Mit Musik, 1995 Germany, Box Set Compilation Cassette, Das Beste Reader's Digest), which matches the input title and format MC with a different artist and tracklist, yet the agent never inspected it or listed it in alternatives.",
+  "Unchecked Polish cassette edition: discogs:release/16402359 (Kastelruther Spatzen, Poland, AMA 074, Cassette) appeared in tl-discogs search but was never fetched to verify its tracklist.",
+  "Misleading duration precision claim: The agent claims musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 provides 'ms-precise durations' / 'ms-Genauigkeit', but every MusicBrainz track duration ends in 000 ms (whole seconds only).",
+  "Inconsistent duration_sources attribution: discogs:release/2297987 is cited in duration_sources on A3 (188s vs 187s), B2 (239s vs 238s), B3 (207s vs 206s), and B6 (196s vs 197s) despite 1s differences, while omitted on A5 (141s vs 140s) with the same 1s difference; moreover, deezer:album/231158 and lastfm agree with Discogs rather than MusicBrainz on 11 of 12 track durations (all except A6).",
+  "Schema validation error: top-level artists list is empty (reported in FACTS validation_errors).",
+  "Omitted confirming source: web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26 was scraped and confirms MC-Nummer 221190 and all 12 titles, but was not included in the result sources."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 75.6,
+  "tokens_in": 17453,
+  "tokens_out": 9076,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:58",
+ "overall": 2.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: The INPUT contains a barcode... -> NOT MET (Input contains no barcode).\n4: Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist -> NOT MET (Only one database source found; moreover, a competing edition exists: Folge 2).\n3: Unambiguous but backed by only one source (no competing edition known) - or several editions fit but ALL share the same tracklist... -> NOT MET (A competing edition, discogs:release/24154076 'Blasmusik Aus Lohnde (Folge 2)', fits the input criteria of title, artist/ensemble and MC format, but has a completely different tracklist).\n2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (other track count, other tracks, other artist with the same title, series part 1 vs 2); the choice rests on weak signals -> MET (The input does not specify a volume number; both Folge 1 and Folge 2 are MC releases by the Lohnde music association with distinct tracklists).",
+   "summary": "The input omits the volume number, leaving ambiguity between Folge 1 and Folge 2 (which has a completely different tracklist).",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles... -> NOT MET (No second independent source; the J-card image is hosted directly on the Discogs entry).\n4: One complete source of the same edition, confirmed by a second one except for small explained deviations... -> NOT MET (No second separate source).\n3: Only one source of the same edition, complete and plausible -> MET (Discogs release 24165131 together with its J-card back image provides a complete, plausible 10-track list for Folge 1).",
+   "summary": "The tracklist is supported by a single source (Discogs with its uploaded J-card scan).",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: Database + independent primary source of the same edition -> NOT MET (Images are hosted on the Discogs entry itself, not independent).\n4: Two independent database entries or database + specialised collector site -> NOT MET (Only Discogs was found).\n3: One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) -> MET (Discogs entry plus cover images hosted on that same entry).",
+   "summary": "Based solely on Discogs and the scan images attached to the release entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input title lacks the volume number; Folge 2 ('Swinging Seelze - Blasorchester des Musikvereins Lohnde') also matches the input description but features an entirely different tracklist.",
+  "Track durations are completely missing across all tracks (A1-B4) as none are printed on the release or documented in databases."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 39.8,
+  "tokens_in": 24545,
+  "tokens_out": 4628,
+  "cost_usd": 0.03934,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

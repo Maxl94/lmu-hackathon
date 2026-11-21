@@ -1,0 +1,93 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:31",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: MET. The input contains a barcode with a minor check digit error (888837168626 vs corrected 888837168625), which matches the standard CD edition of 'Random Access Memories' in multiple independent sources (MusicBrainz, Discogs, and Cover Art Archive). Format and artist match perfectly, and all other editions sharing this barcode have the exact same tracklist. Level 5 conditions are met.",
+   "summary": "The barcode matches the standard CD edition across multiple independent databases and image sources after check-digit correction.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET. >= 2 independent sources (MusicBrainz and Discogs) agree on count (13 tracks), order, and titles, supported by the Cover Art Archive back cover image. Level 5 conditions are met.",
+   "summary": "Multiple independent sources completely agree on track count, order, and titles.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: MET. The evidence combines multiple database entries (MusicBrainz, Discogs) with primary/manufacturer evidence from the Cover Art Archive (back cover scan showing track titles, Columbia logo, cat no., and barcode). Level 5 conditions are met.",
+   "summary": "Reliable database entries combined with primary cover art evidence fully support the edition.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 1.9,
+  "tokens_in": 24011,
+  "tokens_out": 349,
+  "cost_usd": 0.00808,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

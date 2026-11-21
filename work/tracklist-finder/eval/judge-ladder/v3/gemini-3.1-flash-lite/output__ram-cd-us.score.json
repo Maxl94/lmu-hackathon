@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:28",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: MET. The barcode 888837168625 is present and matches the release in multiple independent sources (MusicBrainz f6758afb... and Discogs 4729785). The format (CD) and artist (Daft Punk) match. No competing edition with the same barcode has a different tracklist.",
+   "summary": "The edition is unambiguously identified by its matching barcode across multiple independent databases.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "bin/tl-gtin 888837168625"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET. Multiple independent sources (MusicBrainz and Discogs) confirm the same 13-track list and order. The tracklist is further supported by visual inspection of the back cover art via the CAA image.",
+   "summary": "The tracklist, count, and order are consistently confirmed by multiple independent databases and visual evidence.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: MET. The evidence combines two high-quality independent databases (MusicBrainz and Discogs) with primary visual evidence (back cover image from Cover Art Archive).",
+   "summary": "The source material includes both reliable database entries and direct primary visual confirmation of the release.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent's result failed the validation check regarding the artist field: it did not list all distinct featured artists individually for every track in the required format."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 3.0,
+  "tokens_in": 10719,
+  "tokens_out": 591,
+  "cost_usd": 0.00357,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

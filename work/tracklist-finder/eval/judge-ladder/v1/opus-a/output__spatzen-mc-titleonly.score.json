@@ -1,0 +1,98 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:24",
+ "overall": 3.6,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Die Eingabe enthält nur Titel und Format (MC), keinen Barcode und keinen Künstler. MusicBrainz und Discogs (2297987) stimmen bei Label Koch Records Special, Kat.-Nr. 221 190, Jahr 1985 und Format Kassette überein. Es gibt aber weitere MC-Ausgaben: Discogs 15349631 und 24889304 ohne Barcode mit gleicher Trackliste, die polnische AMA-Kassette (ungeprüft) sowie eine Reader's-Digest-Box (Various, MC) mit gleichem Titel und vermutlich anderem Inhalt. Diese Box wurde vom Agenten nicht ausgeschlossen. Die Wahl unter den Kastelruther-MCs ist unerheblich, die Ausgabe ist aber nicht vollständig eindeutig.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/8491193",
+    "discogs:release/16402359"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs zeigen für dieselbe Kassettenausgabe übereinstimmend 12 Titel in gleicher Reihenfolge (A1–B6), abgesehen von Groß-/Kleinschreibung. Die offizielle Künstlerseite (MC-Nr. 221190) und Deezer bestätigen dies zusätzlich. Nur die Spieldauern weichen leicht ab.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "deezer:album/231158"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 3,
+   "begruendung": "100% der Tracks mit Dauer, 50% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Der Agent stützt sich auf zwei unabhängige Datenbanken (MusicBrainz, Discogs), erkennbar an abweichenden Spieldauern, ergänzt durch Deezer und Last.fm. Die offizielle Künstlerseite mit MC-Nummer wäre eine Primärquelle, wurde in den Ergebnisquellen aber nicht zitiert.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Reader's-Digest-Box 'Ich Sag's Dir Mit Musik' (Various, MC, discogs:release/8491193) hat gleichen Titel und gleiches Format, wurde aber nicht als Alternative geprüft oder ausgeschlossen.",
+  "Weitere Kastelruther-MC-Varianten fehlen in den Alternativen: Discogs 15349631, 24889304 (ohne Barcode) und die polnische AMA-Ausgabe 16402359 (ungeprüft).",
+  "Die MusicBrainz-Dauern sind bei CD, LP und MC identisch und vermutlich übertragen. Discogs, Deezer und Last.fm nennen bei A1 einheitlich 3:22 statt 199 s. Die Wahl der MB-Dauern ist daher außer bei A6 schwach begründet.",
+  "Last.fm verweist auf die MBID der Vinyl-Ausgabe (a1ca35f7) und ist damit keine Quelle für die MC-Ausgabe.",
+  "Track B4 heißt bei Deezer und Last.fm 'Sarner-Welle Lied Hallo Freunde'. Diese Titelvariante wird im Ergebnis nicht erwähnt.",
+  "Die offizielle Künstlerseite (kastelrutherspatzen.de, MC-Nr. 221190) fehlt in den Quellen, obwohl sie abgerufen wurde."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.9,
+  "tokens_in": 21125,
+  "tokens_out": 2286,
+  "cost_usd": 0.13022,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

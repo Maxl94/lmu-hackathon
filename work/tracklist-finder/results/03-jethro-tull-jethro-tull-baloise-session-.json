@@ -1,0 +1,598 @@
+{
+ "input": {
+  "id": "03-jethro-tull-jethro-tull-baloise-session-",
+  "title": "JETHRO TULL;BALOISE SESSION(2CD)",
+  "artist": "JETHRO TULL",
+  "ean": "4029759202219"
+ },
+ "status": "found",
+ "release": {
+  "title": "Live From Baloise Session",
+  "artist": "Jethro Tull",
+  "format": "CD",
+  "country": "Europe",
+  "year": 2025,
+  "label": "earMUSIC",
+  "catno": "0220221EMU",
+  "barcode": "4029759202219",
+  "edition": "2×CD, 6-panel digipak with folded booklet, made in Germany",
+  "ids": {
+   "musicbrainz": "505bd0d9-7fc5-4536-8206-354e003f8a0c",
+   "discogs": "34259926"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "My Sunday Feeling",
+   "artist": "Jethro Tull",
+   "duration_s": 238,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500660"
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Living in the Past",
+   "artist": "Jethro Tull",
+   "duration_s": 335,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500661"
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Serenade to a Cuckoo",
+   "artist": "Jethro Tull",
+   "duration_s": 261,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Rahsaan Roland Kirk",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500662"
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "So Much Trouble",
+   "artist": "Jethro Tull",
+   "duration_s": 228,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Brownie McGhee",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Brownie McGhee",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500663"
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Nursie",
+   "artist": "Jethro Tull",
+   "duration_s": 197,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500664"
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Rocks on the Road",
+   "artist": "Jethro Tull",
+   "duration_s": 384,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500665"
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "A New Day Yesterday",
+   "artist": "Jethro Tull",
+   "duration_s": 432,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500666"
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Too Old to Rock and Roll, Too Young to Die",
+   "artist": "Jethro Tull",
+   "duration_s": 296,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500667"
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Bourée",
+   "artist": "Jethro Tull",
+   "duration_s": 308,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Johann Sebastian Bach",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500668"
+  },
+  {
+   "position": "1",
+   "disc": 2,
+   "title": "Nothing Is Easy",
+   "artist": "Jethro Tull",
+   "duration_s": 403,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500781"
+  },
+  {
+   "position": "2",
+   "disc": 2,
+   "title": "Dharma for One",
+   "artist": "Jethro Tull",
+   "duration_s": 385,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Clive Bunker",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500782"
+  },
+  {
+   "position": "3",
+   "disc": 2,
+   "title": "Heavy Horses",
+   "artist": "Jethro Tull",
+   "duration_s": 578,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500783"
+  },
+  {
+   "position": "4",
+   "disc": 2,
+   "title": "Thick as a Brick",
+   "artist": "Jethro Tull",
+   "duration_s": 548,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500784"
+  },
+  {
+   "position": "5",
+   "disc": 2,
+   "title": "Aqualung",
+   "artist": "Jethro Tull",
+   "duration_s": 306,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Jennie Franks",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500785"
+  },
+  {
+   "position": "6",
+   "disc": 2,
+   "title": "Locomotive Breath",
+   "artist": "Jethro Tull",
+   "duration_s": 458,
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ian Anderson",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    },
+    {
+     "name": "Ian Anderson",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c"
+     ]
+    }
+   ],
+   "isrc": "DEH842500786"
+  }
+ ],
+ "artists": [
+  {
+   "name": "Jethro Tull",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+    "discogs:release/34259926"
+   ]
+  }
+ ],
+ "total_duration_s": 5357,
+ "confidence": 0.89,
+ "sources": [
+  {
+   "id": "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+   "url": "https://musicbrainz.org/release/505bd0d9-7fc5-4536-8206-354e003f8a0c",
+   "kind": "database",
+   "note": "barcode match, 2×CD, 9+6 tracks, ms durations, ISRCs"
+  },
+  {
+   "id": "discogs:release/34259926",
+   "url": "https://www.discogs.com/release/34259926-Jethro-Tull-Live-From-Baloise-Session-Basel-Switzerland-15112008",
+   "kind": "database",
+   "note": "barcode 4 029759 202219, catno 0220221EMU, LC 36979, GEMA/BIEM, optimal media matrices, digipak notes"
+  },
+  {
+   "id": "itunes:album/1811176832",
+   "url": "https://music.apple.com/de/album/live-from-baloise-session-basel-15-11-2008/1811176832",
+   "kind": "streaming",
+   "note": "digital edition (UPC 4029759205838), same 15 recordings, durations agree within 1 s"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "country",
+   "values": {
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c": "US",
+    "discogs:release/34259926": "Europe"
+   },
+   "resolution": "Discogs' Europe used: barcode is a German EAN, disc rim text 'Made in Germany', LC 36979 and GEMA/BIEM rights society indicate a European earMUSIC release; MB's 'US' appears to be a country-entry artefact."
+  },
+  {
+   "field": "release title",
+   "values": {
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c": "Live From Baloise Session",
+    "discogs:release/34259926": "Live From Baloise Session (Basel Switzerland 15|11|2008)"
+   },
+   "resolution": "Discogs adds the concert location/date as a subtitle; the base title is identical. Catalogue title used without subtitle."
+  },
+  {
+   "field": "title track 2",
+   "values": {
+    "musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c": "Living in the Past",
+    "discogs:release/34259926": "Living In The Past"
+   },
+   "resolution": "Capitalisation only; MB spelling kept (no readable back cover to confirm the printed form). Same applies to tracks 3, 5, 6, 8 and 2-2/2-4."
+  }
+ ],
+ "missing": [
+  "No printable back cover could be read (Discogs image URLs returned HTTP 403, Cover Art Archive has front only), so printed title capitalisation and printed durations are unverified."
+ ],
+ "alternatives": [
+  {
+   "description": "Digital Media edition, 15 tracks in one sequence, UPC 4029759205838, earMUSIC, 2025-06-13",
+   "source": "musicbrainz:release/1122e8f0-5379-43ba-8610-3ea297fa65c1",
+   "why_not": "digital edition (different UPC); the input names a 2CD physical release"
+  }
+ ],
+ "reasoning": "Barcode 4029759202219 matches exactly one MusicBrainz release (2×CD, earMUSIC 0220221EMU) and one Discogs release (2×CD, same catno, same barcode, LC 36979, GEMA/BIEM, optimal media matrices) - both the same 2025 European 2CD edition in a digipak. Both list 15 tracks in identical order (9 + 6) with durations agreeing within 1 s, so MB's millisecond values are used. The Apple digital edition of the same concert confirms all 15 recordings and durations. Input title 'BALOISE SESSION(2CD)' matches this 2CD release; no other physical edition of the 2025 release exists in the release group."
+}

@@ -1,0 +1,17 @@
+🟢 bravo30-ean: übernehmen (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 11 s · $0.062
+🟢 kok-cd2004: übernehmen (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 9 s · $0.046
+🔴 lohnde-mc: manuell klären (2.75) · edition 3 · tracklist 4 · durations 1 · sources 3 · 22 s · $0.127 · gates: less than half of the durations backed
+🟢 ram-cd-us: übernehmen (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 22 s · $0.096
+🔴 spatzen-mc-titleonly: manuell klären (3.2) · edition 2 · tracklist 5 · durations 3 · sources 4 · 21 s · $0.133 · gates: edition only level 2 - correct edition not secured
+🔴 trap-artist-mismatch: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-fake-album: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-wrong-ean: manuell klären (3.3) · edition 1 · tracklist 5 · durations 5 · sources 4 · 14 s · $0.089 · gates: edition only level 1 - correct edition not secured; barcode in the result does not match the input
+🔴 trap-wrong-format: manuell klären (1.45) · edition 1 · tracklist 2 · durations 1 · sources 3 · 12 s · $0.111 · gates: edition only level 1 - correct edition not secured; tracklist only level 2; less than half of the durations backed; format in the result does not match the input
+🟢 bravo30-ean: übernehmen (4.75) · edition 5 · tracklist 5 · durations 4 · sources 5 · 22 s · $0.228
+🟢 kok-cd2004: übernehmen (4.75) · edition 5 · tracklist 5 · durations 4 · sources 5 · 24 s · $0.218
+🟢 kok-mc: übernehmen (4.5) · edition 4 · tracklist 5 · durations 5 · sources 4 · 25 s · $0.180
+🔴 kok-noartist-r1: manuell klären (3.7) · edition 2 · tracklist 5 · durations 5 · sources 4 · 14 s · $0.138 · gates: edition only level 2 - correct edition not secured
+🔴 lohnde-mc: manuell klären (2.35) · edition 2 · tracklist 4 · durations 1 · sources 3 · 19 s · $0.181 · gates: edition only level 2 - correct edition not secured; less than half of the durations backed
+🟢 ram-badean: übernehmen (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 23 s · $0.161
+🔴 ram-vinyl-r3: manuell klären (3.7) · edition 2 · tracklist 5 · durations 5 · sources 4 · 19 s · $0.116 · gates: edition only level 2 - correct edition not secured
+🔴 spatzen-mc-titleonly: manuell klären (3.55) · edition 2 · tracklist 5 · durations 4 · sources 5 · 23 s · $0.243 · gates: edition only level 2 - correct edition not secured

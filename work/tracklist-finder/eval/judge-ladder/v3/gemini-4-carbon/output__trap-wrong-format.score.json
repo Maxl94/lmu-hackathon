@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:13",
+ "overall": 1.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 2",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: INPUT contains a barcode (NOT MET: input has no barcode) and matches >= 2 independent sources (NOT MET) with matching format and artist (NOT MET: input format is CD, result format is Kassette in discogs:release/24165131). Level 4: Without barcode, title, artist, format and >= 1 further attribute unambiguous in >= 2 sources (NOT MET: format CD is not matched in any source; searches in tl-mb and tl-discogs for format CD returned 0 hits, and only one database entry discogs:release/24165131 exists for a Cassette). Level 3: Unambiguous in one source or several editions with same tracklist fitting the input (NOT MET: discogs:release/24165131 is a Cassette MC6109, contradicting the input format CD). Level 2: Several editions fit the input with different tracklists (NOT MET: no edition found fits the input format CD). Level 1: No edition fits reliably, or the result contradicts the input (other format), or not found (MET: input specifies format CD, whereas the returned edition discogs:release/24165131 has format Kassette, and all CD searches in MusicBrainz, Discogs, and web search found no matching CD release).",
+   "summary": "The returned Cassette edition (MC6109) contradicts the input format CD, for which no matching release was found.",
+   "evidence": [
+    "discogs:release/24165131",
+    "bin/tl-mb search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD",
+    "bin/tl-discogs search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (NOT MET: image:discogs/back-cover is hosted on discogs:release/24165131 so they are not independent, and neither represents the requested CD edition). Level 4: One complete source of the same edition confirmed by a second one with small explained deviations (NOT MET: the two sources are not independent and come from a Cassette edition rather than the requested CD). Level 3: Only one source of the same edition, complete and plausible (NOT MET: the tracklist with cassette side positions A1-A6 and B1-B4 is not from a CD edition matching the input). Level 2: Tracklist (partly) taken from another edition, or gaps/unexplained deviations (MET: because no CD edition was found, the 10-track tracklist A1-B4 was taken from the Cassette edition discogs:release/24165131 and its J-card image).",
+   "summary": "Because no CD release could be located, the tracklist (including cassette side positions A1-A6 and B1-B4) was taken from a different format edition (Cassette MC6109).",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-vision"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: Database + independent primary source of the same edition (NOT MET: the J-card image was taken directly from the same Discogs release entry discogs:release/24165131 rather than an independent source, and does not match the CD edition in the input). Level 4: Two independent database entries or database + specialised collector site (NOT MET: only Discogs release 24165131 was found; MusicBrainz and musik-sammler.de searches returned 0 hits). Level 3: One good database, or two sources that may have copied from each other, e.g. cover images hosted on the same database entry (MET: discogs:release/24165131 and the J-card image hosted on that same Discogs entry read via bin/tl-vision).",
+   "summary": "The result relies on a single Discogs database entry and a J-card image hosted on that same entry, which are not independent of each other.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-vision"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction with input: INPUT specifies format 'CD', but the result uses Cassette release discogs:release/24165131 ('Kassette', catno 'MC6109') and retains cassette track positions A1-A6 and B1-B4.",
+  "Schema validation error reported in FACTS: 'artists' is empty across tracks A1-B4 (main artist 'Musikverein Lohnde 1925 e. V.' was omitted from the artist list/track artists).",
+  "Non-independent second source: 'image:discogs/back-cover' is hosted on 'discogs:release/24165131' itself rather than providing independent confirmation."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 35.4,
+  "tokens_in": 15569,
+  "tokens_out": 2915,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

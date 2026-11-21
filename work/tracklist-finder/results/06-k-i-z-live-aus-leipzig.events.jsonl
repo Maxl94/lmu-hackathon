@@ -1,0 +1,46 @@
+{"ts": 1795185747.75, "event": "run_start", "input": {"title": "Live aus Leipzig", "artist": "K.I.Z", "ean": "4251484709767"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185747.75, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4251484709767): 1 hits"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "  musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da | Görlitzer Park - Live Aus Leipzig — K.I.Z | 2025-11-12 DE | 12\" Vinyl+12\" Vinyl+12\" Vinyl | Official"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "$ MusicBrainz release 9cd41bed-67ba-4330-8dc7-7387904606da: 32 tracks, 32 with duration"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "$ Discogs search barcode=4251484709767 format=None: 1 hits"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "  discogs:release/35653735 | Görlitzer Park - Live Aus Leipzig | Germany 2025-11-12 | 32 tracks, 0 with duration"}
+{"ts": 1795185747.75, "event": "fast_step", "msg": "→ no fast path: only 0/32 tracks with a duration in both sources"}
+{"ts": 1795185747.75, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: only 0/32 tracks with a duration in both sources"}
+{"ts": 1795185747.75, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185751.77, "event": "tool_start", "tool": "tl-gtin", "args": "4251484709767"}
+{"ts": 1795185751.77, "event": "tool_end", "tool": "tl-gtin", "args": "4251484709767", "seconds": 0.0, "ok": true}
+{"ts": 1795185751.89, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4251484709767"}
+{"ts": 1795185751.89, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4251484709767", "seconds": 0.0, "ok": true}
+{"ts": 1795185752.03, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4251484709767"}
+{"ts": 1795185752.03, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4251484709767", "seconds": 0.0, "ok": true}
+{"ts": 1795185754.16, "event": "tool_start", "tool": "tl-mb", "args": "release 9cd41bed-67ba-4330-8dc7-7387904606da"}
+{"ts": 1795185754.16, "event": "tool_end", "tool": "tl-mb", "args": "release 9cd41bed-67ba-4330-8dc7-7387904606da", "seconds": 0.0, "ok": true}
+{"ts": 1795185754.29, "event": "tool_start", "tool": "tl-discogs", "args": "release 35653735"}
+{"ts": 1795185754.29, "event": "tool_end", "tool": "tl-discogs", "args": "release 35653735", "seconds": 0.0, "ok": true}
+{"ts": 1795185776.57, "event": "tool_start", "tool": "tl-caa", "args": "9cd41bed-67ba-4330-8dc7-7387904606da"}
+{"ts": 1795185776.57, "event": "tool_end", "tool": "tl-caa", "args": "9cd41bed-67ba-4330-8dc7-7387904606da", "seconds": 0.0, "ok": true}
+{"ts": 1795185776.7, "event": "tool_start", "tool": "tl-mb", "args": "group 632fa284-54ba-4cba-b84a-785f22501c9b"}
+{"ts": 1795185776.7, "event": "tool_end", "tool": "tl-mb", "args": "group 632fa284-54ba-4cba-b84a-785f22501c9b", "seconds": 0.0, "ok": true}
+{"ts": 1795185791.35, "event": "tool_start", "tool": "tl-vision", "args": "https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg --context Back cover of a 3LP K.I.Z album. Read the printed title, and the full tracklist exactly as printed: side letters (A, B, C, D, E, F), track numbers and titles."}
+{"ts": 1795185807.15, "event": "tool_end", "tool": "tl-vision", "args": "https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg --context Back cover of a 3LP K.I.Z album. Read the printed title, and the full tracklist exactly as printed: side letters (A, B, C, D, E, F), track numbers and titles.", "seconds": 15.8, "ok": true}
+{"ts": 1795185816.33, "event": "tool_start", "tool": "tl-mb", "args": "release a64dbfc0-de72-4fbb-92f3-1264a6e8b6ea"}
+{"ts": 1795185816.33, "event": "tool_end", "tool": "tl-mb", "args": "release a64dbfc0-de72-4fbb-92f3-1264a6e8b6ea", "seconds": 0.0, "ok": true}
+{"ts": 1795185823.8, "event": "tool_start", "tool": "tl-vision", "args": "https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370019492-1200.jpg --context Image from a K.I.Z 3LP. Identify what is shown and transcribe any track titles visible verbatim (case as printed)."}
+{"ts": 1795185830.0, "event": "tool_end", "tool": "tl-vision", "args": "https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370019492-1200.jpg --context Image from a K.I.Z 3LP. Identify what is shown and transcribe any track titles visible verbatim (case as printed).", "seconds": 6.2, "ok": true}
+{"ts": 1795185835.73, "event": "tool_start", "tool": "tl-search", "args": "\"DJ Set\" K.I.Z Görlitzer Park Live aus Leipzig Tracklist"}
+{"ts": 1795185837.94, "event": "tool_end", "tool": "tl-search", "args": "\"DJ Set\" K.I.Z Görlitzer Park Live aus Leipzig Tracklist", "seconds": 2.2, "ok": true}
+{"ts": 1795185844.71, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/ --mode firecrawl"}
+{"ts": 1795185850.5, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/ --mode firecrawl", "seconds": 5.8, "ok": true}
+{"ts": 1795185865.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://genius.com/albums/Kiz/Gorlitzer-park-live-aus-leipzig --mode firecrawl"}
+{"ts": 1795185879.23, "event": "tool_end", "tool": "tl-scrape", "args": "https://genius.com/albums/Kiz/Gorlitzer-park-live-aus-leipzig --mode firecrawl", "seconds": 13.6, "ok": true}
+{"ts": 1795185884.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/9cd41bed-67ba-4330-8dc7-7387904606da?inc=artist-credits&fmt=json --mode http"}
+{"ts": 1795185884.71, "event": "tool_end", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/9cd41bed-67ba-4330-8dc7-7387904606da?inc=artist-credits&fmt=json --mode http", "seconds": 0.6, "ok": true}
+{"ts": 1795185896.12, "event": "tool_start", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/9cd41bed-67ba-4330-8dc7-7387904606da?inc=recordings%2Bartist-credits&fmt=json --mode http --grep \"artist-credit\""}
+{"ts": 1795185896.12, "event": "tool_end", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/9cd41bed-67ba-4330-8dc7-7387904606da?inc=recordings%2Bartist-credits&fmt=json --mode http --grep \"artist-credit\"", "seconds": 0.0, "ok": true}
+{"ts": 1795185971.68, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 14, "steps": 15}
+{"ts": 1795185971.68, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185977.11, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 3 tracks, ISRC 2"}
+{"ts": 1795185977.11, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185997.97, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 4.15, "error": null}
+{"ts": 1795185997.97, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 4.15, "tracks": 32, "wall_s": 223.9, "judge_s": 20.9, "cost_usd": 0.0192, "mode": "agent", "errors": []}

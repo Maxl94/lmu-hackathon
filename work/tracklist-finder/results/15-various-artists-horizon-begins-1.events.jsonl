@@ -1,0 +1,74 @@
+{"ts": 1795186260.09, "event": "run_start", "input": {"title": "Horizon Begins 1", "artist": "Various Artists", "ean": "4250101487415"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186260.09, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186260.09, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4250101487415): 0 hits"}
+{"ts": 1795186260.09, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795186260.09, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795186260.09, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186283.34, "event": "tool_start", "tool": "tl-gtin", "args": "4250101487415"}
+{"ts": 1795186283.34, "event": "tool_end", "tool": "tl-gtin", "args": "4250101487415", "seconds": 0.0, "ok": true}
+{"ts": 1795186283.46, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4250101487415"}
+{"ts": 1795186283.46, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4250101487415", "seconds": 0.0, "ok": true}
+{"ts": 1795186283.59, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4250101487415"}
+{"ts": 1795186283.59, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4250101487415", "seconds": 0.0, "ok": true}
+{"ts": 1795186311.4, "event": "tool_start", "tool": "tl-discogs", "args": "release 35282479"}
+{"ts": 1795186311.4, "event": "tool_end", "tool": "tl-discogs", "args": "release 35282479", "seconds": 0.0, "ok": true}
+{"ts": 1795186315.48, "event": "tool_start", "tool": "tl-mb", "args": "search --title Horizon Begins --artist Various Artists"}
+{"ts": 1795186315.48, "event": "tool_end", "tool": "tl-mb", "args": "search --title Horizon Begins --artist Various Artists", "seconds": 0.0, "ok": true}
+{"ts": 1795186315.61, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Horizon Begins 1"}
+{"ts": 1795186320.11, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Horizon Begins 1", "seconds": 4.5, "ok": true}
+{"ts": 1795186320.28, "event": "tool_start", "tool": "tl-itunes", "args": "search Orion Records Horizon Begins"}
+{"ts": 1795186320.28, "event": "tool_end", "tool": "tl-itunes", "args": "search Orion Records Horizon Begins", "seconds": 0.0, "ok": true}
+{"ts": 1795186320.41, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Various Artists --title Horizon Begins 1"}
+{"ts": 1795186320.41, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Various Artists --title Horizon Begins 1", "seconds": 0.0, "ok": true}
+{"ts": 1795186325.15, "event": "tool_start", "tool": "tl-search", "args": "\"Horizon Begins\" Orion Records ORNVS01"}
+{"ts": 1795186326.57, "event": "tool_end", "tool": "tl-search", "args": "\"Horizon Begins\" Orion Records ORNVS01", "seconds": 1.4, "ok": true}
+{"ts": 1795186326.75, "event": "tool_start", "tool": "tl-search", "args": "\"Horizon Begins 1\" Various 2025 vinyl tracklist"}
+{"ts": 1795186331.49, "event": "tool_end", "tool": "tl-search", "args": "\"Horizon Begins 1\" Various 2025 vinyl tracklist", "seconds": 4.7, "ok": true}
+{"ts": 1795186342.32, "event": "tool_start", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --grep -iE track|title|duration|listen|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symbyosis|Groovement|Sirens|Intro|[0-9]+:[0-9]{2}"}
+{"ts": 1795186342.33, "event": "tool_end", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --grep -iE track|title|duration|listen|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symbyosis|Groovement|Sirens|Intro|[0-9]+:[0-9]{2}", "seconds": 0.0, "ok": false}
+{"ts": 1795186347.66, "event": "tool_start", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --grep Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symbyosis|Groovement|Sirens|Intro|track_row|duration"}
+{"ts": 1795186347.71, "event": "tool_end", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --grep Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symbyosis|Groovement|Sirens|Intro|track_row|duration", "seconds": 0.1, "ok": true}
+{"ts": 1795186350.49, "event": "tool_start", "tool": "tl-scrape", "args": "https://wordandsound.net/release/162303-ORNVS01-Various-Artists-Horizon-Begins-1 --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symb|Groovement|Sirens|min|sec"}
+{"ts": 1795186350.54, "event": "tool_end", "tool": "tl-scrape", "args": "https://wordandsound.net/release/162303-ORNVS01-Various-Artists-Horizon-Begins-1 --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symb|Groovement|Sirens|min|sec", "seconds": 0.0, "ok": true}
+{"ts": 1795186350.75, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/track/various_artists-horizon_begins_1/cpb-wg --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]"}
+{"ts": 1795186350.75, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/track/various_artists-horizon_begins_1/cpb-wg --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble Love|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]", "seconds": 0.0, "ok": true}
+{"ts": 1795186355.23, "event": "tool_start", "tool": "tl-search", "args": "Horizon Begins 1 ORNVS01 beatport"}
+{"ts": 1795186356.39, "event": "tool_end", "tool": "tl-search", "args": "Horizon Begins 1 ORNVS01 beatport", "seconds": 1.2, "ok": true}
+{"ts": 1795186356.54, "event": "tool_start", "tool": "tl-scrape", "args": "https://yoyaku.io/release/200188-martinou-ateq-orion-skyra-horizon-begins-1-ornvs01/ --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]"}
+{"ts": 1795186356.57, "event": "tool_end", "tool": "tl-scrape", "args": "https://yoyaku.io/release/200188-martinou-ateq-orion-skyra-horizon-begins-1-ornvs01/ --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]", "seconds": 0.0, "ok": true}
+{"ts": 1795186363.09, "event": "tool_start", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1 --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]|min"}
+{"ts": 1795186363.11, "event": "tool_end", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1 --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]|min", "seconds": 0.0, "ok": true}
+{"ts": 1795186449.79, "event": "tool_start", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1 --grep Sirens -A 3"}
+{"ts": 1795186449.8, "event": "tool_end", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1 --grep Sirens -A 3", "seconds": 0.0, "ok": false}
+{"ts": 1795186450.01, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/de/release/35282479-Various-Horizon-Begins-1 --grep Intro|A1|A2|A3|Newlife|Sky High|6:5|total|Unknown"}
+{"ts": 1795186466.88, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/de/release/35282479-Various-Horizon-Begins-1 --grep Intro|A1|A2|A3|Newlife|Sky High|6:5|total|Unknown", "seconds": 16.9, "ok": true}
+{"ts": 1795186605.08, "event": "tool_start", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1"}
+{"ts": 1795186605.11, "event": "tool_end", "tool": "tl-scrape", "args": "https://kompakt.fm/releases/horizon_begins_1", "seconds": 0.0, "ok": true}
+{"ts": 1795186609.26, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778 --grep [0-9]:[0-9][0-9]|Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens"}
+{"ts": 1795186609.53, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778 --grep [0-9]:[0-9][0-9]|Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens", "seconds": 0.3, "ok": true}
+{"ts": 1795186613.87, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/35282479 --grep i.discogs.com"}
+{"ts": 1795186614.16, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/35282479 --grep i.discogs.com", "seconds": 0.3, "ok": true}
+{"ts": 1795186621.97, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/35282479 --grep 45 RPM|16 min|intros|locked|sticker"}
+{"ts": 1795186622.19, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/35282479 --grep 45 RPM|16 min|intros|locked|sticker", "seconds": 0.2, "ok": true}
+{"ts": 1795186641.62, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/ --grep [0-9]:[0-9][0-9]|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens"}
+{"ts": 1795186642.37, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/ --grep [0-9]:[0-9][0-9]|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens", "seconds": 0.8, "ok": true}
+{"ts": 1795186649.93, "event": "tool_start", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/35282479 --grep images|uri|width|duration"}
+{"ts": 1795186649.94, "event": "tool_end", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/35282479 --grep images|uri|width|duration", "seconds": 0.0, "ok": true}
+{"ts": 1795186654.93, "event": "tool_start", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/35282479 --max 40000"}
+{"ts": 1795186654.93, "event": "tool_end", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/35282479 --max 40000", "seconds": 0.0, "ok": true}
+{"ts": 1795186657.87, "event": "tool_start", "tool": "tl-scrape", "args": "https://clone.nl/item81028.html --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]"}
+{"ts": 1795186658.25, "event": "tool_end", "tool": "tl-scrape", "args": "https://clone.nl/item81028.html --grep Intro|Newlife|Sky High|Phoenix|Past Mind|Bubble|Symb|Groovement|Sirens|[0-9]:[0-9][0-9]", "seconds": 0.4, "ok": true}
+{"ts": 1795186667.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --max 60000"}
+{"ts": 1795186667.69, "event": "tool_end", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --max 60000", "seconds": 0.1, "ok": true}
+{"ts": 1795186671.14, "event": "tool_start", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --max 20000"}
+{"ts": 1795186671.21, "event": "tool_end", "tool": "tl-scrape", "args": "https://orion01.bandcamp.com/album/horizon-begins-1 --max 20000", "seconds": 0.1, "ok": true}
+{"ts": 1795186706.57, "event": "tool_start", "tool": "tl-search", "args": "hardwax ORNVS01 Horizon Begins"}
+{"ts": 1795186707.67, "event": "tool_end", "tool": "tl-search", "args": "hardwax ORNVS01 Horizon Begins", "seconds": 1.1, "ok": true}
+{"ts": 1795186707.95, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.hardwax.com/search/?q=ORNVS01 --grep ORNVS01|Horizon"}
+{"ts": 1795186718.89, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.hardwax.com/search/?q=ORNVS01 --grep ORNVS01|Horizon", "seconds": 10.9, "ok": true}
+{"ts": 1795186754.71, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 24, "steps": 25}
+{"ts": 1795186754.71, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186754.71, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186754.71, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186774.34, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.9, "error": null}
+{"ts": 1795186774.34, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.9, "tracks": 9, "wall_s": 494.6, "judge_s": 19.6, "cost_usd": 0.0244, "mode": "agent", "errors": []}

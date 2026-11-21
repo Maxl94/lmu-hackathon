@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:02",
+ "overall": 2.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: requires a barcode in the input. NOT MET, because the input has no barcode. Level 4: title, artist and format match Discogs r24165131 (MET). Label Fred Kersten KG and cat. no. MC 6109 appear in Discogs and on the read shell-label images (MET, though the images are hosted on the same Discogs entry, so not truly independent). 'No other edition fitting the input has a different tracklist': NOT clearly MET. Web search found 'Blasmusik Aus Lohnde (Folge 2)', a cassette (Discogs r24154076) credited to Swinging Seelze. The input does not specify a Folge, Folge 2's tracklist was never checked, and Swinging Seelze may be an ensemble linked to the same Musikverein. Level 3: the input artist 'Musikverein Lohnde' matches only Folge 1, so the competitor is reasonably excluded by artist, and there is only one database source. MET.",
+   "summary": "Discogs r24165131 matches title, artist and format, but the series competitor Folge 2 (r24154076, different credited artist) was not examined and the input names no Folge.",
+   "evidence": [
+    "tl-discogs search",
+    "tl-discogs release 24165131",
+    "tl-search Blasmusik aus Lohnde Musikverein Lohnde Kassette Trackliste",
+    "tl-vision shell labels MC 6109"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: requires >=2 independent sources of the same edition agreeing. The Discogs tracklist and the tl-vision reading of the J-card back match exactly (10 tracks, same order, only capitalisation variants). However, the J-card image is hosted on the Discogs entry, and the Discogs text was likely transcribed from it, so independence is questionable. NOT fully MET. Level 4: one complete source (Discogs) confirmed by a second (J-card read, plus the inner panel for side 1). MET.",
+   "summary": "The Discogs tracklist is fully confirmed by the vision reading of the J-card, but both stem from the same Discogs entry.",
+   "evidence": [
+    "tl-discogs release 24165131",
+    "image:...NTctNjE4OC5qcGVn (J-card back)",
+    "image:...NTEtNjY4NS5qcGVn (J-card inner side 1)",
+    "tl-scrape discogs release page"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus an independent primary source. The J-card and shell images are primary prints, but they are hosted on the same Discogs entry and are not independent. NOT MET. Level 4: two independent database entries or a database plus a collector site. MusicBrainz returned 0 results and no musik-sammler entry was found. NOT MET. Level 3: one good database, or sources that may have copied each other (cover images hosted on the same database entry). MET.",
+   "summary": "Only Discogs, plus cover images hosted on the same Discogs entry.",
+   "evidence": [
+    "tl-mb search (0 results)",
+    "tl-discogs release 24165131",
+    "tl-vision images from discogs r24165131"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing release 'Blasmusik Aus Lohnde (Folge 2)' (discogs r24154076, Swinging Seelze, cassette) was found in search but not examined; the input does not specify Folge 1 or 2.",
+  "The result lists source family 'image', but all images come from the same Discogs entry, so there is no independent confirmation.",
+  "The tl-discogs versions call returned an irrelevant global listing (8,168,353 versions), so it provides no information on repressings.",
+  "No durations are available for any track."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 22.3,
+  "tokens_in": 21064,
+  "tokens_out": 2134,
+  "cost_usd": 0.12694,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

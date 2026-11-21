@@ -1,0 +1,54 @@
+{"ts": 1795185747.87, "event": "run_start", "input": {"title": "Long Player (RSD Exklusive)", "artist": "Fantastischen Vier, Die", "ean": "4262459550239"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185747.87, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185747.87, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4262459550239): 0 hits"}
+{"ts": 1795185747.87, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185747.87, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185747.87, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185751.97, "event": "tool_start", "tool": "tl-gtin", "args": "4262459550239"}
+{"ts": 1795185751.97, "event": "tool_end", "tool": "tl-gtin", "args": "4262459550239", "seconds": 0.0, "ok": true}
+{"ts": 1795185752.11, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4262459550239"}
+{"ts": 1795185752.11, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4262459550239", "seconds": 0.0, "ok": true}
+{"ts": 1795185752.23, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4262459550239"}
+{"ts": 1795185752.23, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4262459550239", "seconds": 0.0, "ok": true}
+{"ts": 1795185753.57, "event": "tool_start", "tool": "tl-discogs", "args": "release 33691152"}
+{"ts": 1795185753.57, "event": "tool_end", "tool": "tl-discogs", "args": "release 33691152", "seconds": 0.0, "ok": true}
+{"ts": 1795185756.57, "event": "tool_start", "tool": "tl-mb", "args": "search --title Long Player --artist Die Fantastischen Vier --format Vinyl"}
+{"ts": 1795185756.57, "event": "tool_end", "tool": "tl-mb", "args": "search --title Long Player --artist Die Fantastischen Vier --format Vinyl", "seconds": 0.0, "ok": true}
+{"ts": 1795185756.7, "event": "tool_start", "tool": "tl-mb", "args": "search --title Long Player --artist Die Fantastischen Vier"}
+{"ts": 1795185756.71, "event": "tool_end", "tool": "tl-mb", "args": "search --title Long Player --artist Die Fantastischen Vier", "seconds": 0.0, "ok": true}
+{"ts": 1795185778.27, "event": "tool_start", "tool": "tl-mb", "args": "release 7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"}
+{"ts": 1795185778.27, "event": "tool_end", "tool": "tl-mb", "args": "release 7cbbf3a1-c6d4-4dc4-a26e-15078742d7da", "seconds": 0.0, "ok": true}
+{"ts": 1795185794.41, "event": "tool_start", "tool": "tl-mb", "args": "group 61c6be96-73ec-4dbd-ac9d-b45470cc545e"}
+{"ts": 1795185794.42, "event": "tool_end", "tool": "tl-mb", "args": "group 61c6be96-73ec-4dbd-ac9d-b45470cc545e", "seconds": 0.0, "ok": true}
+{"ts": 1795185794.54, "event": "tool_start", "tool": "tl-discogs", "args": "versions 3616795"}
+{"ts": 1795185794.54, "event": "tool_end", "tool": "tl-discogs", "args": "versions 3616795", "seconds": 0.0, "ok": true}
+{"ts": 1795185807.35, "event": "tool_start", "tool": "tl-itunes", "args": "search Die Fantastischen Vier Long Player"}
+{"ts": 1795185807.98, "event": "tool_end", "tool": "tl-itunes", "args": "search Die Fantastischen Vier Long Player", "seconds": 0.6, "ok": true}
+{"ts": 1795185808.12, "event": "tool_start", "tool": "tl-lastfm", "args": "album --artist Die Fantastischen Vier --title Long Player"}
+{"ts": 1795185808.12, "event": "tool_end", "tool": "tl-lastfm", "args": "album --artist Die Fantastischen Vier --title Long Player", "seconds": 0.0, "ok": true}
+{"ts": 1795185814.09, "event": "tool_start", "tool": "tl-itunes", "args": "album 1759547350"}
+{"ts": 1795185816.8, "event": "tool_end", "tool": "tl-itunes", "args": "album 1759547350", "seconds": 2.7, "ok": true}
+{"ts": 1795185820.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --grep -o \"artist\":\\{[^}]*\\}"}
+{"ts": 1795185820.12, "event": "tool_end", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --grep -o \"artist\":\\{[^}]*\\}", "seconds": 0.0, "ok": false}
+{"ts": 1795185822.27, "event": "tool_start", "tool": "tl-scrape", "args": "--help"}
+{"ts": 1795185822.28, "event": "tool_end", "tool": "tl-scrape", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795185828.88, "event": "tool_start", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --max 20000"}
+{"ts": 1795185829.84, "event": "tool_end", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --max 20000", "seconds": 1.0, "ok": true}
+{"ts": 1795185837.04, "event": "tool_start", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --max 30000 --grep (?i)kadavar|seven dettwyler|mia\\.|hansi biebl"}
+{"ts": 1795185837.04, "event": "tool_end", "tool": "tl-scrape", "args": "https://musicbrainz.org/ws/2/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da?inc=artist-credits+recordings&fmt=json --max 30000 --grep (?i)kadavar|seven dettwyler|mia\\.|hansi biebl", "seconds": 0.0, "ok": true}
+{"ts": 1795185845.93, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/g5apTkR8fY44zFsiwuSFcPICbwvacCDASekFVuGbBq8/rs:fit/g:sm/q:90/h:289/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjkx/MTUyLTE3NDQ1ODA1/MTUtNzUxNC5qcGVn.jpeg --context Back cover of the 2025 RSD 2-LP reissue 'Long Player' by Die Fantastischen Vier. Read the printed tracklis"}
+{"ts": 1795185846.15, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/g5apTkR8fY44zFsiwuSFcPICbwvacCDASekFVuGbBq8/rs:fit/g:sm/q:90/h:289/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjkx/MTUyLTE3NDQ1ODA1/MTUtNzUxNC5qcGVn.jpeg --context Back cover of the 2025 RSD 2-LP reissue 'Long Player' by Die Fantastischen Vier. Read the printed tracklis", "seconds": 0.2, "ok": false}
+{"ts": 1795185863.84, "event": "tool_start", "tool": "tl-search", "args": "4262459550239 Long Player Fantastischen Vier RSD 2LP"}
+{"ts": 1795185867.3, "event": "tool_end", "tool": "tl-search", "args": "4262459550239 Long Player Fantastischen Vier RSD 2LP", "seconds": 3.5, "ok": true}
+{"ts": 1795185882.83, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/die-fantastischen-vier-long-player-2-lp-1683630/ --max 6000 --grep (?i)A1|B1|C1|D1|Long Player|Seite|Vinyl|2024"}
+{"ts": 1795185882.85, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/die-fantastischen-vier-long-player-2-lp-1683630/ --max 6000 --grep (?i)A1|B1|C1|D1|Long Player|Seite|Vinyl|2024", "seconds": 0.0, "ok": true}
+{"ts": 1795185886.76, "event": "tool_start", "tool": "tl-scrape", "args": "https://diefantastischenvier.shop/products/die-fantastischen-vier-long-player-vinyl-2lp-rsd-edition --mode firecrawl --max 8000 --grep (?i)track|A1|Seite|Side|4262459550239|Long Player"}
+{"ts": 1795185886.76, "event": "tool_end", "tool": "tl-scrape", "args": "https://diefantastischenvier.shop/products/die-fantastischen-vier-long-player-vinyl-2lp-rsd-edition --mode firecrawl --max 8000 --grep (?i)track|A1|Seite|Side|4262459550239|Long Player", "seconds": 0.0, "ok": true}
+{"ts": 1795185952.16, "event": "tool_start", "tool": "tl-vision", "args": "/tmp/opencode/rsd1.webp --context Product image of the 2025 RSD edition 2-LP 'Long Player' by Die Fantastischen Vier. If a tracklist is visible, list tracks with side/position letters and durations; also report any barcode."}
+{"ts": 1795185997.13, "event": "tool_end", "tool": "tl-vision", "args": "/tmp/opencode/rsd1.webp --context Product image of the 2025 RSD edition 2-LP 'Long Player' by Die Fantastischen Vier. If a tracklist is visible, list tracks with side/position letters and durations; also report any barcode.", "seconds": 45.0, "ok": true}
+{"ts": 1795186065.5, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 26, "steps": 27}
+{"ts": 1795186065.5, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186069.26, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 16"}
+{"ts": 1795186069.26, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186087.35, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.75, "error": null}
+{"ts": 1795186087.35, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.75, "tracks": 16, "wall_s": 317.6, "judge_s": 18.1, "cost_usd": 0.0214, "mode": "agent", "errors": []}

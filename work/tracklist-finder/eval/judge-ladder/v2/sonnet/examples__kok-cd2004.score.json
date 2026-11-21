@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:29",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (a) the input barcode matches this edition in >=2 independent sources - MET. EAN 4019593960000 is valid (tl-gtin), and it hits MusicBrainz 15996385 (step 2), Discogs 3057907 (step 3) and musik-sammler.de 44531 (step 14). (b) Format and artist match - MET: CD, Bushido, title King of Kingz. (c) No other edition with the same barcode and a different tracklist - MET. The alternatives found (2003 Aggro CD with EAN 4018939105976, 2005 2-CD 40195 9396003-1, 2001 cassette, 2021 digital with EAN 4062851781114) all carry different barcodes or no barcode, and none shares 4019593960000. The cover back also prints the same barcode and cat. no. All conditions are met, so level 5.",
+   "summary": "The barcode matches exactly in three sources (MusicBrainz, Discogs, musik-sammler.de), and no competing edition shares it.",
+   "evidence": [
+    "tl-gtin 4019593960000",
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "tl-scrape musik-sammler 44531",
+    "tl-mb group 85fc52d2"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - MET. MusicBrainz (step 4), Discogs (step 5) and musik-sammler.de (step 14) all list the same 20 tracks in the same order, including the 3 ersguteremix tracks and the Outro (ersguterdevin). The back cover read via tl-vision (steps 7 and 17) also shows 20 tracks in the same order. The only differences are spelling (Pitbull/Pittbull, feat. credits) and duration deviations of 1-3 s, which do not affect count, order or titles. Level 5.",
+   "summary": "Three databases and the cover back agree on 20 tracks, order and titles, with only spelling variants and small duration differences.",
+   "evidence": [
+    "tl-mb release 15996385",
+    "tl-discogs release 3057907",
+    "tl-scrape musik-sammler 44531",
+    "tl-vision back cover (2 reads)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source of the same edition - NOT MET (strict reading). The back cover scan comes from the Cover Art Archive, attached to the MusicBrainz entry, so it is not clearly independent of that database. It was also read only via a vision model, and the agent's own direct image read gave no information. Level 4: two independent database entries or database + specialised collector site - MET. MusicBrainz and Discogs are separate database entries with differing details (durations differ). musik-sammler.de is a specialised collector site with the same EAN. Level 4.",
+   "summary": "MusicBrainz, Discogs and musik-sammler.de are independent sources with differing details, but the cover scan is tied to the MusicBrainz entry, which keeps it from level 5.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:coverartarchive.org/.../23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Durations for tracks 10, 15 and 16 differ by more than 2 s between Discogs and MusicBrainz/musik-sammler.de. The agent resolved them by preferring MusicBrainz, which is plausible but not proven against a primary source, since no durations are printed on the cover.",
+  "total_duration_s 3720 does not match musik-sammler's 61:54 (3714 s); MusicBrainz gives 3721 s. The deviation is small.",
+  "Track 20 'Outro (ersguterdevin)' was marked [unsicher] in the second vision read of the cover. The spelling is only secondarily confirmed by the databases.",
+  "Track 11 is rendered 'Pittbull' (cover and musik-sammler) while MusicBrainz and Discogs say 'Pitbull'. This is documented as a spelling variant and is acceptable.",
+  "The validator warning 'hohe confidence trotz offener conflicts' persisted after confidence was lowered only from 0.95 to 0.93; the final reported confidence in the result is 0.9.",
+  "The agent noted it could not view the image directly; the cover reading depends solely on the tl-vision tool.",
+  "The hitparade.ch page was analysed but describes other editions. The 2-CD alternative is attributed to hitparade, yet the claim that tracks like Superheroez are missing is only partially visible in the truncated output."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 21.9,
+  "tokens_in": 43359,
+  "tokens_out": 2584,
+  "cost_usd": 0.11256,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

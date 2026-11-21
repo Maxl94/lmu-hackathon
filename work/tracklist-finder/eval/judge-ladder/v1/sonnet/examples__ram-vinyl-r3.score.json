@@ -1,0 +1,86 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:39",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Der Input hat keinen Barcode, nur Titel, Artist und Format. Die gewählte Standard-2×LP (Columbia 88883716861, Barcode 888837168618) passt in MB und Discogs (Schritte 5, 6). Es gibt viele Repressings/Reissues mit identischer Trackliste, aber auch Editionen mit abweichender Trackliste (10th Anniversary, Box, Drumless). Die Wahl ist plausibel, beruht aber auf der Annahme 'Standardausgabe'. Der Input legt sie nicht fest.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (Schritt 5) und Discogs (Schritt 6) nennen dieselben 13 Tracks in derselben Reihenfolge A1–D4. Die Titel unterscheiden sich nur in der Schreibweise. Dauern weichen um 1–2 s ab (A1, A2, C2, D4), das ist als Rundung erklärt. Bei D4 sind es 381 s gegen 383 s und bei C2 367 s gegen 369 s, also leicht über Rundung. Der Agent nennt sie trotzdem 'bestätigt'.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt nur zwei Datenbanken (MusicBrainz, Discogs) und keine Primärquelle wie Cover oder Label-Aufdruck. Die beiden Einträge sind teils unabhängig, erkennbar an unterschiedlichen Dauern und Identifiern. Das ergibt Stufe 4.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Input hat keinen Barcode, die Edition wurde nur per Annahme 'Standard-2×LP' gewählt. Das Ergebnis meldet status found und nicht ambiguous.",
+  "Die Sources-Notiz 'Dauern bestätigt' ist ungenau: Discogs weicht bei A1, A2, C2 und D4 um 1–2 s ab. Der Agent hat die MB-Werte genommen.",
+  "MusicBrainz nennt für die Release-Daten 2013-05-17 DE im Detail, in der Suche aber 2013-05-20 FR. Der Agent trägt Land DE ein und erwähnt die Abweichung nicht.",
+  "Die Alternativen 2017/2021/2022 und Drumless sind nur aus der gekürzten Suchausgabe belegt. Die Drumless-Edition (discogs:release/28924120) und 'Trackliste identisch' bei den Reissues sind nicht per Release-Abruf geprüft."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 8.3,
+  "tokens_in": 18311,
+  "tokens_out": 1058,
+  "cost_usd": 0.0472,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

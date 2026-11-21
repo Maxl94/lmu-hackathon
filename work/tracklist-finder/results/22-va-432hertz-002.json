@@ -1,0 +1,308 @@
+{
+ "input": {
+  "id": "22-va-432hertz-002",
+  "title": "432HERTZ 002",
+  "artist": "VA"
+ },
+ "status": "found",
+ "release": {
+  "title": "303rd Dimensions",
+  "artist": "Various",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "432HERTZ BERLIN",
+  "catno": "432-002",
+  "barcode": null,
+  "edition": "12\" EP, 33 ⅓ RPM, stereo, vinyl only (label's second release, cat. 432-002)",
+  "ids": {
+   "discogs": "35007128"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Cognitive Dissonance",
+   "artist": "Dan Piu",
+   "duration_s": 360,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Reverse",
+   "artist": "Rinaldo Makaj",
+   "duration_s": 270,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "TAR 1000",
+   "artist": "Electric City",
+   "duration_s": 270,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Drop The Bass",
+   "artist": "Gela",
+   "duration_s": 360,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Pressure",
+   "artist": "Mathi",
+   "duration_s": 270,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Gibson Prescher",
+     "role": "writer",
+     "sources": [
+      "genius:song/8959894"
+     ]
+    },
+    {
+     "name": "André Mariette",
+     "role": "writer",
+     "sources": [
+      "genius:song/8959894"
+     ]
+    },
+    {
+     "name": "Mati",
+     "role": "writer",
+     "sources": [
+      "genius:song/8959894"
+     ]
+    },
+    {
+     "name": "André Mariette",
+     "role": "producer",
+     "sources": [
+      "genius:song/8959894"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Functionality",
+   "artist": "Gianluca Pellerano",
+   "duration_s": 270,
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "duration_sources": [
+    "discogs:release/35007128"
+   ],
+   "flags": [],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Dan Piu",
+   "role": "main",
+   "tracks": [
+    "A1"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ]
+  },
+  {
+   "name": "Rinaldo Makaj",
+   "role": "main",
+   "tracks": [
+    "A2"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://432hertzberlin.com/"
+   ]
+  },
+  {
+   "name": "Electric City",
+   "role": "main",
+   "tracks": [
+    "A3"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ]
+  },
+  {
+   "name": "Gela",
+   "role": "main",
+   "tracks": [
+    "B1"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ]
+  },
+  {
+   "name": "Mathi",
+   "role": "main",
+   "tracks": [
+    "B2"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ]
+  },
+  {
+   "name": "Gianluca Pellerano",
+   "role": "main",
+   "tracks": [
+    "B3"
+   ],
+   "sources": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738"
+   ]
+  }
+ ],
+ "total_duration_s": 1800,
+ "confidence": 0.75,
+ "sources": [
+  {
+   "id": "discogs:release/35007128",
+   "url": "https://www.discogs.com/release/35007128-Various-303rd-Dimensions",
+   "kind": "database",
+   "note": "Vinyl 12\", 33 ⅓ RPM, EP, DE 2025-09-02, cat. 432-002; single source for durations (rounded, data quality 'Needs Vote')"
+  },
+  {
+   "id": "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+   "url": "https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+   "kind": "shop",
+   "note": "tracklist A1–B3 with artists, no durations"
+  },
+  {
+   "id": "web:https://dancingvinyl.com/item/1754301901771",
+   "url": "https://dancingvinyl.com/item/1754301901771",
+   "kind": "shop",
+   "note": "6-track tracklist + artists + BPM/key, no durations"
+  },
+  {
+   "id": "web:https://432hertzberlin.com/",
+   "url": "https://432hertzberlin.com/",
+   "kind": "web",
+   "note": "label site: 432-002 = '303rd Dimensions' (2025), curated by Rinaldo Makaj"
+  },
+  {
+   "id": "genius:song/8959894",
+   "url": "https://genius.com/Mati-pressure-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "release title",
+   "values": {
+    "input": "432HERTZ 002",
+    "discogs:release/35007128": "303rd Dimensions",
+    "web:https://432hertzberlin.com/": "303rd Dimensions",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738": "303rd Dimensions"
+   },
+   "resolution": "Input title is the label/catalogue reference '432HERTZ 002' (= cat. 432-002); the release itself is titled '303rd Dimensions' on all sources, so that title is used."
+  },
+  {
+   "field": "title track A3",
+   "values": {
+    "discogs:release/35007128": "TAR 1000",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738": "Tar 1000",
+    "web:https://dancingvinyl.com/item/1754301901771": "Tar 1000"
+   },
+   "resolution": "Case-only difference; Discogs header capitalisation 'TAR 1000' taken (no printed cover available to check)."
+  },
+  {
+   "field": "artist track B2",
+   "values": {
+    "discogs:release/35007128": "Mathi",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738": "Mathi",
+    "web:https://dancingvinyl.com/item/1754301901771": "Mathii"
+   },
+   "resolution": "Two sources (Discogs, deejay.de) credit 'Mathi'; promotional text on dancingvinyl also uses 'Mathii' — 'Mathi' chosen as the credit used in the tracklist listings."
+  },
+  {
+   "field": "durations",
+   "values": {
+    "discogs:release/35007128": "360/270/270/360/270/270 s"
+   },
+   "resolution": "Only Discogs carries durations and they are rounded to full/half minutes; kept as the single available source, no contradicting value exists."
+  }
+ ],
+ "missing": [
+  "No barcode on this vinyl-only release (Discogs identifiers empty) — no EAN to verify.",
+  "No MusicBrainz release exists for 432HERTZ BERLIN 432-002, so no second database tracklist with millisecond durations; all durations come from Discogs only and are rounded.",
+  "Printed back-cover tracklist not readable (Discogs release has front image only), so exact capitalisation/duration printout unchecked.",
+  "credits missing for 5 of 6 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Discogs release 27044532 — Rinaldo Makaj '432HERTZ BERLIN', 2023, Vinyl 10\", white label, cat. 00",
+   "source": "discogs:release/27044532",
+   "why_not": "label's first/test pressing with different catalogue number and one artist, not the second release 432-002 with six tracks"
+  }
+ ],
+ "reasoning": "Input '432HERTZ 002' + artist 'VA' points to the second release of the Berlin label 432HERTZ BERLIN (cat. 432-002). MusicBrainz has no entry; Discogs release 35007128 gives exactly this: Various – '303rd Dimensions', DE 2025-09-02, 12\" 33 ⅓ RPM, vinyl only, 6 tracks A1–B3. The tracklist and all six artist credits are confirmed independently by deejay.de and dancingvinyl.com (identical order and artists), and the label's own site lists 432-002 as '303rd Dimensions' (2025) curated by Rinaldo Makaj. Durations exist only on Discogs (rounded to 6:00/4:30), so total 1800 s is Discogs-derived; that and the unverified printed capitalisation of track A3 lower confidence to 0.75."
+}

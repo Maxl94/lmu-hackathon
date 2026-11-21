@@ -1,0 +1,91 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:34",
+ "overall": 2.85,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Der Input hat keinen Barcode. Titel und Künstler passen eindeutig zu Discogs 24165131 (Folge 1, MC 6109), und das Format MC stimmt. Das Kassettenetikett (Kat.-Nr., Fred Kersten KG) bestätigt die Ausgabe, ist aber ein Bild derselben Discogs-Seite. Die Alternative Folge 2 hat eine andere Tracklist und einen anderen Credit, und der Titel \"Folge 1\" stammt nur aus dem Discogs-Titel. Damit ist die Ausgabe eindeutig, aber im Kern durch eine Datenbank gestützt.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:.../RkJSxZMf...",
+    "image:.../sXl2KgwP..."
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Discogs liefert 10 Tracks (A1–A6, B1–B4), und die gedruckte J-card-Rückseite (tl-vision, 10 Tracks gelesen) bestätigt Anzahl, Reihenfolge und Titel bis auf Schreibweisen. Die J-card ist ein Bild aus dem Discogs-Eintrag, also eine Primärquelle derselben Edition, aber nicht unabhängig von Discogs. Dauern fehlen komplett.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:.../aWGAwGdW..."
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Eine Datenbank (Discogs) plus gelesene Primärquellen (J-card, Kassettenetikett mit Kat.-Nr. und Label). Das entspricht der Stufe 5 (Datenbank + unabhängige Primärquelle). Die Bilder stammen allerdings von der Discogs-Seite selbst, und weitere Datenbanken lieferten keine Treffer.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:.../aWGAwGdW...",
+    "image:.../RkJSxZMf..."
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Jahr 1991 ist nur aus dem J-card-Text abgeleitet (\"im 67st. Jahr\") und nicht belegt; der Agent kennzeichnet das selbst als ungenau.",
+  "Die Bildquellen stammen alle aus dem Discogs-Eintrag und sind daher nicht vollständig unabhängig.",
+  "Das Original-Tracklist-Bild nennt keinen \"Folge 1\"-Aufdruck. Das Etikett zeigt \"Folge 1\", die Zuordnung zum Input ohne \"Folge\" bleibt eine Annahme.",
+  "Es gibt keinen Barcode und keine Dauern; keine zweite Datenbank (MusicBrainz, musik-sammler) konnte bestätigen."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 7.8,
+  "tokens_in": 35646,
+  "tokens_out": 980,
+  "cost_usd": 0.08109,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

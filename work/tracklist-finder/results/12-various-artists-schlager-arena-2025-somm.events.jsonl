@@ -1,0 +1,74 @@
+{"ts": 1795186004.18, "event": "run_start", "input": {"title": "SCHLAGER ARENA 2025 - SOMMER EDITON - Die größten Hits des Jahres", "artist": "Various Artists", "ean": "4099964172904"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186004.18, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186004.18, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4099964172904): 0 hits"}
+{"ts": 1795186004.18, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795186004.18, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795186004.18, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186007.46, "event": "tool_start", "tool": "tl-gtin", "args": "4099964172904"}
+{"ts": 1795186007.46, "event": "tool_end", "tool": "tl-gtin", "args": "4099964172904", "seconds": 0.0, "ok": true}
+{"ts": 1795186007.59, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4099964172904"}
+{"ts": 1795186007.59, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4099964172904", "seconds": 0.0, "ok": true}
+{"ts": 1795186007.72, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4099964172904"}
+{"ts": 1795186007.72, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4099964172904", "seconds": 0.0, "ok": true}
+{"ts": 1795186009.41, "event": "tool_start", "tool": "tl-mb", "args": "search --title Schlager Arena 2025 --artist Various Artists"}
+{"ts": 1795186012.38, "event": "tool_end", "tool": "tl-mb", "args": "search --title Schlager Arena 2025 --artist Various Artists", "seconds": 3.0, "ok": true}
+{"ts": 1795186012.53, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Schlager Arena 2025"}
+{"ts": 1795186012.53, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Schlager Arena 2025", "seconds": 0.0, "ok": true}
+{"ts": 1795186012.65, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4099964172904"}
+{"ts": 1795186012.66, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4099964172904", "seconds": 0.0, "ok": true}
+{"ts": 1795186012.78, "event": "tool_start", "tool": "tl-deezer", "args": "upc 4099964172904"}
+{"ts": 1795186012.78, "event": "tool_end", "tool": "tl-deezer", "args": "upc 4099964172904", "seconds": 0.0, "ok": true}
+{"ts": 1795186014.49, "event": "tool_start", "tool": "tl-discogs", "args": "release 33835569"}
+{"ts": 1795186014.5, "event": "tool_end", "tool": "tl-discogs", "args": "release 33835569", "seconds": 0.0, "ok": true}
+{"ts": 1795186014.63, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Schlager Arena 2025 Sommer"}
+{"ts": 1795186015.0, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Schlager Arena 2025 Sommer", "seconds": 0.4, "ok": true}
+{"ts": 1795186017.28, "event": "tool_start", "tool": "tl-discogs", "args": "search --catno 409996417290"}
+{"ts": 1795186017.28, "event": "tool_end", "tool": "tl-discogs", "args": "search --catno 409996417290", "seconds": 0.0, "ok": true}
+{"ts": 1795186017.41, "event": "tool_start", "tool": "tl-discogs", "args": "search --catno 4099964172904"}
+{"ts": 1795186017.81, "event": "tool_end", "tool": "tl-discogs", "args": "search --catno 4099964172904", "seconds": 0.4, "ok": true}
+{"ts": 1795186017.96, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Schlager Arena"}
+{"ts": 1795186017.96, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Schlager Arena", "seconds": 0.0, "ok": true}
+{"ts": 1795186018.09, "event": "tool_start", "tool": "tl-search", "args": "Schlager Arena 2025 Sommer Edition 4099964172904"}
+{"ts": 1795186019.84, "event": "tool_end", "tool": "tl-search", "args": "Schlager Arena 2025 Sommer Edition 4099964172904", "seconds": 1.7, "ok": true}
+{"ts": 1795186021.4, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766 --grep -i track|Titel|CD 1|CD 2"}
+{"ts": 1795186021.41, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766 --grep -i track|Titel|CD 1|CD 2", "seconds": 0.0, "ok": false}
+{"ts": 1795186022.85, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"}
+{"ts": 1795186022.89, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766", "seconds": 0.0, "ok": true}
+{"ts": 1795186028.46, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"}
+{"ts": 1795186028.49, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766", "seconds": 0.0, "ok": true}
+{"ts": 1795186032.46, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"}
+{"ts": 1795186039.21, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3", "seconds": 6.7, "ok": true}
+{"ts": 1795186039.41, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.thalia.de/shop/home/artikeldetails/A1075332387 --grep -i track|Sie!|Sommernacht|Disc|CD "}
+{"ts": 1795186039.42, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.thalia.de/shop/home/artikeldetails/A1075332387 --grep -i track|Sie!|Sommernacht|Disc|CD ", "seconds": 0.0, "ok": false}
+{"ts": 1795186049.5, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"}
+{"ts": 1795186049.58, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3", "seconds": 0.1, "ok": true}
+{"ts": 1795186055.84, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"}
+{"ts": 1795186055.92, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3", "seconds": 0.1, "ok": true}
+{"ts": 1795186056.06, "event": "tool_start", "tool": "tl-itunes", "args": "search Schlager Arena 2025 Sommer Edition"}
+{"ts": 1795186056.07, "event": "tool_end", "tool": "tl-itunes", "args": "search Schlager Arena 2025 Sommer Edition", "seconds": 0.0, "ok": true}
+{"ts": 1795186057.28, "event": "tool_start", "tool": "tl-itunes", "args": "--help"}
+{"ts": 1795186057.29, "event": "tool_end", "tool": "tl-itunes", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795186064.09, "event": "tool_start", "tool": "tl-itunes", "args": "album 1824661315"}
+{"ts": 1795186064.09, "event": "tool_end", "tool": "tl-itunes", "args": "album 1824661315", "seconds": 0.0, "ok": true}
+{"ts": 1795186067.59, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Various Artists --title Schlager Arena 2025 Sommer Edition"}
+{"ts": 1795186067.6, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Various Artists --title Schlager Arena 2025 Sommer Edition", "seconds": 0.0, "ok": true}
+{"ts": 1795186086.58, "event": "tool_start", "tool": "tl-itunes", "args": "album 1824661315 --country us"}
+{"ts": 1795186095.16, "event": "tool_end", "tool": "tl-itunes", "args": "album 1824661315 --country us", "seconds": 8.6, "ok": true}
+{"ts": 1795186095.31, "event": "tool_start", "tool": "tl-itunes", "args": "search Frank Lukas Noch immer dieselben"}
+{"ts": 1795186095.31, "event": "tool_end", "tool": "tl-itunes", "args": "search Frank Lukas Noch immer dieselben", "seconds": 0.0, "ok": true}
+{"ts": 1795186095.44, "event": "tool_start", "tool": "tl-itunes", "args": "search Sarah Zucker Cabriolet"}
+{"ts": 1795186095.44, "event": "tool_end", "tool": "tl-itunes", "args": "search Sarah Zucker Cabriolet", "seconds": 0.0, "ok": true}
+{"ts": 1795186095.56, "event": "tool_start", "tool": "tl-itunes", "args": "search Frank Lars Mein Baby"}
+{"ts": 1795186095.57, "event": "tool_end", "tool": "tl-itunes", "args": "search Frank Lars Mein Baby", "seconds": 0.0, "ok": true}
+{"ts": 1795186121.29, "event": "tool_start", "tool": "tl-itunes", "args": "album 1771866855"}
+{"ts": 1795186121.29, "event": "tool_end", "tool": "tl-itunes", "args": "album 1771866855", "seconds": 0.0, "ok": true}
+{"ts": 1795186121.42, "event": "tool_start", "tool": "tl-itunes", "args": "album 1758954473"}
+{"ts": 1795186121.42, "event": "tool_end", "tool": "tl-itunes", "args": "album 1758954473", "seconds": 0.0, "ok": true}
+{"ts": 1795186121.55, "event": "tool_start", "tool": "tl-itunes", "args": "album 1794624460"}
+{"ts": 1795186121.55, "event": "tool_end", "tool": "tl-itunes", "args": "album 1794624460", "seconds": 0.0, "ok": true}
+{"ts": 1795186241.13, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 19, "steps": 20}
+{"ts": 1795186241.13, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186241.13, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186241.13, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186260.09, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.65, "error": null}
+{"ts": 1795186260.09, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.65, "tracks": 40, "wall_s": 237.0, "judge_s": 19.0, "cost_usd": 0.0178, "mode": "agent", "errors": []}

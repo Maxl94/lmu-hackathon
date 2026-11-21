@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:28",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "5: The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources: NOT MET. The barcode in the input (888837168625) does not match the identified Bushido release (4018939105976). 4: Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist: NOT MET. 3: Unambiguous but backed by only one source - or several editions fit but ALL share the same tracklist: MET. The agent identified the correct release based on artist/title and provided evidence that the input EAN was an error. 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist: NOT MET.",
+   "summary": "The EAN in the input is incorrect, but the title and artist unambiguously point to the 2003 CD re-release, which is consistently identified across databases.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles: MET. MusicBrainz and Discogs provide consistent track lists (16 tracks) for the identified edition.",
+   "summary": "The tracklist is confirmed by multiple independent databases with identical content.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source: NOT MET. 4: Two independent database entries or database + specialised collector site: MET. The result uses two independent databases (Discogs, MusicBrainz) and a collector site (Musik-Sammler.de).",
+   "summary": "The sources consist of two independent professional databases and one collector portal.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input barcode (888837168625) corresponds to Daft Punk - Random Access Memories, not Bushido - King of Kingz."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 3.2,
+  "tokens_in": 11587,
+  "tokens_out": 724,
+  "cost_usd": 0.00398,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

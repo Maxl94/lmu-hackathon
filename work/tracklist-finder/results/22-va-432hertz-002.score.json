@@ -1,0 +1,120 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:42",
+ "overall": 4.2,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: input has no barcode - NOT MET. Level 4: no barcode; title/artist are weak (input title is catalogue ref '432HERTZ 002', artist 'VA'); but catno 432-002 matches on label site (432hertzberlin.com), deejay.de and Discogs 35007128 (cat. 432-002, DE 2025, 12\" vinyl), and format Vinyl/Various is consistent across >=2 sources; competing edition Discogs 27044532 (10\", white label, cat. 00, 2023, one artist) exists but is a different release with a different catalogue number and is not a fitting competitor with a different tracklist for this input; no other edition with a different 6-track tracklist was found. Level 4 conditions appear MET on catno/format/country/year in >=2 sources. However the input title does not match the release title and the input has no barcode; the rubric level 4 requires title, artist, format and one further attribute unambiguous - title is only a catalogue reference, so the match rests on catno. Rated 4 conservatively by the catalogue-number match across independent sources.",
+   "summary": "Catalogue number 432-002 (label 432HERTZ BERLIN, vinyl, DE 2025) matches consistently across Discogs, deejay.de, dancingvinyl and the label site, with no competing 6-track edition found, but there is no barcode and the input title is only a catalogue reference.",
+   "evidence": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771",
+    "web:https://432hertzberlin.com/",
+    "discogs:release/27044532",
+    "tl-discogs search --catno 432-002"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources agree on count, order, titles - MET for count (6) and order A1-B3 and titles (Cognitive Dissonance, Reverse, Tar 1000, Drop The Bass, Pressure, Functionality) across discogs:release/35007128, deejay.de and dancingvinyl (dancingvinyl lists A1-B3 with same titles in description). Titles agree up to case (TAR 1000 vs Tar 1000) - spelling variant only. Artist credit 'Mathii' on dancingvinyl vs 'Mathi' is a variant. Level 5 conditions MET.",
+   "summary": "Six tracks in identical order and with matching titles are confirmed by at least Discogs, deejay.de and dancingvinyl, differing only in capitalisation and one artist spelling variant.",
+   "evidence": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source (read cover/booklet/print) - NOT MET: no printed cover/back read (Discogs front image only). Level 4: two independent database entries or database + specialised collector site - Discogs (database) plus deejay.de and dancingvinyl (shops) and label site (manufacturer). Two independent database entries are not present (only Discogs is a database; the other entries are shops). Database + shop/label info: the label site is manufacturer information, which is a primary-ish source, but the rubric level 5 requires a read print. Level 4 requires two database entries or database + specialised collector site - shops are not collector sites in the rubric sense. Level 3: one good database (Discogs) - MET, with additional shop/label confirmation. Rated 3.",
+   "summary": "Only Discogs is a database entry; the other confirmations come from shops and the label's own website, and no printed cover or booklet was checked.",
+   "evidence": [
+    "discogs:release/35007128",
+    "web:https://deejay.de/Various_303rd_Dimensions_432-002__1156738",
+    "web:https://dancingvinyl.com/item/1754301901771",
+    "web:https://432hertzberlin.com/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input has no barcode; the match relies on catalogue number 432-002 and the input title is only a catalogue reference ('432HERTZ 002').",
+  "Durations (360/270 s) come only from Discogs, flagged 'Needs Vote' and rounded; total 1800 s is Discogs-derived and unverified by a second source.",
+  "Agent claimed label site lists 432-002 as '303rd Dimensions' curated by Rinaldo Makaj - supported by tool output of tl-scrape on 432hertzberlin.com.",
+  "Agent claimed deejay.de and dancingvinyl confirm identical order and artists - supported by tool outputs (deejay.de list A1-B3; dancingvinyl Tracklist A1-B3).",
+  "Competing edition discogs:release/27044532 (10\" white label, cat. 00, 2023) was not ruled out in detail beyond being a different catalogue number; agent's rejection reason is plausible but the evidence shown is only the search line.",
+  "Printed back-cover tracklist not checked; capitalisation of A3 unverified (agent acknowledges this).",
+  "Mathi/Mathii artist spelling on dancingvinyl was resolved in favour of Mathi without printed evidence."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 6,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 44,
+  "title_similarity": 21,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "432hertzberlin.com",
+   "dancingvinyl.com",
+   "deejay.de",
+   "discogs",
+   "genius"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "web"
+  ],
+  "conflicts": 4,
+  "alternatives": 1,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.9,
+  "tokens_in": 16551,
+  "tokens_out": 1759,
+  "cost_usd": 0.00253,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 1,
+   "of": 6
+  }
+ }
+}

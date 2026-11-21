@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:11",
+ "overall": 2.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: 'The INPUT contains a barcode...' is NOT MET (input lacks a barcode). Level 4: 'title, artist, format and at least one further attribute unambiguous in >= 2 sources...' is NOT MET (only Discogs and its uploaded scans document this release, which are not two independent sources). Level 3: 'Unambiguous but backed by only one source (no competing edition known)...' is MET (the cassette release is clearly identified on Discogs:release/24165131 with no competing edition under this artist).",
+   "summary": "The edition is unambiguous but documented by only a single source entity (Discogs with attached scans).",
+   "evidence": [
+    "discogs:release/24165131"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree...' is NOT MET (the J-card scan is hosted directly on the Discogs release page, not independent). Level 4: 'One complete source of the same edition, confirmed by a second one...' is NOT MET (no independent second source). Level 3: 'Only one source of the same edition, complete and plausible' is MET (the J-card scan confirms the 10-track program completely and plausibly).",
+   "summary": "The 10-track list is confirmed by the J-card scan from the single Discogs entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: 'Database + independent primary source...' is NOT MET (the primary source scans are hosted on the same Discogs entry). Level 4: 'Two independent database entries...' is NOT MET. Level 3: 'One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry)' is MET (Discogs release r24165131 with its hosted J-card scans).",
+   "summary": "Information relies entirely on a single Discogs entry and the packaging images attached to it.",
+   "evidence": [
+    "discogs:release/24165131"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track-level artists are empty across all tracks, triggering a validation error.",
+  "Track durations are completely missing as none are printed on the cassette packaging or recorded in databases."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 23.9,
+  "tokens_in": 13217,
+  "tokens_out": 2585,
+  "cost_usd": 0.02157,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

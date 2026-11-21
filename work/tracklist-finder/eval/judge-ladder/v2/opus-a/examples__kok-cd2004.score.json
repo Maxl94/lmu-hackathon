@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:37",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: input barcode 4019593960000 (checksum valid, step 1) matches this edition in >=2 independent sources – MET: MusicBrainz 15996385 (steps 2, 4), Discogs 3057907 (steps 3, 5) and musik-sammler.de 44531 with EAN 4019593960000 (step 14). The back cover also prints 4 019593 960000 (steps 7, 17). Format CD and artist Bushido match – MET. No other edition with the same barcode and a different tracklist – MET: the barcode search returned only one release in MB and in Discogs. The competing editions (2003 Aggro CD, 2001 MC, 2005 2-CD, 2021 digital; steps 8, 21) all have other barcodes or no barcode, so the input rules them out. All conditions met.",
+   "summary": "The valid EAN matches the same 20-track ersguterjunge 2004 CD in MusicBrainz, Discogs and musik-sammler.de, and the back-cover print shows the same barcode.",
+   "evidence": [
+    "tl-gtin 4019593960000",
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "tl-mb group 85fc52d2-14af-3150-a62a-0e07048c4827"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles – MET. MB (step 4), Discogs (step 5) and musik-sammler.de (step 14) each list the same 20 tracks in the same order. The back cover read via tl-vision (steps 7, 17) confirms the 20 titles and their order. The only deviation is the spelling of track 11: Pitbull (MB/Discogs) vs Pittbull (musik-sammler, back cover, Discogs note). This is a spelling variant only.",
+   "summary": "Four sources of the same barcode edition agree on 20 tracks, their order and titles, differing only in the Pitbull/Pittbull spelling.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source of the same edition – NOT fully MET. The back-cover scan is a primary print and its barcode and catalogue number match. However, it is hosted on the Cover Art Archive entry of the very MusicBrainz release it is meant to confirm, and the rubric treats such images as not independent. Level 4: two independent database entries or database plus collector site – MET. MB and Discogs differ in durations for tracks 10/15/16 and in the Discogs note, which shows they are independent. musik-sammler.de is a specialised collector site with a matching EAN.",
+   "summary": "Two independent databases plus musik-sammler.de with an EAN match, but the only primary source is an image hosted on the same MB entry.",
+   "evidence": [
+    "discogs:release/3057907",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "tl-caa 15996385-5426-416b-95da-0e8846196d3a"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 11: the title 'Pittbull' follows the back-cover print, while the MB and Discogs track titles read 'Pitbull'. This is documented, but GEMA matching may expect 'Pitbull'.",
+  "Track 20: the duration of 23 s (MB) differs from Discogs 21 s and musik-sammler 22 s; this is not listed as a conflict. The vision model also flagged the 'Outro (ersguterdevin)' reading as uncertain (step 17).",
+  "Durations for tracks 10/15/16 rest on MB plus musik-sammler.de against Discogs; no primary print of the durations exists.",
+  "The confidence in the delivered result (0.9) differs from the file written during research (0.93); this is a minor inconsistency.",
+  "Feat. credits 'Frank White' for tracks 12/15 follow the back cover; hitparade.ch lists 'Fler' (same person, other edition), which could matter for artist attribution."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 23.4,
+  "tokens_in": 43359,
+  "tokens_out": 2336,
+  "cost_usd": 0.22016,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

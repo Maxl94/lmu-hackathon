@@ -1,0 +1,14 @@
+{"ts": 1795185738.37, "event": "run_start", "input": {"title": "Aspiral", "artist": "EPICA", "ean": "4065629733131"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4065629733131): 1 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "  musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40 | Aspiral — Epica | 2025-04-11 US | CD | Official"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz release da26b9bb-57a5-4f13-b80b-b496d258ed40: 11 tracks, 11 with duration"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ Discogs search barcode=4065629733131 format=None: 1 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "  discogs:release/33705345 | Aspiral | USA & Europe 2025-04-11 | 11 tracks, 11 with duration"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "✓ 11 tracks: titles agree, 11 durations in both sources, 0 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185738.38, "event": "phase_end", "phase": "fast", "ok": true, "msg": "✓ 11 tracks: titles agree, 11 durations in both sources, 0 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185738.38, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.93, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 11 tracks, ISRC 11"}
+{"ts": 1795185738.93, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185747.75, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.65, "error": null}
+{"ts": 1795185747.75, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.65, "tracks": 11, "wall_s": 0.0, "judge_s": 8.8, "cost_usd": 0.0014, "mode": "fast", "errors": []}

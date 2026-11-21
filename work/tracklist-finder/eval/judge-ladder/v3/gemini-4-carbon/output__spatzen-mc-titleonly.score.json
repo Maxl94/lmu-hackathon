@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:02",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains barcode -> NOT MET (input only has title and format MC; input_has_barcode is false). Level 4: Barcode match in one source, or without barcode: title, artist, format and >=1 further attribute unambiguous in >=2 sources, and no other edition fitting the input has a different tracklist -> NOT MET (input lacks artist and further attributes, and discogs:release/8491193 'Various - Ich Sag's Dir Mit Musik' is a 1995 Cassette Box Set Compilation fitting the input with a different artist and tracklist). Level 3: Unambiguous in one source (no competing edition known) or several editions fit but ALL share the same tracklist -> NOT MET (discogs:release/8491193 fits title and format MC as a Various Artists Reader's Digest cassette compilation and does not share the Kastelruther Spatzen album tracklist; Polish cassette discogs:release/16402359 was also not checked). Level 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (other track count, other tracks, other artist with the same title); the choice rests on weak signals -> MET (without an artist in the input, both Kastelruther Spatzen's MC editions and the Various Artists cassette compilation discogs:release/8491193 fit the input and have different artists and tracklists; furthermore multiple Kastelruther Spatzen MC editions exist including barcode-less variants discogs:release/15349631 and discogs:release/24889304 and unchecked Polish MC discogs:release/16402359).",
+   "summary": "Because the input specifies only title and format MC without artist or barcode, a competing Various Artists cassette box-set compilation with the same title (discogs:release/8491193) also fits the input and has a different tracklist.",
+   "evidence": [
+    "tl-discogs search --title \"Ich sag's dir mit Musik\"",
+    "discogs:release/8491193",
+    "discogs:release/16402359",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 both represent the 1985 Koch-Records Special 221 190 cassette with barcode 9002722211901 and agree on all 12 tracks, positions A1-A6 and B1-B6, and titles with only German capitalisation variants).",
+   "summary": "MusicBrainz and Discogs entries for the chosen 1985 Koch-Records Special 221 190 cassette edition independently agree on all 12 tracks, side positions A1-B6, and titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> NOT MET (no cover/label images were inspected and no edition-specific primary manufacturer/label sheet was cited; kastelrutherspatzen.de was scraped but not cited and only gives a combined CD/MC tracklist without physical details). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 are two independent database entries for the same barcode 9002722211901 MC edition, clearly independent due to differing track durations such as A6 3:30 vs 3:03, differing title casing, country metadata AT vs Germany/Austria/Switzerland, and physical sleeve notes on Discogs).",
+   "summary": "The result is backed by two clearly independent database entries (MusicBrainz and Discogs) for the exact same cassette edition, recognizable by differing durations, capitalization, and release notes.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing MC edition ignored: discogs:release/8491193 ('Various - Ich Sag's Dir Mit Musik', 1995 Reader's Digest Cassette Box Set Compilation) appeared in the Discogs search results and matches the artist-less input (title + MC), yet was neither inspected nor listed in alternatives.",
+  "Other MC editions omitted from alternatives: Polish cassette discogs:release/16402359 (AMA 074, unchecked) and barcode-less 1985 Koch cassette variants discogs:release/15349631 and discogs:release/24889304 were omitted from alternatives, whereas non-matching CD and LP formats were listed.",
+  "Validation error: the top-level artists list is missing/empty (and all track artist fields are null), violating the requirement to list every distinct artist on the carrier.",
+  "Unsupported precision claim in sources and reasoning: the agent describes musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 as having 'ms-precise durations' ('ms-Genauigkeit'), but all 12 durations end in exact '000 ms' (whole seconds copied identically across MB's LP, CD, and MC releases) and cassettes lack digital TOCs.",
+  "Inconsistent duration_sources attribution: discogs:release/2297987 is cited in duration_sources for tracks A3 (188s vs Discogs 187s), B2 (239s vs Discogs 238s), B3 (207s vs Discogs 206s), and B6 (196s vs Discogs 197s) despite 1-second discrepancies, while being excluded on A5 for the same 1-second difference (141s vs 140s)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 60.2,
+  "tokens_in": 17453,
+  "tokens_out": 4692,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

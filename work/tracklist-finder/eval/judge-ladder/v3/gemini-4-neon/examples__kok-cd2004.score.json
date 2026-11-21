@@ -1,0 +1,117 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:56",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains a barcode: MET (ean '4019593960000', valid EAN-13 per tl-gtin call 1). (2) Matches exactly this edition in >= 2 independent sources: MET (exact barcode match in musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a [calls 2, 4], discogs:release/3057907 [calls 3, 5], web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ [call 14], and printed on image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg [calls 7, 17], all identifying the 2004 CD 'Exclusive 2004 Edition' on ersguterjunge/Universal, cat. no. 40195 9396000-0). (3) Format and artist match: MET (CD and Bushido / King of Kingz match input across all sources). (4) No other edition with the same barcode and a different tracklist: MET (barcode searches in MusicBrainz [call 2] and Discogs [call 3] each return only this single release; competing editions in MB release-group [call 8] and hitparade.ch [call 21] have different barcodes, cat. nos., or formats). Stop at Level 5.",
+   "summary": "The valid input EAN 4019593960000 uniquely matches the 2004 CD 'Exclusive 2004 Edition' across MusicBrainz, Discogs, musik-sammler.de, and the printed back cover with matching format and artist and no competing edition sharing the barcode.",
+   "evidence": [
+    "tl-gtin (call 1)",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg",
+    "tl-mb group (call 8)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. Four sources of this exact edition—musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a (call 4), discogs:release/3057907 (call 5), web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ (call 14), and image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg (calls 7, 17)—all agree on 20 tracks in identical order with matching titles and featured artists (only minor spelling/punctuation variants: Track 11 printed 'PITTBULL' on back cover/musik-sammler.de/Discogs notes vs. normalized 'Pitbull' in MB/Discogs tracklists, and Track 15 'Vack You' without '!' on musik-sammler.de). Durations are confirmed across MB and musik-sammler.de, with the three >2s Discogs deviations (Tracks 10, 15, 16) explicitly documented in conflicts. Stop at Level 5.",
+   "summary": "MusicBrainz, Discogs, musik-sammler.de, and the scanned back cover of the exact same edition agree completely on track count (20), order, and titles with only minor spelling variants.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Two clearly independent database entries are used—musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a (call 4; ms-precise durations, featured credits) and discogs:release/3057907 (call 5; distinct rounded durations, matrix/mould SID codes, editorial notes)—plus the specialised collector site web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ (call 14). In addition, the physical back cover print of the same edition (image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg) was directly read via tl-vision (calls 7, 17), confirming barcode 4 019593 960000, cat. no. 40195 9396000-0, and the printed 20-track list including 'PITTBULL'; while hosted on CAA/MB, this primary print scan is completely independent of Discogs and musik-sammler.de and shows unnormalized print details absent from MusicBrainz text. Stop at Level 5.",
+   "summary": "The result combines two independent music databases (MusicBrainz and Discogs), a specialised collector site (musik-sammler.de), and a directly read primary back-cover scan of the exact same edition.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg",
+    "tl-vision (calls 7, 17)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: the top-level 'artists' field is empty/missing instead of listing every distinct artist on the carrier (Bushido, Kam One, Joka, Hengzt, Orgasmus, Roulette, Frank White, D-Bo).",
+  "Tracks 10, 15, and 16 include discogs:release/3057907 in 'duration_sources' even though Discogs' durations (208s, 138s, 218s) contradicted the selected MusicBrainz values (206s, 141s, 221s) and were rejected in 'conflicts'.",
+  "In 'alternatives', the 2001 cassette entry attributes the track-order detail ('Outro auf Position 15, Vack You! auf 16') to musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, although that MB release's tracklist was never fetched; the detail actually came from web:https://hitparade.ch/album/Bushido/King-Of-Kingz-24803 (call 21).",
+  "In calls 28–30, the agent inspected the internal validator source code (src/tracklist/cli/validate.py) to check the confidence warning threshold rather than judging confidence purely on the evidence."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 98.8,
+  "tokens_in": 36403,
+  "tokens_out": 9707,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

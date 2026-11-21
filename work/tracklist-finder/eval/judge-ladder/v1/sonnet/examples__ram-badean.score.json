@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:39",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Die Eingabe-EAN hat eine falsche Prüfziffer; korrigiert ergibt sich 888837168625. Dieser Barcode steht bei MusicBrainz (Schritt 4, 6), Discogs (Schritt 7) und auf der CD-Rückseite (Schritt 9). Format und Artist passen. Die Länderpressungen mit demselben Barcode haben dieselbe Trackliste, die Wahl der EU-Pressung ist daher unkritisch. Die 10th-Anniversary- und Japan-Ausgabe haben andere Barcodes.",
+   "belege": [
+    "tl-gtin 888837168626",
+    "tl-mb search --barcode 888837168625",
+    "tl-mb release f6758afb",
+    "tl-discogs release 4729785",
+    "tl-vision back cover"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (Schritt 6) und Discogs (Schritt 7) derselben Ausgabe stimmen in 13 Tracks, Reihenfolge und Titeln überein (nur Schreibweisen). Das Cover-Rückseitenbild bestätigt die 13 Titel. Die Dauerabweichung bei Track 13 ist dokumentiert und erklärt, betrifft aber nicht Anzahl, Reihenfolge oder Titel.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 92% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) mit unterschiedlichen Details, z. B. Discogs mit Matrix, SID-Codes und LC-Code. Dazu ein Primärbeleg: die per Vision gelesene CD-Rückseite mit Titeln, Katalognummer, Barcode und LC 00162. Das entspricht Datenbank plus unabhängiger Primärquelle.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Vermutung, Discogs' 6:21 für Track 13 entspreche der Digital-/Streaming-Version, wird durch keine Evidenz belegt (Spekulation).",
+  "Die Rückseite zeigt laut Vision-Ausgabe keine Dauern und keine Positionsnummern. Die Dauern stützen sich nur auf MusicBrainz und Discogs.",
+  "Das Cover-Bild wurde nur per Vision-Modell gelesen, nicht unabhängig geprüft.",
+  "Die Angabe 'Doin' it Right' (Cover) gegenüber 'Doin’ It Right' ist nur eine Schreibvariante und unkritisch."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 8.4,
+  "tokens_in": 27025,
+  "tokens_out": 1086,
+  "cost_usd": 0.06491,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

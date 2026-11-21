@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:29",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5 conditions: (a) The input barcode matches this edition in >= 2 independent sources. MET: MusicBrainz release 41b0a392 returns Barcode 0731456031125 (step 3, step 5). Discogs 1949898 lists Barcode 731456031125 (steps 2 and 6). musik-sammler shows EAN-Nr. 731456031125 (step 17). The backcover read by vision shows barcode 731456031125 (step 8). The checksum is valid (step 1). (b) Format and artist match. MET: 2xCD, Various, title Bravo Hits 30. (c) No other edition with the same barcode has a different tracklist. MET on the evidence: Discogs 23145932 (UK pressing) has the same barcode and a visible tracklist with durations identical to 1949898. Discogs 26676554 (Europe) has the same barcode but its tracklist was never fetched, and the agent's 'no different tracklist' statement for it is only an assumption. The Club Edition 610930 has a different barcode, and the cassette has a different format and catalogue number. Nothing in the evidence shows a competing edition with a different tracklist, so level 5 is reached.",
+   "summary": "The barcode 731456031125 matches the German 2xCD Polystar 560 311-2 in MusicBrainz, Discogs, musik-sammler and the backcover print, and the pressings sharing the barcode show no tracklist difference.",
+   "evidence": [
+    "tl-gtin 731456031125",
+    "tl-discogs search --barcode 731456031125",
+    "tl-mb search --barcode",
+    "tl-mb release 41b0a392",
+    "tl-discogs release 1949898",
+    "tl-discogs release 23145932",
+    "tl-vision backcover",
+    "tl-scrape musik-sammler (EAN)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles, with spelling variants only. MET: MusicBrainz (20+20 tracks), Discogs 1949898 (40 tracks), the backcover vision read (CD1-01..CD2-20) and the musik-sammler list (2x20) all show 40 tracks in the same order with the same titles. Deviations are spelling or version suffixes (Strassen vs Straßen, '(Album Version)' only on Discogs, no suffixes on the cover). Artist variants (Nils vs Nils Brunkhorst, feat. Craig David, DJ vs Deejay Ötzi) are explained in the conflicts list. The Discogs durations differ by 1-4 s, but that does not affect count, order or titles.",
+   "summary": "MusicBrainz, Discogs, the backcover print and musik-sammler agree on all 40 tracks in the same order with only spelling and version-suffix variants.",
+   "evidence": [
+    "tl-mb release 41b0a392",
+    "tl-discogs release 1949898",
+    "tl-vision backcover",
+    "tl-scrape musik-sammler full list"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database plus an independent primary source of the same edition. MET: MusicBrainz and Discogs 1949898 are two databases with differing details (Discogs has matrix, SID code, back-cover notes and 'Made in Germany'; MusicBrainz has ms durations and ISRCs). The backcover scan read by vision is a primary source and prints Polystar, 560 311-2 and barcode 731456031125. musik-sammler.de is an additional specialised collector site with the same EAN and catalogue number. The backcover image is hosted on the MusicBrainz/CAA entry, but it is a primary cover source and the independent Discogs and musik-sammler entries corroborate it.",
+   "summary": "Two independent databases, a specialised collector site and a primary backcover read all confirm the same edition.",
+   "evidence": [
+    "musicbrainz:release/41b0a392",
+    "discogs:release/1949898",
+    "image:coverartarchive 30859623067",
+    "web:musik-sammler.de/release/bravo-hits-30-2-cd-43446"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The alternative Discogs 26676554 (Europe) is declared to have no different tracklist, but its tracklist was never retrieved; only 23145932 was fetched.",
+  "The Discogs 23145932 tracklist output is truncated, so the claim of an identical tracklist rests on the visible portion only.",
+  "musik-sammler has obvious errors (CD1 track 10 is attributed to 'Nelly', and CD2 track 19 shows 3:40). The agent correctly treated CD2-19 as an error but did not mention the Nelly artist error.",
+  "The agent's resolution of the duration conflicts is only partly independent: five Discogs-versus-MB conflicts were settled by a collector page the agent itself calls typo-prone. The durations come from MusicBrainz, which is reasonable, but no primary source confirms them because the cover prints none.",
+  "Track titles carry suffixes such as '(radio edit)' and '(family radio version)' that are not printed on the cover and come only from MB/Discogs. This is minor.",
+  "The result states confidence 0.93 while the facts give 0.9, which is a trivial inconsistency."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 22.6,
+  "tokens_in": 46702,
+  "tokens_out": 2694,
+  "cost_usd": 0.12034,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

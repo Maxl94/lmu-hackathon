@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:48:13",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: 'The INPUT contains a barcode...' -> NOT MET: Input does not contain a barcode. Level 4: 'without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist' -> NOT MET: The input provides only title, artist, and format without any further attributes, and competing editions fitting the input have different tracklists (e.g. 2023 3×LP edition with 22 tracks, MB release/4375c18f-f160-44d0-ae2b-795f1dd5870f). Level 3: 'several editions fit but ALL share the same tracklist: the choice does not matter' -> NOT MET: Not all fitting vinyl releases share the same tracklist. Level 2: 'Several editions fit the input and at least one of them has a DIFFERENT tracklist; the choice rests on weak signals' -> MET: The input fits the standard 13-track 2×LP as well as the 22-track 3×LP 10th Anniversary edition; selecting the original standard edition rests on the weak signal that no edition qualifier was specified.",
+   "summary": "Multiple vinyl editions of the album exist with differing track counts (13 tracks vs. 22 tracks), and the bare input does not rule out the expanded edition.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)' -> MET: MusicBrainz (release/4867ceba-ffe7-40c0-a093-45be6c03c655) and Discogs (release/4570366) both list exactly 13 tracks across sides A1–D4 in identical order, with only standard capitalization and punctuation differences.",
+   "summary": "MusicBrainz and Discogs fully agree on track count, positions (A1–D4), and titles for the chosen 2×LP edition.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: 'Database + independent primary source of the same edition' -> NOT MET: Both sources are secondary databases; no direct primary source was inspected. Level 4: 'Two independent database entries (recognisable by differing details)' -> MET: MusicBrainz and Discogs provide independent entries with distinct metadata (e.g. precise millisecond track lengths on MusicBrainz vs. detailed runout etchings on Discogs).",
+   "summary": "The research is supported by two established, independent databases (MusicBrainz and Discogs).",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input lacks a barcode, catalog number, or release year, meaning it does not explicitly rule out competing vinyl releases with different tracklists, such as the 2023 10th Anniversary 3×LP edition (22 tracks)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 42.2,
+  "tokens_in": 14907,
+  "tokens_out": 4357,
+  "cost_usd": 0.03027,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

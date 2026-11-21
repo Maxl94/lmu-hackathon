@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:31",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: 'Barcode in INPUT matches exactly in >= 2 independent sources; format and artist match; no competing edition with same barcode and different tracklist' MET: Barcode 4019593960000 matches exactly across MusicBrainz (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a), Discogs (discogs:release/3057907), and musik-sammler.de (web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/); CD format and artist Bushido match; no competing edition with this barcode exists.",
+   "summary": "The input barcode matches the 20-track Exclusive 2004 Edition across multiple independent databases with matching artist and format.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)' MET: MusicBrainz, Discogs, and musik-sammler.de agree on all 20 tracks, their sequence, and titles; the printed back cover confirmation also verifies all 20 tracks with only minor spelling normalization documented (Pitbull vs. Pittbull).",
+   "summary": "All sources agree fully on the 20-track sequence and titles.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition' MET: The research combines database sources (MusicBrainz, Discogs, musik-sammler.de) with reading the physical release artwork print (back cover scan via tl-vision from the Cover Art Archive).",
+   "summary": "Major databases are corroborated by direct inspection of the back cover packaging scan.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 20.3,
+  "tokens_in": 35235,
+  "tokens_out": 2281,
+  "cost_usd": 0.03848,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

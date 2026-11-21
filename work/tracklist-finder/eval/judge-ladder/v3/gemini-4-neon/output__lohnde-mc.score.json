@@ -1,0 +1,109 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:18",
+ "overall": 2.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: INPUT contains a barcode (NOT MET: input_has_barcode is false); matches in >= 2 independent sources (NOT MET: only discogs:release/24165131 and its own hosted images); format and artist match (MET: Cassette/MC and Musikverein Lohnde 1925 e. V.). Level 4: Barcode match in one source (NOT MET: no barcode in input) or, without barcode, title/artist/format plus a further attribute unambiguous in >= 2 independent sources (NOT MET: tl-mb search returned 0 releases and web searches found no second source; the tl-vision images are hosted on the same discogs:release/24165131 entry). Level 3: Unambiguous and backed by only one source with no competing edition fitting the input known (MET: discogs:release/24165131 matches title Blasmusik Aus Lohnde (Folge 1), artist Musikverein Lohnde 1925 e. V., and format Cassette/MC; tl-discogs search returned only this release, and while tl-search surfaced discogs:release/24154076 Blasmusik Aus Lohnde (Folge 2), that entry is credited to a different artist, Swinging Seelze). Stopped at Level 3.",
+   "summary": "The edition matches title, artist, and MC format unambiguously based on the available evidence, but is backed by only one independent source (discogs:release/24165131 and its hosted images).",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-discogs search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\"",
+    "tl-mb search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\"",
+    "tl-search \"Blasmusik aus Lohnde Musikverein Lohnde Kassette Trackliste\"",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order, and titles (NOT MET: only one independent source exists, since the J-card images read via tl-vision and the scraped Discogs webpage belong to the same discogs:release/24165131 entry). Level 4: One complete source confirmed by a second independent source except for small explained deviations (NOT MET: no second independent source confirms the tracklist). Level 3: Only one source of the same edition, complete and plausible (MET: discogs:release/24165131 provides a complete, plausible 10-track list across A1-A6 and B1-B4, internally consistent with the J-card images hosted on that entry aside from capitalization; durations are absent on both Discogs and the J-card). Stopped at Level 3.",
+   "summary": "The 10-track list is complete, plausible, and internally consistent with the entry's J-card photos, but rests on only a single independent source.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg",
+    "image:https://i.discogs.com/Fkgjp-amgHXM7fspgCj_uyCoZMDY0Lrlv6BfTUy06_g/rs:fit/g:sm/q:90/h:600/w:361/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNjY4NS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: Database + independent primary source of the same edition (NOT MET: although discogs:release/24165131 is a database and J-card/label photos were read via tl-vision, all images are hosted on the exact same Discogs entry and are therefore not an independent primary source). Level 4: Two independent database entries or database + specialised collector site (NOT MET: MusicBrainz searches returned 0 hits and web searches for musik-sammler.de and MC6109 returned no second listing). Level 3: One good database, or two sources that may have copied from each other such as cover images hosted on the same database entry (MET: discogs:release/24165131 combined with cover/J-card images hosted on that same Discogs entry). Stopped at Level 3.",
+   "summary": "Only one good database entry (discogs:release/24165131) was found, and the cover/J-card images read via tl-vision are hosted on that same Discogs entry rather than being an independent primary source.",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-mb search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\"",
+    "tl-search \"musik-sammler.de Blasmusik aus Lohnde\"",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: the carrier-level artists field is empty (all 10 tracks also have empty artist fields) instead of listing Musikverein Lohnde 1925 e. V.",
+  "Unchecked related series entry: tl-search surfaced discogs:release/24154076 (Swinging Seelze - Blasmusik Aus Lohnde (Folge 2), Cassette), which the agent never inspected via tl-discogs release 24154076 to confirm that Musikverein Lohnde is not also credited on Folge 2.",
+  "Omitted image sources: release metadata values label 'Fred Kersten KG' and catno 'MC 6109' (with space, whereas Discogs release details list 'Not On Label MC6109') come from the cassette shell label images (RkJSxZMfJe5aqx8T4JhNx85QVeO4lwA57sDfEm1rXzI and sXl2KgwPKEggkG-YEYn9N0aX4jRLOx_hds7G7AH6nnw), which were read via tl-vision but omitted from the result's sources array.",
+  "Minor capitalization inconsistency: tracks A1, A2, A3, and B3 use Discogs Title Case ('Kein Schöner Land', 'Fliege Mit Mir In Die Heimat', 'Aus Alter Zeit', 'Memories Of Cole Porter') rather than the standard casing printed on the J-card ('Kein schöner Land', 'Fliege mit mir in die Heimat', 'Aus alter Zeit', 'Memories of Cole Porter')."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 75.9,
+  "tokens_in": 14444,
+  "tokens_out": 8255,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

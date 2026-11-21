@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:01",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Barcode 888837168625 stimmt exakt mit der Standard-CD (DE, MusicBrainz f6758afb, Discogs 4729785 Europe) überein; Format CD und Künstler passen. Mehrere Editionen mit gleicher Barcode existieren (AU, US, CA, BR), diese teilen aber die gleiche Titelliste bzw. werden nicht mit abweichender Liste konkurriert. Zwei unabhängige Datenbanken (MusicBrainz und Discogs) bestätigen die Barcode, plus Label und Katalognummer übereinstimmend.",
+   "belege": [
+    "bin/tl-gtin",
+    "bin/tl-discogs search --barcode",
+    "bin/tl-mb release f6758afb",
+    "bin/tl-discogs release 4729785"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "13 Titel in identischer Reihenfolge und Schreibweise bei MusicBrainz DE und Discogs EU; Rückcover bestätigt Titelliste ohne Dauern. Die Dauern weichen leicht ab (Discogs Track 3, 4, 5, 6, 10, 11, 13 um 1 s), was als Rundungsunterschied erklärbar ist. Titelreihenfolge und Anzahl sind also durch mehrere Quellen belegt.",
+   "belege": [
+    "bin/tl-mb release f6758afb",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-vision back cover",
+    "bin/tl-itunes upc"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbankeinträge (MusicBrainz und Discogs) mit unterschiedlichen Details (Barcode-Schreibweise, Matrix-Runout) plus Rückcover-Bild als Bildquelle. Keine primäre Quelle wie Label-Information, aber das Cover ist ein Primärbild; kein Sammlerportal als Hauptquelle. Das entspricht Stufe 4 mit Bild als Zusatz, nicht Stufe 5 mangels eigenständiger Label-Auskunft.",
+   "belege": [
+    "musicbrainz:release/f6758afb",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Ergebnis nennt Dauern 'auf Sekunden gerundet' aus MusicBrainz; Discogs weicht bei einigen Tracks um 1 s ab, was nicht näher erläutert wird (unkritisch).",
+  "Zusätzliche Editionen mit gleicher Barcode (AU Limited, US, CA, BR) existieren; Ergebnis nennt sie als Alternativen nicht, obwohl deren Tracklisten laut Tools gleich sind.",
+  "Das Rückcover-Bild enthält keine Dauern; die Aussage 'Rückseite bestätigt Titelliste' trifft zu, bestätigt aber keine Dauern."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 5.4,
+  "tokens_in": 12028,
+  "tokens_out": 1015,
+  "cost_usd": 0.00171,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

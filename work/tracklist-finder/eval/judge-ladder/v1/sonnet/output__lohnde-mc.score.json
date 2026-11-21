@@ -1,0 +1,89 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:16",
+ "overall": 3.6,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Kein Barcode im Input. Titel, Künstler und Format (MC) passen eindeutig auf Discogs r24165131 (Folge 1, MC 6109). Die Kassettenlabel-Bilder bestätigen Titel, Label Fred Kersten KG und Kat.-Nr. MC 6109 unabhängig von der Datenbank. Folge 2 ist ein anderer Titel und Künstler. Es gibt keine konkurrierende Edition, aber nur eine Datenbank und keinen Barcode, daher Stufe 4.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/RkJSxZMfJe5aqx8T4JhNx85QVeO4lwA57sDfEm1rXzI/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTQtOTgxNS5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Discogs (10 Tracks A1–B4) und die J-card-Rückseite (tl-vision, 10 Tracks, Seite 1/2) stimmen bei Anzahl, Reihenfolge und Titeln überein, bis auf Schreibvarianten. Die Innenseite bestätigt zusätzlich die 6 Tracks von Seite 1. Dauern fehlen, das betrifft aber nicht die Titelliste.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Discogs als Datenbank plus gelesene J-card- und Kassettenlabel-Aufdrucke als Primärquelle. Die Bilder stammen allerdings von Discogs selbst, sind aber eigenständig gelesene Cover-Aufdrucke. Das erfüllt Datenbank plus Primärquelle.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Kein Barcode vorhanden, Edition nur über Titel, Kat.-Nr. und Label identifiziert.",
+  "Nur ein Datenbankeintrag (Discogs); keine zweite unabhängige Datenbank (MusicBrainz: 0 Treffer).",
+  "Die Cover-Bilder stammen von der Discogs-Seite selbst, die Unabhängigkeit ist daher eingeschränkt.",
+  "Keine Dauern und kein Jahr verfügbar."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 9.0,
+  "tokens_in": 19201,
+  "tokens_out": 1237,
+  "cost_usd": 0.05077,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:07",
+ "overall": 4.0,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: needs input barcode matching in >=2 sources. NOT MET: the input has only title+format (no barcode). Level 4 (no barcode): title, artist, format and a further attribute (label, catno, year, country) unambiguous in >=2 sources, and no competing edition with a different tracklist. Title/format MC and label/catno/year are consistent in MusicBrainz (e0d210c6, Koch-Records Special 221 190, 1985 AT) and Discogs 2297987 (Koch Records Special, 221 190 D, 1985): MET. Competing MC editions: Discogs 15349631, 24889304 (no barcode, white shell), 16402359 (Poland, AMA) and the CD/LP. The Austrian/German MC variants share the same 12-track list and order. The Polish AMA MC was not inspected, so its tracklist is unknown. The CD/LP are other formats with the same tracks. Because the input names no artist or barcode, the choice of cassette variant is weak, but all inspected variants share the same tracklist, which is Level 3's 'several editions fit but all share the same tracklist'. Level 4's 'no other edition fitting has a different tracklist' is essentially MET for inspected editions; the unverified Polish MC is a minor uncertainty. Choosing Level 4 is justified: two databases agree on the specific edition by label/catno/year/format, with no known differing tracklist.",
+   "summary": "MB and Discogs agree on the 1985 Koch Records Special 221 190 cassette; no barcode in the input, and all competing cassette variants share the same 12 tracks.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MusicBrainz cassette (12 tracks A1-B6) and Discogs 2297987 (12 tracks A1-B6) agree on titles and order, with only spelling/capitalisation variants (Glöcklein, Hallo Ihr Freunde). MET. kastelrutherspatzen.de and cd-lexikon.de additionally list the same 12 titles in the same order. Durations differ (MB vs Discogs), but the rubric only concerns count, order and titles. The MB and Discogs entries may be partly independent (differing durations suggest independent entry). Level 5 MET.",
+   "summary": "MusicBrainz and Discogs cassette entries agree on 12 tracks in identical order and titles, with additional web confirmation.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover/booklet/label print) of the same edition. NOT MET: no cover or booklet was read; MB has no images, and Discogs images were not read. The Discogs notes are only transcribed. Level 4: two independent database entries (differing details) or database + specialised collector site. MET: MusicBrainz and Discogs are two database entries with differing details (different durations, so not copied), plus Deezer, Last.fm and the artist site. Level 4 reached.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) with differing durations, but no primary source such as cover or label print was read.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input has no artist or barcode, so the choice among cassette variants (Discogs 15349631, 24889304, 16402359 Poland) rests on weak signals; the Polish AMA cassette was never checked.",
+  "Track A6 duration conflict: the agent chose 210s (MB) over Discogs 183s, but Deezer and Last.fm are digital/streaming sources for a different edition (Deezer/Last.fm show 3:30 while also showing 3:22 for track 1, which matches Discogs rather than MB 3:19), so the claim that Discogs is 'probably faulty' is weakly supported.",
+  "The agent's result says 'MusicBrainz and Discogs deliver matching tracklists', but durations differ for most tracks (e.g. A1 199 vs 202, total 2226 vs 2193), and duration_sources for most tracks list only MusicBrainz.",
+  "The Discogs MC 2297987 catno is 'D 221 190' vs the agent's '221 190' (MB catno); this is a minor mismatch.",
+  "Deezer and Last.fm are digital/streaming data, not the cassette edition; their use to confirm the A6 duration is cross-edition."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 13.8,
+  "tokens_in": 22941,
+  "tokens_out": 1672,
+  "cost_usd": 0.0626,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Die Eingabe enthält keinen Barcode, nur Titel, Interpret und Vinyl. Die gewählte Standard-2×LP (Columbia 88883716861, Barcode 888837168618) ist in MusicBrainz und Discogs belegt; alle Pressungen dieser Standardausgabe haben dieselbe Trackliste. Es gibt aber auch Vinyl-Ausgaben mit anderer Trackliste (Box Set 2014, 10th Anniversary 3×LP). Diese schließt die Eingabe nicht formal aus. Die Wahl der Standardausgabe ist plausibel, aber nicht durch die Eingabe erzwungen, daher Stufe 3 statt 4.",
+   "belege": [
+    "tl-discogs search",
+    "tl-mb search",
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs liefern übereinstimmend 13 Tracks A1–D4 in gleicher Reihenfolge mit gleichen Titeln. Es gibt nur Schreibvarianten (Groß-/Kleinschreibung, Apostroph) und Dauerabweichungen von höchstens 2 s.",
+   "belege": [
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt zwei eigenständige Datenbank-Einträge mit erkennbar unterschiedlichen Details: MusicBrainz mit ISRCs und ms-Dauern, Discogs mit Matrix-/Runout-Angaben und Pressungsnotizen. Eine Primärquelle (gelesenes Cover oder Etikett) fehlt.",
+   "belege": [
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Eingabe nennt keine Edition. Vinyl-Ausgaben mit abweichender Trackliste (Box Set 2014, 10th Anniversary 3×LP) passen formal ebenfalls; die Wahl der Standardausgabe ist eine Annahme. Ein Status 'ambiguous' wäre nach dem Skill vertretbar gewesen.",
+  "Die Drumless Edition (discogs:release/28924120) ist in den sichtbaren Tool-Ausgaben nicht belegt, möglicherweise steckt sie im gekürzten Teil.",
+  "Das Land ist uneinheitlich: Die MB-Suche zeigt 2013-05-20 FR, der MB-Release-Abruf 2013-05-17 DE. Der Discogs-Eintrag ist UK/Europe & US, das Ergebnis nennt DE.",
+  "Bei 4 von 13 Tracks weichen die Dauern zwischen den Quellen um 1–2 s ab (A1, A2, C2, D4). Das ist eine plausible Rundung, aber nicht als Flag vermerkt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 19026,
+  "tokens_out": 1709,
+  "cost_usd": 0.11028,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

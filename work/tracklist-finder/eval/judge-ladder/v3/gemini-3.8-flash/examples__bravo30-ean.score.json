@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:18",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: 'The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources; format and artist match; no other edition with the same barcode and a different tracklist.' Barcode 731456031125 matches in MusicBrainz (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941), Discogs (discogs:release/1949898), musik-sammler.de, and on the back cover image. Format (CD) and artist (Compilation / Various Artists) match; pressing variations share the identical tracklist. Condition MET.",
+   "summary": "The input barcode matches the release unambiguously across multiple independent databases and the original back cover image.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' MusicBrainz, Discogs, and the back cover OCR agree completely on 40 tracks, their order, and track titles with only standard typographical/version note variations. Condition MET.",
+   "summary": "Track count, sequence, and titles are completely verified across two databases and the scanned back cover.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition.' Databases (MusicBrainz, Discogs) and primary source (back cover scan via Cover Art Archive read with Vision) are present. Condition MET.",
+   "summary": "Both independent databases and a high-resolution primary back cover scan were utilized.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 14.6,
+  "tokens_in": 40454,
+  "tokens_out": 1664,
+  "cost_usd": 0.04024,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

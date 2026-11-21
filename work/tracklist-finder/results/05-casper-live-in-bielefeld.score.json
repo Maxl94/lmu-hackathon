@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T16:06:02",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode 4251484708203 matches (checksum OK) in MusicBrainz and Discogs, but the Discogs format is not shown in the evidence (search was format=None), so 'format matches' is only MET for MusicBrainz (12\" Vinyl x3) - NOT MET in full. Level 4: barcode match in at least one source with artist and format confirmed - MET (MusicBrainz ae36f7c7 barcode hit, artist Casper, Vinyl). No competing edition with same barcode found (1 hit per source, alternatives 0) - MET. Stopped at level 4.",
+   "summary": "Barcode matches in two databases and no competing edition exists, but the Discogs release's vinyl format is not shown in the evidence, so the full level-5 condition is not met.",
+   "evidence": [
+    "MusicBrainz search barcode:(4251484708203): 1 hit",
+    "Discogs search barcode=4251484708203 format=None: 1 hit",
+    "FACTS barcode_match exact, ean_checksum_ok true, alternatives 0"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MusicBrainz and Discogs both report 28 tracks, 28 durations, identical order and titles; the only deviation is '20qm' vs '20 qm' (spelling variant). Count, order and titles agree across two independent sources - MET. Stopped at level 5.",
+   "summary": "Two independent databases agree on count, order, titles and per-track durations, differing only in a spelling variant of track C2.",
+   "evidence": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57 (28 tracks)",
+    "discogs:release/32548602 (28 tracks)",
+    "conflicts: title track 12 '20qm' vs '20 qm'",
+    "tool check: 28 tracks titles agree, 0 duration differences > 2 s"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no primary source (cover, booklet, label print or label information) is cited - NOT MET. Level 4: two independent database entries with differing details (MusicBrainz release ae36f7c7 and Discogs release 32548602, different dates 2024-12-12 vs 2024-12-13 and different formats) - MET. Stopped at level 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) support the edition, but no primary source such as a cover or label print is cited.",
+   "evidence": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs release 32548602 format is not verified in the tool evidence (search used format=None); the result's claim of 'format any' for Discogs is unsupported for vinyl.",
+  "Result field edition '3×12\" Vinyl' is taken from MusicBrainz only; no primary source confirms it.",
+  "Missing credits for 28 of 28 tracks (acknowledged by the agent); featured artists on B5, C5, D1, D3, D4 come only from Discogs.",
+  "Release date differs slightly between sources (MusicBrainz 2024-12-12, Discogs 2024-12-13); not a contradiction but unexplained.",
+  "Track C2 title spelled '20qm' (MusicBrainz) vs '20 qm' (Discogs); resolved by MusicBrainz rule, which is acceptable."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 28,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "genius",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 10.8,
+  "tokens_in": 8650,
+  "tokens_out": 2056,
+  "cost_usd": 0.00189,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 27,
+   "of": 28
+  }
+ }
+}

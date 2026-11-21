@@ -1,0 +1,79 @@
+{"ts": 1795186754.89, "event": "run_start", "input": {"title": "Pareidolia", "artist": "Alejandro Mosso"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186754.89, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186754.89, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186754.89, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186754.89, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186757.93, "event": "tool_start", "tool": "tl-mb", "args": "search --title Pareidolia --artist Alejandro Mosso"}
+{"ts": 1795186757.93, "event": "tool_end", "tool": "tl-mb", "args": "search --title Pareidolia --artist Alejandro Mosso", "seconds": 0.0, "ok": true}
+{"ts": 1795186758.1, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Pareidolia --artist Alejandro Mosso"}
+{"ts": 1795186758.1, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Pareidolia --artist Alejandro Mosso", "seconds": 0.0, "ok": true}
+{"ts": 1795186759.39, "event": "tool_start", "tool": "tl-discogs", "args": "release 33252435"}
+{"ts": 1795186759.39, "event": "tool_end", "tool": "tl-discogs", "args": "release 33252435", "seconds": 0.0, "ok": true}
+{"ts": 1795186759.57, "event": "tool_start", "tool": "tl-mb", "args": "search --title Pareidolia --artist Mosso"}
+{"ts": 1795186759.94, "event": "tool_end", "tool": "tl-mb", "args": "search --title Pareidolia --artist Mosso", "seconds": 0.4, "ok": true}
+{"ts": 1795186761.54, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Pareidolia --format Vinyl"}
+{"ts": 1795186761.98, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Pareidolia --format Vinyl", "seconds": 0.4, "ok": true}
+{"ts": 1795186762.18, "event": "tool_start", "tool": "tl-itunes", "args": "search Alejandro Mosso Pareidolia"}
+{"ts": 1795186762.19, "event": "tool_end", "tool": "tl-itunes", "args": "search Alejandro Mosso Pareidolia", "seconds": 0.0, "ok": true}
+{"ts": 1795186762.36, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Alejandro Mosso --title Pareidolia"}
+{"ts": 1795186762.36, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Alejandro Mosso --title Pareidolia", "seconds": 0.0, "ok": true}
+{"ts": 1795186766.43, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia Lomidhigh Organic"}
+{"ts": 1795186766.44, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia Lomidhigh Organic", "seconds": 0.0, "ok": true}
+{"ts": 1795186766.62, "event": "tool_start", "tool": "tl-search", "args": "\"Alejandro Mosso\" Pareidolia beatport"}
+{"ts": 1795186767.65, "event": "tool_end", "tool": "tl-search", "args": "\"Alejandro Mosso\" Pareidolia beatport", "seconds": 1.0, "ok": true}
+{"ts": 1795186769.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --grep -iE duration|Pareidolia|min|track"}
+{"ts": 1795186769.12, "event": "tool_end", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --grep -iE duration|Pareidolia|min|track", "seconds": 0.0, "ok": false}
+{"ts": 1795186769.31, "event": "tool_start", "tool": "tl-search", "args": "deejay.de Alejandro Mosso Pareidolia LMHO025"}
+{"ts": 1795186769.31, "event": "tool_end", "tool": "tl-search", "args": "deejay.de Alejandro Mosso Pareidolia LMHO025", "seconds": 0.0, "ok": true}
+{"ts": 1795186770.57, "event": "tool_start", "tool": "tl-scrape", "args": "https://deejay.de/Pareidolia__L26845/lang_en --grep Pareidolia|min|duration|DDALMH|LMHO025"}
+{"ts": 1795186777.47, "event": "tool_end", "tool": "tl-scrape", "args": "https://deejay.de/Pareidolia__L26845/lang_en --grep Pareidolia|min|duration|DDALMH|LMHO025", "seconds": 6.9, "ok": true}
+{"ts": 1795186777.74, "event": "tool_start", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --grep Pareidolia|duration|min"}
+{"ts": 1795186777.75, "event": "tool_end", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --grep Pareidolia|duration|min", "seconds": 0.0, "ok": true}
+{"ts": 1795186780.19, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site lomidhigh.bandcamp.com"}
+{"ts": 1795186781.14, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site lomidhigh.bandcamp.com", "seconds": 0.9, "ok": true}
+{"ts": 1795186781.34, "event": "tool_start", "tool": "tl-search", "args": "Lomidhigh Organic 025 deejay.de"}
+{"ts": 1795186782.46, "event": "tool_end", "tool": "tl-search", "args": "Lomidhigh Organic 025 deejay.de", "seconds": 1.1, "ok": true}
+{"ts": 1795186784.36, "event": "tool_start", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/a-alejandro-mosso-pareidolia-2 --mode uc --grep \"duration\"|duration_ms|Pareidolia"}
+{"ts": 1795186793.21, "event": "tool_end", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/a-alejandro-mosso-pareidolia-2 --mode uc --grep \"duration\"|duration_ms|Pareidolia", "seconds": 8.8, "ok": true}
+{"ts": 1795186795.39, "event": "tool_start", "tool": "tl-mb", "args": "search --help"}
+{"ts": 1795186795.41, "event": "tool_end", "tool": "tl-mb", "args": "search --help", "seconds": 0.0, "ok": true}
+{"ts": 1795186795.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/l/lomidhigh-organic --grep Pareidolia|Mosso|LMHO|025"}
+{"ts": 1795186796.02, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/l/lomidhigh-organic --grep Pareidolia|Mosso|LMHO|025", "seconds": 0.4, "ok": true}
+{"ts": 1795186802.16, "event": "tool_start", "tool": "tl-search", "args": "LMHO025"}
+{"ts": 1795186802.17, "event": "tool_end", "tool": "tl-search", "args": "LMHO025", "seconds": 0.0, "ok": true}
+{"ts": 1795186802.34, "event": "tool_start", "tool": "tl-search", "args": "\"Pareidolia\" \"Alejandro Mosso\" 7\""}
+{"ts": 1795186803.35, "event": "tool_end", "tool": "tl-search", "args": "\"Pareidolia\" \"Alejandro Mosso\" 7\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186805.1, "event": "tool_start", "tool": "tl-search", "args": "\"Pareidolia EP\" \"Alejandro Mosso\" recordsale"}
+{"ts": 1795186806.13, "event": "tool_end", "tool": "tl-search", "args": "\"Pareidolia EP\" \"Alejandro Mosso\" recordsale", "seconds": 1.0, "ok": true}
+{"ts": 1795186806.37, "event": "tool_start", "tool": "tl-scrape", "args": "https://recordsale.de/en/artists/alejandro-mosso/albums/pareidolia-ep --grep Pareidolia|Ddalmh|min|:"}
+{"ts": 1795186806.39, "event": "tool_end", "tool": "tl-scrape", "args": "https://recordsale.de/en/artists/alejandro-mosso/albums/pareidolia-ep --grep Pareidolia|Ddalmh|min|:", "seconds": 0.0, "ok": true}
+{"ts": 1795186808.58, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site deejay.de"}
+{"ts": 1795186809.66, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site deejay.de", "seconds": 1.1, "ok": true}
+{"ts": 1795186809.85, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site hhv.de"}
+{"ts": 1795186810.9, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site hhv.de", "seconds": 1.1, "ok": true}
+{"ts": 1795186811.11, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site juno.co.uk"}
+{"ts": 1795186811.11, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia --site juno.co.uk", "seconds": 0.0, "ok": true}
+{"ts": 1795186813.84, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/ --grep Pareidolia|LMHO|Lomidhigh -i"}
+{"ts": 1795186813.86, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/ --grep Pareidolia|LMHO|Lomidhigh -i", "seconds": 0.0, "ok": false}
+{"ts": 1795186814.78, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/ --grep Pareidolia|LMHO|Lomidhigh"}
+{"ts": 1795186815.38, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/ --grep Pareidolia|LMHO|Lomidhigh", "seconds": 0.6, "ok": true}
+{"ts": 1795186818.13, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/?show_out_of_stock=1 --grep Pareidolia|LMHO|Lomidhigh|2025"}
+{"ts": 1795186818.66, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.juno.co.uk/artists/Alejandro+Mosso/?show_out_of_stock=1 --grep Pareidolia|LMHO|Lomidhigh|2025", "seconds": 0.5, "ok": true}
+{"ts": 1795186820.0, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.deejay.de/m_House/sm_News/substyles_127/perpage_120/lang_en --grep Mosso|LMHO|Lomidhigh --links"}
+{"ts": 1795186820.2, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.deejay.de/m_House/sm_News/substyles_127/perpage_120/lang_en --grep Mosso|LMHO|Lomidhigh --links", "seconds": 0.2, "ok": true}
+{"ts": 1795186822.2, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923 --grep A1|B1|Pareidolia|Ddalmh|DDALMH|min|:"}
+{"ts": 1795186822.44, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923 --grep A1|B1|Pareidolia|Ddalmh|DDALMH|min|:", "seconds": 0.2, "ok": true}
+{"ts": 1795186826.0, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg --context Discogs image for Alejandro Mosso - Pareidolia EP 7-inch, likely back cover. Transcribe exactly any print"}
+{"ts": 1795186830.79, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg --context Discogs image for Alejandro Mosso - Pareidolia EP 7-inch, likely back cover. Transcribe exactly any print", "seconds": 4.8, "ok": true}
+{"ts": 1795186838.56, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia DDALMH youtube"}
+{"ts": 1795186839.83, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia DDALMH youtube", "seconds": 1.3, "ok": true}
+{"ts": 1795186840.02, "event": "tool_start", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia EP 2025 review"}
+{"ts": 1795186841.08, "event": "tool_end", "tool": "tl-search", "args": "Alejandro Mosso Pareidolia EP 2025 review", "seconds": 1.1, "ok": true}
+{"ts": 1795186842.62, "event": "tool_start", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --mode uc --max 4000"}
+{"ts": 1795186851.58, "event": "tool_end", "tool": "tl-scrape", "args": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025 --mode uc --max 4000", "seconds": 9.0, "ok": true}
+{"ts": 1795186868.9, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 31, "steps": 32}
+{"ts": 1795186868.9, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186868.9, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186868.9, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186884.33, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.85, "error": null}
+{"ts": 1795186884.33, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.85, "tracks": 2, "wall_s": 114.0, "judge_s": 15.4, "cost_usd": 0.0238, "mode": "agent", "errors": []}

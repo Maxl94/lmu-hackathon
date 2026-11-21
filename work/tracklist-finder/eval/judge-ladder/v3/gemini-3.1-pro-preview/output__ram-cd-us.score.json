@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:14",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The input contains a barcode (888837168625), MET. It matches exactly this edition in >= 2 independent sources (Discogs 4729785, MusicBrainz f6758afb-ecff-410e-8979-b131cfa3c6d3, and the back cover image), MET. Format (CD) and artist (Daft Punk) match, MET. No other edition with a different tracklist exists for this barcode in the evidence, MET.",
+   "summary": "The barcode uniquely and exactly matches the standard CD edition in multiple independent databases and the physical back cover.",
+   "evidence": [
+    "bin/tl-discogs release 4729785",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-vision \"https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg\""
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles. MET. Discogs 4729785, MusicBrainz f6758afb-ecff-410e-8979-b131cfa3c6d3, and the physical back cover all perfectly agree on the 13 tracks, their order, and titles.",
+   "summary": "MusicBrainz, Discogs, and the CD's back cover all confirm the identical 13-track tracklist.",
+   "evidence": [
+    "bin/tl-discogs release 4729785",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-vision \"https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg\""
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition. MET. The agent utilized MusicBrainz, Discogs, and successfully read the CD's back cover using the vision tool.",
+   "summary": "The results are solidly backed by standard databases combined with a direct text read of the physical back cover.",
+   "evidence": [
+    "bin/tl-discogs release 4729785",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-vision \"https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg\""
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent added featured artists to tracks 5, 6, 7, 8, 11, and 12 (e.g., Julian Casablancas, Pharrell Williams) and explicitly cited MusicBrainz and Discogs for them. However, these featured artists are absent from the tool outputs for those specific database entries (they were likely taken from the iTunes output without citation)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 27.0,
+  "tokens_in": 10711,
+  "tokens_out": 4514,
+  "cost_usd": 0.07559,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

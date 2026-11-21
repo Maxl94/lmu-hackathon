@@ -1,0 +1,89 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:23:03",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 trifft exakt in MusicBrainz und Discogs dieselbe Ausgabe (CD, Artist Bushido, Titel stimmen). Es ist keine weitere Ausgabe mit gleichem Barcode bekannt (alternatives leer).",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "FACTS barcode_match exact, alternatives 0"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Beide Quellen stimmen bei Anzahl (20), Reihenfolge und Titeln überein. Bei Track 15 und 16 gibt es Dauerabweichungen (>2 s), die nach fester Regel zugunsten MusicBrainz aufgelöst wurden; diese betreffen nicht Anzahl, Reihenfolge oder Titel.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "conflicts: Dauer Track 15, Dauer Track 16"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbankeinträge (MusicBrainz und Discogs) mit unterschiedlichen Details (Dauern, Edition-Bezeichnung), aber keine primäre Quelle wie Cover, Booklet oder Labelangabe, die gelesen wurde.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Edition-Bezeichnung 'Exclusive 2004 Edition' und die Katalognummer '40195 9396000-0' sind nicht durch eine primäre Quelle (Cover/Booklet) belegt; nur Discogs nennt die Edition im Titel.",
+  "Dauerkonflikte bei Track 15 (Vack You!: 2:21 vs. 2:18) und Track 16 (Sternenstaub: 3:41 vs. 3:38) wurden per Regel entschieden, nicht inhaltlich geprüft.",
+  "Das Feld 'country' DE und das Jahr 2004 stammen nur aus Datenbankeinträgen; Discogs nennt 'Germany, Austria, & Switzerland' als Region, was nicht eindeutig dem Feld country DE entspricht."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 7.5,
+  "tokens_in": 5250,
+  "tokens_out": 1601,
+  "cost_usd": 0.00133,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

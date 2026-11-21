@@ -1,0 +1,836 @@
+{
+ "input": {
+  "id": "08-zartmann-cd-sch-nhauser-ep",
+  "title": "CD - schönhauser EP",
+  "artist": "Zartmann",
+  "ean": "198028875721",
+  "format": "CD"
+ },
+ "status": "found",
+ "release": {
+  "title": "schönhauser EP",
+  "artist": "Zartmann",
+  "format": "CD",
+  "country": "DE",
+  "year": 2025,
+  "label": "Bamboo Artist & Label Services",
+  "catno": null,
+  "barcode": "198028875721",
+  "edition": "CD, EP, cardboard sleeve; track positions 5-8 misprinted as '06-09' on the cover",
+  "ids": {
+   "musicbrainz": "bc159b1c-39ac-4bcc-840f-dd7f30806301",
+   "discogs": "33665688"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "wann schreib ich einen song über dich",
+   "artist": null,
+   "duration_s": 146,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33609228",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Florence Price",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Aaron (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11190883"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "tau mich auf",
+   "artist": null,
+   "duration_s": 110,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33609228",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Julia Bergen",
+     "role": "writer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11329842"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "schönhauser",
+   "artist": "Zartmann feat. Gustav",
+   "duration_s": 120,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "Gustav",
+     "role": "writer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11591712"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "schönhauser Skit",
+   "artist": null,
+   "duration_s": 115,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33609228",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679355"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679355"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679355"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679355"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "für immer?",
+   "artist": null,
+   "duration_s": 126,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "Mona Yim",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "Aaron (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679357"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "wunderschön",
+   "artist": null,
+   "duration_s": 164,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33609228",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Aaron (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Julia Bergen",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11540007"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "lass es gehen",
+   "artist": "Zartmann feat. Max Raabe",
+   "duration_s": 136,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Max Raabe",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Maarten Paul",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Aaron (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Maarten Paul",
+     "role": "producer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11482160"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "dein dudenkstsoschön",
+   "artist": null,
+   "duration_s": 155,
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33609228",
+    "deezer:album/732814941",
+    "web:https://music.amazon.de/albums/B0DTQTDDCQ"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Zartmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "Cuffa",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "Aaron (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "David Bonk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "Dauner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "DaJu",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    },
+    {
+     "name": "Drumla",
+     "role": "producer",
+     "sources": [
+      "genius:song/11679356"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Zartmann",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688"
+   ]
+  },
+  {
+   "name": "Gustav",
+   "role": "featured",
+   "tracks": [
+    "3"
+   ],
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ]
+  },
+  {
+   "name": "Max Raabe",
+   "role": "featured",
+   "tracks": [
+    "7"
+   ],
+   "sources": [
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "discogs:release/33665688",
+    "deezer:album/732814941"
+   ]
+  }
+ ],
+ "total_duration_s": 1072,
+ "confidence": 0.88,
+ "sources": [
+  {
+   "id": "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+   "url": "https://musicbrainz.org/release/bc159b1c-39ac-4bcc-840f-dd7f30806301",
+   "kind": "database",
+   "note": "CD, 2025-04-03, DE, 8 tracks, no barcode; lowercase titles and durations in ms"
+  },
+  {
+   "id": "discogs:release/33665688",
+   "url": "https://www.discogs.com/release/33665688-Zartmann-Schönhauser-EP",
+   "kind": "database",
+   "note": "barcode 198028875721 matches; CD in cardboard sleeve; no track durations; cover misprint 06-09"
+  },
+  {
+   "id": "discogs:release/33609228",
+   "url": "https://www.discogs.com/release/33609228-Zartmann-Schönhauser-EP",
+   "kind": "database",
+   "note": "12\" 45 RPM sibling of the same master, printed lowercase titles, 7 of 8 durations"
+  },
+  {
+   "id": "deezer:album/732814941",
+   "url": "https://www.deezer.com/album/732814941",
+   "kind": "streaming",
+   "note": "digital edition, UPC 196872810677, 8 tracks with durations"
+  },
+  {
+   "id": "web:https://music.amazon.de/albums/B0DTQTDDCQ",
+   "url": "https://music.amazon.de/albums/B0DTQTDDCQ",
+   "kind": "streaming",
+   "note": "digital tracklist with durations, (P) 2025 Bamboo Artists / Epic"
+  },
+  {
+   "id": "genius:song/11190883",
+   "url": "https://genius.com/Zartmann-wann-schreib-ich-einen-song-uber-dich-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11329842",
+   "url": "https://genius.com/Zartmann-tau-mich-auf-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11591712",
+   "url": "https://genius.com/Zartmann-gustav-and-01099-schonhauser-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11679355",
+   "url": "https://genius.com/Zartmann-schonhauser-skit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11679357",
+   "url": "https://genius.com/Zartmann-fur-immer-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11540007",
+   "url": "https://genius.com/Zartmann-wunderschon-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11482160",
+   "url": "https://genius.com/Zartmann-and-max-raabe-lass-es-gehen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11679356",
+   "url": "https://genius.com/Zartmann-dein-dudenkstsoschon-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 8",
+   "values": {
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301": "dein dudenkstsoschön",
+    "discogs:release/33665688": "Deindudenkstsoschön",
+    "discogs:release/33609228": "deindudenkstsoschön",
+    "deezer:album/732814941": "dein dudenkstsoschön"
+   },
+   "resolution": "Used 'dein dudenkstsoschön' (MusicBrainz CD entry plus all digital catalogues and Genius/Apple listings); the Discogs transcriptions merge the two words. Recorded here so the Discogs spelling is not lost."
+  },
+  {
+   "field": "title capitalisation tracks 1-8",
+   "values": {
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301": "lowercase (e.g. 'wann schreib ich einen song über dich')",
+    "discogs:release/33665688": "Title Case (e.g. 'Wann Schreib Ich Einen Song Über Dich')",
+    "discogs:release/33609228": "lowercase",
+    "deezer:album/732814941": "lowercase"
+   },
+   "resolution": "Lowercase used (MusicBrainz CD entry, matching the lowercase artwork confirmed by the vinyl sibling entry and all digital catalogues); the Discogs CD entry applies Title Case."
+  },
+  {
+   "field": "duration track 3",
+   "values": {
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301": "2:00 (120000 ms)",
+    "deezer:album/732814941": "2:00",
+    "discogs:release/33609228": "2:03 (123 s)"
+   },
+   "resolution": "120 s chosen: MusicBrainz CD entry (ms precision) plus Deezer and Amazon (2:01) agree; the vinyl transcription is 3 s longer, beyond the 2 s rounding tolerance."
+  },
+  {
+   "field": "duration track 5",
+   "values": {
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301": "2:06 (126000 ms)",
+    "deezer:album/732814941": "2:06",
+    "discogs:release/33609228": "2:03 (123 s)"
+   },
+   "resolution": "126 s chosen: MusicBrainz CD entry plus Deezer and Amazon (2:06) agree; the vinyl transcription is 3 s shorter."
+  },
+  {
+   "field": "position tracks 5-8",
+   "values": {
+    "discogs:release/33665688": "printed on cover as '06'-'09'"
+   },
+   "resolution": "Sequential positions 1-8 used; the Discogs release notes document the misprint ('tracks 5-8 as 06-09') and the sequential order is unambiguous."
+  },
+  {
+   "field": "label",
+   "values": {
+    "discogs:release/33665688": "Bamboo Artist & Label Services (LC99179)",
+    "musicbrainz:release/bc159b1c-39ac-4bcc-840f-dd7f30806301": "Chimperator Productions"
+   },
+   "resolution": "Bamboo Artist & Label Services used (matches the LC99179 identifier on the physical item and Amazon's '(P) 2025 Bamboo Artists / Epic'); the MusicBrainz label field is likely a mis-entry."
+  }
+ ],
+ "missing": [
+  "Discogs CD entry (barcode match) has no track durations; durations come from the MusicBrainz CD entry of the same album (2025-04-03, DE, 8 tracks, but entered without barcode)",
+  "no vision reading of the CD back cover possible: Discogs image host returned HTTP 403, MusicBrainz cover art has only the front image"
+ ],
+ "alternatives": [
+  {
+   "description": "12\" vinyl, 45 RPM, Germany 2025, barcode 198028875714, 8 tracks, lowercase printed titles",
+   "source": "discogs:release/33609228",
+   "why_not": "vinyl, different barcode (…714); used only as duration cross-check"
+  },
+  {
+   "description": "12\" vinyl, Record Store Day 2025 limited orange edition, barcode 198028986014, 500 copies",
+   "source": "discogs:release/33675042",
+   "why_not": "vinyl RSD edition, different barcode, no durations"
+  },
+  {
+   "description": "12\" vinyl, limited edition, Germany 2025",
+   "source": "discogs:release/33697527",
+   "why_not": "vinyl, different barcode"
+  },
+  {
+   "description": "digital album, 8 tracks, UPC 196872810677, Bamboo Artists/Epic",
+   "source": "deezer:album/732814941",
+   "why_not": "digital edition, not the physical CD"
+  }
+ ],
+ "reasoning": "The EAN 198028875721 (UPC-A, valid) is an exact hit on Discogs release 33665688: CD, EP, Germany, 2025-04-03, Bamboo Artist & Label Services, LC99179, 8 tracks in a cardboard sleeve — matching the input format 'CD'. MusicBrainz has no barcode match but holds the same CD (2025-04-03, DE, 8 tracks, lowercase titles) with millisecond durations; its tracklist matches the Discogs CD one-to-one, so it serves as the duration source. Durations were cross-checked against Deezer, Amazon Music (≤1 s) and the vinyl sibling release (≤2 s, except tracks 3 and 5, flagged). Features sit in the track artist (Gustav on 3, Max Raabe on 7). The Discogs cover-position misprint 06-09 is documented but sequential positions 1-8 are used. Confidence is 0.88 because the barcode match is exact and three independent sources (MusicBrainz CD, Deezer, Amazon) agree on all eight titles and durations; the listed conflicts are transcription/capitalisation level and are all resolved with a stated resolution, not open data gaps."
+}

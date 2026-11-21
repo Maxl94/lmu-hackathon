@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:08",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains barcode (NOT MET, input_has_barcode is false). Level 4: Without barcode: title, artist, format and >=1 further attribute unambiguous in >=2 sources (MET: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 and discogs:release/4570366), and no other edition fitting the input has a different tracklist (NOT MET: tool call 2 shows musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f 'Random Access Memories' by Daft Punk on Vinyl+Vinyl+Vinyl with 22 tracks [6+7+9], which fits the unqualified input of title, artist, and format Vinyl). Level 3: Unambiguous in 1 source or all fitting editions share the same tracklist (NOT MET: competing 2023 3xLP edition has 22 tracks instead of 13). Level 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (MET: standard 2xLP has 13 tracks while the 2023 10th Anniversary 3xLP musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f has 22 tracks, and the input does not rule it out).",
+   "summary": "Because the input only specifies title, artist, and Vinyl format without a barcode or year, competing vinyl editions with different tracklists (such as the 22-track 10th Anniversary 3xLP) also fit the input.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (MET: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 in tool call 5 and discogs:release/4570366 in tool call 6 both represent the 2013 2xLP edition with barcode 888837168618 / catno 88883716861 and agree completely on all 13 tracks A1 to D4).",
+   "summary": "MusicBrainz and Discogs entries for the 2013 standard 2xLP edition agree completely on track count, positions (A1-D4), and titles.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (NOT MET: no cover/label images or primary manufacturer info were read). Level 4: Two independent database entries recognisable by differing details (MET: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 and discogs:release/4570366 are independent databases with slightly differing track duration roundings and release metadata).",
+   "summary": "Two independent music databases (MusicBrainz and Discogs) were queried and cross-referenced.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "In `alternatives`, the entry `discogs:release/28924120` (2023 Drumless Edition, 2xLP) is cited, which never appeared in any tool output (likely truncated in tool call 1 and hallucinated from pre-existing knowledge).",
+  "In `alternatives`, the agent claims that `discogs:release/9216088` and `discogs:release/31621720` (and 2021/2022 reissues) have an identical tracklist, although their tracklists were never fetched via `tl-discogs release`.",
+  "Validation error reported in FACTS: `artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once`.",
+  "In `release.country`, the agent states `DE`, while tool call 2 (`tl-mb search`) lists `FR`, tool call 5 (`tl-mb release`) lists `DE` (as the first release event in a multi-country release), and tool call 6 (`tl-discogs release`) lists `UK, Europe & US`."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 17.0,
+  "tokens_in": 16206,
+  "tokens_out": 1301,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

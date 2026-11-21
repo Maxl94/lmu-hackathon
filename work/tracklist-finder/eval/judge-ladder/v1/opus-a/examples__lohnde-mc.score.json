@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:48",
+ "overall": 2.8,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert",
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Ohne Barcode passen Titel und Format auf zwei Discogs-Kassetten mit unterschiedlicher Trackliste: Folge 1 (MC6109) und Folge 2 (MC6116). Folge 2 ist zwar als „Swinging Seelze“ gelistet, das Cover nennt aber ebenfalls „Blasorchester des Musikvereins Lohnde“. Die Wahl von Folge 1 stützt sich nur auf den Künstler-Credit und ist plausibel, aber nicht eindeutig. Der Status hätte eher „ambiguous“ lauten müssen.",
+   "belege": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "tl-vision Frontcover Folge 2 (Schritt 10)",
+    "tl-discogs search --artist (Schritt 3)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Discogs-Eintrag 24165131 und die per tl-vision gelesene J-card-Rückseite stimmen überein: 10 Titel, Seite 1 mit 6 und Seite 2 mit 4 Titeln, gleiche Reihenfolge. Abweichungen gibt es nur in der Groß-/Kleinschreibung. Die Kassettenetiketten bestätigen MC 6109 / Folge 1.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Als Quellen liegen eine Datenbank (Discogs) und Primärquellen vor: gedruckte J-card und Kassettenetiketten mit Kat.-Nr. MC 6109 und Fred Kersten KG, gelesen mit tl-vision.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:...NTQtOTgxNS5qcGVn.jpeg",
+    "image:...NTEtNDI2MS5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Folge 2 (discogs:release/24154076, MC6116) ist laut Cover ebenfalls vom „Blasorchester des Musikvereins Lohnde“ und hat den gleichen Titel, aber eine andere Trackliste. Die Edition ist daher nicht eindeutig; Status „found“ statt „ambiguous“ ist fraglich.",
+  "Das Jahr 1991 ist nur aus „im 67st. Jahr seines Bestehens“ abgeleitet und auf dem Tonträger nicht gedruckt.",
+  "Alle Spielzeiten fehlen (A1–B4).",
+  "Die Bilder stammen von Discogs selbst. Die Discogs-Trackliste wurde vermutlich vom selben Einleger abgeschrieben, ist also nur bedingt unabhängig."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 20.3,
+  "tokens_in": 35646,
+  "tokens_out": 2060,
+  "cost_usd": 0.18378,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,1 @@
+../../.opencode/skills/cover-reading/SKILL.md

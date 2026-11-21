@@ -1,0 +1,116 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:14",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT has barcode 731456031125 (UPC-A, checksum valid) - MET. Barcode matches exactly in MusicBrainz (release 41b0a392) and Discogs 1949898 (scanned barcode), plus printed barcode on back cover (image) and EAN on musik-sammler.de - MET (>=2 independent sources). Format CD and artist Various Artists match - MET. No other edition with same barcode and different tracklist: Discogs 23145932 (UK) and 26676554 (EU) share the barcode with identical tracklist, Discogs 610930 club edition has a different barcode - MET on the evidence shown. Level 5 reached.",
+   "summary": "Exact barcode match in MusicBrainz, Discogs and the printed back cover, with format and artist consistent and the only same-barcode competitors (UK/EU pressings) sharing the same tracklist.",
+   "evidence": [
+    "shell #1 tl-gtin",
+    "shell #2 tl-discogs search",
+    "shell #3 tl-mb search",
+    "shell #4 tl-discogs release 23145932",
+    "shell #5 tl-mb release",
+    "shell #6 tl-discogs release 1949898",
+    "shell #7 tl-caa",
+    "shell #8 tl-vision backcover",
+    "shell #16-17 tl-scrape musik-sammler EAN"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: two or more independent sources agree on count, order and titles except for version suffixes - NOT fully MET. MusicBrainz, Discogs, back cover and musik-sammler agree on 40 tracks and order. Title differences exist (Discogs adds '(Album Version)' on track 10 CD1, 'Strassen' vs 'Straßen' on CD2 track 2, '(Radio Edit)' suffixes differ), and the musik-sammler list shows an artist error (Nelly for track 10 CD1) and typos. Level 4: one complete source (MusicBrainz) confirmed by a second (Discogs) except for explained small deviations (version suffixes, spelling, artist credit) - MET. Level 4 reached.",
+   "summary": "Count and order are confirmed by four sources, but title versions and spellings deviate between sources; the agent explained these, so the tracklist rates at level 4 rather than 5.",
+   "evidence": [
+    "shell #5 tl-mb release 1.1-1.20 and 2.1-2.20",
+    "shell #6 tl-discogs release 1949898",
+    "shell #8 tl-vision backcover CD1-01 to CD2-20",
+    "shell #12 tl-scrape musik-sammler full tracklist",
+    "result conflicts 'Titel Track 10 CD1', 'Titel Track 2 CD2', 'Interpret Track 11, 18, 20 CD2'"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database plus independent primary source of same edition - MET. MusicBrainz and Discogs (two databases), plus the back cover image read via vision (printed barcode 731456031125, cat. no. 560 311-2, 40 tracks in order) as primary source. Also the collector site musik-sammler.de. Level 5 reached.",
+   "summary": "Two databases plus a read printed back cover of the same edition with matching barcode and catalogue number.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "musik-sammler.de tl-scrape (shell #12) lists CD1 track 10 as 'Nelly | Oops!... I Did It Again' while MusicBrainz, Discogs and cover say Britney Spears; not used in result but shows the collector page is unreliable.",
+  "musik-sammler.de CD1 track 1 shows 3:45 while MusicBrainz is 224 s (3:44); this small deviation is not listed among the agent's conflicts.",
+  "Result reasoning claims the back-cover read confirms titles, but the vision output shows 'Seine Strassen' and 'Oops! ... I Did It Again' without the MusicBrainz/Discogs suffixes; the agent resolved these by choosing MusicBrainz spelling without strong evidence for the MB version.",
+  "Track 18 CD2 'Hey Baby': agent chose 220 s from MusicBrainz; cover reads artist as 'DEEJAY OETZI' and the agent dismisses it as a logo misreading without verification.",
+  "Track 19 CD2 'Only With You': musik-sammler 3:40 is treated as a data error because it equals track 18; plausible but this is an assumption, not verified.",
+  "Result confidence is 0.9 in the result object but 0.93 in the written output file; inconsistent.",
+  "Discogs 23145932 and 26676554 tracklists were only partially shown in the tool output; the claim of identical tracklist to the chosen edition is not fully verified for all 40 tracks."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 22.5,
+  "tokens_in": 46749,
+  "tokens_out": 4685,
+  "cost_usd": 0.00702,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

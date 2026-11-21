@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:37",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains barcode ('731456031125') -> MET; barcode matches this edition in >= 2 independent sources (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932) -> MET; format ('CD' / 2xCD) and title ('Bravo Hits 30', no input artist given) match -> MET; no other edition with the same barcode and a different tracklist (alternatives discogs:release/1949898 and discogs:release/26676554 share the identical 40-track tracklist) -> MET.",
+   "summary": "The input barcode 731456031125 matches Bravo Hits 30 (CD) across MusicBrainz and Discogs with no competing tracklist variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932) agree on track count (40), order (2 discs x 20 tracks), and titles (only minor orthography/annotation variants on 1-10, 2-2, and 2-6) -> MET.",
+   "summary": "MusicBrainz and Discogs independently confirm all 40 tracks in exact order and title.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (cover/booklet/label print or manufacturer info) -> NOT MET (only databases queried). Level 4: Two independent database entries recognisable by differing details -> MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932 show independent orthography/version annotations and 4 minor duration differences).",
+   "summary": "The result relies on two independent music databases (MusicBrainz and Discogs) with distinct entry details, without a primary image or label source.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error (FACTS): the top-level 'artists' list is missing/empty instead of listing every distinct artist on the carrier.",
+  "Inconsistent track numbering in 'conflicts': 'Titel Track 22' and 'Titel Track 26' use continuous numbering for Disc 2 Pos 2 and Pos 6, whereas 'Dauer Track 14' and 'Dauer Track 18' refer to Disc 2 Pos 14 (Black Legend) and Disc 2 Pos 18 (DJ Ötzi) using per-disc numbering without disc prefix (colliding with Disc 1 Pos 14 and Pos 18).",
+  "Release fields 'label' ('Polystar') and 'catno' ('560 311-2') are not explicitly visible in the abbreviated tool log in EVIDENCE."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 35.5,
+  "tokens_in": 9573,
+  "tokens_out": 2945,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

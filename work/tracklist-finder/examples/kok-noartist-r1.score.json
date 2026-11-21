@@ -1,0 +1,92 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Die Eingabe nennt nur Titel und Format, weder Interpret noch Barcode. Die Belege zeigen mehrere passende CD-Ausgaben mit unterschiedlicher Trackliste: Bushido 2003 (16 Tracks), Bushido Exclusive 2004 Edition (20 Tracks) und Sean Kingston 2011 (13 Tracks). Die Wahl der Bushido-CD 2003 mit EAN 4018939105976 stützt sich nur auf schwache Signale wie GEMA-Kontext und Erst-CD-Ausgabe. Das entspricht Stufe 2.",
+   "belege": [
+    "tl-discogs search (Schritt 1)",
+    "tl-mb search (Schritt 2)",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Für die gewählte Ausgabe (EAN 4018939105976) stimmen MusicBrainz, Discogs und musik-sammler.de in Anzahl (16), Reihenfolge und Titeln überein, abgesehen von Schreibvarianten. Die Abweichung bei der Dauer von Sternenstaub (3:38 vs. 3:41) betrifft nicht Titel oder Reihenfolge und ist dokumentiert. Das erfüllt Stufe 5.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 94% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt zwei eigenständige Datenbankeinträge (MusicBrainz und Discogs mit unterschiedlichen Details, z. B. Dauern und Kat.-Nr.-Schreibweise) sowie die spezialisierte Sammlerseite musik-sammler.de mit gleicher EAN. Eine Primärquelle wie gelesenes Cover, Booklet oder Labelangabe fehlt. Daher Stufe 4.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Eingabe enthält keinen Interpret. Die Wahl von Bushido statt Sean Kingston beruht nur auf dem vermuteten GEMA-Kontext, nicht auf einem Merkmal der Eingabe.",
+  "Die Tracklisten der Alternativen (Exclusive 2004 Edition, 20 Tracks; Sean Kingston, 13 Tracks) wurden nicht im Detail abgerufen. Laut Discogs-Notiz gibt es zudem eine zensierte Version, und das musik-sammler-Suchergebnis nennt eine 2004er CD mit 16 Tracks. Die Angabe '20 Tracks' ist damit nicht eindeutig geklärt.",
+  "Weitere Discogs-Einträge (3645154, 18354424: 2003, Aggro Berlin, ohne Kat.-Nr./Barcode) werden in den Alternativen nicht erwähnt.",
+  "Zur Dauer von Sternenstaub: Die barcodelose musik-sammler-Ausgabe (505095) nennt 3:41, der MB-MZEE-Eintrag 3:38. Der Konflikt ist also nicht klar editionsbezogen.",
+  "Die Feature-Angaben unterscheiden sich zwischen den Quellen: Frank White vs. Fler sowie Hengst & Orgasmus vs. Bass Sultan Hengzt & King Orgasmus One. Es handelt sich um Aliasnamen, das wird im Ergebnis aber nicht erläutert."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 27030,
+  "tokens_out": 2061,
+  "cost_usd": 0.14934,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

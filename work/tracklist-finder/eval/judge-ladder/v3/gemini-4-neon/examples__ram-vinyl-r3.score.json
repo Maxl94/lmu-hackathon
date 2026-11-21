@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:58:26",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains a barcode matching >= 2 independent sources - NOT MET (input only specifies title, artist, format; input_has_barcode is false). Level 4: barcode match in 1 source - NOT MET (no barcode in input); OR without barcode, title/artist/format plus >= 1 further attribute unambiguous in >= 2 sources - NOT MET (input provides no label, catno, year, country, or cover), and no other edition fitting the input has a different tracklist - NOT MET (tool 2 tl-mb search shows competing official Vinyl editions with the same title 'Random Access Memories' and artist 'Daft Punk' but different tracklists: musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f 2023 10th anniversary 3xVinyl with 6+7+9=22 tracks and musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 2014 limited box set with 6+7+2+15+4=34 tracks). Level 3: unambiguous in 1 source with no competing edition known - NOT MET (competing editions appear in tool 2); OR several editions fit and ALL share the same tracklist - NOT MET (musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f has 22 tracks and musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 has 34 tracks vs 13 tracks on the chosen 2013 2xLP). Level 2: several editions fit the input and at least one has a different tracklist - MET (tool 2 tl-mb search: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 with 13 tracks vs musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with 22 tracks and musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 with 34 tracks); choice rests on weak signals - MET (chosen only because the sparse input omits an edition qualifier); no contradiction with input - MET (title, artist, and format match).",
+   "summary": "Multiple official Vinyl editions of 'Random Access Memories' by Daft Punk fit the sparse input and have different tracklists (13 vs 22 vs 34 tracks), so selecting the 2013 standard 2xLP rests only on the weak signal that no edition name was specified.",
+   "evidence": [
+    "tool:2 (tl-mb search)",
+    "tool:1 (tl-discogs search)",
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition - MET (tool 5 musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 and tool 6 discogs:release/4570366 both cover the 2013-05-17 Columbia 2x12\" Vinyl first pressing with catno 88883716861 and barcode 888837168618, and show independent details such as ISRCs/ms durations vs matrix runouts/LC00162); agree on count, order and titles (spelling variants only) - MET (both list the exact same 13 tracks in order A1-A3, B1-B3 on disc 1 and C1-C3, D1-D4 on disc 2, differing only in preposition capitalization 'to'/'To', 'of'/'Of', 'by'/'By' and apostrophe style in D3 'Doin’ It Right'/'Doin' It Right', and all 13 result tracks match).",
+   "summary": "Two independent database entries for the chosen 2013 2xLP edition agree completely on all 13 tracks, their A1-D4 order, and their titles apart from minor capitalization and apostrophe variants.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "tool:5 (tl-mb release)",
+    "tool:6 (tl-discogs release)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition - NOT MET (only database entries were consulted; no cover/label scans were read despite image URLs being available, and no label or manufacturer source was checked). Level 4: two independent database entries (recognisable by differing details) or database + specialised collector site - MET (tool 5 musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 provides ISRCs, exact millisecond durations, and DE release event, while tool 6 discogs:release/4570366 independently provides Chab. runout etchings, LC00162, BIEM/GEMA/BMI/ASCAP rights societies, 1-2s different durations on A1/A2/C2/D4, and UK/Europe/US scope).",
+   "summary": "The result is backed by two clearly independent database entries (MusicBrainz and Discogs) with differing technical metadata, but no primary source such as a cover or label print was read.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "tool:5 (tl-mb release)",
+    "tool:6 (tl-discogs release)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Status is set to 'found' with confidence 0.85 even though competing Vinyl editions fitting the input have different tracklists (musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with 22 tracks and musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 with 34 tracks in tool 2); status should have been 'ambiguous'.",
+  "Schema validation error reported in FACTS: top-level 'artists' list is missing/empty (required to list every distinct artist on the carrier, main, featured, or remixer).",
+  "Alternative discogs:release/28924120 ('2023 Drumless Edition, 2xLP') does not appear in any recorded tool output and was never fetched, making this citation unsupported by the visible evidence.",
+  "Claims in alternatives and reasoning that discogs:release/9216088, discogs:release/31621720, and all later standard reissues/represses share an identical tracklist were not verified by fetching those releases (tool 6 only mentions 9216088 and 31621720 in runout notes), and discogs:release/38684262 (2021 Europe Mispress in tool 1) was not inspected.",
+  "Release country is set to 'DE' from musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 (tool 5), whereas discogs:release/4570366 (tool 6) lists 'UK, Europe & US' (and tool 2 search listed 'FR' for the same MBID) without noting this scope difference."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 100.6,
+  "tokens_in": 16206,
+  "tokens_out": 12449,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

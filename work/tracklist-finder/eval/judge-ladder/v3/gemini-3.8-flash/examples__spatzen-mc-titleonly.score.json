@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:48:18",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: 'The INPUT contains a barcode...' -> NOT MET: Input enthält keinen Barcode.\nLevel 4: 'title, artist, format and at least one further attribute... unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist' -> NOT MET: Input enthält keinen Interpreten, und mit 'Various – Ich Sag's Dir Mit Musik' (discogs:release/8491193, 5×MC) existiert eine konkurrierende Veröffentlichung gleichen Titels im MC-Format mit abweichender Trackliste.\nLevel 3: 'Unambiguous but backed by only one source... or several editions fit but ALL share the same tracklist' -> NOT MET: Die konkurrierende Various-Kompilation hat eine völlig andere Trackliste.\nLevel 2: 'Several editions fit the input and at least one of them has a DIFFERENT tracklist... the choice rests on weak signals' -> MET: Ohne Interpretenangabe im Input passt sowohl das Album der Kastelruther Spatzen als auch die Reader's Digest 5×MC-Kompilation (discogs:release/8491193).",
+   "summary": "Ohne Angabe eines Interpreten oder Barcodes im Input kommt auch die 5×MC-Kompilation 'Various – Ich Sag's Dir Mit Musik' mit völlig anderer Trackliste infrage.",
+   "evidence": [
+    "discogs:release/8491193",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)' -> MET: MusicBrainz (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3), Discogs (discogs:release/2297987) und die abgelesene J-Card-Innenseite (image:...583.jpeg) stimmen bei Trackanzahl (12), Reihenfolge (A1–B6) und Titeln überein.",
+   "summary": "MusicBrainz, Discogs und der Originalaufdruck der Kassetten-J-Card stimmen bezüglich Trackanzahl, Reihenfolge und Titeln überein.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition' -> MET: MusicBrainz als eigenständige Datenbank sowie die per OCR/Vision gelesene Original-J-Card der Kassette (image:...583.jpeg und image:...869.jpeg) mit Trackliste, gedruckten Dauern, Katalognummer und Barcode liegen vor.",
+   "summary": "Die Datenbank MusicBrainz und die als Primärquelle ausgelesene originale Kassetten-J-Card bestätigen die Angaben unabhängig voneinander.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Der Input enthielt keinen Interpreten; die Wahl des Albums der Kastelruther Spatzen gegenüber der konkurrierenden Veröffentlichung 'Various – Ich Sag's Dir Mit Musik' (discogs:release/8491193) stützt sich auf externe Annahmen statt auf Input-Merkmale."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 46.6,
+  "tokens_in": 36920,
+  "tokens_out": 5333,
+  "cost_usd": 0.05246,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

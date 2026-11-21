@@ -1,0 +1,29 @@
+{"ts": 1795189938.97, "event": "run_start", "input": {"title": "Love Songs", "artist": "Peter Fox", "format": "CD"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795189938.97, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795189938.97, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795189938.97, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795189938.97, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795189942.84, "event": "tool_start", "tool": "tl-mb", "args": "search --title Love Songs --artist Peter Fox --format CD"}
+{"ts": 1795189942.84, "event": "tool_start", "tool": "tl-itunes", "args": "search Peter Fox Love Songs"}
+{"ts": 1795189943.51, "event": "tool_end", "tool": "tl-itunes", "args": "search Peter Fox Love Songs", "seconds": 0.7, "ok": true}
+{"ts": 1795189943.69, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Peter Fox --title Love Songs"}
+{"ts": 1795189944.18, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Peter Fox --title Love Songs", "seconds": 0.5, "ok": true}
+{"ts": 1795189944.22, "event": "tool_end", "tool": "tl-mb", "args": "search --title Love Songs --artist Peter Fox --format CD", "seconds": 1.4, "ok": true}
+{"ts": 1795189944.41, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Love Songs --artist Peter Fox --format CD"}
+{"ts": 1795189944.88, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Love Songs --artist Peter Fox --format CD", "seconds": 0.5, "ok": true}
+{"ts": 1795189947.45, "event": "tool_start", "tool": "tl-discogs", "args": "release 27207474"}
+{"ts": 1795189947.46, "event": "tool_start", "tool": "tl-mb", "args": "release cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae"}
+{"ts": 1795189947.78, "event": "tool_end", "tool": "tl-mb", "args": "release cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae", "seconds": 0.3, "ok": true}
+{"ts": 1795189948.32, "event": "tool_end", "tool": "tl-discogs", "args": "release 27207474", "seconds": 0.9, "ok": true}
+{"ts": 1795189951.05, "event": "tool_start", "tool": "tl-caa", "args": "cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae"}
+{"ts": 1795189951.05, "event": "tool_start", "tool": "tl-mb", "args": "group ae4a0990-3ef1-4641-a618-65401985b3a0"}
+{"ts": 1795189953.45, "event": "tool_end", "tool": "tl-caa", "args": "cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae", "seconds": 2.4, "ok": true}
+{"ts": 1795189957.64, "event": "tool_end", "tool": "tl-mb", "args": "group ae4a0990-3ef1-4641-a618-65401985b3a0", "seconds": 6.6, "ok": true}
+{"ts": 1795189964.01, "event": "tool_start", "tool": "tl-vision", "args": "http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg --context Back cover of the Peter Fox CD 'Love Songs' (Warner Music Central Europe). Transcribe the printed tracklist exactly, preserving capitalisation, plus any featured artists and the barcode."}
+{"ts": 1795189974.39, "event": "tool_end", "tool": "tl-vision", "args": "http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg --context Back cover of the Peter Fox CD 'Love Songs' (Warner Music Central Europe). Transcribe the printed tracklist exactly, preserving capitalisation, plus any featured artists and the barcode.", "seconds": 10.4, "ok": true}
+{"ts": 1795189994.86, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 9, "steps": 7}
+{"ts": 1795189994.86, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795190026.53, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 11 tracks, ISRC 11"}
+{"ts": 1795190026.53, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795190036.35, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.35, "error": null}
+{"ts": 1795190036.35, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.35, "tracks": 11, "wall_s": 55.9, "judge_s": 9.8, "cost_usd": 0.0112, "mode": "agent", "errors": []}

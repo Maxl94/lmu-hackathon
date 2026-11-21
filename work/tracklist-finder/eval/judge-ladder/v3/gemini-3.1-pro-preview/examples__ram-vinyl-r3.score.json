@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:50",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: The INPUT contains a barcode (NOT MET, no barcode is provided in the input). 4: Title, artist, format and at least one further attribute unambiguous in >= 2 sources (NOT MET, input only provides title, artist, and format without any further attributes). 3: Several editions fit but ALL share the same tracklist (NOT MET, the evidence shows multiple vinyl editions fitting the input that have different tracklists, such as the 10th Anniversary Edition with 22 tracks and the Deluxe Box Set with 34 tracks). 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (MET, the standard 13-track edition was selected based on the weak signal that an unqualified input implies the standard version).",
+   "summary": "The input is very broad and fits multiple vinyl editions with different tracklists (like the 10th Anniversary Edition), meaning the choice rests on assumptions.",
+   "evidence": [
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (MET, both MusicBrainz and Discogs entries for the standard 2013 2x12\" Vinyl edition agree perfectly on the 13 tracks, their order A1-D4, and titles).",
+   "summary": "Two independent databases confirm the exact count, order, and titles for the chosen 13-track edition.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source (NOT MET, no primary sources such as cover or label scans were read). 4: Two independent database entries (MET, the agent used distinct entries from MusicBrainz and Discogs which show typical platform-specific metadata differences).",
+   "summary": "The research relies on two solid, independent database entries (MusicBrainz and Discogs).",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input does not rule out other vinyl editions with completely different tracklists, such as the '10th Anniversary Edition' (22 tracks) or the 'Deluxe Box Set' (34 tracks). The agent's choice is highly ambiguous despite being the standard album."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 27.2,
+  "tokens_in": 14907,
+  "tokens_out": 3887,
+  "cost_usd": 0.07691,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

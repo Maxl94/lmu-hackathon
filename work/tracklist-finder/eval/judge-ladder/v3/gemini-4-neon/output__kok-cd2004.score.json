@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:33",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains a barcode: MET (ean 4019593960000, valid checksum per FACTS). (2) Matches exactly this edition in >= 2 independent sources: MET (exact barcode match in musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907, which are independent as shown by differing country, edition title, and durations on tracks 15 and 16). (3) Format and artist match: MET (CD and Bushido in both sources, title King of Kingz). (4) No other edition with the same barcode and a different tracklist: MET (both MusicBrainz barcode search and Discogs barcode+CD search returned exactly 1 hit). All Level 5 conditions met.",
+   "summary": "Exact barcode match for this CD edition across two independent databases with matching artist, title, and format and no competing editions.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET (evidence confirms musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 both list 20 tracks with matching titles and order; the only discrepancies are two 3-second duration differences on tracks 15 and 16, which are documented and resolved to MusicBrainz). All Level 5 conditions met.",
+   "summary": "Both independent database entries for this exact edition agree on all 20 tracks in count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (cover/booklet/label print, label or manufacturer info) of the same edition: NOT MET (only two databases were used; no primary source was consulted). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site: MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 show differing details including country DE vs Germany, Austria, & Switzerland, title King of Kingz vs King Of Kingz (Exclusive 2004 Edition), and 3-second duration differences on tracks 15 and 16). All Level 4 conditions met.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with verifiable differing details, but no primary source was consulted.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: the top-level artists field is empty instead of listing every distinct artist on the carrier (Bushido and the featured artists on tracks 3, 8, 9, 12, 13, and 15).",
+  "The abbreviated deterministic evidence log summarizes track matching rather than displaying the raw tracklists, label (ersguterjunge), and catalog number (40195 9396000-0) returned by musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 31.7,
+  "tokens_in": 6195,
+  "tokens_out": 3179,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

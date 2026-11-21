@@ -1,0 +1,100 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:03",
+ "overall": 1.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "5: NOT MET (no barcode in input, no barcode match). 4: NOT MET - the input has no barcode; title and artist match Discogs 24165131 and format conflicts (input CD, found Cassette only), so 'format unambiguous' fails. 3: Partly - the only matching edition is a cassette and the input says CD; the result contradicts the input format, so this is not 'unambiguous' for the CD. 2: MET - a second edition with the same title (Folge 2, MC6116, Swinging Seelze, different tracklist with 10 different titles) exists in evidence; it is excluded only by artist, which the input supports. 1: Format contradicts input (Kassette vs CD), and no CD edition exists in any evidence source.",
+   "summary": "The only edition found is a cassette (MC6109) while the input explicitly requires CD, and no CD release was found in any tool output, so the result contradicts the input format.",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-discogs search --title (2 hits)",
+    "tl-discogs search --artist/--format CD (0 hits)",
+    "tl-mb search (0 releases)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "5: NOT MET - only Discogs text and one cassette J-card image. 4: NOT MET - no second source of the same edition with a complete list; the Discogs page lists no durations and the J-card lists no durations. 3: MET - one source (Discogs 24165131) plus image of the same cassette give 10 titles, complete and plausible for the cassette; but the edition is a cassette, not the requested CD, so the tracklist is for a different format. Given the image and Discogs agree, the list itself is consistent with the edition found. 2: Not applicable as tracks are not from another edition. Strictly, the tracklist belongs to a different format than the input, so it is only partly applicable.",
+   "summary": "Discogs text and the J-card image agree on 10 tracks (A1-A6, B1-B4) for the cassette edition, but this is not the requested CD and durations are absent.",
+   "evidence": [
+    "discogs:release/24165131 (A1-A6, B1-B4)",
+    "image:discogs/back-cover (J-card: 10 tracks read)",
+    "tl-discogs release 24165131"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: NOT MET - no primary source of a CD. 4: NOT MET - the discogs entry and the J-card image come from the same Discogs database entry (image hosted on discogs), no independent second database for this edition. 3: MET - one good database entry (Discogs 24165131) with the image taken from the same entry. 2: not reached. 1: not reached.",
+   "summary": "Only one good database entry (Discogs 24165131) plus its own cover image; no independent second source and no primary source for a CD.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "tl-discogs release 24165131"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input format CD is not supported by any evidence; the result reports a cassette MC6109 and the status 'ambiguous' is not resolved as CD.",
+  "The Folge 2 edition (discogs 24154076, Swinging Seelze, MC6116) has a different tracklist (Hello Dolly, In The Mood, etc.) and was dismissed only by artist; it is a competing edition with the same title.",
+  "The result claims 'Keine CD-Version in MusicBrainz, Discogs oder Web-Suche gefunden', which is supported by the searches shown (0 hits).",
+  "Durations are missing for all tracks; total_duration_s is null, which is consistent with the evidence.",
+  "The result says the J-card 'bestätigt' the tracklist; the vision tool read 10 tracks with side labels, which supports this, but the image is the same Discogs-hosted asset."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 7.2,
+  "tokens_in": 22077,
+  "tokens_out": 1257,
+  "cost_usd": 0.00284,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

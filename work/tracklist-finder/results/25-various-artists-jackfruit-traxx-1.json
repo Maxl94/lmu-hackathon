@@ -1,0 +1,231 @@
+{
+ "input": {
+  "id": "25-various-artists-jackfruit-traxx-1",
+  "title": "Jackfruit Traxx 1",
+  "artist": "Various Artists"
+ },
+ "status": "found",
+ "release": {
+  "title": "Traxx Salad Vol. 1",
+  "artist": "Various Artists",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2026,
+  "label": "JackFruit Traxx",
+  "catno": "JFXX1",
+  "barcode": null,
+  "edition": "12\" vinyl, 4 tracks, B1 is a vinyl-only track",
+  "ids": {
+   "discogs": "36475918"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Old School",
+   "artist": "Nesi",
+   "duration_s": 330,
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings"
+   ],
+   "duration_sources": [
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Last Days Of Disko",
+   "artist": "Dompe",
+   "duration_s": 363,
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings"
+   ],
+   "duration_sources": [
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "No Place Like Heim",
+   "artist": "Dompe",
+   "duration_s": null,
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings"
+   ],
+   "duration_sources": [],
+   "flags": [
+    "duration_missing",
+    "vinyl_only"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Che (Edgar Peng Remix)",
+   "artist": "Nils Ohrmann",
+   "duration_s": 332,
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+    "web:https://www.decks.de/label/jack-fruit-recordings"
+   ],
+   "duration_sources": [
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Nesi",
+   "role": "main",
+   "tracks": [
+    "A1"
+   ],
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/"
+   ]
+  },
+  {
+   "name": "Dompe",
+   "role": "main",
+   "tracks": [
+    "A2",
+    "B1"
+   ],
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/"
+   ]
+  },
+  {
+   "name": "Nils Ohrmann",
+   "role": "main",
+   "tracks": [
+    "B2"
+   ],
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://www.decks.de/label/jack-fruit-recordings"
+   ]
+  },
+  {
+   "name": "Edgar Peng",
+   "role": "remixer",
+   "tracks": [
+    "B2"
+   ],
+   "sources": [
+    "discogs:release/36475918",
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1"
+   ]
+  }
+ ],
+ "total_duration_s": 1025,
+ "confidence": 0.7,
+ "sources": [
+  {
+   "id": "discogs:release/36475918",
+   "url": "https://www.discogs.com/release/36475918-Various-Traxx-Salad-Vol-1",
+   "kind": "database",
+   "note": "Vinyl 12\", DE, 2026, JackFruit Traxx JFXX1; no durations, no barcode"
+  },
+  {
+   "id": "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1",
+   "url": "https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1",
+   "kind": "streaming",
+   "note": "Label's own digital edition (3 tracks, vinyl-only B1 missing); durations 5:30 / 6:03 / 5:32"
+  },
+  {
+   "id": "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+   "url": "https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/",
+   "kind": "shop",
+   "note": "Lists 4 tracks incl. 'Dompe - No Place Like Heim (Vinyl Only)'; no track durations (0:00)"
+  },
+  {
+   "id": "web:https://www.decks.de/label/jack-fruit-recordings",
+   "url": "https://www.decks.de/label/jack-fruit-recordings",
+   "kind": "shop",
+   "note": "a1/b1/b2 listing for 'TRAXX SALAD VOL 1', 12 Inch, 09.02.26, 'incl. one vinyl only track'"
+  },
+  {
+   "id": "web:https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html",
+   "url": "https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html",
+   "kind": "shop",
+   "note": "Label blurb: 'the first vinyl release on the label: Jackfruit Traxx Salad Vol.1 ... four tracks', Dompe contributes an exclusive vinyl-only track"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "release title",
+   "values": {
+    "input": "Jackfruit Traxx 1",
+    "discogs:release/36475918": "Traxx Salad Vol. 1",
+    "web:https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html": "Jackfruit Traxx Salad Vol.1",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/": "Traxx Salad Vol. 1"
+   },
+   "resolution": "No release titled exactly 'Jackfruit Traxx 1' exists in any source. The only physical release of the Jackfruit Traxx sublabel with volume number 1 is 'Traxx Salad Vol. 1' (cat. JFXX1, the label's first vinyl release, described by the label itself as 'Jackfruit Traxx Salad Vol.1'); the input title is treated as label + volume shorthand."
+  },
+  {
+   "field": "track B1 title",
+   "values": {
+    "discogs:release/36475918": "No Place Like Heim",
+    "web:https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/": "No Place Like Heim (Vinyl Only)",
+    "web:https://www.decks.de/label/jack-fruit-recordings": "No Place Like Heim (Vinyl Only)"
+   },
+   "resolution": "Chose 'No Place Like Heim' (Discogs, the only database entry); '(Vinyl Only)' is treated as a shop/format annotation, not part of the title, and is recorded as a flag."
+  },
+  {
+   "field": "label name",
+   "values": {
+    "discogs:release/36475918": "JackFruit Traxx",
+    "web:https://www.decks.de/label/jack-fruit-recordings": "Jack Fruit Recordings",
+    "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1": "Jackfruit Recordings / Jackfruit Traxx"
+   },
+   "resolution": "Sublabel JackFruit Traxx as credited on the Discogs release; shops file it under the parent label Jackfruit Recordings."
+  }
+ ],
+ "missing": [
+  "No barcode on this vinyl release (EAN not available).",
+  "Duration of the vinyl-only track B1 'No Place Like Heim' is not published by any source; the Bandcamp digital edition does not contain it.",
+  "Durations for A1, A2 and B2 come from the label's digital edition (same recordings, vinyl-only track omitted) and are flagged duration_other_edition.",
+  "total_duration_s (1025 s) is the sum of the three known tracks only.",
+  "No MusicBrainz entry exists for this release.",
+  "credits missing for 4 of 4 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Traxx Salad Vol. 2, Vinyl 12\", JackFruit Traxx JFXX2, 2026, DE (4 tracks)",
+   "source": "discogs:release/37837974",
+   "why_not": "Second volume of the series, different catalogue number and tracklist; does not match the '1' in the input title."
+  },
+  {
+   "description": "Digital edition 'Traxx Salad Vol.1' on Bandcamp (3 tracks, without the vinyl-only track B1)",
+   "source": "web:https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1",
+   "why_not": "Digital media only; GEMA licensing requires the physical edition, which has four tracks."
+  }
+ ],
+ "reasoning": "No source has a release literally named 'Jackfruit Traxx 1'; the label's own blurb identifies JFXX1 as the first vinyl release of the Jackfruit Traxx sublabel, titled 'Traxx Salad Vol. 1'. Discogs holds exactly one entry for cat. JFXX1 (release 36475918, DE 2026, 12\" vinyl, 4 tracks), and three independent shops (selectedwax, decks.de, techno-import) confirm the same four positions A1 Nesi 'Old School', A2 Dompe 'Last Days Of Disko', B1 Dompe 'No Place Like Heim' (vinyl only), B2 Nils Ohrmann 'Che (Edgar Peng Remix)', the latter with Edgar Peng as remixer. The vinyl carries no printed durations and no barcode; durations for A1/A2/B2 are taken from the label's digital edition (5:30 / 6:03 / 5:32) and flagged as coming from another edition. B1 has no published duration. Title mismatch and label naming are recorded as conflicts, hence confidence 0.7."
+}

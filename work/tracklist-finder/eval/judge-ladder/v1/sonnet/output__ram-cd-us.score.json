@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:15",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 888837168625 ist gültig (UPC-A) und trifft die CD in MusicBrainz (DE, 0888837168625) und Discogs (EU 4729785, Barcode 888837168625) exakt; Format, Artist und Titel passen. Es gibt viele Länderausgaben mit demselben Barcode (US, AU, CA, BR, Korea usw.), alle mit 13 Tracks und gleicher Titelliste, die Wahl ist daher unkritisch. Eine Ausnahme ist die australische Limited Edition (Slipcase), aber ebenfalls mit gleicher Trackliste.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (DE), Discogs (EU) und das Rückcover (13 Titel, gleiche Reihenfolge) stimmen in Anzahl, Reihenfolge und Titeln überein. Die Abweichungen betreffen nur Schreibweisen und Dauern. Die Trackliste ist damit durch mehrere unabhängige Quellen derselben Ausgabe bestätigt.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus ein per Vision gelesenes Rückcover (Primärquelle) mit Katalognummer, Label und LC-Code. Das erfüllt Datenbank + unabhängige Primärquelle.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Dauern stammen aus MusicBrainz, Discogs weicht um 1–3 s ab (z. B. Track 13: 384 s vs. 381 s); die Abweichung wird im Ergebnis nur als Rundung erklärt, nicht als Konflikt geführt.",
+  "Im Ergebnis wird behauptet, dass iTunes die Dauern bestätigt. iTunes führt aber 14 Tracks im Kopf, listet 13, und weicht bei Track 13 um etwa 3 s ab; iTunes ist nicht in der Quellenliste.",
+  "Das Ergebnis nennt die MusicBrainz-Ausgabe als DE, die Barcode-Suche zeigt dort aber FR (2013-05-20); das Release selbst zeigt DE – kleine Unstimmigkeit ohne Auswirkung.",
+  "Das Rückcover zeigt handschriftliche Titel ohne Nummern; die Reihenfolge wurde von oben nach unten angenommen."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 7.6,
+  "tokens_in": 12028,
+  "tokens_out": 1047,
+  "cost_usd": 0.03453,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

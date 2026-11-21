@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:25:15",
+ "overall": 3.95,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Barcode 9002722211901 und Kat.-Nr. D 221 190 der Koch-MC sind in MusicBrainz, Discogs 2297987 und auf dem J-Card-Scan belegt. Der Input enthält aber nur Titel und Format, ohne Interpret. Mit der Reader's-Digest-5×MC-Box (discogs 8491193) existiert eine gleichnamige MC-Ausgabe mit völlig anderer Trackliste. Die Wahl des Spatzen-Albums ist plausibel, stützt sich aber teils auf den Dateinamen-Hinweis „spatzen-mc-titleonly“. Die übrigen Spatzen-MC-Pressungen haben dieselbe Trackliste.",
+   "belege": [
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/8491193",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs (gleiche MC-Ausgabe) stimmen in Anzahl (12), Reihenfolge A1–B6 und Titeln überein. Beide J-Card-Scans bestätigen das. Bei B4 gibt es nur Schreibvarianten (Sarner-Welle Lied / Sarner-Welle-Lied).",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:…VyI96FTD…",
+    "image:…RGYeyADh…"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 83% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es liegen zwei Datenbanken (MusicBrainz, Discogs) vor. Dazu kommt eine Primärquelle: J-Card-Scans mit Barcode, Kat.-Nr. und gedruckten Dauern, gelesen mit tl-vision.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:…VyI96FTD…",
+    "image:…RGYeyADh…"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Input nennt keinen Interpreten. Die Agentin hat die Zuordnung zu den Kastelruther Spatzen ausdrücklich aus der Sample-ID „spatzen-mc-titleonly“ abgeleitet, nicht aus Belegen.",
+  "Die Various-MC-Box gleichen Titels (discogs 8491193, Reader's Digest) ist eine konkurrierende MC-Ausgabe mit anderer Trackliste. Die Abgrenzung ist nur inhaltlich begründet.",
+  "Dauern sind inkonsistent gewählt: Bei A1/A6 gelten die gedruckten J-Card-Werte. Bei A3 (188 vs. gedruckt 3'07''), B1 (152 vs. 2'30''), B2, B3, B4 (138 vs. 2'16''), B5 und B6 wurden dagegen die MusicBrainz-Werte übernommen, obwohl die J-Card abweichende Dauern druckt.",
+  "Die Agentin behauptet, iTunes bestätige A6 = 3:30. iTunes zeigt jedoch 3:27 (207133 ms)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.4,
+  "tokens_in": 48364,
+  "tokens_out": 2183,
+  "cost_usd": 0.23712,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:54",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains barcode (731456031125) - MET; barcode matches this edition in >= 2 independent sources - MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 as 0731456031125 in calls 3/5, discogs:release/1949898 scanned in calls 2/6, printed on back cover in call 8, and musik-sammler.de in call 17); format (CD) and title/artist match INPUT - MET; no other edition with the same barcode and a different tracklist - MET (all Discogs hits for 731456031125 belong to master 5994 with catno 560 311-2, and UK pressing discogs:release/23145932 in call 4 shares the identical tracklist).",
+   "summary": "The input barcode 731456031125 matches the 2000 Polystar 2xCD compilation Bravo Hits 30 (560 311-2) across MusicBrainz, Discogs, musik-sammler.de, and the printed back cover, with no competing edition having a different tracklist.",
+   "evidence": [
+    "tl-gtin 731456031125",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "discogs:release/23145932",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) - MET (MusicBrainz release 41b0a392-086e-45b0-9323-db56ba682941, Discogs release 1949898, the printed back cover read via tl-vision, and musik-sammler.de release 43446 all confirm the 40 tracks across 2 CDs in the exact same order, with only minor spelling/subtitle differences such as Track 1-10 '(Album Version)' on Discogs and omitted mix subtitles on the back cover).",
+   "summary": "Multiple independent sources of the exact edition (MusicBrainz, Discogs, back cover scan, and musik-sammler.de) agree on all 40 tracks, their order, and their titles.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print) of the same edition - MET (two independent databases, musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/1949898, plus collector site musik-sammler.de, combined with a high-resolution back cover scan of the same edition read via tl-vision in call 8).",
+   "summary": "The result is backed by two independent music databases (MusicBrainz and Discogs), a specialised collector site (musik-sammler.de), and a directly read scan of the edition's physical back cover.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error (FACTS): the top-level 'artists' field is empty/missing instead of listing every distinct artist on the carrier once.",
+  "Unsupported claim in alternatives (discogs:release/26676554): the agent states this EU pressing has 'keine abweichende Trackliste', although release 26676554 was never fetched via tl-discogs release (only seen in the barcode search list in call 2).",
+  "Printed back cover (image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg) omits mix/version subtitles on nearly all tracks (e.g. CD1-5, 6, 8, 9, 11, 13, 15-17, 19, 20; CD2-2, 4, 6, 9-12, 14-20); those subtitles are confirmed by MusicBrainz and Discogs rather than the back cover.",
+  "Inconsistent duration_sources on CD2 Track 19 ('Only With You'): flagged as 'duration_conflict' due to musik-sammler.de's typo (3:40), but musik-sammler.de is omitted from duration_sources unlike on the other four duration_conflict tracks."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 72.4,
+  "tokens_in": 41662,
+  "tokens_out": 6109,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

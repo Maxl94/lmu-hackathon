@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:39",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 9002722211901 matches this MC (MB e0d210c6, Discogs 2297987, J-Card scan with barcode) in >=2 independent sources; format MC/Kassette matches; artist matches. But the competing editions (Discogs 15349631, 24889304 MC without barcode) share the identical tracklist, and CD/LP/Polish editions differ only in format or label/barcode. Barcode-based match is strong; however the requirement 'no other edition with the same barcode and a different tracklist' is met. Level 5 conditions met (MB, Discogs, J-Card image all show barcode 9002722211901; MC format matches). Rating 5. Minor caveat: the agent's own alternatives are all same-tracklist, so no edition conflict. Tracklist-differing competitors are other formats (CD/LP) or Various-Artists compilations, which the input (MC, artist-less) partially allows, but the title-only input with MC format makes the Spatzen album the only Artist edition in MC with tracklist-consistent evidence.",
+   "summary": "Barcode 9002722211901 matches this MC in MusicBrainz, Discogs and the scanned J-Card, and all alternative MC pressings share the same tracklist.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/16402359"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources (MB e0d210c6, Discogs 2297987, Deezer 231158, J-Card image) agree on count 12, order A1-B6 and titles, with spelling variants only (e.g. 'Hallo ihr Freunde' vs 'Hallo Ihr Freunde'). Durations: A1 3:22 confirmed by Discogs, Deezer and printed J-Card; A6 3:30 confirmed by printed J-Card, MB and Deezer. Title B4 'Sarner-Welle Lied' is confirmed by MB, Discogs and J-Card (Deezer/iTunes add 'Hallo Freunde' from a digital release, explained). Level 5 conditions met.",
+   "summary": "Count, order and titles agree across MusicBrainz, Discogs, Deezer and the printed J-Card, with only spelling variants and explained digital-only differences.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database entries (MB, Discogs) plus an independent primary source (the printed J-Card read via tl-vision, with barcode, catalogue number and printed durations) of the same edition. Level 5 conditions met.",
+   "summary": "Two database entries plus the scanned printed J-Card of the same MC edition, which shows barcode, catalogue number and printed track durations.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input has no artist; the agent resolved the artist from the id 'spatzen-mc-titleonly' (not in the input), which is an assumption; the result nonetheless matches the title and MC format.",
+  "Result claims 'Sarner-Welle Lied' with a single hyphen vs J-Card back showing 'Sarner-Welle-Lied' (tl-vision 30 read two hyphens); the chosen spelling is an unresolved variant, though a spelling-level issue only.",
+  "Result claims A1 duration 202 s and A6 210 s as printed; the J-Card front read (tl-vision #28) shows 3'22'' and 3'30'', supporting them. The Discogs entry 2297987 printed-in-notes durations were not read directly from the MC image; the statement 'von Discogs bestätigt' for A1 is supported by Discogs 3:22.",
+  "Result states the country as AT and label 'Koch-Records Special' while Discogs lists 'Koch Records Special' and 'Koch Records' — minor, consistent.",
+  "Result reports 'Titel Track B4' conflict resolution citing MB and Discogs 'Sarner-Welle Lied', which matches tool output.",
+  "Result's confidence 0.8 is reasonable given the agreement of printed durations with Discogs/Deezer, though MB A1 3:19 and A6 Discogs 3:03 were explained as outliers."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 10.8,
+  "tokens_in": 50180,
+  "tokens_out": 2014,
+  "cost_usd": 0.00602,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

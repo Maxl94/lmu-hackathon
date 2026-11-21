@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:20",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [
+  "mehrdeutig: Auswahl der Ausgabe bestätigen"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Input nennt nur Titel und Format, keinen Interpret und keinen Barcode. Die gewählte Ausgabe (Bushido, Aggro Berlin 2003, EAN 4018939105976) ist durch MusicBrainz und Discogs mit identischem Barcode belegt, aber konkurrierende Ausgaben mit anderen Tracklisten existieren (2004 Exclusive mit 20 Tracks, Sean Kingston 2011 mit 13 Tracks). Die Wahl beruht damit auf der Annahme, dass der Input die bekannte Bushido-CD meint; der Agent selbst markiert den Status als ambiguous.",
+   "belege": [
+    "discogs:release/769288",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Die Trackliste von MusicBrainz (16 Titel) stimmt in Reihenfolge und Titeln mit Discogs und musik-sammler.de überein, Abweichungen sind nur Schreibvarianten und Feature-Angaben. Bei Sternenstaub gibt es einen Dauerkonflikt (3:41 vs. 3:38), der im Ergebnis dokumentiert ist; die übrigen Dauern weichen nur um ein bis zwei Sekunden ab.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 94% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz und Discogs) mit identischem Barcode plus ein Sammlerportal (musik-sammler.de) mit gleicher EAN ergeben eine gute Quellenlage. Eine unabhängige Primärquelle (Cover, Booklet oder Labelangabe) wurde nicht gelesen; das Cover-Bild wurde nicht geprüft.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Input enthält keinen Interpreten; die Zuordnung zu Bushido ist eine Annahme, Sean Kingston bleibt als Alternative offen.",
+  "Die Begründung 'GEMA-Kontext' und 'CD-Erstveröffentlichung' ist im Input nicht belegt.",
+  "Sternenstaub: Dauer 3:41 (MB, musik-sammler) vs. 3:38 (Discogs) ist als Konflikt markiert; die Auswahl von 221 s ist plausibel, aber nicht eindeutig belegt.",
+  "musik-sammler.de-Einträge zeigen 'Zeit 51:26' bzw. 'EAN nicht vorhanden' bei der Re-Release-Variante (cd-505095), was der gewählten Ausgabe widerspricht; das Ergebnis stützt sich auf die andere Seite (cd-140817).",
+  "Die Angabe 'Reissue, Remastered (CD-Neuauflage des 2001er Demotapes)' stammt aus Discogs-Notizen, die Ersterscheinung 2001 als Demotape wird nicht als eigene Ausgabe geprüft.",
+  "Die Discogs-Notiz nennt eine Veröffentlichung 2005 als zensierte Version; diese wurde nicht als Konkurrenzausgabe ausgeschlossen."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.6,
+  "tokens_in": 26318,
+  "tokens_out": 1354,
+  "cost_usd": 0.00331,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

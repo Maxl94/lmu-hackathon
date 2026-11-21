@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:09",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Barcode im Ergebnis passt nicht zur Eingabe"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Input-EAN 888837168625 gehört laut Evidenz zu Daft Punk (iTunes/MusicBrainz-Suche), der Agent hat die Barcode-Abweichung dokumentiert und die 2003er Aggro-Berlin-CD mit EAN 4018939105976 gewählt. Titel, Artist und Format passen; MusicBrainz und Discogs bestätigen dieselbe Ausgabe (Kat.-Nr. AGGRO004CD, Land DE). Der Input-Barcode wird aber nicht bestätigt, und die Wahl gegenüber der Exclusive-2004-Edition (20 Tracks) rest auf plausibler Begründung, nicht auf dem Barcode. Das ergibt Stufe 3 bis 4; die Barcode-Abweichung verhindert Stufe 5.",
+   "belege": [
+    "bin/tl-gtin",
+    "bin/tl-mb search --barcode",
+    "bin/tl-discogs search --title",
+    "bin/tl-mb release c3466232",
+    "bin/tl-discogs release 769288"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs (769288) stimmen bei allen 16 Titeln und Positionen überein; Abweichungen sind nur Schreibvarianten (Feature-Angaben, Groß-/Kleinschreibung) und Sekunden-Rundung. Das Discogs-Notiz zu Sternenstaub als Bonustrack erklärt die Abweichung vom Original. Zwei unabhängige Quellen derselben Ausgabe mit gleicher Titelreihenfolge rechtfertigen Stufe 5, die Dauerwerte weichen minimal ab, ändern aber nichts an Anzahl und Reihenfolge.",
+   "belege": [
+    "bin/tl-mb release c3466232",
+    "bin/tl-discogs release 769288"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbankeinträge (MusicBrainz, Discogs) sowie musik-sammler.de als Sammlerseite. Die Quellen sind unabhängig, Discogs-Eintrag enthält Barcode und Matrixnummer, aber keine Fotoprüfung des Covers oder Booklets durch den Agenten. Das ergibt Stufe 4 (Datenbank + Sammlerseite bzw. zwei Datenbankeinträge).",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Input-EAN 888837168625 laut Evidenz zu Daft Punk – die Ersetzung durch 4018939105976 ist eine Annahme des Agenten, die nur über Titel/Artist abgesichert ist; die Abweichung ist im Ergebnis dokumentiert.",
+  "Die Gesamtzeit im Ergebnis (3096 s) weicht von der MusicBrainz-Summe (3095 s) und Discogs-Summe (3087 s) ab; musik-sammler.de nennt 51:26, was keiner der Angaben exakt entspricht.",
+  "musik-sammler.de-Seite wurde nur per --grep teilweise ausgelesen (Tracklist nur Intro sichtbar); die Bestätigung der Trackliste durch diese Quelle ist nicht vollständig belegt.",
+  "Der Agent nennt die Exclusive-2004-Edition als Alternative mit 20 Tracks; die Entscheidung für die 16-Track-Version ist plausibel, aber nicht durch einen Barcode-Treffer zum Input gestützt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.6,
+  "tokens_in": 13443,
+  "tokens_out": 1302,
+  "cost_usd": 0.002,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

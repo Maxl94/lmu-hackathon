@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:22",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires barcode in input – NOT MET (input_has_barcode false). Level 4: title/artist/format plus a further attribute in >=2 sources – partly MET (Discogs 24165131 plus label images show MC 6109 / Fred Kersten KG, steps 5, 11, 12). However, 'no other edition fitting the input has a different tracklist' is NOT MET: Discogs 24154076 'Blasmusik Aus Lohnde (Folge 2)' is also an MC and its cover credits 'Blasorchester des Musikvereins Lohnde' (step 10). It has a different tracklist (Hello Dolly, In The Mood, …; steps 6, 3). Level 3: unambiguous or all candidates share a tracklist – NOT MET, since the two editions differ. Level 2: several editions fit, at least one with a different tracklist, choice rests on weak signals – MET. The input gives no 'Folge'. The choice rests only on the Discogs artist credit 'Musikverein Lohnde 1925 e. V.' versus 'Swinging Seelze'.",
+   "summary": "Folge 2 (MC 6116) by the same Musikverein Lohnde orchestra has a different tracklist and is not ruled out by the input, which names no part number.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "step 10 tl-vision Folge 2 cover",
+    "step 3 tl-discogs search"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources of the same edition agree – partly MET. Discogs (step 5) and the j-card back read via tl-vision (step 9) agree on 10 tracks, 6+4, same order and titles. Independence is limited, because the image is hosted on the same Discogs entry. Level 4: one complete source confirmed by a second, with small deviations (only capitalisation here) – MET. The printed j-card is a primary print confirming the database entry.",
+   "summary": "Discogs tracklist confirmed by the printed j-card tracklist, but the image comes from the same Discogs entry, so the sources are not fully independent.",
+   "evidence": [
+    "discogs:release/24165131",
+    "step 9 tl-vision j-card back"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus independent primary source – NOT fully MET. The primary-source images (j-card, labels) are hosted on the same Discogs entry and are not independently obtained. Level 4: two independent database entries or database plus collector site – NOT MET. MusicBrainz, musik-sammler.de, Deezer and Last.fm returned nothing (steps 2, 15, 22). Level 3: one good database, or sources that may have copied from each other (cover images on the same DB entry) – MET.",
+   "summary": "Only Discogs plus images hosted on the same Discogs entry; no independent second source.",
+   "evidence": [
+    "discogs:release/24165131",
+    "step 9",
+    "step 11",
+    "step 12",
+    "step 22"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Status 'found' should be 'ambiguous': Folge 2 (discogs 24154076, MC 6116) has a different tracklist and is credited on its cover to the 'Blasorchester des Musikvereins Lohnde' (step 10). The input does not specify Folge 1 or Folge 2.",
+  "Year 1991 is inferred from the 'im 67st. Jahr' text and is not a printed release year.",
+  "All track durations are missing (A1–B4).",
+  "Release title includes '(Folge 1)', which the input does not contain."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 19.4,
+  "tokens_in": 37509,
+  "tokens_out": 1559,
+  "cost_usd": 0.18122,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

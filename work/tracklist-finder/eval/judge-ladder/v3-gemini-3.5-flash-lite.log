@@ -1,0 +1,17 @@
+🔴 bravo30-ean: manuell klären (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 2 s · $0.003 · gates: result violates the output contract
+🔴 kok-cd2004: manuell klären (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 2 s · $0.002 · gates: result violates the output contract
+🔴 lohnde-mc: manuell klären (3.6) · edition 4 · tracklist 5 · durations 1 · sources 5 · 3 s · $0.005 · gates: result violates the output contract; less than half of the durations backed
+🔴 ram-cd-us: manuell klären (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 3 s · $0.005 · gates: result violates the output contract
+🔴 spatzen-mc-titleonly: manuell klären (4.0) · edition 4 · tracklist 5 · durations 3 · sources 4 · 3 s · $0.006 · gates: result violates the output contract
+🔴 trap-artist-mismatch: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-fake-album: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-wrong-ean: manuell klären (4.5) · edition 4 · tracklist 5 · durations 5 · sources 4 · 3 s · $0.005 · gates: result violates the output contract; barcode in the result does not match the input
+🔴 trap-wrong-format: manuell klären (2.85) · edition 3 · tracklist 4 · durations 1 · sources 4 · 2 s · $0.005 · gates: result violates the output contract; less than half of the durations backed; format in the result does not match the input
+🔴 bravo30-ean: manuell klären (4.75) · edition 5 · tracklist 5 · durations 4 · sources 5 · 2 s · $0.013 · gates: result violates the output contract
+🔴 kok-cd2004: manuell klären (4.65) · edition 5 · tracklist 5 · durations 4 · sources 4 · 2 s · $0.012 · gates: result violates the output contract
+🔴 kok-mc: manuell klären (4.5) · edition 4 · tracklist 5 · durations 5 · sources 4 · 2 s · $0.008 · gates: result violates the output contract
+🔴 kok-noartist-r1: manuell klären (3.7) · edition 2 · tracklist 5 · durations 5 · sources 4 · 3 s · $0.008 · gates: result violates the output contract; edition only level 2 - correct edition not secured
+🔴 lohnde-mc: manuell klären (2.75) · edition 3 · tracklist 4 · durations 1 · sources 3 · 2 s · $0.008 · gates: result violates the output contract; less than half of the durations backed
+🔴 ram-badean: manuell klären (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 2 s · $0.008 · gates: result violates the output contract
+🔴 ram-vinyl-r3: manuell klären (4.5) · edition 4 · tracklist 5 · durations 5 · sources 4 · 2 s · $0.006 · gates: result violates the output contract
+🔴 spatzen-mc-titleonly: manuell klären (4.35) · edition 4 · tracklist 5 · durations 4 · sources 5 · 2 s · $0.012 · gates: result violates the output contract

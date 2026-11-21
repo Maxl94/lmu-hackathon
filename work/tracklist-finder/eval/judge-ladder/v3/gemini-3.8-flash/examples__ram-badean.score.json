@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:42",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: 'The INPUT contains a barcode, and it (after check-digit correction if needed) matches exactly this edition in >= 2 independent sources; format and artist match; no other edition with the same barcode and a different tracklist.' Input has barcode 888837168626 (invalid checksum, noted 'EAN evtl. vertippt'); after check-digit correction to 888837168625, it matches this CD release in MusicBrainz (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3) and Discogs (discogs:release/4729785) as well as the back cover scan (image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg); format (CD) and artist (Daft Punk) match; all CD pressings carrying this barcode share the identical 13-track tracklist -> MET.",
+   "summary": "The barcode after check-digit correction unambiguously identifies the standard 13-track CD edition across multiple independent sources.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' MusicBrainz (release/f6758afb-ecff-410e-8979-b131cfa3c6d3) and Discogs (release/4729785) completely agree on the 13 track titles and order, fully verified by the back cover image -> MET.",
+   "summary": "Both independent database sources and the primary back cover scan fully agree on all 13 track titles, order, and count.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition.' Discogs and MusicBrainz are two independent databases, combined with a legible primary source back cover scan (read via vision tool confirming tracklist, label, catalog number, and barcode) -> MET.",
+   "summary": "Independent databases (Discogs, MusicBrainz) are supplemented by an authentic primary source scan of the back cover.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 22.3,
+  "tokens_in": 24003,
+  "tokens_out": 2726,
+  "cost_usd": 0.03105,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

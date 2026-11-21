@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:06",
+ "overall": 1.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 2",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: barcode match in >=2 sources – NOT MET; the input has no barcode and the release has none. Level 4: title, artist, format and a further attribute unambiguous in >=2 sources – NOT MET; the input format is CD but the only matching release is a cassette (MC6109), so the format contradicts the input (facts: format_match false). Level 3: unambiguous, one source – NOT MET; the format mismatch makes it not unambiguous, and the Discogs and J-card image sources are one release entry. Level 2: several editions fit and at least one has a different tracklist – partly. Folge 2 (MC6116, Swinging Seelze) has a different tracklist and a different artist, and the CD edition is unknown. Level 1: the result contradicts the input (other format); no CD found in MB, Discogs or web search – MET. The artist and title match, but the carrier is a cassette, not the requested CD. A CD may exist with a different or identical tracklist, but nothing in the evidence shows this.",
+   "summary": "The only found release is a cassette (Folge 1, MC6109), contradicting the requested CD format, and no CD edition was found.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs search CD 0 hits",
+    "tl-mb search 0 releases"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "Level 5: >=2 independent sources of the same edition agree – Discogs entry and J-card image agree on 10 tracks, but the image is hosted on the same Discogs entry and the edition is a cassette, not the requested CD; NOT MET for the requested edition. Level 4: one complete source of the same edition confirmed by a second – NOT MET, because the edition is not the same as the input (CD). Level 3: only one source of the same edition, complete and plausible – NOT MET, same reason. Level 2: tracklist taken from another edition – MET. The 10-track list comes from the cassette, a different carrier from the requested CD, with no evidence that a CD exists or has the same tracklist. The cassette tracklist itself is internally consistent (Discogs vs J-card), and no durations are available.",
+   "summary": "The tracklist is internally consistent but comes from a cassette, a different carrier than the requested CD, so it is effectively taken from another edition.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source of the same edition – the J-card image is a primary source, but it is hosted on the same Discogs entry (not independent) and the edition differs from the input; NOT MET. Level 4: two independent database entries or database + collector site – NOT MET; musik-sammler.de gave nothing and MusicBrainz had 0 hits. Level 3: one good database, or two sources that may have copied from each other (Discogs + image on the same entry) – MET.",
+   "summary": "Only Discogs plus its own hosted J-card image support the result, so the sources are not independent.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction: the input specifies CD but the result is a cassette (MC6109), and the status is ambiguous.",
+  "The J-card image is hosted on the same Discogs entry, so it is not an independent source.",
+  "No CD edition was found; the existence of a CD with a different tracklist cannot be excluded.",
+  "Alternative Folge 2 (MC6116) has a different tracklist and artist (Swinging Seelze), but it is also a cassette and was correctly ruled out.",
+  "All 10 tracks lack durations, and the track artists are empty."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 10.6,
+  "tokens_in": 22077,
+  "tokens_out": 1211,
+  "cost_usd": 0.05626,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

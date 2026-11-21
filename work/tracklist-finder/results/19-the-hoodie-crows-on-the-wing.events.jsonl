@@ -1,0 +1,75 @@
+{"ts": 1795186654.47, "event": "run_start", "input": {"title": "On the Wing", "artist": "The Hoodie Crows"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186654.47, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186654.47, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186654.47, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186654.47, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186657.29, "event": "tool_start", "tool": "tl-discogs", "args": "search --title On the Wing --artist The Hoodie Crows"}
+{"ts": 1795186657.29, "event": "tool_start", "tool": "tl-mb", "args": "search --title On the Wing --artist The Hoodie Crows"}
+{"ts": 1795186657.29, "event": "tool_end", "tool": "tl-discogs", "args": "search --title On the Wing --artist The Hoodie Crows", "seconds": 0.0, "ok": true}
+{"ts": 1795186657.29, "event": "tool_end", "tool": "tl-mb", "args": "search --title On the Wing --artist The Hoodie Crows", "seconds": 0.0, "ok": true}
+{"ts": 1795186658.29, "event": "tool_start", "tool": "tl-itunes", "args": "search The Hoodie Crows On the Wing"}
+{"ts": 1795186658.29, "event": "tool_end", "tool": "tl-itunes", "args": "search The Hoodie Crows On the Wing", "seconds": 0.0, "ok": true}
+{"ts": 1795186658.29, "event": "tool_start", "tool": "tl-discogs", "args": "release 24917144"}
+{"ts": 1795186658.29, "event": "tool_end", "tool": "tl-discogs", "args": "release 24917144", "seconds": 0.0, "ok": true}
+{"ts": 1795186658.46, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist The Hoodie Crows --title On the Wing"}
+{"ts": 1795186658.46, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist The Hoodie Crows --title On the Wing", "seconds": 0.0, "ok": true}
+{"ts": 1795186658.63, "event": "tool_start", "tool": "tl-lastfm", "args": "album --artist The Hoodie Crows --title On the Wing"}
+{"ts": 1795186659.03, "event": "tool_end", "tool": "tl-lastfm", "args": "album --artist The Hoodie Crows --title On the Wing", "seconds": 0.4, "ok": true}
+{"ts": 1795186661.05, "event": "tool_start", "tool": "tl-search", "args": "The Hoodie Crows On The Wing CD 2016 tracklist"}
+{"ts": 1795186661.06, "event": "tool_start", "tool": "tl-search", "args": "\"Hoodie Crows\" \"On The Wing\""}
+{"ts": 1795186662.05, "event": "tool_end", "tool": "tl-search", "args": "The Hoodie Crows On The Wing CD 2016 tracklist", "seconds": 1.0, "ok": true}
+{"ts": 1795186662.13, "event": "tool_end", "tool": "tl-search", "args": "\"Hoodie Crows\" \"On The Wing\"", "seconds": 1.1, "ok": true}
+{"ts": 1795186666.2, "event": "tool_start", "tool": "tl-itunes", "args": "search Hoodie Crows"}
+{"ts": 1795186666.2, "event": "tool_end", "tool": "tl-itunes", "args": "search Hoodie Crows", "seconds": 0.0, "ok": true}
+{"ts": 1795186666.26, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/"}
+{"ts": 1795186666.29, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/", "seconds": 0.0, "ok": true}
+{"ts": 1795186666.4, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Hoodie Crows --title On the Wing"}
+{"ts": 1795186666.4, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Hoodie Crows --title On the Wing", "seconds": 0.0, "ok": true}
+{"ts": 1795186667.89, "event": "tool_start", "tool": "tl-scrape", "args": "https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy --mode firecrawl"}
+{"ts": 1795186667.89, "event": "tool_end", "tool": "tl-scrape", "args": "https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186667.92, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.amazon.de/Wing-Hoodie-Crows/dp/B01HOFWQ3M --grep -i Hot Asphalt|dauer|min|Track"}
+{"ts": 1795186667.93, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.amazon.de/Wing-Hoodie-Crows/dp/B01HOFWQ3M --grep -i Hot Asphalt|dauer|min|Track", "seconds": 0.0, "ok": false}
+{"ts": 1795186669.66, "event": "tool_start", "tool": "tl-scrape", "args": "https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy --mode firecrawl"}
+{"ts": 1795186669.66, "event": "tool_end", "tool": "tl-scrape", "args": "https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186672.12, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/gflp3zAqDLz5t6JvUBPuTqWkoeIotNeyq-o_vAmAWR4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjItMzQ3Mi5qcGVn.jpeg --context Discogs images for The Hoodie Crows 'On The Wing' CD 2016. Read any tracklist, durations and barcode printe"}
+{"ts": 1795186672.13, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/XxW9ybvh9IUtrZNnmvEdv_DQ8huKwncAuilqbOeDbNI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjAtODMyOC5qcGVn.jpeg --context Discogs images for The Hoodie Crows 'On The Wing' CD 2016. Read any tracklist, durations and barcode printe"}
+{"ts": 1795186672.42, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/XxW9ybvh9IUtrZNnmvEdv_DQ8huKwncAuilqbOeDbNI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjAtODMyOC5qcGVn.jpeg --context Discogs images for The Hoodie Crows 'On The Wing' CD 2016. Read any tracklist, durations and barcode printe", "seconds": 0.3, "ok": false}
+{"ts": 1795186672.43, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/gflp3zAqDLz5t6JvUBPuTqWkoeIotNeyq-o_vAmAWR4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjItMzQ3Mi5qcGVn.jpeg --context Discogs images for The Hoodie Crows 'On The Wing' CD 2016. Read any tracklist, durations and barcode printe", "seconds": 0.3, "ok": false}
+{"ts": 1795186674.62, "event": "tool_start", "tool": "tl-scrape", "args": "https://folknews.de/the-hoodie-crows-on-the-wing-2016/ --mode firecrawl"}
+{"ts": 1795186677.82, "event": "tool_end", "tool": "tl-scrape", "args": "https://folknews.de/the-hoodie-crows-on-the-wing-2016/ --mode firecrawl", "seconds": 3.2, "ok": true}
+{"ts": 1795186680.42, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.amazon.de/Wing-Hoodie-Crows/dp/B01HOFWQ3M --mode firecrawl"}
+{"ts": 1795186680.42, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.amazon.de/Wing-Hoodie-Crows/dp/B01HOFWQ3M --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186680.44, "event": "tool_start", "tool": "tl-scrape", "args": "https://prosodia.shop/ --links --grep -i hoodie"}
+{"ts": 1795186680.46, "event": "tool_end", "tool": "tl-scrape", "args": "https://prosodia.shop/ --links --grep -i hoodie", "seconds": 0.0, "ok": false}
+{"ts": 1795186680.69, "event": "tool_start", "tool": "tl-scrape", "args": "https://hoodiecrows.com/home --mode firecrawl"}
+{"ts": 1795186683.18, "event": "tool_end", "tool": "tl-scrape", "args": "https://hoodiecrows.com/home --mode firecrawl", "seconds": 2.5, "ok": true}
+{"ts": 1795186684.9, "event": "tool_start", "tool": "tl-scrape", "args": "https://prosodia.de/veroeffentlichungen/on-the-wing/ --mode firecrawl"}
+{"ts": 1795186688.51, "event": "tool_end", "tool": "tl-scrape", "args": "https://prosodia.de/veroeffentlichungen/on-the-wing/ --mode firecrawl", "seconds": 3.6, "ok": true}
+{"ts": 1795186701.79, "event": "tool_start", "tool": "tl-itunes", "args": "upc"}
+{"ts": 1795186701.8, "event": "tool_end", "tool": "tl-itunes", "args": "upc", "seconds": 0.0, "ok": false}
+{"ts": 1795186701.87, "event": "tool_start", "tool": "tl-scrape", "args": "https://i.discogs.com/XxW9ybvh9IUtrZNnmvEdv_DQ8huKwncAuilqbOeDbNI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjAtODMyOC5qcGVn.jpeg --mode browser --screenshot dc_back.png"}
+{"ts": 1795186701.98, "event": "tool_start", "tool": "tl-itunes", "args": "--help"}
+{"ts": 1795186701.99, "event": "tool_end", "tool": "tl-itunes", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795186705.85, "event": "tool_end", "tool": "tl-scrape", "args": "https://i.discogs.com/XxW9ybvh9IUtrZNnmvEdv_DQ8huKwncAuilqbOeDbNI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTI0OTE3/MTQ0LTE3MTE2MjYwMjAtODMyOC5qcGVn.jpeg --mode browser --screenshot dc_back.png", "seconds": 4.0, "ok": true}
+{"ts": 1795186706.79, "event": "tool_start", "tool": "tl-itunes", "args": "album 1128360961 --country de"}
+{"ts": 1795186707.24, "event": "tool_end", "tool": "tl-itunes", "args": "album 1128360961 --country de", "seconds": 0.4, "ok": true}
+{"ts": 1795186708.92, "event": "tool_start", "tool": "tl-itunes", "args": "search The Hoodie Crows On the Wing --country de"}
+{"ts": 1795186708.92, "event": "tool_end", "tool": "tl-itunes", "args": "search The Hoodie Crows On the Wing --country de", "seconds": 0.0, "ok": true}
+{"ts": 1795186709.1, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist The Hoodie Crows"}
+{"ts": 1795186709.58, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist The Hoodie Crows", "seconds": 0.5, "ok": true}
+{"ts": 1795186711.38, "event": "tool_start", "tool": "tl-scrape", "args": "https://prosodia.shop/p/on-the-wing --mode firecrawl"}
+{"ts": 1795186714.61, "event": "tool_end", "tool": "tl-scrape", "args": "https://prosodia.shop/p/on-the-wing --mode firecrawl", "seconds": 3.2, "ok": true}
+{"ts": 1795186715.64, "event": "tool_start", "tool": "tl-scrape", "args": "https://prosodia.shop/p/on-the-wing --mode firecrawl"}
+{"ts": 1795186715.64, "event": "tool_end", "tool": "tl-scrape", "args": "https://prosodia.shop/p/on-the-wing --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186719.34, "event": "tool_start", "tool": "tl-gtin", "args": "4280000827494"}
+{"ts": 1795186719.34, "event": "tool_end", "tool": "tl-gtin", "args": "4280000827494", "seconds": 0.0, "ok": true}
+{"ts": 1795186719.6, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4280000827494"}
+{"ts": 1795186719.94, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4280000827494", "seconds": 0.3, "ok": true}
+{"ts": 1795186720.1, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4280000827494"}
+{"ts": 1795186721.48, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4280000827494", "seconds": 1.4, "ok": true}
+{"ts": 1795186736.59, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 31, "steps": 23}
+{"ts": 1795186736.6, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186736.6, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186736.6, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186754.89, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 3.75, "error": null}
+{"ts": 1795186754.89, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 3.75, "tracks": 11, "wall_s": 82.1, "judge_s": 18.3, "cost_usd": 0.0218, "mode": "agent", "errors": []}

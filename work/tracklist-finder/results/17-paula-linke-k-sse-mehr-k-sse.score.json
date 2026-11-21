@@ -1,0 +1,120 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:33",
+ "overall": 4.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. The input has no barcode. Level 4: title and artist match (Bandcamp KÜSSE! MEHR KÜSSE! by Paula Linke, title similarity 100). Format CD is stated on Bandcamp ('auf CD mit Booklet') and on paula-linke.de ('eine CD mit Booklet bestellen'). The date 3 July 2026 appears on Bandcamp and BRF1, and 'Eigenvertrieb' comes from BRF1. No competing physical edition was found (MB and Discogs return 0 hits). The iTunes/Deezer digital editions are not competing physical editions under the rules. Level 4 is MET.",
+   "summary": "Without a barcode, title, artist and format (CD) are confirmed and a further attribute (release date 3 July 2026) is confirmed in two sources, with no competing physical edition known.",
+   "evidence": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "web:https://paula-linke.de/",
+    "web:https://1.brf.be/sendungen/chansons/1220767/",
+    "tl-mb search (0 releases)",
+    "tl-discogs search (0 hits)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. Only the Bandcamp listing is a source for the physical CD; iTunes and Deezer are digital editions, not the same edition. Level 4: MET. The Bandcamp listing is complete (10 titles with durations). iTunes and Deezer confirm the same 10 tracks and order, and durations agree within about 1 s. The deviation in track 5 ('(Opa)' omitted on digital) is small and explained.",
+   "summary": "One complete physical-edition source (Bandcamp) is confirmed by two digital editions with the same count, order and durations, with the only deviation (track 5 '(Opa)') explained.",
+   "evidence": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse (tl-scrape ^[0-9]+\\. grep)",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. No read cover, booklet or label print was obtained (tl-vision returned 0 tracks, no barcode). Level 4: MET. Two independent database entries with differing details exist: iTunes (ms durations, ℗ 2026) and Deezer (UPC 4068992790596, label recordJet). Bandcamp and the artist website are additional sources.",
+   "summary": "Two independent database entries (iTunes and Deezer) with differing details support the release, but no primary cover or booklet was read.",
+   "evidence": [
+    "itunes:album/6798000134",
+    "deezer:album/1046252222",
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "web:https://paula-linke.de/",
+    "tl-vision (0 tracks read)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Label 'Eigenvertrieb' is taken from the BRF1 radio review only; the Bandcamp listing does not state a label, so the result's label field is single-sourced.",
+  "Country DE is not explicitly confirmed for the physical CD in the evidence; the Bandcamp 'Germany' appears only as a generic country field.",
+  "The result states the startnext release was 'postponed to 3 July 2026'; the startnext page only shows the planned date 11.2.2026 and the postponement is not verified in the tool output.",
+  "Track 5 is '(Opa)' on the physical CD (Bandcamp) only; digital editions omit it, as the result correctly notes.",
+  "The result says the physical CD back cover was not read; the physical edition's tracklist therefore rests on the Bandcamp listing, not a printed source.",
+  "Digital editions (iTunes/Deezer) have different release date (2026-08-01) and title case; they were correctly excluded as competing editions but used as tracklist confirmation."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "1.brf.be",
+   "deezer",
+   "itunes",
+   "paula-linke.de",
+   "paulalinke.bandcamp.com",
+   "startnext.com"
+  ],
+  "source_kinds": [
+   "shop",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 4,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 15.3,
+  "tokens_in": 28263,
+  "tokens_out": 3256,
+  "cost_usd": 0.00445,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 10,
+   "of": 10
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:50",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: Input contains barcode -> NOT MET (input has only title and format). Level 4: Without barcode, unambiguous in >= 2 sources AND no other edition fitting the input has a different tracklist -> NOT MET (multiple editions fit 'King of Kingz' on CD with different tracklists: Bushido 2004 Exclusive Edition has 20 tracks in musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907; Sean Kingston 2011 CD has 13 tracks in musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd and discogs:release/16502868). Level 3: Unambiguous backed by one source, or several editions fit but ALL share the same tracklist -> NOT MET (competing editions have 13, 16, and 20 tracks). Level 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (other track count, other artist with the same title); the choice rests on weak signals -> MET (input omits artist and barcode, leaving Bushido's 16-track 2003 CD, Bushido's 20-track 2004 CD, and Sean Kingston's 13-track 2011 CD all fitting the input; the choice of Bushido's 2003 CD relies on GEMA context).",
+   "summary": "Because the input specifies only title and CD format, multiple CD releases by both Bushido (16 vs. 20 tracks) and Sean Kingston (13 tracks) fit the input with different tracklists.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd",
+    "discogs:release/769288",
+    "discogs:release/3057907",
+    "discogs:release/16502868"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a, discogs:release/769288, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ all share barcode 4018939105976 and agree on all 16 tracks in count, order, and titles, differing only in capitalisation and featured-artist formatting).",
+   "summary": "Three independent sources for the chosen edition (EAN 4018939105976) agree completely on the 16-track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> NOT MET (no cover/booklet images or primary label sources were inspected). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de) -> MET (MusicBrainz release c3466232-6040-4dfb-9490-f2b8077dc53a and Discogs release 769288 are independent database entries with differing durations, track-artist fields, and catalog number formatting, supplemented by the specialised collector site musik-sammler.de release 140817).",
+   "summary": "The result is backed by two independent music databases (MusicBrainz and Discogs) as well as the specialised collector site musik-sammler.de for the exact same barcode.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists' field is missing/empty; every distinct artist on the carrier (main and featured) should be listed.",
+  "Unsupported detail in release.edition: describes the 2001 original release as '2001er Demotapes', whereas musik-sammler.de (140817) only calls it 'Das Tape \"King Of Kingz\"' from 2001 and Discogs (769288) refers to 'Demotape' as a separate release bundled on a later 2005 edition.",
+  "Track 16 (Sternenstaub): discogs:release/769288 is included in duration_sources for duration_s = 221 even though Discogs reports 218 s (3:38), conflicting with the chosen duration.",
+  "In alternatives[2] (Sean Kingston), UK label 'Be Music' and barcode '5060160723428' come from discogs:release/16502868 (tool call 1), which is omitted from sources while only musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd is cited."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 37.0,
+  "tokens_in": 22698,
+  "tokens_out": 2819,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

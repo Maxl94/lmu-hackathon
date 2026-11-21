@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:46:59",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: 'The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources; format and artist match; no other edition with the same barcode and a different tracklist.' - MET: Barcode 4019593960000 matches both MusicBrainz (15996385-5426-416b-95da-0e8846196d3a) and Discogs (3057907), artist and CD format match, and no conflicting edition with this barcode exists.",
+   "summary": "The input barcode uniquely identifies this 2004 CD reissue across two independent databases.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' - MET: Both MusicBrainz and Discogs list the identical 20 tracks in the exact same sequence.",
+   "summary": "Both independent sources fully agree on track count, sequence, and titles.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: 'Database + independent primary source of the same edition.' - NOT MET: Only database entries are present without direct scans/primary packaging inspection. Level 4: 'Two independent database entries (recognisable by differing details) or database + specialised collector site.' - MET: MusicBrainz and Discogs are two independent databases, showing independent timing details (e.g. small duration differences on tracks 15 and 16).",
+   "summary": "Supported by two independent database sources (MusicBrainz and Discogs).",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 11.6,
+  "tokens_in": 4788,
+  "tokens_out": 1118,
+  "cost_usd": 0.00856,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

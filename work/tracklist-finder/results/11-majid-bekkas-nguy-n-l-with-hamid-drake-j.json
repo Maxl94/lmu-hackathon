@@ -1,0 +1,294 @@
+{
+ "input": {
+  "id": "11-majid-bekkas-nguy-n-l-with-hamid-drake-j",
+  "title": "Jazz at Berlin Philharmonic XVII: Gnawa World Blues",
+  "artist": "Majid Bekkas & Nguyên Lê with Hamid Drake",
+  "ean": "614427800718"
+ },
+ "status": "found",
+ "release": {
+  "title": "Jazz At Berlin Philharmonic XVII : Gnawa World Blues",
+  "artist": "Majid Bekkas, Nguyên Lê, Hamid Drake",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "ACT",
+  "catno": "ACTLP 8007-1",
+  "barcode": "614427800718",
+  "edition": "LP, 180g black vinyl",
+  "ids": {
+   "discogs": "34433917",
+   "musicbrainz": "da27b339-6378-4198-be50-6a57e8754ef3"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Gorée Blues",
+   "artist": null,
+   "duration_s": 453,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Mrahba",
+   "artist": null,
+   "duration_s": 305,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Purple Haze",
+   "artist": null,
+   "duration_s": 371,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Sidi Bouganga",
+   "artist": null,
+   "duration_s": 326,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Tair",
+   "artist": null,
+   "duration_s": 447,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Boom Boom",
+   "artist": null,
+   "duration_s": 449,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Ascending Dragon",
+   "artist": null,
+   "duration_s": 546,
+   "sources": [
+    "discogs:release/34433917",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/"
+   ],
+   "duration_sources": [
+    "discogs:release/34433917"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Majid Bekkas",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/34433917",
+    "discogs:release/34461436",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3"
+   ]
+  },
+  {
+   "name": "Nguyên Lê",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/34461436",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3"
+   ]
+  },
+  {
+   "name": "Hamid Drake",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/34461436",
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3"
+   ]
+  }
+ ],
+ "total_duration_s": 2897,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/34433917",
+   "url": "https://www.discogs.com/release/34433917-Majid-Bekkas-Jazz-At-Berlin-Philharmonic-XVII-Gnawa-World-Blues",
+   "kind": "database",
+   "note": "Matched edition: LP, ACTLP 8007-1, barcode 614427800718 (scanned 0614427800718), GEMA, LC 07644; side-split tracklist A1-A4 / B1-B3"
+  },
+  {
+   "id": "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+   "url": "https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/",
+   "kind": "shop",
+   "note": "LP listing, catno ACTLP 80071; same side split (Seite 1: Gore Blues, Mrahba, Purple Haze, Sidi Bouganga; Seite 2: Tair, Boom Boom, Ascending Dragon) with deviating durations"
+  },
+  {
+   "id": "web:https://www.actmusic.com/en/jazz-at-berlin-philharmonic-xvii-gnawa-world-blues/ACTLP-8007-1",
+   "url": "https://www.actmusic.com/en/jazz-at-berlin-philharmonic-xvii-gnawa-world-blues/ACTLP-8007-1",
+   "kind": "shop",
+   "note": "Label page for product number ACTLP 8007-1 (vinyl LP), confirms the physical LP edition and its catalogue number"
+  },
+  {
+   "id": "discogs:release/34461436",
+   "url": "https://www.discogs.com/release/34461436-Majid-Bekkas-Nguy%C3%AAn-L%C3%AA-Hamid-Drake-Jazz-At-Berlin-Philharmonic-XVII-Gnawa-World-Blues",
+   "kind": "database",
+   "note": "CD edition ACT 8007-2 (barcode 0614427800725), release-group mate; used for the artist credits (Bekkas, Lê, Drake) and song titles only"
+  },
+  {
+   "id": "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3",
+   "url": "https://musicbrainz.org/release/da27b339-6378-4198-be50-6a57e8754ef3",
+   "kind": "streaming",
+   "note": "Digital Media edition (ACT 8007-2, barcode 614427800725), 7 tracks; title spelling and credits; different running order and timings"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 1",
+   "values": {
+    "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3": "Gorée Blues",
+    "discogs:release/34433917": "Gore Blues",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "Gore Blues"
+   },
+   "resolution": "Used the MusicBrainz spelling 'Gorée Blues' (correct French place name); the print sources may have dropped the accent. Not silently switched."
+  },
+  {
+   "field": "duration track A1",
+   "values": {
+    "discogs:release/34433917": "7:33 (453 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "7:39 (459 s)"
+   },
+   "resolution": "Chose 453 s from the matched Discogs LP entry; Juno gives 6 s more. The LP back cover could not be read (Discogs image CDN returns 403), so the vinyl-specific timings could not be verified against the carrier."
+  },
+  {
+   "field": "duration track A2",
+   "values": {
+    "discogs:release/34433917": "5:05 (305 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "4:41 (281 s)"
+   },
+   "resolution": "Chose 305 s (Discogs LP entry); Juno deviates by 24 s."
+  },
+  {
+   "field": "duration track A3",
+   "values": {
+    "discogs:release/34433917": "6:11 (371 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "6:08 (368 s)"
+   },
+   "resolution": "Chose 371 s (Discogs LP entry); 3 s above the 2 s rounding tolerance, therefore listed as a conflict."
+  },
+  {
+   "field": "duration track A4",
+   "values": {
+    "discogs:release/34433917": "5:26 (326 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "5:12 (312 s)"
+   },
+   "resolution": "Chose 326 s (Discogs LP entry); Juno deviates by 14 s."
+  },
+  {
+   "field": "duration track B1",
+   "values": {
+    "discogs:release/34433917": "7:27 (447 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "7:24 (444 s)"
+   },
+   "resolution": "Chose 447 s (Discogs LP entry); 3 s above the 2 s rounding tolerance."
+  },
+  {
+   "field": "duration track B3",
+   "values": {
+    "discogs:release/34433917": "9:06 (546 s)",
+    "web:https://de.juno.co.uk/products/majid-bekkas-gnawa-world-blues-jazz-at-berlin-vinyl/1093412-01/": "8:58 (538 s)"
+   },
+   "resolution": "Chose 546 s (Discogs LP entry); Juno deviates by 8 s."
+  }
+ ],
+ "missing": [
+  "Back cover of the LP could not be inspected: Discogs image CDN (i.discogs.com) returns HTTP 403 and no other image of the pressing was reachable, so the printed tracklist and printed durations are unverified.",
+  "Vinyl-specific track durations are inconsistent between Discogs and Juno for 6 of 7 tracks; the CD/digital edition timings (MB/Discogs ACT 8007-2) differ as well (e.g. Gorée Blues 8:02, Tair 8:03, Sidi Bouganga 5:45) and were not used for the vinyl.",
+  "No MusicBrainz entry exists for the LP edition (barcode 614427800718); MusicBrainz only holds the Digital Media edition.",
+  "credits missing for 7 of 7 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "CD, ACT 8007-2, Germany 2025, barcode 0614427800725, 7 tracks (CD running order: Gore Blues, Mrahba, Boom Boom, Ascending Dragon, Purple Haze, Tair, Sidi Bouganga, 49:40)",
+   "source": "discogs:release/34461436",
+   "why_not": "Different barcode and different medium; the input EAN 614427800718 belongs to the vinyl LP"
+  },
+  {
+   "description": "Digital Media edition, ACT 8007-2, barcode 614427800725, 7 tracks, 49:42",
+   "source": "musicbrainz:release/da27b339-6378-4198-be50-6a57e8754ef3",
+   "why_not": "Digital-only edition; the physical LP is preferred"
+  }
+ ],
+ "reasoning": "Barcode 614427800718 (UPC-A, valid) matches exactly one release: the German vinyl LP ACTLP 8007-1 on ACT (Discogs 34433917), independently confirmed by the label's own product page for ACTLP 8007-1 and by the Juno LP listing (catno ACTLP 80071). The LP splits the programme differently from the CD: side A ends with Sidi Bouganga, side B runs Tair, Boom Boom, Ascending Dragon; Discogs and Juno agree on this order, while several shops simply publish the CD order. Tracklist and side positions therefore follow the vinyl; durations are taken from the Discogs LP entry because it is the matched edition, with Juno's deviating timing for six tracks flagged as conflicts. Credits (Majid Bekkas, Nguyên Lê, Hamid Drake - all three co-credited) come from the release-group CD entry and the MusicBrainz digital edition, which agree. The CD and the digital edition are listed as alternatives. Confidence 0.85: exact barcode hit plus confirmed order, but unresolved vinyl duration discrepancies and no readable back cover."
+}

@@ -1,0 +1,1884 @@
+{
+ "input": {
+  "id": "06-k-i-z-live-aus-leipzig",
+  "title": "Live aus Leipzig",
+  "artist": "K.I.Z",
+  "ean": "4251484709767"
+ },
+ "status": "found",
+ "release": {
+  "title": "Görlitzer Park - Live Aus Leipzig",
+  "artist": "K.I.Z",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "Beat the Rich! / Eklat Tonträger",
+  "catno": "425148709767",
+  "barcode": "4251484709767",
+  "edition": "3×12\" Vinyl, LP, Album, Limited Edition, Neon Green, Gatefold, printed inner sleeves",
+  "ids": {
+   "musicbrainz": "9cd41bed-67ba-4330-8dc7-7387904606da",
+   "discogs": "35653735"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Frieden",
+   "artist": null,
+   "duration_s": 332,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Johannes Gehring",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Nico Seyfrid",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Maxim",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Nico Seyfrid",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "VIP In Der Psychiatrie",
+   "artist": null,
+   "duration_s": 225,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Johannes Gehring",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Maxim",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Nico Seyfrid",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    }
+   ],
+   "isrc": "DECE72502460"
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Ehrenlos",
+   "artist": null,
+   "duration_s": 149,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "KevBeats",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Moses Schneider",
+     "role": "writer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Moses Schneider",
+     "role": "producer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "KevBeats",
+     "role": "producer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "producer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/2171571"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Urlaub Für's Gehirn",
+   "artist": null,
+   "duration_s": 338,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/52077"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/52077"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/52077"
+     ]
+    },
+    {
+     "name": "Ronald Mack Donald",
+     "role": "writer",
+     "sources": [
+      "genius:song/52077"
+     ]
+    },
+    {
+     "name": "Ronald Mack Donald",
+     "role": "producer",
+     "sources": [
+      "genius:song/52077"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A5",
+   "disc": 1,
+   "title": "Unterfickt Und Geistig Behindert",
+   "artist": null,
+   "duration_s": 350,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Gee Futuristic",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Konrad Betcher",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Konrad Betcher",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850494"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A6",
+   "disc": 1,
+   "title": "Bier",
+   "artist": null,
+   "duration_s": 144,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Berlin Wird Dich Töten",
+   "artist": null,
+   "duration_s": 207,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10143142"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10143142"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10143142"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10143142"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10143142"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Sommer Meines Lebens",
+   "artist": null,
+   "duration_s": 209,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    },
+    {
+     "name": "FELLY (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477029"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Görlitzer Park",
+   "artist": null,
+   "duration_s": 250,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Paul Mond",
+     "role": "writer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    },
+    {
+     "name": "Paul Mond",
+     "role": "producer",
+     "sources": [
+      "genius:song/9543384"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Hurra Die Welt Geht Unter",
+   "artist": null,
+   "duration_s": 285,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Rajesh Roshan",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "KevBeats",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Moses Schneider",
+     "role": "writer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "producer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Moses Schneider",
+     "role": "producer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "KevBeats",
+     "role": "producer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Rajesh Roshan",
+     "role": "producer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/2160922"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B5",
+   "disc": 1,
+   "title": "Vierspur",
+   "artist": null,
+   "duration_s": 252,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    },
+    {
+     "name": "Nikki3k",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477042"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B6",
+   "disc": 1,
+   "title": "Applaus",
+   "artist": null,
+   "duration_s": 320,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10211875"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10211875"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10211875"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C1",
+   "disc": 2,
+   "title": "Filmriss",
+   "artist": null,
+   "duration_s": 199,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Drunken Masters",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850499"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850499"
+     ]
+    },
+    {
+     "name": "Philipp Hoppen",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850499"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850499"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C2",
+   "disc": 2,
+   "title": "Kinderkram",
+   "artist": null,
+   "duration_s": 368,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Drunken Masters",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850501"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850501"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850501"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6850501"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/6850501"
+     ]
+    }
+   ],
+   "isrc": "DECE72502472"
+  },
+  {
+   "position": "C3",
+   "disc": 2,
+   "title": "Neuruppin",
+   "artist": null,
+   "duration_s": 326,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Grzegorz Olszówka",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "Drama Kuba",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "Kannibal Rob",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    },
+    {
+     "name": "WassBass",
+     "role": "producer",
+     "sources": [
+      "genius:song/50892"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C4",
+   "disc": 2,
+   "title": "Illuminati",
+   "artist": null,
+   "duration_s": 155,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493744"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493744"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493744"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493744"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10493744"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C5",
+   "disc": 2,
+   "title": "2001",
+   "artist": null,
+   "duration_s": 223,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Boris Rogowski",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Bazzazian",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Tua",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    },
+    {
+     "name": "Bazzazian",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477031"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D1",
+   "disc": 2,
+   "title": "Sensibel",
+   "artist": null,
+   "duration_s": 213,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Johannes Gehring",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D2",
+   "disc": 2,
+   "title": "Rap Über Hass",
+   "artist": null,
+   "duration_s": 420,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Torky Tork",
+     "role": "writer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "writer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Torky Tork",
+     "role": "producer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/6237880"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D3",
+   "disc": 2,
+   "title": "Geld Wie Ein Magnet",
+   "artist": null,
+   "duration_s": 309,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477066"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477066"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477066"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477066"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477066"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D4",
+   "disc": 2,
+   "title": "Samstag Ist Krieg",
+   "artist": null,
+   "duration_s": 245,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477034"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477034"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477034"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D5",
+   "disc": 2,
+   "title": "Grabstein",
+   "artist": null,
+   "duration_s": 158,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477078"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10477078"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10477078"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E1",
+   "disc": 3,
+   "title": "DJ Set",
+   "artist": null,
+   "duration_s": 446,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "E2",
+   "disc": 3,
+   "title": "Der Durch Die Scheibeboxxxer",
+   "artist": null,
+   "duration_s": 103,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/53973"
+     ]
+    },
+    {
+     "name": "Philipp Hoppen",
+     "role": "writer",
+     "sources": [
+      "genius:song/53973"
+     ]
+    },
+    {
+     "name": "Philipp Hoppen",
+     "role": "producer",
+     "sources": [
+      "genius:song/53973"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/53973"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E3",
+   "disc": 3,
+   "title": "Undertheker",
+   "artist": null,
+   "duration_s": 182,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "E4",
+   "disc": 3,
+   "title": "Walpurgisnacht",
+   "artist": null,
+   "duration_s": 238,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Flashgordon (Produzent)",
+     "role": "writer",
+     "sources": [
+      "genius:song/50559"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50559"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50559"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/50559"
+     ]
+    },
+    {
+     "name": "Flashgordon (Produzent)",
+     "role": "producer",
+     "sources": [
+      "genius:song/50559"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E5",
+   "disc": 3,
+   "title": "Wahrheit Part 1",
+   "artist": null,
+   "duration_s": 213,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "E6",
+   "disc": 3,
+   "title": "Wahrheit Part 2",
+   "artist": null,
+   "duration_s": 217,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "F1",
+   "disc": 3,
+   "title": "Ich Ficke Euch (Alle)",
+   "artist": null,
+   "duration_s": 350,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/6753023"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F2",
+   "disc": 3,
+   "title": "Ich Mache Geld",
+   "artist": null,
+   "duration_s": 335,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493749"
+     ]
+    },
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493749"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493749"
+     ]
+    },
+    {
+     "name": "Johannes Gehring",
+     "role": "writer",
+     "sources": [
+      "genius:song/10493749"
+     ]
+    },
+    {
+     "name": "Drunken Masters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10493749"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F3",
+   "disc": 3,
+   "title": "Ein Affe Und Ein Pferd",
+   "artist": null,
+   "duration_s": 398,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Maxim K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Tarek K.I.Z",
+     "role": "writer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "writer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Kevin Thomas",
+     "role": "writer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Flitzpiepen",
+     "role": "producer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Kev",
+     "role": "producer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Nico K.I.Z",
+     "role": "producer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    },
+    {
+     "name": "Gee Futuristic",
+     "role": "producer",
+     "sources": [
+      "genius:song/186517"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F4",
+   "disc": 3,
+   "title": "Familienfeier",
+   "artist": null,
+   "duration_s": 374,
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da"
+   ],
+   "flags": [],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "K.I.Z",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/"
+   ]
+  }
+ ],
+ "total_duration_s": 8533,
+ "confidence": 0.88,
+ "sources": [
+  {
+   "id": "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+   "url": "https://musicbrainz.org/release/9cd41bed-67ba-4330-8dc7-7387904606da",
+   "kind": "database",
+   "note": "barcode 4251484709767 exact; 3×12\", DE 2025-11-12; all 32 track durations in ms; track artist credit = K.I.Z on every track"
+  },
+  {
+   "id": "discogs:release/35653735",
+   "url": "https://www.discogs.com/release/35653735",
+   "kind": "database",
+   "note": "same barcode 4 251484 709767, catno 425148709767, matrix YA7557-1 A–F; identical 32-track order, no durations"
+  },
+  {
+   "id": "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/",
+   "url": "https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/",
+   "kind": "collector",
+   "note": "3-LP, EAN 4251484709767, same 32 tracks per side; no durations"
+  },
+  {
+   "id": "image:https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg",
+   "url": "https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg",
+   "kind": "image",
+   "note": "back cover: title 'GÖRLITZER PARK - LIVE AUS LEIPZIG', sides A–F with 32 titles in the same order, no durations printed"
+  },
+  {
+   "id": "web:https://genius.com/albums/Kiz/Gorlitzer-park-live-aus-leipzig",
+   "url": "https://genius.com/albums/Kiz/Gorlitzer-park-live-aus-leipzig",
+   "kind": "web",
+   "note": "digital tracklist (32 tracks), confirms song title 'DJ Set'; hint only, describes the digital edition"
+  },
+  {
+   "id": "genius:song/2171571",
+   "url": "https://genius.com/Kiz-ehrenlos-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/52077",
+   "url": "https://genius.com/Kiz-urlaub-furs-gehirn-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6850494",
+   "url": "https://genius.com/Kiz-unterfickt-und-geistig-behindert-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10143142",
+   "url": "https://genius.com/Kiz-berlin-wird-dich-toten-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477029",
+   "url": "https://genius.com/Kiz-sommer-meines-lebens-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9543384",
+   "url": "https://genius.com/Kiz-gorlitzer-park-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/2160922",
+   "url": "https://genius.com/Kiz-hurra-die-welt-geht-unter-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477042",
+   "url": "https://genius.com/Kiz-vierspur-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10211875",
+   "url": "https://genius.com/Kiz-applaus-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6850499",
+   "url": "https://genius.com/Kiz-filmriss-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6850501",
+   "url": "https://genius.com/Kiz-kinderkram-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/50892",
+   "url": "https://genius.com/Kiz-neuruppin-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10493744",
+   "url": "https://genius.com/Kiz-illuminati-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477031",
+   "url": "https://genius.com/Kiz-2001-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6237880",
+   "url": "https://genius.com/Kiz-rap-uber-hass-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477066",
+   "url": "https://genius.com/Kiz-geld-wie-ein-magnet-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477034",
+   "url": "https://genius.com/Kiz-samstag-ist-krieg-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10477078",
+   "url": "https://genius.com/Kiz-grabstein-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/53973",
+   "url": "https://genius.com/Kiz-der-durch-die-scheibeboxxxer-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/50559",
+   "url": "https://genius.com/Kiz-walpurgisnacht-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6753023",
+   "url": "https://genius.com/Kiz-ich-ficke-euch-alle-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10493749",
+   "url": "https://genius.com/Kiz-ich-mache-geld-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/186517",
+   "url": "https://genius.com/Kiz-ein-affe-und-ein-pferd-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track E1",
+   "values": {
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da": "DJ Set",
+    "discogs:release/35653735": "DJ Set",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/": "DJ Set",
+    "image:https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg": "DICKA (OCR, marked uncertain)"
+   },
+   "resolution": "Kept 'DJ Set': MusicBrainz, Discogs, musik-sammler and the track's own title on Genius all agree; the OCR read of the all-caps back cover was flagged uncertain."
+  },
+  {
+   "field": "release title",
+   "values": {
+    "input": "Live aus Leipzig",
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da": "Görlitzer Park - Live Aus Leipzig",
+    "discogs:release/35653735": "Görlitzer Park - Live Aus Leipzig"
+   },
+   "resolution": "Input title is the short form; the printed and database title including the album name was used. Barcode, artist and year identify the same release."
+  }
+ ],
+ "missing": [
+  "Durations are not printed on the cover and not entered at Discogs/musik-sammler; all durations come from the MusicBrainz entry of this exact vinyl edition (no second independent duration source).",
+  "credits missing for 6 of 32 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "2×CD, DE 2025-11-12, Beat the Rich! / Eklat Tonträger, barcode 4251484709774, 17+15 tracks",
+   "source": "musicbrainz:release/a64dbfc0-de72-4fbb-92f3-1264a6e8b6ea",
+   "why_not": "different barcode and format (CD); same recordings and identical durations, used only as cross-check"
+  },
+  {
+   "description": "Digital Media, 2025-11-13, Eklat Tonträger, barcode 602478858666, 32 tracks",
+   "source": "musicbrainz:release/a852c52a-dd54-4192-ae79-dc240e67c6d8",
+   "why_not": "digital edition, not a physical carrier"
+  }
+ ],
+ "reasoning": "EAN 4251484709767 hits exactly one release in MusicBrainz and one at Discogs: the 3×12\" limited neon-green vinyl of 'Görlitzer Park - Live Aus Leipzig' (DE, 2025-11-12, Beat the Rich!/Eklat, catno 425148709767). Discogs, musik-sammler and the back cover confirm the identical 32 tracks in sides A–F; durations (32/32) exist only in MusicBrainz for this very release entry. The two recorded conflicts are cosmetic (short input title, one uncertain OCR reading on the all-caps back cover) and both resolved by three agreeing sources, hence confidence just below the fully clean 0.9 band."
+}

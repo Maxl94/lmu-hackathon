@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:58:20",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains a barcode: MET (input ean '888837168626'; FACTS input_has_barcode=true). (2) Matches exactly this edition after check-digit correction in >= 2 independent sources: MET (tool call 1 tl-gtin corrects invalid UPC-A 888837168626 to 888837168625 / EAN-13 0888837168625; confirmed for EU/DE 2013 CD Columbia 88883716862 in musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 [tool call 6], discogs:release/4729785 [tool call 7], and back cover scan image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg [tool call 9]). (3) Format and artist match: MET (CD and Daft Punk match input across all sources; FACTS format_match=true, artist_similarity=100, title_similarity=100). (4) No other edition with the same barcode and a different tracklist: MET (all 5 CD releases returned by tl-mb search --barcode 888837168625 [tool call 4] have 13 tracks, and release-group listings [tool call 14] show editions with differing track counts such as Japan 14-track CD, 10th Anniversary 2xCD, and USB have different barcodes or formats). All Level 5 conditions MET; stop at 5.",
+   "summary": "After correcting the invalid check digit from 6 to 5, the barcode matches the 2013 standard 13-track EU CD edition across MusicBrainz, Discogs, and the printed back cover with no conflicting-tracklist edition sharing that barcode.",
+   "evidence": [
+    "tool:1 (tl-gtin)",
+    "tool:4 (tl-mb search)",
+    "tool:6 (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3)",
+    "tool:7 (discogs:release/4729785)",
+    "tool:9 (image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg)",
+    "tool:14 (tl-mb group)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: (1) >= 2 independent sources of the same edition: MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 [tool call 6] and discogs:release/4729785 [tool call 7] are two independent databases for the 2013 EU CD Columbia 88883716862, additionally corroborated by the read back cover image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg [tool call 9]). (2) Agree on count, order and titles (spelling variants only): MET (all three sources list the same 13 tracks in identical order, differing only in capitalisation/apostrophe style such as 'To'/'to', 'Of'/'of', 'By'/'by', and 'Doin' It Right'/'Doin’ It Right'; the 2.6 s duration discrepancy on Track 13 'Contact' between Discogs 381 s and MB CD-TOC 383.626 s is documented and resolved via CD-TOC confirmed on US pressing musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0 [tool call 10]). All Level 5 conditions MET; stop at 5.",
+   "summary": "MusicBrainz, Discogs, and the read back cover scan of the EU CD edition agree on track count (13), order, and all titles with only minor capitalisation and apostrophe variants.",
+   "evidence": [
+    "tool:6 (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3)",
+    "tool:7 (discogs:release/4729785)",
+    "tool:9 (image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg)",
+    "tool:10 (musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: (1) Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Two independent databases with differing details are used—musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 (ISRCs, ms CD-TOC durations; tool call 6) and discogs:release/4729785 (matrix/runout, SID codes, BIEM/GEMA, Polish distribution note, rounded durations; tool call 7)—paired with a directly read primary source of the same EU edition, the back cover scan image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg (tool call 9 via tl-vision), which is independent of Discogs and verifies Columbia 88883716862, LC 00162, Made in the EU, barcode 8 8883-71686-2 5, and all 13 printed track titles. All Level 5 conditions MET; stop at 5.",
+   "summary": "The result combines two independent database entries (MusicBrainz and Discogs) with a directly read back cover scan of the exact same EU CD edition.",
+   "evidence": [
+    "tool:6 (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3)",
+    "tool:7 (discogs:release/4729785)",
+    "tool:9 (image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error (FACTS): 'artists' is empty/omitted instead of listing every distinct artist on the carrier (main, featured, remixer) once.",
+  "Unsupported claim in alternatives[1] (musicbrainz:release/6940fcdf-6e70-4764-8782-18e2c1e600de): describes the 2023 10th Anniversary Edition 2xCD as including a 'Drumless'-Disc, which is not supported by tool call 14 (tl-mb group).",
+  "Overstated claim in alternatives[0] and reasoning: asserts that CA, AU, BR, AR, MX pressings have the identical tracklist, whereas only the US pressing (musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0, tool call 10) had its tracklist fetched (only track count 13 was shown for AU/CA/BR in tool call 4, and neither count nor titles were fetched for AR/MX in tool call 5)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 102.8,
+  "tokens_in": 25005,
+  "tokens_out": 12134,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

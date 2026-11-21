@@ -1,0 +1,14 @@
+{"ts": 1795185738.37, "event": "run_start", "input": {"title": "Live in Bielefeld", "artist": "Casper", "ean": "4251484708203"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4251484708203): 1 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "  musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57 | Live in Bielefeld — Casper | 2024-12-12 DE | 12\" Vinyl+12\" Vinyl+12\" Vinyl | Official"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz release ae36f7c7-c498-4a33-b5e0-7b0d1efbac57: 28 tracks, 28 with duration"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ Discogs search barcode=4251484708203 format=None: 1 hits"}
+{"ts": 1795185738.38, "event": "fast_step", "msg": "  discogs:release/32548602 | Live in Bielefeld | Germany 2024-12-13 | 28 tracks, 28 with duration"}
+{"ts": 1795185738.38, "event": "fast_step", "msg": "✓ 28 tracks: titles agree, 28 durations in both sources, 0 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185738.38, "event": "phase_end", "phase": "fast", "ok": true, "msg": "✓ 28 tracks: titles agree, 28 durations in both sources, 0 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185738.38, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185741.67, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795185741.67, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185747.87, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.9, "error": null}
+{"ts": 1795185747.87, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.9, "tracks": 28, "wall_s": 0.0, "judge_s": 6.2, "cost_usd": 0.0014, "mode": "fast", "errors": []}

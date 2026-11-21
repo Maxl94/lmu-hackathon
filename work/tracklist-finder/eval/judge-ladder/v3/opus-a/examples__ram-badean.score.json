@@ -1,0 +1,109 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:39",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (a) Input contains a barcode: MET (888837168626, invalid check digit; tl-gtin corrects it to 888837168625). (b) The corrected barcode matches this edition in >=2 independent sources: MET (MB release f6758afb shows barcode 0888837168625 per tl-mb release; Discogs 4729785 shows 888837168625 per tl-discogs release; the back-cover image also prints 8 8883-71686-2 5). (c) Format CD and artist Daft Punk match: MET. (d) No other edition with the same barcode and a different tracklist: MET as far as the evidence shows. The MB barcode search returns 5 CD releases (FR/DE, US, AU, CA, BR), all with 13 tracks. The Discogs barcode search lists many country pressings of the same master (one is an unofficial cassette). Editions with different tracklists (JP 14 tracks, 10th Anniversary 2CD, vinyl) all carry different barcodes. The input notes 'EAN evtl. vertippt' and the check-digit-only correction fits title and artist exactly. All conditions met, so I stop at 5.",
+   "summary": "The check-digit-corrected EAN 888837168625 matches the 13-track standard CD in both MusicBrainz and Discogs, and all same-barcode pressings share the same tracklist.",
+   "evidence": [
+    "tl-gtin 888837168626",
+    "tl-mb search --barcode 888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-mb group aa997ea0-2936-40bd-884d-3af8a0e064dc"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MET: MB f6758afb (13 tracks) and Discogs 4729785 (13 tracks) list identical titles in identical order; differences are capitalisation and apostrophe only. The back cover (tl-vision) independently reads the same 13 titles in the same printed order. The MB US release a8308466 is identical as well. The only deviation is a duration difference on track 13 (Contact: 6:24 vs 6:21), which does not affect count, order or titles. I stop at 5.",
+   "summary": "MusicBrainz, Discogs and the read back cover agree on 13 titles in the same order.",
+   "evidence": [
+    "tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "tl-discogs release 4729785",
+    "tl-vision coverartarchive 5748588554",
+    "tl-mb release a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database plus an independent primary source of the same edition. Database: MET (Discogs 4729785 and MB f6758afb). Primary source: MET (the back-cover print was read via tl-vision and shows the barcode 8 8883-71686-2 5, catalogue number 88883716862 and Made in the EU, matching the Discogs EU entry). The image is hosted on the MB entry, but Discogs is an independent database that confirms the same edition, so the database plus primary-source combination holds. I stop at 5.",
+   "summary": "An independent Discogs entry plus a read back-cover image of the EU CD (barcode and catalogue number legible) support the edition.",
+   "evidence": [
+    "discogs:release/4729785",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 13 'Contact': the agent's claim that the Discogs value 6:21 corresponds to the digital/streaming version is speculation not supported by the evidence.",
+  "The MB barcode search lists f6758afb as '2013-05-20 FR', while tl-mb release shows '2013-05-17 DE'; the agent's country DE comes from one of several release events, and the choice of pressing among identical editions is arbitrary.",
+  "The Discogs barcode search output was truncated, so not every same-barcode Discogs entry was verified for its tracklist; South Korean limited editions and an unofficial Russian cassette exist.",
+  "The Discogs entry is marked data_quality 'Needs Vote'.",
+  "The tl-gtin tool notes the typo could also lie in other digits; the check-digit-only correction is plausible but assumed."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 23.2,
+  "tokens_in": 28892,
+  "tokens_out": 2265,
+  "cost_usd": 0.16087,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

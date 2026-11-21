@@ -1,0 +1,98 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:59",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Die Eingabe-EAN 888837168626 hat eine falsche Prüfziffer. Korrigiert ergibt sie 888837168625. Diesen Barcode bestätigen MusicBrainz (f6758afb, Columbia 88883716862), Discogs 4729785 (Europe, GEMA/BIEM) und das Backcover-Foto. Format CD und Artist stimmen. Alle CD-Pressungen mit diesem Barcode haben in MB 13 Tracks; abweichende Ausgaben (JP mit 14 Tracks, 10th Anniversary, Vinyl) tragen andere Barcodes.",
+   "belege": [
+    "tl-gtin 888837168626",
+    "tl-mb search --barcode 888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (DE und US), Discogs 4729785 und das gelesene Backcover stimmen bei allen 13 Titeln in Anzahl, Reihenfolge und Schreibung überein. Es gibt nur Varianten der Groß-/Kleinschreibung und des Apostrophs bei Pos. 12. Die Dauerabweichung bei Pos. 13 betrifft nicht die Tracklist.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 92% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es liegen zwei unabhängige Datenbanken vor (MusicBrainz und Discogs, mit abweichenden Details wie Dauern und Matrix). Hinzu kommt eine Primärquelle: Das Backcover-Foto wurde per Vision gelesen und zeigt Titel, Katalognummer, Barcode und 'Made in the EU'.",
+   "belege": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-vision 5748588554-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Barcode-Korrektur ändert nur die Prüfziffer. Ein Tippfehler in einer anderen Stelle ist laut tl-gtin nicht ausgeschlossen, Titel und Artist passen aber.",
+  "Die MB-Suche zeigt f6758afb als '2013-05-20 FR', die Release-Abfrage dagegen als '2013-05-17 DE'. Die Länderangabe DE im Ergebnis ist damit nicht eindeutig belegt.",
+  "Pos. 13 'Contact' hat einen Dauerkonflikt: MB 384 s gegenüber Discogs 381 s.",
+  "Die Begründung, Discogs-Wert 6:21 entspreche der Digital-/Streaming-Version, ist nicht belegt.",
+  "Die Behauptung identischer Tracklisten für AR/MX u. a. wurde nur über die MB-Trackanzahl geprüft, nicht über Discogs-Detailabfragen."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 16.6,
+  "tokens_in": 27025,
+  "tokens_out": 1800,
+  "cost_usd": 0.1441,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

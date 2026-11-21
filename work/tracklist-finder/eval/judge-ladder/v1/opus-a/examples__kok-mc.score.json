@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:44",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Kein Barcode im Input. Titel, Interpret und Format Kassette passen; MusicBrainz, Discogs 1951581 und musik-sammler.de stimmen bei Jahr 2001, Land DE und Label I Luv Money Records überein. Es gibt sechs Discogs-Kassettenauflagen (2001–2003), alle mit identischer Trackliste. Die Wahl der Erstauflage ändert am Ergebnis also nichts.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "tl-discogs versions 211928",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs und musik-sammler.de stimmen bei A1–B8 (16 Titel) in Anzahl, Reihenfolge und Dauern exakt überein. Abweichungen gibt es nur in der Schreibweise: 'Nute Bounce'/'Nutte Bounce', 'Pitbull'/'Pit Bull', 'Hast du Mut'/'Hast Du Mut?', 'Vack You!'.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbanken (MusicBrainz und Discogs, erkennbar an abweichenden Schreibweisen) und dazu musik-sammler.de. Die Bilder (J-Card, Tape-Sticker) bestätigen nur Titel und Label, enthalten aber keine Trackliste. Als Primärquelle für die Trackliste taugen sie daher nicht.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "tl-vision Bilder"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Katalognummer ist uneinheitlich: 'ILM 003' (MusicBrainz), '03' (Discogs) und 'ILM1' auf dem J-Card-Rücken (Bild). Das Ergebnis übernimmt 'ILM 003' ohne Hinweis auf den Konflikt.",
+  "Dass musik-sammler 917995 ('Limited Edition') die Erstauflage ist, belegt die Evidenz nicht. Die Bezeichnung 'Erstauflage (Limited Edition)' vermischt Angaben aus zwei Quellen.",
+  "Laut Bild trägt der Tape-Sticker der Erstauflage 'KING OF KINGS'. Der Release-Titel 'King Of Kingz' folgt dem Cover; das ist vertretbar, aber zu beachten.",
+  "Die Featuring-Angabe zu A8 ('Bass Sultan Hengzt & King Orgasmus One') stammt allein aus MusicBrainz. musik-sammler nennt dort 'Baktus & Orgasmus'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 19.8,
+  "tokens_in": 30828,
+  "tokens_out": 2056,
+  "cost_usd": 0.16443,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

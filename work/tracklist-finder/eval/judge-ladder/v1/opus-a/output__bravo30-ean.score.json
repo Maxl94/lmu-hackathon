@@ -1,0 +1,88 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:23:10",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Der Barcode 731456031125 passt exakt in zwei unabhängigen Datenbanken (MusicBrainz 41b0a392…, Discogs 23145932); Format CD und Titel stimmen. Discogs listet aber drei Ausgaben mit diesem Barcode (23145932, 1949898, 26676554). Für die beiden Alternativen zeigt die Evidenz nur die Trackanzahl 40, keinen Titelvergleich. Dass ihre Tracklisten gleich sind, ist daher nicht vollständig belegt.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs stimmen für dieselbe Ausgabe bei Anzahl (40), Reihenfolge und Titeln überein. Bei den Titeln gibt es nur Schreibvarianten (1/10, 2/2, 2/6). Die vier Dauerabweichungen betreffen nicht die Titel.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 4 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor; abweichende Details wie Dauern und Schreibweisen zeigen die Unabhängigkeit. Eine Primärquelle (Cover, Booklet, Label) fehlt.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Angabe „gleiche Trackliste“ zu den Alternativen discogs:1949898 und discogs:26676554 ist nicht belegt. Die Evidenz zeigt dort nur die Trackanzahl 40, keinen Titelvergleich.",
+  "Die Nummerierung der Dauerkonflikte ist widersprüchlich. Laut Konfliktliste betreffen sie „Track 14“ und „Track 18“, bei fortlaufender Zählung also 1/14 (Paul van Dyk) und 1/18 (Deichkind). Die Flags stehen aber auf 2/14 (Black Legend) und 2/18 (DJ Ötzi). Auch die Dauern passen nicht: 1/18 hat 206 s statt 3:40.",
+  "Gewählt wurde Discogs 23145932 und nicht 1949898, obwohl 1949898 dasselbe Datum (2000-08-11) wie der MusicBrainz-Eintrag trägt. Die Auswahl ist nicht begründet."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 15.2,
+  "tokens_in": 8663,
+  "tokens_out": 1551,
+  "cost_usd": 0.06567,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

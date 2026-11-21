@@ -1,0 +1,26 @@
+[project]
+name = "gema-tracklist"
+version = "0.1.0"
+description = "GEMA-Hackathon: Agent findet fehlende Tracklisten (opencode + tl-* Tools)"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic",
+    "beautifulsoup4",
+    "httpx[socks]",
+    "pillow",
+    "pydantic>=2",
+    "python-dotenv",
+    "rapidfuzz",
+    "requests",
+    "selenium",
+    "seleniumbase",
+    "streamlit>=1.67.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+extraPaths = ["src"]

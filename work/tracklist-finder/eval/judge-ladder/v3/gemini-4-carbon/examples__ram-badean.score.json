@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:22",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains barcode ('888837168626') and after check-digit correction ('888837168625', tool 1 tl-gtin) it matches this EU/DE CD edition in >= 2 independent sources: MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 in tool 6, discogs:release/4729785 in tool 7, and back cover image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg in tool 9). (2) Format ('CD') and artist ('Daft Punk') match INPUT: MET (tools 6, 7, 9). (3) No other edition with the same barcode and a different tracklist: MET (tools 4, 10, 14 show all 888837168625/0888837168625 CD pressings have the same 13 tracks; editions with bonus tracks/discs such as JP SICP 3817 or 2023 10th Anniversary have different barcodes). All conditions of Level 5 are MET.",
+   "summary": "Check-digit correction of the input EAN uniquely identifies the 13-track standard CD barcode 888837168625 across MusicBrainz, Discogs, and the read back cover, with no competing tracklist under this barcode.",
+   "evidence": [
+    "tl-gtin 888837168626",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0",
+    "tl-mb group aa997ea0-2936-40bd-884d-3af8a0e064dc"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 in tool 6, discogs:release/4729785 in tool 7, and back cover scan image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg in tool 9 all list the exact same 13 tracks in the same order, differing only in capitalization and apostrophe style). All conditions of Level 5 are MET.",
+   "summary": "MusicBrainz, Discogs, and the read CD back cover of the EU edition agree completely on all 13 track positions and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET (independent database entries discogs:release/4729785 in tool 7 and musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 in tool 6, plus the directly read CD back cover image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg via tl-vision in tool 9 confirming titles, barcode 8 8883-71686-2 5, catno 88883716862, LC 00162, and Made in the EU). All conditions of Level 5 are MET.",
+   "summary": "Two independent music databases (MusicBrainz and Discogs) are backed by a directly read back-cover scan of the same EU CD edition.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "FACTS validation error: top-level 'artists' list is missing/empty ('artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once').",
+  "Unsupported detail in sources/conflicts/reasoning (Track 13 / musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0): the agent asserts that MusicBrainz durations come from a 'CD-TOC', whereas tool outputs 6 and 10 only show millisecond track lengths without indicating whether a Disc ID/TOC is attached.",
+  "Unsupported detail in alternatives: the agent states that AR and MX pressings have the same tracklist, although tool 5 (tl-discogs search) only returned search snippets for Argentina (discogs:release/7153599) and Mexico (discogs:release/18085996, discogs:release/22203604) without inspecting their tracklists, and also listed uninspected AU/KR 'Limited Edition' Discogs entries under the same barcode."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 46.2,
+  "tokens_in": 25005,
+  "tokens_out": 4350,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

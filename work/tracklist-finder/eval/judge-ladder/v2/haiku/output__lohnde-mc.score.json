@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:37:54",
+ "overall": 2.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: barcode match - input has no barcode, so not met. 4: without barcode, title/artist/format match (Discogs search), plus further attributes label Fred Kersten KG and catno MC 6109 confirmed by Discogs and label shell images (tl-vision); no other fitting edition with different tracklist known; but 'Blasmusik aus Lohnde (Folge 2)' (r24154076, Swinging Seelze) is a different series part with possibly different tracklist, not checked; MET for title/artist/format/label/catno only in 2 sources (Discogs + label image) - however the Folge 1 vs Folge 2 competing edition exists and its tracklist was not compared, so the choice rests on series part; condition 'no other edition fitting the input has a different tracklist' is NOT verified. Falls to 3: unambiguous-ish with only one database entry and Folge 2 not checked for tracklist; input does not specify Folge, so Folge 2 could also fit the input title.",
+   "summary": "Input gives no barcode or series part, and a sibling release 'Blasmusik Aus Lohnde (Folge 2)' (r24154076) exists whose tracklist was never compared, so the edition choice rests on weak signals.",
+   "evidence": [
+    "tl-discogs search --title Blasmusik aus Lohnde --artist Musikverein Lohnde (1 hit r24165131)",
+    "tl-search 'Blasmusik aus Lohnde Musikverein Lohnde Kassette Trackliste' hit 2 r24154076 Folge 2",
+    "tl-vision label images MC 6109 Fred Kersten KG",
+    "tl-mb search 0 releases"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: needs >=2 independent sources agreeing - Discogs release page (tl-discogs release 24165131, 10 tracks), tl-scrape firecrawl of Discogs page (same 10 titles), J-card back image read 10 tracks (A1-A6, B1-B4), J-card inlay Seite 1 read 6 tracks matching. Titles and order agree across sources (spelling: 'Memories Of Cole Porter' vs 'Memories of Cole Porter'). MET for count, order, titles. However the sources of the Discogs page and the scrape are the same database entry, so independence is partial; the J-card images are independent primary-type reads. Count and order consistent across Discogs and J-card: rating 5 condition arguably met.",
+   "summary": "Ten tracks in the same order and titles are confirmed by the Discogs release page and by the J-card back image read via tl-vision, with only spelling-level differences, and no durations exist to conflict.",
+   "evidence": [
+    "tl-discogs release 24165131",
+    "tl-scrape firecrawl discogs de/release/24165131",
+    "tl-vision J-card back aWGAwGdW4...",
+    "tl-vision J-card additional panel Fkgjp..."
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: database + independent primary source of same edition - Discogs database (r24165131) plus J-card photographs read by tl-vision (primary cover images) and label shell images with MC 6109 and Fred Kersten KG. MET: database entry plus primary cover/label print of same edition. Caveat: label/cover images are hosted on the Discogs entry itself, which weakens independence; that caps it at 4 arguably.",
+   "summary": "Discogs database entry plus cover and label-print images, but the images are hosted on the same Discogs entry, so independence is limited and no second database or collector site confirms the edition.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:aWGAwGdW4... J-card back",
+    "image:RkJSxZMfJe5... label shell",
+    "image:Fkgjp-amgHXM... J-card inlay"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input has no barcode; agent's result barcode null, so barcode-based edition rating is unavailable.",
+  "Sibling release 'Blasmusik Aus Lohnde (Folge 2)' r24154076 (Swinging Seelze) found in search but its tracklist and whether it fits the input were never checked.",
+  "Year null and country DE; label shell images show no year, consistent with missing year, not an error.",
+  "Agent claims 'Keine MusicBrainz-Übereinstimmung' - tl-mb searches returned 0 releases, consistent.",
+  "Discogs release tool output shows 'total 0:00' and no durations; the result's total_duration_s null is correct.",
+  "Source family 'image' entries are all Discogs-hosted images, so they are not fully independent of the database entry.",
+  "Track A1 'Kein Schöner Land' vs 'Kein schöner Land' capitalization differs only (spelling variant)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.3,
+  "tokens_in": 21017,
+  "tokens_out": 1563,
+  "cost_usd": 0.00288,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

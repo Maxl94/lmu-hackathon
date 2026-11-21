@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:31",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (a) input barcode 731456031125 (valid UPC-A, step 1) exactly matches this edition in >=2 independent sources: MET. MusicBrainz 41b0a392 (step 3/5, 0731456031125, Polystar 560 311-2, 2xCD DE 2000), Discogs 1949898 (step 6, scanned barcode), musik-sammler.de (step 17, EAN 731456031125, Polystar 560 311-2) and the back-cover print read via vision (step 8) all match. (b) Format and artist match: MET; 2xCD Various, title identical. (c) No other edition with the same barcode and a different tracklist: MET. The three Discogs hits with this barcode (step 2) share cat. no. 560 311-2. 23145932 has a verifiably identical tracklist (step 4). 26676554 was not fetched but has the same cat. no. and barcode, so it is a pressing variant. The club edition 610930 and 3796763 do not appear in the barcode search and are ruled out by the input barcode. All conditions met, so I stop at 5.",
+   "summary": "The barcode matches exactly in MusicBrainz, Discogs, musik-sammler.de and on the printed back cover, and all same-barcode Discogs variants are pressings with the same cat. no. and tracklist.",
+   "evidence": [
+    "tl-gtin (step 1)",
+    "tl-discogs search --barcode (step 2)",
+    "tl-mb search --barcode (step 3)",
+    "discogs:release/1949898",
+    "discogs:release/23145932",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MET. MusicBrainz (step 5) has 20+20 tracks. Discogs 1949898 (step 6) and 23145932 (step 4) have the same 40 tracks in the same order. The back cover (step 8) shows 40 tracks in the same order. musik-sammler.de (step 12) has 20+20 tracks in the same order. Remaining differences are only spellings or version suffixes: (Album Version), Straßen/Strassen, and mix names absent from the cover. There are also obvious typos on musik-sammler ('Nelly' at CD1-10, 'Form Jamaica', 'Shackless'). These do not affect count, order or titles. Level 5 met.",
+   "summary": "Four sources of the same edition (MB, Discogs, back cover, musik-sammler.de) agree on 40 tracks in identical order, with only spelling and version-suffix variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database plus an independent primary source of the same edition. MET. The database Discogs 1949898 has independent details: matrix, Made in Germany, and the 560 312-2/560 313-2 sub-cat. nos. The primary source is the back cover read by vision (step 8), which shows the printed barcode 731456031125 and cat. no. 560 311-2 together with the full tracklist. The image is hosted on CAA/MusicBrainz, but it is a scan of the physical print and is independent of Discogs. MusicBrainz and musik-sammler.de give additional independent confirmation. Level 5 met.",
+   "summary": "Two independent databases plus a collector site are backed by a read back-cover print showing the same barcode and catalogue number.",
+   "evidence": [
+    "discogs:release/1949898",
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Alternative discogs:release/26676554 (EU) was never fetched; the claim 'keine abweichende Trackliste' is unsupported, although it is plausible given the same barcode and cat. no.",
+  "Discogs 3796763 (Bravo Hits 30, 2xCD, step 10) is not listed among the alternatives and was not examined; its barcode is unknown.",
+  "Alternative 23145932 is described as a 'UK-Pressung', but Discogs lists its country as Germany; only the matrix says Made in the UK.",
+  "CD2-2: 'Straßen' was chosen although the cover, Discogs and musik-sammler all print 'Strassen'; this is a spelling issue only.",
+  "CD2-6: musik-sammler lists 'Stieber Twins' instead of Prodigal Sunn and CD1-10 artist 'Nelly'; these are collector-site errors not noted in the conflicts.",
+  "The result's confidence (0.9) differs from the written file (0.93); minor inconsistency."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 24.7,
+  "tokens_in": 46702,
+  "tokens_out": 2615,
+  "cost_usd": 0.23911,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

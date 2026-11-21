@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:49",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5 (barcode match in >=2 sources): NOT MET, the input has no barcode and the release has none (GEMA mark only). Level 4 (no barcode: title, artist, format and a further attribute unambiguous in >=2 sources, and no competing edition with a different tracklist): NOT MET. Discogs search (step 3) returns two editions titled 'Blasmusik Aus Lohnde': Folge 1 (r24165131, 'Musikverein Lohnde 1925 e. V.', MC6109, 10 tracks) and Folge 2 (r24154076, 'Swinging Seelze', MC6116, 10 different tracks, step 6). The Folge 2 cover reads 'Blasorchester des Musikvereins Lohnde' (step 10), so it also fits the input artist. Level 3 (only one source and no competitor, or all competitors share the tracklist): NOT MET, because the competitor has a different tracklist. Level 2 (several editions fit and one has a different tracklist, choice rests on weak signals): MET. The input names neither a part number nor a catalogue number. The choice of Folge 1 rests on the artist credit string plus the missing 'Swinging Seelze' credit, which is a weak signal.",
+   "summary": "The input title fits both Folge 1 and Folge 2 of the series, which have different tracklists, and only the artist credit favours Folge 1.",
+   "evidence": [
+    "tl-discogs search (step 3)",
+    "tl-discogs release 24165131 (step 5)",
+    "tl-discogs release 24154076 (step 6)",
+    "tl-vision of Folge 2 cover (step 10)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5 (>=2 independent sources of the same edition agree on count, order and titles): NOT MET (strict reading). The Discogs tracklist (step 5) and the J-card back read via tl-vision (step 9) agree on 10 tracks in the same order, with only spelling variants such as 'Kein Schöner Land' versus 'Kein schöner Land'. But the J-card image is hosted on the Discogs entry itself, so the Discogs list may have been transcribed from it and independence is doubtful. Level 4 (one complete source of the same edition, confirmed by a second except small explained deviations): MET. Discogs is complete with 10 tracks, and the printed J-card confirms it. The side split of 6 tracks on side 1 and 4 on side 2 is consistent. The label images show 'Folge 1' and 'MC 6109', which ties the J-card to this edition. No durations are available anywhere.",
+   "summary": "The Discogs tracklist is confirmed by the printed J-card back for the same edition, but the confirming image comes from the same Discogs entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image J-card back (step 9)",
+    "tl-vision label images (steps 11, 12)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5 (database + independent primary source of the same edition): NOT MET (strict reading). The J-card and label scans are primary prints, but they were taken from the Discogs release entry, so they are not independent of the database. Level 4 (two independent database entries, or database + specialised collector site): NOT MET. Only Discogs was found, and MusicBrainz, musik-sammler.de, hitparade.ch, Deezer and Last.fm returned nothing (steps 1-4, 14, 15, 22, 23). Level 3 (one good database, or two sources that may have copied from each other, e.g. cover images on the same database entry): MET. The sources are Discogs plus cover images hosted on that same entry.",
+   "summary": "The only database is Discogs, and the supporting cover and label images come from the same Discogs entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image URLs hosted on i.discogs.com",
+    "steps 14, 15, 22, 23 (no other sources)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Ambiguity between Folge 1 (MC6109) and Folge 2 (MC6116): the input gives no part number, and Folge 2 is credited to the 'Blasorchester des Musikvereins Lohnde'. The agent's own status is 'found', not 'ambiguous', although the edition-disambiguation skill says to use 'ambiguous' when the candidates' tracklists differ.",
+  "The release year 1991 is only inferred from the J-card text ('im 67st. Jahr') and the postcode, not printed as a year. The agent flags this itself under 'missing'.",
+  "Release title and artist were changed from the input to 'Blasmusik aus Lohnde (Folge 1)' and 'Musikverein Lohnde 1925 e. V.'. The 'Folge 1' part is supported by the label scans and Discogs.",
+  "All 10 durations are missing, with no source found for any of them.",
+  "The J-card back image (step 9) does not show 'Folge 1' or a catalogue number. Its link to MC 6109 depends on the image being part of the Discogs entry for r24165131."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 23.5,
+  "tokens_in": 37462,
+  "tokens_out": 2844,
+  "cost_usd": 0.10336,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

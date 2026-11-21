@@ -1,0 +1,89 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:57",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Der Input enthält keinen Barcode. MusicBrainz 4867ceba und Discogs 4570366 belegen übereinstimmend die Standard-2×LP (Columbia 88883716861, Barcode 888837168618, 2013), und zahlreiche Repressings/Reissues haben dieselbe Trackliste. Es existieren aber auch Vinyl-Ausgaben mit abweichender Trackliste (Box 2014, 10th Anniversary 3×LP), die zum Input passen würden. Die Wahl der Standardausgabe ist plausibel, aber nicht durch den Input erzwungen.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "tl-mb search",
+    "tl-discogs search"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs stimmen in Anzahl (13), Reihenfolge (A1–D4) und Titeln überein. Es gibt nur Schreibvarianten (Groß-/Kleinschreibung, Apostroph in D3) und Dauerabweichungen von ≤2 s (A1, A2, C2, D4).",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor, erkennbar an abweichenden Details: unterschiedliches Land/Datum, ISRCs bei MusicBrainz, Matrix-Angaben bei Discogs, leicht abweichende Dauern. Eine Primärquelle wie Cover oder Label-Druck wurde nicht ausgewertet.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Land 'DE' stammt nur aus dem MB-Detailabruf. Die MB-Suche nennt für dieselbe Release-ID '2013-05-20 FR', Discogs nennt 'UK, Europe & US'. Diese Inkonsistenz wurde nicht als Konflikt vermerkt.",
+  "Die gewählte Discogs-Release 4570366 (UK/Europe/US) und die MB-Release (DE) sind nicht zwingend dieselbe Pressung. Sie teilen aber Barcode und Kat.-Nr.",
+  "Die Alternative 'Drumless Edition' (discogs:release/28924120) ist in der sichtbaren Evidenz nicht belegt, weil die Suchausgabe gekürzt ist.",
+  "Reissue-Jahr 2022 in der Alternativen-Beschreibung ist in der Evidenz nicht belegt.",
+  "Der Input lässt Spezialausgaben mit abweichender Trackliste zu (10th Anniversary 3×LP, Box 2014). Status 'found' statt 'ambiguous' ist daher eine Annahme."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 16.0,
+  "tokens_in": 18311,
+  "tokens_out": 1646,
+  "cost_usd": 0.10616,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

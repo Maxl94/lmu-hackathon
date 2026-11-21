@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:34",
+ "overall": 3.6,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Ohne Barcode in der Eingabe passen mehrere Kastelruther-Spatzen-Kassetten mit identischer Tracklist: Discogs 2297987, 15349631 und 24889304, alle D 221 190. MusicBrainz e0d210c6 und Discogs 2297987 stimmen in Label, Katalognummer und Jahr überein. Die Wahl innerhalb dieser Kassetten ist daher unerheblich. Allerdings gibt es eine gleichnamige MC-Box (Reader's Digest, Various, 1995, Discogs 8491193) mit anderer Tracklist, die der Agent nicht behandelt hat. Die Zuordnung zu den Kastelruther Spatzen ist plausibel, aber nicht abgesichert. Deshalb Stufe 3.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "tl-discogs search"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (Kassette) und Discogs 2297987 nennen übereinstimmend 12 Titel in gleicher Reihenfolge A1–B6, abgesehen von Schreibvarianten. Die offizielle Bandseite mit MC-Nummer 221190 bestätigt die Liste zusätzlich.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 3,
+   "begruendung": "100% der Tracks mit Dauer, 50% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge mit abweichenden Details vor (MusicBrainz, Discogs mit Notizen zur Kassettenbeschriftung). Die offizielle Künstlerseite mit MC-Nummer wurde zwar abgerufen, aber nicht als Quelle im Ergebnis zitiert. Deezer und Last.fm betreffen nicht die MC-Edition. Deshalb Stufe 4.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Gleichnamige MC-Compilation 'Ich Sag's Dir Mit Musik' (Various, Reader's Digest 1995, Discogs 8491193) mit anderer Tracklist nicht als Alternative geprüft oder ausgeschlossen; die Eingabe enthält keinen Interpreten.",
+  "Weitere MC-Varianten ohne Barcode (Discogs 15349631, 24889304) und die polnische AMA-Kassette (16402359) fehlen in den Alternativen.",
+  "Die Dauerwahl ist inkonsistent: Deezer bestätigt bei fast allen Tracks die Discogs-Werte (z. B. A1 3:22, B1 2:30), übernommen wurden aber die MusicBrainz-Werte. Nur bei A6 wird Deezer als Bestätigung herangezogen.",
+  "Last.fm ist mit der Vinyl-MBID (a1ca35f7) verknüpft und keine unabhängige Quelle für die MC; die Dauerbestätigung für A6 stammt nicht aus der MC-Edition.",
+  "Die offizielle Bandseite (MC-Nummer 221190, Tracklist) wurde abgerufen, aber nicht als Quelle angegeben.",
+  "Der Barcode 9002722211901 ist nicht Teil der Eingabe und stammt aus der Auswahl der Discogs-Variante 2297987."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 18.5,
+  "tokens_in": 21125,
+  "tokens_out": 2058,
+  "cost_usd": 0.12566,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

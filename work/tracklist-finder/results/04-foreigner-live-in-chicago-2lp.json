@@ -1,0 +1,853 @@
+{
+ "input": {
+  "id": "04-foreigner-live-in-chicago-2lp",
+  "title": "LIVE IN CHICAGO (2LP)",
+  "artist": "FOREIGNER",
+  "ean": "4029759205296"
+ },
+ "status": "found",
+ "release": {
+  "title": "Live In Chicago",
+  "artist": "Foreigner",
+  "format": "Vinyl",
+  "country": "Europe",
+  "year": 2025,
+  "label": "earMUSIC / Edel",
+  "catno": "0220529EMU",
+  "barcode": "4029759205296",
+  "edition": "2×LP (180 g), first vinyl release, single LP cover",
+  "ids": {
+   "discogs": "34744227"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Double Vision",
+   "artist": null,
+   "duration_s": 239,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/125387"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/125387"
+     ]
+    },
+    {
+     "name": "Ian McDonald",
+     "role": "producer",
+     "sources": [
+      "genius:song/125387"
+     ]
+    },
+    {
+     "name": "Keith Olsen",
+     "role": "producer",
+     "sources": [
+      "genius:song/125387"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/125387"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Head Games",
+   "artist": null,
+   "duration_s": 339,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343571"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/343571"
+     ]
+    },
+    {
+     "name": "Ian McDonald",
+     "role": "producer",
+     "sources": [
+      "genius:song/343571"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343571"
+     ]
+    },
+    {
+     "name": "Roy Thomas Baker",
+     "role": "producer",
+     "sources": [
+      "genius:song/343571"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Cold As Ice",
+   "artist": null,
+   "duration_s": 344,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/90559"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/90559"
+     ]
+    },
+    {
+     "name": "John Sinclair (Producer)",
+     "role": "producer",
+     "sources": [
+      "genius:song/90559"
+     ]
+    },
+    {
+     "name": "Gary Lyons",
+     "role": "producer",
+     "sources": [
+      "genius:song/90559"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Waiting For A Girl Like You",
+   "artist": null,
+   "duration_s": 360,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/85733"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/85733"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/85733"
+     ]
+    },
+    {
+     "name": "Robert John Lange",
+     "role": "producer",
+     "sources": [
+      "genius:song/85733"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "When It Comes To Love",
+   "artist": null,
+   "duration_s": 240,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Kelly Hansen",
+     "role": "writer",
+     "sources": [
+      "genius:song/343724"
+     ]
+    },
+    {
+     "name": "Marti Frederiksen",
+     "role": "writer",
+     "sources": [
+      "genius:song/343724"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343724"
+     ]
+    },
+    {
+     "name": "Mark Ronson",
+     "role": "producer",
+     "sources": [
+      "genius:song/343724"
+     ]
+    },
+    {
+     "name": "Marti Frederiksen",
+     "role": "producer",
+     "sources": [
+      "genius:song/343724"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Blue Morning, Blue Day",
+   "artist": null,
+   "duration_s": 222,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343521"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/343521"
+     ]
+    },
+    {
+     "name": "Ian McDonald",
+     "role": "producer",
+     "sources": [
+      "genius:song/343521"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343521"
+     ]
+    },
+    {
+     "name": "Keith Olsen",
+     "role": "producer",
+     "sources": [
+      "genius:song/343521"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Dirty White Boy",
+   "artist": null,
+   "duration_s": 291,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/210423"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/210423"
+     ]
+    },
+    {
+     "name": "Ian McDonald",
+     "role": "producer",
+     "sources": [
+      "genius:song/210423"
+     ]
+    },
+    {
+     "name": "Roy Thomas Baker",
+     "role": "producer",
+     "sources": [
+      "genius:song/210423"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/210423"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Starrider",
+   "artist": null,
+   "duration_s": 420,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Al Greenwood",
+     "role": "writer",
+     "sources": [
+      "genius:song/343512"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343512"
+     ]
+    },
+    {
+     "name": "Gary Lyons",
+     "role": "producer",
+     "sources": [
+      "genius:song/343512"
+     ]
+    },
+    {
+     "name": "John Sinclair (Producer)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343512"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C1",
+   "disc": 2,
+   "title": "Feels Like The First Time",
+   "artist": null,
+   "duration_s": 288,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343510"
+     ]
+    },
+    {
+     "name": "John Sinclair (Producer)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343510"
+     ]
+    },
+    {
+     "name": "Gary Lyons",
+     "role": "producer",
+     "sources": [
+      "genius:song/343510"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C2",
+   "disc": 2,
+   "title": "Urgent",
+   "artist": null,
+   "duration_s": 453,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343594"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343594"
+     ]
+    },
+    {
+     "name": "Robert John Lange",
+     "role": "producer",
+     "sources": [
+      "genius:song/343594"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C3",
+   "disc": 2,
+   "title": "I Want To Know What Love Is",
+   "artist": null,
+   "duration_s": 470,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343612"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343612"
+     ]
+    },
+    {
+     "name": "Alex Sadkin",
+     "role": "producer",
+     "sources": [
+      "genius:song/343612"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D1",
+   "disc": 2,
+   "title": "Hot Blooded",
+   "artist": null,
+   "duration_s": 359,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/343516"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/343516"
+     ]
+    },
+    {
+     "name": "Ian McDonald",
+     "role": "producer",
+     "sources": [
+      "genius:song/343516"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/343516"
+     ]
+    },
+    {
+     "name": "Keith Olsen",
+     "role": "producer",
+     "sources": [
+      "genius:song/343516"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D2",
+   "disc": 2,
+   "title": "Juke Box Hero",
+   "artist": null,
+   "duration_s": 671,
+   "sources": [
+    "discogs:release/34744227",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "writer",
+     "sources": [
+      "genius:song/90561"
+     ]
+    },
+    {
+     "name": "Lou Gramm",
+     "role": "writer",
+     "sources": [
+      "genius:song/90561"
+     ]
+    },
+    {
+     "name": "Mick Jones (Foreigner)",
+     "role": "producer",
+     "sources": [
+      "genius:song/90561"
+     ]
+    },
+    {
+     "name": "Robert John Lange",
+     "role": "producer",
+     "sources": [
+      "genius:song/90561"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Foreigner",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/34744227",
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459"
+   ]
+  }
+ ],
+ "total_duration_s": 4696,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/34744227",
+   "url": "https://www.discogs.com/release/34744227-Foreigner-Live-In-Chicago",
+   "kind": "database",
+   "note": "Exact barcode 4029759205296, 2×LP, Ear Music 0220529EMU, 2025-04-11; tracklist with side positions, no durations"
+  },
+  {
+   "id": "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+   "url": "https://musicbrainz.org/release/13ed9b61-194b-4133-81a3-703edec19459",
+   "kind": "database",
+   "note": "CD edition, barcode 4029759205289, earMUSIC 0220528EMU, 13 tracks with ms durations – used for durations"
+  },
+  {
+   "id": "discogs:release/33766896",
+   "url": "https://www.discogs.com/release/33766896-Foreigner-Live-In-Chicago",
+   "kind": "database",
+   "note": "CD edition, barcode 4029759205289, durations confirm the MusicBrainz CD timings (±1 s)"
+  },
+  {
+   "id": "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg",
+   "url": "https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg",
+   "kind": "image",
+   "note": "Back cover of the 2025 programme: printed title, 13 track titles in printed capitalisation, no durations printed"
+  },
+  {
+   "id": "web:https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de",
+   "url": "https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de",
+   "kind": "shop",
+   "note": "Shop listing for earMUSIC 0220529EMU 2LP with same 13-track programme (numbering A1–A8/B1–B5, simplified)"
+  },
+  {
+   "id": "web:https://www.emp.de/p/live-in-chicago/583437.html",
+   "url": "https://www.emp.de/p/live-in-chicago/583437.html",
+   "kind": "shop",
+   "note": "Shop listing, 2LP, same programme, sequentially numbered, 'LP 1'"
+  },
+  {
+   "id": "itunes:album/1797510964",
+   "url": "https://music.apple.com/de/album/live-in-chicago/1797510964",
+   "kind": "streaming",
+   "note": "Digital edition durations (hint only): identical to CD except track 1 3:49"
+  },
+  {
+   "id": "genius:song/125387",
+   "url": "https://genius.com/Foreigner-double-vision-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343571",
+   "url": "https://genius.com/Foreigner-head-games-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/90559",
+   "url": "https://genius.com/Foreigner-cold-as-ice-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/85733",
+   "url": "https://genius.com/Foreigner-waiting-for-a-girl-like-you-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343724",
+   "url": "https://genius.com/Foreigner-when-it-comes-to-love-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343521",
+   "url": "https://genius.com/Foreigner-blue-morning-blue-day-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/210423",
+   "url": "https://genius.com/Foreigner-dirty-white-boy-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343512",
+   "url": "https://genius.com/Foreigner-starrider-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343510",
+   "url": "https://genius.com/Foreigner-feels-like-the-first-time-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343594",
+   "url": "https://genius.com/Foreigner-urgent-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343612",
+   "url": "https://genius.com/Foreigner-i-want-to-know-what-love-is-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/343516",
+   "url": "https://genius.com/Foreigner-hot-blooded-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/90561",
+   "url": "https://genius.com/Foreigner-juke-box-hero-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "positions (side split)",
+   "values": {
+    "discogs:release/34744227": "4 sides: A1–A4, B1–B4, C1–C3, D1–D2",
+    "web:https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de": "continuous numbering A1–A8, B1–B5",
+    "web:https://www.emp.de/p/live-in-chicago/583437.html": "continuous numbering 1–13"
+   },
+   "resolution": "Followed Discogs' four-side split, which matches a 2×LP and the side timings (~17–21 min per side); shop listings number the programme continuously and are not reliable for side positions."
+  },
+  {
+   "field": "duration track 1 (Double Vision, other editions)",
+   "values": {
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459": "3:59 (238.840 s, CD)",
+    "discogs:release/33766896": "3:58 (238 s, CD)",
+    "itunes:album/1797510964": "3:49 (229.155 s, digital)"
+   },
+   "resolution": "Both CD sources agree on ~238 s for the CD edition; used 239 s for the vinyl entry. Digital edition (and MusicBrainz digital release) is ~10 s shorter on track 1 – the vinyl-specific timing is unknown, so this remains unresolved."
+  }
+ ],
+ "missing": [
+  "No durations are published for the 2×LP edition itself (Discogs vinyl entry has none; the vinyl is not in MusicBrainz). All durations come from the 2025 CD edition (musicbrainz:release/13ed9b61, discogs:release/33766896) and are flagged duration_other_edition.",
+  "Vinyl-specific timing of track A1 could not be verified: CD editions list 3:58/3:59, the digital edition 3:49.",
+  "No MusicBrainz entry exists for the vinyl edition (only the CD and digital editions of release group 89af84e1-6dd2-4f56-82aa-695950463e94)."
+ ],
+ "alternatives": [
+  {
+   "description": "CD, earMUSIC/Edel 0220528EMU, Europe 2025-04-11, 13 tracks, barcode 4029759205289",
+   "source": "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+   "why_not": "CD jewel case, different barcode and catalogue number"
+  },
+  {
+   "description": "Digital Media, earMUSIC, 2025-04-11, 13 tracks, barcode 4029759205272",
+   "source": "musicbrainz:release/0db824ee-9259-4c64-be7f-25130beba083",
+   "why_not": "digital edition, no physical carrier"
+  },
+  {
+   "description": "CD, Ear Music 0220528EMU, Europe 2025, 13 tracks, barcode 4029759205289",
+   "source": "discogs:release/33766896",
+   "why_not": "CD edition, different barcode"
+  },
+  {
+   "description": "Blu-ray (Ear Music 0208091ERE, Europe 2012) and DVD (0208090ERE) of the same 2011 concert",
+   "source": "discogs:release/7014376",
+   "why_not": "other formats (video), different barcode and year"
+  }
+ ],
+ "reasoning": "The barcode 4029759205296 resolves uniquely to the 2025 European 2×LP reissue on earMUSIC/Edel (Discogs release 34744227, catno 0220529EMU), which is the only physical carrier with this EAN; the title's '(2LP)' and the catalogue number confirm it against shop listings for 0220529EMU. The 13 titles and their order agree between the Discogs vinyl entry, the printed back cover of the same 2025 programme (CD back cover read as image) and the CD/digital editions. Because no durations exist for the vinyl, the CD edition's millisecond timings were adopted (two CD sources agree within 1 s) and each track is flagged duration_other_edition. Track 1 differs by ~10 s between CD and digital editions, which is documented as a conflict and in missing. Single-artist release: Foreigner is the only credited artist."
+}

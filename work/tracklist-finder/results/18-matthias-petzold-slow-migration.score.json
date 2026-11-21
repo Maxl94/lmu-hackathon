@@ -1,0 +1,120 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:29",
+ "overall": 3.7,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode required by input - input has no barcode, NOT MET. Level 4: no barcode; title, artist, format CD match and further attributes (label Indigo Records 1015 CD, year 2026) are unambiguous in the artist site and Bandcamp/cover read (>=2 sources); but no other edition fitting the input is known with different tracklist - the Bandcamp digital album is a digital edition and excluded by the physical-before-digital rule; however the Bandcamp CD listing 'Compact Disc (CD) + Digitales Album' shares the same 9 tracks. Level 4 conditions appear MET; the label/catno agreement across petzold-jazz.de and the cover scan supports this. Rating 4 is defensible, though the cover scan and artist site are the same source family for catno, and no independent database confirms the release (MB/Discogs 0 hits).",
+   "summary": "No barcode in the input and no database entry exists, but title, artist, CD format, label/catno and year agree across the artist site, Bandcamp CD listing and the back-cover scan, with only digital (excluded) competing tracklist differences.",
+   "evidence": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "image:https://f4.bcbits.com/img/0048343178_5.jpg",
+    "tl-mb search 0 Releases",
+    "tl-discogs search 0 hits"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - track 2 spelling differs (Tortues vs Turtues) and track 9 title 'Epilog: Three Kings' vs 'Three Kings' on Bandcamp digital (digital excluded). Count 9 and order agree across artist site, cover scans (two reads) and Bandcamp; titles agree apart from spelling. Level 5 requires full agreement; the cover scan is one image source read twice, and track 9 printed text was not verified on the cover (image budget exhausted). Level 5 NOT clearly MET. Level 4: one complete source (artist site CD tracklist) confirmed by a second (cover scan) except small explained deviations (spelling of track 2, track 9 'Epilog:' prefix) - MET. Rating 4.",
+   "summary": "Nine tracks in the same order are confirmed by the artist site and cover scan, with explained small deviations in spelling of track 2 and the track 9 title, but track 9 was not verified on the cover.",
+   "evidence": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "image:https://f4.bcbits.com/img/0048343178_5.jpg",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 78% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 78% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 2,
+   "check": "Level 5: database + independent primary source of the same edition - primary source (cover scan, label print read via vision) is present, but no database entry (MB/Discogs 0 hits) exists for the CD edition; the artist site is not a database. Level 5 requires a database, NOT MET. Level 4: two independent database entries or database + specialised collector site - NOT MET (no database entries for this release). Level 3: one good database - NOT MET. Level 2: only collector, shop or marketplace pages - the artist site is a label/artist shop page and Bandcamp is a marketplace; cover scan is an image source. Best fit: artist shop/marketplace pages plus one image scan, which is at least Level 2; the image read is a primary source but is read via AI vision and not a database. Rating 2.",
+   "summary": "The release is documented only by the artist's own shop/Bandcamp pages and AI-read cover images, with no database entry in MusicBrainz or Discogs.",
+   "evidence": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "tl-mb search 0 Releases",
+    "tl-discogs search 0 hits"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 2 title spelling: cover scan reads 'La Migration Des Turtues' while artist site and Bandcamp read 'des Tortues'; the agent chose the cover spelling without a second independent confirmation of the printed text (the second scan reading is from the same image source family).",
+  "Track 9 printed title and duration were not verified on the cover image (agent states image budget exhausted); 'Epilog: Three Kings' rests only on the artist site.",
+  "Durations for tracks 6 and 8 differ between artist site CD listing (5:41, 5:26) and Bandcamp digital (5:44, 5:56); the cover scan reads 5:41 and 5:26, which supports the CD values, but track 8 Bandcamp difference of 30 s is unexplained.",
+  "Result claims 'CD durations from the artist site' and 'confirmed by Bandcamp CD listing', but the Bandcamp CD listing shows digital durations; the Bandcamp CD confirmation of physical format is only a product listing.",
+  "Durations in the result total 3291 s; sum of artist site durations 305+353+426+366+396+341+447+326+331 = 3291 is consistent, but the FACTS track durations 353 for track 2 (5:53) match cover, fine.",
+  "Catalogue number '1015 CD' (artist site) vs '1015CD' / 'LC-0576' (cover read): LC code is not reflected in the result and not cross-checked against any database.",
+  "Bandcamp listing track 9 duration is not shown in the excerpt; agent's claim that Bandcamp lists 'Three Kings' is partly truncated in the evidence."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 9,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.778,
+  "dur_conflicts": 2,
+  "source_families": [
+   "image",
+   "matthiaspetzold.bandcamp.com",
+   "petzold-jazz.de"
+  ],
+  "source_kinds": [
+   "image",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 4,
+  "alternatives": 1,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.8,
+  "tokens_in": 22623,
+  "tokens_out": 1981,
+  "cost_usd": 0.00325,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 4,
+  "credits": {
+   "tracks": 9,
+   "of": 9
+  }
+ }
+}

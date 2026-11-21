@@ -1,0 +1,124 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:19",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5: barcode INPUT present, but only one database (iTunes, digital) and the Amazon/jpc/Thalia pages show EAN 4099964172904 — shop pages count as sources of barcode match; Discogs barcode search returned 0 hits and Discogs entry lists a different barcode (4099964124866, other catno) for a 2024 edition. Barcode match in >=2 sources is only partly met (jpc.de and amazon.de list 4099964172904 and Thalia shows the EAN). Independent database confirming the barcode is missing -> NOT MET. 4: barcode match in only one source? Multiple shop pages confirm EAN; but the database match is iTunes (digital) and the physical CD match rests on shops. Level 4 MET: barcode match in at least one source with format CD and artist consistent. Competing editions: Discogs 2024 release (barcode 4099964124866, CD, 2×CD) has a different barcode and possibly different tracklist, and iTunes 2026 edition is a different year; the 2024 Discogs release has no tracklist durations and is a different barcode so it is not an exact barcode competitor, yet the title-matching edition is a different catalogue entry. Result is a CD 2×, EAN match in shops; choice rests on shop evidence.",
+   "summary": "Barcode 4099964172904 is matched by several shop pages (jpc, Amazon, Thalia) for a 2×CD in the right format and artist, but no independent database confirms the EAN, and a Discogs 2024 edition with a different barcode competes.",
+   "evidence": [
+    "web:jpc.de hnum/12285766 (UPC/EAN 4099964172904, 2 CDs)",
+    "web:amazon.de B0F81H8VC3 (Herstellerreferenz 4099964172904)",
+    "web:thalia.de A1075332387 (EAN 4099964172904, CD, 2)",
+    "bin/tl-mb search --barcode: 0 releases",
+    "bin/tl-discogs search --barcode: 0 hits",
+    "discogs:release/33835569 barcode 4099964124866"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: NOT MET (no two independent sources agree on full count, order, titles; itunes album 1824661315 and jpc.de agree on the 20+20 structure, Amazon lists the same titles, but the Discogs release is a different 2024 edition with different titles). 4: One complete source confirmed by a second except explained deviations: jpc.de (40 tracks, disc 1 and 2) and itunes album 1824661315 (40 tracks) agree on count and most titles; Amazon list also matches titles for disc 2 (positions 6-20 shown). Deviations: itunes lists 1.5 as 'Schau mal herein (Duett mit Linda Fäh) [Remix]' vs jpc 'Schau mal herein (Remix)'; itunes 1.13 missing in the output, and itunes has 1.13 absent in the grep; jpc 2.18 'Die Wolkenstürmer' vs iTunes; durations and artists differ slightly. Count 40 confirmed by jpc and itunes. Level 4 MET with explained spelling/variant deviations.",
+   "summary": "Two sources (jpc.de and iTunes album 1824661315) give 40 tracks with mostly matching titles and only spelling/version deviations, though not fully verified track by track.",
+   "evidence": [
+    "web:jpc.de hnum/12285766 tracklist disc 1 and 2",
+    "itunes:album/1824661315 (40 Tracks)",
+    "web:amazon.de B0F81H8VC3 disc 2 list positions 6-20"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "4: database + specialised collector site: MET partially (iTunes database, Discogs database for a different edition). Two independent database entries with differing details: iTunes album and Discogs release 33835569 differ (different barcode, year 2024, different title). But the Discogs entry is a different edition, so it does not confirm this edition. Database + shop: jpc.de and Amazon are shops. Level 4 conditions met via two database entries (iTunes digital, Discogs for related 2024 edition) with differing details, but they describe different editions.",
+   "summary": "The main confirming database is iTunes (digital), while Discogs is a different 2024 edition, and the shop pages are the only physical-CD sources, so sources are one good database plus shops.",
+   "evidence": [
+    "itunes:album/1824661315",
+    "discogs:release/33835569",
+    "web:jpc.de",
+    "web:amazon.de"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs 2024 release 33835569 (barcode 4099964124866, 2xCD) is a different edition and its tracklist was not compared against the 40-track result.",
+  "iTunes album 1824661315 is a digital catalogue entry; not a physical confirmation of the CD.",
+  "Track 1.13 of iTunes album is missing in tl-itunes output; the agent's disc 1 pos 13 'Noch immer dieselben (Radio Version)' is taken from a separate single (itunes:album/1771866855) not from the album.",
+  "Track 2.7 and 1.13 in agent result use single-release data (itunes 1771866855, 1758954473, 1794624460), which is an edition-level mixing of sources.",
+  "Result artist entries in the artists array (e.g., 'Thomas Anders' with track 1.1) are per-track artists in the agent's list, which are inconsistent with the track table where artists are listed as combined (e.g., 'Thomas Anders, Florian Silbereisen & Barbara Schöneberger').",
+  "Result lists edition '2×CD, Sommer Edition' and year 2025 while jpc.de shows Erscheinungstermin 13.3.2020 — date inconsistency unaddressed.",
+  "Amazon 'Laufzeit 0 Minute' and missing durations on Discogs mean durations are not independently verified."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 99,
+  "dur_other_edition": 40,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "amazon.de",
+   "discogs",
+   "genius",
+   "itunes",
+   "jpc.de",
+   "thalia.de"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.82,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 10.3,
+  "tokens_in": 28630,
+  "tokens_out": 1966,
+  "cost_usd": 0.00385,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 12,
+   "of": 40
+  }
+ }
+}

@@ -1,0 +1,1 @@
+{"ts": "2026-11-20T15:52:11", "tool": "tl-vision", "model": "gemini-3.8-flash@low", "input_tokens": 1313, "output_tokens": 141, "cache_read_input_tokens": 0, "cost_usd": 0.00166, "seconds": 7.8, "fallback_from": null, "image": "/tmp/opencode/p3.png"}

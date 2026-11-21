@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:38",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: The INPUT contains a barcode (NOT MET - input only has title and format). 4: Title, artist, format and at least one further attribute unambiguous, and no other edition fitting the input has a different tracklist (NOT MET - Sean Kingston's album 'King of Kingz' and Bushido's 2004 'Exclusive' CD edition fit the input and have different tracklists). 3: All editions fit share the same tracklist (NOT MET - track counts differ with 13, 16, and 20 tracks). 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist; the choice rests on weak signals (MET - tool call 2 shows multiple differing editions, and the choice for the 2003 16-track CD relies on the German GEMA context).",
+   "summary": "Since the input lacks an artist and barcode, multiple albums with the same title and format but different tracklists fit, making the choice reliant on probability.",
+   "evidence": [
+    "2"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (MET - MusicBrainz release c3466232-6040-4dfb-9490-f2b8077dc53a, Discogs release 769288, and Musik-Sammler release 140817 all agree on the 16 tracks, order, and titles as shown in tool calls 4, 5, and 10).",
+   "summary": "Three independent sources for the same edition agree on the complete tracklist.",
+   "evidence": [
+    "4",
+    "5",
+    "10"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source (NOT MET - no cover/label print text was extracted or read). 4: Two independent database entries or database + specialised collector site (MET - MusicBrainz and Discogs serve as independent databases, and Musik-Sammler is a specialised collector site; tool calls 4, 5, 10).",
+   "summary": "The research relies on two major independent databases (MusicBrainz, Discogs) and a specialised collector site (Musik-Sammler).",
+   "evidence": [
+    "4",
+    "5",
+    "10"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The result misses the required 'artists' list field inside the release object, which triggered a validation error."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 24.2,
+  "tokens_in": 21598,
+  "tokens_out": 3376,
+  "cost_usd": 0.08371,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

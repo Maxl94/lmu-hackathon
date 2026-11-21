@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:52",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5 conditions: (a) The input barcode, after check-digit correction, matches exactly this edition in at least 2 independent sources. MET: tl-gtin showed 888837168626 is invalid and corrects to 888837168625. The MusicBrainz release f6758afb (step 6) and Discogs 4729785 (step 7) both carry 888837168625, and the CAA back cover (step 9) prints 8 8883-71686-2 5. (b) Format and artist match. MET: CD and Daft Punk, with title similarity 100. (c) No other edition with the same barcode has a different tracklist. MET as far as the evidence shows: the MB US release a8308466 (step 10) has an identical 13-track list, and the other MB hits (AU, CA, BR) and Discogs hits share the barcode, with no differing tracklist found. The Discogs Cassette hit is a different format and the Japan CD has a different barcode. The input barcode was invalid, but the corrected one fits title, artist and format, and the note says it was probably mistyped. Result: level 5.",
+   "summary": "The check-digit-corrected barcode 888837168625 matches the chosen CD edition in both MusicBrainz and Discogs, and no same-barcode edition with a different tracklist appears.",
+   "evidence": [
+    "tl-gtin 888837168626",
+    "tl-mb release f6758afb",
+    "tl-discogs release 4729785",
+    "tl-vision CAA back cover",
+    "tl-mb release a8308466"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: at least 2 independent sources of the same edition agree on count, order and titles. MET: MusicBrainz f6758afb (step 6) and Discogs 4729785 (step 7) both list 13 tracks in the same order with the same titles, differing only in capitalisation and apostrophe. The CAA back cover (step 9) also shows 13 titles in the same order. The only deviation is the duration of track 13 (384 s vs 381 s), which is a duration conflict, not a conflict in count, order or titles. Result: level 5.",
+   "summary": "MusicBrainz, Discogs and the printed back cover agree on 13 tracks in identical order and titles.",
+   "evidence": [
+    "tl-mb release f6758afb",
+    "tl-discogs release 4729785",
+    "tl-vision CAA back cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database plus an independent primary source of the same edition. MET: MusicBrainz and Discogs are two databases with differing details (Discogs gives LC 00162, matrix and SID codes; MusicBrainz gives ISRCs and CD-TOC milliseconds). The back cover of the same release was read via vision (step 9) and shows titles, catalogue number, barcode, 'Made in the EU' and LC 00162, which counts as a primary source. A caveat is that the image is hosted on the MusicBrainz entry, but the print itself is independent of the database data. Result: level 5.",
+   "summary": "Two independent databases plus a read primary source (back cover print) support the same edition.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:coverartarchive.org/.../5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 13 'Contact': MusicBrainz says 384 s and Discogs says 381 s. The claim that Discogs' 6:21 is 'probably the digital/streaming version' is unsupported by any evidence.",
+  "The resolution calls the MB DE and US durations 'two independent pressings', but they probably come from the same CD-TOC data and are not independent confirmation.",
+  "The tracklists of the other same-barcode pressings (Korea limited editions, Russia unofficial, Mexico, Colombia, Argentina) were not checked. Identical tracklists are assumed except for the US release.",
+  "The result picks the DE/EU pressing arbitrarily among many same-barcode pressings, but this does not affect the tracklist."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 22.9,
+  "tokens_in": 28841,
+  "tokens_out": 2464,
+  "cost_usd": 0.08232,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:30",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: Input contains a barcode and matches >= 2 independent sources - NOT MET (input has no barcode). Level 4: Without barcode, title, artist, format and >= 1 further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist - NOT MET (while no fitting edition has a different tracklist, the input only specifies title, artist, and format Kassette, which fits 6 distinct cassette editions/repressings from 2001 to 2003 in Discogs master 211928 — 1951581, 18354001, 18354166, 18354289, 17280904, 4256710 — plus 2001/2003 tapes on musik-sammler.de; thus the specific 2001 1st edition is not unambiguous from the input, and cat. no. also varies across MusicBrainz ILM 003, Discogs 03, and J-card spine ILM1). Level 3: Several editions fit but ALL share the same tracklist (e.g. repressings, country editions): the choice does not matter - MET (tl-discogs versions 211928 and tl-discogs release calls 1951581, 18354001, 18354166, 18354289, 17280904, 4256710 confirm all 6 cassette pressings share the exact same 16 tracks and 2979 s total duration, matching musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/).",
+   "summary": "Six cassette pressings (2001–2003) fit the input without barcode or year, but all of them share the exact same 16-track tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) - MET (musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, discogs:release/1951581, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ all agree on 16 tracks A1–B8 and identical durations totaling 2979 s, with only minor spelling/casing variants at A2 King Of Kingz/King of KingZ, A6 Nutte Bounce/Nute Bounce, A8 MittelfingAH/Mittelfingah, B3 Pit Bull/Pitbull, B6 Hast Du Mut?/Hast du Mut, B8 Vack You/Vack You!, and feature alias Baktus & Orgasmus on musik-sammler for Bass Sultan Hengzt & King Orgasmus One at A8).",
+   "summary": "MusicBrainz, Discogs, and musik-sammler.de independently agree on all 16 tracks, their order, and durations with only minor spelling variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition - NOT MET (tl-vision on the 3 inspected Discogs images read 0 tracks because no tracklist is printed on the J-card outside or cassette labels, and the remaining two secondary Discogs images were not inspected). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de) - MET (musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf and discogs:release/1951581 differ in cat. no. ILM 003 vs 03, track title spellings, and featured artist fields, and are further backed by collector site web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ which uses feature alias Baktus & Orgasmus).",
+   "summary": "The tracklist is backed by two independent database entries (MusicBrainz and Discogs with differing metadata details) plus the collector site musik-sammler.de.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error in FACTS: top-level artists field is missing/empty despite main artist Bushido and featured artists on A3, A8, B1, B4, B5, and B8 (Kam One, Joka, Bass Sultan Hengzt, King Orgasmus One, Roulette, Frank White, D-Bo).",
+  "Catalog number discrepancy not recorded in conflicts: release.catno is set to ILM 003 (from musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf), whereas discogs:release/1951581 lists 03 and tl-vision on the J-card spine reads ILM1 (flap: I Luv Money Records 2001/03).",
+  "Two secondary images from discogs:release/1951581 (RYc3DkCL4OKZxfAmyKzOV71J-Y-NyQuuZx4MxtdVz24 and IU2kjKzgf_-b9WNyMIiqbQu-3YLbUyB-ZMeVvGK4Bqs, 202x600 aspect ratio possibly showing the J-card inside) were not checked with tl-vision."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 55.5,
+  "tokens_in": 25169,
+  "tokens_out": 10949,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

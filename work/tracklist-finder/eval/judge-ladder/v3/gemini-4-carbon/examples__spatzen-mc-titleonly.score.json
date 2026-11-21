@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:10",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains barcode — NOT MET (FACTS: input_has_barcode=false; input only has title and format). Level 4: without barcode: title, artist, format and >=1 further attribute unambiguous in >=2 sources, AND no other edition fitting the input has a different tracklist — NOT MET (input omits artist; Discogs search in tool call 1 and details in tool call 8 show other MC releases with the exact title 'Ich Sag's Dir Mit Musik', e.g. discogs:release/8491193 by Various, 5xMC box set 1995 with completely different tracklist, and discogs:release/7800803 by Various, 1xMC compilation on Karussell). Level 3: Unambiguous backed by one source (no competing edition known) OR several editions fit but ALL share the same tracklist — NOT MET (competing Various Artists MC editions fit the title+format input and have different tracklists). Level 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist (other artist with the same title); the choice rests on weak signals — MET (without artist or barcode in the input, both Kastelruther Spatzen MC pressings and Various Artists MC compilations like discogs:release/8491193 fit the input; choosing Kastelruther Spatzen as the sole artist album vs. compilation, and relying on an out-of-input task ID 'spatzen-mc-titleonly', is a weak signal).",
+   "summary": "Because the input specifies only title and format (MC), competing Various Artists cassette releases with the exact same title and completely different tracklists also fit the input.",
+   "evidence": [
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) — MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 in tool call 4, discogs:release/2297987 in tool call 5, and the J-card scans read via tl-vision in tool calls 11, 28, and 30 all confirm 12 tracks A1–B6 in identical order and with identical titles apart from minor capitalization/hyphenation variants like 'Sarner-Welle Lied' vs 'Sarner-Welle-Lied').",
+   "summary": "MusicBrainz, Discogs, and two primary J-card images of the chosen cassette edition all agree on the 12 tracks, their A1–B6 order, and titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition — MET (independent database entries musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 are combined with primary J-card back and inner scans read via tl-vision in tool calls 11, 28, and 30 showing printed tracklist, durations, catno D 221 190, and barcode 9002722211901).",
+   "summary": "The edition is backed by two independent databases (MusicBrainz and Discogs) plus readable scans of the physical cassette J-card (inner and back panels) providing primary printed evidence.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "During research (steps 2–4), the agent relied on an internal benchmark/file identifier ('spatzen-mc-titleonly') not present in the actual INPUT fields to disambiguate Kastelruther Spatzen from competing Various Artists MC releases (discogs:release/8491193, discogs:release/7800803).",
+  "Even within Kastelruther Spatzen's album, choosing the barcoded pressing (discogs:release/2297987) over the non-barcoded 1985 Koch MC pressings (discogs:release/15349631, discogs:release/24889304) or Polish MC (discogs:release/16402359) is arbitrary given the input, though those share the same tracklist.",
+  "For tracks A3, A5, B1, B2, B3, B4, B5, and B6, the agent selected the MusicBrainz durations (e.g., B4 = 138s, B5 = 187s) over the printed J-card durations read from image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/... (e.g., B4 = 2'16'' / 136s, B5 = 3'05'' / 185s, which also match Discogs and Deezer), while conversely preferring the printed J-card duration over MusicBrainz on track A1 (202s vs 199s)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 20.3,
+  "tokens_in": 37746,
+  "tokens_out": 2018,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

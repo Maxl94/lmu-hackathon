@@ -1,0 +1,90 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:39:48",
+ "overall": 1.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "not found",
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 1",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "not found - nothing to rate",
+   "summary": "not found",
+   "evidence": [],
+   "by": "code"
+  },
+  "tracklist": {
+   "rating": 1,
+   "check": "not found - nothing to rate",
+   "summary": "not found",
+   "evidence": [],
+   "by": "code"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "no tracks",
+   "summary": "no tracks",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 1,
+   "check": "not found - nothing to rate",
+   "summary": "not found",
+   "evidence": [],
+   "by": "code"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "not_found",
+  "tracks": 0,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": null,
+  "artist_similarity": null,
+  "title_similarity": null,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "amazon.de",
+   "discogs",
+   "ebay.de",
+   "hitparade.ch",
+   "musicbrainz",
+   "musik-sammler.de",
+   "youtube"
+  ],
+  "source_kinds": [
+   "charts",
+   "collector",
+   "database",
+   "marketplace",
+   "shop",
+   "web"
+  ],
+  "conflicts": 0,
+  "alternatives": 3,
+  "agent_confidence": 0.0,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {},
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

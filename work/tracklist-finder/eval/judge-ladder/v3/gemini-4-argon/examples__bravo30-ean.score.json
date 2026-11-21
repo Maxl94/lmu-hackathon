@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:51",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains barcode (731456031125) -> MET. Matches exactly this edition in >= 2 independent sources -> MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 with 0731456031125, discogs:release/1949898 with 731456031125, image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg, and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/). Format (CD) and title (Bravo Hits 30) match -> MET. No other edition with the same barcode and a different tracklist -> MET (other Discogs entries with the same barcode are pressing variants with identical tracklists, e.g., discogs:release/23145932). All conditions for Level 5 are MET.",
+   "summary": "The barcode 731456031125 matches the 2-CD compilation Bravo Hits 30 across MusicBrainz, Discogs, the back cover scan, and musik-sammler.de with no competing tracklist variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "discogs:release/23145932",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count (40 tracks across 2 CDs), order and titles (only minor spelling/version subtitle variants) -> MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941, discogs:release/1949898, image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg, and web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/). All conditions for Level 5 are MET.",
+   "summary": "MusicBrainz, Discogs, the back cover image, and musik-sammler.de all agree on the 40-track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print) of the same edition -> MET (databases MusicBrainz and Discogs + back cover image read via tl-vision in tool call 8, plus collector site musik-sammler.de). All conditions for Level 5 are MET.",
+   "summary": "The research combines two independent databases (MusicBrainz, Discogs), a collector site (musik-sammler.de), and a primary source (back cover image read via vision).",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error from FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "In alternatives, discogs:release/26676554 is claimed to have 'keine abweichende Trackliste', which is plausible as a pressing variant under the same master release, though its full release details were not explicitly fetched via tl-discogs release."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 29.7,
+  "tokens_in": 41662,
+  "tokens_out": 1435,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

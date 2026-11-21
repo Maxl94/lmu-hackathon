@@ -1,0 +1,1972 @@
+{
+ "input": {
+  "id": "05-casper-live-in-bielefeld",
+  "title": "Live in Bielefeld",
+  "artist": "Casper",
+  "ean": "4251484708203"
+ },
+ "status": "found",
+ "release": {
+  "title": "Live in Bielefeld",
+  "artist": "Casper",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2024,
+  "label": "Eklat Tonträger",
+  "catno": "4251484708203",
+  "barcode": "4251484708203",
+  "edition": "3×12\" Vinyl",
+  "ids": {
+   "musicbrainz": "ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+   "discogs": "32548602"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Intro",
+   "artist": null,
+   "duration_s": 96,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/433789"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Alles war schön und nichts tat weh",
+   "artist": null,
+   "duration_s": 274,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Max Richard Leßmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Olson",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Sam Vance-Law",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Ralph Heidel",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Nikolai Potthoff",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "writer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Nikolai Potthoff",
+     "role": "producer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "producer",
+     "sources": [
+      "genius:song/7193296"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Im Aschregen",
+   "artist": null,
+   "duration_s": 271,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    },
+    {
+     "name": "Stickle",
+     "role": "writer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/198885"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Alles endet (Aber nie die Musik)",
+   "artist": null,
+   "duration_s": 239,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/225339"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/225339"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/225339"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/225339"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/225339"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A5",
+   "disc": 1,
+   "title": "Wolken / Mieses Leben",
+   "artist": null,
+   "duration_s": 195,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Adrenalin Intro",
+   "artist": null,
+   "duration_s": 53,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983912"
+     ]
+    },
+    {
+     "name": "Noah Fürbringer",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983912"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/10983912"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Adrenalin",
+   "artist": null,
+   "duration_s": 157,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "Marteria",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "Dirk Berger",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/10983913"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Sirenen",
+   "artist": null,
+   "duration_s": 231,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/3190889"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/3190889"
+     ]
+    },
+    {
+     "name": "Tom Schley",
+     "role": "writer",
+     "sources": [
+      "genius:song/3190889"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/3190889"
+     ]
+    },
+    {
+     "name": "Tom Schley",
+     "role": "producer",
+     "sources": [
+      "genius:song/3190889"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Sowas von da (hellwach)",
+   "artist": null,
+   "duration_s": 202,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "nilly",
+     "role": "writer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "Tom Thaler",
+     "role": "writer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "Hardy X",
+     "role": "writer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "T0BITURNUP",
+     "role": "writer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "nilly",
+     "role": "producer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    },
+    {
+     "name": "T0BITURNUP",
+     "role": "producer",
+     "sources": [
+      "genius:song/9652033"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B5",
+   "disc": 1,
+   "title": "Keine Angst",
+   "artist": null,
+   "duration_s": 354,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/2876780"
+     ]
+    },
+    {
+     "name": "Drangsal",
+     "role": "writer",
+     "sources": [
+      "genius:song/2876780"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/2876780"
+     ]
+    },
+    {
+     "name": "Tom Schley",
+     "role": "writer",
+     "sources": [
+      "genius:song/2876780"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/2876780"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C1",
+   "disc": 2,
+   "title": "Emma",
+   "artist": null,
+   "duration_s": 302,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/9228441"
+     ]
+    },
+    {
+     "name": "Tom Thaler",
+     "role": "writer",
+     "sources": [
+      "genius:song/9228441"
+     ]
+    },
+    {
+     "name": "Hardy X",
+     "role": "writer",
+     "sources": [
+      "genius:song/9228441"
+     ]
+    },
+    {
+     "name": "Flo August",
+     "role": "writer",
+     "sources": [
+      "genius:song/9228441"
+     ]
+    },
+    {
+     "name": "Flo August",
+     "role": "producer",
+     "sources": [
+      "genius:song/9228441"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C2",
+   "disc": 2,
+   "title": "20qm",
+   "artist": null,
+   "duration_s": 256,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Jan Korbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Konrad Betcher",
+     "role": "writer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/226147"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C3",
+   "disc": 2,
+   "title": "Supernova",
+   "artist": null,
+   "duration_s": 209,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Marteria",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Dirk Berger",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Ben Burgwinkel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Steffen Rickert",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/10983919"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C4",
+   "disc": 2,
+   "title": "Jambalaya",
+   "artist": null,
+   "duration_s": 316,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/226282"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/226282"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/226282"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/226282"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/226282"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C5",
+   "disc": 2,
+   "title": "XOXO",
+   "artist": null,
+   "duration_s": 251,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/56872"
+     ]
+    },
+    {
+     "name": "Thees Uhlmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/56872"
+     ]
+    },
+    {
+     "name": "Thomas Küchler",
+     "role": "writer",
+     "sources": [
+      "genius:song/56872"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "producer",
+     "sources": [
+      "genius:song/56872"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D1",
+   "disc": 2,
+   "title": "Schwarz",
+   "artist": null,
+   "duration_s": 156,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "LEA",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Wim Treuner",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Alexander Zuckowski",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Robin Haefs",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Beatzarre",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Djorkaeff",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Phil The Beat",
+     "role": "writer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/10983922"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D2",
+   "disc": 2,
+   "title": "Falsche Zeit, Falscher Ort",
+   "artist": null,
+   "duration_s": 235,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Hardy X",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Tom Thaler",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "nilly",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Dokii",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Ralph Heidel",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Jonathan Schmid",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "nilly",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Dokii",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    },
+    {
+     "name": "Ralph Heidel",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727670"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D3",
+   "disc": 2,
+   "title": "TNT",
+   "artist": null,
+   "duration_s": 365,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Tua",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Olson",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Ahzumjot",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Tim Roth",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "writer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "producer",
+     "sources": [
+      "genius:song/7333058"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D4",
+   "disc": 2,
+   "title": "Lass es Rosen für mich regnen",
+   "artist": null,
+   "duration_s": 230,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Takt32",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Sam Vance-Law",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Ralph Heidel",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Olson",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Max Richard Leßmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Montez",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Vincent von Schlippenbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Dirk Berger",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "David Conen",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Daniel Stoyanov",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Teute",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Ahzumjot",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "producer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    },
+    {
+     "name": "The Krauts",
+     "role": "producer",
+     "sources": [
+      "genius:song/7660708"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D5",
+   "disc": 2,
+   "title": "Gib mir Gefahr",
+   "artist": null,
+   "duration_s": 109,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660715"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660715"
+     ]
+    },
+    {
+     "name": "Schmyt",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660715"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "writer",
+     "sources": [
+      "genius:song/7660715"
+     ]
+    },
+    {
+     "name": "Max Rieger",
+     "role": "producer",
+     "sources": [
+      "genius:song/7660715"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E1",
+   "disc": 3,
+   "title": "Letzte Gang der Stadt",
+   "artist": null,
+   "duration_s": 325,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/52611"
+     ]
+    },
+    {
+     "name": "Daniel Schaub",
+     "role": "writer",
+     "sources": [
+      "genius:song/52611"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "writer",
+     "sources": [
+      "genius:song/52611"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "producer",
+     "sources": [
+      "genius:song/52611"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E2",
+   "disc": 3,
+   "title": "So Perfekt",
+   "artist": null,
+   "duration_s": 184,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/52798"
+     ]
+    },
+    {
+     "name": "Marteria",
+     "role": "writer",
+     "sources": [
+      "genius:song/52798"
+     ]
+    },
+    {
+     "name": "Biztram",
+     "role": "writer",
+     "sources": [
+      "genius:song/52798"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "producer",
+     "sources": [
+      "genius:song/52798"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E3",
+   "disc": 3,
+   "title": "Auf und Davon",
+   "artist": null,
+   "duration_s": 424,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/52141"
+     ]
+    },
+    {
+     "name": "Daniel Schaub",
+     "role": "writer",
+     "sources": [
+      "genius:song/52141"
+     ]
+    },
+    {
+     "name": "Melvin Riley",
+     "role": "writer",
+     "sources": [
+      "genius:song/52141"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "writer",
+     "sources": [
+      "genius:song/52141"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "producer",
+     "sources": [
+      "genius:song/52141"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "E4",
+   "disc": 3,
+   "title": "Michael X",
+   "artist": null,
+   "duration_s": 320,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/54978"
+     ]
+    },
+    {
+     "name": "Dash (HRV)",
+     "role": "writer",
+     "sources": [
+      "genius:song/54978"
+     ]
+    },
+    {
+     "name": "Steddy",
+     "role": "producer",
+     "sources": [
+      "genius:song/54978"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F1",
+   "disc": 3,
+   "title": "Verliebt in die Stadt, die es nicht gibt",
+   "artist": null,
+   "duration_s": 406,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Tom Thaler",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Hardy X",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Dokii",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Wings (DEU)",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Jonathan Schmid",
+     "role": "writer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Hardy X",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Dokii",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Wings (DEU)",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/9727716"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F2",
+   "disc": 3,
+   "title": "Hin zur Sonne",
+   "artist": null,
+   "duration_s": 203,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/75399"
+     ]
+    },
+    {
+     "name": "Bugi (Gambit)",
+     "role": "writer",
+     "sources": [
+      "genius:song/75399"
+     ]
+    },
+    {
+     "name": "Shuko",
+     "role": "producer",
+     "sources": [
+      "genius:song/75399"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F3",
+   "disc": 3,
+   "title": "Ganz schön okay",
+   "artist": null,
+   "duration_s": 304,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Kummer",
+     "role": "writer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Karl Schumann",
+     "role": "writer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/225727"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "F4",
+   "disc": 3,
+   "title": "Hinterland",
+   "artist": null,
+   "duration_s": 454,
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+    "discogs:release/32548602"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Casper",
+     "role": "writer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Jan Korbach",
+     "role": "writer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Konrad Betcher",
+     "role": "writer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "writer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "writer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Konstantin Gropper",
+     "role": "producer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    },
+    {
+     "name": "Markus Ganter",
+     "role": "producer",
+     "sources": [
+      "genius:song/214071"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Casper",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57"
+   ]
+  },
+  {
+   "name": "Drangsal",
+   "role": "featured",
+   "tracks": [
+    "B5"
+   ],
+   "sources": [
+    "discogs:release/32548602"
+   ]
+  },
+  {
+   "name": "Thees Uhlmann",
+   "role": "featured",
+   "tracks": [
+    "C5"
+   ],
+   "sources": [
+    "discogs:release/32548602"
+   ]
+  },
+  {
+   "name": "Lea",
+   "role": "featured",
+   "tracks": [
+    "D1"
+   ],
+   "sources": [
+    "discogs:release/32548602"
+   ]
+  },
+  {
+   "name": "Tua",
+   "role": "featured",
+   "tracks": [
+    "D3"
+   ],
+   "sources": [
+    "discogs:release/32548602"
+   ]
+  },
+  {
+   "name": "Lena Meyer-Landrut",
+   "role": "featured",
+   "tracks": [
+    "D4"
+   ],
+   "sources": [
+    "discogs:release/32548602"
+   ]
+  }
+ ],
+ "total_duration_s": 7121,
+ "confidence": 0.9,
+ "sources": [
+  {
+   "id": "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+   "url": "https://musicbrainz.org/release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57",
+   "kind": "database",
+   "note": "durations in ms"
+  },
+  {
+   "id": "discogs:release/32548602",
+   "url": "https://www.discogs.com/release/32548602",
+   "kind": "database",
+   "note": null
+  },
+  {
+   "id": "genius:song/433789",
+   "url": "https://genius.com/Casper-intro-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/7193296",
+   "url": "https://genius.com/Casper-alles-war-schon-und-nichts-tat-weh-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/198885",
+   "url": "https://genius.com/Casper-im-ascheregen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/225339",
+   "url": "https://genius.com/Casper-alles-endet-aber-nie-die-musik-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10983912",
+   "url": "https://genius.com/Casper-adrenalin-intro-live-in-bielefeld-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10983913",
+   "url": "https://genius.com/Casper-adrenalin-live-in-bielefeld-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/3190889",
+   "url": "https://genius.com/Casper-sirenen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9652033",
+   "url": "https://genius.com/Casper-sowas-von-da-hellwach-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/2876780",
+   "url": "https://genius.com/Casper-keine-angst-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9228441",
+   "url": "https://genius.com/Casper-emma-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/226147",
+   "url": "https://genius.com/Casper-20qm-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10983919",
+   "url": "https://genius.com/Casper-supernova-live-in-bielefeld-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/226282",
+   "url": "https://genius.com/Casper-jambalaya-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/56872",
+   "url": "https://genius.com/Casper-xoxo-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10983922",
+   "url": "https://genius.com/Casper-and-lea-schwarz-live-in-bielefeld-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9727670",
+   "url": "https://genius.com/Casper-falsche-zeit-falscher-ort-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/7333058",
+   "url": "https://genius.com/Casper-tnt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/7660708",
+   "url": "https://genius.com/Casper-lass-es-rosen-fur-mich-regnen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/7660715",
+   "url": "https://genius.com/Casper-gib-mir-gefahr-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/52611",
+   "url": "https://genius.com/Casper-die-letzte-gang-der-stadt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/52798",
+   "url": "https://genius.com/Casper-so-perfekt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/52141",
+   "url": "https://genius.com/Casper-auf-und-davon-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/54978",
+   "url": "https://genius.com/Casper-michael-x-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/9727716",
+   "url": "https://genius.com/Casper-verliebt-in-der-stadt-die-es-nicht-gibt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/75399",
+   "url": "https://genius.com/Casper-hin-zur-sonne-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/225727",
+   "url": "https://genius.com/Casper-ganz-schon-okay-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/214071",
+   "url": "https://genius.com/Casper-hinterland-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 12",
+   "values": {
+    "musicbrainz:release/ae36f7c7-c498-4a33-b5e0-7b0d1efbac57": "20qm",
+    "discogs:release/32548602": "20 qm"
+   },
+   "resolution": "MusicBrainz spelling (rule: MusicBrainz before Discogs)"
+  }
+ ],
+ "missing": [
+  "credits missing for 1 of 28 tracks"
+ ],
+ "alternatives": [],
+ "reasoning": "Fast path without agent: barcode 4251484708203 matches 1 official MusicBrainz release(s) with the same tracklist and 1 Discogs release(s) in format any; track count (28), titles and durations (28 tracks in both sources, 0 difference(s) > 2 s resolved by rule) agree."
+}

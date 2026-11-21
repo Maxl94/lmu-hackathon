@@ -1,0 +1,1800 @@
+{
+ "input": {
+  "id": "12-various-artists-schlager-arena-2025-somm",
+  "title": "SCHLAGER ARENA 2025 - SOMMER EDITON - Die größten Hits des Jahres",
+  "artist": "Various Artists",
+  "ean": "4099964172904"
+ },
+ "status": "found",
+ "release": {
+  "title": "Schlager Arena 2025: Sommer Edition - Die größten Hits des Jahres",
+  "artist": "Various Artists",
+  "format": "CD",
+  "country": "DE",
+  "year": 2025,
+  "label": "More Music and Media / Telamo",
+  "catno": null,
+  "barcode": "4099964172904",
+  "edition": "2×CD, Sommer Edition",
+  "ids": {}
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Sie!",
+   "artist": "Thomas Anders, Florian Silbereisen & Barbara Schöneberger",
+   "duration_s": 218,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Das bleibt unter uns Chérie",
+   "artist": "Fantasy",
+   "duration_s": 194,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Martin Hein",
+     "role": "writer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Fredi Malinowski",
+     "role": "writer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Wolfgang Nadrag",
+     "role": "writer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Jenny van Bree",
+     "role": "writer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Erwin Brand",
+     "role": "writer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Fantasy (DEU)",
+     "role": "producer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Gerd Jakobs",
+     "role": "producer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    },
+    {
+     "name": "Stefan Peters",
+     "role": "producer",
+     "sources": [
+      "genius:song/11162517"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Ein gebrochenes Herz",
+   "artist": "Linda Hesse",
+   "duration_s": 187,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Linda Hesse",
+     "role": "writer",
+     "sources": [
+      "genius:song/11483374"
+     ]
+    },
+    {
+     "name": "Sebastian Kirchner",
+     "role": "writer",
+     "sources": [
+      "genius:song/11483374"
+     ]
+    },
+    {
+     "name": "Robert Redweik",
+     "role": "writer",
+     "sources": [
+      "genius:song/11483374"
+     ]
+    },
+    {
+     "name": "Sebastian Kirchner",
+     "role": "producer",
+     "sources": [
+      "genius:song/11483374"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Sommernacht",
+   "artist": "Anna-Carina Woitschack",
+   "duration_s": 223,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Schau mal herein (Remix)",
+   "artist": "Ross Antony & Linda Fäh",
+   "duration_s": 192,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mike Chapman",
+     "role": "writer",
+     "sources": [
+      "genius:song/11562576"
+     ]
+    },
+    {
+     "name": "Nicky Chinn",
+     "role": "writer",
+     "sources": [
+      "genius:song/11562576"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Verdammt!",
+   "artist": "Jay Khan",
+   "duration_s": 215,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Jay Khan",
+     "role": "writer",
+     "sources": [
+      "genius:song/10760617"
+     ]
+    },
+    {
+     "name": "Марк Табак (Mark Tabak)",
+     "role": "writer",
+     "sources": [
+      "genius:song/10760617"
+     ]
+    },
+    {
+     "name": "Jay Khan",
+     "role": "producer",
+     "sources": [
+      "genius:song/10760617"
+     ]
+    },
+    {
+     "name": "Марк Табак (Mark Tabak)",
+     "role": "producer",
+     "sources": [
+      "genius:song/10760617"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Playa Bonita",
+   "artist": "Die Schlagerpiloten",
+   "duration_s": 187,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Hens Hensen",
+     "role": "writer",
+     "sources": [
+      "genius:song/10695788"
+     ]
+    },
+    {
+     "name": "Tobias Reitz",
+     "role": "writer",
+     "sources": [
+      "genius:song/10695788"
+     ]
+    },
+    {
+     "name": "Andreas Seibold",
+     "role": "writer",
+     "sources": [
+      "genius:song/10695788"
+     ]
+    },
+    {
+     "name": "Stefan Peters",
+     "role": "producer",
+     "sources": [
+      "genius:song/10695788"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Dein Schrei nach Liebe",
+   "artist": "Bernhard Brink",
+   "duration_s": 185,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Frank Kretschmer",
+     "role": "writer",
+     "sources": [
+      "genius:song/10557459"
+     ]
+    },
+    {
+     "name": "Franziska Wiese",
+     "role": "writer",
+     "sources": [
+      "genius:song/10557459"
+     ]
+    },
+    {
+     "name": "Thomas Remm",
+     "role": "writer",
+     "sources": [
+      "genius:song/10557459"
+     ]
+    },
+    {
+     "name": "Henning Verlage",
+     "role": "producer",
+     "sources": [
+      "genius:song/10557459"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Leben XXL",
+   "artist": "Anita Hofmann",
+   "duration_s": 199,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "So fühlt sich nur die Liebe an",
+   "artist": "Patrick Lindner",
+   "duration_s": 193,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Solange wir leben",
+   "artist": "Timo",
+   "duration_s": 185,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "Wir sind wie Piloten",
+   "artist": "Jörg Bausch",
+   "duration_s": 189,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Jörg Bausch",
+     "role": "writer",
+     "sources": [
+      "genius:song/11676989"
+     ]
+    },
+    {
+     "name": "Jörg Bausch",
+     "role": "producer",
+     "sources": [
+      "genius:song/11676989"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "13",
+   "disc": 1,
+   "title": "Noch immer dieselben (Radio Version)",
+   "artist": "Frank Lukas",
+   "duration_s": 210,
+   "sources": [
+    "itunes:album/1771866855",
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1771866855"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "14",
+   "disc": 1,
+   "title": "Dein Blick",
+   "artist": "Zeno",
+   "duration_s": 222,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "15",
+   "disc": 1,
+   "title": "Sie wollte immer Paris",
+   "artist": "Franziska",
+   "duration_s": 174,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "16",
+   "disc": 1,
+   "title": "I'm alive (Ich bin da)",
+   "artist": "Maria Levin",
+   "duration_s": 199,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "17",
+   "disc": 1,
+   "title": "Ich glaub an die Liebe",
+   "artist": "Christian Lais",
+   "duration_s": 204,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "18",
+   "disc": 1,
+   "title": "Verführerisch (Nur So! Remix)",
+   "artist": "Silvano Giganti",
+   "duration_s": 174,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "19",
+   "disc": 1,
+   "title": "Echte Tränen",
+   "artist": "Jan Böckmann",
+   "duration_s": 200,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "20",
+   "disc": 1,
+   "title": "Auf immer Wiedersehen",
+   "artist": "Wind",
+   "duration_s": 185,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "1",
+   "disc": 2,
+   "title": "Verliebt in London",
+   "artist": "Laura Wilde",
+   "duration_s": 211,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Harry W. Schäfer",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540911"
+     ]
+    },
+    {
+     "name": "Rainer Kalb",
+     "role": "writer",
+     "sources": [
+      "genius:song/11540911"
+     ]
+    },
+    {
+     "name": "Rainer Kalb",
+     "role": "producer",
+     "sources": [
+      "genius:song/11540911"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 2,
+   "title": "Mit dir geht der Sommer nie vorbei",
+   "artist": "Die Schlagerpiloten",
+   "duration_s": 216,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "3",
+   "disc": 2,
+   "title": "So muss der Sommer sein",
+   "artist": "Olaf der Flipper",
+   "duration_s": 213,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "4",
+   "disc": 2,
+   "title": "Ein bisschen Aroma",
+   "artist": "Karl König",
+   "duration_s": 199,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "5",
+   "disc": 2,
+   "title": "Weil es mehr als Liebe ist",
+   "artist": "G.G. Anderson",
+   "duration_s": 203,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "6",
+   "disc": 2,
+   "title": "Du rettest mich",
+   "artist": "Judy Weiss",
+   "duration_s": 224,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "7",
+   "disc": 2,
+   "title": "Cabriolet (Radio Version)",
+   "artist": "Sarah Zucker",
+   "duration_s": 184,
+   "sources": [
+    "itunes:album/1758954473",
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1758954473"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "8",
+   "disc": 2,
+   "title": "Blick nach vorn",
+   "artist": "Daniela Alfinito",
+   "duration_s": 202,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Jascha Welzel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941251"
+     ]
+    },
+    {
+     "name": "Matthias Teriet",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941251"
+     ]
+    },
+    {
+     "name": "Uwe Altenried",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941251"
+     ]
+    },
+    {
+     "name": "Al King",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941251"
+     ]
+    },
+    {
+     "name": "Alexs White",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941251"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 2,
+   "title": "Altes Spiel, neues Glück",
+   "artist": "Petra Frey",
+   "duration_s": 202,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "10",
+   "disc": 2,
+   "title": "Zu lieben ist leicht",
+   "artist": "Tanja Lasch",
+   "duration_s": 204,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "André Stade",
+     "role": "writer",
+     "sources": [
+      "genius:song/11960438"
+     ]
+    },
+    {
+     "name": "Tanja Lasch",
+     "role": "writer",
+     "sources": [
+      "genius:song/11960438"
+     ]
+    },
+    {
+     "name": "André Stade",
+     "role": "producer",
+     "sources": [
+      "genius:song/11960438"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "11",
+   "disc": 2,
+   "title": "Schwarze Rose",
+   "artist": "Marian Weisser",
+   "duration_s": 211,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "12",
+   "disc": 2,
+   "title": "Dein Blick sagt alles",
+   "artist": "Anni Perka",
+   "duration_s": 186,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Anni Perka",
+     "role": "writer",
+     "sources": [
+      "genius:song/11714725"
+     ]
+    },
+    {
+     "name": "Daniel Sommer",
+     "role": "writer",
+     "sources": [
+      "genius:song/11714725"
+     ]
+    },
+    {
+     "name": "Paul Falk",
+     "role": "writer",
+     "sources": [
+      "genius:song/11714725"
+     ]
+    },
+    {
+     "name": "Paul Falk",
+     "role": "producer",
+     "sources": [
+      "genius:song/11714725"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "13",
+   "disc": 2,
+   "title": "Mein Baby (2025) (Radio Version)",
+   "artist": "Frank Lars",
+   "duration_s": 198,
+   "sources": [
+    "itunes:album/1794624460",
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1794624460"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "14",
+   "disc": 2,
+   "title": "Intensiv (Radio-Version)",
+   "artist": "Charlien",
+   "duration_s": 187,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "15",
+   "disc": 2,
+   "title": "Kann es sein",
+   "artist": "Alexander Martin",
+   "duration_s": 172,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "16",
+   "disc": 2,
+   "title": "Momentan ist alles nur Liebe",
+   "artist": "Gilbert",
+   "duration_s": 204,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "17",
+   "disc": 2,
+   "title": "Alles neu",
+   "artist": "Sabrina Berger",
+   "duration_s": 181,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "18",
+   "disc": 2,
+   "title": "Flieger Richtung Liebe",
+   "artist": "Die Wolkenstürmer",
+   "duration_s": 191,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "19",
+   "disc": 2,
+   "title": "Wie ein Orkan",
+   "artist": "Michael Morgan",
+   "duration_s": 185,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "20",
+   "disc": 2,
+   "title": "Ein bisschen verliebt",
+   "artist": "Laura & Mark",
+   "duration_s": 192,
+   "sources": [
+    "itunes:album/1824661315",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766"
+   ],
+   "duration_sources": [
+    "itunes:album/1824661315"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Laura van den Elzen",
+     "role": "writer",
+     "sources": [
+      "genius:song/11605321"
+     ]
+    },
+    {
+     "name": "Mark Hoffmann",
+     "role": "writer",
+     "sources": [
+      "genius:song/11605321"
+     ]
+    },
+    {
+     "name": "Laura & Mark",
+     "role": "producer",
+     "sources": [
+      "genius:song/11605321"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Thomas Anders",
+   "role": "main",
+   "tracks": [
+    "1.1"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Florian Silbereisen",
+   "role": "main",
+   "tracks": [
+    "1.1"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Barbara Schöneberger",
+   "role": "main",
+   "tracks": [
+    "1.1"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Fantasy",
+   "role": "main",
+   "tracks": [
+    "1.2"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Linda Hesse",
+   "role": "main",
+   "tracks": [
+    "1.3"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Anna-Carina Woitschack",
+   "role": "main",
+   "tracks": [
+    "1.4"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Ross Antony",
+   "role": "main",
+   "tracks": [
+    "1.5"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Linda Fäh",
+   "role": "main",
+   "tracks": [
+    "1.5"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Jay Khan",
+   "role": "main",
+   "tracks": [
+    "1.6"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Die Schlagerpiloten",
+   "role": "main",
+   "tracks": [
+    "1.7",
+    "2.2"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Bernhard Brink",
+   "role": "main",
+   "tracks": [
+    "1.8"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Anita Hofmann",
+   "role": "main",
+   "tracks": [
+    "1.9"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Patrick Lindner",
+   "role": "main",
+   "tracks": [
+    "1.10"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Timo",
+   "role": "main",
+   "tracks": [
+    "1.11"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Jörg Bausch",
+   "role": "main",
+   "tracks": [
+    "1.12"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Frank Lukas",
+   "role": "main",
+   "tracks": [
+    "1.13"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Zeno",
+   "role": "main",
+   "tracks": [
+    "1.14"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Franziska",
+   "role": "main",
+   "tracks": [
+    "1.15"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Maria Levin",
+   "role": "main",
+   "tracks": [
+    "1.16"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Christian Lais",
+   "role": "main",
+   "tracks": [
+    "1.17"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Silvano Giganti",
+   "role": "main",
+   "tracks": [
+    "1.18"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Jan Böckmann",
+   "role": "main",
+   "tracks": [
+    "1.19"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Wind",
+   "role": "main",
+   "tracks": [
+    "1.20"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Laura Wilde",
+   "role": "main",
+   "tracks": [
+    "2.1"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Olaf der Flipper",
+   "role": "main",
+   "tracks": [
+    "2.3"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Karl König",
+   "role": "main",
+   "tracks": [
+    "2.4"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "G.G. Anderson",
+   "role": "main",
+   "tracks": [
+    "2.5"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Judy Weiss",
+   "role": "main",
+   "tracks": [
+    "2.6"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Sarah Zucker",
+   "role": "main",
+   "tracks": [
+    "2.7"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Daniela Alfinito",
+   "role": "main",
+   "tracks": [
+    "2.8"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Petra Frey",
+   "role": "main",
+   "tracks": [
+    "2.9"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Tanja Lasch",
+   "role": "main",
+   "tracks": [
+    "2.10"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Marian Weisser",
+   "role": "main",
+   "tracks": [
+    "2.11"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Anni Perka",
+   "role": "main",
+   "tracks": [
+    "2.12"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Frank Lars",
+   "role": "main",
+   "tracks": [
+    "2.13"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Charlien",
+   "role": "main",
+   "tracks": [
+    "2.14"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Alexander Martin",
+   "role": "main",
+   "tracks": [
+    "2.15"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Gilbert",
+   "role": "main",
+   "tracks": [
+    "2.16"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Sabrina Berger",
+   "role": "main",
+   "tracks": [
+    "2.17"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Die Wolkenstürmer",
+   "role": "main",
+   "tracks": [
+    "2.18"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Michael Morgan",
+   "role": "main",
+   "tracks": [
+    "2.19"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Laura & Mark",
+   "role": "main",
+   "tracks": [
+    "2.20"
+   ],
+   "sources": [
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3"
+   ]
+  },
+  {
+   "name": "Nur So!",
+   "role": "remixer",
+   "tracks": [
+    "1.18"
+   ],
+   "sources": [
+    "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+    "itunes:album/1824661315"
+   ]
+  }
+ ],
+ "total_duration_s": 7900,
+ "confidence": 0.82,
+ "sources": [
+  {
+   "id": "itunes:album/1824661315",
+   "url": "https://music.apple.com/de/album/schlager-arena-2025-sommer-edition-die-gr%C3%B6%C3%9Ften-hits/1824661315",
+   "kind": "streaming",
+   "note": "Digital edition, same 40 tracks (3 titles not available on the German store: 1-13, 2-7, 2-13); source of all durations"
+  },
+  {
+   "id": "itunes:album/1771866855",
+   "url": "https://music.apple.com/de/album/1771866855",
+   "kind": "streaming",
+   "note": "Single 'Noch immer dieselben' – duration for track 1-13"
+  },
+  {
+   "id": "itunes:album/1758954473",
+   "url": "https://music.apple.com/de/album/1758954473",
+   "kind": "streaming",
+   "note": "Single 'Cabriolet' – duration for track 2-7"
+  },
+  {
+   "id": "itunes:album/1794624460",
+   "url": "https://music.apple.com/de/album/1794624460",
+   "kind": "streaming",
+   "note": "Single 'Mein Baby (2025)' – duration for track 2-13"
+  },
+  {
+   "id": "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+   "url": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-schlager-arena-2025-sommer-edition-die-groessten-hit/hnum/12285766",
+   "kind": "shop",
+   "note": "EAN 4099964172904, 2 CDs, complete printed tracklist with artist credits (version tags stripped)"
+  },
+  {
+   "id": "web:https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+   "url": "https://www.amazon.de/Schlager-Arena-2025-die-Gr%C3%B6%C3%9Ften/dp/B0F81H8VC3",
+   "kind": "shop",
+   "note": "EAN/manufacturer reference 4099964172904, 2 CDs, tracklist with version tags"
+  },
+  {
+   "id": "web:https://www.thalia.de/shop/home/artikeldetails/A1075332387",
+   "url": "https://www.thalia.de/shop/home/artikeldetails/A1075332387",
+   "kind": "shop",
+   "note": "EAN 4099964172904, 2 CDs, release date 13.06.2025"
+  },
+  {
+   "id": "discogs:release/33835569",
+   "url": "https://www.discogs.com/release/33835569",
+   "kind": "database",
+   "note": "Previous edition 'Schlager Arena 2025' (2024, barcode 4099964124866) – different tracklist, not this edition"
+  },
+  {
+   "id": "genius:song/11162517",
+   "url": "https://genius.com/Fantasy-deu-das-bleibt-unter-uns-cherie-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11483374",
+   "url": "https://genius.com/Linda-hesse-ein-gebrochenes-herz-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11562576",
+   "url": "https://genius.com/Ross-antony-schau-mal-herein-duett-mit-linda-fah-remix-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10760617",
+   "url": "https://genius.com/Jay-khan-verdammt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10695788",
+   "url": "https://genius.com/Die-schlagerpiloten-playa-bonita-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10557459",
+   "url": "https://genius.com/Bernhard-brink-dein-schrei-nach-liebe-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11676989",
+   "url": "https://genius.com/Jorg-bausch-wir-sind-wie-piloten-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11540911",
+   "url": "https://genius.com/Laura-wilde-verliebt-in-london-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941251",
+   "url": "https://genius.com/Daniela-alfinito-blick-nach-vorn-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11960438",
+   "url": "https://genius.com/Tanja-lasch-zu-lieben-ist-leicht-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11714725",
+   "url": "https://genius.com/Anni-perka-dein-blick-sagt-alles-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/11605321",
+   "url": "https://genius.com/Laura-and-mark-ein-bisschen-verliebt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "release year",
+   "values": {
+    "iTunes/Thalia": "2025 (iTunes 2025-06-06, Thalia 13.06.2025)",
+    "jpc/Amazon": "13.03.2020"
+   },
+   "resolution": "2025 used; the 2020 date is a stale retail data field and contradicts the 'Arena 2025 – Sommer Edition' title and the 2025 digital release"
+  },
+  {
+   "field": "input title",
+   "values": {
+    "input": "SCHLAGER ARENA 2025 - SOMMER EDITON - Die größten Hits des Jahres",
+    "shops/iTunes": "Schlager Arena 2025: Sommer Edition - Die größten Hits des Jahres"
+   },
+   "resolution": "official spelling used; 'EDITON' in the input is a typo, barcode 4099964172904 confirms the same product"
+  },
+  {
+   "field": "title track 1.17",
+   "values": {
+    "Amazon/iTunes": "Ich glaub an die Liebe",
+    "jpc": "Ich glaube an die Liebe"
+   },
+   "resolution": "Amazon + iTunes agree on 'Ich glaub an die Liebe'"
+  },
+  {
+   "field": "title track 1.16",
+   "values": {
+    "jpc": "I'm alive",
+    "Amazon": "I'm alive (Ich bin da)",
+    "iTunes": "I'm Alive (Ich bin da)"
+   },
+   "resolution": "Amazon/iTunes version tag used, capitalisation from Amazon"
+  },
+  {
+   "field": "artist track 1.1",
+   "values": {
+    "jpc/Amazon": "Thomas Anders, Florian Silbereisen & Barbara Schöneberger",
+    "iTunes": "Thomas Anders & Florian Silbereisen feat. Barbara Schöneberger"
+   },
+   "resolution": "joint printed credit of the three main artists used, Barbara Schöneberger listed as main on that track"
+  },
+  {
+   "field": "title track 1.5",
+   "values": {
+    "Amazon": "Schau mal herein (Remix)",
+    "iTunes": "Schau mal herein (Duett mit Linda Fäh) [Remix]",
+    "jpc": "Schau mal herein"
+   },
+   "resolution": "Amazon wording used; duet partner Linda Fäh taken into the track artist credit"
+  },
+  {
+   "field": "title track 2.7",
+   "values": {
+    "Amazon": "Cabriolet (Radio Version)",
+    "jpc": "Cabriolet"
+   },
+   "resolution": "Amazon version tag used; duration taken from the 'Cabriolet' single (3:04)"
+  }
+ ],
+ "missing": [
+  "No MusicBrainz release and no Discogs entry exist for this edition – no ISRCs, no database tracklist; identification is via the barcode in three shops (Thalia, Amazon, jpc).",
+  "No durations on the physical edition anywhere: all durations come from the digital edition of the same compilation (iTunes, 37 of 40 tracks) and from the matching digital singles for 1-13, 2-7, 2-13 – therefore every track carries flag duration_other_edition.",
+  "No printed back-cover image available (Amazon shows no image), so the physical tracklist could not be read from the carrier; jpc and Amazon retail tracklists were used instead.",
+  "Catalogue number not published for this edition (Amazon lists only the manufacturer reference 4099964172904, which is the barcode).",
+  "credits missing for 28 of 40 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Schlager Arena 2025 (Die Grössten Hits Des Jahres), 2×CD, 2024, More Music And Media/Telamo, barcode 4099964124866, 40 different tracks",
+   "source": "discogs:release/33835569",
+   "why_not": "different barcode and different tracklist – the 2024 edition, not the Sommer Edition"
+  },
+  {
+   "description": "Digital edition, 21 tracks (Deezer/Spotify)",
+   "source": "deezer:album/904925572",
+   "why_not": "shortened digital track list, not the 40-track CD"
+  }
+ ],
+ "reasoning": "No barcode hit in MusicBrainz or Discogs. Web search resolved EAN 4099964172904 to 'Schlager Arena 2025: Sommer Edition - Die größten Hits des Jahres', 2×CD, More Music and Media/Telamo, June 2025; Thalia, Amazon and jpc all give this EAN and a 20+20 tracklist that agrees with the 40-track digital album (iTunes). Physical edition chosen over digital. Titles from the retail tracklists (Amazon version tags; iTunes for cross-check), artist credits from jpc/Amazon; durations from the digital album and three digital singles, flagged as coming from another edition."
+}

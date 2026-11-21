@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:21",
+ "overall": 2.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: INPUT contains a barcode (NOT MET, input_has_barcode is false). Level 4: Without barcode, title, artist, format and at least one further attribute unambiguous in >= 2 sources (NOT MET, all evidence comes from a single Discogs release discogs:release/24165131 and its hosted images, which are not independent). Level 3: Unambiguous but backed by only one source (no competing edition known) (MET: discogs:release/24165131 matches title 'Blasmusik Aus Lohnde (Folge 1)', artist 'Musikverein Lohnde 1925 e. V.', and format 'MC'/Cassette; 'Folge 2' is by a different artist 'Swinging Seelze', so no competing edition for this artist and title exists).",
+   "summary": "The edition unambiguously matches the input in title, artist, and format, but is backed by only one source (Discogs and its hosted images) with no competing editions.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (NOT MET, the J-card images are hosted on the same Discogs entry discogs:release/24165131, so they are not independent sources). Level 4: One complete source confirmed by a second independent one (NOT MET, only one independent source family). Level 3: Only one source of the same edition, complete and plausible (MET: discogs:release/24165131 and its J-card scan show a complete and plausible 10-track cassette tracklist).",
+   "summary": "The 10-track tracklist is complete and confirmed by the J-card scan, but both stem from the same single Discogs entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg",
+    "image:https://i.discogs.com/Fkgjp-amgHXM7fspgCj_uyCoZMDY0Lrlv6BfTUy06_g/rs:fit/g:sm/q:90/h:600/w:361/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNjY4NS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: Database + independent primary source of the same edition (NOT MET, the cover images are hosted on the same Discogs entry discogs:release/24165131 and are not independent). Level 4: Two independent database entries or database + specialised collector site (NOT MET, only Discogs was found). Level 3: One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) (MET: Discogs database entry discogs:release/24165131 plus J-card cover images hosted on that same Discogs entry).",
+   "summary": "The research relies on a single Discogs database entry and the J-card images hosted on that same entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg",
+    "image:https://i.discogs.com/Fkgjp-amgHXM7fspgCj_uyCoZMDY0Lrlv6BfTUy06_g/rs:fit/g:sm/q:90/h:600/w:361/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNjY4NS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: track-level artist fields / artists list is empty across all tracks A1-B4.",
+  "Track durations are missing for all tracks A1-B4 (though legitimately not printed on the J-card or available in Discogs).",
+  "The third listed source (image:https://i.discogs.com/Fkgjp-amgHXM7fspgCj_uyCoZMDY0Lrlv6BfTUy06_g/...) is declared in the top-level sources array, but not linked to tracks A1-A6 in the tracklist."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 18.9,
+  "tokens_in": 14444,
+  "tokens_out": 1484,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:37:53",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4019593960000 matches this edition in >=2 independent sources - MET (MusicBrainz barcode search 1 hit, Discogs barcode search 1 hit with CD format); format CD and artist Bushido match - MET; no other edition with the same barcode and a different tracklist - MET (each search returned exactly 1 hit, alternatives 0). Whether MusicBrainz and Discogs are independent is arguable, but they are separate databases with differing durations. All conditions met.",
+   "summary": "The exact barcode matches one release in each of MusicBrainz and Discogs, with CD format and artist matching and no competing editions.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - MET: both MusicBrainz and Discogs list 20 tracks, and the tool output states the titles agree. Only duration deviations on tracks 15 and 16 (3 s each), which are not about count, order or titles. All conditions met.",
+   "summary": "MusicBrainz and Discogs agree on 20 tracks with matching titles and order; only minor 3 s duration differences on tracks 15 and 16.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover/booklet/label print) - NOT MET, no primary source was consulted. Level 4: two independent database entries (differing details) - MET: MusicBrainz and Discogs are separate databases and differ in durations on tracks 15 and 16, which suggests independent entries. Stop at level 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details, but no primary source such as cover or booklet.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "No primary source (cover, booklet, label print) was checked.",
+  "Durations of tracks 15 (2:21 vs 2:18) and 16 (3:41 vs 3:38) conflict between sources; resolved by rule in favour of MusicBrainz, not verified independently.",
+  "Track-level artist credits are only partly given (e.g. tracks 3, 8, 9, 12, 13, 15 have features); there is no independent verification of them.",
+  "Discogs lists the release as Germany, Austria & Switzerland while the result gives country DE; this is a minor difference."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 8.7,
+  "tokens_in": 7066,
+  "tokens_out": 916,
+  "cost_usd": 0.02329,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

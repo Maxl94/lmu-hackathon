@@ -1,0 +1,1730 @@
+{
+ "input": {
+  "id": "07-fantastischen-vier-die-long-player-rsd-e",
+  "title": "Long Player (RSD Exklusive)",
+  "artist": "Fantastischen Vier, Die",
+  "ean": "4262459550239",
+  "format": null
+ },
+ "status": "found",
+ "release": {
+  "title": "Long Player",
+  "artist": "Die Fantastischen Vier",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "Rekord Music and Distribution",
+  "catno": "2984265RMP",
+  "barcode": "4262459550239",
+  "edition": "Record Store Day 2025 Exclusive reissue, 2×LP 180g coloured marbled, incl. Longplayer Record Butler (barcode sticker on back sleeve)",
+  "ids": {
+   "discogs": "33691152",
+   "musicbrainz": "7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Long Player",
+   "artist": null,
+   "duration_s": 187,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300154",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10917603"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Wie weit",
+   "artist": "Die Fantastischen Vier feat. MIA.",
+   "duration_s": 177,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300139",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Barney Perkins",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "General N. Johnson",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Gunnar Spies",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Mieze Katz",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Greg Perry",
+     "role": "writer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10768170"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Bestandsaufnahme",
+   "artist": null,
+   "duration_s": 204,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300156",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Thom Bell",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Linda Creed",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Thomas Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10920364"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Weekendfeeling",
+   "artist": null,
+   "duration_s": 231,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300157",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Thoams",
+     "role": "writer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10924034"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Was man will",
+   "artist": "Die Fantastischen Vier & Hansi Biebl Band",
+   "duration_s": 201,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300158",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Kurt Demmler",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Johannes Biebl",
+     "role": "writer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10928219"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Win Win Win",
+   "artist": null,
+   "duration_s": 197,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300159",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Das Bo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "producer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10933245"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "44 Tausend",
+   "artist": null,
+   "duration_s": 154,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300160",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Lola Cantrell",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Ray Augustin Colon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10932057"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Aufhören",
+   "artist": null,
+   "duration_s": 169,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300161",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Curse",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Benni Dernhoff",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Johannes Oerding",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Benni Dernhoff",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937802"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C1",
+   "disc": 2,
+   "title": "Projekt Y",
+   "artist": null,
+   "duration_s": 148,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300162",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "And.Ypsilon",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937799"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C2",
+   "disc": 2,
+   "title": "5 Zimmer mit Bad",
+   "artist": null,
+   "duration_s": 167,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300163",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Jack McDuff",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10937991"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C3",
+   "disc": 2,
+   "title": "Fliegen",
+   "artist": null,
+   "duration_s": 276,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300164",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Lillo Scrimali",
+     "role": "writer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Lillo Scrimali",
+     "role": "producer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10938166"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C4",
+   "disc": 2,
+   "title": "So oder so",
+   "artist": null,
+   "duration_s": 175,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300165",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Flo Mega",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941298"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D1",
+   "disc": 2,
+   "title": "Wiedersehen",
+   "artist": "Die Fantastischen Vier & jan SEVEN dettwyler",
+   "duration_s": 157,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300166",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "DJ Thomilla",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    },
+    {
+     "name": "Conrad Hensel",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941299"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D2",
+   "disc": 2,
+   "title": "Hallenbad",
+   "artist": "Die Fantastischen Vier & Kadavar",
+   "duration_s": 258,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300167",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941300"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D3",
+   "disc": 2,
+   "title": "Endstation Erde",
+   "artist": "Die Fantastischen Vier & Kadavar",
+   "duration_s": 252,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300168",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Damion Davis",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941301"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D4",
+   "disc": 2,
+   "title": "Inferno",
+   "artist": "Die Fantastischen Vier & Kadavar",
+   "duration_s": 282,
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "discogs:release/33691152"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "isrc": "DEZR22300169",
+   "credits": [
+    {
+     "name": "And.Ypsilon",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Michi Beck",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Thomas D",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Smudo",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "writer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Tiger Bartelt",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    },
+    {
+     "name": "Lupus Lindemann",
+     "role": "producer",
+     "sources": [
+      "genius:song/10941302"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Die Fantastischen Vier",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/33691152",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da"
+   ]
+  },
+  {
+   "name": "MIA.",
+   "role": "featured",
+   "tracks": [
+    "A2"
+   ],
+   "sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "itunes:album/1759547350"
+   ]
+  },
+  {
+   "name": "Hansi Biebl Band",
+   "role": "featured",
+   "tracks": [
+    "B1"
+   ],
+   "sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "itunes:album/1759547350"
+   ]
+  },
+  {
+   "name": "jan SEVEN dettwyler",
+   "role": "featured",
+   "tracks": [
+    "D1"
+   ],
+   "sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "itunes:album/1759547350"
+   ]
+  },
+  {
+   "name": "Kadavar",
+   "role": "featured",
+   "tracks": [
+    "D2",
+    "D3",
+    "D4"
+   ],
+   "sources": [
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "itunes:album/1759547350"
+   ]
+  }
+ ],
+ "total_duration_s": 3233,
+ "confidence": 0.92,
+ "sources": [
+  {
+   "id": "discogs:release/33691152",
+   "url": "https://www.discogs.com/release/33691152-Die-Fantastischen-Vier-Long-Player",
+   "kind": "database",
+   "note": "Only hit for the EAN 4262459550239; RSD 2025 2×LP, side positions and per-track durations, GEMA/LC91252, note that the EAN is a sticker on the back sleeve"
+  },
+  {
+   "id": "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+   "url": "https://musicbrainz.org/release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+   "kind": "database",
+   "note": "CD edition of the same album (barcode 0746052842662); ms-precise durations, ISRCs and per-recording artist credits (feat. MIA., & Hansi Biebl Band, & jan SEVEN dettwyler, & Kadavar)"
+  },
+  {
+   "id": "image:/tmp/opencode/rsd1.webp",
+   "url": "https://assets.krasserstoff.com/api/v2/assets/WyI3MTg0MGVkOC00ZWQ2LTRmM2ItODYxYi05M2Q4MjBlYTRmZTIiLDM0NDAsbnVsbF0--90c820d0859674a442852c878f112a0848e9cb011f691eae23ec093b433201b0.webp",
+   "kind": "image",
+   "note": "Official shop product photo of the RSD edition back cover: confirms the 16-track side layout A1–D4 and the RSD sticker; titles printed in all caps; some OCR durations/titles unreliable (e.g. 'KLINGEN' for 'Fliegen')"
+  },
+  {
+   "id": "itunes:album/1759547350",
+   "url": "https://music.apple.com/de/album/long-player/1759547350",
+   "kind": "streaming",
+   "note": "Digital edition (2024); used only as hint for the guest credits and to confirm 16 tracks / identical durations"
+  },
+  {
+   "id": "genius:song/10917603",
+   "url": "https://genius.com/Die-fantastischen-vier-long-player-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10768170",
+   "url": "https://genius.com/Die-fantastischen-vier-and-mia-deu-wie-weit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10920364",
+   "url": "https://genius.com/Die-fantastischen-vier-bestandsaufnahme-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10924034",
+   "url": "https://genius.com/Die-fantastischen-vier-weekendfeeling-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10928219",
+   "url": "https://genius.com/Die-fantastischen-vier-and-hansi-biebl-band-was-man-will-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10933245",
+   "url": "https://genius.com/Die-fantastischen-vier-win-win-win-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10932057",
+   "url": "https://genius.com/Die-fantastischen-vier-44-tausend-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10937802",
+   "url": "https://genius.com/Die-fantastischen-vier-aufhoren-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10937799",
+   "url": "https://genius.com/Die-fantastischen-vier-projekt-y-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10937991",
+   "url": "https://genius.com/Die-fantastischen-vier-5-zimmer-mit-bad-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10938166",
+   "url": "https://genius.com/Die-fantastischen-vier-and-ray-lozano-fliegen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941298",
+   "url": "https://genius.com/Die-fantastischen-vier-so-oder-so-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941299",
+   "url": "https://genius.com/Die-fantastischen-vier-and-jan-seven-dettwyler-wiedersehen-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941300",
+   "url": "https://genius.com/Die-fantastischen-vier-and-kadavar-hallenbad-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941301",
+   "url": "https://genius.com/Die-fantastischen-vier-and-kadavar-endstation-erde-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/10941302",
+   "url": "https://genius.com/Die-fantastischen-vier-and-kadavar-inferno-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track A2",
+   "values": {
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "Wie weit",
+    "discogs:release/33691152": "Wie Weit"
+   },
+   "resolution": "MusicBrainz spelling used; the printed cover is set in all caps, so capitalisation cannot be decided from the carrier; difference is capitalisation only"
+  },
+  {
+   "field": "title track B1",
+   "values": {
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "Was man will",
+    "discogs:release/33691152": "Was Man Will"
+   },
+   "resolution": "MusicBrainz spelling used; capitalisation-only difference"
+  },
+  {
+   "field": "title track C2",
+   "values": {
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "5 Zimmer mit Bad",
+    "discogs:release/33691152": "5 Zimmer Mit Bad"
+   },
+   "resolution": "MusicBrainz spelling used; capitalisation-only difference"
+  },
+  {
+   "field": "title track C4",
+   "values": {
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "So oder so",
+    "discogs:release/33691152": "So Oder So"
+   },
+   "resolution": "MusicBrainz spelling used; capitalisation-only difference"
+  },
+  {
+   "field": "duration track B3",
+   "values": {
+    "discogs:release/33691152": "2:34",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "2:34 (154066 ms)",
+    "image:/tmp/opencode/rsd1.webp": "3:31 (cover OCR)"
+   },
+   "resolution": "154 s kept; the shop-photo OCR value 3:31 is contradicted by Discogs and MusicBrainz (which agree to the second) and the same OCR misread the C3 title, so it is treated as a reading error, not an edition difference"
+  },
+  {
+   "field": "duration track C3",
+   "values": {
+    "discogs:release/33691152": "4:35",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "4:36 (275733 ms)",
+    "image:/tmp/opencode/rsd1.webp": "4:20 (cover OCR)"
+   },
+   "resolution": "276 s kept (Discogs 275 s = rounding); cover OCR read 4:20 together with a wrong title ('KLINGEN'), so it is an OCR error"
+  },
+  {
+   "field": "duration track D3",
+   "values": {
+    "discogs:release/33691152": "4:12",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da": "4:12 (252026 ms)",
+    "image:/tmp/opencode/rsd1.webp": "4:17 (cover OCR)"
+   },
+   "resolution": "252 s kept; Discogs and MusicBrainz agree exactly, cover OCR deviates"
+  }
+ ],
+ "missing": [
+  "Durations of the vinyl edition itself were not measured: the ms-precise values come from the CD/digital edition of the same recordings (MusicBrainz), which agree with the Discogs vinyl timings within 1 s (flag duration_other_edition)",
+  "The Discogs back-cover images returned HTTP 403, so the carrier print could not be verified directly; only the official shop product photo of the RSD back cover was readable",
+  "No printed per-track artist credits were readable on the carrier; guest credits come from the MusicBrainz recording credits and the iTunes credits of the same recordings"
+ ],
+ "alternatives": [
+  {
+   "description": "2×LP, 2024, Germany, Rekord Music and Distribution 2984265RMP (black vinyl, EAN 0746052842655)",
+   "source": "discogs:release/31907761",
+   "why_not": "2024 first pressing, different barcode; the input refers to the RSD edition whose EAN is a sticker on this 2025 reissue"
+  },
+  {
+   "description": "2×LP, 2024, Germany, limited edition, same catno 2984265RMP",
+   "source": "discogs:release/31972811",
+   "why_not": "different barcode/edition, not the RSD 2025 reissue"
+  },
+  {
+   "description": "2×LP picture disc, 2024, Germany, limited/numbered, catno 550154",
+   "source": "discogs:release/31918495",
+   "why_not": "picture disc edition with its own barcode and catno"
+  },
+  {
+   "description": "CD, 2024, Germany, Rekord Music and Distribution 2984266RMP, barcode 0746052842662 (MusicBrainz release 7cbbf3a1, Discogs 31901212)",
+   "source": "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+   "why_not": "CD, not the 2-LP; used here only as duration and credit source"
+  },
+  {
+   "description": "Digital Media, 2024-10-04, barcode 4262459550116",
+   "source": "musicbrainz:release/6194317e-f625-4baf-a281-2cb6184d38a4",
+   "why_not": "digital edition, GEMA licensing requires the physical carrier"
+  }
+ ],
+ "reasoning": "The EAN 4262459550239 is a valid EAN-13 and yields exactly one database hit: Discogs release 33691152, the Record Store Day 2025 exclusive 2×LP reissue of 'Long Player' (2025-04-12, DE, Rekord Music and Distribution 2984265RMP, LC91252, GEMA), whose notes explain that this EAN is stuck on the back sleeve as a sticker. That matches the input title 'Long Player (RSD Exklusive)' and the physical-first rule, so this is the edition. MusicBrainz has no vinyl entry (only the 2024 CD and digital releases of the same album), so the side positions A1–D4 come from Discogs and are confirmed by the official shop photo of the RSD back cover (16 tracks, same order). Titles follow MusicBrainz spelling because the cover is set in all caps; the four capitalisation differences to Discogs are logged as conflicts. Durations are taken from MusicBrainz (ms-precise) and agree with the Discogs vinyl timings within 1 s on every track, hence flagged duration_other_edition. Guest artists (MIA., Hansi Biebl Band, jan SEVEN dettwyler, Kadavar) come from the MusicBrainz recording credits, corroborated by the iTunes credits of the same recordings. Confidence stays high (0.92) despite the logged conflicts: barcode hit plus two agreeing sources, and the conflicts are resolved ones – four capitalisation-only title variants and three cover-OCR duration misreads that two databases contradict to the second."
+}

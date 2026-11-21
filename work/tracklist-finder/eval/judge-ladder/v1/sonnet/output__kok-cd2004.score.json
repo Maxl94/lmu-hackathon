@@ -1,0 +1,87 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:24:13",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 trifft exakt je einen Eintrag in MusicBrainz (Official, CD, DE, 2004-10-25) und Discogs (Exclusive 2004 Edition, CD, 2004-10-25). Beide sind unabhängige Datenbanken, Format und Künstler passen, und es gibt keine Alternativen.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz und Discogs stimmen bei Anzahl (20), Reihenfolge und Titeln überein. Nur zwei Dauerabweichungen (Track 15 und 16, je 3 s) bestehen, die nach der festen Regel (MusicBrainz) aufgelöst wurden. Titel und Reihenfolge sind aber in beiden Quellen identisch.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt zwei Datenbankeinträge (MusicBrainz und Discogs) mit leicht abweichenden Details, etwa bei den Dauern. Eine Primärquelle wie Cover, Booklet oder Label fehlt. Damit gilt Stufe 4.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Keine Primärquelle (Cover/Booklet/Label-Aufdruck) geprüft; nur Datenbanken.",
+  "Dauerabweichungen bei Track 15 (2:21 vs. 2:18) und Track 16 (3:41 vs. 3:38); Auflösung allein per Regel zugunsten von MusicBrainz, nicht durch eine dritte Quelle bestätigt.",
+  "Die Begründung des Ergebnisses erwähnt einen \"Schnellweg ohne Agent\"; es gab keine inhaltliche Prüfung über den automatischen Abgleich hinaus."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 6.0,
+  "tokens_in": 5250,
+  "tokens_out": 767,
+  "cost_usd": 0.01817,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

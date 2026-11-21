@@ -1,0 +1,77 @@
+{"ts": 1795186625.67, "event": "run_start", "input": {"title": "Slow Migration", "artist": "Matthias Petzold"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186625.67, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186625.67, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186625.67, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186625.67, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186633.46, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Slow Migration --artist Matthias Petzold"}
+{"ts": 1795186633.47, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Slow Migration --artist Matthias Petzold", "seconds": 0.0, "ok": true}
+{"ts": 1795186633.47, "event": "tool_start", "tool": "tl-mb", "args": "search --title Slow Migration --artist Matthias Petzold"}
+{"ts": 1795186633.47, "event": "tool_end", "tool": "tl-mb", "args": "search --title Slow Migration --artist Matthias Petzold", "seconds": 0.0, "ok": true}
+{"ts": 1795186639.05, "event": "tool_start", "tool": "tl-mb", "args": "search --title Slow Migration"}
+{"ts": 1795186639.05, "event": "tool_end", "tool": "tl-mb", "args": "search --title Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186639.06, "event": "tool_start", "tool": "tl-mb", "args": "search --artist Matthias Petzold"}
+{"ts": 1795186639.06, "event": "tool_end", "tool": "tl-mb", "args": "search --artist Matthias Petzold", "seconds": 0.0, "ok": false}
+{"ts": 1795186639.21, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Slow Migration"}
+{"ts": 1795186639.21, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186639.25, "event": "tool_start", "tool": "tl-discogs", "args": "search --artist Matthias Petzold"}
+{"ts": 1795186639.26, "event": "tool_end", "tool": "tl-discogs", "args": "search --artist Matthias Petzold", "seconds": 0.0, "ok": true}
+{"ts": 1795186641.76, "event": "tool_start", "tool": "tl-itunes", "args": "search Matthias Petzold Slow Migration"}
+{"ts": 1795186641.76, "event": "tool_end", "tool": "tl-itunes", "args": "search Matthias Petzold Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186641.77, "event": "tool_start", "tool": "tl-search", "args": "Matthias Petzold Slow Migration"}
+{"ts": 1795186641.77, "event": "tool_end", "tool": "tl-search", "args": "Matthias Petzold Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186641.94, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Matthias Petzold --title Slow Migration"}
+{"ts": 1795186641.94, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Matthias Petzold --title Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186643.89, "event": "tool_start", "tool": "tl-scrape", "args": "https://petzold-jazz.de/Slow-Migration/slow-migration.html"}
+{"ts": 1795186643.9, "event": "tool_end", "tool": "tl-scrape", "args": "https://petzold-jazz.de/Slow-Migration/slow-migration.html", "seconds": 0.0, "ok": true}
+{"ts": 1795186646.67, "event": "tool_start", "tool": "tl-search", "args": "Matthias Petzold Slow Migration bandcamp"}
+{"ts": 1795186646.67, "event": "tool_end", "tool": "tl-search", "args": "Matthias Petzold Slow Migration bandcamp", "seconds": 0.0, "ok": true}
+{"ts": 1795186646.68, "event": "tool_start", "tool": "tl-discogs", "args": "search --catno 1015"}
+{"ts": 1795186647.25, "event": "tool_end", "tool": "tl-discogs", "args": "search --catno 1015", "seconds": 0.6, "ok": true}
+{"ts": 1795186647.45, "event": "tool_start", "tool": "tl-search", "args": "\"Slow Migration\" Petzold Indigo Records 1015"}
+{"ts": 1795186648.53, "event": "tool_end", "tool": "tl-search", "args": "\"Slow Migration\" Petzold Indigo Records 1015", "seconds": 1.1, "ok": true}
+{"ts": 1795186651.44, "event": "tool_start", "tool": "tl-search", "args": "site:bandcamp.com \"Slow Migration\" Petzold"}
+{"ts": 1795186651.5, "event": "tool_start", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/ --links"}
+{"ts": 1795186651.51, "event": "tool_end", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/ --links", "seconds": 0.0, "ok": true}
+{"ts": 1795186652.47, "event": "tool_end", "tool": "tl-search", "args": "site:bandcamp.com \"Slow Migration\" Petzold", "seconds": 1.0, "ok": true}
+{"ts": 1795186652.66, "event": "tool_start", "tool": "tl-search", "args": "\"Slow Migration\" \"Indigo\" 1015 CD Petzold 2026"}
+{"ts": 1795186653.66, "event": "tool_end", "tool": "tl-search", "args": "\"Slow Migration\" \"Indigo\" 1015 CD Petzold 2026", "seconds": 1.0, "ok": true}
+{"ts": 1795186655.26, "event": "tool_start", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration"}
+{"ts": 1795186655.29, "event": "tool_end", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186660.56, "event": "tool_start", "tool": "tl-search", "args": "\"Slow Migration\" Petzold CD jpc OR amazon OR indigo-records"}
+{"ts": 1795186660.61, "event": "tool_start", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration --links"}
+{"ts": 1795186660.68, "event": "tool_end", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration --links", "seconds": 0.1, "ok": true}
+{"ts": 1795186661.69, "event": "tool_end", "tool": "tl-search", "args": "\"Slow Migration\" Petzold CD jpc OR amazon OR indigo-records", "seconds": 1.1, "ok": true}
+{"ts": 1795186663.94, "event": "tool_start", "tool": "tl-search", "args": "Matthias Petzold Slow Migration 2026 Album Rezension"}
+{"ts": 1795186663.99, "event": "tool_start", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration --mode http"}
+{"ts": 1795186664.05, "event": "tool_end", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration --mode http", "seconds": 0.1, "ok": true}
+{"ts": 1795186664.28, "event": "tool_start", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/ --links"}
+{"ts": 1795186664.28, "event": "tool_end", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/ --links", "seconds": 0.0, "ok": true}
+{"ts": 1795186665.03, "event": "tool_end", "tool": "tl-search", "args": "Matthias Petzold Slow Migration 2026 Album Rezension", "seconds": 1.1, "ok": true}
+{"ts": 1795186670.35, "event": "tool_start", "tool": "tl-mb", "args": "search --artist Petzold"}
+{"ts": 1795186670.35, "event": "tool_end", "tool": "tl-mb", "args": "search --artist Petzold", "seconds": 0.0, "ok": false}
+{"ts": 1795186678.58, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_10.jpg --context Back cover of the CD 'Slow Migration' by Matthias Petzold. Read the printed tracklist with track numbers and durations, plus any barcode and label/catalogue number."}
+{"ts": 1795186678.58, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048323892_10.jpg --context Back cover or CD of 'Slow Migration' by Matthias Petzold. Read the printed tracklist with numbers and durations, plus barcode and label/catalogue number if visible."}
+{"ts": 1795186683.8, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048323892_10.jpg --context Back cover or CD of 'Slow Migration' by Matthias Petzold. Read the printed tracklist with numbers and durations, plus barcode and label/catalogue number if visible.", "seconds": 5.2, "ok": true}
+{"ts": 1795186685.22, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_10.jpg --context Back cover of the CD 'Slow Migration' by Matthias Petzold. Read the printed tracklist with track numbers and durations, plus any barcode and label/catalogue number.", "seconds": 6.6, "ok": true}
+{"ts": 1795186694.94, "event": "tool_start", "tool": "tl-search", "args": "musik-sammler \"Slow Migration\" Petzold"}
+{"ts": 1795186695.01, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_5.jpg --context Back cover of CD 'Slow Migration' (Matthias Petzold, Indigo-Records 1015CD). Give the exact printed spelling of track 2's title character by character, and the exact printed text of track 9. Is there a barcode or EAN printed anywhere? Quote the di"}
+{"ts": 1795186695.91, "event": "tool_end", "tool": "tl-search", "args": "musik-sammler \"Slow Migration\" Petzold", "seconds": 1.0, "ok": true}
+{"ts": 1795186702.1, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_5.jpg --context Back cover of CD 'Slow Migration' (Matthias Petzold, Indigo-Records 1015CD). Give the exact printed spelling of track 2's title character by character, and the exact printed text of track 9. Is there a barcode or EAN printed anywhere? Quote the di", "seconds": 7.1, "ok": true}
+{"ts": 1795186720.84, "event": "tool_start", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/"}
+{"ts": 1795186720.85, "event": "tool_end", "tool": "tl-scrape", "args": "https://petzold-jazz.de/cds/slow-migration/", "seconds": 0.0, "ok": true}
+{"ts": 1795186722.57, "event": "tool_start", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration"}
+{"ts": 1795186722.61, "event": "tool_end", "tool": "tl-scrape", "args": "https://matthiaspetzold.bandcamp.com/album/slow-migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186727.04, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_10.jpg --context Back cover of the CD 'Slow Migration' by Matthias Petzold. Transcribe the printed tracklist exactly as printed, one line per track with number, title and duration, all 9 tracks. Also quote any label, LC code and catalogue number printed."}
+{"ts": 1795186727.04, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0048343178_10.jpg --context Back cover of the CD 'Slow Migration' by Matthias Petzold. Transcribe the printed tracklist exactly as printed, one line per track with number, title and duration, all 9 tracks. Also quote any label, LC code and catalogue number printed.", "seconds": 0.0, "ok": false}
+{"ts": 1795186739.28, "event": "tool_start", "tool": "tl-mb", "args": "search --title Slow Migration --artist Matthias Petzold"}
+{"ts": 1795186739.29, "event": "tool_end", "tool": "tl-mb", "args": "search --title Slow Migration --artist Matthias Petzold", "seconds": 0.0, "ok": true}
+{"ts": 1795186739.42, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Slow Migration --artist Matthias Petzold"}
+{"ts": 1795186739.42, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Slow Migration --artist Matthias Petzold", "seconds": 0.0, "ok": true}
+{"ts": 1795186739.53, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Slow Migration"}
+{"ts": 1795186739.54, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Slow Migration", "seconds": 0.0, "ok": true}
+{"ts": 1795186758.28, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 32, "steps": 22}
+{"ts": 1795186758.28, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186758.28, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 9 tracks, ISRC 0"}
+{"ts": 1795186758.28, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186769.65, "event": "phase_end", "phase": "judge", "ok": true, "level": "rot", "overall": 2.75, "error": null}
+{"ts": 1795186769.65, "event": "run_end", "valid": true, "status": "found", "level": "rot", "overall": 2.75, "tracks": 9, "wall_s": 132.6, "judge_s": 11.4, "cost_usd": 0.0322, "mode": "agent", "errors": []}

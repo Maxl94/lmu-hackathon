@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:13",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: needs the input barcode to match this edition in >=2 sources. NOT MET: the input EAN 888837168625 is a valid UPC-A, but the MusicBrainz and Discogs barcode searches return only Daft Punk – Random Access Memories (13 tracks). The result's barcode is 4018939105976, so facts say barcode_match NO. Level 4: needs a barcode match in one source, or no barcode with title, artist, format and another attribute unambiguous in >=2 sources and no competing edition with a different tracklist. NOT MET: the barcode contradicts the input, and competing editions exist. These are the 2004 Exclusive Edition with 20 tracks (MB 15996385 / Discogs 3057907) and the 2003 MZEE.com edition (MB 99ca4959). Level 3: needs a single unambiguous source or all fitting editions sharing a tracklist. NOT MET: the 20-track edition differs. Level 2: needs several fitting editions with weak signals. NOT MET: the title/artist/format match was found only by ignoring the given EAN. Level 1: the result contradicts the input (other barcode), so this level is MET.",
+   "summary": "The result's barcode (4018939105976) contradicts the input EAN, which belongs to a Daft Punk album, so the match rests only on title and artist and cannot count as the input's edition.",
+   "evidence": [
+    "tl-gtin 888837168625",
+    "tl-mb search --barcode 0888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "tl-itunes upc 888837168625",
+    "tl-mb search --title King of Kingz",
+    "FACTS barcode_match NO"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: needs >=2 independent sources of the same edition to agree on count, order and titles. MET for the chosen edition (MB c3466232 and Discogs 769288). Both list 16 tracks in the same order with the same titles, differing only in capitalisation and 1-3 s durations. musik-sammler.de adds a matching total time of 51:26, and its track list is truncated in the evidence. Caveat: the chosen edition is not confirmed as the input's edition. Nothing is borrowed from another edition. The 20-track 2004 edition was correctly rejected.",
+   "summary": "MusicBrainz and Discogs agree on the 16 tracks, order and titles of the chosen 2003 AGGRO004CD edition, but that edition is itself unconfirmed against the input.",
+   "evidence": [
+    "tl-mb release c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "tl-discogs release 769288",
+    "tl-scrape musik-sammler.de 505095"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: needs a database plus an independent primary source such as a cover, booklet or label print of the same edition. NOT MET: no primary source was read. Level 4: needs two independent database entries or a database plus a specialised collector site. MET: MusicBrainz and Discogs are two databases with differing details (e.g. 3095 s vs 3087 s, Sternenstaub 3:41 vs 3:38), and musik-sammler.de is a specialised collector site.",
+   "summary": "Two databases (MusicBrainz, Discogs) plus musik-sammler.de, but no primary source such as cover or label print.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input EAN 888837168625 resolves to Daft Punk – Random Access Memories (MB, Discogs, iTunes), not to Bushido. The result silently replaces the EAN with 4018939105976 and prioritises title/artist, which contradicts the input.",
+  "The result's confidence of 0.85 is too high given the barcode contradiction.",
+  "Several Bushido King of Kingz CD editions fit the title, including the 2004 Exclusive Edition (20 tracks), the MZEE.com edition and the Discogs entries 3645154 and 18354424 without barcode. The pick of the 2003 AGGRO004CD edition rests on weak signals; the alternatives list mentions only one of them.",
+  "Track durations differ slightly between MusicBrainz and Discogs (e.g. 16 Sternenstaub 221 s vs 218 s; total 3095 s vs 3087 s). The result takes MusicBrainz and states 3096 s as the total, which is a rounding sum; musik-sammler.de gives 51:26.",
+  "The musik-sammler.de tracklist output is truncated in the evidence, so only the total time (51:26) and the first track are visible; the claim that it confirms the full list is not fully verifiable."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 17.7,
+  "tokens_in": 15259,
+  "tokens_out": 2230,
+  "cost_usd": 0.05282,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}
