@@ -1,0 +1,101 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "The input gives only a title and MC, with no artist or barcode. Several MC releases share this title and have different tracklists: the Kastelruther Spatzen album, the Reader's Digest 5×MC box and the Karussell compilation. Choosing the Spatzen album relies on the input ID ('spatzen-…'), which the agent explicitly used as a hint, and on the assumption that it is 'the only artist album'. That is a weak signal. Within the Spatzen MCs (Koch with and without barcode, Polish AMA) the tracklist is identical, so the choice of pressing does not matter.",
+   "belege": [
+    "discogs search (Schritt 1)",
+    "Agent-Notiz +11s/+16s (ID als Hinweis)",
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/16402359"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "For the chosen MC, MusicBrainz, Discogs and two J-Card images agree on track count (12), order (A1–B6) and titles. The only differences are spellings, such as 'Sarner-Welle Lied' vs. 'Sarner-Welle-Lied'.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:…RGYeyADhuWn6…",
+    "image:…VyI96FTDHGAA…"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 83% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "There are two database entries (MusicBrainz, Discogs) plus a primary source: the J-Card was read with tl-vision. Its back shows barcode 9002722211901 and catalogue number D 221 190, and its inside shows printed durations.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "tl-vision Schritt 28",
+    "tl-vision Schritt 30"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "The agent used the input ID 'spatzen-mc-titleonly' as a hint to the artist. That is not a valid identifying feature from the input.",
+  "The Reader's Digest 5×MC box 'Ich Sag's Dir Mit Musik' (Various) matches the title and format exactly. Excluding it is not supported by the input.",
+  "Choosing the barcoded Koch pressing over the pressings without a barcode is arbitrary, though the tracklist is the same.",
+  "The durations are handled inconsistently. For A1 the printed value (202 s) is used instead of MB, but for A3, A5, B1, B2, B3, B4, B5 and B6 the MB values are used, even though the J-Card prints different values (e.g. B4 2'16'' = 136 s vs. 138 s; B1 150 s vs. 152 s). The claim that these are 'rounding' is not convincing, because the printed values are the primary source.",
+  "As a result, total_duration_s 2229 matches neither the printed total (2220 s) nor MB (2226 s)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 49066,
+  "tokens_out": 1853,
+  "cost_usd": 0.23332,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

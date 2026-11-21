@@ -1,0 +1,103 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:17",
+ "overall": 4.4,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Barcode 4019593960000 (Prüfziffer gültig) trifft exakt die Exclusive 2004 Edition in MusicBrainz (Quelle 2) und Discogs (Quelle 3); Format CD, Artist und Titel passen, Katalognummer und Label stimmen überein. musik-sammler.de nennt dieselbe EAN und 2004 (Scrape). Die Ausgabe ist durch zwei unabhängige Datenbanken plus Sammlerseite bestätigt, die Rückseite nennt ebenfalls Barcode und Katalognummer. Konkurrierende Ausgaben (2003 Aggro, 2001 MC, 2005 2-CD) haben andere Barcodes bzw. Tracklisten und sind plausibel ausgeschlossen. Stufe 5 ist erfüllt.",
+   "belege": [
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "tl-mb release 15996385",
+    "tl-discogs release 3057907",
+    "web:musik-sammler.de/release/bushido-king-of-kingz-cd-44531",
+    "image:CAA Rückseite"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Die 20 Titel und die Reihenfolge stimmen in MusicBrainz, Discogs, musik-sammler.de und der Rückseitenlesung überein (Schreibvarianten wie Pitbull/Pittbull ausgenommen). Die Dauern weichen bei Track 10, 15 und 16 teilweise ab, musik-sammler.de bestätigt aber die MusicBrainz-Werte im Rundungsrahmen. Die Trackanzahl und Reihenfolge sind also durch mehrere unabhängige Quellen gestützt, Stufe 5 ist vertretbar, eine Abwertung auf 4 wegen der Dauerabweichungen ist ebenfalls gut begründbar; ich wähle 4 wegen der ungelösten Dauerdifferenz bei Discogs und der fehlenden Dauerbestätigung durch die Rückseite.",
+   "belege": [
+    "tl-mb release 15996385 (ms-Dauern)",
+    "tl-discogs release 3057907",
+    "web:musik-sammler.de Tracklist",
+    "web:hitparade.ch (2003/2001-Ausgabe)",
+    "image:CAA Rückseite"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 85% von ≥ 2 Quellen bestätigt, 3 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) mit Barcode-Treffer, dazu musik-sammler.de als Sammlerseite mit identischer EAN. Die Rückseite (CAA) ist eine primäre Quelle, wurde aber über Bildlesung per Modell ausgewertet, nicht direkt verifiziert. Die Kombination Datenbank plus Sammler plus Cover erfüllt die Bedingung für Stufe 4, Stufe 5 ist nicht ganz erreicht, da keine echte Label-Information der Herstellerseite vorliegt.",
+   "belege": [
+    "musicbrainz:release/15996385",
+    "discogs:release/3057907",
+    "web:musik-sammler.de/release/bushido-king-of-kingz-cd-44531",
+    "image:CAA 23078347272"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Agent-Begründung nennt die CAA-Rückseite als bestätigt, die Bildlesung kam aber nur per Modell-Ausgabe zustande; das Bild wurde nicht selbst eingesehen (Schritt 10).",
+  "Discogs-Dauern für Track 10, 15 und 16 weichen um 2,3 bis 3,2 s ab; die Auflösung über MusicBrainz ist plausibel, aber keine Quelle bestätigt die Dauern unabhängig im Millisekundenbereich.",
+  "Die Schreibweise 'Pittbull' auf der Rückseite wird in der Lesung zweimal unterschiedlich dargestellt (Pittbull/PITTBULL); der Agent übernahm 'Pittbull' als gedruckte Form, die Tracklist in den Dateien nutzt aber 'Pitbull'. Inkonsistenz im Output.",
+  "Track 20 Dauer: MusicBrainz 23 s, Discogs 21 s, musik-sammler 0:22 – im Output nur MusicBrainz-Wert ohne dokumentierte Auflösung.",
+  "Der Validator-Hinweis zur hohen Confidence wurde durch eine Begründung statt durch Absenkung auf einen niedrigeren Wert adressiert; die Begründung ist nicht durch Konflikte gedeckt, da zwei Dauerkonflikte mit Discogs bleiben.",
+  "Tracks 17-20 (Remixe/Outro) werden in der Rückseitenlesung teils unsicher gelesen ('[unsicher]' bei Outro)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.5,
+  "tokens_in": 41543,
+  "tokens_out": 1672,
+  "cost_usd": 0.00499,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:02",
+ "overall": 3.6,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Input ist MC 'Blasmusik aus Lohnde' von Musikverein Lohnde. Gefunden wurde genau ein Discogs-Eintrag (r24165131, Kassette, Kat.-Nr. MC6109, Fred Kersten KG, Artist/Titel passend). Ein Barcode liegt nicht vor (null); Kat.-Nr. und Label stammen aus Discogs sowie den Kassetten-Labelbildern (tl-vision Seite 1 und 2 mit 'MC 6109' und 'Fred Kersten KG'). Titel, Artist, Format und Kat.-Nr. sind damit in mehreren Quellen konsistent, ein konkurrierender Eintrag mit anderer Trackliste ist nicht bekannt. Nur der Discogs-Eintrag ist eine Datenbank; die Labelbilder bestätigen aber Kat.-Nr. und Label unabhängig, daher Stufe 4.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:Label-Seite 2 (MC 6109, Fred Kersten KG)",
+    "tl-discogs search"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Zehn Tracks (A1-A6, B1-B4) stehen identisch auf Discogs-Release-Seite (tl-scrape firecrawl) und auf der J-card-Rückseite (tl-vision, 10 tracks read). Titel und Reihenfolge stimmen überein, Dauern fehlen überall, was als Lücke, nicht als Widerspruch gilt. Zwei unabhängige Quellen stimmen überein, Stufe 5.",
+   "belege": [
+    "discogs:release/24165131",
+    "tl-scrape discogs firecrawl",
+    "image:J-card Rückseite tl-vision"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Discogs-Datenbankeintrag als Hauptquelle plus J-card-Bilder (Primärquelle: Cover/Booklet). Die J-card-Bilder sind unabhängige Primärquellen, die Trackliste und Arrangeur-Angaben lesen. Damit Stufe 5.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:J-card Rückseite",
+    "image:J-card Innenseite",
+    "image:Label-Bilder"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Jahr ist null, Ergebnis nennt kein Jahr; das ist korrekt als unbekannt gekennzeichnet.",
+  "Barcode ist null; die Edition ist nur über Kat.-Nr. MC6109 und Titel identifiziert, nicht über Barcode.",
+  "Discogs-Eintrag enthält Hinweis 'Barcodes GEMA' in der Suchzeile, ohne konkrete Barcode-Nummer; nicht verwertbar.",
+  "Release-Titel im Ergebnis weicht leicht vom Input ab ('Folge 1' ergänzt), was plausibel ist und kein Widerspruch.",
+  "Die Edition-Bewertung 4 basiert auf Discogs plus Labelbilder; die Tracklist-Stufe 5 nutzt Discogs-Scrape und J-card-Rückseite, die Quellen-Ids im Ergebnis sind teils nicht identisch mit den tl-scrape-Belegen (web:-Id fehlt in sources)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.3,
+  "tokens_in": 19201,
+  "tokens_out": 1156,
+  "cost_usd": 0.0025,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

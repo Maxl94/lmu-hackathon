@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:16",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The INPUT contains a barcode (731456031125) [MET], and it matches exactly this edition in >= 2 independent sources (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932) [MET]; format (CD) and title (Bravo Hits 30) match [MET]; no other edition with the same barcode and a different tracklist (all 3 Discogs hits and 1 MusicBrainz hit share the same 40-track list) [MET]. All conditions for Level 5 are MET.",
+   "summary": "The barcode, format, and title match identically across MusicBrainz and Discogs, and all alternative pressings with this barcode share the exact same 40-track tracklist.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count (40 tracks), order and titles (only minor spelling/version subtitle differences such as Track 1-10 'Oops!...I Did It Again' vs 'Oops!...I Did It Again (Album Version)', Track 2-2 'Seine Straßen' vs 'Seine Strassen', Track 2-6 'HipHop' vs 'Hip Hop') [MET]. All conditions for Level 5 are MET.",
+   "summary": "Two independent databases agree on the 40-track count, order, and titles with only minor spelling and subtitle variations.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source [NOT MET - no primary source such as cover/booklet images was read]. Level 4: Two independent database entries (recognisable by differing details such as casing/spelling in titles and 4 slight duration differences) [MET: musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932]. All conditions for Level 4 are MET.",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) with recognisable differences in formatting and durations.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "In conflicts, disc 2 tracks are referred to by continuous numbering without specifying disc/position clearly (e.g., 'Titel Track 22' for Disc 2 Track 2, 'Titel Track 26' for Disc 2 Track 6, and 'Dauer Track 14' / 'Dauer Track 18' for Disc 2 Track 14 and Disc 2 Track 18, which is ambiguous with Disc 1 Track 14 and 18)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 14.8,
+  "tokens_in": 9573,
+  "tokens_out": 966,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:31",
+ "overall": 3.8,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: NOT MET (No barcode in input). 4: NOT MET (The ambiguity is inherent: the input only provides title and format, while multiple artists released an album titled 'King of Kingz' on CD, making it impossible to satisfy the 'unambiguous in >= 2 sources' condition without external interpretation). 3: MET (Multiple editions fit the input (Bushido, Sean Kingston), and they have different tracklists; the choice depends on external interpretation (e.g., GEMA context), but the chosen edition is clearly identified).",
+   "summary": "The input lacks artist and barcode information, leading to an ambiguous match between multiple artists (Bushido, Sean Kingston) with different tracklists.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "musicbrainz:release/99ca4959-0ee8-4e1b-a636-299862d81a41",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: MET (MusicBrainz, Discogs, and musik-sammler.de provide matching tracklists for the chosen edition).",
+   "summary": "The tracklist is consistently documented across three independent sources for the selected edition.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: MET (Database sources (MusicBrainz, Discogs) combined with primary source evidence from musik-sammler.de/cover documentation).",
+   "summary": "High-quality data backed by multiple independent databases and a specialized collector platform.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input field 'artist' was omitted, necessitating a choice based on the agent's confidence rather than explicit instruction."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 2.9,
+  "tokens_in": 21606,
+  "tokens_out": 703,
+  "cost_usd": 0.00646,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

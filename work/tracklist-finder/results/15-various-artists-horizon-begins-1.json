@@ -1,0 +1,472 @@
+{
+ "input": {
+  "id": "15-various-artists-horizon-begins-1",
+  "title": "Horizon Begins 1",
+  "artist": "Various Artists",
+  "ean": "4250101487415"
+ },
+ "status": "found",
+ "release": {
+  "title": "Horizon Begins 1",
+  "artist": "Various Artists",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "Orion Records",
+  "catno": "ORNVS01",
+  "barcode": "4250101487415",
+  "edition": "2x12\" 45 RPM compilation, vinyl only (24 Oct 2025), includes uncredited intro",
+  "ids": {
+   "discogs": "35282479"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Intro",
+   "artist": null,
+   "duration_s": null,
+   "sources": [
+    "discogs:release/35282479"
+   ],
+   "duration_sources": [],
+   "flags": [
+    "duration_missing"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Newlife",
+   "artist": "200188",
+   "duration_s": 173,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "discogs:release/35282479/videos"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Sky High",
+   "artist": "Martinou",
+   "duration_s": 381,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Phoenix",
+   "artist": "Ateq & Orion",
+   "duration_s": 410,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "discogs:release/35282479/videos"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Past Mind",
+   "artist": "Skyra",
+   "duration_s": 417,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "C1",
+   "disc": 2,
+   "title": "Bubble Love",
+   "artist": "Ben Kaczor",
+   "duration_s": 416,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "discogs:release/35282479/videos"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "C2",
+   "disc": 2,
+   "title": "Symbyosis",
+   "artist": "Lb Honne",
+   "duration_s": 509,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "discogs:release/35282479/videos"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "D1",
+   "disc": 2,
+   "title": "Groovement",
+   "artist": "Hame",
+   "duration_s": 334,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "D2",
+   "disc": 2,
+   "title": "Sirens",
+   "artist": "Soela",
+   "duration_s": 344,
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://clone.nl/item81028.html",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778"
+   ],
+   "duration_sources": [
+    "web:https://kompakt.fm/releases/horizon_begins_1",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Unknown Artist",
+   "role": "main",
+   "tracks": [
+    "A1"
+   ],
+   "sources": [
+    "discogs:release/35282479"
+   ]
+  },
+  {
+   "name": "200188",
+   "role": "main",
+   "tracks": [
+    "A2"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Martinou",
+   "role": "main",
+   "tracks": [
+    "A3"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Ateq",
+   "role": "main",
+   "tracks": [
+    "B1"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Orion",
+   "role": "main",
+   "tracks": [
+    "B1"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Skyra",
+   "role": "main",
+   "tracks": [
+    "B2"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1"
+   ]
+  },
+  {
+   "name": "Ben Kaczor",
+   "role": "main",
+   "tracks": [
+    "C1"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Lb Honne",
+   "role": "main",
+   "tracks": [
+    "C2"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Hame",
+   "role": "main",
+   "tracks": [
+    "D1"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  },
+  {
+   "name": "Soela",
+   "role": "main",
+   "tracks": [
+    "D2"
+   ],
+   "sources": [
+    "discogs:release/35282479",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ]
+  }
+ ],
+ "total_duration_s": 2984,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/35282479",
+   "url": "https://www.discogs.com/release/35282479",
+   "kind": "database",
+   "note": "Barcode 4250101487415 match; 2x12\" 45 RPM, DE 2025, ORNVS01; tracklist incl. uncredited intro; no durations"
+  },
+  {
+   "id": "discogs:release/35282479/videos",
+   "url": "https://api.discogs.com/releases/35282479",
+   "kind": "database",
+   "note": "Official per-track videos embedded in the Discogs release (durations = video lengths)"
+  },
+  {
+   "id": "web:https://kompakt.fm/releases/horizon_begins_1",
+   "url": "https://kompakt.fm/releases/horizon_begins_1",
+   "kind": "shop",
+   "note": "Distributor (Kompakt) listing of the 2x12\" ORNVS01: 8 tracks with durations, artist credits"
+  },
+  {
+   "id": "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+   "url": "https://orion01.bandcamp.com/album/horizon-begins-1",
+   "kind": "streaming",
+   "note": "Label page: printed side positions A1-D2, title spelling 'Symbiosis'"
+  },
+  {
+   "id": "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778",
+   "url": "https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778",
+   "kind": "shop",
+   "note": "Tracklist A1-D2 (8 tracks, intro not listed), barcode confirmed"
+  },
+  {
+   "id": "web:https://clone.nl/item81028.html",
+   "url": "https://clone.nl/item81028.html",
+   "kind": "shop",
+   "note": "Tracklist 1-8, no durations"
+  },
+  {
+   "id": "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/",
+   "url": "https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/",
+   "kind": "shop",
+   "note": "Deviating durations (track 1 3:25 etc.)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "positions side A (uncredited intro)",
+   "values": {
+    "discogs:release/35282479": "A1 Intro, A2 Newlife, A3 Sky High",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1": "A1 Newlife, A2 Sky High",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778": "A1 Newlife, A2 Sky High",
+    "web:https://kompakt.fm/releases/horizon_begins_1": "1 Newlife, 2 Sky High"
+   },
+   "resolution": "Followed the barcode-matched Discogs edition and the label's own description ('An unknown project opens the record with an intro') plus the label's official track videos (which list 'Unknown Artist - Intro' first): intro at A1, so Newlife = A2 and Sky High = A3. Shop listings omit the uncredited intro and start side A with Newlife."
+  },
+  {
+   "field": "title track C2",
+   "values": {
+    "discogs:release/35282479": "Symbyosis",
+    "web:https://kompakt.fm/releases/horizon_begins_1": "Symbyosis",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778": "Symbyosis",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1": "Symbiosis"
+   },
+   "resolution": "'Symbyosis' as on the Discogs entry of this pressing, the distributor (Kompakt) listing and the deejay.de listing; Bandcamp writes 'Symbiosis'."
+  },
+  {
+   "field": "duration track A2",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "2:53",
+    "discogs:release/35282479/videos": "2:52",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "3:25"
+   },
+   "resolution": "173 s from the distributor listing and the official track video (1 s apart); the Juno listing (3:25) deviates by 32 s and was not used."
+  },
+  {
+   "field": "duration track A3",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "6:21",
+    "discogs:release/35282479/videos": "6:25",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "6:02"
+   },
+   "resolution": "381 s from the Kompakt listing of the 2x12\"; official video is 4 s longer (likely silence/tail), Juno 19 s shorter."
+  },
+  {
+   "field": "duration track B1",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "6:50",
+    "discogs:release/35282479/videos": "6:51",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "6:53"
+   },
+   "resolution": "410 s from Kompakt; video 411 s and Juno 413 s are close, Kompakt taken as primary (full-length master metadata)."
+  },
+  {
+   "field": "duration track B2",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "6:57",
+    "discogs:release/35282479/videos": "7:02",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "7:02"
+   },
+   "resolution": "417 s from Kompakt; video and Juno are 5 s longer - Kompakt taken as primary."
+  },
+  {
+   "field": "duration track C1",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "6:56",
+    "discogs:release/35282479/videos": "6:57",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "6:51"
+   },
+   "resolution": "416 s from Kompakt; video 1 s apart, Juno 5 s shorter."
+  },
+  {
+   "field": "duration track C2",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "8:29",
+    "discogs:release/35282479/videos": "8:29",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "8:23"
+   },
+   "resolution": "509 s, Kompakt and the official video agree exactly; Juno 6 s shorter."
+  },
+  {
+   "field": "duration track D1",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "5:34",
+    "discogs:release/35282479/videos": "5:38",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "5:37"
+   },
+   "resolution": "334 s from Kompakt; video and Juno 3-4 s longer."
+  },
+  {
+   "field": "duration track D2",
+   "values": {
+    "web:https://kompakt.fm/releases/horizon_begins_1": "5:44",
+    "discogs:release/35282479/videos": "5:48",
+    "web:https://www.juno.co.uk/products/horizon-begins-1-vinyl/1111317-01/": "5:42"
+   },
+   "resolution": "344 s from Kompakt; Juno within 2 s, video 4 s longer."
+  }
+ ],
+ "missing": [
+  "duration of A1 'Intro' (uncredited track, no source gives a length)",
+  "total_duration_s excludes A1 'Intro'",
+  "MusicBrainz has no release for this barcode; no vinyl-verified durations - durations come from distributor metadata and official track videos",
+  "performer of A1 'Intro' is unknown (Discogs credits 'Unknown Artist')",
+  "credits missing for 9 of 9 tracks"
+ ],
+ "alternatives": [],
+ "reasoning": "EAN 4250101487415 is valid and hits exactly one release, Discogs 35282479: Orion Records ORNVS01, 2x12\" 45 RPM vinyl-only compilation, Germany, 24 Oct 2025. Tracklist, side positions and titles are confirmed by the label's Bandcamp page, deejay.de, clone.nl and the Kompakt distributor listing; the uncredited intro at the start of side A is documented in the Discogs notes, the label description and the label's official track videos. No MusicBrainz release exists; durations are taken from the Kompakt listing of this 2x12\" and cross-checked against the official track videos (0-5 s apart); the Juno listing deviates partly strongly and was only used as a cross-check."
+}

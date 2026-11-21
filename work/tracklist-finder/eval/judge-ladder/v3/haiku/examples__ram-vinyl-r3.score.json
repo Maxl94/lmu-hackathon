@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:23",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: no barcode in input - NOT MET. Level 4: no barcode, so the alternative path applies; title, artist, format and label/catno/year are unambiguous across MB 4867ceba and Discogs 4570366, but the input fits several editions with DIFFERENT tracklists (2014 US box set MB fc1eb6d6 with 34 tracks; 2023 10th Anniversary MB 4375c18f with 22 tracks), and the input does not rule them out - NOT MET. Level 3: several editions fit, but not all share the same tracklist - NOT MET. Level 2: several editions fit and at least one has a different tracklist (box set, 10th anniversary), and the choice rests on the inference that the plain 2×LP is meant - MET. Level 1 not applicable because a fitting edition was found.",
+   "summary": "The input has no barcode, title/artist/format fit several editions, and the 2014 box set and 2023 10th Anniversary have different tracklists that the input does not exclude, so the choice rests on weak signals.",
+   "evidence": [
+    "tl-mb search output: musicbrainz:release/fc1eb6d6 (2014 box set, tracks 6+7+2+15+4) and musicbrainz:release/4375c18f (2023, tracks 6+7+9)",
+    "tl-discogs search output: 19 hits incl. discogs:release/9216088, 31621720, 38684262",
+    "INPUT has no barcode, year, or country"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources (musicbrainz:release/4867ceba and discogs:release/4570366) agree on count (13), order (A1-D4) and titles; only spelling/case variants (\"Doin' It Right\" vs \"Doin’ It Right\", \"Give Life Back To Music\" vs \"...to Music\") - MET. Durations differ by 1-2 s, which is rounding and not relevant to count/order/titles.",
+   "summary": "Two independent database sources agree on 13 tracks, their order and their titles, differing only in spelling and case.",
+   "evidence": [
+    "tl-mb release 4867ceba: 13 tracks A1-D4 with titles",
+    "tl-discogs release 4570366: 13 tracks A1-D4 with titles"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no primary source (cover/booklet/label print) read - NOT MET. Level 4: two independent database entries with differing details (MB durations in ms and ISRCs; Discogs runout/matrix data and notes) - MET.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details support the edition, but no primary source was read.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "MB search output lists 4867ceba as '2013-05-20 FR', while the detail call lists it as '2013-05-17 DE'; the result reports country DE without reconciling this.",
+  "Result country DE vs. Discogs 4570366 which is 'UK, Europe & US'; the result calls it 'Erstpressung' based on Discogs notes, but the country attribution is not fully supported.",
+  "Alternative 'discogs:release/28924120' (2023 Drumless Edition) and the '2022' reissue claim for 31621720 do not appear in the visible tool output (truncated); unverified.",
+  "Durations differ between sources (e.g. A1 274 vs 275 s, C2 367 vs 369 s, D4 381 vs 383 s); the result calls this rounding, which is plausible but not explicitly verified per track.",
+  "Alternative why_not for the 2014 box set begins with a stray leading space; minor formatting issue.",
+  "The result's confidence of 0.85 is not justified by the edition evidence, since several fitting editions with different tracklists exist and no barcode was given."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 13.2,
+  "tokens_in": 20174,
+  "tokens_out": 2796,
+  "cost_usd": 0.00342,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,45 @@
+{"ts": 1795186769.65, "event": "run_start", "input": {"title": "Letter To The Last Generation", "artist": "Simone White"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186769.65, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186769.65, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186769.65, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186769.65, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186773.28, "event": "tool_start", "tool": "tl-mb", "args": "search --title Letter To The Last Generation --artist Simone White"}
+{"ts": 1795186773.29, "event": "tool_end", "tool": "tl-mb", "args": "search --title Letter To The Last Generation --artist Simone White", "seconds": 0.0, "ok": true}
+{"ts": 1795186773.46, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Letter To The Last Generation --artist Simone White"}
+{"ts": 1795186773.46, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Letter To The Last Generation --artist Simone White", "seconds": 0.0, "ok": true}
+{"ts": 1795186774.98, "event": "tool_start", "tool": "tl-mb", "args": "release 3e181b19-08b7-484d-a8e6-51cfc31e7e34"}
+{"ts": 1795186774.98, "event": "tool_end", "tool": "tl-mb", "args": "release 3e181b19-08b7-484d-a8e6-51cfc31e7e34", "seconds": 0.0, "ok": true}
+{"ts": 1795186775.19, "event": "tool_start", "tool": "tl-mb", "args": "release 8091316c-3dd0-4e5e-ae26-564c0f1ae131"}
+{"ts": 1795186775.19, "event": "tool_end", "tool": "tl-mb", "args": "release 8091316c-3dd0-4e5e-ae26-564c0f1ae131", "seconds": 0.0, "ok": true}
+{"ts": 1795186778.28, "event": "tool_start", "tool": "tl-discogs", "args": "release 16199441"}
+{"ts": 1795186778.28, "event": "tool_end", "tool": "tl-discogs", "args": "release 16199441", "seconds": 0.0, "ok": true}
+{"ts": 1795186780.62, "event": "tool_start", "tool": "tl-caa", "args": "3e181b19-08b7-484d-a8e6-51cfc31e7e34"}
+{"ts": 1795186780.91, "event": "tool_end", "tool": "tl-caa", "args": "3e181b19-08b7-484d-a8e6-51cfc31e7e34", "seconds": 0.3, "ok": true}
+{"ts": 1795186783.05, "event": "tool_start", "tool": "tl-vision", "args": "--help"}
+{"ts": 1795186783.06, "event": "tool_end", "tool": "tl-vision", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795186784.88, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/pv1WXgZGCDjfxVuTkV2t32KVEnAQ-bmWoftqtN4QvtQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTE2MTk5/NDQxLTE2MDUxMzYzNTEtNTc1OC5qcGVn.jpeg --context Simone White - Letter To The Last Generation, vinyl LP Fetch Happened Records FETCH003 2020"}
+{"ts": 1795186785.11, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/pv1WXgZGCDjfxVuTkV2t32KVEnAQ-bmWoftqtN4QvtQ/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTE2MTk5/NDQxLTE2MDUxMzYzNTEtNTc1OC5qcGVn.jpeg --context Simone White - Letter To The Last Generation, vinyl LP Fetch Happened Records FETCH003 2020", "seconds": 0.2, "ok": false}
+{"ts": 1795186789.91, "event": "tool_start", "tool": "tl-search", "args": "Simone White \"Letter to the Last Generation\" vinyl Fetch Happened back cover"}
+{"ts": 1795186790.99, "event": "tool_end", "tool": "tl-search", "args": "Simone White \"Letter to the Last Generation\" vinyl Fetch Happened back cover", "seconds": 1.1, "ok": true}
+{"ts": 1795186792.94, "event": "tool_start", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode firecrawl"}
+{"ts": 1795186796.93, "event": "tool_end", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode firecrawl", "seconds": 4.0, "ok": true}
+{"ts": 1795186798.59, "event": "tool_start", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode firecrawl"}
+{"ts": 1795186798.59, "event": "tool_end", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186800.29, "event": "tool_start", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode http"}
+{"ts": 1795186800.38, "event": "tool_end", "tool": "tl-scrape", "args": "https://simonewhite1.bandcamp.com/album/letter-to-the-last-generation --mode http", "seconds": 0.1, "ok": true}
+{"ts": 1795186819.9, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/16199441-Simone-White-3-Letter-To-The-Last-Generation --mode firecrawl"}
+{"ts": 1795186822.47, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/16199441-Simone-White-3-Letter-To-The-Last-Generation --mode firecrawl", "seconds": 2.6, "ok": true}
+{"ts": 1795186826.86, "event": "tool_start", "tool": "tl-search", "args": "fetchhappened bandcamp \"Letter To The Last Generation\" Simone White vinyl tracklist"}
+{"ts": 1795186828.1, "event": "tool_end", "tool": "tl-search", "args": "fetchhappened bandcamp \"Letter To The Last Generation\" Simone White vinyl tracklist", "seconds": 1.2, "ok": true}
+{"ts": 1795186828.3, "event": "tool_start", "tool": "tl-search", "args": "\"Simone White\" \"Letter to the Last Generation\" FETCH003 vinyl back cover tracklist Harvest Shadow Pass"}
+{"ts": 1795186829.41, "event": "tool_end", "tool": "tl-search", "args": "\"Simone White\" \"Letter to the Last Generation\" FETCH003 vinyl back cover tracklist Harvest Shadow Pass", "seconds": 1.1, "ok": true}
+{"ts": 1795186838.3, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0030039687_10.jpg --context Simone White - Letter To The Last Generation, vinyl LP 2020 Fetch Happened Records FETCH003"}
+{"ts": 1795186842.35, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0030039687_10.jpg --context Simone White - Letter To The Last Generation, vinyl LP 2020 Fetch Happened Records FETCH003", "seconds": 4.0, "ok": true}
+{"ts": 1795186845.99, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0029712290_10.jpg --context Simone White - Letter To The Last Generation, vinyl LP 2020 Fetch Happened Records FETCH003, back cover with tracklist"}
+{"ts": 1795186853.55, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0029712290_10.jpg --context Simone White - Letter To The Last Generation, vinyl LP 2020 Fetch Happened Records FETCH003, back cover with tracklist", "seconds": 7.6, "ok": true}
+{"ts": 1795186904.23, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 33, "steps": 34}
+{"ts": 1795186904.23, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186911.2, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 11 tracks, ISRC 1"}
+{"ts": 1795186911.2, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186930.68, "event": "phase_end", "phase": "judge", "ok": true, "level": "rot", "overall": 2.8, "error": null}
+{"ts": 1795186930.68, "event": "run_end", "valid": true, "status": "found", "level": "rot", "overall": 2.8, "tracks": 11, "wall_s": 134.6, "judge_s": 19.5, "cost_usd": 0.0556, "mode": "agent", "errors": []}

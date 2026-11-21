@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:17",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: Input contains barcode 731456031125 and matches exactly in >= 2 independent sources (MET: musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 via 0731456031125 OR 731456031125 and discogs:release/23145932 via barcode=731456031125); format and artist match (MET: format CD matches input, artist Various Artists fits); no other edition with the same barcode and a different tracklist (MET: all 3 Discogs CD hits 23145932, 1949898, 26676554 and the MusicBrainz hit share the same 40-track tracklist).",
+   "summary": "The input barcode and CD format match unambiguously across MusicBrainz and Discogs with no competing tracklist variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles with spelling variants only (MET: musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932 both list 40 tracks in identical order, differing only in minor spelling/subtitle formatting on 1|10, 2|2, and 2|6 plus 4 small duration differences).",
+   "summary": "Both MusicBrainz and Discogs agree on all 40 tracks in count, order, and titles aside from minor spelling variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source of the same edition (NOT MET: only two database entries are used, no cover/booklet/label primary source). Level 4: Two independent database entries recognisable by differing details (MET: musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932 show independent details such as differing track title formatting on 1|10, 2|2, 2|6 and differing durations on 1|5, 1|7, 2|14, 2|18).",
+   "summary": "Two independent databases (MusicBrainz and Discogs) with visibly distinct track details back the result, without an additional primary source.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: release-level artists list is empty instead of listing every distinct artist on the carrier.",
+  "Inconsistent track numbering in conflicts: 'Titel Track 22' and 'Titel Track 26' use overall numbering (2|2 and 2|6), whereas 'Dauer Track 14' and 'Dauer Track 18' use per-disc positions for Disc 2 (2|14 and 2|18, not 1|14 and 1|18)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 15.0,
+  "tokens_in": 9573,
+  "tokens_out": 2639,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

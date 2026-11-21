@@ -1,0 +1,376 @@
+{
+ "input": {
+  "id": "18-matthias-petzold-slow-migration",
+  "title": "Slow Migration",
+  "artist": "Matthias Petzold"
+ },
+ "status": "found",
+ "release": {
+  "title": "Slow Migration",
+  "artist": "Matthias Petzold",
+  "format": "CD",
+  "country": "DE",
+  "year": 2026,
+  "label": "Indigo Records",
+  "catno": "1015 CD",
+  "barcode": null,
+  "edition": "CD incl. poster (artwork by Shakur Leni Allan)",
+  "ids": {}
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Bullbush River Shuffle",
+   "artist": null,
+   "duration_s": 305,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "La Migration Des Turtues",
+   "artist": null,
+   "duration_s": 353,
+   "sources": [
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "image:https://f4.bcbits.com/img/0048343178_5.jpg"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Ankunft der Störche",
+   "artist": null,
+   "duration_s": 426,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Playground",
+   "artist": null,
+   "duration_s": 366,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Deserts",
+   "artist": null,
+   "duration_s": 396,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Abrahams Reise",
+   "artist": null,
+   "duration_s": 341,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Dreamtime",
+   "artist": null,
+   "duration_s": 447,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Heavy Rotation",
+   "artist": null,
+   "duration_s": 326,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "flags": [
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Epilog: Three Kings",
+   "artist": null,
+   "duration_s": 331,
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ],
+   "duration_sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Matthias Petzold",
+     "role": "composer",
+     "sources": [
+      "web:https://petzold-jazz.de/cds/slow-migration/"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Matthias Petzold",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration"
+   ]
+  },
+  {
+   "name": "Bela Nicolini",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ]
+  },
+  {
+   "name": "Ulrike Zavelberg",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ]
+  },
+  {
+   "name": "Norman Peplow",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ]
+  },
+  {
+   "name": "Sebastian Ascher",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ]
+  },
+  {
+   "name": "Thomas Esch",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://petzold-jazz.de/cds/slow-migration/"
+   ]
+  }
+ ],
+ "total_duration_s": 3291,
+ "confidence": 0.75,
+ "sources": [
+  {
+   "id": "web:https://petzold-jazz.de/cds/slow-migration/",
+   "url": "https://petzold-jazz.de/cds/slow-migration/",
+   "kind": "web",
+   "note": "Official artist site: CD on Indigo Records 1015 CD, 2026, 9 tracks with durations, personnel, composer credit"
+  },
+  {
+   "id": "web:https://matthiaspetzold.bandcamp.com/album/slow-migration",
+   "url": "https://matthiaspetzold.bandcamp.com/album/slow-migration",
+   "kind": "streaming",
+   "note": "Artist Bandcamp: CD + digital album, same 9 tracks; digital durations differ on tracks 6 and 8"
+  },
+  {
+   "id": "image:https://f4.bcbits.com/img/0048343178_10.jpg",
+   "url": "https://f4.bcbits.com/img/0048343178_10.jpg",
+   "kind": "image",
+   "note": "Back cover scan (Bandcamp CD art): tracks 1-3 printed with durations 5:05 / 5:53 / 7:06, track 2 printed 'La Migration Des Turtues'; no barcode visible"
+  },
+  {
+   "id": "image:https://f4.bcbits.com/img/0048343178_5.jpg",
+   "url": "https://f4.bcbits.com/img/0048343178_5.jpg",
+   "kind": "image",
+   "note": "Second read of the same cover art: 9 tracks read, track 2 spelling 'La Migration Des Turtues' as printed, LC-0576 on CD label, no barcode"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 2",
+   "values": {
+    "image:https://f4.bcbits.com/img/0048343178_10.jpg": "La Migration Des Turtues",
+    "web:https://petzold-jazz.de/cds/slow-migration/": "La Migration des Tortues",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration": "La Migration des Tortues"
+   },
+   "resolution": "Printed cover spelling used (carrier takes precedence); the artist site and Bandcamp use the French spelling 'des Tortues' – the cover may carry a typo or the vision read may misread 'o' as 'u'"
+  },
+  {
+   "field": "title track 9",
+   "values": {
+    "web:https://petzold-jazz.de/cds/slow-migration/": "Epilog: Three Kings",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration": "Three Kings"
+   },
+   "resolution": "CD tracklist on the artist site used ('Epilog: Three Kings'); Bandcamp digital album lists 'Three Kings'"
+  },
+  {
+   "field": "duration track 6",
+   "values": {
+    "web:https://petzold-jazz.de/cds/slow-migration/": "5:41",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration": "5:44"
+   },
+   "resolution": "CD value 341 s chosen; Bandcamp gives 344 s for the digital master (3 s difference, above rounding tolerance)"
+  },
+  {
+   "field": "duration track 8",
+   "values": {
+    "web:https://petzold-jazz.de/cds/slow-migration/": "5:26",
+    "web:https://matthiaspetzold.bandcamp.com/album/slow-migration": "5:56"
+   },
+   "resolution": "CD value 326 s chosen; Bandcamp digital master lists 356 s (30 s difference – likely a different edit or a Bandcamp typo)"
+  }
+ ],
+ "missing": [
+  "no barcode/EAN found on the CD panels or in any database",
+  "no MusicBrainz or Discogs entry for this release",
+  "printed title and duration of track 9 not verified on the cover image (image budget exhausted)"
+ ],
+ "alternatives": [
+  {
+   "description": "Bandcamp digital album 'Slow Migration', 9 tracks, same titles except track 9 'Three Kings'",
+   "source": "web:https://matthiaspetzold.bandcamp.com/album/slow-migration",
+   "why_not": "digital edition; input is a physical sound carrier and the CD edition is documented on the artist site and sold on Bandcamp"
+  }
+ ],
+ "reasoning": "No barcode given and no MusicBrainz/Discogs entry exists. The artist's own site documents the 2026 CD 'Slow Migration' on Indigo Records 1015 CD with 9 tracks, durations and personnel; the Bandcamp CD listing confirms a physical CD with the same 9 tracks, and the back-cover scan confirms the printed titles and durations of tracks 1-3. CD durations from the artist site were used; the Bandcamp digital album differs on two durations and on track 9's title."
+}

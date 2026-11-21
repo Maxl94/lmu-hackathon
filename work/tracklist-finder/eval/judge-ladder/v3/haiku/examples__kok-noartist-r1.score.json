@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:13",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: input has no barcode - NOT MET. Level 4: barcode absent, and the input gives no artist; competing editions with different tracklists exist (Bushido 2004 Exclusive with 20 tracks, MB 15996385; Sean Kingston 2011 with 13 tracks, MB 82bac6d9) - NOT MET. Level 3: several editions fit the title/format and do not share one tracklist - NOT MET. Level 2: several editions fit and at least one has a DIFFERENT tracklist; the choice of Bushido 2003 rests only on weak signals (no artist or barcode in input) - MET.",
+   "summary": "The input gives only title and format, and several CD editions titled King of Kingz have different tracklists (16, 20 and 13 tracks), so the choice of the Aggro Berlin 2003 edition is not reliably determined.",
+   "evidence": [
+    "tl-mb search output (MB c3466232, 15996385, 99ca4959, 82bac6d9)",
+    "tl-discogs search output (769288, 3057907, 16502868)",
+    "result alternatives list",
+    "INPUT (no artist, no barcode)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - MET: MB c3466232 (tl-mb release), Discogs 769288 (tl-discogs release) and musik-sammler 140817 all list 16 tracks in the same order with matching titles (only spelling/feature-credit variants such as 'Ich hab euch nicht vergessen' vs 'Ich Hab Euch Nicht Vergessen' and feature credits). Durations differ by a few seconds, which does not affect count, order or titles.",
+   "summary": "Three sources of the same edition agree on the count of 16 tracks, their order and titles, with only spelling and credit variants.",
+   "evidence": [
+    "tl-mb release c3466232 output",
+    "tl-discogs release 769288 output",
+    "web:musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ (tl-scrape output)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print) - NOT MET: no cover, booklet or label print was read; MB only lists cover flags. Level 4: two independent database entries or database + specialised collector site - MET: MusicBrainz c3466232 and Discogs 769288 (database), plus musik-sammler.de 140817 (collector site).",
+   "summary": "Two database entries (MusicBrainz and Discogs) plus the specialised collector site musik-sammler.de support the edition, but no primary source was read.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Edition level: the input has no artist and no barcode, yet the result names Bushido as the release artist and says the choice is the 'Standard-CD'; the choice among Bushido 2003, Bushido 2003 MZEE (16 tracks, no barcode) and Bushido 2004 (20 tracks) rests on weak signals and is not resolved by the input.",
+  "Unsupported claim in reasoning: 'GEMA-Kontext' and 'CD-Erstveröffentlichung des bekannten deutschen Albums' are not shown in the tool outputs (the Discogs identifiers only list 'Rights Society: GEMA' for 769288, not as a decision criterion).",
+  "Discogs notes (769288) say 'Sternenstaub is a bonus-track that is not contained on the original release from 2001'; the result does not mention this, although it is relevant to which edition the tracklist refers to.",
+  "Sternenstaub duration conflict (track 16): MB 221 s (3:41), musik-sammler 3:41, Discogs 218 s (3:38), and the MZEE MB entry 99ca4959 also gives 3:38; the result's claim that durations match 'bis auf Rundungsdifferenzen ≤1 s' is not true for track 16 (3 s), and the result's statement 'Trackliste dreifach belegt' is only partly accurate.",
+  "Track 12 'Kalter Krieg' and track 15 'Vack You!': MB and Discogs list 'Frank White' as the feature, whereas musik-sammler 140817 lists 'Fler' for both; the result does not flag this artist-credit conflict.",
+  "Total duration: the result states total_duration_s 3096, while the MB release reports 3095 s and Discogs 3087 s; the result does not document this difference.",
+  "Musik-sammler 140817 says the entry is the second CD edition and the first was without EAN; the result's claim that the MZEE edition is 'erste CD-Auflage ohne EAN' is only partly supported by this tool output."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 16.0,
+  "tokens_in": 28177,
+  "tokens_out": 3387,
+  "cost_usd": 0.00451,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

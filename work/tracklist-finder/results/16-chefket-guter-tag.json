@@ -1,0 +1,524 @@
+{
+ "input": {
+  "id": "16-chefket-guter-tag",
+  "title": "GUTER TAG",
+  "artist": "CHEFKET"
+ },
+ "status": "found",
+ "release": {
+  "title": "Guter Tag",
+  "artist": "Chefket",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2013,
+  "label": "Can Can Recordings",
+  "catno": "CC001",
+  "barcode": "4018939256937",
+  "edition": "LP, Limited Edition, Mixtape",
+  "ids": {
+   "musicbrainz": "ad68439b-6423-4a79-a543-f68edacf5363",
+   "discogs": "5204273"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Mcee",
+   "artist": null,
+   "duration_s": 110,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/330769"
+     ]
+    },
+    {
+     "name": "Menace (USA)",
+     "role": "producer",
+     "sources": [
+      "genius:song/330769"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Geld Ist Nicht Alles",
+   "artist": null,
+   "duration_s": 170,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Yes Y'all",
+   "artist": null,
+   "duration_s": 95,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/309971"
+     ]
+    },
+    {
+     "name": "Menace0711",
+     "role": "producer",
+     "sources": [
+      "genius:song/309971"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Guter Tag",
+   "artist": null,
+   "duration_s": 134,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/307635"
+     ]
+    },
+    {
+     "name": "Q-Cut",
+     "role": "producer",
+     "sources": [
+      "genius:song/307635"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A5",
+   "disc": 1,
+   "title": "Optimist",
+   "artist": "Chefket feat. Tua",
+   "duration_s": 162,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/309907"
+     ]
+    },
+    {
+     "name": "Menace0711",
+     "role": "producer",
+     "sources": [
+      "genius:song/309907"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A6",
+   "disc": 1,
+   "title": "Easy Come Easy Go",
+   "artist": "Chefket feat. Amewu",
+   "duration_s": 153,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chris Fader",
+     "role": "producer",
+     "sources": [
+      "genius:song/310306"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Kippen (Skit)",
+   "artist": null,
+   "duration_s": null,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [],
+   "flags": [
+    "duration_missing"
+   ],
+   "credits": []
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "Kippenbekenntnis",
+   "artist": null,
+   "duration_s": 250,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/313601"
+     ]
+    },
+    {
+     "name": "Chefket",
+     "role": "producer",
+     "sources": [
+      "genius:song/313601"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Cüneyt (Skit)",
+   "artist": null,
+   "duration_s": 14,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Cok Güzel",
+   "artist": "Chefket feat. Amewu",
+   "duration_s": 162,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "writer",
+     "sources": [
+      "genius:song/310374"
+     ]
+    },
+    {
+     "name": "Menace0711",
+     "role": "producer",
+     "sources": [
+      "genius:song/310374"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B5",
+   "disc": 1,
+   "title": "Kremlnalitaet",
+   "artist": null,
+   "duration_s": 120,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Chefket",
+     "role": "producer",
+     "sources": [
+      "genius:song/325680"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B6",
+   "disc": 1,
+   "title": "Was Ich Nicht Bin",
+   "artist": null,
+   "duration_s": 177,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B7",
+   "disc": 1,
+   "title": "Jetzt",
+   "artist": null,
+   "duration_s": 85,
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Menace0711",
+     "role": "producer",
+     "sources": [
+      "genius:song/338529"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Chefket",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273"
+   ]
+  },
+  {
+   "name": "Tua",
+   "role": "featured",
+   "tracks": [
+    "A5"
+   ],
+   "sources": [
+    "discogs:release/5204273",
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363"
+   ]
+  },
+  {
+   "name": "Amewu",
+   "role": "featured",
+   "tracks": [
+    "A6",
+    "B4"
+   ],
+   "sources": [
+    "discogs:release/5204273",
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363"
+   ]
+  }
+ ],
+ "total_duration_s": 1632,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+   "url": "https://musicbrainz.org/release/ad68439b-6423-4a79-a543-f68edacf5363",
+   "kind": "database",
+   "note": "same barcode and catno CC001, but entered as CD; tracklist, order and durations identical to the Discogs LP"
+  },
+  {
+   "id": "discogs:release/5204273",
+   "url": "https://www.discogs.com/release/5204273",
+   "kind": "database",
+   "note": "vinyl LP limited edition mixtape, back-cover barcode 4018939256937, matrix etchings Chefket K SST / Guter Tag Mixtape K SST"
+  },
+  {
+   "id": "musicbrainz:release/eef84b47-74b8-4b6d-a6c0-131173f5c577",
+   "url": "https://musicbrainz.org/release/eef84b47-74b8-4b6d-a6c0-131173f5c577",
+   "kind": "streaming",
+   "note": "digital edition used to confirm feat. credits (Tua, Amewu)"
+  },
+  {
+   "id": "web:hhv",
+   "url": "https://www.hhv.de/records/artikel/chefket-guter-tag-468410",
+   "kind": "shop",
+   "note": "lists only a vinyl LP edition (2013, DE), no CD"
+  },
+  {
+   "id": "genius:song/330769",
+   "url": "https://genius.com/Chefket-mcee-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/309971",
+   "url": "https://genius.com/Chefket-yes-yall-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/307635",
+   "url": "https://genius.com/Chefket-guter-tag-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/309907",
+   "url": "https://genius.com/Chefket-optimist-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/310306",
+   "url": "https://genius.com/Chefket-easy-come-easy-go-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/313601",
+   "url": "https://genius.com/Chefket-kippenbekenntnis-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/310374",
+   "url": "https://genius.com/Chefket-cok-guzel-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/325680",
+   "url": "https://genius.com/Chefket-kremlnalitaet-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/338529",
+   "url": "https://genius.com/Chefket-jetzt-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "format",
+   "values": {
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363": "CD",
+    "discogs:release/5204273": "Vinyl LP, Limited Edition, Mixtape"
+   },
+   "resolution": "Vinyl LP chosen: back-cover barcode 4018939256937 and matrix etchings 'Chefket K SST' / 'Guter Tag Mixtape K SST' on Discogs, HHV lists only the LP; the MB CD entry shares barcode and catno CC001 and is treated as a format data error."
+  },
+  {
+   "field": "title track 7",
+   "values": {
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363": "Kippen (Skit)",
+    "discogs:release/5204273": "Kippen Skit"
+   },
+   "resolution": "MusicBrainz spelling used; Discogs entry likely drops the parentheses."
+  },
+  {
+   "field": "title track 9",
+   "values": {
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363": "Cüneyt (Skit)",
+    "discogs:release/5204273": "Cüneyt Skit"
+   },
+   "resolution": "MusicBrainz spelling used; Discogs entry likely drops the parentheses."
+  }
+ ],
+ "missing": [
+  "duration for track B1 'Kippen (Skit)' is missing in both databases",
+  "no back-cover image readable (Discogs image server returned HTTP 403), spelling of the skit titles taken from database entries",
+  "credits missing for 4 of 13 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "CD, Can Can Recordings CC001, 2013-12-20, 13 tracks (MusicBrainz only)",
+   "source": "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+   "why_not": "no CD edition documented in Discogs, shops or matrix data; same barcode and catno as the LP, likely a format error; the CD positions (1-13) correspond to the LP tracklist"
+  },
+  {
+   "description": "Digital Media, 12 tracks, 2017-12-22 (MusicBrainz / Deezer album 53855512)",
+   "source": "musicbrainz:release/eef84b47-74b8-4b6d-a6c0-131173f5c577",
+   "why_not": "digital edition, omits the 'Kippen (Skit)' track and has different durations (Cok Güzel 156 s, Kremlnalitaet 110 s, Was Ich Nicht Bin 176 s)"
+  },
+  {
+   "description": "Guter Tag (Chris Fader DJ-Mix), digital single/mix, Juice Magazin, 2013-12-21",
+   "source": "musicbrainz:release/81e77c20-e36b-473b-b42a-f45fe43e7c4a",
+   "why_not": "23:34 continuous DJ mix, not the album"
+  }
+ ],
+ "reasoning": "No barcode/format given in the input; title+artist search yields the 2013 Chefket mixtape 'Guter Tag' (Can Can Recordings CC001). The physical edition documented with barcode 4018939256937 on the back cover and matrix etchings is the vinyl LP (Discogs); its 13-track list, order and durations match the MusicBrainz entry with the same barcode and catno (entered there as CD). The digital edition confirms the feat. credits Tua and Amewu."
+}

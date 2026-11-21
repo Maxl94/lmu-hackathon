@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:47:18",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: 'The INPUT contains a barcode, and it matches exactly this edition in >= 2 independent sources; format and artist match; no other edition with the same barcode and a different tracklist.' - MET: Barcode 731456031125 / 0731456031125 matches in MusicBrainz (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941) and Discogs (discogs:release/23145932); format (CD) matches, and alternative Discogs releases sharing the barcode also feature identical track counts and listings.",
+   "summary": "The input barcode matches the release exactly in both MusicBrainz and Discogs without conflicting editions.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' - MET: Both MusicBrainz and Discogs list 40 tracks in identical sequence, with only minor capitalization/orthography variants (e.g. 'Straßen' vs. 'Strassen') and parenthetical notes.",
+   "summary": "MusicBrainz and Discogs agree completely on track count, sequence, and titles with only minor typographical variations.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: 'Database + independent primary source of the same edition.' - NOT MET: Only database entries are used without verification against primary artwork/scans.\nLevel 4: 'Two independent database entries (recognisable by differing details) or database + specialised collector site.' - MET: Two independent databases (MusicBrainz and Discogs) are cited, showing distinct detail variations (such as track durations and subtitle notation).",
+   "summary": "Two independent databases (MusicBrainz and Discogs) confirm the release details.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 30.9,
+  "tokens_in": 8216,
+  "tokens_out": 1368,
+  "cost_usd": 0.01242,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

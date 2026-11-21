@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:31",
+ "overall": 1.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: 'The INPUT contains a barcode...' - NOT MET: Input does not contain a barcode. Level 4: 'Barcode match in only one source - or, without barcode: title, artist, format and at least one further attribute... unambiguous in >= 2 sources' - NOT MET: The input format is CD, but the release identified is a Cassette (discogs:release/24165131). Level 3: 'Unambiguous but backed by only one source... or several editions fit but ALL share the same tracklist' - NOT MET: Result contradicts the requested CD format. Level 2: 'Several editions fit the input and at least one of them has a DIFFERENT tracklist...' - NOT MET: No CD release was found at all. Level 1: 'No edition fits reliably, or the result contradicts the input (other barcode, other format, other artist/title), or not found.' - MET: Result format ('Kassette') contradicts input format ('CD'), and no CD edition could be found.",
+   "summary": "The input specifies CD format, but the result provides a cassette release because no CD edition exists.",
+   "evidence": [
+    "discogs:release/24165131"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only).' - NOT MET: The two sources cited (discogs:release/24165131 and image:discogs/back-cover) are not independent, as the image is hosted on the same Discogs submission. Level 4: 'One complete source of the same edition, confirmed by a second one except for small explained deviations...' - NOT MET: Lacks a second distinct/independent source confirming the edition. Level 3: 'Only one source of the same edition, complete and plausible.' - MET: Discogs entry 24165131 provides a complete and plausible 10-track tracklist, fully corroborated by its J-card cover scan.",
+   "summary": "The 10 tracks are fully supported and plausible based on a single Discogs cassette submission and its scanned J-card.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: 'Database + independent primary source...' - NOT MET: The primary cover image is hosted directly on the same Discogs entry. Level 4: 'Two independent database entries... or database + specialised collector site' - NOT MET: Only Discogs was found. Level 3: 'One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry).' - MET: Discogs database entry plus the J-card image scan hosted on that same entry.",
+   "summary": "The research relies on one Discogs database entry and its accompanying cover scan.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction: Input requested 'CD', but the result is for a 'Kassette' (MC6109) as no CD edition could be found.",
+  "Track artists are empty across all tracks (A1-B4), triggering a validation error."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 32.2,
+  "tokens_in": 14280,
+  "tokens_out": 3107,
+  "cost_usd": 0.0246,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T16:06:10",
+ "overall": 4.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode matches exactly in MusicBrainz and Discogs (2 sources, checksum OK), format CD and artist match, no other edition with the same barcode. Barcode match in two independent database sources is MET; but 'independent primary source' is not required here, only >=2 sources matching barcode, which is MET. No competing edition with same barcode and different tracklist found (1 hit each). Level 5 conditions are all met, though the sources are both databases and the Discogs entry is a 2016 Germany reissue while MusicBrainz is 1998 DE; the barcode is identical so the same carrier is plausible. Strictly, the 2016 vs 1998 year difference is an unexplained attribute discrepancy, which lowers confidence below full level 5 because the year attribute is not reconciled between sources.",
+   "summary": "Barcode matches exactly in two databases, but the year differs (1998 in MusicBrainz vs 2016 in Discogs) and this discrepancy is not explained, so full level 5 is not secured.",
+   "evidence": [
+    "musicbrainz:release/a4a09112-9569-4f65-97cc-f0aa66aa3839",
+    "discogs:release/11507547",
+    "tool: MusicBrainz search barcode:(4027795500399): 1 hits",
+    "tool: Discogs search barcode=4027795500399: 1 hits"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources agree on count (17), order and titles; the only title difference is 'The Ride, Part II' vs 'The Ride (Pt II)' which is a spelling variant. Level 5 MET on count/order/titles. Durations differ on track 17 (4:21 vs 4:18) and track 17 has only MusicBrainz for duration confirmation in the flags; this is a duration deviation, not a title/count issue, so it does not drop the tracklist rating below 5 under the rubric's titles/count/order criteria, but it is an unresolved deviation affecting the stated 'confirmed' share.",
+   "summary": "Count, order and titles agree across both sources with only a spelling variant, but track 17 duration deviates by 3 seconds and is resolved only by a fixed source-precedence rule rather than by agreement.",
+   "evidence": [
+    "musicbrainz:release/a4a09112-9569-4f65-97cc-f0aa66aa3839",
+    "discogs:release/11507547",
+    "tool: 17 tracks: titles agree, 17 durations in both sources, 1 difference(s) > 2 s"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: requires database + independent primary source (cover/booklet/label print). Not MET: no primary source (no cover, booklet or label print, no label site) is cited. Level 4: two independent database entries with differing details: MusicBrainz and Discogs are two database entries, and they differ in details (year 1998 vs 2016, title spelling of track 3, track 17 duration). MET. Stop at level 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with recognisably differing details support the result, but no primary source was consulted.",
+   "evidence": [
+    "musicbrainz:release/a4a09112-9569-4f65-97cc-f0aa66aa3839",
+    "discogs:release/11507547"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Edition year conflict unaddressed: MusicBrainz lists 1998-05-18 DE, Discogs lists Germany 2016; the result reports year 1998 without noting the discrepancy.",
+  "Track 17 'Frontera' duration conflict (MusicBrainz 4:21 vs Discogs 4:18) resolved by a fixed source-precedence rule; the FACTS list dur_confirmed_share 0.941, so track 17 is not confirmed by both sources.",
+  "Track 3 title spelling difference ('The Ride, Part II' vs 'The Ride (Pt II)') resolved by rule; MusicBrainz spelling chosen without independent verification.",
+  "Result 'edition' field is null and no primary source (cover/booklet/label print) was checked, so the edition-specific attributes rest only on database entries.",
+  "Artist-level 'tracks' list is empty while the track-level artist field is blank; minor structural gap, no effect on the title list.",
+  "Agent confidence 0.9 is higher than the evidence (two databases, one unresolved duration conflict, one unexplained year conflict) supports."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 17,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.941,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 7.4,
+  "tokens_in": 6914,
+  "tokens_out": 1467,
+  "cost_usd": 0.00142,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 17,
+   "of": 17
+  }
+ }
+}

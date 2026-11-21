@@ -1,0 +1,95 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:47",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "L5 needs a barcode match: the input has no barcode, so NOT MET. L4 needs, without a barcode, an unambiguous match in >=2 sources and no fitting edition with a different tracklist. The first part is arguably MET, since MB 4867ceba and Discogs 4570366 share the barcode 888837168618 and cat.no. 88883716861. The second part is NOT MET: the MB search output lists the 2023 10th Anniversary 3xLP (4375c18f, tracks 6+7+9 = 22) and the 2014 box set (fc1eb6d6, 34 tracks). Both are Vinyl, and the input only says 'Vinyl', so it does not rule them out. L3 needs unambiguous with one source, or all fitting editions sharing a tracklist: NOT MET for the same reason. L2 needs several fitting editions with at least one having a different tracklist and a choice resting on weak signals: MET. The choice of the standard 2013 2xLP rests only on the assumption that the unqualified title means the standard album.",
+   "summary": "The input is only title, artist and 'Vinyl', and vinyl editions with different tracklists (10th Anniversary 3xLP with 22 tracks, 2014 box set with 34 tracks) are not ruled out, so the choice of the standard 2013 2xLP rests on weak signals.",
+   "evidence": [
+    "tl-mb search (step 2)",
+    "tl-discogs search (step 1)",
+    "tl-mb release 4867ceba (step 5)",
+    "tl-discogs release 4570366 (step 6)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "L5 needs >=2 independent sources of the same edition agreeing on count, order and titles (spelling variants only). MET: MB release 4867ceba (step 5) and Discogs release 4570366 (step 6) both list 13 tracks in order A1-D4 with the same titles, differing only in capitalisation and apostrophe. Both entries describe the original 2013 2xLP first pressing with the same barcode and cat.no. MB and Discogs are separate databases with separate data. Durations differ by 1-2 s on A1, A2, C2 and D4, but this does not affect count, order or titles. The result takes the MB values.",
+   "summary": "MusicBrainz and Discogs agree on 13 tracks, order A1-D4 and titles for the same first-pressing edition.",
+   "evidence": [
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "L5 needs a database plus an independent primary source (cover, booklet, label print, label or manufacturer information): NOT MET, since no primary source was consulted. The Discogs notes and images were not used as a read of the label print. L4 needs two independent database entries (recognisable by differing details) or a database plus a specialised collector site: MET. MusicBrainz (4867ceba) and Discogs (4570366) are separate databases, and the differing durations (e.g. C2 367 vs 369, D4 381 vs 383) and differing release details (MB: DE 2013-05-17; Discogs: UK, Europe & US) show they are independent entries.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "status 'found' is set although alternatives with different tracklists exist (10th Anniversary 3xLP with 22 tracks, 2014 box set with 34 tracks). The edition-disambiguation skill in step 3 says this should be 'ambiguous'.",
+  "The note on the Discogs source says 'Dauern bestätigt', but durations differ on A1 (274 vs 275), A2 (321 vs 322), C2 (367 vs 369) and D4 (381 vs 383). The 'rounding' explanation is plausible but the C2 and D4 gaps of 2 s are not clearly rounding.",
+  "Release country 'DE' comes from MB's release detail. The MB search output in step 2 shows the same release as '2013-05-20 FR', and Discogs lists 'UK, Europe & US'. This inconsistency is not noted.",
+  "Alternatives mention a Drumless Edition (discogs:28924120) and 2022 reissues. The visible evidence excerpt does not show them, because the output is truncated, so they are not verifiable here.",
+  "The reasoning excludes the 3xLP and box set only because the input is 'namentlich unqualifiziert'. That is an assumption, not evidence from the input."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 18.2,
+  "tokens_in": 20127,
+  "tokens_out": 2295,
+  "cost_usd": 0.0632,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:42",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 trifft exakt dieselbe Ausgabe (ersguterjunge 40195 9396000-0, 2004, CD, 20 Tracks) in MusicBrainz und Discogs (Schritte 2–5); musik-sammler.de bestätigt dieselbe EAN, und die CAA-Rückseite zeigt den Barcode 4 019593 960000. Format und Künstler stimmen. Andere Ausgaben haben andere Barcodes.",
+   "belege": [
+    "tl-mb search --barcode",
+    "tl-discogs search --barcode",
+    "musik-sammler.de/release/bushido-king-of-kingz-cd-44531",
+    "tl-vision Rückseite"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs und musik-sammler.de (gleiche EAN) stimmen in Anzahl (20), Reihenfolge und Titeln überein, nur Schreibvarianten (Track 11 'Pitbull'/'Pittbull'). Die gedruckte Rückseite bestätigt dies ebenfalls, inkl. 'PITTBULL'.",
+   "belege": [
+    "tl-mb release 15996385",
+    "tl-discogs release 3057907",
+    "tl-scrape musik-sammler.de",
+    "tl-vision Rückseite"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 85% von ≥ 2 Quellen bestätigt, 3 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei unabhängige Datenbanken mit abweichenden Details (Dauern) plus musik-sammler.de und eine Primärquelle (abgelesene Rückseite mit Trackliste, Barcode und Katalognummer).",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:musik-sammler.de",
+    "image:coverartarchive Rückseite"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Discogs weicht bei den Tracks 10, 15 und 16 um 2–3 s ab. Gewählt wurden die MusicBrainz-Werte, die musik-sammler.de stützt. Die Rückseite enthält keine Dauern, eine Primärquelle für die Dauern fehlt also.",
+  "Die Lesung der Rückseite stammt aus dem tl-vision-Modell; Track 20 'OUTRO (ersguterdevin)' wurde dort als unsicher markiert.",
+  "Die Confidence im Ergebnis (0,9) weicht von der zuletzt geschriebenen Datei (0,93) ab. Das ist eine kleine Inkonsistenz."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 8.8,
+  "tokens_in": 41543,
+  "tokens_out": 875,
+  "cost_usd": 0.18367,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

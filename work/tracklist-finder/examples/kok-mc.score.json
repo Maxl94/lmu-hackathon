@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Die Eingabe hat keinen Barcode. Titel, Interpret, Format (Kassette), Label (I Luv Money Records) und Jahr 2001 stimmen in MusicBrainz und Discogs überein. Discogs führt aber sechs Kassetten-Auflagen (2001–2003). Welche Auflage MusicBrainz und musik-sammler beschreiben, ist nicht eindeutig zugeordnet. Alle Auflagen haben laut Belegen dieselbe Trackliste, die Wahl ist also unerheblich. Das entspricht genau Stufe 3.",
+   "belege": [
+    "tl-mb search",
+    "tl-discogs search",
+    "tl-discogs versions 211928",
+    "tl-discogs release 1951581/17280904/18354001/18354166/18354289/4256710"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs 1951581 und musik-sammler.de stimmen in Anzahl (16), Reihenfolge und Dauern exakt überein. Die Abweichungen sind nur Schreibvarianten: Nute/Nutte, Pitbull/Pit Bull, Hast du Mut/Hast Du Mut?, Vack You!/Vack You. Die musik-sammler-Seite wurde vollständig gelesen.",
+   "belege": [
+    "tl-mb release 19fd3695-68df-4e95-884a-da6938aae5cf",
+    "tl-discogs release 1951581",
+    "tl-scrape musik-sammler 917995 (Schritt 16)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es gibt zwei Datenbanken (MusicBrainz, Discogs) und eine spezialisierte Sammlerseite (musik-sammler.de). Die per Vision gelesenen Cover- und Etikettbilder bestätigen zwar Titel, Label und Format, enthalten aber keine Trackliste. Als Primärbeleg für die Trackliste fehlen sie damit, Stufe 5 ist nicht erfüllt.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "tl-vision (3 Bilder, 0 Tracks gelesen)"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Kat.-Nr. 'ILM 003' stammt aus MusicBrainz. Discogs nennt '03', die gelesene J-Card zeigt 'ILM1'. Das wurde nicht aufgelöst.",
+  "Die Angabe 'Erstauflage (Limited Edition)' ist nicht belegt zugeordnet. Weder für MusicBrainz noch für musik-sammler.de ist belegt, dass sie die Discogs-Erstauflage 1951581 beschreiben.",
+  "Discogs 1951581 bezeichnet die Seiten als 'Side B'/'Side U' statt A/B (Etikett-Aufdruck). Die Positionen A1–B8 sind trotzdem konsistent.",
+  "Die Feature-Künstler stammen aus MusicBrainz. Musik-sammler nennt für A8 andere Namen ('Baktus & Orgasmus'). Die Aliasauflösung ist eine Agent-Behauptung ohne Beleg.",
+  "Die Bildquelle ist als Quelle aufgeführt, trägt aber nichts zur Trackliste bei."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 31528,
+  "tokens_out": 2062,
+  "cost_usd": 0.16735,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

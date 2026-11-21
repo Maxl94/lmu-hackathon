@@ -1,0 +1,86 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:24:15",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 trifft in MusicBrainz (15996385…) und in Discogs (3057907) jeweils genau eine CD-Ausgabe von Bushido – King of Kingz, DE, 2004-10-25. Eine konkurrierende Ausgabe mit gleichem Barcode und anderer Trackliste ist nicht bekannt. Format und Künstler stimmen mit dem Input überein.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Beide Datenbanken nennen 20 Tracks mit übereinstimmenden Titeln in gleicher Reihenfolge. Abweichungen gibt es nur bei den Dauern von Track 15 und 16 (jeweils 3 s), aufgelöst per Regel zugunsten von MusicBrainz. Anzahl, Reihenfolge und Titel sind damit nicht betroffen.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor (MusicBrainz und Discogs). Sie unterscheiden sich in Details, etwa im Editionszusatz 'Exclusive 2004 Edition', in der Länderangabe und in den Dauern. Eine Primärquelle (Cover, Booklet, Label) fehlt.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Dauerkonflikte bei Track 15 (2:21 vs. 2:18) und Track 16 (3:41 vs. 3:38) wurden nur per fester Regel zugunsten von MusicBrainz aufgelöst, nicht inhaltlich geprüft.",
+  "Die Katalognummer '40195 9396000-0' wirkt aus dem Barcode abgeleitet; in der Evidenz ist sie nicht belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 8.0,
+  "tokens_in": 5250,
+  "tokens_out": 763,
+  "cost_usd": 0.03626,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

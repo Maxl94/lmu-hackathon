@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:50",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains a barcode: MET (ean 731456031125, checksum ok per FACTS). (2) Matches exactly this edition in >= 2 independent sources: MET (MusicBrainz barcode search hits musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941; Discogs barcode search hits discogs:release/23145932, plus two other identical-tracklist pressings discogs:release/1949898 and discogs:release/26676554). (3) Format and artist match: MET (CD matches CD+CD/2xCD in both sources; no artist given in input, title Bravo Hits 30 matches 100%). (4) No other edition with the same barcode and a different tracklist: MET (only 1 MusicBrainz release and 3 Discogs CD releases, all 40-track Bravo Hits 30 editions from 2000 with the same tracklist). All Level 5 conditions MET.",
+   "summary": "Exact barcode 731456031125 matches Bravo Hits 30 (2xCD) in both MusicBrainz and Discogs with no competing edition having a different tracklist.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: (1) >= 2 independent sources of the same edition: MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932). (2) Agree on count, order and titles (spelling variants only): MET (tool output confirms all 40 tracks match in count, order, and titles across both sources; the 3 logged title conflicts on Track 10, Disc 2 Track 2, and Disc 2 Track 6 are minor spelling/formatting variants such as capitalization, ss vs ß, and an Album Version suffix; 36 of 40 durations match within 2s and 4 differ by 3-4s, resolved consistently in favor of MusicBrainz). All Level 5 conditions MET.",
+   "summary": "Both independent sources agree on all 40 tracks in count, order, and titles with only minor spelling/formatting variants.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (cover/booklet/label print, label or manufacturer info): NOT MET (only database sources were used, source_kinds is [database]). Level 4: Two independent database entries recognisable by differing details: MET (musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 and discogs:release/23145932 are from two separate databases and show differing details in 3 title spellings/suffixes, ms vs mm:ss precision, and 4 track durations differing by 3-4 seconds). All Level 4 conditions MET.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with verifiable differing details were used, but no primary source such as cover or booklet was consulted.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error in result (per FACTS): the artists array is empty instead of listing every distinct artist on the carrier.",
+  "Inconsistent track indexing in conflicts: Disc 2 title conflicts use global indices ('Titel Track 22' for Disc 2 Pos 2 and 'Titel Track 26' for Disc 2 Pos 6), while Disc 2 duration conflicts use disc-local positions without specifying the disc ('Dauer Track 14' refers to Disc 2 Pos 14 at 3:19/199s rather than Disc 1 Pos 14 at 233s; 'Dauer Track 18' refers to Disc 2 Pos 18 at 3:40/220s rather than Disc 1 Pos 18 at 206s).",
+  "The evidence log only displays track counts ('40 Tracks, 40 mit Dauer') for the two alternative Discogs entries (discogs:release/1949898 and discogs:release/26676554) rather than explicitly printing their tracklist comparison."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 48.1,
+  "tokens_in": 9573,
+  "tokens_out": 4479,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

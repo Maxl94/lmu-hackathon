@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:19",
+ "overall": 4.6,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: input barcode 888837168626 fails the check digit; correction gives 888837168625, which matches MB DE (f6758afb), MB US (a8308466), Discogs 4729785 and the CAA back cover (barcode and Columbia 88883716862). Format CD and artist match. Other editions with a different barcode (10th anniversary, Japan, vinyl) are excluded. NOT MET in full: the Discogs barcode search returned 27 hits (tool call 5, truncated), and the other pressings sharing barcode 888837168625 were not checked for tracklist, so 'no other edition with the same barcode and a different tracklist' is not verified. Level 4: barcode match in at least two sources, with a correction-based barcode and an unverified competitor set. Stopped at 4.",
+   "summary": "The corrected barcode matches the DE and US MusicBrainz releases and Discogs, but the other barcode-matching pressings in the 27 Discogs hits were not checked for tracklist, so the edition cannot be rated 5.",
+   "evidence": [
+    "shell 1 (check digit correction)",
+    "tool call 4 (MB barcode search 888837168625)",
+    "tool call 5 (Discogs barcode search, 27 hits, truncated)",
+    "tool call 6 (MB DE release)",
+    "tool call 7 (Discogs 4729785 barcode)",
+    "tool call 9 (CAA back cover barcode)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MB DE, MB US, Discogs 4729785 and the CAA back cover all list 13 tracks in the same order with the same titles (only spelling/apostrophe variants such as Doin’ It Right / Doin' it Right). MET.",
+   "summary": "Count, order and titles agree across at least two independent sources (MusicBrainz DE/US, Discogs and the cover read).",
+   "evidence": [
+    "tool call 6 (MB DE track list)",
+    "tool call 7 (Discogs track list)",
+    "tool call 9 (back cover vision read)",
+    "tool call 10 (MB US track list)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database entries (MusicBrainz DE, Discogs 4729785) plus a primary read of the CD back cover (tl-vision on CAA image) for the same edition. MET. Caveat: the cover image is served from the MusicBrainz/CAA entry, so it is not fully independent of MusicBrainz.",
+   "summary": "Two database entries and a read of the physical back cover of the same edition are available.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input EAN 888837168626 has an invalid check digit; the agent assumed a typo and corrected it to 888837168625. This is supported by the notes field but is an inference.",
+  "Discogs barcode search (tool call 5) returned 27 hits, truncated in the output; the tracklists of the other barcode-matching pressings (e.g. release 4715855 South Korea, 12858653) were not verified, although the result claims identical tracks for all of them.",
+  "Track 13 'Contact' duration conflict: MB 384 s (CD-TOC 383626 ms) vs Discogs 381 s. The explanation that Discogs reflects the digital/streaming version is speculation, not supported by the evidence.",
+  "Discogs durations for tracks 3-11 are consistently 1 s lower than MB (truncation vs rounding); the result's statement that Discogs differs by ≤1 s for 12 tracks is accurate but the rounding explanation is not verified.",
+  "The edition label 'Standard-Edition 2013 (EU-Pressung)' is only partly supported: Discogs says 'Europe' and 'Made in EU', while MB says DE; the edition name itself is not documented in the evidence.",
+  "The back-cover image comes from the CAA entry linked to the MusicBrainz release, so it is not fully independent of MusicBrainz.",
+  "The total_duration_s 4477 s is the sum of MB CD-TOC durations; the Discogs sum (4468 s) is noted in the evidence but not in the result."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 16.3,
+  "tokens_in": 28892,
+  "tokens_out": 3334,
+  "cost_usd": 0.00456,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

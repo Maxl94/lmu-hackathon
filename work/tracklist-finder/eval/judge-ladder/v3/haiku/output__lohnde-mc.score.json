@@ -1,0 +1,109 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:39:49",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5 (barcode input): NOT MET - input has no barcode. 4 (barcode match in one source, or without barcode: title/artist/format plus one further attribute unambiguous in >=2 sources, and no competing edition with different tracklist): title, artist, format match in discogs:release/24165131 (tl-discogs search hit) and J-card images; further attribute catno MC 6109 and label Fred Kersten KG appear in discogs DB entry and cassette shell label images (tl-vision); but Discogs search also returned Folge 2 (r24154076, 'Swinging Seelze', same series, different release) - a competing edition whose tracklist was not checked in evidence, so the no-different-tracklist condition is not verifiably met. 3: unambiguous but backed by one source - NOT the case since multiple sources exist. 2: several editions fit and at least one has a different tracklist - Folge 2 is a series part 2 of the same title, and the 'Folge 1' suffix is in the title of the result; the input lacks 'Folge 1', so the series-part ambiguity is present and not resolved by evidence. Rating 2.",
+   "summary": "Input has no barcode and the input title omits 'Folge'; the sibling release Blasmusik Aus Lohnde (Folge 2, r24154076) fits the same title/artist/format but its tracklist was never compared, so the edition choice rests on weak signals.",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-discogs search title+artist",
+    "tl-search hit 2 r24154076 Folge 2",
+    "tl-vision cassette shell label MC 6109"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: NOT MET - only the Discogs database entry and J-card images (same release) list tracks; no two independent sources beyond the same release. 4: one complete source confirmed by a second except small deviations: MET in part - tracklist of 10 tracks on Discogs DB (scrape) matches J-card back image (tl-vision, 10 tracks read) and Seite 1 image (6 tracks) with identical titles; the J-card images are the same release's cover, so the second source is a primary print of the same edition, arguably confirming. Title spelling variants (Kein schöner Land vs Kein Schöner Land, Memories of vs Memories Of) are minor. Count, order and titles agree across sources. Level 4 conditions met.",
+   "summary": "Ten tracks with order and titles agree between Discogs DB and J-card OCR, with only capitalization variants, confirmed by a second source of the same release.",
+   "evidence": [
+    "discogs:release/24165131 release page",
+    "discogs scrape firecrawl table A1-B4",
+    "image J-card back tl-vision 10 tracks read",
+    "image J-card inside tl-vision 6 tracks read Seite 1"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: NOT MET - no independent primary source is a read label/booklet of this edition beyond vision OCR; the J-card and shell label images are readable primary prints but the tracklist-relevant image shows tracks only via vision read of cover images hosted on Discogs. Strictly, primary print images are from the Discogs database entry (same host), so not independent of the database. 4: Two independent database entries (differing details) or database + specialised collector site: NOT MET - only one database entry (r24165131); the Folge 2 entry is a different release. Database + collector site (musik-sammler.de) not found for this edition. 3: One good database: MET - one Discogs database entry with discogs DB and cover images from same entry.",
+   "summary": "Only one good database entry (Discogs r24165131) supports the edition, with cover images hosted on that same entry, and no collector-site or independent primary source confirms it.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:...kpFf7 (tl-vision 0 tracks)",
+    "image:...aWGAw J-card back (same database entry)",
+    "tl-search musik-sammler.de - no entry for this release"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs search for Folge 2 (r24154076, Swinging Seelze, same title/artist/format family) was not checked for its tracklist; the result does not rule it out, and the input title lacks 'Folge 1'.",
+  "Result sets edition 'Folge 1' and catno MC 6109 though input lacks these; the agent did not explain why Folge 1 is chosen over Folge 2.",
+  "Result claims 'Keine MusicBrainz-Übereinstimmung' - supported by tl-mb search returning 0 releases.",
+  "Result's 'country DE' and label Fred Kersten KG are supported by the shell label images and Discogs label page; year null is honestly flagged.",
+  "Title in result 'Blasmusik Aus Lohnde (Folge 1)' differs from input 'Blasmusik aus Lohnde'; the agent treated this as the same edition without evidence the input refers to Folge 1.",
+  "Durations are absent in all sources (duration_missing), so total duration cannot be verified; this is honestly reported.",
+  "Track 'Dankeschön, Bert Kaempfert!' and 'Memories Of Cole Porter' capitalization varies across sources; spelling-only variants."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.1,
+  "tokens_in": 21064,
+  "tokens_out": 1714,
+  "cost_usd": 0.00296,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

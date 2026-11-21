@@ -1,0 +1,65 @@
+{"ts": 1795186885.94, "event": "run_start", "input": {"title": "Jackfruit Traxx 1", "artist": "Various Artists"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186885.94, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186885.94, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186885.94, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186885.94, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186888.83, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Jackfruit Traxx 1 --artist Various Artists"}
+{"ts": 1795186888.84, "event": "tool_start", "tool": "tl-mb", "args": "search --title Jackfruit Traxx 1 --artist Various Artists"}
+{"ts": 1795186888.84, "event": "tool_end", "tool": "tl-mb", "args": "search --title Jackfruit Traxx 1 --artist Various Artists", "seconds": 0.0, "ok": true}
+{"ts": 1795186889.28, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Jackfruit Traxx 1 --artist Various Artists", "seconds": 0.4, "ok": true}
+{"ts": 1795186891.03, "event": "tool_start", "tool": "tl-mb", "args": "search --title Jackfruit Traxx"}
+{"ts": 1795186891.03, "event": "tool_end", "tool": "tl-mb", "args": "search --title Jackfruit Traxx", "seconds": 0.0, "ok": true}
+{"ts": 1795186891.03, "event": "tool_start", "tool": "tl-search", "args": "Jackfruit Traxx 1"}
+{"ts": 1795186891.2, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Jackfruit Traxx"}
+{"ts": 1795186891.2, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Jackfruit Traxx", "seconds": 0.0, "ok": true}
+{"ts": 1795186892.18, "event": "tool_end", "tool": "tl-search", "args": "Jackfruit Traxx 1", "seconds": 1.1, "ok": true}
+{"ts": 1795186893.94, "event": "tool_start", "tool": "tl-search", "args": "\"Jackfruit Traxx 1\" release tracklist"}
+{"ts": 1795186893.94, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Traxx Salad"}
+{"ts": 1795186893.94, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Traxx Salad", "seconds": 0.0, "ok": true}
+{"ts": 1795186894.11, "event": "tool_start", "tool": "tl-mb", "args": "search --title Traxx Salad"}
+{"ts": 1795186894.97, "event": "tool_end", "tool": "tl-search", "args": "\"Jackfruit Traxx 1\" release tracklist", "seconds": 1.0, "ok": true}
+{"ts": 1795186907.86, "event": "tool_end", "tool": "tl-mb", "args": "search --title Traxx Salad", "seconds": 13.7, "ok": true}
+{"ts": 1795186909.43, "event": "tool_start", "tool": "tl-search", "args": "Jackfruit Traxx --site discogs.com"}
+{"ts": 1795186909.44, "event": "tool_start", "tool": "tl-discogs", "args": "release 36475918"}
+{"ts": 1795186909.44, "event": "tool_end", "tool": "tl-discogs", "args": "release 36475918", "seconds": 0.0, "ok": true}
+{"ts": 1795186910.55, "event": "tool_end", "tool": "tl-search", "args": "Jackfruit Traxx --site discogs.com", "seconds": 1.1, "ok": true}
+{"ts": 1795186912.5, "event": "tool_start", "tool": "tl-search", "args": "\"Jackfruit Traxx 1\" vinyl 12\""}
+{"ts": 1795186912.55, "event": "tool_start", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/music --grep -i traxx"}
+{"ts": 1795186912.56, "event": "tool_end", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/music --grep -i traxx", "seconds": 0.0, "ok": false}
+{"ts": 1795186913.46, "event": "tool_end", "tool": "tl-search", "args": "\"Jackfruit Traxx 1\" vinyl 12\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186914.77, "event": "tool_start", "tool": "tl-search", "args": "Jackfruit Traxx JFXX"}
+{"ts": 1795186914.82, "event": "tool_start", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/music --grep Traxx|traxx"}
+{"ts": 1795186914.86, "event": "tool_end", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/music --grep Traxx|traxx", "seconds": 0.0, "ok": true}
+{"ts": 1795186916.02, "event": "tool_end", "tool": "tl-search", "args": "Jackfruit Traxx JFXX", "seconds": 1.2, "ok": true}
+{"ts": 1795186920.08, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/ --grep -i track|Nesi|Dompe|Ohrmann|min"}
+{"ts": 1795186920.08, "event": "tool_start", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1 --grep  --max 6000"}
+{"ts": 1795186920.09, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/ --grep -i track|Nesi|Dompe|Ohrmann|min", "seconds": 0.0, "ok": false}
+{"ts": 1795186920.14, "event": "tool_end", "tool": "tl-scrape", "args": "https://jackfruitrec.bandcamp.com/album/traxx-salad-vol-1 --grep  --max 6000", "seconds": 0.1, "ok": true}
+{"ts": 1795186922.74, "event": "tool_start", "tool": "tl-scrape", "args": "https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html --max 5000"}
+{"ts": 1795186922.74, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/ --max 4000"}
+{"ts": 1795186922.77, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.selectedwax.com/album/various_traxx_salad_vol_1_jfxx1_excl_vinyl__1188613/ --max 4000", "seconds": 0.0, "ok": true}
+{"ts": 1795186922.79, "event": "tool_end", "tool": "tl-scrape", "args": "https://techno-import.fr/en/racine/56945-various-traxx-salad-vol-1.html --max 5000", "seconds": 0.1, "ok": true}
+{"ts": 1795186926.9, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Nesi --title Old School"}
+{"ts": 1795186926.97, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/label/jack-fruit-recordings --grep TRAXX SALAD"}
+{"ts": 1795186927.28, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/label/jack-fruit-recordings --grep TRAXX SALAD", "seconds": 0.3, "ok": true}
+{"ts": 1795186927.31, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Nesi --title Old School", "seconds": 0.4, "ok": true}
+{"ts": 1795186927.5, "event": "tool_start", "tool": "tl-itunes", "args": "search Nesi Old School"}
+{"ts": 1795186928.22, "event": "tool_end", "tool": "tl-itunes", "args": "search Nesi Old School", "seconds": 0.7, "ok": true}
+{"ts": 1795186930.61, "event": "tool_start", "tool": "tl-search", "args": "Dompe \"No Place Like Heim\""}
+{"ts": 1795186930.61, "event": "tool_end", "tool": "tl-search", "args": "Dompe \"No Place Like Heim\"", "seconds": 0.0, "ok": true}
+{"ts": 1795186930.69, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/096XfgXQMzp5iz2D7O28iAybdpKNWEeWP-XTs4au5jA/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM2NDc1OTE4LTE3NzA5MDkyODctNjAwMS5qcGVn.jpeg --context Back cover of vinyl 12-inch 'Traxx Salad Vol. 1' on JackFruit Traxx JFXX1. Read tracklist exactly: positions"}
+{"ts": 1795186931.0, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/096XfgXQMzp5iz2D7O28iAybdpKNWEeWP-XTs4au5jA/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM2NDc1OTE4LTE3NzA5MDkyODctNjAwMS5qcGVn.jpeg --context Back cover of vinyl 12-inch 'Traxx Salad Vol. 1' on JackFruit Traxx JFXX1. Read tracklist exactly: positions", "seconds": 0.3, "ok": false}
+{"ts": 1795186934.67, "event": "tool_start", "tool": "tl-search", "args": "\"Jackfruit Traxx\" \"Vol. 1\" OR \"Vol.1\" compilation 2026"}
+{"ts": 1795186934.73, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.deejay.de/m_Exclusive/lang_fr --grep Heim|JFXX1|Traxx Salad"}
+{"ts": 1795186935.81, "event": "tool_end", "tool": "tl-search", "args": "\"Jackfruit Traxx\" \"Vol. 1\" OR \"Vol.1\" compilation 2026", "seconds": 1.1, "ok": true}
+{"ts": 1795186942.27, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.deejay.de/m_Exclusive/lang_fr --grep Heim|JFXX1|Traxx Salad", "seconds": 7.5, "ok": true}
+{"ts": 1795186942.49, "event": "tool_start", "tool": "tl-discogs", "args": "search --catno JFXX1"}
+{"ts": 1795186942.5, "event": "tool_end", "tool": "tl-discogs", "args": "search --catno JFXX1", "seconds": 0.0, "ok": true}
+{"ts": 1795186945.74, "event": "tool_start", "tool": "tl-search", "args": "deejay.de Traxx Salad Vol.1 JFXX1"}
+{"ts": 1795186947.25, "event": "tool_end", "tool": "tl-search", "args": "deejay.de Traxx Salad Vol.1 JFXX1", "seconds": 1.5, "ok": true}
+{"ts": 1795186970.36, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 27, "steps": 16}
+{"ts": 1795186970.37, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186970.37, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186970.37, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186980.54, "event": "phase_end", "phase": "judge", "ok": true, "level": "rot", "overall": 2.85, "error": null}
+{"ts": 1795186980.54, "event": "run_end", "valid": true, "status": "found", "level": "rot", "overall": 2.85, "tracks": 4, "wall_s": 84.4, "judge_s": 10.2, "cost_usd": 0.015, "mode": "agent", "errors": []}

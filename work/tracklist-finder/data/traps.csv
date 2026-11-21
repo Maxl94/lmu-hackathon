@@ -1,0 +1,5 @@
+id,title,artist,ean,format,notes
+trap-wrong-ean,King of Kingz,Bushido,888837168625,CD,
+trap-fake-album,Lichterglanz über dem Wendelstein,Die Almrausch-Buam,,MC,
+trap-artist-mismatch,Random Access Memories,Kastelruther Spatzen,,CD,
+trap-wrong-format,Blasmusik aus Lohnde,Musikverein Lohnde,,CD,

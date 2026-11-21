@@ -1,0 +1,99 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:24",
+ "overall": 2.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 1 – richtige Ausgabe nicht gesichert",
+  "Trackliste nur Stufe 2",
+  "Barcode im Ergebnis passt nicht zur Eingabe"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 1,
+   "begruendung": "Die Input-EAN 888837168625 ist gültig und gehört laut MusicBrainz (5 Releases), Discogs (27 Treffer) und iTunes eindeutig zu Daft Punk – Random Access Memories. Das Ergebnis liefert eine Bushido-CD mit anderer EAN (4018939105976). Damit widerspricht es dem Input-Barcode. Titel und Artist passen zwar, die Auswahl der Aggro-Berlin-Ausgabe ist aber eine Annahme des Agenten.",
+   "belege": [
+    "bin/tl-mb search --barcode 0888837168625",
+    "bin/tl-discogs search --barcode 0888837168625",
+    "bin/tl-itunes upc 888837168625",
+    "discogs:release/769288",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 2,
+   "begruendung": "Für die gewählte Bushido-CD stimmen MusicBrainz und Discogs 769288 bei 16 Titeln in Reihenfolge und Schreibweise überein (nur Groß-/Kleinschreibung weicht ab). Zur Input-EAN gehört aber eine andere Ausgabe (Daft Punk, 13 Tracks). Die Trackliste stammt damit aus einer anderen Edition als der, auf die der Barcode verweist.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "bin/tl-itunes upc 888837168625"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor (MusicBrainz und Discogs), erkennbar an abweichenden Dauern, z. B. Track 16 mit 3:41 bzw. 3:38. Musik-sammler.de wurde nur angerissen: Belegt sind lediglich die Gesamtzeit und Track 1. Eine Primärquelle wie Cover- oder Booklet-Lesung fehlt.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Input-EAN 888837168625 gehört eindeutig zu Daft Punk – Random Access Memories. Das Ergebnis ersetzt sie eigenmächtig durch 4018939105976; der Input ist in sich widersprüchlich und sollte manuell geklärt werden.",
+  "Der Agent behauptet, die korrekte EAN für diese Ausgabe sei 4018939105976. Das ist eine Annahme: Es gibt weitere 16-Track-Aggro-Ausgaben ohne Barcode (Discogs 3645154 und 18354424, MusicBrainz 99ca4959 MZEE-Edition).",
+  "musik-sammler.de wurde nur teilweise ausgelesen (Gesamtzeit 51:26, Track 1). Eine vollständige Bestätigung der Trackliste ist nicht belegt.",
+  "Die Gesamtdauer 3096 s weicht leicht von der MusicBrainz-Summe ab (3095 s); Discogs nennt 3087 s."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 16.4,
+  "tokens_in": 13443,
+  "tokens_out": 1741,
+  "cost_usd": 0.08859,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

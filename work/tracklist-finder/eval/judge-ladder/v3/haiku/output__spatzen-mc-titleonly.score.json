@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:39:57",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: no barcode in input - NOT MET. Level 4: no barcode, but title, format (MC) and artist are unambiguous and label/catno/year/country agree across MB and Discogs; however another edition fitting title+format exists with a different artist/tracklist (discogs:release/8491193, Various, 1995 Germany cassette compilation, not ruled out since input gives no artist), and the Poland cassette (discogs:release/16402359) is not checked - NOT MET. Level 3: several editions fit and the choice does not clearly not matter - NOT MET. Level 2: several editions fit and at least one has a different tracklist (8491193 Various compilation) - MET.",
+   "summary": "Several cassette editions with the same title exist, including a 1995 Various-artist compilation with a different tracklist that the input does not rule out, so the choice rests on weak signals.",
+   "evidence": [
+    "tl-discogs search: discogs:release/8491193 (Various, 1995, Cassette, Compilation)",
+    "tl-discogs search: discogs:release/16402359 (Poland cassette, unchecked)",
+    "tl-mb search: MB cassette e0d210c6 barcode 9002722211901 matches Discogs 2297987 barcode 9 002722 211901",
+    "tl-mb group: CD and LP excluded by format"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MB (e0d210c6) and Discogs (2297987, 24889304, 15349631) agree on count (12), order and titles; kastelrutherspatzen.de lists the same 12 titles in order; Deezer and cd-lexikon also match except a minor title glitch on track 10 - MET.",
+   "summary": "At least two independent sources of the same cassette edition agree on count, order and titles.",
+   "evidence": [
+    "tl-mb release e0d210c6 tracks 1.1-1.12",
+    "tl-discogs release 2297987 A1-B6",
+    "tl-discogs release 24889304 and 15349631 A1-B6",
+    "tl-scrape kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "tl-scrape deezer.com/de/album/231158"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no independent primary source (cover/booklet/label print) read - NOT MET. Level 4: two independent database entries (MusicBrainz e0d210c6 and Discogs 2297987) with differing details (durations, catno formats) - MET; additional Deezer, Last.fm and the artist site support this.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) support the edition, but no primary cover or label print was read.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik",
+    "tl-scrape kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result adds artist 'Kastelruther Spatzen' and edition 'Original 1985 Edition' although the input has no artist; 'Original 1985 Edition' is not supported by any tool output.",
+  "Competing cassette edition discogs:release/8491193 (Various, 1995, same title and format) is not listed in alternatives and not excluded.",
+  "Discogs 16402359 (Poland cassette, AMA) was found but never checked for tracklist or barcode.",
+  "Duration conflicts are far more than the single A6 conflict reported: Discogs vs MB differ on A1 (202 vs 199), A3 (187 vs 188), A5 (140 vs 141), B1 (150 vs 152), B3 (206 vs 207), B4 (136 vs 138), B5 (185 vs 187), B6 (197 vs 196), and the total differs (2193 s vs 2226 s); the reported dur_conflicts=1 understates this.",
+  "Last.fm total 2220 s and Deezer track 10 title 'Sarner-Welle Lied Hallo Freunde' are inconsistent with the MB reading and were not discussed.",
+  "Deezer and Last.fm are digital/streaming sources and may not reflect the cassette's own timings, so they only partly confirm the 210 s choice for A6."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.4,
+  "tokens_in": 22984,
+  "tokens_out": 3431,
+  "cost_usd": 0.00401,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

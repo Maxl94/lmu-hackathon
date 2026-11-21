@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:39:48",
+ "overall": 4.6,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5: barcode input present and matches exactly in >=2 independent sources (MusicBrainz f6758afb barcode 0888837168625; Discogs 4729785 barcode 888837168625; discogs search also lists this barcode for several editions). Format CD and artist match. However, other editions with the same barcode (MB a8308466 US, Discogs 6279391 Colombia etc.) share the same 13-track list in MB/Discogs, so no different tracklist with same barcode is evidenced. Condition 'no other edition with same barcode and different tracklist' appears MET for checked editions, but only MB and Discogs 4729785 were actually fetched for tracklist comparison among DE/EU; the barcode is in >=2 sources. MET for 5 on barcode and format/artist; exclusion condition MET on evidence checked. Rating 5 is supportable but the exclusion is only partly verified (not all 27 discogs hits fetched). Stepping down to 4 for the unverified exclusion across all barcode hits.",
+   "summary": "Barcode matches in two independent databases with format and artist matching, but the exclusion of other same-barcode editions with different tracklists was not fully verified across all 27 Discogs hits and MB barcode hits.",
+   "evidence": [
+    "bin/tl-gtin 888837168625",
+    "bin/tl-discogs search --barcode 888837168625",
+    "bin/tl-mb search --barcode 888837168625",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-mb release a8308466-dd18-4912-9192-ccd0eb1878e0"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: MB (f6758afb), Discogs (4729785), MB US (a8308466) and Discogs AU (4581879) agree on 13 titles and order; iTunes also agrees on titles and order (14-track listing with an extra track count discrepancy in iTunes header only); back cover image lists the same 13 titles in same order. Count, order and titles agree across >=2 independent sources with spelling variants only (Doin' It Right vs Doin’ It Right). Level 5 met.",
+   "summary": "Multiple independent sources (MusicBrainz, Discogs, iTunes, cover back image) agree on all 13 titles and their order.",
+   "evidence": [
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-discogs release 4581879",
+    "bin/tl-itunes upc 888837168625",
+    "bin/tl-vision back cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source: Discogs/MusicBrainz are databases; the back cover image (image:caa:back, read via vision) is a primary source of the same edition showing the title list, label, catalogue number and barcode; label print LC 00162, Made in the EU. MET for level 5 for the DE edition-level text, though the cover read is of the same release only through CAA attached to MB f6758afb. Rating 5.",
+   "summary": "Two databases plus the read cover/booklet print of the same MusicBrainz release provide a database-plus-primary-source combination.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result claims 'Dauern aus MusicBrainz ... iTunes bestätigt Dauern' but iTunes total is 1:14:34 and track 1 is 274 s vs 275 s; deviations are rounding only, acceptable.",
+  "Result's 'edition' is 'Standard Edition' but no source in the evidence explicitly labels the release as Standard Edition; Discogs 4729785 is 'Album, Stereo' and MB has no edition field.",
+  "Discogs 4581879 (Australia Limited Edition, Wee Waa slipcase) shares the barcode and tracklist; the result does not mention this competing edition, though it shares the same tracklist.",
+  "Discogs search lists 27 hits with the same barcode including editions in other countries and an unofficial Russian release; not all were checked, so exclusion of differing tracklists is incomplete.",
+  "Cover read (tl-vision) notes Doin' it Right with apostrophe variant; no track durations printed on the back cover, so the cover confirms titles only.",
+  "Result's total_duration 4479 s differs from MB total 4477 s and Discogs 4468 s; the stated total is not reproduced exactly by any single source."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.1,
+  "tokens_in": 13895,
+  "tokens_out": 1553,
+  "cost_usd": 0.00217,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

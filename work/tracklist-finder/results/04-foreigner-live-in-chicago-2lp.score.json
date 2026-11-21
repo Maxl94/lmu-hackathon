@@ -1,0 +1,131 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:02",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5 (barcode 4029759205296 matches exactly; checksum ok): MET for barcode presence and exact match, but the barcode is found in only one source (discogs:release/34744227 vinyl entry); the decks.de and emp.de shop listings mention cat. no. 0220529EMU and the nervegas listing shows barcode 4029759205296, which is not fetched successfully. Only one database entry carries the EAN itself, so level 5 requires two independent sources with the barcode: NOT MET. Level 4: barcode match in only one source: MET (discogs:release/34744227 with barcode 4 029759 205296 and catno 0220529EMU; nervegas unreadable). Format Vinyl 2LP and artist Foreigner match. Other editions with different barcode and different tracklist do not exist for vinyl; CD/digital editions have different barcodes and share the same 13-track list, so no conflicting tracklist. Level 4 holds.",
+   "summary": "Exact barcode match on the Discogs 2×LP vinyl entry with catalogue number confirmed by shop listings, with no competing vinyl edition having a different tracklist, but the barcode itself is only backed by one database entry.",
+   "evidence": [
+    "discogs:release/34744227",
+    "bin/tl-gtin 4029759205296 valid",
+    "bin/tl-discogs search --barcode 4029759205296",
+    "bin/tl-discogs versions 896990",
+    "web:https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de",
+    "web:https://www.emp.de/p/live-in-chicago/583437.html"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET; vinyl tracklist is supported by discogs:release/34744227 and the CD (musicbrainz:release/13ed9b61, discogs:release/33766896) and back cover image, but the vinyl-specific source of the same edition is only one. Level 4: one complete source of the same edition (discogs vinyl, 13 tracks with side positions) confirmed by a second one with small explained deviations: the decks.de and emp.de listings confirm titles and order (MET); the CD sources agree on titles and order (MET) with explained difference of side numbering. Level 4 MET.",
+   "summary": "The 13 titles and order agree across the vinyl Discogs entry, shop listings, and the 2025 CD edition, with only side-numbering differences explained.",
+   "evidence": [
+    "discogs:release/34744227",
+    "web:https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de",
+    "web:https://www.emp.de/p/live-in-chicago/583437.html",
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "discogs:release/33766896",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: NOT MET; no independent primary source of the vinyl edition read directly (cover image read is of the CD back cover, a different edition). Level 4: two independent database entries with differing details: discogs:release/34744227 (vinyl) and musicbrainz release 13ed9b61 (CD, different barcode); but the second is a different edition, not the same edition. Database + specialised collector site: discogs vinyl entry plus decks.de/emp.de shops (shop, not collector site). Strictly, only one database entry of the same edition exists; level 3 MET: one good database entry (Discogs vinyl).",
+   "summary": "Only one database entry (Discogs vinyl) describes the exact vinyl edition, with the rest being shop listings or the CD edition, so the source quality is one good database.",
+   "evidence": [
+    "discogs:release/34744227",
+    "musicbrainz:release/13ed9b61-194b-4133-81a3-703edec19459",
+    "web:https://www.decks.de/track/foreigner-live_in_chicago/co6-y1/de",
+    "web:https://www.emp.de/p/live-in-chicago/583437.html",
+    "image:https://coverartarchive.org/release/13ed9b61-194b-4133-81a3-703edec19459/41880049212-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Durations for all 13 tracks are taken from the CD edition (different barcode 4029759205289) and flagged as duration_other_edition; vinyl durations are unverified, and track 1 differs by ~10 s on digital.",
+  "Discogs CD entry gives Double Vision as 3:58 and Juke Box Hero as 11:11 consistent with MB; the chosen 239 s for track 1 is a rounding of the CD MB 238.84 s, not a vinyl measurement.",
+  "The image source cited is the CD back cover (barcode 4029759205289, catno 0220528EMU), not the vinyl edition; the agent's claim that it confirms the vinyl edition is unsupported for the vinyl barcode.",
+  "The nervegas.com.au listing (barcode 4029759205296) was not readable beyond search snippet, and the Discogs nervegas snippet is only a search hit; the claimed second-source barcode confirmation is weak.",
+  "Track 1 duration in the result (239 s) is not directly sourced; it is an agent-chosen value between 238 s and 229 s.",
+  "Result claims 'shop listings number the programme continuously' as a fact; decks.de shows A1–A8/B1–B5 which conflicts with the Discogs side split and was resolved without evidence on the actual vinyl labelling.",
+  "Track titles in result use 'Jukebox Hero' in Discogs vs 'Juke Box Hero' in MB/decks; spelling variant only, not a conflict.",
+  "Result states the 2×LP was 'first vinyl release' and matches shop listings; that is supported by Discogs notes only."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 13,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "decks.de",
+   "discogs",
+   "emp.de",
+   "genius",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 2,
+  "alternatives": 4,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 10.7,
+  "tokens_in": 18364,
+  "tokens_out": 1951,
+  "cost_usd": 0.00281,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 13,
+   "of": 13
+  }
+ }
+}

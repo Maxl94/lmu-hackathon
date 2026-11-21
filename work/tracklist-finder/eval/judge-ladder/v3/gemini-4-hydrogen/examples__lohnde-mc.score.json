@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:28",
+ "overall": 2.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: Barcode in INPUT and matches >= 2 independent sources - NOT MET (input has no barcode, FACTS input_has_barcode=false). 4: Without barcode, title/artist/format + >= 1 attribute unambiguous in >= 2 sources and no other fitting edition has a different tracklist - NOT MET (only one Discogs entry discogs:release/24165131, and competing edition discogs:release/24154076 exists). 3: Unambiguous in one source or all fitting editions share the same tracklist - NOT MET (series part 1 vs 2: discogs:release/24154076 'Blasmusik Aus Lohnde (Folge 2)' is also an MC whose front cover credits 'Blasorchester des Musikvereins Lohnde' per tl-vision step 10 and has a completely different 10-track tracklist, while the input does not specify Folge 1 vs Folge 2). 2: Several editions fit the input and at least one has a DIFFERENT tracklist (series part 1 vs 2) - MET (discogs:release/24165131 Folge 1 vs discogs:release/24154076 Folge 2).",
+   "summary": "The input does not rule out Folge 2 (discogs:release/24154076), which is also a 'Blasmusik aus Lohnde' MC naming 'Blasorchester des Musikvereins Lohnde' on its cover and has a different tracklist.",
+   "evidence": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "image:https://i.discogs.com/wS_PFFJYZIDu1XkEVBAm2J6s9hs75zOv7WGTrBGwEiI/rs:fit/g:sm/q:90/h:381/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTU0/MDc2LTE2NjAxMDQw/NTItNDkzMC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles - NOT MET (the J-card image image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/... is hosted on the same Discogs entry discogs:release/24165131 and is not an independent second source). 4: One complete source confirmed by a second independent source except for small explained deviations - NOT MET (no independent second source exists across MusicBrainz, musik-sammler.de, hitparade.ch, Deezer, or Last.fm). 3: Only one source of the same edition, complete and plausible - MET (discogs:release/24165131 lists all 10 tracks A1-A6 and B1-B4, internally consistent with the J-card back photo read via tl-vision in step 9).",
+   "summary": "All 10 track titles and positions come from a single Discogs entry and its own hosted J-card image, with no independent second source available.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: Database + independent primary source of the same edition - NOT MET (all four image sources are hosted directly on the same Discogs release discogs:release/24165131, so they are not independent of the database entry). 4: Two independent database entries or database + specialised collector site - NOT MET (MusicBrainz, musik-sammler.de, hitparade.ch, Deezer, and Last.fm yielded 0 results). 3: One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) - MET (discogs:release/24165131 plus its hosted J-card and cassette label images read via tl-vision).",
+   "summary": "The result relies on a single Discogs database entry and cover/label images hosted on that same Discogs entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg",
+    "image:https://i.discogs.com/RkJSxZMfJe5aqx8T4JhNx85QVeO4lwA57sDfEm1rXzI/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTQtOTgxNS5qcGVn.jpeg",
+    "image:https://i.discogs.com/sXl2KgwPKEggkG-YEYn9N0aX4jRLOx_hds7G7AH6nnw/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTEtNDI2MS5qcGVn.jpeg",
+    "image:https://i.discogs.com/6UDYtdNWcpeHsUgec_aTOAfxZXwhgulmMnBddzUMGHo/rs:fit/g:sm/q:90/h:600/w:378/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTUtNDg0MS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Schema validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "Status is set to 'found' despite competing edition discogs:release/24154076 ('Blasmusik Aus Lohnde (Folge 2)', MC, front cover 'Blasorchester des Musikvereins Lohnde') which also matches the input's title, artist, and format with a different tracklist.",
+  "release.year is set to 1991 even though discogs:release/24165131 has no year and no year is printed on the J-card or cassette labels (1991 is only inferred from '1925' + 'im 67st. Jahr seines Bestehens' on image 6UDYtdNWcpeHsUgec_aTOAfxZXwhgulmMnBddzUMGHo, which could also be 1992).",
+  "All 10 track durations (A1-A6, B1-B4) are missing (duration_s=null, dur_share=0.0)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 43.3,
+  "tokens_in": 25584,
+  "tokens_out": 5382,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

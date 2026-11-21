@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:21",
+ "overall": 1.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 1 – richtige Ausgabe nicht gesichert",
+  "Trackliste nur Stufe 2",
+  "weniger als die Hälfte der Dauern belegt",
+  "Format im Ergebnis passt nicht zur Eingabe"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 1,
+   "begruendung": "Die Eingabe nennt eine CD, gefunden wurde nur die Kassette MC6109 (Discogs 24165131); Format-Konflikt laut FACTS (format_match false). Eine CD-Ausgabe wurde nirgends belegt, die Zuordnung beruht auf Titel- und Interpretengleichheit bei abweichendem Format.",
+   "belege": [
+    "discogs:release/24165131",
+    "FACTS format_match=false"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 2,
+   "begruendung": "Discogs und J-Card-Rückseite stimmen bei 10 Tracks, Reihenfolge und Titeln überein. Das gilt aber nur für die Kassette, nicht für die angefragte CD; Dauern fehlen komplett.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Discogs als Datenbank plus gelesene J-Card-Rückseite als Primärquelle (Bild stammt aber aus dem Discogs-Eintrag selbst, also nicht ganz unabhängig). Die Quellen betreffen die Kassette, nicht die CD.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Format-Widerspruch: Eingabe CD, Ergebnis Kassette (MC6109); die Trackliste darf nicht ohne Weiteres für die CD übernommen werden.",
+  "Keine Barcode-Angabe, kein Jahr; Edition nur über Titel und Interpret identifiziert.",
+  "Es wurde keine CD-Ausgabe gefunden; die Aussage 'existiert nur Kassette' ist nicht belegt, nur nicht gefunden.",
+  "Alle Dauern fehlen (duration_missing bei allen 10 Tracks).",
+  "Die J-Card-Bildquelle stammt von Discogs und ist daher nicht unabhängig von der Datenbank.",
+  "Die Vision-Auswertung der Front-Cover-Abbildung lieferte keine Tracks (0 tracks read)."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 6.1,
+  "tokens_in": 20261,
+  "tokens_out": 730,
+  "cost_usd": 0.04782,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

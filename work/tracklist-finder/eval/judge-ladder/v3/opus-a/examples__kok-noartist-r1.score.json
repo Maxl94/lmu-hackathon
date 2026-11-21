@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:16",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: input has no barcode -> NOT MET. 4: without barcode, title+artist+format+further attribute in >=2 sources AND no competing edition with different tracklist -> NOT MET: input has no artist; competing editions with different tracklists exist (Bushido Exclusive 2004 Edition, 20 tracks, MB 15996385 / discogs 3057907; Sean Kingston King of Kingz 2011, 13 tracks, MB 82bac6d9 / discogs 16502868). 3: several editions fit but all share the same tracklist -> NOT MET (16/20/13 tracks). 2: several editions fit, at least one with a different tracklist, choice rests on weak signals (GEMA context, first CD edition) -> MET.",
+   "summary": "Without artist or barcode in the input, Bushido 16-track, Bushido 20-track and Sean Kingston 13-track CDs all fit, so the choice rests on weak signals.",
+   "evidence": [
+    "bin/tl-discogs search",
+    "bin/tl-mb search",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >=2 independent sources of the same edition agree on count, order and titles -> MET: MB c3466232 (step 4), Discogs 769288 (step 5) and musik-sammler 140817 (step 10, same EAN 4018939105976) all give 16 tracks in identical order with identical titles (case/feat. notation only). The 3-s duration difference for Sternenstaub is not a title/count/order issue and is documented.",
+   "summary": "Three sources for the same barcode edition agree on 16 tracks, order and titles.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: database + independent primary source (cover/label print) -> NOT MET: no booklet or label source was read. 4: two independent database entries or database + specialised collector site -> MET: MusicBrainz and Discogs differ in details (Sternenstaub 3:41 vs 3:38, catno AGGRO 004 vs AGGRO004CD), plus musik-sammler.de.",
+   "summary": "Two independent databases plus musik-sammler.de, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input names no artist: Sean Kingston 'King of Kingz' (13 tracks) and Bushido Exclusive 2004 Edition (20 tracks) remain plausible with different tracklists; choosing Bushido 2003 rests on the GEMA context.",
+  "Track 12 and 15 featured artist given as 'Frank White' (MB); musik-sammler names it 'Fler' (same person, alias) – minor credit inconsistency.",
+  "Track 8 credits 'Hengst & Orgasmus' vs. musik-sammler 'Bass Sultan Hengzt & King Orgasmus One' – abbreviated credits.",
+  "Track 16 Sternenstaub duration conflict (Discogs and MB MZEE edition 218 s vs. MB/musik-sammler 221 s); also, musik-sammler 505095 (edition without EAN) states 3:41, while MB says 3:38 for the MZEE edition."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 13.9,
+  "tokens_in": 28177,
+  "tokens_out": 1276,
+  "cost_usd": 0.13823,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

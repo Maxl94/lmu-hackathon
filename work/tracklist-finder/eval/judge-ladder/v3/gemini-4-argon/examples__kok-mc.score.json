@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:52",
+ "overall": 4.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: INPUT contains barcode (NOT MET: input_has_barcode is false). Level 4: without barcode, title ('King of Kingz'), artist ('Bushido'), format ('Kassette'/'Cassette'/'Tape') and further attributes (label 'I Luv Money Records', catno '03'/'ILM 003', year 2001, country DE) unambiguous in >= 2 sources (MET: musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, discogs:release/1951581, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/); no other edition fitting the input has a different tracklist (MET: all 6 cassette editions under discogs master 211928 were checked in steps 4, 6, 11, 17 and share the exact same 16 tracks and durations).",
+   "summary": "Without a barcode in the input, title, artist, format, label, year, and country match across three independent sources, and all six cassette pressings share the exact same tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) (MET: musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, discogs:release/1951581, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ all list the same 16 tracks A1-B8 in the same order with identical durations, differing only in minor spelling like 'Nutte Bounce'/'Nute Bounce' or 'Pit Bull'/'Pitbull').",
+   "summary": "Three independent sources (MusicBrainz, Discogs, and Musik-Sammler) agree completely on track count, order, durations, and titles (with minor spelling variations).",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source of the same edition (NOT MET: although J-card and cassette label images were inspected in steps 8-10, no printed tracklist was visible on the cover or labels). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site (MET: MusicBrainz musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf and Discogs discogs:release/1951581 differ in spelling and feature credits, and specialised collector site musik-sammler.de web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ provides further independent confirmation).",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) as well as the specialized collector site musik-sammler.de, while the inspected cover images did not contain a printed tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "image:https://i.discogs.com/SORGJtnEhyKkE4kiNRFlgvNKbqvPUp7jbeM4JnLEheo/rs:fit/g:sm/q:90/h:568/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NTE1/ODEtMTYxMjYwMDQy/NC02MzI2LmpwZWc.jpeg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "In step 4, Discogs release 1951581 does not list featured artists in the tracklist output, whereas MusicBrainz (step 3) and musik-sammler.de (step 16, using aliases 'Baktus & Orgasmus' on A8) do."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 25.4,
+  "tokens_in": 25169,
+  "tokens_out": 1413,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

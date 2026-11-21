@@ -1,0 +1,36 @@
+{"ts": 1795185912.65, "event": "run_start", "input": {"title": "Ärger mit der Unsterblichkeit", "artist": "Andreas Dorau", "ean": "4047179677011"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185912.65, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185912.65, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4047179677011): 0 hits"}
+{"ts": 1795185912.65, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185912.65, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185912.65, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185925.7, "event": "tool_start", "tool": "tl-gtin", "args": "4047179677011"}
+{"ts": 1795185925.7, "event": "tool_end", "tool": "tl-gtin", "args": "4047179677011", "seconds": 0.0, "ok": true}
+{"ts": 1795185925.83, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4047179677011"}
+{"ts": 1795185925.84, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4047179677011", "seconds": 0.0, "ok": true}
+{"ts": 1795185925.96, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4047179677011"}
+{"ts": 1795185925.96, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4047179677011", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.46, "event": "tool_start", "tool": "tl-discogs", "args": "release 5671084"}
+{"ts": 1795185937.46, "event": "tool_start", "tool": "tl-mb", "args": "search --title Ärger mit der Unsterblichkeit --artist Andreas Dorau"}
+{"ts": 1795185937.46, "event": "tool_end", "tool": "tl-discogs", "args": "release 5671084", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.46, "event": "tool_end", "tool": "tl-mb", "args": "search --title Ärger mit der Unsterblichkeit --artist Andreas Dorau", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.6, "event": "tool_start", "tool": "tl-mb", "args": "search --title Aerger mit der Unsterblichkeit --artist Andreas Dorau"}
+{"ts": 1795185948.21, "event": "tool_end", "tool": "tl-mb", "args": "search --title Aerger mit der Unsterblichkeit --artist Andreas Dorau", "seconds": 10.6, "ok": true}
+{"ts": 1795185961.69, "event": "tool_start", "tool": "tl-mb", "args": "release 3f8d2e17-6852-4655-a3b1-4c2771a40668"}
+{"ts": 1795185961.69, "event": "tool_start", "tool": "tl-mb", "args": "group 3f8d2e17-6852-4655-a3b1-4c2771a40668"}
+{"ts": 1795185961.69, "event": "tool_end", "tool": "tl-mb", "args": "release 3f8d2e17-6852-4655-a3b1-4c2771a40668", "seconds": 0.0, "ok": true}
+{"ts": 1795185962.86, "event": "tool_end", "tool": "tl-mb", "args": "group 3f8d2e17-6852-4655-a3b1-4c2771a40668", "seconds": 1.2, "ok": false}
+{"ts": 1795185963.01, "event": "tool_start", "tool": "tl-caa", "args": "1326d638-17f5-40c2-bcb2-5825e7bbfe3e"}
+{"ts": 1795185966.26, "event": "tool_end", "tool": "tl-caa", "args": "1326d638-17f5-40c2-bcb2-5825e7bbfe3e", "seconds": 3.2, "ok": true}
+{"ts": 1795185987.83, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/5671084 --grep -i tracklist|Bureau|vinyl"}
+{"ts": 1795185987.84, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/5671084 --grep -i tracklist|Bureau|vinyl", "seconds": 0.0, "ok": false}
+{"ts": 1795185991.09, "event": "tool_start", "tool": "tl-vision", "args": "/tmp/opencode/back.jpg --context Back cover of the 2012 Bureau B vinyl LP reissue 'Ärger mit der Unsterblichkeit' by Andreas Dorau (BB 114, barcode 4047179677011). List the printed tracklist exactly: side/position labels (A1, A2, B1...), track titles, and any durations. Note whether tracks B6/B7 are"}
+{"ts": 1795186005.43, "event": "tool_end", "tool": "tl-vision", "args": "/tmp/opencode/back.jpg --context Back cover of the 2012 Bureau B vinyl LP reissue 'Ärger mit der Unsterblichkeit' by Andreas Dorau (BB 114, barcode 4047179677011). List the printed tracklist exactly: side/position labels (A1, A2, B1...), track titles, and any durations. Note whether tracks B6/B7 are", "seconds": 14.3, "ok": true}
+{"ts": 1795186011.09, "event": "tool_start", "tool": "tl-vision", "args": "/tmp/opencode/back_hi.jpg --context 2012 Bureau B vinyl LP back cover, side B. Transcribe verbatim only the B-side track lines (numbers, titles, durations). Pay special attention to track B2: is it printed 'Tier im Regen' or 'Tiere im Regen'? Also confirm whether a 'Bonustracks:' header covers B6 an"}
+{"ts": 1795186011.11, "event": "tool_end", "tool": "tl-vision", "args": "/tmp/opencode/back_hi.jpg --context 2012 Bureau B vinyl LP back cover, side B. Transcribe verbatim only the B-side track lines (numbers, titles, durations). Pay special attention to track B2: is it printed 'Tier im Regen' or 'Tiere im Regen'? Also confirm whether a 'Bonustracks:' header covers B6 an", "seconds": 0.0, "ok": false}
+{"ts": 1795186066.97, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 18, "steps": 16}
+{"ts": 1795186066.97, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186066.97, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 11 tracks, ISRC 0"}
+{"ts": 1795186066.97, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186078.66, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.25, "error": null}
+{"ts": 1795186078.66, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.25, "tracks": 13, "wall_s": 154.3, "judge_s": 11.7, "cost_usd": 0.022, "mode": "agent", "errors": []}

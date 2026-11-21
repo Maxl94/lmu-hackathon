@@ -1,0 +1,14 @@
+{"ts": 1795185994.72, "event": "run_start", "input": {"title": "The Black Light", "artist": "Calexico", "ean": "4027795500399"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185994.72, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4027795500399): 1 hits"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "  musicbrainz:release/a4a09112-9569-4f65-97cc-f0aa66aa3839 | The Black Light — Calexico | 1998-05-18 DE | CD | Official"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "$ MusicBrainz release a4a09112-9569-4f65-97cc-f0aa66aa3839: 17 tracks, 17 with duration"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "$ Discogs search barcode=4027795500399 format=None: 1 hits"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "  discogs:release/11507547 | The Black Light | Germany 2016 | 17 tracks, 17 with duration"}
+{"ts": 1795185994.72, "event": "fast_step", "msg": "✓ 17 tracks: titles agree, 17 durations in both sources, 1 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185994.72, "event": "phase_end", "phase": "fast", "ok": true, "msg": "✓ 17 tracks: titles agree, 17 durations in both sources, 1 difference(s) > 2 s (rule: MusicBrainz)"}
+{"ts": 1795185994.72, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185996.76, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 17 tracks, ISRC 17"}
+{"ts": 1795185996.76, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186004.17, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.5, "error": null}
+{"ts": 1795186004.17, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.5, "tracks": 17, "wall_s": 0.0, "judge_s": 7.4, "cost_usd": 0.0013, "mode": "fast", "errors": []}

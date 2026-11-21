@@ -1,0 +1,116 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:49",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5 (input barcode matches this edition in >= 2 independent sources; format and artist match; no other edition with same barcode and different tracklist): NOT MET - the input EAN 888837168625 is a valid UPC-A (tl-gtin) belonging to Daft Punk - Random Access Memories in MusicBrainz (tl-mb search --barcode 0888837168625), Discogs (tl-discogs search --barcode 0888837168625), and iTunes (tl-itunes upc 888837168625), whereas the selected edition has barcode 4018939105976. Level 4 (barcode match in one source; or without barcode, title/artist/format + further attribute unambiguous in >= 2 sources with no competing edition having a different tracklist): NOT MET - no barcode match, input has a contradictory barcode and no further disambiguating attributes, and competing CD editions with different tracklists exist (20-track Exclusive 2004 Edition in musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907). Level 3 (unambiguous in one source or all fitting editions share the same tracklist): NOT MET - input barcode contradicts the result and competing CD editions of Bushido - King of Kingz have different track counts (16 vs 20 tracks). Level 2 (several editions fit the input and at least one has a different tracklist): NOT MET - no edition fits the complete input because the result directly contradicts the input barcode (888837168625 vs 4018939105976). Level 1 (no edition fits reliably, or the result contradicts the input): MET - the input is internally contradictory and the selected edition contradicts the input barcode (888837168625 vs 4018939105976), while ignoring the barcode still leaves competing 16-track and 20-track CD editions.",
+   "summary": "The result contradicts the valid barcode in the input (888837168625 belongs to Daft Punk, whereas the chosen Bushido edition has barcode 4018939105976), and ignoring the barcode still leaves competing CD editions with different tracklists.",
+   "evidence": [
+    "tl-gtin 888837168625",
+    "tl-mb search --barcode 0888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "tl-itunes upc 888837168625",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/769288",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5 (>= 2 independent sources of the same edition agree on count, order and titles, spelling variants only): MET - musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288 both document the same 2003 Aggro Berlin CD edition (barcode 4018939105976), are independent (differing in duration precision/values, release date precision, catalog number formatting, and featured artist annotations), and agree completely on all 16 tracks in count, order (1-16), and titles (capitalization differences only).",
+   "summary": "Two independent database entries of the chosen 2003 edition (MusicBrainz and Discogs) agree completely on track count, order, and titles apart from capitalization.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5 (database + independent primary source of the same edition): NOT MET - no cover, booklet, label print, or manufacturer/label primary source was read (Discogs image URLs were returned but not inspected). Level 4 (two independent database entries recognisable by differing details, or database + specialised collector site): MET - musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288 are two independent database entries of the same edition, clearly distinguishable by differing details (ms-precision TOC durations totaling 51:36 vs second-level durations totaling 51:27, release date 2003 vs 2003-10-13, catno AGGRO 004 vs AGGRO004CD, featured artist credits in MusicBrainz, and matrix/runout data in Discogs).",
+   "summary": "The chosen edition is backed by two clearly independent database entries (MusicBrainz and Discogs) with differing metadata details, though no primary source was inspected.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Severe input contradiction: Input EAN 888837168625 is a valid UPC-A for Daft Punk - Random Access Memories (confirmed by tl-mb search --barcode 0888837168625, tl-discogs search --barcode 0888837168625, and tl-itunes upc 888837168625), yet the agent returned status 'found' with confidence 0.85 for a Bushido release with barcode 4018939105976.",
+  "Unresolved competing editions: Even setting aside the contradictory barcode, the input does not specify year, label, catalog number, or edition to distinguish the 16-track 2003 Aggro Berlin CD from the 20-track Exclusive 2004 Edition (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a, discogs:release/3057907) or the 2004 CD with 4 additional tracks referenced in discogs:release/769288 notes.",
+  "Unsupported source claim: The note on web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/ claims 'Bestätigung Trackliste und Gesamtzeit', but the tl-scrape output only returned total duration (51:26) and track 1 (Intro, 1:54), not tracks 2-16 or edition identifiers.",
+  "Validation error: The top-level 'artists' array is empty instead of listing Bushido and all featured artists (Kam One, Joka, Hengst, Orgasmus, Roulette, Frank White, D-Bo).",
+  "Minor source attribution inaccuracies: Featured artists on tracks 3, 8, 9, 12, 13, and 15 appear only in musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a (not in discogs:release/769288 output), and discogs:release/769288 is cited in duration_sources for all tracks even though tracks 1, 4, 5, 11, 12, 15, and 16 differ by 1-3 seconds from the MusicBrainz-derived durations used in the result."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 75.3,
+  "tokens_in": 12850,
+  "tokens_out": 9016,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

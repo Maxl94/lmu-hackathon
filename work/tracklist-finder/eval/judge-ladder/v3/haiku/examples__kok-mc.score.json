@@ -1,0 +1,112 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:12",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: barcode condition NOT MET (input has no barcode; result barcode null). Level 4: title, artist and format MET; label, catno, year and country agree in MB and Discogs; but several fitting editions (Discogs 18354001, 18354166, 18354289, 17280904, 4256710, plus musik-sammler 2003 Tape 433561) exist, and the choice among them rests on the 'Erstauflage' label, not on input attributes. Level 4 is therefore only partly met, since the year and edition choice are not fixed by the input. Level 3: several editions fit and ALL share the same 16-track tracklist and durations (verified in discogs 1951581, 18354001, 18354166, 18354289, 17280904, 4256710 and musik-sammler), so the choice does not change the tracklist. Level 2 not reached because no fitting edition has a different tracklist in the evidence.",
+   "summary": "No barcode in input and several Cassette reissues fit, but all share the identical tracklist, so the edition choice does not affect the result.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "tl-discogs versions 211928 --format Cassette",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MET. MusicBrainz (1.1-1.16) and Discogs 1951581 (A1-B8) agree on count (16), order and durations; musik-sammler (A 1.-B 16.) agrees on order and durations. Titles differ only by spelling variants (Nute/Nutte Bounce, Pitbull/Pit Bull, Hast du Mut/Hast Du Mut?, Vack You/Vack You!) and feature-artist aliases on A8, which are variants and not track differences.",
+   "summary": "Three independent sources of the same edition agree on 16 tracks, order and durations, with only spelling and alias variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET, no source reads the printed tracklist; the J-card image shows no tracklist and the label images show no tracklist. Level 4: MET, two database entries (MusicBrainz release, Discogs 1951581) plus the specialised collector site musik-sammler.de.",
+   "summary": "Two database entries plus a specialised collector site (musik-sammler.de) support the edition, but no primary source shows the tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "image:https://i.discogs.com/SORGJtnEhyKkE4kiNRFlgvNKbqvPUp7jbeM4JnLEheo (J-card, 0 Tracks gelesen)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "reasoning calls the release a 'Demo-Album' - unsupported by any tool output",
+  "Feature artist on A8 differs between sources: Discogs/MB 'Bass Sultan Hengzt & King Orgasmus One' vs musik-sammler 'Baktus & Orgasmus'; the result notes this but writes no conflict entry, and the artist field is kept from the database sources",
+  "The musik-sammler search (step 12) lists a separate 2001 entry 'King Of Kingz / Demotape (Extended Version)' with 16 tracks; it was not checked against the chosen edition",
+  "Musik-sammler 2003 Tape (433561) was found but not compared track by track; only the Discogs reissues are said to be identical",
+  "Edition label 'Erstauflage' rests on Discogs notes and the 2001 date; the 2001 reissues (18354001, 18354166) carry the same year, so 'first edition' is only weakly established",
+  "The J-card image is cited as a source of the edition, but it is a Discogs-hosted image, so it is not independent of the Discogs entry",
+  "Status 'found' with confidence 0.85 while the input has no barcode and the edition choice is among 6+ fitting releases"
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 15.8,
+  "tokens_in": 32691,
+  "tokens_out": 3388,
+  "cost_usd": 0.00496,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

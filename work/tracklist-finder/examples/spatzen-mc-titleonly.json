@@ -1,0 +1,148 @@
+{
+  "input": {"id": "spatzen-mc-titleonly", "title": "Ich sag's dir mit Musik", "format": "MC"},
+  "status": "found",
+  "release": {
+    "title": "Ich sag's dir mit Musik",
+    "artist": "Kastelruther Spatzen",
+    "format": "Kassette",
+    "country": "AT",
+    "year": 1985,
+    "label": "Koch-Records Special",
+    "catno": "D 221 190",
+    "barcode": "9002722211901",
+    "edition": "1×MC, Standardpressung 1985 mit Barcode",
+    "ids": {
+      "musicbrainz": "e0d210c6-ca75-3482-bff4-f33715a070c3",
+      "discogs": "2297987"
+    }
+  },
+  "tracks": [
+    {
+      "position": "A1", "disc": 1, "title": "Und wenn am Abend das Glöcklein ruft", "artist": null, "duration_s": 202,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg", "deezer:album/231158"],
+      "flags": ["duration_conflict"]
+    },
+    {
+      "position": "A2", "disc": 1, "title": "Hallo ihr Freunde", "artist": null, "duration_s": 182,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "A3", "disc": 1, "title": "Ich sag's dir mit Musik", "artist": null, "duration_s": 188,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "A4", "disc": 1, "title": "Bei uns in Südtirol", "artist": null, "duration_s": 187,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "A5", "disc": 1, "title": "Oamal hin, oamal her", "artist": null, "duration_s": 141,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "A6", "disc": 1, "title": "Du bist die Liebe für mich", "artist": null, "duration_s": 210,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg", "deezer:album/231158"],
+      "flags": ["duration_conflict"]
+    },
+    {
+      "position": "B1", "disc": 1, "title": "Jodler der Berge", "artist": null, "duration_s": 152,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "B2", "disc": 1, "title": "Ein Kind der Liebe", "artist": null, "duration_s": 239,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "B3", "disc": 1, "title": "Mein Heimatdorf", "artist": null, "duration_s": 207,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "B4", "disc": 1, "title": "Sarner-Welle Lied", "artist": null, "duration_s": 138,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": ["title_conflict"]
+    },
+    {
+      "position": "B5", "disc": 1, "title": "Lieblingswalzer", "artist": null, "duration_s": 187,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    },
+    {
+      "position": "B6", "disc": 1, "title": "Abschied", "artist": null, "duration_s": 196,
+      "sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "duration_sources": ["musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "discogs:release/2297987", "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg"],
+      "flags": []
+    }
+  ],
+  "total_duration_s": 2229,
+  "confidence": 0.8,
+  "sources": [
+    {"id": "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3", "url": "https://musicbrainz.org/release/e0d210c6-ca75-3482-bff4-f33715a070c3", "kind": "database", "note": null},
+    {"id": "discogs:release/2297987", "url": "https://www.discogs.com/release/2297987", "kind": "database", "note": null},
+    {"id": "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg", "url": "https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg", "kind": "image", "note": "J-Card Innenseite der MC: Trackliste Seite A/B mit gedruckten Dauern, Credits; gelesen mit tl-vision"},
+    {"id": "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "url": "https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg", "kind": "image", "note": "J-Card Rückseite der MC: Trackliste in gemischter Schreibweise, Barcode 9002722211901, Kat.-Nr. D 221 190; gelesen mit tl-vision"},
+    {"id": "deezer:album/231158", "url": "https://www.deezer.com/album/231158", "kind": "streaming", "note": "Digitale Ausgabe desselben Albums (UPC 9002723211900 = CD-Barcode), nur Gegenprobe für Dauern"},
+    {"id": "itunes:album/1445863917", "url": "https://music.apple.com/de/album/ich-sags-dir-mit-musik/1445863917", "kind": "streaming", "note": "Digitale Ausgabe, nur Hinweis; Dauern weichen durchgehend ab (anderer Master), daher nicht als Dauerquelle genutzt"}
+  ],
+  "conflicts": [
+    {
+      "field": "Dauer Track A1",
+      "values": {
+        "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3": "3:19 (199 s)",
+        "discogs:release/2297987": "3:22 (202 s)",
+        "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg": "3'22'' gedruckt (202 s)",
+        "deezer:album/231158": "3:22 (202 s)"
+      },
+      "resolution": "202 s gewählt: gedruckte Dauer auf der J-Card dieser MC-Ausgabe, von Discogs und Deezer bestätigt; MusicBrainz weicht um 3 s ab."
+    },
+    {
+      "field": "Dauer Track A6",
+      "values": {
+        "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3": "3:30 (210 s)",
+        "discogs:release/2297987": "3:03 (183 s)",
+        "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg": "3'30'' gedruckt (210 s)",
+        "deezer:album/231158": "3:30 (210 s)"
+      },
+      "resolution": "210 s gewählt: gedruckte J-Card-Dauer, übereinstimmend mit MusicBrainz (ms-Präzision), Deezer und der polnischen MC (discogs:release/16402359); 3:03 in den Discogs-Einträgen der Koch-Ausgaben (MC/CD/LP) ist der Ausreißer."
+    },
+    {
+      "field": "Titel Track B4",
+      "values": {
+        "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg": "SARNER-WELLE LIED (Bindestrich nach SARNER, Leerzeichen vor LIED)",
+        "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg": "Sarner-Welle-Lied (zwei Bindestriche)",
+        "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3": "Sarner-Welle Lied",
+        "discogs:release/2297987": "Sarner-Welle Lied",
+        "deezer:album/231158": "Sarner-Welle Lied Hallo Freunde",
+        "itunes:album/1445863917": "Sarner-Welle Lied Hallo Freunde"
+      },
+      "resolution": "'Sarner-Welle Lied' gewählt: J-Card-Innenseite (mit Dauern), MusicBrainz und Discogs stimmen überein; die J-Card-Rückseite liest sich als 'Sarner-Welle-Lied'. Die digitalen Kataloge ergänzen 'Hallo Freunde' — so nicht auf der MC von 1985 gedruckt."
+    }
+  ],
+  "missing": [],
+  "alternatives": [
+    {"description": "Kastelruther Spatzen – Ich Sag's Dir Mit Musik, MC 1985, Koch Records Special D 221 190, weiße Schale ohne Barcode", "source": "discogs:release/15349631", "why_not": "andere Pressung derselben Ausgabe ohne Barcode; Trackliste identisch, Input unterscheidet Pressungen nicht"},
+    {"description": "Kastelruther Spatzen – Ich Sag's Dir Mit Musik, MC 1985, Koch Records D 221 190, andere Kassetenschale, ohne Barcode", "source": "discogs:release/24889304", "why_not": "weitere Pressung ohne Barcode; Trackliste identisch"},
+    {"description": "Kastelruther Spatzen – Ich Sag's Dir Mit Musik, MC (Polen, AMA 074)", "source": "discogs:release/16402359", "why_not": "polnische AMA-Lizenzpressung, anderes Label; Trackliste identisch"},
+    {"description": "Various – Ich Sag's Dir Mit Musik, 5×MC-Box 1995 (Das Beste Reader's Digest, ISD 21 7334 65)", "source": "discogs:release/8491193", "why_not": "Various-Artists-Kompilation mit gleichem Titel, nicht das Kastelruther-Spatzen-Album; völlig andere Trackliste"},
+    {"description": "Various – Ich Sag's Dir Mit Musik (Musikalische Liebesbriefe), MC (Karussell 517 745-4)", "source": "discogs:release/7800803", "why_not": "Various-Artists-Kompilation; der Spatzen-Titel ist nur Track A1 darunter"},
+    {"description": "Kastelruther Spatzen – Ich sag's dir mit Musik, CD 1985 (Koch-Records International CF 321 190, Barcode 9002723211900)", "source": "musicbrainz:release/a9f0ddd0-2257-4d84-9348-4af2958f92ae", "why_not": "anderes Format (CD, nicht MC)"},
+    {"description": "Kastelruther Spatzen – Ich sag's dir mit Musik, LP 1985 (Koch-Records International LP D 121 190)", "source": "musicbrainz:release/a1ca35f7-690d-3620-b1a3-1dd9e7aa4388", "why_not": "anderes Format (Vinyl, nicht MC)"}
+  ],
+  "reasoning": "Input nur mit Titel und Format: Das einzige Künstleralbum namens 'Ich sag's dir mit Musik' ist das Kastelruther-Spatzen-Album von 1985; als MC kommt die Koch-Kassette D 221 190 (Barcode 9002722211901) infrage, bestätigt durch MusicBrainz, Discogs und die abgebildete J-Card (Barcode auf dem Scan). Trackliste und Reihenfolge (A1–B6) stimmen in allen Quellen überein, die J-Card liefert gedruckte Dauern. Abweichungen bei A1 (MB 3:19 vs. gedruckt 3'22'') und A6 (Discogs-Koch 3:03 vs. gedruckt 3'30'') sind als Konflikte dokumentiert und zugunsten der gedruckten Werte aufgelöst; übrige Differenzen ≤ 2 s sind Rundung auf den MusicBrainz-ms-Wert. Various-Artists-MC-Kompilationen mit demselben Titel (Reader's Digest 1995, Karussell) und weitere MC-Pressungen sind als Alternativen erfasst."
+}

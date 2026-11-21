@@ -1,0 +1,114 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:02",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4019593960000 is valid EAN-13 and matches exactly in MusicBrainz (release 15996385) and Discogs (3057907) (MET); format CD and artist Bushido match (MET); but the only other edition in the same release group with a different barcode/tracklist is excluded by barcode, and no other edition shares the same barcode (MET). However, the requirement of >=2 independent sources for the barcode is met by MB + Discogs + musik-sammler (EAN 4019593960000 in musik-sammler), so level 5 conditions appear MET; no competing edition with the same barcode found. Rating 5 is justified by barcode-matching across multiple databases. Caveat: the musik-sammler EAN match is taken from the scraped page (tl-scrape output line 'EAN-Nr. | 4019593960000').",
+   "summary": "Barcode 4019593960000 (valid check digit) matches exactly the 2004 CD in MusicBrainz, Discogs and musik-sammler.de with CD format and Bushido as artist, and no other edition carries that barcode.",
+   "evidence": [
+    "tool 1 tl-gtin",
+    "tool 2 tl-mb search barcode",
+    "tool 3 tl-discogs search barcode",
+    "tool 5 tl-discogs release 3057907",
+    "tool 14 tl-scrape musik-sammler EAN-Nr 4019593960000"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MusicBrainz and Discogs agree on 20 titles and order; musik-sammler.de (tool 14) also lists all 20 in the same order, and the CAA back cover (tool 7/17) confirms order and titles (MET). Spelling variants only (Pitbull/Pittbull) and small duration deviations do not change count, order or titles. Level 5 conditions MET.",
+   "summary": "Four sources (MusicBrainz, Discogs, musik-sammler.de, back-cover image) agree on 20 tracks in the same order with spelling-only variants.",
+   "evidence": [
+    "tool 4 tl-mb release",
+    "tool 5 tl-discogs release",
+    "tool 7 tl-vision back cover",
+    "tool 14 musik-sammler scrape",
+    "tool 17 tl-vision second reading"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database entries (MusicBrainz, Discogs) plus an independent primary source (back-cover image read via tl-vision, printed label/cover text with LC 13533 and EAN) of the same edition are present (MET). The back-cover reading was done by a vision model on a CAA image and the agent could not view the image itself (tool 10 note), which weakens the primary-source claim somewhat, but the printed barcode and catalog number were read. Level 5 is arguable; given the agent's own admission that it could not view the image directly, I rate 4 to be strict.",
+   "summary": "Two independent database entries plus a collector site with matching EAN, though the back-cover primary-source reading rests on an unverified vision output rather than direct viewing.",
+   "evidence": [
+    "tool 3 Discogs barcode search",
+    "tool 4 MusicBrainz",
+    "tool 14 musik-sammler.de",
+    "tool 7 tl-vision",
+    "tool 10 read image note"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result confidence was lowered from 0.95 to 0.93 only to satisfy a validator warning, while the written reasoning claims high confidence; the adjustment was cosmetic.",
+  "The agent states it could not view the CAA back-cover image itself (tool 10); the back-cover data rests on tl-vision output, and the agent's own tl-vision second reading flagged OUTRO (ersguterdevin) as uncertain [unsicher].",
+  "Duration conflicts at tracks 10, 15, 16 are resolved by preferring MusicBrainz; musik-sammler.de values differ from MusicBrainz at track 10 (3:25 vs 205.72 s) and track 19 (3:56 vs 236.97 s) and track 9, and these were not flagged as conflicts; track 19 duration is 3:56 on musik-sammler but 3:57 in MB.",
+  "The result's track count and total: MB total 3721 s vs result total_duration_s 3720 and musik-sammler total 61:54 (3714 s by Discogs); the stated total 3720 s is not exactly the MusicBrainz sum, a minor inconsistency.",
+  "Track 11 title spelling: the result writes 'Pitbull' in the output tracks while the back cover prints 'PITTBULL' and the reasoning claims printed spelling was adopted; the output keeps 'Pittbull' as in the reasoning but the tracks list uses 'Pittbull' only partially, creating an internal inconsistency.",
+  "hitparade.ch listing of the 2001 MC shows different track 15 (Outro) and track 16, and 2005 2-CD lists another tracklist; the agent dismissed hitparade as not the same edition, which is reasonable since EAN/catno differ, but the 2005 2-CD shares catalogue prefix 40195 9396003-1 and was not fully excluded in the output alternatives beyond 'gekürzt'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 9.8,
+  "tokens_in": 43410,
+  "tokens_out": 1718,
+  "cost_usd": 0.0052,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

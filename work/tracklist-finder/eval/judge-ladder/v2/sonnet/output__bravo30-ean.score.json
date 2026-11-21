@@ -1,0 +1,93 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:37:55",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 731456031125 (checksum OK, FACTS barcode_match exact) matches one MusicBrainz release (41b0a392) and three Discogs releases (23145932, 1949898, 26676554), all CD, Various Artists, 40 tracks. Barcode match in >=2 independent sources: MET (MusicBrainz + Discogs). Format and artist match: MET. No other edition with same barcode and a different tracklist: MET, since the alternatives 1949898 and 26676554 are reported with the same tracklist and the same track count (40 with durations). However, the agent only asserts 'gleiche Trackliste' for the alternatives; the evidence shows only track counts, not titles. Still, the counts and the single MusicBrainz edition are consistent. All conditions are plausibly met, so level 5.",
+   "summary": "The barcode matches exactly in MusicBrainz and Discogs, format and artist fit, and the other same-barcode editions have the same 40-track count.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles (spelling variants only). MusicBrainz and Discogs both give 40 tracks (2×20), and the titles agree apart from spelling and case variants (e.g. 'Seine Straßen' vs 'Seine Strassen', '(Album Version)' suffix on track 10 of disc 1). Order is consistent. Whether the two sources are independent: MusicBrainz and Discogs are separate databases, and their differing durations suggest independent entries. The 4 duration conflicts (>2 s) are noted and resolved by rule, but they do not affect count, order or titles. MET.",
+   "summary": "MusicBrainz and Discogs agree on 40 tracks, their order and the titles, differing only in spelling and in 4 duration values.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover, booklet, label print): NOT MET, since no primary source was consulted. Level 4: two independent database entries (recognisable by differing details) or database + collector site: MET. MusicBrainz and Discogs are separate databases, and their differing durations (tracks 5, 7, 14, 18) and spellings show they were not copied from each other.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) with differing details, but no primary source such as the cover or booklet.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The tracklists of the alternative Discogs editions 1949898 and 26676554 were not shown in the evidence beyond the track count (40); the claim 'gleiche Trackliste' is not backed by titles.",
+  "The result says it hit '3 Discogs-Ausgabe(n)', but the chosen Discogs release 23145932 is not the one labelled 2000-08-11, so the choice between the Discogs entries rests on weak signals.",
+  "Track 10 of disc 1 on Discogs carries an '(Album Version)' suffix; the resolution picks MusicBrainz spelling without a primary source check.",
+  "Duration conflicts (tracks 1/5, 1/7, 2/14, 2/18) differ by 3-4 s and were not verified against a primary source, so total_duration_s 8847 is uncertain."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 11.2,
+  "tokens_in": 10479,
+  "tokens_out": 1259,
+  "cost_usd": 0.03355,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

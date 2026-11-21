@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:37:52",
+ "overall": 4.6,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "5: barcode match in >=2 sources (MB f6758afb barcode 0888837168625, Discogs 4729785 barcode 888837168625) - MET; format CD and artist match - MET; but other editions with same barcode (MB a8308466 US, Discogs 4581879 AU, 6279391 etc.) share 13 tracks with same titles and order - no differing tracklist with same barcode found in evidence - MET; however the 'Standard Edition' label and 'DE' country are not directly confirmed beyond MB DE; the independent primary (back cover image) confirms titles only, no barcode from primary source as exact edition - level 5 condition 'matches exactly this edition in >=2 independent sources' is arguably met by MB and Discogs; the MB barcode is listed in discogs 4729785 as well. Rate 5 is defensible but the Discogs 4729785 entry is a Europe release and MB is DE; country differs and the edition is a repressing-like case. Conservatively stop at 4: barcode match in two sources is met, but edition identity rests on MB DE and Discogs EU with the same tracklist, so level 5 holds only if these are considered the same edition.",
+   "summary": "Barcode 888837168625 matches the 2013 standard CD in MusicBrainz (DE) and Discogs (EU), with competing editions (AU, US, CA) sharing the same 13-track tracklist, so the choice does not matter for tracklist.",
+   "evidence": [
+    "bin/tl-gtin 888837168625",
+    "bin/tl-discogs search --barcode 888837168625",
+    "bin/tl-mb search --barcode 888837168625",
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-discogs release 4581879"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: MB (f6758afb, a8308466), Discogs 4729785 and 4581879 agree on 13 tracks, order and titles (spelling variants only, e.g. 'Doin' It Right' vs 'Doin' it Right'); back-cover image confirms the 13 titles in order - MET; iTunes also agrees on count and order. Level 5 conditions MET.",
+   "summary": "At least two independent sources (MusicBrainz and Discogs, plus back-cover image and iTunes) agree on the 13 titles and order.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "itunes:album/617154241"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database (MusicBrainz, Discogs) + independent primary source (back cover image of the same edition, read via tl-vision) - MET. Level 5 conditions met.",
+   "summary": "Two databases plus a read back-cover image of the same release provide independent confirmation of the tracklist.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Agent claims durations confirmed by iTunes (±1–2 s) but iTunes lists 14 tracks in header; the 13 track listing matches, minor inconsistency noted.",
+  "Back-cover image states no durations printed; total_duration_s 4479 is a sum of MB ms values, not a printed value; consistent with MB but not a primary-source confirmation.",
+  "Discogs 4729785 is EU (Europe) edition while MB f6758afb is DE; agent's 'Standard Edition' label is not explicitly confirmed by the evidence.",
+  "Discogs 4729785 'Rights Society: BIEM / GEMA' is noted in evidence, supporting the GEMA context.",
+  "Tracks 3 and 7 durations differ by ~1 s between MB and Discogs (9:05 vs 9:04, 8:19 vs 8:18), explained by rounding; not a conflict."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.2,
+  "tokens_in": 13844,
+  "tokens_out": 1354,
+  "cost_usd": 0.00206,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

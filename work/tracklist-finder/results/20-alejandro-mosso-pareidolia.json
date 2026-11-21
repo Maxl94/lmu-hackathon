@@ -1,0 +1,147 @@
+{
+ "input": {
+  "id": "20-alejandro-mosso-pareidolia",
+  "title": "Pareidolia",
+  "artist": "Alejandro Mosso"
+ },
+ "status": "found",
+ "release": {
+  "title": "Pareidolia EP",
+  "artist": "Alejandro Mosso",
+  "format": "Vinyl",
+  "country": "DK",
+  "year": 2025,
+  "label": "Lomidhigh Organic",
+  "catno": "LMHO025",
+  "barcode": null,
+  "edition": "7\" EP, 45 RPM, limited edition, hand-numbered (200 copies)",
+  "ids": {
+   "discogs": "33252435"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Pareidolia",
+   "artist": "Alejandro Mosso",
+   "duration_s": 84,
+   "sources": [
+    "discogs:release/33252435",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg",
+    "soundcloud:lomidhigh-records/a-alejandro-mosso-pareidolia-2"
+   ],
+   "duration_sources": [
+    "soundcloud:lomidhigh-records/a-alejandro-mosso-pareidolia-2"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Pareidolia (DDALMH Remix)",
+   "artist": "Alejandro Mosso",
+   "duration_s": 92,
+   "sources": [
+    "discogs:release/33252435",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg",
+    "soundcloud:lomidhigh-records/b-alejandro-mosso-pareidolia-1"
+   ],
+   "duration_sources": [
+    "soundcloud:lomidhigh-records/b-alejandro-mosso-pareidolia-1"
+   ],
+   "flags": [],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Alejandro Mosso",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/33252435",
+    "soundcloud:lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg"
+   ]
+  },
+  {
+   "name": "DDALMH",
+   "role": "remixer",
+   "tracks": [
+    "B1"
+   ],
+   "sources": [
+    "discogs:release/33252435",
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg"
+   ]
+  }
+ ],
+ "total_duration_s": 176,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/33252435",
+   "url": "https://www.discogs.com/release/33252435-Alejandro-Mosso-Pareidolia-EP",
+   "kind": "database",
+   "note": "Only database entry; 7\" 45 RPM, Denmark 2025-02-26, LMHO025, 200 hand-numbered copies; durations not listed"
+  },
+  {
+   "id": "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg",
+   "url": "https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg",
+   "kind": "image",
+   "note": "Back cover: A Pareidolia, B Pareidolia (DDALMH Remix); no durations printed"
+  },
+  {
+   "id": "soundcloud:lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025",
+   "url": "https://soundcloud.com/lomidhigh-records/sets/alejandro-mosso-pareidolia-ep-lmh-org-025",
+   "kind": "streaming",
+   "note": "Official label playlist, 2 tracks, total 2:56; label text: no digital release will take place"
+  },
+  {
+   "id": "soundcloud:lomidhigh-records/a-alejandro-mosso-pareidolia-2",
+   "url": "https://soundcloud.com/lomidhigh-records/a-alejandro-mosso-pareidolia-2",
+   "kind": "streaming",
+   "note": "Side A official label upload, duration 84 s"
+  },
+  {
+   "id": "soundcloud:lomidhigh-records/b-alejandro-mosso-pareidolia-1",
+   "url": "https://soundcloud.com/lomidhigh-records/b-alejandro-mosso-pareidolia-1",
+   "kind": "streaming",
+   "note": "Side B official label upload, duration 92 s"
+  },
+  {
+   "id": "web:https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923",
+   "url": "https://www.deejay.de/Alejandro_Mosso_Pareidolia_EP_LMHO025_Vinyl__1126923",
+   "kind": "shop",
+   "note": "Shop listing: LMHO025, 7\" vinyl, 26.02.2025, 200 copies, no digital release"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title",
+   "values": {
+    "input": "Pareidolia",
+    "discogs:release/33252435": "Pareidolia EP"
+   },
+   "resolution": "Release titled 'Pareidolia EP' per Discogs, the shop listing and the back cover; the input omits the 'EP' suffix."
+  },
+  {
+   "field": "title track B1",
+   "values": {
+    "image:https://i.discogs.com/ZQDu8UW9jRouYcEDcIT0aKHokvQ_nNueV1c-mkU-GqI/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjUy/NDM1LTE3NDA2NjE5/MDUtMjk0MC5qcGVn.jpeg": "Pareidolia (DDALMH Remix)",
+    "discogs:release/33252435": "Pareidolia (Ddalmh Remix)"
+   },
+   "resolution": "Capitalisation only; cover spelling 'DDALMH' chosen."
+  }
+ ],
+ "missing": [
+  "No barcode/EAN supplied and none printed on the release",
+  "Durations are not printed on the cover; Discogs lists no durations, so they come from the label's official SoundCloud uploads (84 s + 92 s = 2:56)",
+  "No MusicBrainz entry found for this release",
+  "credits missing for 2 of 2 tracks"
+ ],
+ "alternatives": [],
+ "reasoning": "The only hit for Alejandro Mosso - Pareidolia is the 2025 Danish 7\" EP on Lomidhigh Organic (LMHO025), a hand-numbered limited edition of 200 copies. Discogs and the back cover agree on both track titles and A/B positions; the label's official SoundCloud playlist confirms the two tracks and their durations (2:56 total, matching 84 s and 92 s). The label and shop both state there is no digital release, so the physical 7\" is the correct edition and the streams only document the same recordings."
+}

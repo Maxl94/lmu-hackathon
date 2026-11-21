@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:32",
+ "overall": 3.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Der Input enthält nur Titel und Format, weder Interpret noch Barcode. Mehrere Ausgaben passen: Bushido 2003 Aggro Berlin (EAN 4018939105976), die MZEE-Edition ohne Barcode, die Bushido-Edition 2004 mit 20 Tracks und Sean Kingston 2011 mit 13 Tracks. Die Tracklisten unterscheiden sich, die Wahl beruht auf einer Plausibilitätsannahme (Bekanntheit, GEMA-Kontext).",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Die 16 Titel stimmen in Anzahl und Reihenfolge bei MusicBrainz, Discogs und musik-sammler.de (EAN 4018939105976) überein, nur Schreibweisen und Dauern weichen leicht ab. Track 16 hat einen Dauerkonflikt (3:41 vs. 3:38). Weil die Edition unsicher ist und die Gästeangaben variieren, ist die Stufe begrenzt.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 94% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus die Sammlerseite musik-sammler.de mit gleicher EAN wurden gelesen. Eine unabhängige Primärquelle (Cover, Label) fehlt. Das entspricht Datenbank plus Sammlerseite.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Input nennt weder Interpret noch Barcode; die Wahl von Bushido 2003 (EAN 4018939105976) ist eine Annahme, nicht durch den Input gedeckt.",
+  "Alternativen mit abweichender Tracklist (2004 Edition mit 20 Tracks, Sean Kingston mit 13 Tracks) bleiben möglich.",
+  "Die MZEE-Edition (ohne Barcode) hat dieselben 16 Titel, aber Sternenstaub mit 3:38. Die Zuordnung der Dauer zur gewählten Edition ist daher nicht eindeutig.",
+  "Gästeangaben weichen zwischen Quellen ab: musik-sammler nennt bei Track 12 und 15 'Fler', MusicBrainz 'Frank White'. Der Agent hat das nicht als Konflikt ausgewiesen.",
+  "Discogs führt die Dauer von Track 1 mit 114 s, das Ergebnis nennt 115 s; Track 4 hat 186 s bzw. 187 s, Track 5 hat 274 s bzw. 275 s. Der Agent führt diese Abweichungen als Rundungsdifferenzen, aber alle Quellen sind in duration_sources bei jedem Track aufgeführt, obwohl nicht alle exakt diesen Wert nennen.",
+  "In der Ergebnis-JSON ist bei Track 16 Discogs als Dauerquelle für 221 s aufgeführt, obwohl Discogs 218 s nennt."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 9.2,
+  "tokens_in": 26318,
+  "tokens_out": 1329,
+  "cost_usd": 0.06593,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

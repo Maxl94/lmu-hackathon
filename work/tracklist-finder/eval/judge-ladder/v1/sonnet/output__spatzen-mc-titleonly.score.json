@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:23",
+ "overall": 4.0,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Input enthält nur Titel und Format (MC), keinen Barcode. Titel, Format, Künstler, Label, Katalognr. (221 190) und Jahr 1985 stimmen in MusicBrainz und Discogs (2297987) überein; der Barcode 9002722211901 steht in beiden. Es gibt aber weitere Discogs-MC-Varianten (15349631, 24889304, 16402359 Polen) mit gleicher Tracklist, die Wahl ist also tracklistneutral, ein Barcode-Abgleich gegen den Input fehlt.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz (MC) und Discogs (MC) stimmen bei 12 Tracks, Reihenfolge A1–B6 und Titeln überein; abweichend sind nur Schreibweisen und Dauern. Weitere Quellen (kastelrutherspatzen.de, cd-lexikon) bestätigen die Titelreihenfolge, wenn auch nicht für die MC. Zwei unabhängige Quellen derselben Edition stützen die Liste.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 3,
+   "begruendung": "100% der Tracks mit Dauer, 50% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbankeinträge (MusicBrainz, Discogs) mit unterschiedlichen Details sowie Deezer, Last.fm und die Künstlerseite als Zusatz. Es wurde kein Cover oder Label-Aufdruck der MC als Primärquelle gelesen. Das Discogs-Release enthält Notizen zum Aufdruck, die aber nur sekundär sind.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Dauerkonflikt A6: MusicBrainz 210 s vs. Discogs 183 s; die Auflösung stützt sich auf Deezer/Last.fm, die zu einer digitalen Version gehören und von MusicBrainz abgeleitet sein können. Last.fm verweist sogar auf die MBID der LP.",
+  "Alle Dauern außer A6 weichen zwischen MusicBrainz (Gesamt 2226 s) und Discogs/Deezer (2193 s) systematisch ab. Die Wahl der MusicBrainz-Dauern ist nicht für alle Tracks bestätigt (dur_confirmed_share 0.5).",
+  "Das Feld edition \"Original 1985 Edition\" und das Land AT sind nicht durch Quellen belegt (Discogs nennt Germany, Austria & Switzerland).",
+  "Mehrere Discogs-MC-Pressungen (15349631, 24889304) mit gleicher Tracklist wurden nicht in alternatives aufgeführt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 9.7,
+  "tokens_in": 21125,
+  "tokens_out": 1127,
+  "cost_usd": 0.05352,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

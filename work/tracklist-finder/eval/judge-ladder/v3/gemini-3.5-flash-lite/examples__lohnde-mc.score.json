@@ -1,0 +1,92 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:30",
+ "overall": 2.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: No barcode in input. Level 4: Title, artist, and format match, but label/cat. no./year/country/cover are only backed by ONE database entry (discogs:release/24165131) and images hosted on the same database entry, not >= 2 independent database sources (Level 4 NOT MET). Level 3: Unambiguous edition backed by one good database plus sleeve/label image evidence confirming the release details and tracklist, with no competing edition sharing the same tracklist (alternative is Folge 2 with a different tracklist and artist credit). All conditions for Level 3 are MET.",
+   "summary": "The edition is unambiguous and verified by Discogs and cover images, but relies on a single database source.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: Not >= 2 independent database sources of the same edition. Level 4: One complete database source confirmed by printed j-card images of the exact same release showing identical tracks and order. All conditions for Level 4 are MET.",
+   "summary": "The complete tracklist from Discogs is fully confirmed by the printed tracklist on the back of the J-card images.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: No independent primary physical source description outside of database/images. Level 4: Only one database entry plus images hosted on the same database entry (not two independent database entries or a separate collector site like musik-sammler.de). Level 3: One good database entry with release images. All conditions for Level 3 are MET.",
+   "summary": "The data rests on a single Discogs release entry and its associated cover images.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation warning: artists is empty in FACTS (though release artist is properly populated in the result structure)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.5,
+  "tokens_in": 24555,
+  "tokens_out": 447,
+  "cost_usd": 0.00848,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

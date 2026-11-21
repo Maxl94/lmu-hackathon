@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:49",
+ "overall": 2.35,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured",
+  "less than half of the durations backed"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires an input barcode match in >=2 sources. NOT MET: the input has no barcode and the release has none (GEMA only; tl-discogs release 24165131). Level 4: title, artist, format plus a further attribute unambiguous in >=2 sources, and no fitting edition with a different tracklist. NOT MET: Discogs search (call 3) returns two cassettes titled 'Blasmusik Aus Lohnde'. Folge 1 (24165131, Musikverein Lohnde 1925 e.V., MC6109) and Folge 2 (24154076, credited 'Swinging Seelze'). The Folge 2 cover reads 'Blasorchester des Musikvereins Lohnde' (call 10), so it also fits artist 'Musikverein Lohnde'. Folge 2 has a different tracklist (Hello Dolly, In The Mood …; call 6). Level 3: unambiguous, or all fitting editions share a tracklist. NOT MET: the tracklists differ and the input gives no Folge number. Level 2: several editions fit, one has a different tracklist, choice rests on weak signals. MET: the choice of Folge 1 rests only on a closer artist-credit string match.",
+   "summary": "The input (no Folge number, artist 'Musikverein Lohnde', MC) fits both Folge 1 and Folge 2, the latter performed by the Musikverein's own orchestra with a different tracklist, so the choice rests on a credit-string nuance.",
+   "evidence": [
+    "tl-discogs search (call 3)",
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "tl-vision Folge 2 front (call 10)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources of the same edition agree. NOT MET as fully independent: the J-card image is hosted on the same Discogs entry, and the Discogs tracklist was likely transcribed from it. Level 4: one complete source, confirmed by a second with only small deviations. MET: Discogs 24165131 lists 10 tracks (A1–A6, B1–B4). The vision read of the printed J-card back (call 9) gives the same 10 titles in the same order, with only capitalisation differences.",
+   "summary": "The Discogs tracklist is confirmed by the printed J-card on the release images, which share the same database origin.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/.../NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus an independent primary source of the same edition. NOT MET: the cover and label images are a primary print, but they are hosted on and uploaded to the same Discogs entry, so they are not independent. Level 4: two independent database entries or database plus a collector site. NOT MET: MusicBrainz, musik-sammler, Deezer and Last.fm returned nothing (calls 2, 15, 22). Level 3: one good database, or sources that may have copied from each other (e.g. images on the same DB entry). MET.",
+   "summary": "Only Discogs plus images hosted on that same Discogs entry; no independent second source.",
+   "evidence": [
+    "discogs:release/24165131",
+    "tl-vision calls 9, 11, 12, 16, 17",
+    "tl-mb search (call 2)",
+    "tl-deezer/tl-lastfm (call 22)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Status 'found' despite a competing edition with a different tracklist: Folge 2 (discogs:release/24154076) is by the 'Blasorchester des Musikvereins Lohnde' and fits the input. The disambiguation skill prescribes 'ambiguous' in this case.",
+  "The input title has no 'Folge 1'; the result title 'Blasmusik aus Lohnde (Folge 1)' adds a disambiguator the input does not confirm.",
+  "Year 1991 is inferred from the J-card phrase 'im 67st. Jahr' and is not printed as a release year.",
+  "No durations are available for any track (A1–B4)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 18.5,
+  "tokens_in": 37462,
+  "tokens_out": 1915,
+  "cost_usd": 0.18815,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

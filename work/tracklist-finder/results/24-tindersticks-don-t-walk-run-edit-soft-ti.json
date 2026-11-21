@@ -1,0 +1,177 @@
+{
+ "input": {
+  "id": "24-tindersticks-don-t-walk-run-edit-soft-ti",
+  "title": "Don't Walk, Run (Edit) / Soft Tissue",
+  "artist": "Tindersticks"
+ },
+ "status": "found",
+ "release": {
+  "title": "Don't Walk, Run (Edit) / Soft Tissue",
+  "artist": "Tindersticks",
+  "format": "Vinyl",
+  "country": "UK",
+  "year": 2025,
+  "label": "Lucky Dog / City Slang",
+  "catno": "LuckyDog43 / Slang50604",
+  "barcode": null,
+  "edition": "7\" 45 RPM, Limited Edition of 500 copies (tour merchandise / label webshop)",
+  "ids": {
+   "discogs": "33266490"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A",
+   "disc": 1,
+   "title": "Don't Walk, Run (Edit)",
+   "artist": null,
+   "duration_s": 237,
+   "sources": [
+    "discogs:release/33266490",
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+    "itunes:album/1791528634",
+    "deezer:album/700328281"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Staples",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33266490"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "AA",
+   "disc": 1,
+   "title": "Soft Tissue",
+   "artist": null,
+   "duration_s": 241,
+   "sources": [
+    "discogs:release/33266490",
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+    "itunes:album/1791528634",
+    "deezer:album/700328281"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Boulter",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33266490"
+     ]
+    },
+    {
+     "name": "Staples",
+     "role": "writer",
+     "sources": [
+      "discogs:release/33266490"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Tindersticks",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/33266490",
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b"
+   ]
+  }
+ ],
+ "total_duration_s": 478,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/33266490",
+   "url": "https://www.discogs.com/release/33266490-Tindersticks-Dont-Walk-Run-Edit-Soft-Tissue",
+   "kind": "database",
+   "note": "matched edition: 7\" 45 RPM, LuckyDog43 / Slang50604, matrix etched 'Slang50604/LuckyDog43 (side A & AA)', 2025-02-24, limited 500"
+  },
+  {
+   "id": "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+   "url": "https://musicbrainz.org/release/802b5b5a-ae7a-4576-932e-94e359b1f25b",
+   "kind": "database",
+   "note": "digital single of the same release group (2025-02-13, Lucky Dog); source of titles and ms durations"
+  },
+  {
+   "id": "itunes:album/1791528634",
+   "url": "https://music.apple.com/de/album/dont-walk-run-soft-tissue-single/1791528634",
+   "kind": "streaming",
+   "note": "digital single, ℗ 2025 Lucky Dog/City Slang, durations 236650 ms / 241249 ms"
+  },
+  {
+   "id": "deezer:album/700328281",
+   "url": "https://www.deezer.com/album/700328281",
+   "kind": "streaming",
+   "note": "digital single, UPC 4250506851477, 3:56 / 4:01"
+  },
+  {
+   "id": "discogs:release/33135597",
+   "url": "https://www.discogs.com/release/33135597",
+   "kind": "database",
+   "note": "same master 3751851, digital WAV (City Slang SLANG50604D)"
+  },
+  {
+   "id": "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7",
+   "url": "https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7",
+   "kind": "shop",
+   "note": "label shop: \"7-Inch Vinyl Single, Limited Edition of 500 Copies\", tracklist A - Don't Walk, Run (edit) / B - Soft Tissue"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 1",
+   "values": {
+    "discogs:release/33266490": "Don't Walk, Run (Edit)",
+    "musicbrainz:release/802b5b5a-ae7a-4576-932e-94e359b1f25b": "Don't Walk, Run (Edit)",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7": "Don't Walk, Run (edit)"
+   },
+   "resolution": "Used the database spelling 'Don't Walk, Run (Edit)'; the label shop only differs in lower-casing 'edit'. The back cover could not be read (Discogs image host returned HTTP 403)."
+  },
+  {
+   "field": "position track 2",
+   "values": {
+    "discogs:release/33266490": "AA",
+    "web:https://shop.cityslang.com/products/don-t-walk-run-edit-soft-tissue-7": "B"
+   },
+   "resolution": "Chose 'AA' because the matrix/runout identifier in the Discogs entry explicitly documents the etched sides as 'A & AA'; the shop lists sides generically as A/B."
+  }
+ ],
+ "missing": [
+  "The 7\" itself carries no printed durations in any source; track durations are taken from the digital single of the same release group (identical recordings, master 3751851) - hence flag duration_other_edition.",
+  "No barcode on the vinyl release (matrix etched only: Slang50604/LuckyDog43).",
+  "No MusicBrainz release exists for the vinyl edition (only the digital single); per-track ISRCs not available for the vinyl."
+ ],
+ "alternatives": [
+  {
+   "description": "Digital single 'Don't Walk, Run / Soft Tissue', MP3, Lucky Dog/City Slang, 2025-02-13 (Discogs release/33127275)",
+   "source": "discogs:release/33127275",
+   "why_not": "digital release, not a physical sound carrier"
+  },
+  {
+   "description": "Digital single, WAV file, City Slang SLANG50604D (Discogs release/33135597)",
+   "source": "discogs:release/33135597",
+   "why_not": "digital release, not a physical sound carrier"
+  }
+ ],
+ "reasoning": "The input title 'Don't Walk, Run (Edit) / Soft Tissue' matches exactly one physical edition: the limited 7\" single on Lucky Dog/City Slang (LuckyDog43 / Slang50604, Discogs release/33266490), whose tracklist A = 'Don't Walk, Run (Edit)' and AA = 'Soft Tissue' is confirmed independently by the label's own web shop and by the digital single of the same master (MusicBrainz, iTunes, Deezer, Discogs digital versions). All other candidates (Discogs master 3751851, MB release group 77d67819) are digital-only, so the physical 7\" is preferred. The two-track order and titles agree everywhere; only the duration source is the digital single (7\" has no documented durations), which is flagged. Marked confidence 0.85: single strong physical database match with shop confirmation, but durations derive from another edition and the back cover image was not readable."
+}

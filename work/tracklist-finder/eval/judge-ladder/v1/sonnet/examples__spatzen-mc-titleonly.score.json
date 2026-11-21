@@ -1,0 +1,98 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:42",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Der Input enthält nur Titel und Format (MC), keinen Barcode. Die Koch-MC D 221 190 (Barcode 9002722211901) passt zu Titel, Künstler und Format. Sie ist durch MusicBrainz, Discogs 2297987 und den J-Card-Scan (Barcode, Kat.-Nr.) in ≥2 Quellen eindeutig belegt. Weitere MC-Pressungen (Discogs 15349631, 24889304, PL 16402359) haben dieselbe Trackliste, die Wahl ist also unerheblich. Die Various-Artists-MCs sind klar abgegrenzt. Künstler und Barcode im Input fehlen, die Zuordnung ist daher eine Annahme.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:RGYeyADh…(J-Card Rückseite)",
+    "discogs:release/15349631",
+    "discogs:release/24889304"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "12 Titel in der Reihenfolge A1–B6 stimmen in MusicBrainz, Discogs und beiden J-Card-Scans derselben MC überein. Abweichungen betreffen nur Schreibweisen (Sarner-Welle Lied / Sarner-Welle-Lied) und Dauern (A1, A6), die dokumentiert und anhand der gedruckten J-Card-Dauern aufgelöst wurden. Das 'Hallo Freunde' bei Deezer/iTunes ist als digitale Eigenheit erklärt.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:VyI96FTD…(J-Card Innenseite)",
+    "image:RGYeyADh…(J-Card Rückseite)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 83% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus eine unabhängige Primärquelle: die gelesene J-Card der MC mit Barcode, Kat.-Nr., Titeln und gedruckten Dauern. Deezer/iTunes dienen nur als Gegenprobe. Der Scan ist per Vision-Modell gelesen, aber die Werte sind mit den Datenbanken plausibel abgeglichen.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:VyI96FTD…",
+    "image:RGYeyADh…"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Input enthält keinen Künstler; die Zuordnung zu Kastelruther Spatzen stützt sich auf die Sample-ID 'spatzen-mc-titleonly' (Schritt 2) statt auf den Input selbst.",
+  "Die Behauptung 'Deezer bestätigt A1=3:22 und A6=3:30' trifft zu. Die Quelle Deezer ist aber ein digitaler Katalog (Master von 2000), kein Beleg für die MC-Ausgabe.",
+  "A1-Dauer: Die J-Card Innenseite (3'22'') widerspricht MusicBrainz (3:19). Die übrigen MB-Dauern weichen um 1–2 s ab, die 12 Dauern sind also teils gemischt aus gedruckt und Discogs.",
+  "Die Aussage 'Standardpressung' ist eine Wertung des Agenten, nicht direkt belegt. Die Discogs-Releases ohne Barcode (15349631, 24889304) sind nicht eindeutig auf Barcode-Unterschied hin geprüft; ihre Tracklisten sind identisch.",
+  "total_duration_s 2229 weicht von der Summe MB (2226) und Discogs (2193) ab; das Ergebnis stützt sich auf gewählte Einzelwerte."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 10.2,
+  "tokens_in": 48364,
+  "tokens_out": 1377,
+  "cost_usd": 0.1105,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

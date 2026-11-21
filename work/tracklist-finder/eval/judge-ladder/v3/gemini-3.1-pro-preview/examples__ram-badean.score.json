@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:30",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The input contains a barcode which is invalid, but after check-digit correction (to 888837168625, tool call 1) it matches the chosen edition exactly in MusicBrainz (tool call 6) and Discogs (tool call 7); format (CD) and artist (Daft Punk) match the input; search results (tool calls 4 and 5) show no other edition with the same barcode and a different tracklist. All conditions MET.",
+   "summary": "The check-digit corrected barcode perfectly matches the selected CD edition in multiple databases.",
+   "evidence": [
+    "1",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles. MusicBrainz (tool call 6), Discogs (tool call 7), and the back cover image (tool call 9) all confirm exactly 13 tracks with the same titles and order. All conditions MET.",
+   "summary": "Two independent databases and the physical back cover agree flawlessly on the tracklist.",
+   "evidence": [
+    "6",
+    "7",
+    "9"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source of the same edition. The agent used both MusicBrainz/Discogs (databases) and an image of the physical back cover (primary source, tool call 9) belonging to the exact same edition. All conditions MET.",
+   "summary": "The research is supported by excellent databases and confirmed directly by reading the physical back cover.",
+   "evidence": [
+    "6",
+    "7",
+    "9"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 10.7,
+  "tokens_in": 24003,
+  "tokens_out": 1422,
+  "cost_usd": 0.06507,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

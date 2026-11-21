@@ -1,0 +1,97 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:56",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires an input barcode match in >=2 sources. NOT MET: the input gives no barcode. Level 4: title, artist, format plus a further attribute must be unambiguous in >=2 sources, and no fitting edition may have a different tracklist. Title, artist, format, barcode 888837168618 and cat. no. 88883716861 are consistent across MB 4867ceba and Discogs 4570366: MET. No competing edition with a different tracklist: NOT MET. The MB search (step 2) shows the 2023 10th Anniversary 3×Vinyl (6+7+9 = 22 tracks) and the 2014 box set (12\"+12\"+10\" + USB, 34 tracks). Both fit 'Daft Punk / Random Access Memories / Vinyl', and the input does not exclude them. Level 3: requires all fitting editions to share one tracklist. NOT MET, for the same reason. Level 2: several editions fit and at least one has a different tracklist; the choice of the standard 2×LP rests on the weak signal 'unqualified input = standard album'. MET.",
+   "summary": "Without a barcode or year in the input, Vinyl editions with different tracklists (2023 10th Anniversary 3×LP, 2014 box set) also fit, so the choice of the standard 2×LP rests on a plausibility assumption.",
+   "evidence": [
+    "tl-mb search (step 2)",
+    "tl-discogs search (step 1)",
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition must agree on count, order and titles. MB 4867ceba (step 5) and Discogs 4570366 (step 6) share barcode 888837168618 and cat. no. 88883716861. Both list 13 tracks A1–D4 in identical order. Titles differ only in capitalisation and apostrophe style ('Doin’ It Right' vs \"Doin' It Right\"). Durations differ by at most 2 s (A1, A2, C2, D4), which is rounding. MET.",
+   "summary": "MusicBrainz and Discogs entries with the same barcode and cat. no. agree on 13 tracks, order and titles apart from spelling variants.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: requires a database plus an independent primary source such as cover or label print. NOT MET: only database entries were read, and the cover images were not evaluated. Level 4: requires two independent database entries recognisable by differing details. MET: MB (DE, durations in ms, ISRCs) and Discogs (UK/Europe & US, durations differing by up to 2 s, runout data) are clearly independent entries.",
+   "summary": "Two independent databases (MusicBrainz, Discogs) with differing details, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The agent set status 'found' although the loaded disambiguation skill prescribes 'ambiguous' when fitting candidates have different tracklists, as the 2023 10th Anniversary 3×LP (22 tracks) and the 2014 box set (34 tracks) do here.",
+  "Alternative 'discogs:release/28924120' (Drumless Edition) does not appear in the visible tool outputs (step 1 is truncated); its tracklist was never checked, so this alternative is unsupported.",
+  "Inconsistent MB data: the search (step 2) shows 4867ceba as '2013-05-20 FR', but the release call (step 5) shows '2013-05-17 DE'. The result gives country DE without addressing the discrepancy.",
+  "The claim that all later reissues (2017/2021/2022/2023) have an identical tracklist is unsupported: their tracklists were not fetched, only the search hits were seen.",
+  "The pairing of the MB DE release with Discogs 4570366 (UK, Europe & US first pressing) rests only on matching barcode and cat. no., not on proof of the same pressing."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 19.9,
+  "tokens_in": 20127,
+  "tokens_out": 2035,
+  "cost_usd": 0.12121,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:37",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: Input contains a barcode (NOT MET: input only provides title 'King of Kingz' and format 'CD', no barcode); no other edition with different tracklist (NOT MET). Level 4: Barcode match in one source (NOT MET: no barcode in input); without barcode, unambiguous in >=2 sources with no other fitting edition having a different tracklist (NOT MET: tool calls 1 and 2 show competing CD editions titled 'King of Kingz' with different tracklists, namely Bushido's 2004 Exclusive Edition with 20 tracks in musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907, and Sean Kingston's 2011 CD with 13 tracks in musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd and discogs:release/16502868). Level 3: Unambiguous in one source or all fitting editions share the same tracklist (NOT MET: fitting CD editions have 13, 16, and 20 tracks across two different artists). Level 2: Several editions fit the input (MET: Bushido 2003 16-track CDs, Bushido 2004 20-track CD, Sean Kingston 2011 13-track CD); at least one has a different tracklist (MET: 13 vs 16 vs 20 tracks and different artist); choice rests on weak signals (MET: chosen via GEMA/German context; no contradiction with input title or format).",
+   "summary": "Without an artist or barcode in the input, multiple CD editions titled 'King of Kingz' with different tracklists (13, 16, and 20 tracks across Bushido and Sean Kingston) fit the input, making the choice reliant on weak contextual signals.",
+   "evidence": [
+    "shell:bin/tl-discogs search",
+    "shell:bin/tl-mb search",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd",
+    "discogs:release/769288",
+    "discogs:release/3057907",
+    "discogs:release/16502868"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition (MET: musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a, discogs:release/769288, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ all match EAN 4018939105976 and differ in independent details); agree on count, order and titles with spelling variants only (MET: all three sources list the exact same 16 tracks in identical order from 'Intro' to 'Sternenstaub', differing only in capitalization and featuring-artist credit formatting).",
+   "summary": "Three independent sources for the chosen 2003 Aggro Berlin CD edition (EAN 4018939105976) fully agree on all 16 track positions, order, and titles apart from minor capitalization and featuring-credit variants.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source such as read cover/booklet/label print or label/manufacturer information of the same edition (NOT MET: no cover/booklet images were read and no official label or manufacturer source was consulted). Level 4: Two independent database entries recognisable by differing details or database + specialised collector site (MET: both conditions are satisfied, as musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288 are independent database entries for EAN 4018939105976 with differing catno 'AGGRO 004' vs 'AGGRO004CD', release dates, durations such as track 16 3:41 vs 3:38, and notes; additionally confirmed by specialised collector site web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ with differing duration rounding and featured artist aliases).",
+   "summary": "The chosen edition is backed by two clearly independent music databases (MusicBrainz and Discogs) plus a specialised collector site (musik-sammler.de), though no primary cover or label source was inspected.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: the top-level 'artists' field is empty instead of listing all distinct main and featured artists on the carrier.",
+  "In 'reasoning', the agent describes the chosen edition (EAN 4018939105976) as the 'CD-Erstveröffentlichung' (first CD release), which contradicts web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ ('Zweite CD-Auflage, die erste war ohne EAN-Code') and the agent's own note on the MZEE.com alternative.",
+  "For track 16 ('Sternenstaub'), discogs:release/769288 is listed in 'duration_sources' even though it reports 218 s (3:38) rather than the selected 221 s (3:41), although the conflict is properly flagged and documented.",
+  "For tracks 3, 8, 9, 12, 13, and 15, featured artist credits are not present in the discogs:release/769288 tool output, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/ uses different artist aliases/names ('Bass Sultan Hengzt & King Orgasmus One' on track 8, 'Fler' on tracks 12 and 15) than the MusicBrainz credits used in the output."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 65.3,
+  "tokens_in": 22698,
+  "tokens_out": 5595,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

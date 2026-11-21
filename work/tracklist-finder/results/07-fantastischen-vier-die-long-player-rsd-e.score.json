@@ -1,0 +1,125 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:18",
+ "overall": 4.0,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode matches exactly in Discogs (33691152), but no second source carries this barcode (MusicBrainz and iTunes cover the 2024 CD/digital editions, and the shop photo's barcode was unreadable), so NOT MET. Level 4: barcode match in only one source, and the other 2024 LP/picture-disc editions (31907761, 31972811, 31918495) carry different barcodes and catnos, so the input barcode singles this edition out. MET. Rating 4.",
+   "summary": "The input EAN matches only the Discogs RSD 2025 release (33691152), with a valid check digit and consistent catno, title and artist, but no second source confirms that barcode.",
+   "evidence": [
+    "bin/tl-gtin 4262459550239",
+    "bin/tl-discogs search --barcode 4262459550239 (1 hit)",
+    "bin/tl-discogs release 33691152 (barcode, notes on sticker)",
+    "bin/tl-mb search --barcode (0 releases)",
+    "bin/tl-discogs versions 3616795"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET, the shop photo OCR disagrees on C3 title (KLINGEN vs Fliegen) and on durations, so it is not two sources agreeing on everything. Level 4: MET. Discogs is a complete 16-track source for this vinyl edition, and the shop photo confirms count, order and 15 of 16 titles, with the deviations explained as OCR errors; durations come from another edition (MusicBrainz CD) that agrees with Discogs within 1 s.",
+   "summary": "Discogs gives a complete 16-track side list that the RSD shop photo confirms in count, order and titles apart from explained OCR misreads (C3 title, B3/C3/D3 durations).",
+   "evidence": [
+    "bin/tl-discogs release 33691152 (A1–D4)",
+    "bin/tl-vision rsd1.webp (A1–D4 OCR)",
+    "bin/tl-mb release 7cbbf3a1 (1.1–1.16)",
+    "bin/tl-itunes album 1759547350"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source of the same edition. Discogs is a database and the RSD shop photo is a manufacturer/shop product image of the back cover, but its content was read only via OCR and the barcode is unreadable, so the primary-source condition is only partly met. Level 4: MET. Two database entries (Discogs and MusicBrainz/iTunes) plus a shop product photo; MusicBrainz and iTunes describe a different carrier, though, so only Discogs covers this exact edition.",
+   "summary": "The RSD edition rests on the Discogs database entry plus an OCR-read official shop photo, while MusicBrainz and iTunes cover other editions of the same album.",
+   "evidence": [
+    "discogs:release/33691152",
+    "image:/tmp/opencode/rsd1.webp",
+    "musicbrainz:release/7cbbf3a1-c6d4-4dc4-a26e-15078742d7da",
+    "itunes:album/1759547350"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validator warns of high confidence 0.92 despite 7 open conflicts; the conflicts are resolved by reasoning (capitalisation, OCR), but the barcode match rests only on Discogs.",
+  "The C3 title on the shop photo reads KLINGEN, which the agent attributes to OCR error; the explanation is plausible but unverified on the carrier.",
+  "Durations for the vinyl edition itself were not measured; ms-precise durations come from the 2024 CD (MusicBrainz) and digital (iTunes) editions, which the result discloses.",
+  "Guest credits (MIA., Hansi Biebl Band, jan SEVEN dettwyler, Kadavar) come from CD/digital recording credits and are not printed on the vinyl; the result's artist credits for A2, B1, D1–D4 are therefore unverified for this edition.",
+  "Back-cover images on Discogs returned HTTP 403, so the carrier print was not read directly; the barcode on the shop photo was unreadable.",
+  "The 2024 black-vinyl 2LP (31907761) shares catno 2984265RMP; the agent did not check whether its tracklist differs, though its different barcode excludes it for this input.",
+  "Discogs 'Long Player' C3 duration 4:35 vs MusicBrainz 4:36 and D3 4:12 are consistent, but Discogs B3 2:34 vs OCR 3:31 is a large gap that the agent attributes to OCR without carrier confirmation."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 16,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "genius",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 7,
+  "alternatives": 5,
+  "agent_confidence": 0.92,
+  "validation_errors": [],
+  "validation_warnings": [
+   "high confidence despite open conflicts – justify or lower it"
+  ]
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.4,
+  "tokens_in": 21466,
+  "tokens_out": 3668,
+  "cost_usd": 0.00398,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 16,
+   "of": 16
+  }
+ }
+}

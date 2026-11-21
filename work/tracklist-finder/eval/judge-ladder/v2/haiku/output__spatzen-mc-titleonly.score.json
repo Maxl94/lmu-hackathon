@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:10",
+ "overall": 3.35,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: NOT MET. The input has no barcode, and the only barcode 9002722211901 is in MusicBrainz (musicbrainz:release/e0d210c6) and Discogs 2297987, which lists it, so the barcode is not confirmed in two sources for a single edition, and format and artist are not checked against the input. Level 4: barcode match is not available as a 2-source match; without barcode, title, format MC and artist (Kastelruther Spatzen, from MB/Discogs) plus label/catno (Koch Records Special 221 190) and year (1985) are consistent across MB and Discogs, so this level is MET. Competing MC editions: Discogs 15349631 and 24889304 (same catno, 1985 AT/DE) have the same 12-track list as 2297987; Discogs 16402359 (Poland, AMA) was found but its tracklist was never checked, which keeps the choice from being fully verified. Level 3 is therefore the stopping point because several MC editions fit but the evidence shows identical tracklists for the German/Austrian ones.",
+   "summary": "Several MC editions fit the input, and the checked ones (Discogs 2297987, 15349631, 24889304 and MB e0d210c6) share the same tracklist, but the Poland cassette (Discogs 16402359) was never checked and the input provides no barcode.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/15349631",
+    "discogs:release/24889304",
+    "discogs:release/16402359",
+    "tl-mb search (CD and LP alternatives excluded by format)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: MET for count, order and titles. MB e0d210c6 and Discogs 2297987 both list 12 tracks in the same order with the same titles; cd-lexikon.de and kastelrutherspatzen.de also list the same 12 titles. Spelling variants only. Level 5 is met for count, order and titles. However, the durations differ between MB and Discogs for most tracks (A1 199 vs 202, A5 141 vs 140, A6 210 vs 183, B1 152 vs 150, B4 138 vs 136, B5 187 vs 185, B6 196 vs 197) and the totals are 2226 s vs 2193 s; the agent's explanation covers only A6 and is not supported for the other tracks, so I rate one level lower.",
+   "summary": "Count, order and titles agree across MusicBrainz, Discogs, cd-lexikon and the artist site, but the per-track durations and total (2226 s vs 2193 s) conflict between MB and Discogs with only A6 explained.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://www.cd-lexikon.de/album_kastelruther-spatzen-ich-sags-dir-mit-musik.htm",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET. No independent primary source (cover, booklet, label print) was read; the artist site lists catalogue numbers and tracks but is not a read cover or label print. Level 4: MET. Two independent database entries with differing details (MB e0d210c6 with ms durations and Discogs 2297987 with barcode and differing durations) exist, plus Deezer and Last.fm as supporting streaming/web sources.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details support the edition, but no primary cover or label-print source was read.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "deezer:album/231158",
+    "lastfm:album/Kastelruther Spatzen/Ich sag's Dir mit Musik"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Agent chose MB durations (210 s for A6) over Discogs (183 s) on the basis that Deezer and Last.fm confirm 3:30; Deezer is a digital release and Last.fm shows 3:22 for track 1 and 2:20 for track 5, which contradicts MB's 199 s and 141 s for those tracks, so the duration choice is not established.",
+  "Agent's total_duration_s 2226 relies entirely on the MB durations; the Discogs total is 2193 s and was not reconciled beyond A6.",
+  "Discogs 16402359 (Poland, AMA cassette) fits the input but was not checked; the result does not address whether its tracklist matches.",
+  "Deezer (tl-scrape of deezer album 231158) lists track 10 as 'Sarner-Welle Lied Hallo Freunde', and Last.fm lists the same, an apparent title glitch that the agent did not flag.",
+  "Result labels the edition 'Original 1985 Edition' and country AT without evidence of an edition statement; Discogs lists 'Germany, Austria, & Switzerland'.",
+  "Barcode 9002722211901 is valid (EAN-13 check digit 1), so the MB and Discogs barcode is consistent."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 18.0,
+  "tokens_in": 22941,
+  "tokens_out": 3944,
+  "cost_usd": 0.00427,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

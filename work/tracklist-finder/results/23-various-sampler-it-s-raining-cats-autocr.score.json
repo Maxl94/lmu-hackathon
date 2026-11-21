@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:44",
+ "overall": 3.5,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "5: no barcode in input - NOT MET. 4: no barcode; title match (100), artist mismatch-by-design (input 'Various (Sampler)' vs 'Various Artists'/track artists), format CD matches, label/year/country corroborated in Discogs and Wikipedia/literaturport (14-track CD Oct 2025) - MET partially; but no other competing edition with a different tracklist found in evidence (searches returned only unrelated items; Deezer digital edition same 14 tracks) - MET. Level 4 requires title, artist, format and one further attribute unambiguous in >=2 sources: Discogs+Wikipedia+literaturport confirm CD 2025 and artist list; however the Discogs entry is the only database listing of the physical CD and the artist-name link is weak (input artist generic). Level 4 conditions are not cleanly all met, so level 3: unambiguous match, backed by one physical-edition database (Discogs) with supporting web pages that do not give the tracklist.",
+   "summary": "Unambiguous physical CD match on Discogs with no competing edition found, but the input has no barcode and the generic artist descriptor only loosely matches, so it stays at level 3.",
+   "evidence": [
+    "discogs:release/37143216",
+    "deezer:album/838323442",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/",
+    "tool: bin/tl-mb search (0 releases)",
+    "tool: bin/tl-search competing title searches (no other CD)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: two independent sources agree on count, order, titles - Discogs (14 tracks, titles) and Deezer (14 tracks, same order, title-case variants only) MET; but durations and titles of the physical CD were only read from Discogs and Deezer is digital - count and order agree. Level 5 condition 'same edition' is arguably not met since Deezer is digital; level 4: one complete source (Discogs) confirmed by second (Deezer) except spelling/case deviations - MET. Level 4 applies.",
+   "summary": "Discogs complete 14-track listing is confirmed by Deezer digital tracklist in order and count, differing only in spelling/case, but the second source is digital rather than the same physical edition.",
+   "evidence": [
+    "discogs:release/37143216 (tl-discogs release output, tl-scrape firecrawl)",
+    "deezer:album/838323442 (tl-deezer album)",
+    "web:de.wikipedia.org (14-track confirmation, no tracklist)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: no primary source (cover/booklet) read - cover image HTTP 403, not MET. 4: two independent database entries with differing details (Discogs physical CD; Deezer digital album with UPC and label) - MET; Deezer has different details (UPC, label Institut für Inter Na gut) and is a separate database. Level 4 applies.",
+   "summary": "Two independent database entries (Discogs CD and Deezer album with UPC) agree on the tracklist, but no primary cover or booklet was read.",
+   "evidence": [
+    "discogs:release/37143216",
+    "deezer:album/838323442",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result claims 'Discogs release has no barcode' and Deezer UPC 859720243378 is used only as digital reference; fine, but the physical CD barcode remains unverified.",
+  "Label 'Not On Label' and 'Club Edition, Partially Mixed' are only from Discogs; no cover read (HTTP 403) - stated in result's missing list.",
+  "Artist name mismatch: result lists 'Andreas Voß' and 'Andreas Voss' as separate track credits in tracks 4/5/13; artists array contains 'Andreas Voss' twice (separate entries), which is a duplicate in the output.",
+  "Deezer total duration 1907 s vs Discogs 1896 s is noted; per-track differences of 1 s on tracks 1,3,4,7,8,11,12,13 are acceptable.",
+  "Track 10 'Vorsichtiger Versuch' and track 11 'Top Stalking' have no title_conflict flag, consistent with Deezer; fine.",
+  "Result 'artists' field lists Carsten Klook with tracks 9,10,12,14 and the STEREÖTYPEN entry without mention that Wikipedia names Ralf Junker with STEREÖTYPEN; not contradicting the tracklist.",
+  "Agent's reasoning states 'MusicBrainz has no entry' - supported by tl-mb search returning 0 releases."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 14,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "artist_similarity": 66,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "de.wikipedia.org",
+   "deezer",
+   "discogs",
+   "literaturport.de"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 16,
+  "alternatives": 1,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.5,
+  "tokens_in": 29681,
+  "tokens_out": 1584,
+  "cost_usd": 0.00376,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 0,
+   "of": 14
+  }
+ }
+}

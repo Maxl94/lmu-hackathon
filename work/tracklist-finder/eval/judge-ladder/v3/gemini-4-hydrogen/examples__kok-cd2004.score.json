@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:55",
+ "overall": 4.75,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) INPUT contains barcode 4019593960000 (valid EAN-13 per tl-gtin) and it matches this exact edition in >= 2 independent sources: MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a via tl-mb search/release, discogs:release/3057907 via tl-discogs search/release, web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ via tl-scrape, and image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg via tl-vision). (2) Format and artist match: MET (CD, Bushido in all sources). (3) No other edition with the same barcode and a different tracklist: MET (tl-mb group 85fc52d2-14af-3150-a62a-0e07048c4827 and searches show other editions have different barcodes/formats/labels). All conditions of Level 5 are MET.",
+   "summary": "The valid EAN 4019593960000 matches the exact 2004 CD edition 'Exclusive 2004 Edition' across MusicBrainz, Discogs, musik-sammler.de, and the back cover scan, with matching artist and format and no competing edition sharing this barcode.",
+   "evidence": [
+    "tl-gtin",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg",
+    "tl-mb group 85fc52d2-14af-3150-a62a-0e07048c4827"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a (tl-mb release), discogs:release/3057907 (tl-discogs release), web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ (tl-scrape), and the printed back cover image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg (tl-vision) all agree on 20 tracks in the exact same order. The only title difference is track 11 ('Pitbull' in MB/Discogs tracklist vs. 'Pittbull' on the back cover, Discogs notes, and musik-sammler.de) and punctuation on track 15 ('Vack You!' vs. 'Vack You' on musik-sammler.de), which are minor spelling variants. Duration conflicts on tracks 10, 15, and 16 are properly documented and resolved via ms-accurate MusicBrainz timings corroborated by musik-sammler.de.",
+   "summary": "Four sources of the exact same edition agree on all 20 tracks, their order, and titles aside from the minor 'Pitbull'/'Pittbull' spelling variant on track 11.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. Two independent databases (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907, differing in durations and Track 11 text) plus collector database web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/ are combined with a direct reading (via tl-vision) of the printed back cover scan image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg, which independently confirms the printed barcode, catalog number, tracklist, feat.-credits, and 'PITTBULL' spelling.",
+   "summary": "The result combines two independent music databases and musik-sammler.de with a direct vision reading of the physical back cover print of the exact edition.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once' — the top-level 'artists' array is missing/empty despite featured artists on tracks 3, 8, 9, 12, 13, and 15."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 23.7,
+  "tokens_in": 36403,
+  "tokens_out": 4453,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

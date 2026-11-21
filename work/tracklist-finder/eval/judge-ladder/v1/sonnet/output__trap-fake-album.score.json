@@ -1,0 +1,80 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:14",
+ "overall": 1.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "nicht gefunden",
+  "Ausgabe nur Stufe 1 – richtige Ausgabe nicht gesichert",
+  "Trackliste nur Stufe 1",
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 1,
+   "begruendung": "nicht gefunden – nichts zu bewerten",
+   "belege": [],
+   "by": "Code"
+  },
+  "trackliste": {
+   "stufe": 1,
+   "begruendung": "nicht gefunden – nichts zu bewerten",
+   "belege": [],
+   "by": "Code"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "keine Tracks",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 1,
+   "begruendung": "nicht gefunden – nichts zu bewerten",
+   "belege": [],
+   "by": "Code"
+  }
+ },
+ "bedenken": [],
+ "facts": {
+  "status": "not_found",
+  "tracks": 0,
+  "format_match": null,
+  "artist_similarity": null,
+  "title_similarity": null,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "amazon.de",
+   "discogs",
+   "ebay.de",
+   "hitparade.ch",
+   "musicbrainz",
+   "musik-sammler.de",
+   "youtube"
+  ],
+  "source_kinds": [
+   "charts",
+   "collector",
+   "database",
+   "marketplace",
+   "shop",
+   "web"
+  ],
+  "conflicts": 0,
+  "alternatives": 3,
+  "agent_confidence": 0.0,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {},
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

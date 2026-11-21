@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:24",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 731456031125 (valid UPC-A) matches in MusicBrainz release 41b0a392 (tl-mb search), Discogs 1949898 (scanned barcode), the back-cover image (barcode print, cat. no. 560 311-2) and musik-sammler.de (EAN 731456031125): MET. Format CD and artist Various Artists match: MET. Other editions with the same barcode (Discogs 23145932 UK, 26676554 EU) are reported with the same tracklist, and the Club edition 610930 has a different barcode: MET, though the EU release's tracklist was not shown in the evidence. Level 5 is met.",
+   "summary": "The exact barcode match is confirmed by at least four independent sources, and the only same-barcode alternatives are pressings with the same tracklist.",
+   "evidence": [
+    "tl-gtin",
+    "tl-discogs search --barcode",
+    "tl-mb search --barcode",
+    "tl-discogs release 1949898",
+    "tl-caa / tl-vision back cover",
+    "tl-scrape musik-sammler EAN 731456031125",
+    "tl-discogs release 23145932"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: MET only if spelling variants only. Count (40) and order agree across MusicBrainz, Discogs and the back-cover reading; but title differences exist beyond spelling: Discogs adds '(Album Version)' to track 10 CD1 and the back-cover reading gives 'Seine Strassen' vs 'Straßen' on CD2 track 2 (spelling). The Discogs version suffix is an explained variant rather than a pure spelling variant, so level 5 is not cleanly met. Level 4: one complete source (MusicBrainz) confirmed by a second (Discogs, cover) except small explained deviations (version suffix, ß/ss, durations) - MET.",
+   "summary": "Count and order are confirmed by several sources, but title differences (Discogs '(Album Version)' suffix, ß/ss spelling) keep this at one complete source with explained deviations.",
+   "evidence": [
+    "tl-mb release 41b0a392 (40 tracks)",
+    "tl-discogs release 1949898",
+    "tl-vision back cover CD1-01..CD2-20",
+    "tl-scrape musik-sammler full tracklist"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database (MusicBrainz, Discogs) plus an independent primary source of the same edition (back-cover image read via vision, showing barcode 731456031125 and cat. no. 560 311-2) - MET. Level 5 is met.",
+   "summary": "Two databases plus a read back-cover print of the same edition, with the barcode and cat. no. confirmed on the physical cover, give a primary-source confirmation.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 7 CD2 'Mary Mary - Shackles (Praise You)': MusicBrainz 200 s vs musik-sammler 3:17 (197 s) is a 3 s deviation that is not listed as a conflict, although the result claims that only 5 durations are above the 2 s tolerance.",
+  "Track 8 CD2 'Mýa feat. Jadakiss': MusicBrainz 254 s vs Discogs 252 s vs musik-sammler 4:12 (252 s) - borderline 2 s deviation, not discussed in the conflicts list.",
+  "musik-sammler.de tracklist (tl-scrape, CD1 track 10) lists the artist as 'Nelly' for 'Oops!... I Did It Again' while MusicBrainz, Discogs and the cover say Britney Spears; the result calls the page a source with typos but does not mention this artist error.",
+  "The result's conflicts list shows 5 duration conflicts (flags on tracks 5, 7, 14, 18, 19), but the reasoning states that exactly 35 of 40 durations are within tolerance; the Mary Mary track 7 CD2 deviation contradicts this count.",
+  "The UK (23145932) and EU (26676554) pressings are claimed to have an identical tracklist; for 26676554 the tracklist was never shown in the tool outputs, so this claim is not evidenced.",
+  "The Discogs title '(Album Version)' on CD1 track 10 is treated as a spelling variant even though it is a version suffix; this is an explained deviation, not a clean match.",
+  "The result's confidence (0.9 in the facts, 0.93 in the written file) differs between the agent output and the written file, and the written file also shows the 'Mary Mary' track 7 CD2 entry with duration 200 s despite the musik-sammler value of 197 s."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 25.3,
+  "tokens_in": 46702,
+  "tokens_out": 5478,
+  "cost_usd": 0.00741,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

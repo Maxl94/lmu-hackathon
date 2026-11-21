@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:39:03",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: needs an input barcode; the input has none, so NOT MET. Level 4: title and format match MusicBrainz e0d210c6 and Discogs 2297987 (MET), but it also requires that no other fitting edition has a different tracklist. That is NOT MET: the input gives no artist, and Discogs 8491193 (Various, 'Ich Sag's Dir Mit Musik', 5×MC box, Reader's Digest 1995) fits title+format with a completely different tracklist (step 8). Discogs 7800803 (Various, MC, title with subtitle 'Musikalische Liebesbriefe') also nearly fits. Level 3: requires no competing edition or all fitting editions sharing one tracklist; NOT MET for the same reason. Level 2: several editions fit the input and at least one has a different tracklist; the choice of the Kastelruther Spatzen album rests on weak signals (the agent explicitly used the internal ID 'spatzen-mc-titleonly', step 3/agent note, which is not part of the input). MET. Within the Spatzen MCs (2297987, 15349631, 24889304, AMA 16402359) the tracklists are identical, so that sub-choice does not matter.",
+   "summary": "Without an artist in the input, the Various-Artists MC box 'Ich Sag's Dir Mit Musik' (Discogs 8491193) with a completely different tracklist is a valid competitor, and the Spatzen choice rested partly on the leaked input ID.",
+   "evidence": [
+    "bin/tl-discogs search (step 1)",
+    "discogs:release/8491193 (step 8)",
+    "discogs:release/7800803 (step 8)",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MusicBrainz e0d210c6 (step 4) and Discogs 2297987 (step 5) both list 12 tracks A1–B6 in identical order: MET. The J-card back with barcode 9002722211901 (step 11/30) and the J-card inside (step 28) confirm the same 12 titles and order: MET. Differences are spelling only (Sarner-Welle Lied/-Lied, upper/lower case): MET.",
+   "summary": "MusicBrainz, Discogs and two J-card scans of the same barcoded MC agree on 12 tracks, order and titles, with only spelling variants.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/...",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/..."
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database plus independent primary source of the same edition. Database: MusicBrainz e0d210c6 and Discogs 2297987 (MET). Primary source: J-card scans read with tl-vision, showing the printed barcode 9002722211901 and cat. no. D 221 190 that match this edition, plus printed durations (steps 11, 28, 30): MET. The images are hosted on the Discogs entry but are reproductions of the physical print.",
+   "summary": "Two databases plus readable printed J-card scans carrying the matching barcode give database and primary-source confirmation.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "tl-vision step 11/30 (barcode 9002722211901)",
+    "tl-vision step 28 (printed durations)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input has no artist; the agent picked the Kastelruther Spatzen album partly because of the internal input ID 'spatzen-mc-titleonly' (step 3 note), which is not part of the given input.",
+  "Discogs 8491193 (Various, Reader's Digest 5×MC, exact same title) fits the input and has a completely different tracklist; it is dismissed only because it is a compilation.",
+  "Durations are inconsistent: A1/A6 use the printed J-card values, but A3 (188 vs printed 187), A5 (141 vs 140), B1 (152 vs 150), B2 (239 vs 238), B3 (207 vs 206), B4 (138 vs 136), B5 (187 vs 185) and B6 (196 vs printed 197) use MusicBrainz values that contradict the printed J-card.",
+  "The total_duration_s of 2229 matches neither the printed sum (2220 s) nor MusicBrainz (2226 s).",
+  "Release label 'Koch-Records Special' and title spellings follow mixed conventions; the B4 spelling 'Sarner-Welle Lied' differs from the J-card back ('Sarner-Welle-Lied')."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 24.2,
+  "tokens_in": 50180,
+  "tokens_out": 2305,
+  "cost_usd": 0.24682,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

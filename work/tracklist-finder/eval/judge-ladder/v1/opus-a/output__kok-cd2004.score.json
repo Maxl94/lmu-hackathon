@@ -1,0 +1,86 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:23:02",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 4019593960000 trifft in zwei unabhängigen Datenbanken genau eine CD-Ausgabe: MusicBrainz 15996385… und Discogs 3057907. Format, Künstler und Titel stimmen mit dem Input überein, Alternativen mit abweichender Trackliste sind nicht bekannt.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Beide Quellen derselben Ausgabe stimmen in Anzahl (20), Reihenfolge und Titeln überein. Abweichungen gibt es nur bei den Dauern von Track 15 und 16 (3 s), nicht bei den Titeln.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor; sie unterscheiden sich in Details wie Länderangabe, Editionszusatz und Dauern. Eine Primärquelle wie Cover oder Booklet fehlt.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Dauerabweichungen bei Track 15 (2:21 vs. 2:18) und Track 16 (3:41 vs. 3:38) wurden nur per fester Regel zugunsten von MusicBrainz aufgelöst, nicht inhaltlich geklärt.",
+  "Die Katalognummer '40195 9396000-0' ist offenbar aus dem Barcode abgeleitet und in der Evidenz nicht als eigene Angabe belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 7.2,
+  "tokens_in": 5250,
+  "tokens_out": 655,
+  "cost_usd": 0.0341,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

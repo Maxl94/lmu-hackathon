@@ -1,0 +1,87 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:26",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Input nennt nur Titel, Künstler und Format (Vinyl), keinen Barcode. Zwei Datenbanken (MusicBrainz 4867ceba und Discogs 4570366) nennen dieselbe Standard-2×LP 2013 mit Barcode 888837168618 und Kat.-Nr. 88883716861, Format passt. Der Barcode ist in den Quellen konsistent, aber der Input enthält ihn nicht; Titel, Künstler, Format und Label/Kat.-Nr./Jahr sind in ≥2 Quellen eindeutig, daher Stufe 4.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "tl-discogs search Treffer"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Beide Quellen (MusicBrainz Release 4867ceba und Discogs 4570366) stimmen bei Anzahl (13), Reihenfolge (A1–D4) und Titeln überein; Dauern weichen nur um 1–2 s ab (Rundung, MB in ms). Die Dauer-Abweichungen sind erklärt, daher Stufe 5.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 Ausgabe",
+    "discogs:release/4570366 Ausgabe"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbankeinträge (MusicBrainz und Discogs) mit unterschiedlichen Details (Discogs-Runout-Notizen, Dauern), aber kein Primärquellen-Scan oder Label-Information aus Cover/Booklet belegt. Daher Stufe 4.",
+   "belege": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Das Ergebnis enthält kein Land/Jahr aus dem Input; Auswahl der Standard-2×LP ist eine Annahme (Alternativen mit gleicher Trackliste vorhanden, z. B. discogs:release/9216088, 31621720), was bei Stufe 4 berücksichtigt ist.",
+  "Angegebene Land-Information 'DE' für MusicBrainz (2013-05-17 DE) und Discogs 'UK, Europe & US' ist uneinheitlich; das Feld country='DE' wird von Discogs nicht bestätigt.",
+  "Die Alternative 'discogs:release/31621720' wird im Ergebnis als 2017/2021/2022 beschrieben, die Suchtreffer nennen nur 2017 Europe; das Jahr 2022 ist nicht durch die Suchausgabe belegt.",
+  "Die Alternative 'musicbrainz:release/fc1eb6d6' wird als '34 Tracks' beschrieben; die Suche nennt 6+7+2+15+4 = 34, passt. Der Drumless-Eintrag 'discogs:release/28924120' und 2023-Repress sind im gezeigten Output nicht belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 5.9,
+  "tokens_in": 18311,
+  "tokens_out": 1101,
+  "cost_usd": 0.00238,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "version": 1,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:23:04",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 731456031125 (Prüfziffer korrekt) trifft exakt in MusicBrainz und Discogs auf dieselbe Ausgabe. Format CD und Artist Various Artists passen zur Eingabe. Die weiteren Discogs-Treffer (1949898, 26676554) haben denselben Barcode und dieselbe Trackliste und sind damit unerheblich.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "discogs:release/1949898",
+    "discogs:release/26676554"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Beide Quellen haben 40 Tracks in gleicher Reihenfolge mit übereinstimmenden Titeln bis auf kleine Abweichungen. Track 10 weicht bei Discogs durch den Zusatz '(Album Version)' ab, Track 22 und 26 nur in der Schreibweise. Vier Dauerabweichungen (Tracks 5, 7, 14, 18) sind mit der MusicBrainz-Regel erklärt. Das entspricht einer vollständigen Quelle, die von einer zweiten mit erklärbaren Abweichungen bestätigt wird, also Stufe 4 und nicht 5.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932",
+    "Tracks 1-40 Tabelle",
+    "conflicts: Titel Track 10, 22, 26; Dauer Track 5, 7, 14, 18"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 90% von ≥ 2 Quellen bestätigt, 4 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei unabhängige Datenbankeinträge (MusicBrainz und Discogs) mit unterschiedlichen Detailangaben (Dauern in ms, Schreibweisen). Keine primäre Quelle wie Cover oder Booklet wurde gelesen, daher Stufe 4.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/23145932"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Track 10: Discogs führt '(Album Version)' als Zusatz, das ist keine reine Schreibweisenvariante; die Auflösung 'MusicBrainz-Schreibweise' ist nicht belegt.",
+  "Die Dauerabweichungen bei Tracks 5, 7, 14, 18 (3-4 s) werden nur per Regel 'MusicBrainz vor Discogs' aufgelöst, ohne unabhängige Bestätigung.",
+  "Die Agent-Begründung nennt 'Schnellweg ohne Agent'; die Quellenbasis besteht nur aus Datenbanken ohne Cover- oder Labelprüfung."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.6,
+  "tokens_in": 8663,
+  "tokens_out": 1778,
+  "cost_usd": 0.00176,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

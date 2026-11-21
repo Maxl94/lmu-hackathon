@@ -1,0 +1,548 @@
+{
+ "input": {
+  "id": "17-paula-linke-k-sse-mehr-k-sse",
+  "title": "Küsse! Mehr Küsse!",
+  "artist": "Paula Linke"
+ },
+ "status": "found",
+ "release": {
+  "title": "KÜSSE! MEHR KÜSSE!",
+  "artist": "Paula Linke",
+  "format": "CD",
+  "country": "DE",
+  "year": 2026,
+  "label": "Eigenvertrieb",
+  "catno": null,
+  "barcode": null,
+  "edition": "CD mit Booklet (CD + Digital Album)",
+  "ids": {
+   "bandcamp": "k-sse-mehr-k-sse",
+   "itunes": "6798000134",
+   "deezer": "1046252222"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Licht und Farbe",
+   "artist": null,
+   "duration_s": 218,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Papa mit Kind",
+   "artist": null,
+   "duration_s": 175,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Kühe Gucken",
+   "artist": null,
+   "duration_s": 167,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Ich leih mir das nur...",
+   "artist": null,
+   "duration_s": 111,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Einfach aufstehen und weiter (Opa)",
+   "artist": null,
+   "duration_s": 251,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Sorgen von morgen",
+   "artist": null,
+   "duration_s": 213,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Tampon Blues",
+   "artist": null,
+   "duration_s": 129,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Ich stehe in Ruhe",
+   "artist": null,
+   "duration_s": 195,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Geputzte Flügel (Paula & friends)",
+   "artist": null,
+   "duration_s": 212,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Die Stunden ziehen vorbei",
+   "artist": null,
+   "duration_s": 185,
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "duration_sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Paula Linke",
+     "role": "composer",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    },
+    {
+     "name": "Paula Linke",
+     "role": "lyricist",
+     "sources": [
+      "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Paula Linke",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+    "itunes:album/6798000134",
+    "deezer:album/1046252222",
+    "web:https://1.brf.be/sendungen/chansons/1220767/",
+    "web:https://paula-linke.de/"
+   ]
+  },
+  {
+   "name": "Thekla Apitz",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Michael Mond",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Maria Schüritz",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Merle Weißbach",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Maria Jacobi",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Stefan Ebert",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Sonja Goll",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Nikki Gennrich",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  },
+  {
+   "name": "Linda Gundermann",
+   "role": "other",
+   "tracks": [],
+   "sources": [
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse"
+   ]
+  }
+ ],
+ "total_duration_s": 1856,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+   "url": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse",
+   "kind": "shop",
+   "note": "Bandcamp physical CD + digital album listing; 10 tracks with durations; credits; released 3 July 2026; all rights reserved."
+  },
+  {
+   "id": "itunes:album/6798000134",
+   "url": "https://music.apple.com/de/album/k%C3%BCsse-mehr-k%C3%BCsse/6798000134?uo=4",
+   "kind": "streaming",
+   "note": "Digital edition released 2026-08-01; 10 tracks; ms durations; ℗ 2026 Paula Linke."
+  },
+  {
+   "id": "deezer:album/1046252222",
+   "url": "https://www.deezer.com/album/1046252222",
+   "kind": "streaming",
+   "note": "Digital edition, UPC 4068992790596, label recordJet; 10 tracks."
+  },
+  {
+   "id": "web:https://1.brf.be/sendungen/chansons/1220767/",
+   "url": "https://1.brf.be/sendungen/chansons/1220767/",
+   "kind": "web",
+   "note": "Radio review; confirms release 3 July 2026, Eigenvertrieb; mentions Tampon Blues."
+  },
+  {
+   "id": "web:https://www.startnext.com/paula-linke-kuesse-mehr-kuesse",
+   "url": "https://www.startnext.com/paula-linke-kuesse-mehr-kuesse",
+   "kind": "web",
+   "note": "Crowdfunding campaign; planned release 11 Feb 2026 (postponed to 3 July 2026); CD and digital rewards."
+  },
+  {
+   "id": "web:https://paula-linke.de/",
+   "url": "https://paula-linke.de/",
+   "kind": "web",
+   "note": "Artist website; confirms CD with booklet available, streaming release."
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "release title",
+   "values": {
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse": "KÜSSE! MEHR KÜSSE!",
+    "itunes:album/6798000134": "Küsse! Mehr Küsse!",
+    "deezer:album/1046252222": "Küsse! Mehr Küsse!",
+    "input": "Küsse! Mehr Küsse!"
+   },
+   "resolution": "Use the physical CD/Bandcamp spelling 'KÜSSE! MEHR KÜSSE!'; digital editions use title case."
+  },
+  {
+   "field": "title track 5",
+   "values": {
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse": "Einfach aufstehen und weiter (Opa)",
+    "itunes:album/6798000134": "Einfach aufstehen und weiter",
+    "deezer:album/1046252222": "Einfach aufstehen und weiter"
+   },
+   "resolution": "Use physical CD/Bandcamp spelling with '(Opa)'; digital editions omit it."
+  },
+  {
+   "field": "label",
+   "values": {
+    "web:https://1.brf.be/sendungen/chansons/1220767/": "Eigenvertrieb",
+    "deezer:album/1046252222": "recordJet"
+   },
+   "resolution": "Physical CD self-released (Eigenvertrieb); digital edition distributed by recordJet."
+  },
+  {
+   "field": "release date",
+   "values": {
+    "web:https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse": "2026-07-03",
+    "web:https://1.brf.be/sendungen/chansons/1220767/": "2026-07-03",
+    "itunes:album/6798000134": "2026-08-01",
+    "deezer:album/1046252222": "2026-08-01",
+    "web:https://www.startnext.com/paula-linke-kuesse-mehr-kuesse": "2026-02-11 (planned)"
+   },
+   "resolution": "Physical CD released 3 July 2026; digital release 1 August 2026; startnext date was a planned date that was postponed."
+  }
+ ],
+ "missing": [
+  "Physical CD barcode not found; digital UPC 4068992790596 belongs to the digital edition (recordJet).",
+  "No formal label; physical CD self-released (Eigenvertrieb); digital distribution via recordJet.",
+  "No MusicBrainz or Discogs entry found for this release.",
+  "Physical CD back cover not read; tracklist taken from Bandcamp listing and cross-checked with digital editions.",
+  "ISRCs not available (no MusicBrainz entry).",
+  "No catalogue number found."
+ ],
+ "alternatives": [
+  {
+   "description": "Digital album (iTunes/Deezer), 10 tracks, released 2026-08-01, UPC 4068992790596, label recordJet.",
+   "source": "itunes:album/6798000134",
+   "why_not": "Digital edition; task prefers physical sound carriers. Used as supporting evidence for titles and durations."
+  }
+ ],
+ "reasoning": "No barcode or format in input. Identified the physical CD edition 'KÜSSE! MEHR KÜSSE!' via Bandcamp (CD mit Booklet + Digital Album), confirmed by the artist's website and BRF1 (released 3 July 2026, Eigenvertrieb). Tracklist of 10 songs from Bandcamp, cross-checked against iTunes and Deezer digital editions (same 10 tracks; durations agree within 1 s). No MusicBrainz/Discogs entry; physical CD barcode unknown. Digital edition (1 Aug 2026, recordJet) listed as alternative."
+}

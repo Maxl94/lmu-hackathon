@@ -1,0 +1,92 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:23",
+ "overall": 3.25,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Die Eingabe enthält keinen Barcode. Titel, Künstler (Musikverein Lohnde 1925 e.V.) und Format MC stimmen mit Discogs r24165131 überein. Die Kat.-Nr. MC 6109 und das Label Fred Kersten KG sind zusätzlich auf den Kassettenlabel-Scans lesbar. Die gefundene 'Folge 2' (r24154076) gehört zum Künstler 'Swinging Seelze' und passt daher nicht. Da die Eingabe aber keine Folge nennt, bleibt eine Restunsicherheit.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:…NTQtOTgxNS5qcGVn",
+    "image:…NTEtNDI2MS5qcGVn",
+    "tl-search Blasmusik aus Lohnde MC6109"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Discogs und der tl-vision-Scan der J-Card-Rückseite stimmen bei allen 10 Titeln (A1–A6, B1–B4) in Anzahl, Reihenfolge und Schreibung überein. Die J-Card-Innenseite bestätigt zusätzlich Seite 1. Beide Quellen gehen jedoch auf denselben Discogs-Upload zurück und sind daher nur eingeschränkt unabhängig.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:…NTctNjE4OC5qcGVn",
+    "image:…NTEtNjY4NS5qcGVn"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Als Quellen liegen ein Datenbankeintrag (Discogs) und gelesene Druckbilder (J-Card, Kassettenlabel) vor. Die Bilder stammen allerdings vom selben Discogs-Eintrag und sind damit nicht vollständig unabhängig. Weitere Quellen wie MusicBrainz oder musik-sammler.de wurden nicht gefunden.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:…NTctNjE4OC5qcGVn"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Bildquellen sind Discogs-Uploads; die Discogs-Trackliste wurde vermutlich aus denselben Bildern übertragen. Die Unabhängigkeit der Quellen ist daher begrenzt.",
+  "Die Eingabe nennt keine Folge. Es existiert eine 'Folge 2' (r24154076, Künstler Swinging Seelze), die nicht geprüft wurde.",
+  "Für keinen der 10 Tracks sind Spieldauern belegt.",
+  "Das Erscheinungsjahr ist unbekannt. Laut Linertext ('67. Jahr') liegt es vermutlich um 1991/92, das hat der Agent aber nicht ausgewertet."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.75,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 15.7,
+  "tokens_in": 19201,
+  "tokens_out": 1679,
+  "cost_usd": 0.11038,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:23",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: INPUT contains barcode 888837168625 (valid UPC-A / EAN-13 0888837168625 per tl-gtin): MET. Matches this exact EU/DE Standard CD edition in >= 2 independent sources (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 with barcode 0888837168625 and discogs:release/4729785 with barcode 888837168625 / 8 8883-71686-2 5, plus back cover via tl-vision showing 8 8883-71686-2 5): MET. Format (CD) and artist (Daft Punk) match: MET. No other CD edition with this barcode in the evidence has a different tracklist (examined MB releases a8308466 and f6758afb and Discogs releases 4581879 and 4729785 all have the same 13 tracks): MET.",
+   "summary": "Valid input barcode 888837168625, format CD, and artist Daft Punk match the exact Columbia EU/DE edition across MusicBrainz, Discogs, and the back cover scan with no differing tracklist found.",
+   "evidence": [
+    "tl-gtin 888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-vision 5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count (13 tracks), order (1-13), and titles (only capitalization differences such as 'Of'/'To'/'By' vs 'of'/'to'/'by'): MET across musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and the back cover scan read via tl-vision.",
+   "summary": "MusicBrainz, Discogs, and the scanned back cover of the same edition agree completely on all 13 track counts, positions, and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-vision 5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source (read cover print) of the same edition: MET. Independent databases musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and discogs:release/4729785 (differing in millisecond durations/ISRCs vs matrix/SID codes/notes) are combined with the physical back cover print read via tl-vision (showing Columbia 88883716862, LC 00162, Made in the EU, barcode 8 8883-71686-2 5, and all 13 titles).",
+   "summary": "Two independent databases (MusicBrainz and Discogs) are backed by a primary source reading of the physical back cover print of the same EU/DE edition.",
+   "evidence": [
+    "discogs:release/4729785",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "tl-vision 5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: top-level artists list is empty instead of listing every distinct main and featured artist on the carrier.",
+  "Featured artist credits on tracks 5, 6, 7, 8, 11, and 12 (e.g. Julian Casablancas, Pharrell Williams, Paul Williams, Nile Rodgers, Todd Edwards, Panda Bear) are not shown in the cited sources musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, or the back cover; they originate from tl-itunes upc 888837168625 (itunes:album/617154241), which is omitted from sources and track sources."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 20.9,
+  "tokens_in": 11960,
+  "tokens_out": 3865,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

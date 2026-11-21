@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:18",
+ "overall": 4.85,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "5: barcode in >=2 independent sources (MusicBrainz and Discogs both exact 4015698189711, format CD, artist Various) - MET; no other edition with same barcode and different tracklist (Discogs LP 33677340 has barcode 4015698041187, different barcode and format) - MET. Level 5 conditions all met.",
+   "summary": "Barcode 4015698189711 matches exactly the same CD edition in MusicBrainz and Discogs, and the competing vinyl editions carry different barcodes and formats.",
+   "evidence": [
+    "tl-gtin: EAN-13 valid",
+    "tl-mb search barcode hit musicbrainz:release/30f95ef1",
+    "tl-discogs search barcode hit discogs:release/33751572",
+    "tl-discogs versions 3814443: LP barcodes differ"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >=2 independent sources of same edition (MusicBrainz, Discogs CD) agree on count (12), order and titles, differences only in spelling/bureau b edit capitalisation (e.g. '21:32 (bureau b edit)' vs '(Bureau B Edit)'); Discogs and iTunes agree on order. Level 5 met on count, order and titles; artist credits differ in form but titles are consistent. Durations are not part of level 5 conditions but were conflicting, which is a concern.",
+   "summary": "Count, order and titles agree across MusicBrainz and Discogs CD entries (and iTunes/Deezer digital), differing only in spelling/capitalisation.",
+   "evidence": [
+    "tl-mb release 30f95ef1 (12 tracks)",
+    "tl-discogs release 33751572 (12 tracks)",
+    "tl-itunes album 1793124678",
+    "tl-deezer album 704460101"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 33% confirmed by >= 2 sources, 8 conflicts",
+   "summary": "100% of tracks have a duration, 33% confirmed by >= 2 sources, 8 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: requires database + independent primary source (read cover/booklet/label print). Printed back cover could not be read (HTTP 403); the Discogs notes quote back-sleeve text and the label/ISBN identifiers are database-transcribed, not a read primary source of this edition. So level 5 NOT MET. 4: two independent database entries with differing details (MusicBrainz and Discogs, differing durations/credits/country format) - MET. Stop at 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs CD) with differing details agree on the edition, but no primary print was read.",
+   "evidence": [
+    "musicbrainz:release/30f95ef1-7c0e-430f-9e08-c672ad37da15",
+    "discogs:release/33751572",
+    "tl-vision 403 error"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Durations: MusicBrainz deviates from Discogs and iTunes on tracks 3,4,7,8,12 by 2-6.5 s; the agent chose majority values per track (e.g. track 1 297 s from MB+iTunes vs Discogs 303 s), a mixed-source duration set not fully supported; total stated 55:30 whereas the sources show 55:09 (MB), 55:43 (Discogs), 55:29 (iTunes) - the stated total matches none.",
+  "Track 5 duration: result 277 s, but Discogs says 276 s and MusicBrainz 276.72 s; the agent's per-track value 277 is not directly listed in any source. Track 10 duration result 166 vs MB 165.6 is consistent, but total_duration_s 3330 vs stated 55:30 is internally consistent only with its own mix.",
+  "Track 1 duration: result 297 s from MB/iTunes, but Discogs lists 303 s; conflict resolved by majority, acceptable but note.",
+  "Artist credits for tracks 3,6,7,9 use Discogs joint credits; MusicBrainz lists single artists - reasoned but the credit form is partly reconstructed.",
+  "Result claims 'Discogs GEMA' and 'LC 13875' as identifiers; these are supported by the Discogs release output. Country 'DE' is inferred from Discogs 'Germany' and label, acceptable.",
+  "Printed back cover was not read; title capitalisation '(bureau b edit)' taken from MusicBrainz, which the agent admits.",
+  "Discogs release 33751572 track 1 and others use 'Kluster (3)' artist; result normalised to 'Kluster' - trivial."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.333,
+  "dur_conflicts": 8,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming"
+  ],
+  "conflicts": 14,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 7.4,
+  "tokens_in": 16723,
+  "tokens_out": 1442,
+  "cost_usd": 0.00239,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 12,
+   "of": 12
+  }
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:38",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4250101487415 present in input and checksum valid (FACTS ean_checksum_ok, barcode_match exact) - MET. Barcode matches this edition in discogs:release/35282479 (tl-discogs release output) and in web:deejay.de product information ('4250101487415') - MET, two independent sources. Format Vinyl and artist Various Artists match input - MET. No other edition with same barcode and different tracklist found (MB 0 releases, DC search 1 hit, alternatives 0) - MET. Level 5 reached.",
+   "summary": "The input barcode is valid and matches this exact Vinyl edition in Discogs and deejay.de, with artist and format consistent and no competing barcode edition found.",
+   "evidence": [
+    "FACTS barcode_match exact, ean_checksum_ok true",
+    "tl-discogs search --barcode 4250101487415 (1 hit)",
+    "discogs:release/35282479 identifiers Barcode 4250101487415",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778 product info barcode 4250101487415",
+    "tl-mb search barcode 0 releases"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: sources agree on count, order and titles - NOT MET: Discogs lists 9 tracks incl. A1 Intro while Bandcamp, deejay.de, clone.nl, wordandsound, kompakt and Juno list 8 tracks starting with Newlife. Level 4: one complete source (Discogs, 9 tracks) confirmed by a second except small explained deviation - MET in substance: the uncredited intro is explained by Discogs notes and the label description ('An unknown project opens the record with an intro'); the other 8 titles and order agree across Bandcamp, deejay.de, clone.nl and kompakt. Level 4 reached.",
+   "summary": "Eight tracks agree across shops and the label page, and the extra uncredited intro at A1 is explained by the Discogs notes and the label description, though the intro has no title, artist or duration in any source.",
+   "evidence": [
+    "discogs:release/35282479 tracklist A1 Intro (notes: uncredited intro by Unknown Artist)",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1 tracklist A1-D2 8 tracks",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778 A1-D2 8 tracks, intro not listed",
+    "web:https://clone.nl/item81028.html 8 tracks",
+    "web:https://kompakt.fm/releases/horizon_begins_1 8 tracks",
+    "web:https://wordandsound.net/release/162303-ORNVS01-Various-Artists-Horizon-Begins-1 description mentions intro"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 2,
+   "check": "89% of tracks have a duration, 0% confirmed by >= 2 sources, 8 conflicts",
+   "summary": "89% of tracks have a duration, 0% confirmed by >= 2 sources, 8 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database + independent primary source of the same edition - MET: Discogs release page (database) plus Bandcamp label page of Orion Records (label information, release date 24 October 2025, printed side positions) for the same edition. Level 5 reached, though the Bandcamp page is a digital store page and does not show barcode or cover.",
+   "summary": "Discogs database entry for the barcoded pressing is combined with the label's own Bandcamp page, which counts as independent label information.",
+   "evidence": [
+    "discogs:release/35282479",
+    "web:https://orion01.bandcamp.com/album/horizon-begins-1",
+    "web:https://www.deejay.de/Various_Horizon_Begins_1_ORNVS01_Vinyl__1182778",
+    "web:https://kompakt.fm/releases/horizon_begins_1"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Agent claims the official Discogs track videos list 'Unknown Artist - Intro' first and give per-track durations; the tool outputs shown do not display this (only partial title/duration fragments with misaligned values, e.g. Bubble Love 422 vs Kompakt 416), so the video-based durations and intro confirmation are unsupported in the evidence.",
+  "A1 Intro has no title beyond 'Intro', no performer and no duration in any source; the total_duration_s of 2984 s excludes it, so the total is incomplete.",
+  "Track count conflict: Discogs 9 tracks vs 8 tracks in Bandcamp, deejay.de, clone.nl, wordandsound, kompakt and Juno; the intro is not listed by any shop listing, only described in label text.",
+  "Title conflict C2: Symbyosis (Discogs, kompakt, deejay, clone, wordandsound) vs Symbiosis (Bandcamp); agent resolved to Symbyosis, which is reasonable but not verified against the printed label.",
+  "Duration conflicts: Juno durations deviate by up to 32 s (A2 3:25 vs 2:53); durations are from Kompakt distributor metadata, not read from the vinyl, and the Discogs 'Needs Vote' data_quality flag is not mentioned in the result.",
+  "Agent claims credits are missing for 9 of 9 tracks while the Kompakt/Discogs data give artist names for all tracks; minor inconsistency in the result's missing list.",
+  "Artist field in result lists 'Unknown Artist', '200188', 'Orion' as separate artist entries, and B1 is attributed to both Ateq and Orion inconsistently with the Phoenix credit 'Ateq & Orion'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 9,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 0.889,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 8,
+  "source_families": [
+   "clone.nl",
+   "deejay.de",
+   "discogs",
+   "juno.co.uk",
+   "kompakt.fm",
+   "orion01.bandcamp.com"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 10,
+  "alternatives": 0,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 20.9,
+  "tokens_in": 23521,
+  "tokens_out": 4403,
+  "cost_usd": 0.00455,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "missing",
+  "durations_rating": 2,
+  "credits": {
+   "tracks": 0,
+   "of": 9
+  }
+ }
+}

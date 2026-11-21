@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:01",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: input has barcode 888837168625 (checksum OK) - MET. It matches the chosen edition exactly in >=2 independent sources: MusicBrainz f6758afb (barcode 0888837168625) and Discogs 4729785 (barcode 888837168625, EU, GEMA/BIEM) - MET. Format CD and artist Daft Punk match - MET. No other edition with the same barcode and a different tracklist - MET: all 5 MB releases with this barcode have 13 tracks, and the Discogs country editions inspected (4581879 AU, 4729785 EU) have the identical 13-track list. iTunes reports 14 tracks for the digital album but lists only 13, and it is not a CD edition. All conditions met, so the check stops at 5.",
+   "summary": "The barcode matches exactly in MusicBrainz and Discogs, and every CD edition sharing this barcode has the same 13-track list.",
+   "evidence": [
+    "bin/tl-gtin 888837168625",
+    "bin/tl-mb search --barcode 888837168625",
+    "bin/tl-discogs search --barcode 888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MusicBrainz f6758afb lists 13 tracks; Discogs 4729785 lists 13 tracks in the same order with the same titles (capitalisation differs only) - MET. The back-cover read (image:caa:back) also shows the same 13 titles in the same order - MET. Durations differ by 1-3 s between MB and Discogs (e.g. Contact 384 vs 381), which concerns durations, not titles. All conditions met, so the check stops at 5.",
+   "summary": "MusicBrainz, Discogs and the back-cover read agree on 13 tracks with the same order and titles.",
+   "evidence": [
+    "bin/tl-mb release f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "bin/tl-discogs release 4729785",
+    "bin/tl-vision back cover 5748588554"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database plus an independent primary source of the same edition. Database: MusicBrainz and Discogs entries - MET. Primary source: the back-cover image (CAA, attached to the MB release) was read by vision and shows Columbia, cat. no. 88883716862, barcode 8 8883-71686-2 5, Made in the EU, plus the 13 titles - MET. The image is hosted on the MB entry, but it is independent of Discogs, and Discogs differs in detail (durations, notes), so the sources are not copies of each other. All conditions met, so the check stops at 5.",
+   "summary": "Two independent databases plus a read back cover showing the matching barcode and catalogue number.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Per-track duration_sources list Discogs 4729785, but Discogs durations differ by 1-3 s from the chosen MB values (e.g. track 13 Contact: 381 s vs 384 s; track 3: 544 vs 545); the claim that both sources confirm the durations is only approximate.",
+  "total_duration_s 4479 differs from MusicBrainz's stated total of 4477 s (rounding summation); minor.",
+  "The MB search lists f6758afb as 2013-05-20 FR, while the release detail shows DE 2013-05-17; the country assignment 'DE' is slightly inconsistent within MB.",
+  "iTunes reports '14 Tracks' but lists 13; this is unexplained, though it concerns the digital edition, not the CD.",
+  "The Discogs barcode search output (27 hits) is truncated; not every same-barcode edition was verified for its tracklist."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.5,
+  "tokens_in": 13895,
+  "tokens_out": 2044,
+  "cost_usd": 0.09646,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

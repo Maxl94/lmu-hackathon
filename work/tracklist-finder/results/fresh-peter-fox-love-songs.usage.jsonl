@@ -1,0 +1,1 @@
+{"ts": "2026-11-20T16:52:54", "tool": "tl-vision", "model": "gemini-3.8-flash@low", "input_tokens": 1270, "output_tokens": 654, "cache_read_input_tokens": 0, "cost_usd": 0.00375, "seconds": 7.5, "fallback_from": null, "image": "http://coverartarchive.org/release/cdbc45b1-ea4a-4eed-81c2-f0d0ac83cbae/35870377644-1200.jpg"}

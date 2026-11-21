@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:23",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: INPUT contains a barcode matching in >= 2 sources -> NOT MET (input has no barcode). 4: Without barcode, title, artist, format and >= 1 further attribute unambiguous in >= 2 sources and no other fitting edition has a different tracklist -> NOT MET (input gives no further attribute, and tool call 2 tl-mb search shows other Vinyl editions fitting the input with different tracklists, e.g. musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with 22 tracks). 3: Unambiguous in one source or all fitting editions share the same tracklist -> NOT MET (musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f 10th anniversary 3x Vinyl has 22 tracks vs 13 tracks on musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655). 2: Several editions fit the input and at least one has a DIFFERENT tracklist; choice rests on weak signals -> MET (input only specifies title, artist, and Vinyl, leaving standard 13-track 2xLP vs 22-track 10th anniversary Vinyl edition unresolved; choice of 2013 standard edition rests on assuming un-qualified input means the original album).",
+   "summary": "The input lacks barcode, year, or edition details, so competing Vinyl editions with different tracklists (such as the 22-track 10th Anniversary Edition) also fit.",
+   "evidence": [
+    "tool call 2 (tl-mb search)",
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 in tool call 5 and discogs:release/4570366 in tool call 6 both represent the 2013 original pressing Columbia 88883716861 / barcode 888837168618 and agree completely on all 13 tracks, positions A1-D4, order, and titles, differing only in capitalization/apostrophe variants).",
+   "summary": "Both independent database entries for the 2013 Columbia 88883716861 2xLP agree on all 13 track positions, order, and titles.",
+   "evidence": [
+    "tool call 5 (tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655)",
+    "tool call 6 (tl-discogs release 4570366)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source (cover/booklet/label print, label or manufacturer info) of the same edition -> NOT MET (only two databases were queried; no cover images, booklet, or manufacturer pages were inspected). 4: Two independent database entries (recognisable by differing details) or database + specialised collector site -> MET (musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 and discogs:release/4570366 are two independent database entries with differing details such as country DE vs UK, Europe & US, title capitalization, and track durations differing by 1-2 s on A1, A2, C2, and D4).",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) identifiable by differing metadata and duration details.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "FACTS reports a validation error: artists is empty (the output lacks the top-level artists list of distinct main/featured artists on the carrier).",
+  "The agent marked status as found despite competing Vinyl editions with differing tracklists fitting the input (e.g. musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with 22 tracks and musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 with 34 tracks).",
+  "Unsupported claims in alternatives: discogs:release/28924120 (Drumless Edition) does not appear anywhere in the tool outputs, and discogs:release/31621720 was not retrieved with tl-discogs release to verify that its tracklist is identical."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 28.5,
+  "tokens_in": 16206,
+  "tokens_out": 5235,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,129 @@
+{"ts": 1795186831.22, "event": "run_start", "input": {"title": "It‘s raining Cats & AutocRats", "artist": "Various (Sampler)"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186831.22, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186831.22, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186831.22, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186831.22, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186838.06, "event": "tool_start", "tool": "tl-discogs", "args": "search --title It's raining Cats"}
+{"ts": 1795186838.07, "event": "tool_start", "tool": "tl-mb", "args": "search --title It's raining Cats --artist Various"}
+{"ts": 1795186838.5, "event": "tool_end", "tool": "tl-discogs", "args": "search --title It's raining Cats", "seconds": 0.4, "ok": true}
+{"ts": 1795186850.84, "event": "tool_end", "tool": "tl-mb", "args": "search --title It's raining Cats --artist Various", "seconds": 12.8, "ok": true}
+{"ts": 1795186853.22, "event": "tool_start", "tool": "tl-discogs", "args": "release 37143216"}
+{"ts": 1795186853.22, "event": "tool_end", "tool": "tl-discogs", "args": "release 37143216", "seconds": 0.0, "ok": true}
+{"ts": 1795186853.23, "event": "tool_start", "tool": "tl-mb", "args": "search --title It's Raining Cats & AutocRats"}
+{"ts": 1795186853.56, "event": "tool_end", "tool": "tl-mb", "args": "search --title It's Raining Cats & AutocRats", "seconds": 0.3, "ok": true}
+{"ts": 1795186853.75, "event": "tool_start", "tool": "tl-mb", "args": "search --title AutocRats"}
+{"ts": 1795186853.75, "event": "tool_end", "tool": "tl-mb", "args": "search --title AutocRats", "seconds": 0.0, "ok": true}
+{"ts": 1795186858.33, "event": "tool_start", "tool": "tl-discogs", "args": "release 37143216 --help"}
+{"ts": 1795186858.33, "event": "tool_start", "tool": "tl-search", "args": "It's Raining Cats & AutocRats"}
+{"ts": 1795186858.34, "event": "tool_end", "tool": "tl-discogs", "args": "release 37143216 --help", "seconds": 0.0, "ok": true}
+{"ts": 1795186858.51, "event": "tool_start", "tool": "tl-discogs", "args": "release 37143216 --json"}
+{"ts": 1795186858.52, "event": "tool_end", "tool": "tl-discogs", "args": "release 37143216 --json", "seconds": 0.0, "ok": false}
+{"ts": 1795186859.62, "event": "tool_end", "tool": "tl-search", "args": "It's Raining Cats & AutocRats", "seconds": 1.3, "ok": true}
+{"ts": 1795186863.06, "event": "tool_start", "tool": "tl-search", "args": "AutocRats"}
+{"ts": 1795186863.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --grep Notes|Barcode|Matrix|Rights|Label|Catalog"}
+{"ts": 1795186863.15, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --grep Notes|Barcode|Matrix|Rights|Label|Catalog", "seconds": 0.0, "ok": true}
+{"ts": 1795186864.6, "event": "tool_end", "tool": "tl-search", "args": "AutocRats", "seconds": 1.5, "ok": true}
+{"ts": 1795186864.8, "event": "tool_start", "tool": "tl-search", "args": "StereÖtypen"}
+{"ts": 1795186866.11, "event": "tool_end", "tool": "tl-search", "args": "StereÖtypen", "seconds": 1.3, "ok": true}
+{"ts": 1795186869.04, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl"}
+{"ts": 1795186869.04, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186869.09, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/ntWdX4ZWwc17Yd7ltn40PRlXNJpd7uu0Lb25Qh5pFYw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM3MTQz/MjE2LTE3NzY4NjQ2/NTgtNDY2OC5qcGVn.jpeg --context CD cover for 'It's Raining Cats & AutocRats' by various artists. Read any tracklist, title, artist, label,"}
+{"ts": 1795186869.33, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/ntWdX4ZWwc17Yd7ltn40PRlXNJpd7uu0Lb25Qh5pFYw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM3MTQz/MjE2LTE3NzY4NjQ2/NTgtNDY2OC5qcGVn.jpeg --context CD cover for 'It's Raining Cats & AutocRats' by various artists. Read any tracklist, title, artist, label,", "seconds": 0.2, "ok": false}
+{"ts": 1795186872.23, "event": "tool_start", "tool": "tl-itunes", "args": "search It's Raining Cats & AutocRats"}
+{"ts": 1795186872.23, "event": "tool_end", "tool": "tl-itunes", "args": "search It's Raining Cats & AutocRats", "seconds": 0.0, "ok": true}
+{"ts": 1795186872.3, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl --grep Notes|Barcode|Matrix|Rights|Label|Catalog|Phonographic|Published|Copyright|Made"}
+{"ts": 1795186872.3, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl --grep Notes|Barcode|Matrix|Rights|Label|Catalog|Phonographic|Published|Copyright|Made", "seconds": 0.0, "ok": true}
+{"ts": 1795186872.39, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Various --title It's Raining Cats & AutocRats"}
+{"ts": 1795186872.74, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Various --title It's Raining Cats & AutocRats", "seconds": 0.3, "ok": true}
+{"ts": 1795186878.46, "event": "tool_start", "tool": "tl-search", "args": "\"It's Raining Cats & AutocRats\" Klook"}
+{"ts": 1795186878.51, "event": "tool_start", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --grep notes|barcode|identifiers|labels|formats|genres|styles|country|released"}
+{"ts": 1795186878.51, "event": "tool_end", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --grep notes|barcode|identifiers|labels|formats|genres|styles|country|released", "seconds": 0.0, "ok": true}
+{"ts": 1795186879.46, "event": "tool_end", "tool": "tl-search", "args": "\"It's Raining Cats & AutocRats\" Klook", "seconds": 1.0, "ok": true}
+{"ts": 1795186879.64, "event": "tool_start", "tool": "tl-search", "args": "\"AutocRats\" CD 2025"}
+{"ts": 1795186880.69, "event": "tool_end", "tool": "tl-search", "args": "\"AutocRats\" CD 2025", "seconds": 1.1, "ok": true}
+{"ts": 1795186896.58, "event": "tool_start", "tool": "tl-search", "args": "site:bandcamp.com \"It's Raining Cats & AutocRats\""}
+{"ts": 1795186896.64, "event": "tool_start", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --mode http"}
+{"ts": 1795186896.64, "event": "tool_end", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --mode http", "seconds": 0.0, "ok": true}
+{"ts": 1795186897.58, "event": "tool_end", "tool": "tl-search", "args": "site:bandcamp.com \"It's Raining Cats & AutocRats\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186897.8, "event": "tool_start", "tool": "tl-search", "args": "\"StereÖtypen\" Klook Jarick Hartje Jetzmann Voss Fleischhauer"}
+{"ts": 1795186898.99, "event": "tool_end", "tool": "tl-search", "args": "\"StereÖtypen\" Klook Jarick Hartje Jetzmann Voss Fleischhauer", "seconds": 1.2, "ok": true}
+{"ts": 1795186919.41, "event": "tool_start", "tool": "tl-search", "args": "\"It's Raining Cats\" Jetzmann"}
+{"ts": 1795186919.45, "event": "tool_start", "tool": "tl-scrape", "args": "https://de.wikipedia.org/wiki/Carsten_Klook --grep Raining|AutocRats|Album|Jetzmann|Fleischhauer|StereÖtypen|Autoc"}
+{"ts": 1795186919.46, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.literaturport.de/lexikon/carsten-klook/ --grep Raining|AutocRats|Album|Jetzmann|Fleischhauer|Autoc"}
+{"ts": 1795186919.49, "event": "tool_end", "tool": "tl-scrape", "args": "https://de.wikipedia.org/wiki/Carsten_Klook --grep Raining|AutocRats|Album|Jetzmann|Fleischhauer|StereÖtypen|Autoc", "seconds": 0.0, "ok": true}
+{"ts": 1795186920.7, "event": "tool_end", "tool": "tl-search", "args": "\"It's Raining Cats\" Jetzmann", "seconds": 1.3, "ok": true}
+{"ts": 1795186920.91, "event": "tool_start", "tool": "tl-search", "args": "\"AutocRats\" Klook"}
+{"ts": 1795186922.15, "event": "tool_end", "tool": "tl-search", "args": "\"AutocRats\" Klook", "seconds": 1.2, "ok": true}
+{"ts": 1795186924.27, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.literaturport.de/lexikon/carsten-klook/ --grep Raining|AutocRats|Album|Jetzmann|Fleischhauer|Autoc", "seconds": 4.8, "ok": true}
+{"ts": 1795186938.4, "event": "tool_start", "tool": "tl-itunes", "args": "search Carsten Klook"}
+{"ts": 1795186938.4, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Carsten Klook --title It's Raining Cats & AutocRats"}
+{"ts": 1795186938.4, "event": "tool_start", "tool": "tl-search", "args": "\"It's Raining Cats & AutocRats\""}
+{"ts": 1795186938.4, "event": "tool_end", "tool": "tl-itunes", "args": "search Carsten Klook", "seconds": 0.0, "ok": true}
+{"ts": 1795186938.45, "event": "tool_start", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --mode http"}
+{"ts": 1795186938.45, "event": "tool_end", "tool": "tl-scrape", "args": "https://api.discogs.com/releases/37143216 --mode http", "seconds": 0.0, "ok": true}
+{"ts": 1795186938.57, "event": "tool_start", "tool": "tl-itunes", "args": "search It's Raining Cats & AutocRats"}
+{"ts": 1795186938.57, "event": "tool_end", "tool": "tl-itunes", "args": "search It's Raining Cats & AutocRats", "seconds": 0.0, "ok": true}
+{"ts": 1795186938.75, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Carsten Klook --title It's Raining Cats & AutocRats", "seconds": 0.4, "ok": true}
+{"ts": 1795186938.94, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Jetzmann --title It's Raining Cats"}
+{"ts": 1795186939.28, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Jetzmann --title It's Raining Cats", "seconds": 0.3, "ok": true}
+{"ts": 1795186939.37, "event": "tool_end", "tool": "tl-search", "args": "\"It's Raining Cats & AutocRats\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186939.55, "event": "tool_start", "tool": "tl-search", "args": "\"It's Raining Cats and AutocRats\""}
+{"ts": 1795186940.53, "event": "tool_end", "tool": "tl-search", "args": "\"It's Raining Cats and AutocRats\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186940.74, "event": "tool_start", "tool": "tl-search", "args": "\"It's Raining Cats & Autocrats\""}
+{"ts": 1795186941.71, "event": "tool_end", "tool": "tl-search", "args": "\"It's Raining Cats & Autocrats\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186948.48, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.westwerk.org/2025.html --grep Raining|AutocRats|Klook|Jetzmann|Cats|Autoc|Insπraterie|Poem"}
+{"ts": 1795186948.48, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl --grep Notes|Club|Special|Mixed|Edition|Phonographic|Copyright|Published|Made|Raining|AutocRats"}
+{"ts": 1795186948.48, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.discogs.com/release/37143216 --mode firecrawl --grep Notes|Club|Special|Mixed|Edition|Phonographic|Copyright|Published|Made|Raining|AutocRats", "seconds": 0.0, "ok": true}
+{"ts": 1795186949.83, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.westwerk.org/2025.html --grep Raining|AutocRats|Klook|Jetzmann|Cats|Autoc|Insπraterie|Poem", "seconds": 1.4, "ok": true}
+{"ts": 1795186956.43, "event": "tool_start", "tool": "tl-search", "args": "Westwerk \"It's Raining Cats\""}
+{"ts": 1795186956.48, "event": "tool_start", "tool": "tl-scrape", "args": "https://westwerk.org/2025.html --grep Raining|AutocRats|Klook|Jetzmann|Cats|Autoc|Insπraterie|Poem"}
+{"ts": 1795186956.94, "event": "tool_end", "tool": "tl-scrape", "args": "https://westwerk.org/2025.html --grep Raining|AutocRats|Klook|Jetzmann|Cats|Autoc|Insπraterie|Poem", "seconds": 0.5, "ok": true}
+{"ts": 1795186957.48, "event": "tool_end", "tool": "tl-search", "args": "Westwerk \"It's Raining Cats\"", "seconds": 1.0, "ok": true}
+{"ts": 1795186957.67, "event": "tool_start", "tool": "tl-search", "args": "Westwerk AutocRats"}
+{"ts": 1795186958.93, "event": "tool_end", "tool": "tl-search", "args": "Westwerk AutocRats", "seconds": 1.3, "ok": true}
+{"ts": 1795186971.66, "event": "tool_start", "tool": "tl-search", "args": "site:musik-sammler.de \"It's Raining Cats\""}
+{"ts": 1795186971.66, "event": "tool_start", "tool": "tl-itunes", "args": "search Jetzmann"}
+{"ts": 1795186971.66, "event": "tool_end", "tool": "tl-itunes", "args": "search Jetzmann", "seconds": 0.0, "ok": true}
+{"ts": 1795186971.67, "event": "tool_start", "tool": "tl-search", "args": "site:bandcamp.com Jetzmann"}
+{"ts": 1795186971.84, "event": "tool_start", "tool": "tl-itunes", "args": "search StereÖtypen"}
+{"ts": 1795186972.71, "event": "tool_end", "tool": "tl-itunes", "args": "search StereÖtypen", "seconds": 0.9, "ok": true}
+{"ts": 1795186972.73, "event": "tool_end", "tool": "tl-search", "args": "site:bandcamp.com Jetzmann", "seconds": 1.1, "ok": true}
+{"ts": 1795186972.78, "event": "tool_end", "tool": "tl-search", "args": "site:musik-sammler.de \"It's Raining Cats\"", "seconds": 1.1, "ok": true}
+{"ts": 1795186972.91, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist StereÖtypen --title It's Raining Cats"}
+{"ts": 1795186972.96, "event": "tool_start", "tool": "tl-search", "args": "site:bandcamp.com Carsten Klook"}
+{"ts": 1795186972.98, "event": "tool_start", "tool": "tl-search", "args": "site:hitparade.ch \"It's Raining Cats\""}
+{"ts": 1795186973.38, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist StereÖtypen --title It's Raining Cats", "seconds": 0.5, "ok": true}
+{"ts": 1795186973.92, "event": "tool_end", "tool": "tl-search", "args": "site:hitparade.ch \"It's Raining Cats\"", "seconds": 0.9, "ok": true}
+{"ts": 1795186974.04, "event": "tool_end", "tool": "tl-search", "args": "site:bandcamp.com Carsten Klook", "seconds": 1.1, "ok": true}
+{"ts": 1795186974.13, "event": "tool_start", "tool": "tl-search", "args": "YouTube \"It's Raining Cats & AutocRats\""}
+{"ts": 1795186974.25, "event": "tool_start", "tool": "tl-search", "args": "site:bandcamp.com StereÖtypen"}
+{"ts": 1795186975.22, "event": "tool_end", "tool": "tl-search", "args": "YouTube \"It's Raining Cats & AutocRats\"", "seconds": 1.1, "ok": true}
+{"ts": 1795186975.28, "event": "tool_end", "tool": "tl-search", "args": "site:bandcamp.com StereÖtypen", "seconds": 1.0, "ok": true}
+{"ts": 1795186983.33, "event": "tool_start", "tool": "tl-scrape", "args": "https://jetzmann.bandcamp.com/ --links"}
+{"ts": 1795186983.33, "event": "tool_start", "tool": "tl-scrape", "args": "https://carstenklook.bandcamp.com/ --links"}
+{"ts": 1795186984.65, "event": "tool_end", "tool": "tl-scrape", "args": "https://jetzmann.bandcamp.com/ --links", "seconds": 1.3, "ok": true}
+{"ts": 1795186984.65, "event": "tool_end", "tool": "tl-scrape", "args": "https://carstenklook.bandcamp.com/ --links", "seconds": 1.3, "ok": true}
+{"ts": 1795187032.42, "event": "tool_start", "tool": "tl-itunes", "args": "search It's Raining Cats & Autocrats"}
+{"ts": 1795187033.14, "event": "tool_end", "tool": "tl-itunes", "args": "search It's Raining Cats & Autocrats", "seconds": 0.7, "ok": true}
+{"ts": 1795187033.33, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Carsten Klook --title It's Raining Cats & Autocrats"}
+{"ts": 1795187033.76, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Carsten Klook --title It's Raining Cats & Autocrats", "seconds": 0.4, "ok": true}
+{"ts": 1795187033.96, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Jetzmann --title It's Raining Cats & Autocrats"}
+{"ts": 1795187034.24, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Jetzmann --title It's Raining Cats & Autocrats", "seconds": 0.3, "ok": true}
+{"ts": 1795187034.43, "event": "tool_start", "tool": "tl-itunes", "args": "search Klook"}
+{"ts": 1795187036.07, "event": "tool_end", "tool": "tl-itunes", "args": "search Klook", "seconds": 1.6, "ok": true}
+{"ts": 1795187045.04, "event": "tool_start", "tool": "tl-itunes", "args": "search AutocRats"}
+{"ts": 1795187045.71, "event": "tool_end", "tool": "tl-itunes", "args": "search AutocRats", "seconds": 0.7, "ok": true}
+{"ts": 1795187045.9, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Various Artists --title AutocRats"}
+{"ts": 1795187046.32, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Various Artists --title AutocRats", "seconds": 0.4, "ok": true}
+{"ts": 1795187046.5, "event": "tool_start", "tool": "tl-itunes", "args": "search It's Raining Cats"}
+{"ts": 1795187048.87, "event": "tool_end", "tool": "tl-itunes", "args": "search It's Raining Cats", "seconds": 2.4, "ok": true}
+{"ts": 1795187055.52, "event": "tool_start", "tool": "tl-deezer", "args": "album 838323442"}
+{"ts": 1795187055.53, "event": "tool_start", "tool": "tl-deezer", "args": "--help"}
+{"ts": 1795187055.53, "event": "tool_end", "tool": "tl-deezer", "args": "album 838323442", "seconds": 0.0, "ok": true}
+{"ts": 1795187055.54, "event": "tool_end", "tool": "tl-deezer", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795187138.2, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 43, "steps": 20}
+{"ts": 1795187138.21, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795187138.21, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795187138.21, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795187147.03, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.5, "error": null}
+{"ts": 1795187147.03, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.5, "tracks": 14, "wall_s": 307.0, "judge_s": 8.8, "cost_usd": 0.0569, "mode": "agent", "errors": []}

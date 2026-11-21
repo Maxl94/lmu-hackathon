@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:20",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: 'INPUT contains a barcode...' is NOT MET (input lacks barcode). Level 4: 'Without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist' is NOT MET (no artist was specified in input; discogs:release/8491193 is a Cassette release titled 'Ich Sag's Dir Mit Musik' with a completely different tracklist). Level 3: 'Unambiguous but backed by only one source... or several editions fit but ALL share the same tracklist' is NOT MET (competing release discogs:release/8491193 has a different tracklist). Level 2: 'Several editions fit the input and at least one of them has a DIFFERENT tracklist... the choice rests on weak signals' is MET (the input only specified title and MC; both the Kastelruther Spatzen cassette and the Various Artists cassette box set match, each having different tracklists).",
+   "summary": "Because no artist was specified in the input, a competing cassette compilation titled 'Ich Sag's Dir Mit Musik' (discogs:release/8491193) fits the input but features a completely different tracklist.",
+   "evidence": [
+    "discogs:release/8491193",
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)' is MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 and discogs:release/2297987 both agree on 12 tracks, their order, and track titles with only minor capitalization differences).",
+   "summary": "Two independent database sources for this cassette release agree on track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition' is NOT MET (no primary source or cover scan reading tool was included among the cited sources). Level 4: 'Two independent database entries (recognisable by differing details) or database + specialised collector site' is MET (MusicBrainz and Discogs provide independent entries with distinct track durations and catalog detail formatting).",
+   "summary": "The tracklist is supported by two independent databases (MusicBrainz and Discogs) displaying differing duration and catalog details.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "No artist was specified in the input, leaving a competing cassette compilation (discogs:release/8491193) unruled out.",
+  "Track-level artist fields are empty/null in the generated tracks list."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 33.0,
+  "tokens_in": 16220,
+  "tokens_out": 3774,
+  "cost_usd": 0.02895,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

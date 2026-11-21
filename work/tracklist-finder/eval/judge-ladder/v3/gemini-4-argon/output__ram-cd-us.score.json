@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:21",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The INPUT contains a barcode ('888837168625', MET), and it matches exactly this edition in >= 2 independent sources (MET: musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 has 0888837168625, discogs:release/4729785 has 888837168625, and image:caa:back shows 8 8883-71686-2 5); format ('CD') and artist ('Daft Punk') match (MET); no other edition with the same barcode and a different tracklist (MET: all country variants and repressings in MB and Discogs with this barcode are the standard 13-track album).",
+   "summary": "The barcode, artist, title, and CD format match across MusicBrainz, Discogs, and the back cover scan, with all regional variants of this barcode sharing the identical 13-track standard edition tracklist.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) (MET: musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and the back cover scan image:caa:back all agree on the 13 tracks in exact order and title).",
+   "summary": "MusicBrainz, Discogs, and the read back cover image all agree completely on the count, order, and titles of the 13 tracks.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition (MET: two independent databases MusicBrainz and Discogs are used alongside a vision tool reading of the back cover print image:caa:back showing the barcode, catalog number, and tracklist).",
+   "summary": "The result is backed by two independent music databases (MusicBrainz and Discogs) as well as a primary source (the read back cover image of the edition).",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track-level collaborating artists on tracks 5, 6, 7, 8, 11, and 12 (Julian Casablancas, Pharrell Williams, Paul Williams, Nile Rodgers, Todd Edwards, Panda Bear) were taken from the unreferenced iTunes output (itunes:album/617154241) rather than the cited sources (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and discogs:release/4729785 do not show track-level artist credits in their tool outputs).",
+  "Validation error noted in FACTS: the release-level 'artists' array is empty/missing.",
+  "The back cover image source (image:caa:back) is listed in release sources but was omitted from the track-level 'sources' arrays."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 19.6,
+  "tokens_in": 11960,
+  "tokens_out": 1177,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:17",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: (1) Input contains a barcode: MET (input ean '888837168625', verified valid UPC-A / EAN-13 '0888837168625' by tl-gtin). (2) Matches exactly this edition in >= 2 independent sources: MET (musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 has barcode 0888837168625 and Columbia 88883716862; discogs:release/4729785 has barcode 888837168625 / '8 8883-71686-2 5', Columbia 88883716862, BIEM/GEMA, Made in the EU; additionally confirmed by tl-vision reading image:caa:back with barcode '8 8883-71686-2 5', Columbia 88883716862, LC 00162, Made in the EU). (3) Format and artist match: MET (CD and Daft Punk in input and all sources). (4) No other edition with the same barcode and a different tracklist: MET (all 5 CD releases in tl-mb search have 13 tracks, and checked Discogs releases 4729785 and 4581879 share the identical 13-track standard tracklist; iTunes album/617154241 is a digital store listing showing the same 13 audio tracks). Stop at Level 5.",
+   "summary": "The input barcode, format, artist, and title match the exact 2013 EU/DE Columbia CD edition across two independent databases and the physical back cover, with no competing edition having a different tracklist.",
+   "evidence": [
+    "tl-gtin",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "tl-mb search",
+    "tl-discogs search"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET. musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, and image:caa:back (read via tl-vision) all agree on all 13 tracks in the exact same order and with identical titles apart from minor capitalization/apostrophe variants (e.g. 'Give Life Back to Music' vs 'Give Life Back To Music', 'Doin’ It Right' vs 'Doin' It Right' vs 'Doin' it Right'). Stop at Level 5.",
+   "summary": "MusicBrainz, Discogs, and the physical back cover scan all agree completely on the 13 track count, order, and titles with only minor capitalization/punctuation variants.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "tl-vision"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: MET. The research combines two independent database entries (discogs:release/4729785 and musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, clearly independent via differing details such as millisecond TOC durations and ISRCs in MusicBrainz vs rounded durations, matrix/SID codes, and EU/Poland distribution notes in Discogs) with a read primary source of the same edition (image:caa:back read via tl-vision, showing the printed back cover with barcode '8 8883-71686-2 5', Columbia 88883716862, LC 00162, Made in the EU, and all 13 track titles, which is independent of discogs:release/4729785). Stop at Level 5.",
+   "summary": "The edition and tracklist are verified by two independent databases (Discogs and MusicBrainz) plus a read scan of the physical back cover (primary source) of the same edition.",
+   "evidence": [
+    "discogs:release/4729785",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "image:caa:back",
+    "tl-vision"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error: the top-level 'artists' list is empty even though the tracklist credits multiple distinct featured artists (Julian Casablancas, Pharrell Williams, Paul Williams, Nile Rodgers, Todd Edwards, Panda Bear) in addition to Daft Punk.",
+  "Misattributed featured-artist sources on tracks 5, 6, 7, 8, 11, and 12: the featured artist strings (e.g. 'Daft Punk & Julian Casablancas', 'Daft Punk, Pharrell Williams & Nile Rodgers') appear only in itunes:album/617154241 (tl-itunes), not in musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3, discogs:release/4729785, or image:caa:back, yet itunes:album/617154241 is omitted from both top-level sources and track-level sources.",
+  "Undocumented minor duration discrepancies: discogs:release/4729785 is listed in duration_sources for all 13 tracks with conflicts left empty, even though the output uses rounded MusicBrainz durations while discogs:release/4729785 is 1 s shorter on tracks 3-8 and 10-11 and 3 s shorter on track 13 (381 s vs 384 s; itunes:album/617154241 also has 381 s on track 13 and 274 s vs 275 s on track 1).",
+  "Minor source-linking omission: image:caa:back is included in top-level sources as confirming the tracklist, but is not referenced in the per-track sources list for tracks 1-13."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 75.0,
+  "tokens_in": 11960,
+  "tokens_out": 8319,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

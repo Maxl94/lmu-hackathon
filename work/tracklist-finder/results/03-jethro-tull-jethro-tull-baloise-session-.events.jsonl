@@ -1,0 +1,37 @@
+{"ts": 1795185738.37, "event": "run_start", "input": {"title": "JETHRO TULL;BALOISE SESSION(2CD)", "artist": "JETHRO TULL", "ean": "4029759202219"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4029759202219): 1 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "  musicbrainz:release/505bd0d9-7fc5-4536-8206-354e003f8a0c | Live From Baloise Session — Jethro Tull | 2025-08-15 US | CD+CD | Official"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "→ no fast path: input title \"JETHRO TULL;BALOISE SESSION(2CD)\" ≠ MusicBrainz \"Live From Baloise Session\""}
+{"ts": 1795185738.37, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: input title \"JETHRO TULL;BALOISE SESSION(2CD)\" ≠ MusicBrainz \"Live From Baloise Session\""}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185742.06, "event": "tool_start", "tool": "tl-gtin", "args": "4029759202219"}
+{"ts": 1795185742.06, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4029759202219"}
+{"ts": 1795185742.06, "event": "tool_end", "tool": "tl-gtin", "args": "4029759202219", "seconds": 0.0, "ok": true}
+{"ts": 1795185742.06, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4029759202219", "seconds": 0.0, "ok": true}
+{"ts": 1795185742.09, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4029759202219"}
+{"ts": 1795185742.1, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4029759202219", "seconds": 0.0, "ok": true}
+{"ts": 1795185743.68, "event": "tool_start", "tool": "tl-discogs", "args": "release 34259926"}
+{"ts": 1795185743.68, "event": "tool_end", "tool": "tl-discogs", "args": "release 34259926", "seconds": 0.0, "ok": true}
+{"ts": 1795185743.69, "event": "tool_start", "tool": "tl-mb", "args": "release 505bd0d9-7fc5-4536-8206-354e003f8a0c"}
+{"ts": 1795185743.69, "event": "tool_end", "tool": "tl-mb", "args": "release 505bd0d9-7fc5-4536-8206-354e003f8a0c", "seconds": 0.0, "ok": true}
+{"ts": 1795185748.44, "event": "tool_start", "tool": "tl-mb", "args": "release --help"}
+{"ts": 1795185748.45, "event": "tool_end", "tool": "tl-mb", "args": "release --help", "seconds": 0.0, "ok": true}
+{"ts": 1795185748.47, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/qXpu8iyNps2Bs0QnWjzYW-HqIJfrGaTgIzv2Y4RbKyQ/rs:fit/g:sm/q:90/h:494/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM0MjU5OTI2LTE3NTA3NTgyNzAtMzcxNS5qcGVn.jpeg --context back cover of Jethro Tull Live From Baloise Session 2CD earMUSIC 0220221EMU; read printed tracklist with pos"}
+{"ts": 1795185748.6, "event": "tool_start", "tool": "tl-mb", "args": "group 41ede2e2-403f-4593-885b-645af3729dae"}
+{"ts": 1795185748.6, "event": "tool_end", "tool": "tl-mb", "args": "group 41ede2e2-403f-4593-885b-645af3729dae", "seconds": 0.0, "ok": true}
+{"ts": 1795185748.92, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/qXpu8iyNps2Bs0QnWjzYW-HqIJfrGaTgIzv2Y4RbKyQ/rs:fit/g:sm/q:90/h:494/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM0MjU5OTI2LTE3NTA3NTgyNzAtMzcxNS5qcGVn.jpeg --context back cover of Jethro Tull Live From Baloise Session 2CD earMUSIC 0220221EMU; read printed tracklist with pos", "seconds": 0.4, "ok": false}
+{"ts": 1795185753.93, "event": "tool_start", "tool": "tl-caa", "args": "505bd0d9-7fc5-4536-8206-354e003f8a0c"}
+{"ts": 1795185753.93, "event": "tool_start", "tool": "tl-mb", "args": "release 1122e8f0-5379-43ba-8610-3ea297fa65c1"}
+{"ts": 1795185753.93, "event": "tool_end", "tool": "tl-caa", "args": "505bd0d9-7fc5-4536-8206-354e003f8a0c", "seconds": 0.0, "ok": true}
+{"ts": 1795185753.93, "event": "tool_end", "tool": "tl-mb", "args": "release 1122e8f0-5379-43ba-8610-3ea297fa65c1", "seconds": 0.0, "ok": true}
+{"ts": 1795185795.16, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4029759202219"}
+{"ts": 1795185795.16, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4029759202219", "seconds": 0.0, "ok": true}
+{"ts": 1795185795.29, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4029759205838"}
+{"ts": 1795185804.55, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4029759205838", "seconds": 9.3, "ok": true}
+{"ts": 1795185895.59, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 20, "steps": 16}
+{"ts": 1795185895.6, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185896.08, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 15 tracks, ISRC 15"}
+{"ts": 1795185896.08, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185904.08, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.9, "error": null}
+{"ts": 1795185904.08, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.9, "tracks": 15, "wall_s": 157.2, "judge_s": 8.0, "cost_usd": 0.0105, "mode": "agent", "errors": []}

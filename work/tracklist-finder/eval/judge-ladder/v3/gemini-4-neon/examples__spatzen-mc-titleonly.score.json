@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:58:18",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains a barcode matching in >=2 sources, format/artist match, no competing edition with different tracklist -> NOT MET (FACTS: input_has_barcode is false; input only has title and format). Level 4: Barcode in 1 source, or without barcode title/artist/format + further attribute unambiguous in >=2 sources and no competing edition with different tracklist -> NOT MET (input lacks artist and any further attribute; competing MC editions with different tracklists exist in step 1: discogs:release/8491193 and discogs:release/7800803). Level 3: Unambiguous in 1 source or all fitting editions share the same tracklist -> NOT MET (discogs:release/8491193 is a 5xMC box set titled 'Ich Sag's Dir Mit Musik' by Various with a completely different tracklist shown in step 8, and discogs:release/7800803 is a Various Artists MC compilation 'Ich Sag's Dir Mit Musik (Musikalische Liebesbriefe)'). Level 2: Several editions fit the input and at least one has a different tracklist; choice rests on weak signals -> MET (chosen Kastelruther Spatzen MC discogs:release/2297987 / musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 fits title and format, while VA MC compilations discogs:release/8491193 and discogs:release/7800803 also fit title and MC format with different tracklists; the agent relied on assuming an artist album and on the internal test ID 'spatzen-mc-titleonly' in steps 2-4).",
+   "summary": "The title-and-format-only input does not rule out competing Various Artists MC compilations with the same title and completely different tracklists (discogs:release/8491193, discogs:release/7800803).",
+   "evidence": [
+    "shell#1 (tl-discogs search)",
+    "shell#8 (tl-discogs release 8491193 & 7800803)",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/8491193",
+    "discogs:release/7800803"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 in step 4 and discogs:release/2297987 in step 5 are two independent database entries for the exact same 1985 Koch MC barcode 9002722211901, recognizable by differing durations, country, catno format, and capitalization, plus the J-card scans read via tl-vision in steps 11, 28, and 30; all agree on 12 tracks, A1-B6 order, and titles with only capitalization and hyphenation variants such as 'Sarner-Welle Lied' vs 'Sarner-Welle-Lied').",
+   "summary": "MusicBrainz, Discogs, and the read J-card scans of this exact MC edition independently agree on all 12 track positions, order, and titles aside from minor spelling/hyphenation variants.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "shell#11 (tl-vision J-card back)",
+    "shell#28 (tl-vision J-card inside)",
+    "shell#30 (tl-vision J-card back)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 has 0 images and independent metadata/durations, combined with primary physical J-card back and inside scans read via tl-vision in steps 11, 28, and 30 confirming barcode 9002722211901, catno D 221 190, tracklist, and printed durations, plus a second independent database discogs:release/2297987 where the J-card scan even exposed a Discogs transcription typo on A6 of 3:03 vs printed 3'30'').",
+   "summary": "Two independent databases (MusicBrainz and Discogs) are backed by directly read J-card scans (primary print showing barcode, catalog number, tracklist, and printed durations) of the same edition.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "shell#4",
+    "shell#5",
+    "shell#11",
+    "shell#28",
+    "shell#30"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Edition disambiguation used non-input leak: in steps 2-4 the agent relied on the internal sample ID 'spatzen-mc-titleonly' rather than the actual input fields (title and format only), and set confidence to 0.8 despite competing Various Artists MC releases with the same title (discogs:release/8491193, discogs:release/7800803).",
+  "Unsupported claim in alternatives: for discogs:release/7800803 the agent states 'der Spatzen-Titel ist nur Track A1 darunter', but shell#8 output for release 7800803 was truncated before the tracklist and does not show its tracks.",
+  "Validation error from FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "Inconsistent duration selection and inaccurate duration_sources/reasoning: for A1 (202 s) and A6 (210 s) the agent took printed J-card durations, but for A3 (188 vs 187), A5 (141 vs 140), B1 (152 vs 150), B2 (239 vs 238), B3 (207 vs 206), B4 (138 vs 136), B5 (187 vs 185), and B6 (196 vs 197) it took MusicBrainz values instead of the printed J-card/Discogs values (yielding total_duration_s 2229, matching neither J-card 2220 s nor MB 2226 s) while still citing discogs:release/2297987 and the J-card image in duration_sources for those tracks; additionally, reasoning claims 'Rundung auf den MusicBrainz-ms-Wert' even though all MB durations in shell#4 are exact whole-second multiples ending in 000 ms."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 88.4,
+  "tokens_in": 37746,
+  "tokens_out": 10034,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

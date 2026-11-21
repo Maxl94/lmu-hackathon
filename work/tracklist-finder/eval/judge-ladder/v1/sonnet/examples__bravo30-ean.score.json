@@ -1,0 +1,99 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:26",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der Barcode 731456031125 passt exakt in MusicBrainz (Schritt 3/5), Discogs (1949898, Schritt 2/6), musik-sammler.de (Schritt 17) und den Backcover-Aufdruck (Schritt 8); Format, Titel und Katalognummer 560 311-2 stimmen überein. Die UK-/EU-Discogs-Pressungen haben denselben Barcode, laut Agent aber dieselbe Trackliste (nur für UK in Schritt 4 teilweise gesehen).",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs 1949898 und Backcover stimmen bei 40 Tracks in Anzahl, Reihenfolge und Titeln überein; Abweichungen sind nur Schreibweise oder Versionszusätze, und die musik-sammler-Liste bestätigt sie. Dauerkonflikte bei 5 Tracks sind dokumentiert und plausibel aufgelöst.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 88% von ≥ 2 Quellen bestätigt, 5 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Es gibt zwei unabhängige Datenbanken (MusicBrainz, Discogs), die Backcover-Aufdruck-Lesung per Vision als Primärquelle und die Sammlerseite musik-sammler.de. Das erfüllt Datenbank plus unabhängige Primärquelle.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Das Ergebnis behauptet für die UK-/EU-Pressungen (Discogs 23145932/26676554) „identische Trackliste und Dauern“; die EU-Pressung wurde laut Evidenz nie abgerufen, die UK-Pressung nur teilweise (Ausgabe gekürzt).",
+  "musik-sammler.de-Seite hat Tippfehler (z. B. Britney Spears als „Nelly“, Track 19 3:40); sie ist nur eingeschränkt als Schiedsrichter für Dauern geeignet.",
+  "Interpretenwahl bei Track 18 CD2 („DJ Ötzi“ statt Cover „DEEJAY ÖTZI“) ist eine Annahme des Agenten; die Vision-Lesung des Covers weicht hier ab.",
+  "Die Zuordnung zur DE-Pressung (1949898) vs. UK-Pressung (23145932) mit identischem Barcode beruht auf Annahme; Unterschiede (Matrix/Presswerk) sind für die Trackliste aber unerheblich.",
+  "Dauer von Track 1.10 und 1.1/1.2 usw. weichen zwischen Discogs und MusicBrainz um 1 s ab; dies ist nur als Rundung behandelt.",
+  "Im Ergebnis ist die Zeile „Co-Release mit WSM und Sony Music Media“ als Edition aus Discogs abgeleitet; die Backcover-Lesung nennt nur Polystar."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 9.7,
+  "tokens_in": 44886,
+  "tokens_out": 1408,
+  "cost_usd": 0.10385,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

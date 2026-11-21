@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:07",
+ "overall": 5.0,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5 conditions. (a) Input barcode matches this edition in >=2 independent sources: MET. The UPC-A check digit is valid (tl-gtin). MusicBrainz release f6758afb (DE, barcode 0888837168625) and Discogs 4729785 (Europe, barcode 888837168625) both carry it. (b) Format and artist match: MET. Both entries are a CD by Daft Punk, and the back-cover scan shows the same catalogue number and barcode. (c) No other edition with the same barcode has a different tracklist: MET on the visible evidence. The barcode is shared by many pressings (27 Discogs hits, 5 MusicBrainz releases for FR/US/AU/CA/BR). All the ones seen, including the AU Wee Waa limited edition, have the same 13 tracks in the same order. The cassette hit with this barcode is a different format and was not chosen. Part of the Discogs hit list is truncated, so a deviating pressing cannot be fully excluded.",
+   "summary": "The barcode matches the chosen CD in MusicBrainz and Discogs, and every same-barcode pressing visible in the evidence has the same 13-track list.",
+   "evidence": [
+    "bin/tl-gtin 888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "bin/tl-mb search --barcode 888837168625",
+    "bin/tl-discogs search --barcode 888837168625",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles. MET. MusicBrainz f6758afb and Discogs 4729785 both list 13 tracks in the same order, with the same titles apart from capitalisation and apostrophe style. The back-cover scan read by vision confirms the same 13 titles in the same order, and the US MusicBrainz release and iTunes agree too. Durations differ slightly between sources: MB 9:05 vs Discogs 9:04 for track 3, and 6:24 vs 6:21 for track 13. These are rounding or measurement differences and do not affect count, order or titles.",
+   "summary": "MusicBrainz, Discogs and the back cover agree on 13 tracks with the same order and titles.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back",
+    "bin/tl-mb release a8308466-dd18-4912-9192-ccd0eb1878e0",
+    "bin/tl-itunes upc 888837168625"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database + independent primary source of the same edition. MET. The databases are MusicBrainz and Discogs. The primary source is the back-cover scan (CAA image 5748588554) of the MusicBrainz release, read via tl-vision. It shows the title, artist, label, catalogue number 88883716862, barcode 8 8883-71686-2 5, LC 00162, and the 13 handwritten titles. Printed on the cover, this is independent of the database track data.",
+   "summary": "Two databases plus the printed back cover of the same release give a primary-source confirmation.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:caa:back"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Every track's duration_sources lists both MusicBrainz and Discogs, but the durations come from MusicBrainz. Discogs shows different values for track 3 (544 vs 545 s), track 13 (381 vs 384 s) and others, so the Discogs attribution is not accurate.",
+  "total_duration_s 4479 does not match the MusicBrainz total of 4477 s. It is probably a sum of rounded values, but the reasoning does not say so.",
+  "The release metadata gives country DE, while the Discogs source used for confirmation is the Europe release. The barcode is shared by many national pressings, so DE specifically is not proven, although the tracklists are the same.",
+  "The per-track artist credits (e.g. 'Daft Punk & Julian Casablancas') appear in the result and in iTunes, but not in the MusicBrainz or Discogs track output shown, so the sources listed for them are unsupported.",
+  "Part of the Discogs barcode search output is truncated, so the check for deviating same-barcode pressings is incomplete."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 0,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 22.8,
+  "tokens_in": 13844,
+  "tokens_out": 2781,
+  "cost_usd": 0.0555,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

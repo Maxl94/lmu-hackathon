@@ -1,0 +1,714 @@
+{
+ "input": {
+  "id": "02-till-br-nner-italia-lp",
+  "title": "ITALIA (LP)",
+  "artist": "TILL BRÖNNER",
+  "ean": "4029759207641"
+ },
+ "status": "found",
+ "release": {
+  "title": "ITALIA",
+  "artist": "Till Brönner",
+  "format": "Vinyl",
+  "country": "DE",
+  "year": 2025,
+  "label": "Ear Music",
+  "catno": "0220764EMU",
+  "barcode": "4029759207641",
+  "edition": "2×12\" LP, gatefold sleeve with printed inner sleeves, 14 tracks",
+  "ids": {
+   "discogs": "35053985"
+  }
+ },
+ "tracks": [
+  {
+   "position": "A1",
+   "disc": 1,
+   "title": "Estate",
+   "artist": null,
+   "duration_s": 331,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Bruno Martino",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Bruno Brighetti",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A2",
+   "disc": 1,
+   "title": "Viva la felicità",
+   "artist": null,
+   "duration_s": 204,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Franco Godi",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Maurizio Nichetti",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A3",
+   "disc": 1,
+   "title": "Amarsi un po’",
+   "artist": null,
+   "duration_s": 356,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Lucio Battisti",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Mogol",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "A4",
+   "disc": 1,
+   "title": "Via con me",
+   "artist": "Till Brönner feat. Mario Biondi",
+   "duration_s": 251,
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Paolo Conte",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Paolo Conte",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B1",
+   "disc": 1,
+   "title": "Il trucido e lo sbirro",
+   "artist": null,
+   "duration_s": 286,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Bruno Canfora",
+     "role": "writer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Roberto Podio",
+     "role": "writer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Nicola Procopio",
+     "role": "writer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B2",
+   "disc": 1,
+   "title": "La donna invisibile",
+   "artist": null,
+   "duration_s": 226,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Ennio Morricone",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B3",
+   "disc": 1,
+   "title": "Quando quando quando",
+   "artist": "Till Brönner feat. Giovanni Zarrella",
+   "duration_s": 272,
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Tony Renis",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Alberto Testa",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "B4",
+   "disc": 1,
+   "title": "Parole parole",
+   "artist": "Till Brönner feat. Chiara Civello",
+   "duration_s": 261,
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Gianni Ferrio",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Leo Chiosso",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Giancarlo Del Re",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C1",
+   "disc": 1,
+   "title": "Cosa vuoi",
+   "artist": null,
+   "duration_s": 210,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Till Brönner",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Till Brönner",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C2",
+   "disc": 1,
+   "title": "Travolti da un insolito destino nell’ azzurro mare d’agosto",
+   "artist": null,
+   "duration_s": 284,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Piero Piccioni",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C3",
+   "disc": 1,
+   "title": "In alto mare",
+   "artist": "Till Brönner feat. Mandy Capristo",
+   "duration_s": 183,
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Mario Lavezzi",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Oscar Avogadro",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Daniele Pace",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "C4",
+   "disc": 1,
+   "title": "L’unica chance",
+   "artist": "Till Brönner feat. Sera Kalo",
+   "duration_s": 343,
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Ivano Fossati",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Ivano Fossati",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D1",
+   "disc": 1,
+   "title": "L’appuntamento",
+   "artist": null,
+   "duration_s": 344,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": [
+    {
+     "name": "Erasmo Carlos",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Roberto Carlos",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Erasmo Carlos",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Roberto Carlos",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "D2",
+   "disc": 1,
+   "title": "Arrivederci",
+   "artist": null,
+   "duration_s": 332,
+   "sources": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "itunes:album/1826050972"
+   ],
+   "flags": [
+    "duration_other_edition",
+    "duration_conflict"
+   ],
+   "credits": [
+    {
+     "name": "Umberto Bindi",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    },
+    {
+     "name": "Giorgio Calabrese",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Till Brönner",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  },
+  {
+   "name": "Mario Biondi",
+   "role": "featured",
+   "tracks": [
+    "A4"
+   ],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  },
+  {
+   "name": "Giovanni Zarrella",
+   "role": "featured",
+   "tracks": [
+    "B3"
+   ],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  },
+  {
+   "name": "Chiara Civello",
+   "role": "featured",
+   "tracks": [
+    "B4"
+   ],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  },
+  {
+   "name": "Mandy Capristo",
+   "role": "featured",
+   "tracks": [
+    "C3"
+   ],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  },
+  {
+   "name": "Sera Kalo",
+   "role": "featured",
+   "tracks": [
+    "C4"
+   ],
+   "sources": [
+    "discogs:release/35053985",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57"
+   ]
+  }
+ ],
+ "total_duration_s": 3883,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/35053985",
+   "url": "https://www.discogs.com/release/35053985",
+   "kind": "database",
+   "note": "barcode 4029759207641 exact match; 2×Vinyl LP, Ear Music 0220764EMU, 2025-09-05"
+  },
+  {
+   "id": "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de",
+   "url": "https://www.decks.de/track/till_brnner-italia/cp2-zs/de",
+   "kind": "shop",
+   "note": "shop listing with GTIN13 4029759207641, 2LP, same 14-track order"
+  },
+  {
+   "id": "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+   "url": "https://musicbrainz.org/release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+   "kind": "streaming",
+   "note": "Digital Media edition (barcode 4029759209560), 14 tracks with ms durations and ISRCs - used for titles/durations"
+  },
+  {
+   "id": "itunes:album/1826050972",
+   "url": "https://music.apple.com/de/album/italia/1826050972",
+   "kind": "streaming",
+   "note": "digital album, 14 tracks, durations cross-check"
+  },
+  {
+   "id": "deezer:album/785974581",
+   "url": "https://www.deezer.com/album/785974581",
+   "kind": "streaming",
+   "note": "UPC 4029759209560, 14 tracks, durations truncated to seconds - consistent"
+  },
+  {
+   "id": "web:https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp",
+   "url": "https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp",
+   "kind": "shop",
+   "note": "barcode 4029759207641, 2 units (2LP), same track order"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track A2",
+   "values": {
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57": "Viva la felicità",
+    "discogs:release/35053985": "Viva La Felicità",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de": "Viva La Felicità"
+   },
+   "resolution": "No readable back cover; MusicBrainz spelling used per source priority (MB before Discogs), carrier print likely title-case"
+  },
+  {
+   "field": "title track A3",
+   "values": {
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57": "Amarsi un po’",
+    "discogs:release/35053985": "Amarsi Un Po‘",
+    "itunes:album/1826050972": "Amarsi Un Po'"
+   },
+   "resolution": "MusicBrainz spelling used; Discogs uses a wrong opening apostrophe"
+  },
+  {
+   "field": "title track B3",
+   "values": {
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57": "Quando quando quando",
+    "discogs:release/35053985": "Quando, Quando, Quando"
+   },
+   "resolution": "MusicBrainz spelling used (MB before Discogs)"
+  },
+  {
+   "field": "title track C2",
+   "values": {
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57": "Travolti da un insolito destino nell’ azzurro mare d’agosto",
+    "discogs:release/35053985": "Travolti Di Un Insolito Destino Nell’ Azzurro Mare D’Agosto",
+    "itunes:album/1826050972": "Travolti Da Un Insolito Destino Nell' Azzurro Mare d'Agosto (Soundtrack)"
+   },
+   "resolution": "MusicBrainz spelling used; 'da un' (not 'Di Un') is the correct Italian title; iTunes adds '(Soundtrack)' which is no part of the printed title"
+  },
+  {
+   "field": "duration track D2",
+   "values": {
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57": "5:32",
+    "itunes:album/1826050972": "5:31.754",
+    "musicbrainz:release/ebdff475-afa0-46b3-baa9-52f75441ef14": "5:29"
+   },
+   "resolution": "5:32 taken (digital MB + iTunes agree within 1 s); the MB CD edition's 5:29 deviates by 3 s and is treated as an outlier"
+  },
+  {
+   "field": "edition",
+   "values": {
+    "discogs:release/35053985": "2×Vinyl, LP, Album",
+    "discogs:release/35061323": "2×Vinyl, LP, Album, Limited Edition (stickered barcode 4029759207665)"
+   },
+   "resolution": "Both vinyl pressings print the same barcode 4029759207641 and have the identical tracklist; the standard pressing is chosen because the input barcode is the printed one and the limited edition carries an additional stickered barcode"
+  },
+  {
+   "field": "positions",
+   "values": {
+    "discogs:release/35053985": "D1 L’Appuntamento and D1 Arrivederci (both D1)",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de": "no side letters, 14 tracks in line"
+   },
+   "resolution": "12 tracks are given as A1–C4, so the last two must be D1 and D2; D2 set for track 14"
+  }
+ ],
+ "missing": [
+  "No barcode hit in MusicBrainz for the physical release (only the Digital Media edition exists there)",
+  "The 2LP edition carries no printed durations in any database; all durations come from the digital/CD edition of the same album (flagged duration_other_edition) - vinyl-specific times not verified",
+  "No readable back cover of the vinyl (Discogs images return HTTP 403), so the printed spelling and the D-side numbering could not be verified visually"
+ ],
+ "alternatives": [
+  {
+   "description": "2×Vinyl LP, Limited Edition (red vinyl, gatefold), Ear Music 0220764EMU, DE 2025, 14 tracks",
+   "source": "discogs:release/35061323",
+   "why_not": "same printed barcode 4029759207641 but additionally stickered barcode 4029759207665; identical tracklist, input gives no indication of the limited/coloured pressing"
+  },
+  {
+   "description": "CD, Ear Music 0221179EMU, DE 2025, 14 tracks",
+   "source": "musicbrainz:release/ebdff475-afa0-46b3-baa9-52f75441ef14",
+   "why_not": "CD, not the LP requested in the input"
+  },
+  {
+   "description": "Digital Media (UPC 4029759209560), earMUSIC 2025, 14 tracks",
+   "source": "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+   "why_not": "digital edition, used only for titles and durations"
+  }
+ ],
+ "reasoning": "The EAN is valid and matches exactly two Discogs vinyl releases of Till Brönner's 2025 album ITALIA (catno 0220764EMU, 2×12\"); the standard pressing is chosen since the limited edition carries an extra stickered barcode. The same GTIN and the same 14-track order are confirmed by the decks.de and imusic.de listings. MusicBrainz has no physical release for this barcode, but the digital edition (same album, same 14 tracks and order) and iTunes/Deezer provide titles, ISRCs and durations, which agree within 1 s (Deezer truncates to seconds); these are flagged duration_other_edition because they are not vinyl-specific. Featured artists (Mario Biondi, Giovanni Zarrella, Chiara Civello, Mandy Capristo, Sera Kalo) agree between Discogs and MusicBrainz."
+}

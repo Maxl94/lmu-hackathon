@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:11",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode 4047179677011 matches this edition in Discogs (discogs:release/5671084, exact barcode) and the back-cover image confirms BB114 and barcode, but MusicBrainz has no entry with this barcode (search returned 0 for barcode; MB sibling has 4047179677028, different format CD). Only one database carries the barcode, so >=2 independent sources with the barcode is NOT MET. Level 4: barcode match in only one source (Discogs) - MET in the sense of a barcode match in one source. Other editions: MB 1992 CD (718750375322) and 2004 CD (no barcode) have different track counts (11), so competing editions with different tracklists exist, but the input's barcode and vinyl format rule them out - these are different formats/barcodes. Level 4 conditions met, Level 5 not met.",
+   "summary": "Exact barcode match in Discogs plus a back-cover image consistent with BB114 and the vinyl format, but no second database entry carries this barcode, so it stops at level 4.",
+   "evidence": [
+    "discogs:release/5671084",
+    "image:discogs-5671084-back",
+    "musicbrainz:release/3f8d2e17-6852-4655-a3b1-4c2771a40668 (different barcode/format)",
+    "tl-mb search --barcode returned 0 releases"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: two independent sources of the same edition (Discogs vinyl and back-cover image) agree on count, order and titles except for B2 'Tier im Regen' vs 'Tiere im Regen' - a single-word spelling variant. Count 13 and order agree in all three. MET except the spelling variant, which is acceptable at level 5 as a spelling variant. However, the back cover read is a 600px image and was described as possibly truncated; the image confirms titles as read by the vision tool, which itself is a single read. Level 5 requires two independent sources agreeing; Discogs and image agree on 13 tracks and order, with one variant. The MB source is a CD sibling, not the same edition, so it is not an independent source of the same edition. Thus only Discogs+image of same edition: 2 sources, with a spelling deviation. Level 4: one complete source confirmed by a second except for small explained deviations (spelling) - MET.",
+   "summary": "Discogs and back-cover image agree on 13 tracks and order with only the B2 spelling variant, but the second source is the image read by a vision model and the MB data is from the CD sibling, so level 4 applies.",
+   "evidence": [
+    "discogs:release/5671084 tracklist",
+    "image:discogs-5671084-back (tl-vision read)",
+    "musicbrainz:release/3f8d2e17 (CD sibling, same remaster)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database plus independent primary source of the same edition - the back-cover image is a photo of the printed cover (primary-like) and Discogs is a database. However the image was obtained via a Discogs-hosted URL, and the vision tool reading is secondary; the image is hosted on the same Discogs entry, so not fully independent. Level 4: two independent database entries (Discogs vinyl and MB CD sibling, differing barcodes) or database + specialised collector site - MB entry is a different edition (CD), so it is not the same edition. Level 3: one good database (Discogs) with a cover image hosted on the same database entry - MET.",
+   "summary": "Only the Discogs database entry and a cover image hosted on the same Discogs entry cover the vinyl edition; the MusicBrainz entry is a different CD edition, so level 3 applies.",
+   "evidence": [
+    "discogs:release/5671084",
+    "image:discogs-5671084-back (hosted on Discogs)",
+    "musicbrainz:release/3f8d2e17 (different barcode/format)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "B2 title conflict: back-cover vision read 'Tier im Regen' vs Discogs/MB 'Tiere im Regen'; the agent kept 'Tiere' while the hi-res re-read failed (UnidentifiedImageError), so the printed title was not verified.",
+  "Agent confidence 0.95 is high given only one vinyl-specific database entry and a same-origin image; validation warning confirms this is unjustified.",
+  "Durations for the vinyl are taken from Discogs; MB durations come from the CD sibling and are used only as cross-check, which is disclosed.",
+  "Agent claims back cover confirms printed durations and 'Bonustracks' header; the vision tool output does support this (notes line), but the image read is a single model pass.",
+  "Discogs marked data_quality 'Needs Vote', which the result does not mention.",
+  "Result says 'MusicBrainz has no release with this barcode' - supported by tl-mb search returning 0 for barcode query.",
+  "Total duration 3020 s (Discogs) vs MB 3018 s; within tolerance, no concern."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.95,
+  "validation_errors": [],
+  "validation_warnings": [
+   "high confidence despite open conflicts – justify or lower it"
+  ]
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.5,
+  "tokens_in": 11925,
+  "tokens_out": 1628,
+  "cost_usd": 0.00201,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 12,
+   "of": 13
+  }
+ }
+}

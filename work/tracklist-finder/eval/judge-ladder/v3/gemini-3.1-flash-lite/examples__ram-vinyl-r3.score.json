@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:33",
+ "overall": 4.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 4: The input contains no barcode, but title, artist, and format (Vinyl) are matched in two independent databases (MusicBrainz, Discogs). The agent identifies the 2013 standard release and correctly identifies and excludes competing editions with different tracklists (Box Set, 10th Anniversary, Drumless). MET: All criteria of level 4 are met.",
+   "summary": "The edition is uniquely identified as the standard 2013 vinyl release through matching artist, title, and format across two independent databases, with alternative versions clearly distinguished.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: Both the Discogs entry (4570366) and the MusicBrainz entry (4867ceba-ffe7-40c0-a093-45be6c03c655) agree on the track count (13), the titles, and the order (A1-D4). MET: All criteria of level 5 are met.",
+   "summary": "The tracklist, count, and order are consistent and confirmed by two independent, reliable databases.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: The agent uses two independent database entries (MusicBrainz and Discogs) for the same edition. MET: All criteria of level 4 are met.",
+   "summary": "The agent relies on two independent and highly reliable music databases.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The validation check mentioned 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once', but the output for tracks correctly omits the artist as it is identical to the release artist."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 2.6,
+  "tokens_in": 14915,
+  "tokens_out": 615,
+  "cost_usd": 0.00465,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

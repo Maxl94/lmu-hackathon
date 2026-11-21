@@ -1,0 +1,123 @@
+{
+ "_doc": "Referenz für eval/evaluate.py. accept: Release-IDs, die als richtige Ausgabe zählen. ref: Quelle der Referenz-Trackliste (titel + dauer). durations_exist=false: es gibt keine belegten Dauern → jede Dauer im Ergebnis ist verdächtig. trap=true: Fallen-Fall – Ergebnis darf NICHT grün (übernehmen) sein.",
+ "kok-cd2004": {
+  "accept": {
+   "musicbrainz": [
+    "15996385-5426-416b-95da-0e8846196d3a"
+   ],
+   "discogs": [
+    "3057907"
+   ]
+  },
+  "ref": "musicbrainz:15996385-5426-416b-95da-0e8846196d3a",
+  "tracks": 20
+ },
+ "kok-mc": {
+  "accept": {
+   "musicbrainz": [
+    "19fd3695-68df-4e95-884a-da6938aae5cf"
+   ],
+   "discogs": [
+    "1951581",
+    "18354001",
+    "18354166",
+    "18354289",
+    "17280904",
+    "4256710"
+   ]
+  },
+  "ref": "musicbrainz:19fd3695-68df-4e95-884a-da6938aae5cf",
+  "tracks": 16,
+  "note": "mehrere Kassetten-Auflagen mit gleicher Trackliste – jede Auflage 2001–2003 zählt"
+ },
+ "kok-noartist": {
+  "accept": {
+   "musicbrainz": [
+    "c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "99ca4959-0ee8-4e1b-a636-299862d81a41",
+    "15996385-5426-416b-95da-0e8846196d3a"
+   ],
+   "discogs": [
+    "769288",
+    "3645154",
+    "3057907"
+   ]
+  },
+  "ref": null,
+  "tracks": null,
+  "expect_ambiguous": true,
+  "note": "CD ohne Interpret/EAN: 2003 (16 Tracks) und 2004 (20 Tracks) möglich → ambiguous oder Alternativen erwartet"
+ },
+ "ram-cd-us": {
+  "accept_barcode": [
+   "888837168625",
+   "0888837168625"
+  ],
+  "ref": "musicbrainz:a8308466-dd18-4912-9192-ccd0eb1878e0",
+  "tracks": 13
+ },
+ "ram-badean": {
+  "accept_barcode": [
+   "888837168625",
+   "0888837168625"
+  ],
+  "ref": "musicbrainz:a8308466-dd18-4912-9192-ccd0eb1878e0",
+  "tracks": 13
+ },
+ "ram-vinyl": {
+  "accept_format": "vinyl",
+  "ref": "musicbrainz:4867ceba-ffe7-40c0-a093-45be6c03c655",
+  "tracks": 13,
+  "note": "2×LP; ohne EAN ist jede 2013er 2×LP-Ausgabe akzeptabel"
+ },
+ "bravo30-ean": {
+  "accept": {
+   "discogs": [
+    "23145932",
+    "1949898"
+   ]
+  },
+  "accept_barcode": [
+   "731456031125"
+  ],
+  "ref": "discogs:23145932",
+  "tracks": 40
+ },
+ "spatzen-mc-titleonly": {
+  "accept": {
+   "discogs": [
+    "2297987"
+   ]
+  },
+  "ref": "discogs:2297987",
+  "tracks": 12
+ },
+ "lohnde-mc": {
+  "accept": {
+   "discogs": [
+    "24165131",
+    "24154076"
+   ]
+  },
+  "ref": "discogs:24165131",
+  "tracks": 10,
+  "durations_exist": false,
+  "note": "keine Dauern bekannt → Ehrlichkeitstest. Folge 1 (Musikverein Lohnde) und Folge 2 (als „Swinging Seelze“ = Blasorchester des Musikvereins Lohnde) passen beide zum Titel – vom Prüfmodell aufgedeckt (20.11.); beide zählen, mehrdeutig wäre ehrlicher"
+ },
+ "trap-wrong-ean": {
+  "trap": true,
+  "note": "EAN gehört zu Daft Punk – Random Access Memories (US-CD), nicht zu Bushido"
+ },
+ "trap-fake-album": {
+  "trap": true,
+  "note": "ausgedachtes Album – erwartet not_found"
+ },
+ "trap-artist-mismatch": {
+  "trap": true,
+  "note": "Titel von Daft Punk, Interpret Kastelruther Spatzen – Widerspruch"
+ },
+ "trap-wrong-format": {
+  "trap": true,
+  "note": "existiert nur als MC (discogs 24165131), nicht als CD"
+ }
+}

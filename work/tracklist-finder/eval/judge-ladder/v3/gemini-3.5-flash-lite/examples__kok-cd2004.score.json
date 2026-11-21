@@ -1,0 +1,95 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:30",
+ "overall": 4.65,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: 1. Barcode 4019593960000 matches exactly in >= 2 independent sources (MusicBrainz, Discogs, musik-sammler.de) [musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a, discogs:release/3057907, web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/]. 2. Format CD and artist Bushido match. 3. No competing edition with the same barcode and a different tracklist exists.",
+   "summary": "The barcode matches the 2004 CD edition in multiple independent databases and collector sources without any competing editions sharing the barcode.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition (MusicBrainz, Discogs, musik-sammler.de, cover art archive) agree on track count (20), order, and titles.",
+   "summary": "Multiple independent sources and the back cover image completely agree on the 20-track order and titles.",
+   "evidence": [],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: Two independent database entries (MusicBrainz, Discogs) plus a specialised collector site (musik-sammler.de) and official cover art images.",
+   "summary": "Backed by two independent databases, a specialised collector site, and cover art archive images.",
+   "evidence": [],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 2.0,
+  "tokens_in": 35243,
+  "tokens_out": 403,
+  "cost_usd": 0.01158,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

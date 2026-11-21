@@ -1,0 +1,564 @@
+{
+ "input": {
+  "id": "01-epica-aspiral",
+  "title": "Aspiral",
+  "artist": "EPICA",
+  "ean": "4065629733131"
+ },
+ "status": "found",
+ "release": {
+  "title": "Aspiral",
+  "artist": "Epica",
+  "format": "CD",
+  "country": "XE",
+  "year": 2025,
+  "label": "Nuclear Blast Records",
+  "catno": "NBR 73313",
+  "barcode": "4065629733131",
+  "edition": null,
+  "ids": {
+   "musicbrainz": "da26b9bb-57a5-4f13-b80b-b496d258ed40",
+   "discogs": "33705345"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Cross the Divide",
+   "artist": null,
+   "duration_s": 258,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "S. Simons",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "R. van der Loo",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400405"
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Arcana",
+   "artist": null,
+   "duration_s": 302,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "S. Simons",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "R. van der Loo",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400406"
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Darkness Dies in Light – A New Age Dawns, Part VII",
+   "artist": null,
+   "duration_s": 479,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "M. Jansen",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400407"
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Obsidian Heart",
+   "artist": null,
+   "duration_s": 304,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "S. Simons",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "R. van der Loo",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400408"
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "Fight to Survive – The Overview Effect",
+   "artist": null,
+   "duration_s": 370,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400409"
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Metanoia – A New Age Dawns, Part VIII",
+   "artist": null,
+   "duration_s": 437,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "C. Janssen",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "M. Jansen",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400410"
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "T.I.M.E.",
+   "artist": null,
+   "duration_s": 238,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "M. Jansen",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400411"
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Apparition",
+   "artist": null,
+   "duration_s": 252,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "S. Simons",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400412"
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "Eye of the Storm",
+   "artist": null,
+   "duration_s": 283,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "A. van Weesenbeek",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400413"
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "The Grand Saga of Existence – A New Age Dawns, Part IX",
+   "artist": null,
+   "duration_s": 410,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "M. Jansen",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "I. Delahaye",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "M. Jansen",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400414"
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Aspiral",
+   "artist": null,
+   "duration_s": 339,
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "S. Simons",
+     "role": "lyricist",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "Epica (2)",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    },
+    {
+     "name": "R. van der Loo",
+     "role": "composer",
+     "sources": [
+      "discogs:release/33705345"
+     ]
+    }
+   ],
+   "isrc": "DED832400415"
+  }
+ ],
+ "artists": [
+  {
+   "name": "Epica",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40"
+   ]
+  }
+ ],
+ "total_duration_s": 3672,
+ "confidence": 0.9,
+ "sources": [
+  {
+   "id": "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+   "url": "https://musicbrainz.org/release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+   "kind": "database",
+   "note": "durations in ms"
+  },
+  {
+   "id": "discogs:release/33705345",
+   "url": "https://www.discogs.com/release/33705345",
+   "kind": "database",
+   "note": null
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 3",
+   "values": {
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40": "Darkness Dies in Light – A New Age Dawns, Part VII",
+    "discogs:release/33705345": "Darkness Dies In Light"
+   },
+   "resolution": "MusicBrainz spelling (rule: MusicBrainz before Discogs)"
+  },
+  {
+   "field": "title track 5",
+   "values": {
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40": "Fight to Survive – The Overview Effect",
+    "discogs:release/33705345": "Fight To Survive"
+   },
+   "resolution": "MusicBrainz spelling (rule: MusicBrainz before Discogs)"
+  },
+  {
+   "field": "title track 6",
+   "values": {
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40": "Metanoia – A New Age Dawns, Part VIII",
+    "discogs:release/33705345": "Metanoia"
+   },
+   "resolution": "MusicBrainz spelling (rule: MusicBrainz before Discogs)"
+  },
+  {
+   "field": "title track 10",
+   "values": {
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40": "The Grand Saga of Existence – A New Age Dawns, Part IX",
+    "discogs:release/33705345": "The Grand Saga Of Existence"
+   },
+   "resolution": "MusicBrainz spelling (rule: MusicBrainz before Discogs)"
+  }
+ ],
+ "missing": [],
+ "alternatives": [],
+ "reasoning": "Fast path without agent: barcode 4065629733131 matches 1 official MusicBrainz release(s) with the same tracklist and 1 Discogs release(s) in format any; track count (11), titles and durations (11 tracks in both sources, 0 difference(s) > 2 s resolved by rule) agree."
+}

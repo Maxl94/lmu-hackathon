@@ -1,0 +1,107 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:33",
+ "overall": 5.0,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The INPUT barcode '888837168626' (corrected to '888837168625' in evidence 1) matches exactly the CD release 'f6758afb-ecff-410e-8979-b131cfa3c6d3' in MusicBrainz (evidence 4, 6) and discogs '4729785' (evidence 5, 7). Format and artist match. Other releases with the same barcode are variants of the same standard edition, as noted in the agent's alternatives.",
+   "summary": "The barcode matches the standard CD edition after correcting the check digit, supported by multiple independent, congruent database entries.",
+   "evidence": [
+    "shell:1",
+    "shell:4",
+    "shell:5",
+    "shell:6",
+    "shell:7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: Two independent databases (MusicBrainz and Discogs) agree on the count (13) and titles (evidence 6, 7). The image of the back cover confirms the 13-track structure (evidence 9).",
+   "summary": "The tracklist is confirmed by multiple independent databases and physically verified via cover scan.",
+   "evidence": [
+    "shell:6",
+    "shell:7",
+    "shell:9"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: The agent used two major databases (MusicBrainz, Discogs) and a primary source (the Cover Art Archive image of the back cover, evidence 8, 9).",
+   "summary": "The research is supported by two distinct databases and a high-resolution scan of the physical back cover.",
+   "evidence": [
+    "shell:6",
+    "shell:7",
+    "shell:9"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-flash-lite",
+  "seconds": 2.9,
+  "tokens_in": 24011,
+  "tokens_out": 493,
+  "cost_usd": 0.00674,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

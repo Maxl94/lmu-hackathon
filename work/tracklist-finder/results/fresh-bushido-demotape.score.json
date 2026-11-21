@@ -1,0 +1,125 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:53",
+ "overall": 2.65,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5 (barcode): NOT MET - input has no barcode. 4 (barcode match in one source): NOT MET - no barcode. 4 (without barcode: title, artist, format and >=1 further attribute unambiguous in >=2 sources, and no other fitting edition with different tracklist): title/artist/format match in Discogs 3104522 (tool call discogs release); year 1999 and self-released label confirmed by musik-sammler.de (web:musik-sammler 917083) and TheAudioDB; but the 2003 CD reissue (discogs 764843, MB 25d0b128) shares the title and artist and has a different tracklist (re-titled tracks, 15 tracks incl. bonus) - a competing edition with different tracklist, though different format (CD) which the input rules out as a physical-format match only for cassette. Format is cassette so CD is not the same edition; MusicBrainz bbce8aa3 (1999 DE, format '?', 14 tracks, bootleg) is a fitting-but-unclear competing candidate with different tracklist and unstated format, so it cannot be excluded. Therefore level 4 is NOT fully met; level 3: unambiguous but backed by one source - NOT MET strictly since several sources exist, but the cassette edition is clearly the only tape; the MB bootleg with format unknown is a competing 1999 entry with different tracklist, so level 2 applies: several editions fit (format '?' entry with 14 tracks) with a different tracklist and the choice rests on weak signals.",
+   "summary": "The cassette edition is the only confirmed tape, but a 1999 MusicBrainz entry with unstated format and 14 different-titled tracks fits the input and is not ruled out, so the choice rests on weak signals.",
+   "evidence": [
+    "discogs:release/3104522",
+    "discogs:release/764843",
+    "musicbrainz:release/bbce8aa3-3a1b-4a1b-a4b1-db3c436d69a8",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/",
+    "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 3,
+   "check": "5: NOT MET - the printed tracklist is confirmed by only musik-sammler.de and TheAudioDB for 13 titles; Discogs tracklist is the main source for 15 tracks and no second source agrees on A1, B7 or the A5-A8/B1-B6 titles from the same edition. 4: One complete source confirmed by a second except for explained deviations: Discogs 3104522 is complete (15 tracks) and musik-sammler.de confirms 13 tracks with Intro/Outro uncredited, explained by the note; however the musik-sammler titles also differ in count order (it lists 13 tracks and omits A1/B7 while using the 'Die Jagd' track name at position 12 and 'Ehrlich' at 9 consistent with Discogs), so the deviations are largely explained - MET for explained deviations. Yet durations for 10 tracks conflict between the two sources (up to 40 s) and the Discogs durations are unverified by a second source; the title/order agreement is good. Level 4 is arguably met for titles/order, but the tape is not confirmed completely by a second complete source, so the check stops at level 3: only one complete source of the same edition (Discogs) with plausible data, with a partial second confirmation.",
+   "summary": "Discogs gives a complete 15-track tape tracklist that is only partly confirmed by musik-sammler.de (13 tracks) and TheAudioDB, with unresolved duration conflicts.",
+   "evidence": [
+    "discogs:release/3104522 (tl-discogs release 3104522)",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/ (tl-scrape Tracklist)",
+    "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape",
+    "lastfm:album/Bushido/Demotape"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 20% confirmed by >= 2 sources, 10 conflicts",
+   "summary": "100% of tracks have a duration, 20% confirmed by >= 2 sources, 10 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: NOT MET - no independent primary source (cover/booklet read): back cover image HTTP 403, vision not possible. 4: Two independent database entries or database + specialised collector site: MET - Discogs 3104522 (database) and musik-sammler.de 917083 (collector) describe the same cassette edition, and TheAudioDB (database) also lists it; these are independent enough.",
+   "summary": "Discogs database entry plus the musik-sammler.de collector site describe the same cassette, but no primary source such as the cover was read.",
+   "evidence": [
+    "discogs:release/3104522",
+    "web:https://www.musik-sammler.de/release/bushido-demotape-tape-917083/",
+    "web:https://www.theaudiodb.com/album/2417353-Bushido-Demotape",
+    "tl-vision HTTP 403"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result lists 15 tracks but musik-sammler.de (which the result calls confirmation) shows 13 tracks with different titles at positions 3,4,6,8,9,10,11,12,13 (e.g. 'Der Weg Des Kriegers' at 3 vs A4 position); the claim 'titles and order of the 13 printed tracks are confirmed' is only partly supported.",
+  "Result claims musik-sammler.de confirms Intro/Outro absence and count, yet the 'Die Jagd' vs 'Auf der Jagd' and 'Ehrlich' vs 'Sei ehrlich' naming differs from Discogs; not reconciled.",
+  "Track A3 'Illusion' is credited to 'Bushido feat. Morpheu' in the result while kiloherz.info and the 2003 CD give Fabrice; the explanation is an alias claim supported only by Genius/Grokipedia, not by a tool output shown.",
+  "Durations for A5-A8 and B1-B6 come only from Discogs; the claim that they match the 2003 CD reissue (201 s, 263 s, etc.) is not shown in any tool output, and musik-sammler.de differs by up to 40 s, so the total 3616 s is unverified.",
+  "MusicBrainz bbce8aa3 (1999 DE, 14 tracks) and last.fm show a 1999 release with the CD titles and a Outro missing duration; this competing 1999 entry is dismissed as bootleg/format-less but not excluded for the cassette input.",
+  "The result states 'musik-sammler.de reproduces the back cover' - the tool output shows only a textual tracklist, not a back-cover reproduction.",
+  "The Discogs release 3104522 entry has credits for featured artists but the result claims credits missing for 15 of 15 tracks, an inconsistency with the Discogs tool output showing credits for many tracks."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 15,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Kassette",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.2,
+  "dur_conflicts": 10,
+  "source_families": [
+   "discogs",
+   "genius",
+   "kiloherz.info",
+   "musicbrainz",
+   "musik-sammler.de",
+   "theaudiodb.com"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "web"
+  ],
+  "conflicts": 15,
+  "alternatives": 5,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 11.3,
+  "tokens_in": 22295,
+  "tokens_out": 2253,
+  "cost_usd": 0.00336,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 8,
+   "of": 15
+  }
+ }
+}

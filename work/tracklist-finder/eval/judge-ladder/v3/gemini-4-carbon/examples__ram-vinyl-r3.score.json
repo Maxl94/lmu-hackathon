@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:56:34",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: INPUT contains a barcode (NOT MET: input has only title, artist, format; input_has_barcode is false). Level 4: Barcode match in one source, or without barcode title, artist, format plus >= 1 further attribute unambiguous in >= 2 sources AND no other edition fitting the input has a different tracklist (NOT MET: input provides no further attribute such as label, catno, year, or country, and competing vinyl releases fitting the input have different tracklists, e.g. musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with 22 tracks). Level 3: Unambiguous in one source with no competing edition, or several editions fit but ALL share the same tracklist (NOT MET: tool call 2 shows musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f with exact title 'Random Access Memories', artist 'Daft Punk', format 'Vinyl+Vinyl+Vinyl' and 22 tracks, as well as box set musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7 with 34 tracks). Level 2: Several editions fit the input and at least one of them has a DIFFERENT tracklist; the choice rests on weak signals (MET: both the 13-track 2xLP editions and the 22-track 3xLP 2023 edition musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f match title, artist, and format Vinyl, and the input lacks barcode, year, or catno to rule out the 22-track edition).",
+   "summary": "Without barcode, year, or catalogue number in the input, competing vinyl editions with different tracklists (such as the 22-track 3xLP edition) fit the input and cannot be ruled out.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366",
+    "musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f",
+    "musicbrainz:release/fc1eb6d6-1c46-429a-8332-4f881c541ae7"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles with spelling variants only (MET: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 in tool call 5 and discogs:release/4570366 in tool call 6 both represent the 2013 2xLP Columbia 88883716861 release with barcode 888837168618 and agree on all 13 tracks, positions A1 to D4, and titles up to capitalization/apostrophe style, with durations matching within 0-2 seconds).",
+   "summary": "MusicBrainz and Discogs entries for the 2013 2xLP edition agree completely on track count (13), vinyl positions (A1-D4), and track titles.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source such as read cover/booklet/label print or label/manufacturer info (NOT MET: only database APIs were queried in tool calls 1-6; no cover images or primary sources were read). Level 4: Two independent database entries recognisable by differing details, or database + specialised collector site (MET: musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655 and discogs:release/4570366 are independent database entries with distinct details, including ISRCs and 1-2s shorter durations on A1, A2, C2, D4 in MusicBrainz versus etched runout matrices, label code LC00162, and title-case formatting in Discogs).",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs) showing distinct metadata details, without an inspected primary source.",
+   "evidence": [
+    "musicbrainz:release/4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "discogs:release/4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Unsupported claim in alternatives: 'discogs:release/28924120' ('2023 Drumless Edition, 2xLP') never appears in any tool output (tool call 1 was truncated before any such ID and it was never queried).",
+  "Unsupported tracklist claims in alternatives: the agent claims 'identische Trackliste' for discogs:release/9216088 and discogs:release/31621720 (and 2021/2022 reissues) without ever fetching their release tracklists.",
+  "Ambiguity handling: despite competing Vinyl editions with different track counts fitting the input (e.g. 22-track musicbrainz:release/4375c18f-f160-44d0-ae2b-795f1dd5870f), status was set to 'found' instead of 'ambiguous'.",
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 48.8,
+  "tokens_in": 16206,
+  "tokens_out": 4789,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

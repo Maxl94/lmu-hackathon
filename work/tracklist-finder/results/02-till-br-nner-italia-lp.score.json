@@ -1,0 +1,126 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:09",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode in INPUT (4029759207641, checksum OK) matches exactly this edition in >=2 independent sources - MET (discogs:release/35053985 barcode exact; decks.de GTIN13 4029759207641 2LP; imusic.de barcode 4029759207641 2 units). Format Vinyl and artist Till Brönner match - MET. No other edition with same barcode and different tracklist - MET (discogs:release/35061323 shares barcode 4029759207641 but has the identical 14-track list; CD ebdff475 and digital 34ce3886 have different barcodes and are not the LP). Level 5 conditions all met.",
+   "summary": "The input EAN is valid and matches this 2LP vinyl exactly in Discogs, decks.de and imusic.de, with format and artist matching and the only other same-barcode pressing sharing the same tracklist.",
+   "evidence": [
+    "bin/tl-gtin",
+    "bin/tl-discogs search --barcode (discogs:release/35053985, discogs:release/35061323)",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de",
+    "web:https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp",
+    "musicbrainz:release/ebdff475-afa0-46b3-baa9-52f75441ef14"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles - MET for count (14) and order and titles across discogs:release/35053985, decks.de and imusic.de (spelling variants only). Level 4 is the one that fits best: the D-side numbering is only inferred (Discogs lists D1 twice, agent set D2 for track 14), and the vinyl-specific durations are not confirmed by the same edition, so the full set is not confirmed by a clean second source for every detail. Level 5 is therefore not cleanly met. Level 4: one complete source of the same edition (Discogs), confirmed by a second (decks.de/imusic) except for explained deviations (spelling, D1/D2 numbering explained by the 12+2 logic) - MET.",
+   "summary": "Count, order and titles agree across Discogs, decks.de and imusic.de for the same vinyl edition, but the D2 numbering is an inference from a Discogs error and the durations come from a different edition.",
+   "evidence": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de",
+    "web:https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp",
+    "itunes:album/1826050972",
+    "deezer:album/785974581"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print) - NOT MET (Discogs back-cover images returned HTTP 403; no primary source read). Level 4: two independent database entries or database + specialised collector site - NOT MET (second database hit is MusicBrainz for the digital/CD editions only; decks.de and imusic.de are shops, not collector sites). Level 3: one good database - MET (discogs:release/35053985 with barcode exact match).",
+   "summary": "Only one database entry (Discogs) matches the physical vinyl; the other support comes from shops and digital/CD databases of different editions.",
+   "evidence": [
+    "discogs:release/35053985",
+    "web:https://www.decks.de/track/till_brnner-italia/cp2-zs/de",
+    "web:https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp",
+    "musicbrainz:release/34ce3886-6ac3-4f98-9ecb-7ff973dada57",
+    "tl-vision Discogs back cover HTTP 403"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs release 35053985 lists two tracks as D1 (L'Appuntamento and Arrivederci); the agent's D2 for track 14 is an inference, not a printed position, and the back cover could not be read.",
+  "Durations in the result (total_duration_s 3883) come from the digital MusicBrainz edition 34ce3886 and iTunes/Deezer, not from any vinyl source; the vinyl durations are unverified (flagged duration_other_edition, but the reasoning text presents them as the track data).",
+  "decks.de scrape shows numbers (88, 80, 96...) next to tracks that are BPM values, not durations; the agent did not claim durations from decks.de, so no contradiction, but the decks.de page does not confirm durations.",
+  "decks.de spells the last track 'Arrividerci' (typo) and the Travolti title with 'D agosto'; agent resolved via MusicBrainz spelling, which is reasonable but unverified against the carrier.",
+  "MusicBrainz CD edition ebdff475 has track 14 at 5:29 while digital editions show 5:32; the agent's D2 duration 5:32 is from the digital edition, not the LP.",
+  "Conflicts list for track A2/C2 title spelling is resolved by assumption ('carrier print likely title-case'), which is not verified by any printed source.",
+  "Result states 'The same GTIN and the same 14-track order are confirmed by the decks.de and imusic.de listings'; the imusic listing confirms titles and order but shows no durations, so this claim is supported only for titles and order."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 14,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 14,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 1,
+  "source_families": [
+   "decks.de",
+   "deezer",
+   "discogs",
+   "imusic.de",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 7,
+  "alternatives": 3,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.8,
+  "tokens_in": 18776,
+  "tokens_out": 3581,
+  "cost_usd": 0.00367,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 14,
+   "of": 14
+  }
+ }
+}

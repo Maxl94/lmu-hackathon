@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:21",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4019593960000 matches exactly in MusicBrainz (evidence 2, 4) and Discogs (evidence 3, 5), and musik-sammler.de also lists EAN 4019593960000 (evidence 14). Format CD and artist Bushido match. Competing releases (2003 Aggro CD EAN 4018939105976, 2001 MC, 2021 digital, 2005 2-CD with catno 40195 9396003-1) have different barcodes or formats, so none shares this barcode with a different tracklist. All conditions MET, so the rating is 5.",
+   "summary": "The input barcode matches this exact edition in three independent sources (MusicBrainz, Discogs, musik-sammler.de), and every competing release has a different barcode or format.",
+   "evidence": [
+    "tl-mb search --barcode 4019593960000 (step 2)",
+    "tl-discogs search --barcode 4019593960000 (step 3)",
+    "tl-discogs release 3057907 (step 5)",
+    "tl-scrape musik-sammler.de EAN 4019593960000 (step 14)",
+    "tl-mb group 85fc52d2 (step 8)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MusicBrainz, Discogs, musik-sammler.de and the back-cover reading agree on 20 tracks, their order and titles. Only spelling variants occur (Pitbull/Pittbull, feat. credit formatting). All conditions MET, so the rating is 5.",
+   "summary": "At least two independent sources agree on count, order and titles of all 20 tracks, with only spelling variants on track 11.",
+   "evidence": [
+    "tl-mb release (step 4)",
+    "tl-discogs release 3057907 (step 5)",
+    "tl-scrape musik-sammler.de (step 14)",
+    "tl-vision back cover (steps 7, 17)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "summary": "100% of tracks have a duration, 85% confirmed by >= 2 sources, 3 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database (MusicBrainz, Discogs) plus an independent primary source (the back-cover print read via tl-vision, consistent across two reads) for the same edition. The cover reading is model-extracted rather than verified by the agent, which weakens it slightly, but it is still a primary source for the same edition. All conditions MET, so the rating is 5.",
+   "summary": "Two databases plus a collector site and a read of the printed back cover all describe the same edition.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:coverartarchive back cover 23078347272"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 11 is printed 'PITTBULL' on the back cover per tl-vision, yet the result's track title and conflict record use 'Pittbull' while the MusicBrainz and Discogs tracklists use 'Pitbull'; this is a spelling variant and is not material.",
+  "The agent stated it could not view the back-cover image directly (step 10); the cover content rests only on model-extracted tl-vision output, and the outro's spelling was flagged [unsicher] in one reading.",
+  "Unflagged duration differences remain: track 7 (MB 2:45 vs musik-sammler 2:44), track 19 (MB 3:57 vs musik-sammler 3:56), track 20 (MB 0:23 vs musik-sammler 0:22), which the result does not document.",
+  "The agent lowered confidence from 0.95 to 0.93 and then rewrote its reasoning to satisfy a validator warning, rather than resolving the warning on its merits. The result's confidence is therefore less well supported than the text claims.",
+  "The result's total_duration_s is 3720 while the MusicBrainz total is 3721 s, which is within the validator tolerance but not exact.",
+  "hitparade.ch was cited as an alternative edition source (2005 2-CD, catno 40195 9396003-1), but its 2001 MC and 2003 CD listings were not separately verified in the result's alternatives list."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.9,
+  "tokens_in": 43359,
+  "tokens_out": 3837,
+  "cost_usd": 0.00625,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

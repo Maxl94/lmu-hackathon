@@ -1,0 +1,96 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:29",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Input nur Titel und Format MC. Barcode 9002722211901 der Koch-MC D 221 190 wird von MusicBrainz und Discogs (Barcode-Feld) bestätigt, zusätzlich von der J-Card-Rückseite gelesen (tl-vision, Barcode und Kat.-Nr. sichtbar). Mehrere MC-Pressungen (ohne Barcode, Polen) haben identische Tracklisten, Various-Artists-Kompilationen sind klar abgegrenzt. Mindestens zwei unabhängige Quellen bestätigen die Edition mit Barcode, Format und Künstler.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs (tl-vision, Barcode 9002722211901)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Zwölf Titel, Reihenfolge A1–B6 in MusicBrainz, Discogs, J-Card (Innen- und Rückseite) und Deezer übereinstimmend. Dauerkonflikte bei A1 und A6 sind durch gedruckte J-Card-Dauern (3'22'', 3'30'') aufgelöst, die von Discogs/Deezer bzw. MusicBrainz bestätigt werden. Titel B4 ist mit gedruckter Schreibweise 'Sarner-Welle-Lied' bzw. 'SARNER-WELLE LIED' abweichend, was als Schreibvariante gilt.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 (Tracks 1.1–1.12)",
+    "discogs:release/2297987",
+    "image:J-Card Innenseite (tl-vision, gedruckte Dauern)",
+    "image:J-Card Rückseite (tl-vision, Titel)",
+    "deezer:album/231158"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 83% von ≥ 2 Quellen bestätigt, 2 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) mit unterschiedlichen Details plus gelesene J-Card-Bilder (Primärquelle, Aufdruck Barcode, Kat.-Nr., Dauern). Die Primärquelle ist ein gelesenes Cover, daher Stufe 5.",
+   "belege": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:J-Card (tl-vision)"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die gedruckten Dauern stammen aus der J-Card-Innenseite (tl-vision-Ausgabe); die Dauerangaben in MB (A1 3:19) und Discogs-Koch (A6 3:03) sind als Konflikte korrekt dokumentiert.",
+  "Die Sources-Liste der Ausgabe enthält die MB-Dauer 3:30 für A6 unter duration_sources, obwohl MB dort 210 s angibt – konsistent, aber der Track-Flag 'duration_conflict' bei A6 bleibt bestehen.",
+  "Die Ausgabe-Datei hat in den Tracks Abweichungen in der Titelschreibweise (B4 'Sarner-Welle Lied' gegenüber Deezer/iTunes 'Sarner-Welle Lied Hallo Freunde') – im Ergebnis korrekt aufgelöst.",
+  "Das Result nennt 'Koch-Records Special' als Label; die J-Card-Auswertung nennt 'Koch-Records', Discogs 'Koch Records Special' – unkritische Varianz.",
+  "Die im Result genannte Reihenfolge der Bilder (J-Card-Rückseite) ist in den Tool-Ausgaben nicht als 'Rückseite' gekennzeichnet; tl-vision markierte sie als Innen-/Rückseite nur über den Kontext."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 7.6,
+  "tokens_in": 48364,
+  "tokens_out": 1407,
+  "cost_usd": 0.00554,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

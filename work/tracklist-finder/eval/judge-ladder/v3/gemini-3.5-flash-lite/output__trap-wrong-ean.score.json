@@ -1,0 +1,105 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T15:22:28",
+ "overall": 4.5,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: The input contains a barcode (888837168625), but it has a mismatch (belongs to Daft Punk - Random Access Memories in multiple sources like musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3 and discogs:release/4581879). Level 4: Without the erroneous barcode, the title 'King of Kingz', artist 'Bushido', format 'CD', and attributes like label 'Aggro Berlin', cat no 'AGGRO004CD', and year 2003 are unambiguous in >= 2 independent sources (musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288). There are alternative editions like the 2004 Exclusive Edition (discogs:release/3057907 with 20 tracks), but the input unambiguously refers to the standard 2003 release based on artist and title matching.",
+   "summary": "The input barcode was incorrect, but the edition is unambiguously identified via title, artist, format, label, and catalog number across multiple sources.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources (musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a and discogs:release/769288) of the same edition agree on count (16 tracks), order, and titles.",
+   "summary": "Two independent sources completely agree on the 16 tracks, their order, and titles.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 4: Two independent database entries (MusicBrainz and Discogs) with differing details/identifiers confirm the edition.",
+   "summary": "Two independent database entries confirm the release details and tracklist.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input barcode 888837168625 belongs to Daft Punk - Random Access Memories, creating a mismatch with the Bushido release."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.5-flash-lite",
+  "seconds": 3.0,
+  "tokens_in": 11587,
+  "tokens_out": 765,
+  "cost_usd": 0.00539,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

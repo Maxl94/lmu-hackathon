@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 2.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert",
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Ohne Barcode passen zwei Discogs-Kassetten mit unterschiedlicher Trackliste: Folge 1 (MC 6109) und Folge 2 (MC 6116). Laut Cover stammen beide vom Blasorchester des Musikvereins Lohnde, und der Eingabetitel nennt keine Folge. Die Wahl von Folge 1 stützt sich nur auf die Formulierung des Discogs-Künstler-Credits. Der Agent räumt selbst ein, dass eine Verwechslung möglich ist. Damit sind mehrere Ausgaben mit abweichender Trackliste denkbar, und die Wahl beruht auf einem schwachen bis mittleren Signal.",
+   "belege": [
+    "discogs:release/24165131",
+    "discogs:release/24154076",
+    "tl-vision Folge-2-Cover (Schritt 10)",
+    "tl-discogs search (Schritt 3)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "Der Discogs-Eintrag und die mit tl-vision gelesene J-Card-Rückseite derselben Ausgabe stimmen überein: 10 Titel (6 auf Seite 1, 4 auf Seite 2) in identischer Reihenfolge mit nur abweichender Groß-/Kleinschreibung. Das Bild stammt jedoch aus demselben Discogs-Eintrag, aus dem die Trackliste vermutlich abgetippt wurde. Die Positionen A1–B4 hat der Agent vergeben, weil auf dem Einleger keine Nummerierung gedruckt ist. Im Zweifel daher eine Stufe unter dem Maximum.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:https://i.discogs.com/aWGAwGdW4IdmMuU_bQ_a_cdhN5INcO_-LUSSHA1Sb7U/rs:fit/g:sm/q:90/h:573/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0MTY1/MTMxLTE2NjAxOTI4/NTctNjE4OC5qcGVn.jpeg"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Grundlage sind eine Datenbank (Discogs) und mehrere gelesene Primärquellen dieser Ausgabe: J-Card-Rückseite mit Trackliste, beide Kassettenetiketten mit Kat.-Nr. MC 6109 und Fred Kersten KG sowie der Einlegertext. Das entspricht 'Datenbank + gelesenes Cover/Etikett', auch wenn die Bilder auf Discogs gehostet sind.",
+   "belege": [
+    "discogs:release/24165131",
+    "tl-vision Schritte 9, 11, 12, 16, 17"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Status 'found', obwohl eine plausible Alternative (Folge 2, ebenfalls Blasorchester des Musikvereins Lohnde) mit anderer Trackliste existiert. Laut Disambiguation-Skill wäre 'ambiguous' angemessen gewesen.",
+  "Eingabetitel 'Blasmusik aus Lohnde' nennt keine Folge. Die Zuordnung zu Folge 1 beruht allein auf der Formulierung des Discogs-Credits.",
+  "Folge 2 teilt mehrere Titel mit Folge 1 (Broadway Melodien, Memories of Cole Porter, Film Festival, Bert Kaempfert). Eine Verwechslung hätte also nur teilweise falsche Tracks zur Folge.",
+  "Erscheinungsjahr 1991 ist nur aus 'im 67st. Jahr' abgeleitet, Discogs nennt kein Jahr. Ist 1925 als Jahr 1 gezählt, käme auch 1992 in Frage.",
+  "Discogs führt die Ausgabe als 'Not On Label'. 'Fred Kersten KG' stammt aus dem Rechtehinweis auf dem Etikett und ist kein echtes Label.",
+  "Alle Spielzeiten fehlen; keine Quelle dokumentiert sie.",
+  "Die Trackpositionen A1–B4 hat der Agent vergeben, auf dem Einleger ist keine Nummerierung gedruckt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 36352,
+  "tokens_out": 2599,
+  "cost_usd": 0.19739,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

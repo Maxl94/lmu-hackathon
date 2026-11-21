@@ -1,0 +1,339 @@
+{
+ "input": {
+  "id": "19-the-hoodie-crows-on-the-wing",
+  "title": "On the Wing",
+  "artist": "The Hoodie Crows"
+ },
+ "status": "found",
+ "release": {
+  "title": "On the Wing",
+  "artist": "The Hoodie Crows",
+  "format": "CD",
+  "country": "DE",
+  "year": 2016,
+  "label": "Not On Label (The Hoodie Crows Self-released)",
+  "catno": null,
+  "barcode": "4280000827494",
+  "edition": "1×CD, self-released, glass master KM161196 by Karus Media, distributed by Prosodia; 11 tracks incl. rock bonus track",
+  "ids": {
+   "discogs": "24917144"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Hot Asphalt / Cooley's Reel",
+   "artist": null,
+   "duration_s": 231,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "The Road to Nowhere",
+   "artist": null,
+   "duration_s": 264,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "The Close Shave",
+   "artist": null,
+   "duration_s": 212,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Keg of Brandy",
+   "artist": null,
+   "duration_s": 271,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "The Blacksmith",
+   "artist": null,
+   "duration_s": 239,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Arthur McBride",
+   "artist": null,
+   "duration_s": 329,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "The Venus of Killarney",
+   "artist": null,
+   "duration_s": 234,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "The Humour and the Rage",
+   "artist": null,
+   "duration_s": 356,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "The Tollgate Set",
+   "artist": null,
+   "duration_s": 304,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Home Away From Home / Fritz the Pheasant",
+   "artist": null,
+   "duration_s": 243,
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition"
+   ],
+   "credits": []
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Hot Asphalt – Cooley's Reel (Rock)",
+   "artist": null,
+   "duration_s": 231,
+   "sources": [
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/",
+    "web:https://folknews.de/the-hoodie-crows-on-the-wing-2016/"
+   ],
+   "duration_sources": [
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy"
+   ],
+   "flags": [
+    "duration_other_edition",
+    "bonus"
+   ],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "The Hoodie Crows",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "discogs:release/24917144",
+    "web:https://prosodia.shop/p/on-the-wing"
+   ]
+  }
+ ],
+ "total_duration_s": 2914,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "discogs:release/24917144",
+   "url": "https://www.discogs.com/release/24917144-The-Hoodie-Crows-On-The-Wing",
+   "kind": "database",
+   "note": "CD, 2016, DE, self-released; matrix KM161196 www.karus-media.de, SPARS DAD, GEMA; lists 10 tracks, no durations, no barcode"
+  },
+  {
+   "id": "web:https://prosodia.shop/p/on-the-wing",
+   "url": "https://prosodia.shop/p/on-the-wing",
+   "kind": "shop",
+   "note": "label/distributor shop for the CD: 11-track list, GTIN 4280000827494, Laufzeit 00:48:34"
+  },
+  {
+   "id": "web:https://prosodia.de/veroeffentlichungen/on-the-wing/",
+   "url": "https://prosodia.de/veroeffentlichungen/on-the-wing/",
+   "kind": "web",
+   "note": "Prosodia release page: printed title list with 11 tracks"
+  },
+  {
+   "id": "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy",
+   "url": "https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy",
+   "kind": "streaming",
+   "note": "digital edition, 11 songs, 48 min 38 sec; per-track durations"
+  },
+  {
+   "id": "web:https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/",
+   "url": "https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/",
+   "kind": "collector",
+   "note": "CD 2016, Germany, Eigenproduktion, no EAN, 10 tracks, no durations"
+  },
+  {
+   "id": "web:https://folknews.de/the-hoodie-crows-on-the-wing-2016/",
+   "url": "https://folknews.de/the-hoodie-crows-on-the-wing-2016/",
+   "kind": "web",
+   "note": "review with printed tracklist of 11 tracks (10 + bonus rock version after a half-minute pause)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "track count",
+   "values": {
+    "discogs:release/24917144": "10",
+    "web:https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/": "10",
+    "web:https://prosodia.shop/p/on-the-wing": "11",
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy": "11"
+   },
+   "resolution": "The two database entries omit the unlisted rock version of track 1; the label's CD shop page and the review of the CD both list it as track 11 after a pause, and the stated total runtime 48:34 equals the sum of the 11 digital track durations. 11 tracks used."
+  },
+  {
+   "field": "title track 1",
+   "values": {
+    "discogs:release/24917144": "Hot Asphalt / Cooley's Reel",
+    "web:https://prosodia.shop/p/on-the-wing": "Hot Asphalt / Cooley's Reel",
+    "web:https://folknews.de/the-hoodie-crows-on-the-wing-2016/": "Hot Asphalt / Colley's Reel"
+   },
+   "resolution": "Printed spelling of the label listing (Cooley's) used; the review writes Colley's."
+  },
+  {
+   "field": "title track 8",
+   "values": {
+    "discogs:release/24917144": "The Humour And The Rage",
+    "web:https://prosodia.shop/p/on-the-wing": "The Humour and the Rage",
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy": "The Humor and the Rage"
+   },
+   "resolution": "British spelling 'Humour' as in the printed label listing; Spotify uses the US spelling."
+  },
+  {
+   "field": "title track 11",
+   "values": {
+    "web:https://prosodia.shop/p/on-the-wing": "Hot Asphalt – Cooley's Reel (Rock)",
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy": "Hot Asphalt / Cooley's Reel - Rock",
+    "web:https://folknews.de/the-hoodie-crows-on-the-wing-2016/": "Bonustrack: Hot Asphalt / Colley's Reel (Rock)"
+   },
+   "resolution": "Title of the printed label listing used."
+  }
+ ],
+ "missing": [
+  "No per-track durations are printed on the carrier or held by Discogs/musik-sammler; durations were taken from the digital edition of the same album (Spotify) and flagged duration_other_edition – its total 48:34 equals the Laufzeit 48:34 stated by the label's CD shop, so the sequence is identical",
+  "Barcode 4280000827494 is documented only in the label's shop; Discogs and musik-sammler list the glass master KM161196 instead, MusicBrainz has no release at all",
+  "No cover image could be read: Discogs image CDN returned HTTP 403, so the printed back cover was not verified directly",
+  "Guest musicians are mentioned in the review but not credited by name in any source; only the duo (Johannes Single, Sebastian Barwinek) is documented",
+  "credits missing for 11 of 11 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Digital edition (Spotify, 22 June 2016), 11 tracks, 48:38",
+   "source": "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy",
+   "why_not": "digital release; the physical CD is the licensed carrier and was chosen, the digital entry serves as duration evidence"
+  }
+ ],
+ "reasoning": "Only one edition exists: the self-released German CD from 2016 (Discogs 24917144, matrix KM161196/Karus Media, GEMA). Tracklist from Discogs + musik-sammler (10 listed tracks) was extended by track 11, the rock version of track 1, which the label's CD shop page, the Prosodia release page and the folknews review all list; the shop's total runtime 48:34 matches the digital track sum exactly. No barcode appears in the databases; the label shop gives GTIN 4280000827494 for this CD. Durations come from the digital edition and are flagged."
+}

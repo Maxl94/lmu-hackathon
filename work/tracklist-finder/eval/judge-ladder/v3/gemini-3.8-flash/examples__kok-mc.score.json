@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:34",
+ "overall": 4.1,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "5: 'The INPUT contains a barcode...' -> NOT MET: Input does not contain a barcode. 4: 'without barcode: title, artist, format and at least one further attribute [...] unambiguous in >= 2 sources, and no other edition fitting the input has a different tracklist' -> NOT MET: Input only specifies title, artist, and format without any further distinguishing attribute, so multiple cassette editions fit the input (1st edition 2001 through 6th edition 2003, see discogs:release/1951581, 18354001, 18354166, 18354289, 17280904, 4256710). 3: 'several editions fit but ALL share the same tracklist (e.g. repressings, country editions): the choice does not matter' -> MET: All 6 cassette repressings share the exact same 16-track tracklist and identical durations.",
+   "summary": "Multiple cassette pressings fit the input without further distinguishing attributes, but all share the exact same tracklist.",
+   "evidence": [
+    "discogs:release/1951581",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710",
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: '>= 2 independent sources of the same edition agree on count, order and titles (spelling variants only)' -> MET: musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf, discogs:release/1951581, and web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/ all agree on 16 tracks, identical sequence (A1-A8, B1-B8), durations, and titles with only minor spelling variants.",
+   "summary": "Three independent sources (MusicBrainz, Discogs, and Musik-Sammler) fully agree on the 16 tracks, order, and durations.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: 'Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition' -> NOT MET: Primary image sources inspected in tool calls 8-10 did not display any printed tracklist (0 tracks readable). 4: 'Two independent database entries (recognisable by differing details) or database + specialised collector site (e.g. musik-sammler.de)' -> MET: Research utilizes MusicBrainz, Discogs, and specialised collector site Musik-Sammler (web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/).",
+   "summary": "Independent databases (Discogs, MusicBrainz) and specialised collector platform musik-sammler.de corroborate the release details.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The root 'artists' array was omitted in the JSON output, triggering a schema validation error."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.8-flash",
+  "seconds": 22.6,
+  "tokens_in": 24191,
+  "tokens_out": 3121,
+  "cost_usd": 0.03283,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

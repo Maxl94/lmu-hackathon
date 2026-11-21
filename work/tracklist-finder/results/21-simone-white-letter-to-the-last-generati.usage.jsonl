@@ -1,0 +1,2 @@
+{"ts": "2026-11-20T16:00:42", "tool": "tl-vision", "model": "gemini-3.8-flash@low", "input_tokens": 1272, "output_tokens": 111, "cache_read_input_tokens": 0, "cost_usd": 0.00151, "seconds": 3.5, "fallback_from": null, "image": "https://f4.bcbits.com/img/0030039687_10.jpg"}
+{"ts": "2026-11-20T16:00:53", "tool": "tl-vision", "model": "gemini-3.8-flash@low", "input_tokens": 1278, "output_tokens": 615, "cache_read_input_tokens": 0, "cost_usd": 0.00359, "seconds": 7.0, "fallback_from": null, "image": "https://f4.bcbits.com/img/0029712290_10.jpg"}

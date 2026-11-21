@@ -1,0 +1,111 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:41",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: INPUT contains barcode + matches >=2 independent sources -> NOT MET (no barcode in input, FACTS input_has_barcode=false). 4: Without barcode, title, artist, format and >=1 further attribute unambiguous in >=2 sources and no competing edition with different tracklist -> NOT MET (input omits artist and any further attribute, and competing MC editions with different tracklists exist in tl-discogs search). 3: Unambiguous or all fitting editions share the same tracklist -> NOT MET (discogs:release/8491193 'Various - Ich Sag's Dir Mit Musik' 5xCassette fits title and MC format with a completely different tracklist, and discogs:release/7800803 is also an MC compilation starting with the same title). 2: Several editions fit the input and at least one has a DIFFERENT tracklist; choice rests on weak signals -> MET (both Kastelruther Spatzen MC releases such as discogs:release/2297987 and Various Artists 5xMC compilation discogs:release/8491193 fit the title-and-MC-only input with different tracklists; the agent relied on the sample ID 'spatzen-mc-titleonly' and an unstated assumption that a solo album was meant).",
+   "summary": "Because the input provides only title and MC format without an artist, the Various Artists 5xMC compilation discogs:release/8491193 also fits the input with a completely different tracklist.",
+   "evidence": [
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "discogs:release/2297987",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3, discogs:release/2297987, and the tl-vision J-card readings image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg and image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg all cover barcode 9002722211901 / D 221 190 and agree on 12 tracks in order A1-B6, differing only in minor capitalization/hyphenation variants such as 'Hallo ihr Freunde' vs 'Hallo Ihr Freunde' and 'Sarner-Welle Lied' vs 'Sarner-Welle-Lied').",
+   "summary": "For the selected Kastelruther Spatzen MC edition, MusicBrainz, Discogs, and both J-card scans agree on all 12 track positions, order, and titles up to minor spelling variants.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> MET (musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 has no cover images and differing duration/catno details, and is paired with tl-vision readings of the physical J-card inner and back prints of the same edition from Discogs images, which are independent of MusicBrainz and even correct the Discogs text entry's 3:03 error on A6, alongside independent database entry discogs:release/2297987 and deezer:album/231158).",
+   "summary": "The agent combined two independent databases (MusicBrainz and Discogs) with tl-vision readings of the original J-card inner and back prints of the exact MC edition.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/rs:fit/g:sm/q:90/h:600/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg2/OS5qcGVn.jpeg",
+    "deezer:album/231158"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Disambiguation relied on external task metadata ('spatzen-mc-titleonly') rather than the input itself; given only title and format 'MC', the Various Artists 5xMC compilation discogs:release/8491193 also matches the input with a completely different tracklist.",
+  "Validation error reported in FACTS: the top-level 'artists' array is empty/missing instead of listing 'Kastelruther Spatzen'.",
+  "Inconsistent duration resolution: tracks A1 (202 s) and A6 (210 s) use the printed J-card durations, whereas tracks A3 (188 s), A5 (141 s), B1 (152 s), B2 (239 s), B3 (207 s), B4 (138 s), B5 (187 s), and B6 (196 s) use MusicBrainz durations instead of the printed J-card durations (187, 140, 150, 238, 206, 136, 185, 197 s), yielding total_duration_s 2229 s rather than the J-card sum (2220 s) or MusicBrainz sum (2226 s)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 41.2,
+  "tokens_in": 37746,
+  "tokens_out": 8596,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

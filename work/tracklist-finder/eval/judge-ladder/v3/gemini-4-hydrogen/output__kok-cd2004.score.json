@@ -1,0 +1,106 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:16",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains a barcode (4019593960000): MET. Matches exactly this edition in >= 2 independent sources: MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a via MusicBrainz-Suche and discogs:release/3057907 via Discogs-Suche). Format and artist match: MET (CD and Bushido in both sources and FACTS). No other edition with the same barcode and a different tracklist: MET (1 hit in MusicBrainz, 1 hit in Discogs, both 20 tracks).",
+   "summary": "Exact barcode 4019593960000, artist, and CD format match in two independent databases with no competing editions.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "MusicBrainz-Suche barcode:(4019593960000): 1 Treffer",
+    "Discogs-Suche barcode=4019593960000 format=CD: 1 Treffer"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 both list 20 tracks and the evidence confirms matching titles across all 20 positions, with only 3-second duration differences on tracks 15 and 16 resolved via MusicBrainz).",
+   "summary": "Both independent sources of the edition agree on the 20-track count, order, and titles.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "MusicBrainz-Release 15996385-5426-416b-95da-0e8846196d3a: 20 Tracks, 20 mit Dauer"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition: NOT MET (only database sources used). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site: MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 are two independent databases showing differing details such as country/edition naming and 3-second duration differences on tracks 15 and 16).",
+   "summary": "Supported by two independent databases (MusicBrainz and Discogs) with independently differing details, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error in FACTS: top-level artists list is empty despite featured artists on tracks 3, 8, 9, 12, 13, and 15.",
+  "Release metadata label (ersguterjunge) and catno (40195 9396000-0) in the result are not shown in the printed EVIDENCE log.",
+  "Minor 3-second duration conflicts between MusicBrainz and Discogs on track 15 (141s vs 138s) and track 16 (221s vs 218s), resolved to MusicBrainz."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 14.6,
+  "tokens_in": 6195,
+  "tokens_out": 2576,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

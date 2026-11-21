@@ -1,0 +1,123 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:17",
+ "overall": 4.35,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode in >=2 independent sources: NOT MET, the barcode 198028875721 appears only in Discogs 33665688 (tl-discogs search and release output); MusicBrainz CD has no barcode and Deezer/Amazon carry UPC 196872810677. Level 4: barcode match in only one source: MET (Discogs 33665688), format CD and artist Zartmann match, and competing vinyl siblings (33609228, 33675042, 33697527) have different barcodes and the same 8 titles, so no competing tracklist was found. Level 4 reached.",
+   "summary": "Exact barcode match on one database entry (Discogs 33665688, CD) with matching format, artist and label, and no competing edition with a different tracklist.",
+   "evidence": [
+    "tl-discogs search --barcode 198028875721",
+    "tl-discogs release 33665688",
+    "tl-discogs versions 3809379",
+    "tl-discogs release 33609228"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MusicBrainz CD bc159b1c (8 tracks, titles, ms durations) and Discogs CD 33665688 (8 tracks, titles) agree on count, order and titles, differing only in capitalisation and the track 8 spelling ('dein dudenkstsoschön' vs 'Deindudenkstsoschön'), which are spelling variants: MET. Level 5 reached.",
+   "summary": "Two independent CD database entries (MusicBrainz and Discogs) agree on count, order and titles, with only spelling and capitalisation variants.",
+   "evidence": [
+    "tl-mb release bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "tl-discogs release 33665688",
+    "tl-deezer album 732814941",
+    "tl-scrape amazon B0DTQTDDCQ"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 75% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 75% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: no independent primary source read: NOT MET, since tl-vision failed with HTTP 403 and curl downloads returned HTML, so no cover, booklet or label print was read. Level 4: two independent database entries with differing details (Discogs 33665688 and MusicBrainz bc159b1c, differing label and capitalisation): MET. Level 4 reached.",
+   "summary": "Two independent database entries (Discogs and MusicBrainz) with differing details, but no primary source of the physical CD was read.",
+   "evidence": [
+    "tl-discogs release 33665688",
+    "tl-mb release bc159b1c-39ac-4bcc-840f-dd7f30806301",
+    "tl-vision Discogs image: ERROR HTTP 403",
+    "curl d1.jpg/c1.jpg: HTML instead of image"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result claims cover/artwork confirmation ('matching the lowercase artwork confirmed by the vinyl sibling entry') and the Discogs cover misprint, but no cover image was read; all tl-vision calls returned HTTP 403 and downloaded files are HTML.",
+  "Result cites 'Genius/Apple listings' as confirming the track 8 spelling, but the Apple Music fetch returned 'Seite nicht gefunden' and Genius was only a search hit with no tracklist read.",
+  "Label conflict: MusicBrainz CD says Chimperator Productions while Discogs says Bamboo Artist & Label Services; the result resolves this by assumption ('likely a mis-entry') with no evidence.",
+  "MusicBrainz CD entry has no barcode, so the barcode match rests on Discogs alone; the result's 'three independent sources agree' statement conflates the digital Deezer/Amazon releases (UPC 196872810677) with the physical CD.",
+  "Durations of tracks 3 and 5 for the CD rest only on MusicBrainz (120 s, 126 s); the vinyl sibling gives 123 s for both, and the result's ≤2 s tolerance rule is applied without evidence for the CD.",
+  "Result field 'edition' and reasoning say 'Confidence 0.88 ... three independent sources' which overstates the evidence relative to the single barcode match.",
+  "Vinyl sibling 33609228 lists track B3 'lass es gehen' with missing duration; the claim that Amazon agrees within 1 s for all tracks was checked (Amazon 2:01 vs MB 2:00, 1:51 vs 1:50) and holds, but the Deezer track 6 (2:44) vs Amazon (2:45) is a fine detail not mentioned."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 8,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.75,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "genius",
+   "music.amazon.de",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming"
+  ],
+  "conflicts": 6,
+  "alternatives": 4,
+  "agent_confidence": 0.88,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 14.6,
+  "tokens_in": 19506,
+  "tokens_out": 3025,
+  "cost_usd": 0.00346,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 4,
+  "credits": {
+   "tracks": 8,
+   "of": 8
+  }
+ }
+}

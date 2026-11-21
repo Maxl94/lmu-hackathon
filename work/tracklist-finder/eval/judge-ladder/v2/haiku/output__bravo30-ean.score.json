@@ -1,0 +1,95 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:37:58",
+ "overall": 4.65,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode matches exactly in >=2 independent sources - MET (MusicBrainz 41b0a392 via barcode search; Discogs 23145932 via barcode=731456031125 search; checksum ok per FACTS). Format and artist match - MET for format (CD+CD vs input CD, a double CD is still CD); artist not given in input, Various Artists not contradicted. No other edition with same barcode and different tracklist - MET (Discogs 1949898 and 26676554 share barcode and tracklist per tool output). Level 5 conditions all met.",
+   "summary": "Barcode 731456031125 matches the same release in MusicBrainz and Discogs, with format consistent and all same-barcode alternatives sharing the same tracklist.",
+   "evidence": [
+    "MusicBrainz barcode search: 1 hit 41b0a392-086e-45b0-9323-db56ba682941",
+    "Discogs barcode search: 23145932, 1949898, 26676554",
+    "FACTS: ean_checksum_ok true, barcode_match exact"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: >=2 independent sources agree on count, order and titles (spelling variants only) - NOT MET: count 40 and order agree, but Track 10 differs by suffix '(Album Version)' in Discogs, which is more than a spelling variant. Level 4: one complete source confirmed by a second except small explained deviations (spelling, bonus track) - MET: MusicBrainz is complete with 40 tracks, Discogs confirms 40 tracks, Tracks 10, 22 and 26 differ only in version label/spelling/case, and duration deviations are explained by the stated MusicBrainz-first rule.",
+   "summary": "Both sources list the same 40 tracks in the same order, with only minor title variants (Track 10 version suffix, Tracks 22 and 26 spelling) and explained duration differences.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 (40 tracks)",
+    "discogs:release/23145932 (40 tracks)",
+    "conflicts: Titel Track 10, Track 22, Track 26",
+    "conflicts: Dauer Track 5, 7, 14, 18"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 4 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover/booklet/label print) - NOT MET: no primary source consulted. Level 4: two independent database entries with differing details - MET: MusicBrainz and Discogs entries, differing in title spelling and durations.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details support the edition, but no primary source such as cover or label print was checked.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941 kind database",
+    "discogs:release/23145932 kind database"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Track 10: Discogs title 'Oops!...I Did It Again (Album Version)' differs from MusicBrainz 'Oops!...I Did It Again'; resolved by MusicBrainz rule, not a pure spelling variant.",
+  "Durations differ on Tracks 5, 7, 14, 18 (up to 4 s); resolved by MusicBrainz rule, which is a stated convention rather than verified evidence.",
+  "No primary source (cover, booklet, label print) was consulted; all evidence is database-based.",
+  "Input gives no artist; the 'Various Artists' match and format CD vs 2×CD are not explicitly checked against the input.",
+  "Agent's total_duration_s 8847 is not verifiable from the shown tool output."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 4,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 7,
+  "alternatives": 2,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 14.0,
+  "tokens_in": 10479,
+  "tokens_out": 2771,
+  "cost_usd": 0.00243,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

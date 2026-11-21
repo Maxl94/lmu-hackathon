@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:13",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires an input barcode. NOT MET, because the input has no barcode. Level 4: title, artist and format unambiguous in >= 2 sources, and no fitting edition with a different tracklist. NOT MET. The input gives only title and format (MC), no artist. The Discogs search shows discogs:release/8491193 'Various - Ich Sag's Dir Mit Musik' (1995, Reader's Digest box set, cassette). It matches both title and format, has a different artist and a different tracklist, and the input does not rule it out. The agent did not list it as an alternative. Level 3: unambiguous, or all fitting editions share one tracklist. NOT MET, for the same reason. Level 2: several editions fit and at least one has a different tracklist; the choice rests on weak signals. MET. The Kastelruther Spatzen choice is plausible as the best-known album. The Koch cassette variants (2297987, 15349631, 24889304) and the Polish AMA cassette 16402359 appear to share the same tracklist, so the choice among them does not matter.",
+   "summary": "The input has no artist or barcode, and a Reader's Digest 'Various' cassette box with the same title and format and a different tracklist is not excluded by the input.",
+   "evidence": [
+    "tl-discogs search (discogs:release/8491193)",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles. MET. MusicBrainz e0d210c6 (cassette) and Discogs 2297987 (cassette) both list the same 12 tracks A1-B6 in the same order with identical titles apart from capitalisation. Further corroboration comes from the official band site kastelrutherspatzen.de (MC number 221190, same 12 titles), Deezer 231158 and cd-lexikon. Deezer and Last.fm append 'Hallo Freunde' to the B4 title, which is a minor variant.",
+   "summary": "MusicBrainz and Discogs cassette entries plus the official band site agree on 12 identical titles in the same order.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26",
+    "deezer:album/231158"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source of the same edition. NOT MET in the agent's citations. The official band site (kastelrutherspatzen.de, listing MC number 221190) appears in the evidence but is an artist site, not label print, and the agent did not cite it. Level 4: two independent database entries with differing details. MET. MusicBrainz and Discogs differ in durations and in catalogue-number formatting, so they are independent.",
+   "summary": "Two independent databases (MusicBrainz and Discogs) document the same cassette with differing details.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Competing edition discogs:release/8491193 (Various - Ich Sag's Dir Mit Musik, Reader's Digest cassette box, 1995) fits title and format but is not mentioned in the alternatives.",
+  "The artist Kastelruther Spatzen is inferred, not given in the input.",
+  "Durations were taken from MusicBrainz, whose values are identical across the CD, LP and MC entries (likely copied). Discogs differs by 1-3 s on several tracks (A1 202 vs 199, B1 150 vs 152, B4 136 vs 138).",
+  "Track A6 duration conflict (210 vs 183 s): the 210 s is backed by the Deezer/Last.fm digital release, which may not reflect the cassette; Discogs gives 3:03 consistently across its cassette, CD and LP entries.",
+  "There are three Koch cassette variants (2297987 with barcode; 15349631 and 24889304 without). The barcode-bearing variant was chosen arbitrarily, but the tracklists are identical."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 18.7,
+  "tokens_in": 22941,
+  "tokens_out": 2045,
+  "cost_usd": 0.13266,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

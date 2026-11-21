@@ -1,0 +1,41 @@
+{"ts": 1795189864.09, "event": "run_start", "input": {"title": "STRAY SHEEP", "artist": "Kenshi Yonezu", "format": "CD"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795189864.09, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795189864.09, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795189864.09, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795189864.09, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795189868.29, "event": "tool_start", "tool": "tl-mb", "args": "search --title STRAY SHEEP --artist Kenshi Yonezu --format CD"}
+{"ts": 1795189868.3, "event": "tool_start", "tool": "tl-discogs", "args": "search --title STRAY SHEEP --artist Kenshi Yonezu --format CD"}
+{"ts": 1795189868.78, "event": "tool_end", "tool": "tl-discogs", "args": "search --title STRAY SHEEP --artist Kenshi Yonezu --format CD", "seconds": 0.5, "ok": true}
+{"ts": 1795189871.76, "event": "tool_end", "tool": "tl-mb", "args": "search --title STRAY SHEEP --artist Kenshi Yonezu --format CD", "seconds": 3.5, "ok": true}
+{"ts": 1795189874.23, "event": "tool_start", "tool": "tl-discogs", "args": "release 15728633"}
+{"ts": 1795189874.23, "event": "tool_start", "tool": "tl-mb", "args": "release a39ee600-43e3-4c8d-b369-f28b7d8a0dfe"}
+{"ts": 1795189874.52, "event": "tool_end", "tool": "tl-mb", "args": "release a39ee600-43e3-4c8d-b369-f28b7d8a0dfe", "seconds": 0.3, "ok": true}
+{"ts": 1795189874.71, "event": "tool_end", "tool": "tl-discogs", "args": "release 15728633", "seconds": 0.5, "ok": true}
+{"ts": 1795189877.58, "event": "tool_start", "tool": "tl-discogs", "args": "release 30395246"}
+{"ts": 1795189877.58, "event": "tool_start", "tool": "tl-mb", "args": "group 7bf1777c-48b4-491d-aaea-1405c8dd8845"}
+{"ts": 1795189878.39, "event": "tool_end", "tool": "tl-discogs", "args": "release 30395246", "seconds": 0.8, "ok": true}
+{"ts": 1795189878.57, "event": "tool_start", "tool": "tl-discogs", "args": "release 30395297"}
+{"ts": 1795189878.59, "event": "tool_end", "tool": "tl-mb", "args": "group 7bf1777c-48b4-491d-aaea-1405c8dd8845", "seconds": 1.0, "ok": true}
+{"ts": 1795189879.21, "event": "tool_end", "tool": "tl-discogs", "args": "release 30395297", "seconds": 0.6, "ok": true}
+{"ts": 1795189881.13, "event": "tool_start", "tool": "tl-mb", "args": "release b5562525-a1a4-4eb3-94fd-4bf205c2449f"}
+{"ts": 1795189884.42, "event": "tool_end", "tool": "tl-mb", "args": "release b5562525-a1a4-4eb3-94fd-4bf205c2449f", "seconds": 3.3, "ok": true}
+{"ts": 1795189886.71, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Kenshi Yonezu --title STRAY SHEEP"}
+{"ts": 1795189886.71, "event": "tool_start", "tool": "tl-itunes", "args": "search Kenshi Yonezu STRAY SHEEP"}
+{"ts": 1795189887.11, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Kenshi Yonezu --title STRAY SHEEP", "seconds": 0.4, "ok": true}
+{"ts": 1795189887.28, "event": "tool_end", "tool": "tl-itunes", "args": "search Kenshi Yonezu STRAY SHEEP", "seconds": 0.6, "ok": true}
+{"ts": 1795189888.9, "event": "tool_start", "tool": "tl-itunes", "args": "album 1538265733"}
+{"ts": 1795189888.9, "event": "tool_start", "tool": "tl-deezer", "args": "album 177754422"}
+{"ts": 1795189889.3, "event": "tool_end", "tool": "tl-deezer", "args": "album 177754422", "seconds": 0.4, "ok": true}
+{"ts": 1795189890.31, "event": "tool_end", "tool": "tl-itunes", "args": "album 1538265733", "seconds": 1.4, "ok": true}
+{"ts": 1795189893.35, "event": "tool_start", "tool": "tl-caa", "args": "b5562525-a1a4-4eb3-94fd-4bf205c2449f"}
+{"ts": 1795189896.1, "event": "tool_end", "tool": "tl-caa", "args": "b5562525-a1a4-4eb3-94fd-4bf205c2449f", "seconds": 2.8, "ok": true}
+{"ts": 1795189899.53, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/WTmSPjrHVH0bUSFnfyUIZhBXErJJ5H_LYv60Jl3lemM/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTE1NzI4NjMzLTE3MzkyMDM4MTktODQ5NS5qcGVn --context Back cover of Kenshi Yonezu STRAY SHEEP CD SECL-2598. Transcribe the printed tracklist exactly (numbers + titles,"}
+{"ts": 1795189899.53, "event": "tool_start", "tool": "tl-vision", "args": "http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg --context Japanese CD obi strip for Kenshi Yonezu STRAY SHEEP, SECL-2598. Transcribe any tracklist titles exactly as printed (Japanese/English capitalization)."}
+{"ts": 1795189899.8, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/WTmSPjrHVH0bUSFnfyUIZhBXErJJ5H_LYv60Jl3lemM/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTE1NzI4NjMzLTE3MzkyMDM4MTktODQ5NS5qcGVn --context Back cover of Kenshi Yonezu STRAY SHEEP CD SECL-2598. Transcribe the printed tracklist exactly (numbers + titles,", "seconds": 0.3, "ok": false}
+{"ts": 1795189910.65, "event": "tool_end", "tool": "tl-vision", "args": "http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg --context Japanese CD obi strip for Kenshi Yonezu STRAY SHEEP, SECL-2598. Transcribe any tracklist titles exactly as printed (Japanese/English capitalization).", "seconds": 11.1, "ok": true}
+{"ts": 1795189942.83, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 20, "steps": 15}
+{"ts": 1795189942.83, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795189955.85, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 15 tracks, ISRC 15"}
+{"ts": 1795189955.85, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795189973.81, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 4.0, "error": null}
+{"ts": 1795189973.81, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 4.0, "tracks": 15, "wall_s": 78.7, "judge_s": 18.0, "cost_usd": 0.0206, "mode": "agent", "errors": []}

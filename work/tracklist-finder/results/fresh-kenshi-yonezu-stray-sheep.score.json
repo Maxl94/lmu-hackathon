@@ -1,0 +1,120 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:52:53",
+ "overall": 4.0,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 15,
+   "of": 15
+  }
+ },
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5: input has no barcode - NOT MET. Level 4: no barcode, but title, artist, format and country JP, year 2020, label Sony Music Labels Inc. and catno SECL 2598 agree in MusicBrainz (b5562525) and Discogs (15728633), so that condition is MET. However, the China CD 2025 (discogs:release/37170435, MB 95ca245d, barcode 9787798443370) also fits title/artist/format and its tracklist was never retrieved, so the condition that no other fitting edition has a different tracklist cannot be confirmed - NOT MET. Level 3: several CD editions fit (standard, box SECL 2590-1, CD+DVD SECL 2595-7, CD+Blu-ray SECL 2592-4), and the JP ones are evidenced with the same 15 CD tracks; the China CD's tracklist is unverified, so the 'all share the same tracklist' condition is only partly supported, but the level-3 description still fits best.",
+   "summary": "Without a barcode in the input, the JP standard CD fits well, but the 2025 China CD and the limited JP CDs were not confirmed to share the same tracklist, so the choice rests on unverified equivalence.",
+   "evidence": [
+    "discogs:release/37170435",
+    "musicbrainz:release/95ca245d-1502-4fbe-bda8-bfa4b5b46534",
+    "discogs:release/30395297",
+    "discogs:release/30395246",
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MB (b5562525, 15 tracks with ms durations), Discogs (15728633, 15 titles), the obi image (coverartarchive 32271089672, printed 01-15) and iTunes (1538265733, same order) agree on count 15, order and titles; only spelling variant TEENAGE RIOT/Teenage Riot differs - MET.",
+   "summary": "At least two independent sources of the same edition agree on count, order and titles, with only a capitalization variant on track 13.",
+   "evidence": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg",
+    "itunes:album/1538265733"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: database entries (MusicBrainz, Discogs) plus an independent primary source of the same edition (obi strip printed with SECL 2598 and barcode 4547366457933, read via tl-vision) - MET. The obi was read by a vision model and is hosted via coverartarchive linked to MB, which slightly weakens independence, but the printed carrier evidence is still present.",
+   "summary": "Two databases plus the printed obi strip of the same edition give database plus primary-source evidence.",
+   "evidence": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The China CD 2025 (discogs:release/37170435, MB 95ca245d) is dismissed as 'later regional reissue' but its tracklist was never retrieved, so it is not verified to differ or match.",
+  "The box set SECL 2590-1 and the CD parts of CD+DVD/CD+Blu-ray are said to share the same 15 CD tracks, but no tracklist for the box set was shown in the evidence (output truncated).",
+  "Discogs 15728633 lists no durations; durations come solely from MusicBrainz and iTunes, which the result acknowledges.",
+  "The obi image was read by a vision model (tl-vision) and is attached to the MusicBrainz release via coverartarchive, so its independence from MusicBrainz is limited.",
+  "Track 4 credit: MusicBrainz and iTunes give Kenshi Yonezu + Yojiro Noda, while the result lists 米津玄師 as main artist and 野田洋次郎 only as featured; this is consistent but the artist field of the release is in Japanese, not the input spelling."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 15,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "format_match": true,
+  "artist_similarity": 0,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 18.0,
+  "tokens_in": 17735,
+  "tokens_out": 3487,
+  "cost_usd": 0.00352,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ }
+}

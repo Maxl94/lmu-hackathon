@@ -1,0 +1,996 @@
+{
+ "input": {
+  "id": "fresh-kenshi-yonezu-stray-sheep",
+  "title": "STRAY SHEEP",
+  "artist": "Kenshi Yonezu",
+  "format": "CD"
+ },
+ "status": "found",
+ "release": {
+  "title": "STRAY SHEEP",
+  "artist": "米津玄師",
+  "format": "CD",
+  "country": "JP",
+  "year": 2020,
+  "label": "Sony Music Labels Inc.",
+  "catno": "SECL-2598",
+  "barcode": "4547366457933",
+  "edition": "通常盤 (standard edition), 1×CD",
+  "ids": {
+   "musicbrainz": "b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+   "discogs": "15728633"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "カムパネルラ",
+   "artist": null,
+   "duration_s": 236,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001654"
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Flamingo",
+   "artist": null,
+   "duration_s": 196,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    }
+   ],
+   "isrc": "JPU901803148"
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "感電",
+   "artist": null,
+   "duration_s": 265,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001053"
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "PLACEBO",
+   "artist": "米津玄師 + 野田洋次郎",
+   "duration_s": 240,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001655"
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "パプリカ",
+   "artist": null,
+   "duration_s": 203,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU901902183"
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "馬と鹿",
+   "artist": null,
+   "duration_s": 265,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU901902002"
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "優しい人",
+   "artist": null,
+   "duration_s": 209,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001656"
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Lemon",
+   "artist": null,
+   "duration_s": 256,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Koichiro Muroya",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU901800227"
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "まちがいさがし",
+   "artist": null,
+   "duration_s": 267,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001657"
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "ひまわり",
+   "artist": null,
+   "duration_s": 242,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001658"
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "迷える羊",
+   "artist": null,
+   "duration_s": 227,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001659"
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "Décolleté",
+   "artist": null,
+   "duration_s": 210,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001660"
+  },
+  {
+   "position": "13",
+   "disc": 1,
+   "title": "TEENAGE RIOT",
+   "artist": null,
+   "duration_s": 225,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    }
+   ],
+   "isrc": "JPU901803149"
+  },
+  {
+   "position": "14",
+   "disc": 1,
+   "title": "海の幽霊",
+   "artist": null,
+   "duration_s": 234,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU901901328"
+  },
+  {
+   "position": "15",
+   "disc": 1,
+   "title": "カナリヤ",
+   "artist": null,
+   "duration_s": 298,
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ],
+   "duration_sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "itunes:album/1538265733"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "坂東祐大",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "arranger",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "producer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "composer",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "米津玄師",
+     "role": "lyricist",
+     "sources": [
+      "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f"
+     ]
+    },
+    {
+     "name": "Yuta Bandoh",
+     "role": "arranger",
+     "sources": [
+      "discogs:release/15728633"
+     ]
+    }
+   ],
+   "isrc": "JPU902001661"
+  }
+ ],
+ "artists": [
+  {
+   "name": "米津玄師",
+   "role": "main",
+   "tracks": [],
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633"
+   ]
+  },
+  {
+   "name": "野田洋次郎",
+   "role": "featured",
+   "tracks": [
+    "4"
+   ],
+   "sources": [
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+    "discogs:release/15728633",
+    "itunes:album/1538265733",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg"
+   ]
+  }
+ ],
+ "total_duration_s": 3573,
+ "confidence": 0.85,
+ "sources": [
+  {
+   "id": "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+   "url": "https://musicbrainz.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f",
+   "kind": "database",
+   "note": "JP CD 通常盤, SECL-2598, barcode 4547366457933, 15 tracks with ms durations and ISRCs"
+  },
+  {
+   "id": "discogs:release/15728633",
+   "url": "https://www.discogs.com/release/15728633-Kenshi-Yonezu-Stray-Sheep",
+   "kind": "database",
+   "note": "same edition: SECL 2598, barcode 4547366457933, matrix LLDS-8767, 15 tracks (no durations listed)"
+  },
+  {
+   "id": "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg",
+   "url": "http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg",
+   "kind": "image",
+   "note": "obi strip of SECL 2598, read via tl-vision: printed tracklist 01-15, barcode 4547366457933"
+  },
+  {
+   "id": "itunes:album/1538265733",
+   "url": "https://music.apple.com/de/album/stray-sheep/1538265733",
+   "kind": "streaming",
+   "note": "digital edition of the same album (Japanese titles, same order); durations agree with MB within milliseconds"
+  },
+  {
+   "id": "deezer:album/177754422",
+   "url": "https://www.deezer.com/album/177754422",
+   "kind": "streaming",
+   "note": "separate digital edition, UPC 4547366465235, romanized titles; only used as an order cross-check"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 13",
+   "values": {
+    "musicbrainz:release/b5562525-a1a4-4eb3-94fd-4bf205c2449f": "TEENAGE RIOT",
+    "image:http://coverartarchive.org/release/b5562525-a1a4-4eb3-94fd-4bf205c2449f/32271089672-1200.jpg": "TEENAGE RIOT",
+    "discogs:release/15728633": "Teenage Riot"
+   },
+   "resolution": "MusicBrainz and the printed obi read 'TEENAGE RIOT' (all caps), Discogs lists 'Teenage Riot'; printed carrier spelling kept."
+  }
+ ],
+ "missing": [
+  "Input had no barcode, catalogue number or limited-edition hint; the standard single-CD edition (通常盤, SECL-2598) was chosen over three JP limited editions that also contain a CD (SECL 2590-1 box, SECL 2595-7 CD+DVD, SECL 2592-4 CD+Blu-ray) and a 2025 China CD.",
+  "Discogs lists no track durations for this edition, so durations come from MusicBrainz (ms precision) and are corroborated by the Apple digital edition of the same album."
+ ],
+ "alternatives": [
+  {
+   "description": "CD + DVD + artbook, Japan 2020, SECL 2595-7, barcode 4547366457919, 15 CD tracks + 27 DVD tracks",
+   "source": "discogs:release/30395246",
+   "why_not": "input format is plain CD; this edition adds a DVD"
+  },
+  {
+   "description": "CD + Blu-ray + artbook, Japan 2020, SECL 2592-4, barcode 4547366457926, 15 CD tracks + 27 Blu-ray tracks",
+   "source": "discogs:release/16115694",
+   "why_not": "input format is plain CD; this edition adds a Blu-ray"
+  },
+  {
+   "description": "Box set (おまもり盤), Japan 2020, SECL 2590-1, barcode 4547366457902, 15 CD tracks, includes box and keychain",
+   "source": "discogs:release/30395297",
+   "why_not": "limited box edition, input gives no hint of a box set"
+  },
+  {
+   "description": "China CD, 2025, Starsing Records/Sony Music 19439803992, barcode 9787798443370",
+   "source": "discogs:release/37170435",
+   "why_not": "different country, label and barcode; later regional reissue"
+  }
+ ],
+ "reasoning": "No barcode was supplied, so the edition was fixed by format (CD) plus title/artist. Discogs and MusicBrainz both hold the Japanese standard edition (通常盤, SECL 2598, barcode 4547366457933) with an identical 15-track order; the obi image read via vision confirms catalogue number, barcode and the printed titles (カムパネルラ … カナリヤ, 'TEENAGE RIOT', 'PLACEBO + 野田洋次郎'). The three limited JP editions contain additional DVD/Blu-ray discs or a box, so the plain-CD input points to the standard edition; those editions and the 2025 China CD are listed as alternatives. Durations are taken from the MusicBrainz CD entry (ms precision, identical to the Apple digital master within milliseconds) and total 59:33. Track 4 is the only collaboration: 米津玄師 + 野田洋次郎 (Yojiro Noda), credited as featured artist."
+}

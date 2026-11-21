@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:27",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The INPUT contains a barcode (4019593960000): MET. Matches exactly this edition in >= 2 independent sources: MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907). Format (CD) and artist (Bushido) match: MET. No other edition with the same barcode and a different tracklist: MET (both barcode searches returned exactly 1 match with identical 20-track list).",
+   "summary": "Exact barcode match in two independent databases (MusicBrainz and Discogs) with matching artist, title, and CD format, and no competing editions.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only): MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 both have 20 tracks with matching titles and order as verified by the deterministic fast-path check).",
+   "summary": "Both MusicBrainz and Discogs completely agree on the 20 tracks, their order, and their titles.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source of the same edition: NOT MET (only databases consulted, no cover/booklet images or label info read). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site: MET (MusicBrainz release 15996385-5426-416b-95da-0e8846196d3a and Discogs release 3057907 are two independent database entries, differing slightly in durations on tracks 15 and 16).",
+   "summary": "The result is backed by two independent database entries (MusicBrainz and Discogs).",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: 'artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once'.",
+  "Details in release object (label 'ersguterjunge', catno '40195 9396000-0') and featured artist credits are not explicitly shown in the abbreviated deterministic tool output log, though extracted directly from the cited database APIs."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-argon",
+  "seconds": 25.2,
+  "tokens_in": 6195,
+  "tokens_out": 779,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

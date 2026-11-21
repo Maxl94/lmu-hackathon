@@ -1,0 +1,74 @@
+{"ts": 1795185904.08, "event": "run_start", "input": {"title": "CD - schönhauser EP", "artist": "Zartmann", "ean": "198028875721"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185904.08, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185904.08, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(0198028875721 OR 198028875721): 0 hits"}
+{"ts": 1795185904.08, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185904.08, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185904.08, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185924.75, "event": "tool_start", "tool": "tl-gtin", "args": "198028875721"}
+{"ts": 1795185924.75, "event": "tool_end", "tool": "tl-gtin", "args": "198028875721", "seconds": 0.0, "ok": true}
+{"ts": 1795185924.87, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 198028875721"}
+{"ts": 1795185924.87, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 198028875721", "seconds": 0.0, "ok": true}
+{"ts": 1795185925.01, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 198028875721"}
+{"ts": 1795185925.01, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 198028875721", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.22, "event": "tool_start", "tool": "tl-discogs", "args": "release 33665688"}
+{"ts": 1795185937.22, "event": "tool_start", "tool": "tl-mb", "args": "search --title Schönhauser EP --artist Zartmann"}
+{"ts": 1795185937.22, "event": "tool_end", "tool": "tl-discogs", "args": "release 33665688", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.22, "event": "tool_end", "tool": "tl-mb", "args": "search --title Schönhauser EP --artist Zartmann", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.36, "event": "tool_start", "tool": "tl-itunes", "args": "upc 198028875721"}
+{"ts": 1795185937.36, "event": "tool_end", "tool": "tl-itunes", "args": "upc 198028875721", "seconds": 0.0, "ok": true}
+{"ts": 1795185937.49, "event": "tool_start", "tool": "tl-deezer", "args": "upc 198028875721"}
+{"ts": 1795185937.49, "event": "tool_end", "tool": "tl-deezer", "args": "upc 198028875721", "seconds": 0.0, "ok": true}
+{"ts": 1795185958.71, "event": "tool_start", "tool": "tl-lastfm", "args": "album --artist Zartmann --title Schönhauser EP"}
+{"ts": 1795185958.72, "event": "tool_start", "tool": "tl-itunes", "args": "search Zartmann Schönhauser EP"}
+{"ts": 1795185958.72, "event": "tool_end", "tool": "tl-itunes", "args": "search Zartmann Schönhauser EP", "seconds": 0.0, "ok": true}
+{"ts": 1795185958.86, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Zartmann --title Schönhauser EP"}
+{"ts": 1795185958.86, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Zartmann --title Schönhauser EP", "seconds": 0.0, "ok": true}
+{"ts": 1795185960.18, "event": "tool_end", "tool": "tl-lastfm", "args": "album --artist Zartmann --title Schönhauser EP", "seconds": 1.5, "ok": true}
+{"ts": 1795185968.37, "event": "tool_start", "tool": "tl-deezer", "args": "--help"}
+{"ts": 1795185968.38, "event": "tool_end", "tool": "tl-deezer", "args": "--help", "seconds": 0.0, "ok": true}
+{"ts": 1795185985.29, "event": "tool_start", "tool": "tl-deezer", "args": "album 732814941"}
+{"ts": 1795185985.29, "event": "tool_end", "tool": "tl-deezer", "args": "album 732814941", "seconds": 0.0, "ok": true}
+{"ts": 1795185989.73, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/6BUMYG6xn4D8jVlX4SKJ5usAV3g7KSQE6c95rV-fF24/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjY1/Njg4LTE3NDQzNzY1NTgtNjczMS5qcGVn.jpeg --context Discogs image of Zartmann Schönhauser EP CD. Read all printed text, especially tracklist with track numbers"}
+{"ts": 1795185989.73, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/xVxf3UXPWSYo1gS_Sze4PZ0I10jO4Pa94BPdP7O8Xws/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjY1/Njg4LTE3NDQzNzY1NjYtNTU5NC5qcGVn.jpeg --context Discogs image of Zartmann Schönhauser EP CD. Read all printed text, especially tracklist with track numbers"}
+{"ts": 1795185989.89, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/xVxf3UXPWSYo1gS_Sze4PZ0I10jO4Pa94BPdP7O8Xws/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjY1/Njg4LTE3NDQzNzY1NjYtNTU5NC5qcGVn.jpeg --context Discogs image of Zartmann Schönhauser EP CD. Read all printed text, especially tracklist with track numbers", "seconds": 0.2, "ok": false}
+{"ts": 1795185989.9, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/6BUMYG6xn4D8jVlX4SKJ5usAV3g7KSQE6c95rV-fF24/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTMzNjY1/Njg4LTE3NDQzNzY1NTgtNjczMS5qcGVn.jpeg --context Discogs image of Zartmann Schönhauser EP CD. Read all printed text, especially tracklist with track numbers", "seconds": 0.2, "ok": false}
+{"ts": 1795186002.99, "event": "tool_start", "tool": "tl-search", "args": "Zartmann schönhauser EP CD Tracklist"}
+{"ts": 1795186002.99, "event": "tool_start", "tool": "tl-discogs", "args": "versions 3809379"}
+{"ts": 1795186003.0, "event": "tool_end", "tool": "tl-discogs", "args": "versions 3809379", "seconds": 0.0, "ok": true}
+{"ts": 1795186005.6, "event": "tool_end", "tool": "tl-search", "args": "Zartmann schönhauser EP CD Tracklist", "seconds": 2.6, "ok": true}
+{"ts": 1795186005.75, "event": "tool_start", "tool": "tl-search", "args": "Zartmann deindudenkstsoschön"}
+{"ts": 1795186006.95, "event": "tool_end", "tool": "tl-search", "args": "Zartmann deindudenkstsoschön", "seconds": 1.2, "ok": true}
+{"ts": 1795186015.64, "event": "tool_start", "tool": "tl-discogs", "args": "release 33609228"}
+{"ts": 1795186015.64, "event": "tool_end", "tool": "tl-discogs", "args": "release 33609228", "seconds": 0.0, "ok": true}
+{"ts": 1795186015.7, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/zartmann-sch%C3%B6nhauser-ep-12-1709657/ --grep -i CD|Track|Titel"}
+{"ts": 1795186015.71, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.musik-sammler.de/release/zartmann-sch%C3%B6nhauser-ep-12-1709657/ --grep -i CD|Track|Titel", "seconds": 0.0, "ok": false}
+{"ts": 1795186015.77, "event": "tool_start", "tool": "tl-discogs", "args": "release 33675042"}
+{"ts": 1795186015.78, "event": "tool_end", "tool": "tl-discogs", "args": "release 33675042", "seconds": 0.0, "ok": true}
+{"ts": 1795186035.45, "event": "tool_start", "tool": "tl-itunes", "args": "search Zartmann schönhauser"}
+{"ts": 1795186035.45, "event": "tool_end", "tool": "tl-itunes", "args": "search Zartmann schönhauser", "seconds": 0.0, "ok": true}
+{"ts": 1795186035.64, "event": "tool_start", "tool": "tl-scrape", "args": "https://music.apple.com/de/album/sch%C3%B6nhauser-ep/1792022424 --mode firecrawl --grep -i 2:2|1:5|2:0|2:4|2:1|2:3"}
+{"ts": 1795186035.65, "event": "tool_end", "tool": "tl-scrape", "args": "https://music.apple.com/de/album/sch%C3%B6nhauser-ep/1792022424 --mode firecrawl --grep -i 2:2|1:5|2:0|2:4|2:1|2:3", "seconds": 0.0, "ok": false}
+{"ts": 1795186045.98, "event": "tool_start", "tool": "tl-scrape", "args": "https://music.apple.com/de/album/sch%C3%B6nhauser-ep/1792022424 --mode firecrawl --grep 1:[0-9][0-9]|2:[0-9][0-9]"}
+{"ts": 1795186051.76, "event": "tool_end", "tool": "tl-scrape", "args": "https://music.apple.com/de/album/sch%C3%B6nhauser-ep/1792022424 --mode firecrawl --grep 1:[0-9][0-9]|2:[0-9][0-9]", "seconds": 5.8, "ok": true}
+{"ts": 1795186056.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl --grep [0-9]{2}:[0-9]{2}|wann|tau mich|schönhauser|wunderschön|lass es"}
+{"ts": 1795186056.63, "event": "tool_end", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl --grep [0-9]{2}:[0-9]{2}|wann|tau mich|schönhauser|wunderschön|lass es", "seconds": 0.0, "ok": true}
+{"ts": 1795186065.23, "event": "tool_start", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl --grep [0-9]{2}:[0-9]{2}"}
+{"ts": 1795186065.23, "event": "tool_end", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl --grep [0-9]{2}:[0-9]{2}", "seconds": 0.0, "ok": true}
+{"ts": 1795186069.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl"}
+{"ts": 1795186069.12, "event": "tool_end", "tool": "tl-scrape", "args": "https://music.amazon.de/albums/B0DTQTDDCQ --mode firecrawl", "seconds": 0.0, "ok": true}
+{"ts": 1795186078.04, "event": "tool_start", "tool": "tl-mb", "args": "search --title schönhauser --artist Zartmann"}
+{"ts": 1795186078.05, "event": "tool_end", "tool": "tl-mb", "args": "search --title schönhauser --artist Zartmann", "seconds": 0.0, "ok": true}
+{"ts": 1795186078.17, "event": "tool_start", "tool": "tl-mb", "args": "search --title schönhauser EP"}
+{"ts": 1795186094.42, "event": "tool_end", "tool": "tl-mb", "args": "search --title schönhauser EP", "seconds": 16.3, "ok": true}
+{"ts": 1795186121.29, "event": "tool_start", "tool": "tl-mb", "args": "release bc159b1c-39ac-4bcc-840f-dd7f30806301"}
+{"ts": 1795186121.29, "event": "tool_end", "tool": "tl-mb", "args": "release bc159b1c-39ac-4bcc-840f-dd7f30806301", "seconds": 0.0, "ok": true}
+{"ts": 1795186186.46, "event": "tool_start", "tool": "tl-mb", "args": "group 40c6ee48-062c-438c-ba7a-a5d85322d0b4"}
+{"ts": 1795186186.46, "event": "tool_end", "tool": "tl-mb", "args": "group 40c6ee48-062c-438c-ba7a-a5d85322d0b4", "seconds": 0.0, "ok": true}
+{"ts": 1795186186.46, "event": "tool_start", "tool": "tl-caa", "args": "bc159b1c-39ac-4bcc-840f-dd7f30806301"}
+{"ts": 1795186186.46, "event": "tool_end", "tool": "tl-caa", "args": "bc159b1c-39ac-4bcc-840f-dd7f30806301", "seconds": 0.0, "ok": true}
+{"ts": 1795186261.3, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 30, "steps": 25}
+{"ts": 1795186261.3, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186297.23, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795186297.23, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186326.09, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.25, "error": null}
+{"ts": 1795186326.09, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.25, "tracks": 8, "wall_s": 357.2, "judge_s": 28.9, "cost_usd": 0.0181, "mode": "agent", "errors": []}

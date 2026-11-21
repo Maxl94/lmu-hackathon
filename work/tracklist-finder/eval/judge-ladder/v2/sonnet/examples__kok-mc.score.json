@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:25",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 3,
+   "check": "Level 5 needs a barcode match in >=2 sources: NOT MET, the input has no barcode and none of the tapes carries one (MB, Discogs). Level 4 needs one unambiguous edition with no competing edition: NOT MET. Six Discogs cassette editions of master 211928 (1951581, 18354001, 18354166, 17280904, 18354289, 4256710) all fit title, artist and format, and the input fixes no year or label. Level 3 needs one unambiguous edition from one source, or several fitting editions that ALL share one tracklist: MET. The evidence (steps 4, 6, 11, 17) shows all six Discogs tapes with the same 16 tracks and 2979 s. The musik-sammler 2001 and 2003 tapes are also listed with 16 tracks (step 12). Format Kassette rules out the CD editions. Stopping at 3.",
+   "summary": "Several cassette repressings (2001-2003) fit the input without a barcode, but all share the same 16-track list, so the choice does not matter.",
+   "evidence": [
+    "tl-discogs search (step 2)",
+    "tl-discogs versions 211928 (step 7)",
+    "tl-discogs release 1951581, 17280904, 18354001, 18354166, 18354289, 4256710",
+    "tl-mb release 19fd3695",
+    "musik-sammler tape-917995 (step 16)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5 needs >=2 independent sources of the same edition to agree on count, order and titles, with spelling variants only: MET. MusicBrainz (step 3), Discogs 1951581 (step 4) and musik-sammler tape-917995 (step 16) all give 16 tracks in order A1-B8 with identical durations (49:39). Deviations are only spelling ('Nute Bounce', 'Pitbull', 'Hast du Mut', 'Mittelfingah', 'Vack You!') and the alias 'Baktus & Orgasmus' for the A8 feature on musik-sammler, which the agent explained. musik-sammler is independent of the two databases, and the other Discogs repressings agree too. No printed tracklist was readable on the images (steps 8-10), which does not harm level 5.",
+   "summary": "MusicBrainz, Discogs and musik-sammler agree on 16 tracks, order, titles and durations, with only spelling and alias differences.",
+   "evidence": [
+    "tl-mb release 19fd3695",
+    "tl-discogs release 1951581",
+    "tl-scrape musik-sammler tape-917995 (step 16)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5 needs a database plus an independent primary source of the same edition (cover, booklet or label print): NOT MET. The only images are Discogs-hosted and show the J-card exterior and tape stickers, with no tracklist (steps 8-10). They are not independent of the Discogs entry and do not confirm the tracks. Level 4 needs two independent database entries or a database plus a specialised collector site: MET. MusicBrainz and Discogs are two databases, and musik-sammler.de is a specialised collector site that confirms the full tracklist. Stopping at 4.",
+   "summary": "Two databases plus musik-sammler.de confirm the tracklist, but no independent primary source (the cover images show no tracklist).",
+   "evidence": [
+    "musicbrainz:release/19fd3695",
+    "discogs:release/1951581",
+    "web:musik-sammler tape-917995",
+    "tl-vision steps 8-10"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The result calls the MusicBrainz release (ILM 003, 2001) the 'Erstauflage'. MB does not say which Discogs edition it matches, so identifying it with Discogs 1951581 is an assumption.",
+  "The musik-sammler page 917995 is assumed to be the first edition. Its page says only 'Limited Edition', and a search snippet (step 12) also lists a 'Demotape (Extended Version)' tape from 2001. The mapping to a Discogs edition is not shown.",
+  "Catalogue number is given as 'ILM 003' (MB), while Discogs says '03' and the J-card back reads 'ILM1' (step 8). The inconsistency is not discussed.",
+  "The Discogs sides are mislabelled ('Side B', 'Side U') in tool output for 1951581, 4256710 and 18354289. This is harmless, since the positions A1-B8 are correct.",
+  "The feature credit for A8 differs: 'Bass Sultan Hengzt & King Orgasmus One' (MB) vs 'Baktus & Orgasmus' (musik-sammler). The result uses the MB version and notes the alias in reasoning only."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 18.2,
+  "tokens_in": 32644,
+  "tokens_out": 2326,
+  "cost_usd": 0.08855,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

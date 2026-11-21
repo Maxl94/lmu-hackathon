@@ -1,0 +1,126 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:46",
+ "overall": 4.0,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: MET NOT MET - the input has no barcode, so this level cannot be reached. Level 4: MET - no barcode, but title, artist, format and label/year/country are consistent across discogs:24917144, musik-sammler and prosodia.shop; no other edition fitting the input is found (tl-mb 0 hits, itunes/deezer no match), and the only differing tracklist is the same edition's 10- vs 11-track listing. Stop at 4.",
+   "summary": "Without a barcode in the input, the self-released 2016 German CD is consistently identified by several sources (title, artist, format, label, year, country, matrix/GEMA) with no competing physical edition, but the GTIN is documented only by the label shop.",
+   "evidence": [
+    "discogs:release/24917144",
+    "web:https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "tl-mb search: 0 Releases",
+    "tl-discogs search: 1 hit"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET - discogs and musik-sammler list 10 tracks while prosodia.shop and folknews list 11, so the sources do not all agree on count. Level 4: MET - one complete source (prosodia.shop, 11 tracks with titles and order) is confirmed by folknews (10 tracks plus rock version after a pause) and by Spotify (11 tracks, same order and durations); the deviation (bonus track 11) is explained by the two 10-track database entries omitting it. Stop at 4.",
+   "summary": "An 11-track tracklist from the label shop is confirmed by the folknews review and the Spotify digital edition, with the 10-track database listings explained by the omitted rock bonus track.",
+   "evidence": [
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://folknews.de/the-hoodie-crows-on-the-wing-2016/",
+    "web:https://open.spotify.com/album/5cAo3Fy9FNgbETldWcdePy",
+    "discogs:release/24917144",
+    "web:https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET - no source is a read of the physical carrier (cover image could not be read, Discogs CDN returned 403). Level 4: MET - Discogs is a database entry and musik-sammler.de is a specialised collector site, with differing details (10 tracks, no EAN vs. label-shop info), and the label's own shop/release page adds label information. Stop at 4.",
+   "summary": "Two independent database/collector entries (Discogs and musik-sammler.de) plus label information from Prosodia support the edition, but no primary read of the carrier was achieved.",
+   "evidence": [
+    "discogs:release/24917144",
+    "web:https://www.musik-sammler.de/release/the-hoodie-crows-on-the-wing-cd-1190543/",
+    "web:https://prosodia.shop/p/on-the-wing",
+    "web:https://prosodia.de/veroeffentlichungen/on-the-wing/",
+    "tl-vision/curl 403 results for Discogs images"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Barcode 4280000827494 appears only in the prosodia.shop GTIN field; tl-mb and tl-discogs barcode searches return 0 hits, so it is uncorroborated.",
+  "Durations (tracks 1-11) come from the Spotify digital edition, not the physical CD; flagged as duration_other_edition, so per-track durations are not confirmed for the carrier.",
+  "Spotify header states 48 min 38 sec (48:38) while the summed per-track durations and the shop Laufzeit give 2914 s = 48:34; the result's claim that the sums match exactly is only true for the shop figure.",
+  "Track 11 title in the result 'Hot Asphalt – Cooley's Reel (Rock)' differs from the shop's visible listing 'Hot Asphalt – Colley's Reel (Rock)'; the resolution note claims the label listing was used, which the visible shop text contradicts for track 11.",
+  "The prosodia.de scrape output is truncated before the tracklist, so the claimed 11-track list on that page is not verifiable from the visible evidence.",
+  "Discogs and musik-sammler both list 10 tracks; the 11th track is supported by prosodia.shop, folknews and Spotify but not by the database entries.",
+  "Cover/back cover was not verified (HTTP 403 on Discogs images), and no per-track credits or guest musicians are documented.",
+  "The result's artist 'tracks' array is empty, so no artist-level track attribution is provided."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 11,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 11,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "folknews.de",
+   "musik-sammler.de",
+   "open.spotify.com",
+   "prosodia.de",
+   "prosodia.shop"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "shop",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 4,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 19.9,
+  "tokens_in": 23835,
+  "tokens_out": 4021,
+  "cost_usd": 0.00439,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 0,
+   "of": 11
+  }
+ }
+}

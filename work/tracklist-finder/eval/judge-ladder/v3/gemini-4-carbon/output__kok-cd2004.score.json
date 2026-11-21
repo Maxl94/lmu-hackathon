@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T14:54:35",
+ "overall": 4.9,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: INPUT contains a barcode (4019593960000) -> MET; barcode matches this edition in >= 2 independent sources -> MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 both match barcode 4019593960000); format and artist match -> MET (CD, Bushido, confirmed by FACTS and MusicBrainz/Discogs); no other edition with the same barcode and a different tracklist -> MET (1 hit on MusicBrainz and 1 CD hit on Discogs, both sharing the same 20-track list). All conditions for Level 5 are MET.",
+   "summary": "The input EAN 4019593960000 uniquely matches this 2004 Bushido CD edition across both MusicBrainz and Discogs with no competing editions.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >= 2 independent sources of the same edition agree on count, order and titles (spelling variants only) -> MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 both list 20 tracks with matching titles and order, and 18 of 20 durations agree within 2 seconds). All conditions for Level 5 are MET.",
+   "summary": "Both MusicBrainz and Discogs agree on the 20-track count, order, and titles for this exact barcode edition.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: Database + independent primary source (read cover/booklet/label print, label or manufacturer information) of the same edition -> NOT MET (only two databases were queried; no cover art, booklet, or primary label source was inspected). Level 4: Two independent database entries (recognisable by differing details) or database + specialised collector site -> MET (musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a and discogs:release/3057907 are independent database entries showing distinct metadata details such as country 'DE' vs. 'Germany, Austria, & Switzerland', edition title formatting, and 3-second duration differences on tracks 15 and 16).",
+   "summary": "The result relies on two independent music databases (MusicBrainz and Discogs) with recognisably independent metadata and duration entries, but lacks a primary source.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Validation error reported in FACTS: the distinct carrier-level 'artists' list is empty/missing despite main and featured artists (Bushido, Kam One, Joka, Hengzt, Orgasmus, Roulette, Frank White, D-Bo) appearing on the release.",
+  "Release fields 'label' ('ersguterjunge') and 'catno' ('40195 9396000-0') appear in the output from the deterministic parser but are not explicitly shown in the abbreviated evidence log.",
+  "Minor duration conflicts of 3 seconds exist on track 15 (2:21 on musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a vs. 2:18 on discogs:release/3057907) and track 16 (3:41 vs. 3:38), resolved in favour of MusicBrainz without primary cover/disc verification."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-carbon",
+  "seconds": 33.3,
+  "tokens_in": 6195,
+  "tokens_out": 2370,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

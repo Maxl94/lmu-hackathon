@@ -1,0 +1,99 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:36",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: needs a barcode in the input, but the input has only title 'King of Kingz' and format CD, so NOT MET. Level 4: without a barcode, needs no other fitting edition with a different tracklist. NOT MET: MB 15996385 (Bushido 2004, 20 tracks) and MB 82bac6d9 / Discogs 16502868 (Sean Kingston 2011, 13 tracks) both fit title and format and have different tracklists. Level 3: needs all fitting editions to share one tracklist. NOT MET, same reason. Level 2: several editions fit, at least one has a different tracklist, and the choice rests on weak signals. MET: the Bushido 2003 Aggro Berlin CD (EAN 4018939105976) was picked by plausibility, with no artist or barcode in the input. Its tracklist matches the 2003 MZEE.com edition (MB 99ca4959), but the 20-track and 13-track editions differ.",
+   "summary": "The input lacks artist and barcode, and editions with 20 and 13 tracks also fit, so the Bushido 2003 pick rests on weak plausibility signals.",
+   "evidence": [
+    "tool 1 (discogs search)",
+    "tool 2 (mb search)",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd",
+    "musicbrainz:release/99ca4959-0ee8-4e1b-a636-299862d81a41"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: at least 2 independent sources of the same edition agree on count, order and titles. MET for the chosen edition (EAN 4018939105976): MB c3466232 (tool 4), Discogs 769288 (tool 5) and musik-sammler 140817 (tool 10) all list the same 16 tracks in the same order. Differences are only spelling or capitalization, feat. credits, and durations of 1 s or less. The one larger deviation is Sternenstaub, 3:41 in MB and musik-sammler against 3:38 in Discogs. It is documented and does not affect count, order or titles. Result: the tracklist is solid for the chosen edition; the ambiguity lies in the edition choice, not in the tracklist itself.",
+   "summary": "Three sources with the same barcode agree on 16 tracks in the same order with the same titles; only minor duration and credit variants remain.",
+   "evidence": [
+    "tool 4 (tl-mb release c3466232)",
+    "tool 5 (tl-discogs release 769288)",
+    "tool 10 (musik-sammler 140817)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source (cover, booklet, label print). NOT MET, no primary source was read. Level 4: two independent database entries, or a database plus a specialised collector site. MET: MusicBrainz and Discogs are two databases with differing details (e.g. Sternenstaub 3:41 vs 3:38, feat. credits), and musik-sammler.de is a specialised collector site that confirms the EAN and tracklist.",
+   "summary": "MusicBrainz and Discogs plus musik-sammler.de give a database and collector-site combination, but there is no primary source.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input gives neither artist nor barcode, so the Bushido 2003 pick is unproven. The 20-track Bushido 2004 edition and the 13-track Sean Kingston release fit equally well on title and format.",
+  "The reasoning says durations match 'bis auf Rundungsdifferenzen ≤1 s', but Sternenstaub differs by 3 s (Discogs and MB 99ca4959 give 3:38; MB c3466232 and musik-sammler give 3:41). The conflict is flagged, but Discogs is still listed as a duration source for track 16 while its value differs.",
+  "Feat. credits differ between sources. Tracks 12 and 15 show 'Frank White' in MB and Discogs but 'Fler' in musik-sammler. Track 8 differs too: 'Hengst & Orgasmus' vs 'Bass Sultan Hengzt & King Orgasmus One'. The artist credits in the result are only partly confirmed.",
+  "Discogs has two further Aggro Berlin 2003 Reissue entries without a catalogue number (3645154, 18354424, GEMA/FERC/IFPI codes). They were not investigated, so their tracklists are unchecked.",
+  "The 2003 MZEE.com edition (MB 99ca4959) has the same 16 tracks, so choosing between it and the chosen edition would not change the tracklist. The agent's claim that the tracklists differ across 16/16/20/13 is correct only for the 20- and 13-track editions."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 22.5,
+  "tokens_in": 28134,
+  "tokens_out": 2594,
+  "cost_usd": 0.08221,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:27",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: requires a barcode in the input – NOT MET (input_has_barcode=false). Level 4: without barcode, title, artist and format plus one further attribute must be unambiguous in >=2 sources – MET: Bushido / King of Kingz / Cassette / I Luv Money Records / 2001 / DE in MusicBrainz (step 3), Discogs 1951581 (step 4) and musik-sammler 917995 (step 16). No other fitting edition may have a different tracklist – MET: all six Discogs cassette pressings of master 211928 (steps 4, 6, 11, 17) have the same 16 tracks with the same durations. The search (step 12) shows only CD editions as other formats, and the input rules those out. No competing tape with a different tracklist appears in the evidence. Stop at 4.",
+   "summary": "Title, artist, format, label and year match across MusicBrainz, Discogs and musik-sammler, and all six cassette pressings share an identical 16-track list, so the pressing choice does not affect the tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "tl-discogs versions 211928 --format Cassette",
+    "discogs:release/18354001",
+    "discogs:release/18354166",
+    "discogs:release/18354289",
+    "discogs:release/17280904",
+    "discogs:release/4256710",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition must agree on count, order and titles – MET. MusicBrainz (step 3), Discogs 1951581 (step 4) and musik-sammler (step 16) all give 16 tracks in the order A1–B8 with identical durations (total 2979 s). Differences are spelling only: 'Nute Bounce'/'Nutte Bounce', 'Pitbull'/'Pit Bull', 'Hast du Mut'/'Hast Du Mut?', 'Vack You!'. MusicBrainz and Discogs differ in their details, which indicates independent entries.",
+   "summary": "Three sources with differing details agree exactly on 16 tracks, their order and durations, with only spelling variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source of the same edition – NOT MET. The tl-vision readings (steps 8–10) are images hosted on the Discogs entry itself, so they are not independent. They show no tracklist and only confirm label and year. Level 4: two independent database entries, or database plus specialised collector site – MET: MusicBrainz and Discogs differ in spelling and credits, and musik-sammler.de is a specialised collector site.",
+   "summary": "There are two independent databases plus musik-sammler.de, but no independent primary source confirms the tracklist.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "image:https://i.discogs.com/SORGJtnEhyKkE4kiNRFlgvNKbqvPUp7jbeM4JnLEheo/..."
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Catalogue number is inconsistent: the result says 'ILM 003' (from MusicBrainz), Discogs gives '03', and the J-card print reads 'ILM1' (step 8).",
+  "The labelling 'Erstauflage (Limited Edition)' combines the Discogs first pressing with the musik-sammler 'Limited Edition' entry. It is not shown that both, or the MusicBrainz release, describe the same pressing. This does not affect the tracklist.",
+  "Title spellings follow Discogs; MusicBrainz differs at A6 ('Nute Bounce'), B3 ('Pitbull') and B6 ('Hast du Mut'), and musik-sammler differs at B8 ('Vack You!').",
+  "The A8 featured artists are given as Bass Sultan Hengzt & King Orgasmus One (MusicBrainz), whereas musik-sammler names the aliases 'Baktus & Orgasmus'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 24.6,
+  "tokens_in": 32691,
+  "tokens_out": 2440,
+  "cost_usd": 0.17956,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

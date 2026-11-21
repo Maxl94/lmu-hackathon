@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:54:38",
+ "overall": 1.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 2",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "5: Input barcode match in >= 2 independent sources - NOT MET (no barcode in input). 4: Without barcode, title, artist, format and another attribute unambiguous in >= 2 sources - NOT MET (format does not match input CD vs Kassette, and only one release entry was found). 3: Unambiguous in one source or all fitting editions share tracklist - NOT MET (the found Kassette edition discogs:release/24165131 contradicts the input format CD). 2: Several editions fit the input with different tracklists - NOT MET (no edition fits the input format CD; the only matching artist/title release is a cassette). 1: No edition fits reliably or result contradicts the input (other format) - MET (input specifies CD while result is Kassette discogs:release/24165131; tl-mb, tl-discogs, and web searches found no CD edition).",
+   "summary": "The selected cassette release (discogs:release/24165131) directly contradicts the input format CD, and no CD edition was found.",
+   "evidence": [
+    "discogs:release/24165131",
+    "bin/tl-discogs search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD",
+    "bin/tl-mb search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "5: >= 2 independent sources of the same edition agree - NOT MET (the tracklist is from a cassette edition rather than the requested CD, and the J-card image is hosted on the same Discogs entry). 4: One complete source of the same edition confirmed by a second one - NOT MET (different format edition and non-independent image). 3: Only one source of the same edition, complete and plausible - NOT MET (not the same edition as the input CD; positions are A1-B4 from a cassette). 2: Tracklist taken from another edition - MET (the 10-track list with cassette positions A1-A6 and B1-B4 is taken from the cassette edition discogs:release/24165131 and its hosted image:discogs/back-cover because no CD edition was found).",
+   "summary": "The 10-track list (A1-B4) is consistent between Discogs and its J-card scan, but it is taken from a cassette edition rather than the requested CD.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-vision"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "5: Database + independent primary source of the same edition - NOT MET (image:discogs/back-cover is hosted on discogs:release/24165131 and is for the cassette edition, not a CD). 4: Two independent database entries or database + specialised collector site - NOT MET (MusicBrainz and musik-sammler.de returned no hits; only Discogs release 24165131 was found). 3: One good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) - MET (discogs:release/24165131 plus image:discogs/back-cover hosted on that same Discogs entry).",
+   "summary": "The result relies on a single Discogs database entry (discogs:release/24165131) and a J-card image hosted on that same entry.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction with input: input requests format CD, but the chosen release discogs:release/24165131 is a Kassette (MC6109) and no CD version was found.",
+  "Tracklist uses cassette side positions (A1-A6, B1-B4) from discogs:release/24165131 instead of CD track numbering, and all 10 tracks lack durations.",
+  "Validation error reported in FACTS: carrier artists list is empty and individual track artist fields are blank across all 10 tracks (A1-B4).",
+  "image:discogs/back-cover is hosted on discogs:release/24165131 and is therefore not an independent second source."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-hydrogen",
+  "seconds": 21.2,
+  "tokens_in": 15569,
+  "tokens_out": 3897,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

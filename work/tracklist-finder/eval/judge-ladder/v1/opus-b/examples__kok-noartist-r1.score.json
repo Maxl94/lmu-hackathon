@@ -1,0 +1,95 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:53",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Der Input enthält nur Titel und Format, ohne Interpret oder Barcode. Mehrere CD-Ausgaben passen und haben unterschiedliche Tracklisten: Bushido 2003 mit 16 Tracks, Bushido 2004 mit 20 Tracks, Sean Kingston 2011 mit 13 Tracks. Die Wahl der Aggro-Berlin-CD mit EAN 4018939105976 stützt sich nur auf schwache Signale (Bekanntheit, GEMA-Kontext).",
+   "belege": [
+    "bin/tl-mb search",
+    "bin/tl-discogs search",
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Für die gewählte Ausgabe stimmen MusicBrainz, Discogs 769288 (gleiche EAN) und musik-sammler.de 140817 (gleiche EAN) bei Anzahl (16), Reihenfolge und Titeln überein; es gibt nur Schreibvarianten. Einzige Abweichung ist die Dauer von Track 16 (3:38 vs. 3:41); der Konflikt ist dokumentiert.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 94% von ≥ 2 Quellen bestätigt, 1 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Es liegen zwei unabhängige Datenbankeinträge vor (MusicBrainz und Discogs, erkennbar an abweichenden Dauern und Matrix-Angaben) sowie eine Sammlerseite. Eine Primärquelle wie Cover, Booklet oder Labelangabe wurde nicht ausgewertet.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Die Begründung nennt die gewählte Ausgabe 'CD-Erstveröffentlichung'. Laut musik-sammler.de 140817 ist sie jedoch die 'Zweite CD-Auflage, die erste war ohne EAN-Code'. Die Behauptung ist durch die Evidenz widerlegt.",
+  "Die Ausgabenwahl beruht auf einer Annahme (Bushido als bekanntester Interpret, GEMA-Kontext). Sean Kingston (13 Tracks) und die 2004er Edition (20 Tracks) bleiben gleichwertige Kandidaten.",
+  "Die Trackzahl der Alternative 2004 Exclusive Edition (20 Tracks, '4 zusätzliche Tracks') stammt nur aus dem MB-Suchtreffer; die Tracks wurden nicht abgerufen. Discogs beschreibt diese Ausgabe als zensierte Version inkl. Demotape, Unterschiede sind also möglich.",
+  "Die Discogs-Ausgaben 3645154 und 18354424 (2003, ohne Kat.-Nr./Barcode) wurden nicht geprüft und nicht als Alternativen aufgeführt.",
+  "Feature-Gäste weichen zwischen den Quellen ab, z. B. Track 12/15 'Frank White' vs. 'Fler' und Track 8 'Hengst & Orgasmus' vs. 'Bass Sultan Hengzt & King Orgasmus One'. Es handelt sich wohl um Alias-Varianten, die aber nicht erläutert werden.",
+  "Track 16 Sternenstaub: Die Dauer ist uneinheitlich. Discogs und der MZEE-MB-Eintrag nennen 3:38, MB c3466232 und musik-sammler.de nennen 3:41."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 18.1,
+  "tokens_in": 26318,
+  "tokens_out": 1956,
+  "cost_usd": 0.14439,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

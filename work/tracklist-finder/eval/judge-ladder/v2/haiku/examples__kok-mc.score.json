@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:25",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode match - NOT MET (no barcode on tape; agent barcode null in MB and Discogs). Level 4: without barcode, title, artist and format match and label/catno/year agree across MB (tl-mb search, ILM 003) and Discogs (1951581, Kat.-Nr. 03, 2001 DE); no fitting edition has a different tracklist (all six Discogs tape versions 1951581, 18354001, 18354166, 18354289, 17280904, 4256710 and musik-sammler tape 917995 match 16 tracks and durations). MET, so rating 4. Unverified: musik-sammler album 94465 ('Demotape Extended Version', 16 tracks) was listed in search but not checked for tracklist.",
+   "summary": "No barcode exists, but title, artist, format, label, catalogue number and year agree across at least two sources and all fitting tape editions share the same tracklist.",
+   "evidence": [
+    "tl-mb search musicbrainz:release/19fd3695",
+    "tl-discogs search 6 Treffer",
+    "tl-discogs release 1951581",
+    "tl-discogs versions 211928",
+    "tl-scrape musik-sammler tape-917995",
+    "tl-search result 2 musik-sammler album 94465"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: at least two independent sources (MusicBrainz 1.1-1.16 with ms durations, Discogs 1951581 A1-B8, musik-sammler A 1-B 16) agree on count (16), order and durations (2979 s). Titles differ only in spelling (Nute/Nutte Bounce, Pitbull/Pit Bull, Hast du Mut/Hast Du Mut?) and feature credits (Baktus & Orgasmus vs Bass Sultan Hengzt & King Orgasmus One). MET, so rating 5.",
+   "summary": "Three sources agree on count, order, durations and title spellings, with only spelling and artist-credit variants.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf tl-mb release output",
+    "discogs:release/1951581 tl-discogs release output",
+    "web:musik-sammler tape-917995 tl-scrape grep output"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus independent primary source (cover read). The J-card image (tl-vision) was read but gave only label, year and catno, with no tracklist and readable False; this is weak primary evidence. Level 4: two independent database entries (MusicBrainz and Discogs, with differing details such as catno format and title spelling) plus specialised collector site musik-sammler.de. MET, so rating 4.",
+   "summary": "Two independent databases (MusicBrainz, Discogs) plus the collector site musik-sammler.de agree, but the only image source gave no tracklist or readable print.",
+   "evidence": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/",
+    "image:i.discogs.com SORGJtnE (tl-vision readable False, 0 Tracks)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Result calls the tape 'Erstauflage (Limited Edition)' but musik-sammler tape-917995 is labelled 'Limited Edition' and its year is 2001 without a stated first-edition marker; the first-edition claim rests on the Discogs notes only.",
+  "Catalogue number is given as 'ILM 003' in the result, while Discogs shows 'Kat.-Nr. 03' and the J-card reads 'ILM1'; the catno normalisation is not explained.",
+  "musik-sammler album 94465 ('King Of Kingz / Demotape Extended Version', 2001, 16 tracks) appeared in the search but was never checked; a demo/extended version could be a different tracklist, so the competing-edition check is incomplete.",
+  "The result's reasoning says 'King of Kingz erschien 2001 als Demo-Album' - this is not supported by any tool output apart from the musik-sammler search snippet.",
+  "Discogs 1951581 data_quality is 'Needs Vote' and the image sources show no tracklist, so the tracklist rests on text databases only.",
+  "Feature artist credits differ between sources (A8/B1 etc.: Baktus & Orgasmus vs Bass Sultan Hengzt & King Orgasmus One), the result records the Discogs/MB form without flagging this as a conflict; the agent reasoning does explain it, so this is minor."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.8,
+  "tokens_in": 32644,
+  "tokens_out": 3853,
+  "cost_usd": 0.00519,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

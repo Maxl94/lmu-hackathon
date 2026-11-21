@@ -1,0 +1,17 @@
+🔴 bravo30-ean: manuell klären (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 36 s · $0.000 · gates: result violates the output contract
+🔴 kok-cd2004: manuell klären (4.9) · edition 5 · tracklist 5 · durations 5 · sources 4 · 33 s · $0.000 · gates: result violates the output contract
+🔴 lohnde-mc: manuell klären (2.5) · edition 3 · tracklist 3 · durations 1 · sources 3 · 60 s · $0.000 · gates: result violates the output contract; less than half of the durations backed
+🔴 ram-cd-us: manuell klären (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 40 s · $0.000 · gates: result violates the output contract
+🔴 spatzen-mc-titleonly: manuell klären (3.2) · edition 2 · tracklist 5 · durations 3 · sources 4 · 60 s · $0.000 · gates: result violates the output contract; edition only level 2 - correct edition not secured
+🔴 trap-artist-mismatch: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-fake-album: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-wrong-ean: manuell klären (3.3) · edition 1 · tracklist 5 · durations 5 · sources 4 · 52 s · $0.000 · gates: result violates the output contract; edition only level 1 - correct edition not secured; barcode in the result does not match the input
+🔴 trap-wrong-format: manuell klären (1.45) · edition 1 · tracklist 2 · durations 1 · sources 3 · 35 s · $0.000 · gates: result violates the output contract; edition only level 1 - correct edition not secured; tracklist only level 2; less than half of the durations backed; format in the result does not match the input
+🔴 bravo30-ean: manuell klären (4.75) · edition 5 · tracklist 5 · durations 4 · sources 5 · 72 s · $0.000 · gates: result violates the output contract
+🔴 kok-cd2004: manuell klären (4.75) · edition 5 · tracklist 5 · durations 4 · sources 5 · 34 s · $0.000 · gates: result violates the output contract
+🔴 kok-mc: manuell klären (4.1) · edition 3 · tracklist 5 · durations 5 · sources 4 · 60 s · $0.000 · gates: result violates the output contract
+🔴 kok-noartist-r1: manuell klären (3.7) · edition 2 · tracklist 5 · durations 5 · sources 4 · 37 s · $0.000 · gates: result violates the output contract; edition only level 2 - correct edition not secured
+🔴 lohnde-mc: manuell klären (2.1) · edition 2 · tracklist 3 · durations 1 · sources 3 · 18 s · $0.000 · gates: result violates the output contract; edition only level 2 - correct edition not secured; less than half of the durations backed
+🔴 ram-badean: manuell klären (5.0) · edition 5 · tracklist 5 · durations 5 · sources 5 · 46 s · $0.000 · gates: result violates the output contract
+🔴 ram-vinyl-r3: manuell klären (3.7) · edition 2 · tracklist 5 · durations 5 · sources 4 · 49 s · $0.000 · gates: result violates the output contract; edition only level 2 - correct edition not secured
+🔴 spatzen-mc-titleonly: manuell klären (3.55) · edition 2 · tracklist 5 · durations 4 · sources 5 · 20 s · $0.000 · gates: result violates the output contract; edition only level 2 - correct edition not secured

@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:15",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: input barcode 888837168625 must match this edition in >=2 sources – NOT MET. tl-mb and tl-discogs barcode searches return only Daft Punk 'Random Access Memories' (Columbia 88883716862, 13 tracks), and tl-itunes upc confirms Daft Punk. The result's barcode is 4018939105976. Level 4: barcode match in one source – NOT MET; a fallback to title/artist does not apply because a barcode was given and it contradicts the result. Level 3: unambiguous – NOT MET; MusicBrainz also lists the MZEE.com edition (16 tracks, no barcode) and the Exclusive 2004 Edition (20 tracks, EAN 4019593960000). Level 2: several editions fit by title/artist, one with a different tracklist – partially applies. However, level 1 applies because the result contradicts the input barcode: the input EAN belongs to an entirely different album and artist. This conflict is irreconcilable: either the barcode or the title/artist in the input is wrong. Level 1: result contradicts input (other barcode) – MET.",
+   "summary": "The input EAN 888837168625 belongs to Daft Punk 'Random Access Memories' in all lookups (MB, Discogs, iTunes), while the result is a Bushido CD with barcode 4018939105976, a direct contradiction of the input barcode.",
+   "evidence": [
+    "bin/tl-mb search --barcode 0888837168625",
+    "bin/tl-discogs search --barcode 0888837168625",
+    "bin/tl-itunes upc 888837168625",
+    "bin/tl-mb search --title \"King of Kingz\" --artist \"Bushido\" --format \"CD\"",
+    "bin/tl-discogs search --title \"King of Kingz\" --artist \"Bushido\" --format \"CD\""
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles – MET for the chosen Aggro Berlin CD. musicbrainz:release/c3466232 and discogs:release/769288 both list 16 identical titles in the same order, with only capitalization differences. Durations differ marginally, the largest being track 16 Sternenstaub (221 s vs 218 s). Discogs omits the featured-artist credits, which MusicBrainz provides.",
+   "summary": "MusicBrainz and Discogs independently agree on all 16 titles and their order for the Aggro Berlin CD AGGRO004CD.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus independent primary source (cover/label print) – NOT MET; no booklet or label information was read. Level 4: two independent database entries with differing details – MET. MusicBrainz and Discogs differ in ms-level durations, featured-artist credits and the catno format ('AGGRO 004' vs 'AGGRO004CD'). In addition, musik-sammler.de 505095 is a specialised collector site.",
+   "summary": "Two independent database entries (MusicBrainz, Discogs) plus a musik-sammler.de collector page, but no primary source.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input EAN 888837168625 is Daft Punk 'Random Access Memories' (13 tracks, Columbia) per MB, Discogs and iTunes. The agent overrode the barcode in favour of title/artist without any evidence that the barcode is the erroneous field.",
+  "Competing editions with the same title/artist exist: the MZEE.com edition (MB 99ca4959, 16 tracks, no barcode) and the Exclusive 2004 Edition (MB 15996385 / discogs 3057907, 20 tracks).",
+  "musik-sammler.de is claimed as confirmation of the tracklist, but the scrape output shows only track 1 and a total time of 51:26. A full tracklist confirmation from this source is not evidenced.",
+  "The total time 51:26 on musik-sammler.de matches Discogs (51:27) but not the reported total_duration_s of 3096 s (51:36, from MB). Track 16 duration is 221 s in MB vs 218 s in Discogs, yet both are listed as duration_sources."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 20.7,
+  "tokens_in": 15259,
+  "tokens_out": 2156,
+  "cost_usd": 0.10416,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

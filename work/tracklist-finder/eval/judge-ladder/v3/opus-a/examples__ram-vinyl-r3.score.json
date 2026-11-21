@@ -1,0 +1,100 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:41",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires a barcode in the input. NOT MET, because the input has only title, artist and format. Level 4 requires that no other edition fitting the input has a different tracklist. NOT MET: the MB search (step 2) shows the 2014 box set (fc1eb6d6, 6+7+2+15+4 tracks) and the 2023 10th Anniversary 3×Vinyl (4375c18f, 6+7+9 = 22 tracks). Both are Vinyl, same artist and title, with different tracklists, and the input does not rule them out. Level 3 requires that all fitting editions share the same tracklist. NOT MET, for the same reason. Level 2 applies when several editions fit, at least one has a different tracklist, and the choice rests on weak signals. MET: the standard 2×LP (MB 4867ceba / Discogs 4570366, plus repressings with identical tracklists) is the plausible default, but this rests only on the assumption that an unqualified input means the standard album.",
+   "summary": "Without a barcode, the input 'Vinyl' also fits the 2014 box set and the 22-track 10th Anniversary 3×LP, which have different tracklists, so the choice of the standard 2×LP rests on a plausibility assumption.",
+   "evidence": [
+    "tl-mb search (step 2)",
+    "tl-discogs search (step 1)",
+    "tl-mb release 4867ceba (step 5)",
+    "tl-discogs release 4570366 (step 6)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5 requires at least two independent sources of the same edition agreeing on count, order and titles. MET: MB 4867ceba (step 5) and Discogs 4570366 (step 6) both describe the standard 2×LP (barcode 888837168618, catno 88883716861). Both list 13 tracks A1–D4 in identical order with identical titles, differing only in capitalisation and apostrophe style. Durations deviate by at most 2 s (A1, A2, C2, D4), which is rounding.",
+   "summary": "MusicBrainz and Discogs entries for the same standard 2×LP agree fully on 13 tracks, their order and titles.",
+   "evidence": [
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5 requires a database plus an independent primary source (cover, label print). NOT MET: no cover or booklet was read. Level 4 requires two independent database entries recognisable by differing details. MET: MB (DE, ISRCs, ms durations) and Discogs (UK/Europe/US, runout matrices, slightly different durations) differ in details, so they are independent.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details, but no primary source.",
+   "evidence": [
+    "tl-mb release 4867ceba-ffe7-40c0-a093-45be6c03c655",
+    "tl-discogs release 4570366"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The skill instructs status 'ambiguous' when fitting candidates have different tracklists. Despite the 10th Anniversary 3×LP (22 tracks) and the 2014 box set fitting the Vinyl input, the agent set status 'found'.",
+  "Country 'DE' comes from the MB release detail. The MB search listed the same MBID as 2013-05-20 FR, and Discogs 4570366 is 'UK, Europe & US', so the country attribution is inconsistent.",
+  "The 'Drumless Edition' alternative (discogs:release/28924120) does not appear in the visible evidence; the search output was truncated, so it is unverified.",
+  "The alternative note claims 2017/2021/2022 reissues have an 'identical tracklist', but their tracklists were not fetched (only search hits)."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 18.8,
+  "tokens_in": 20174,
+  "tokens_out": 1762,
+  "cost_usd": 0.11594,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

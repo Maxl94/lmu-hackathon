@@ -1,0 +1,102 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T12:39:53",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode matches in >=2 sources - NOT MET, the Discogs barcode match rests only on the search filter (barcode=4019593960000, 1 hit) and no barcode field is shown in the evidence for Discogs. Format CD and artist Bushido match (MET). No competing same-barcode edition with a different tracklist found (MET). Level 4: barcode match in at least one source - MET (MusicBrainz barcode search, 1 hit, Official, 2004-10-25 DE, CD). Competing editions: the Discogs title 'Exclusive 2004 Edition' implies a non-exclusive or other release may exist, which the agent did not check, so 'no other edition fitting the input has a different tracklist' is NOT verified. Level 4 conditions therefore not fully met; falling to level 3 is possible but the barcode match in two databases is supported by search results, so level 4 is kept as the best supported level.",
+   "summary": "The barcode 4019593960000 matches in MusicBrainz and in a Discogs barcode search with CD format and artist Bushido, but the Discogs match is not shown as a barcode field and other editions of the title were not checked.",
+   "evidence": [
+    "MusicBrainz barcode search: 1 hit, musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a, CD, Official, 2004-10-25 DE",
+    "Discogs barcode=4019593960000 format=CD search: 1 hit, discogs:release/3057907, Exclusive 2004 Edition"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count (20 vs 20), order and titles (identical per FACTS and track list) - MET. Duration differences on tracks 15 and 16 (2:21 vs 2:18, 3:41 vs 3:38) are not count, order or title issues and are resolved by the MusicBrainz rule.",
+   "summary": "MusicBrainz and Discogs agree on count (20), order and all titles for the same release, with only duration differences on tracks 15 and 16.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a: 20 tracks with duration",
+    "discogs:release/3057907: 20 tracks with duration",
+    "Track titles 1-20 identical in both sources per track list",
+    "total_duration_s 3720 equals sum of track durations"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 90% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover, booklet, label print) - NOT MET, no primary source in evidence. Level 4: two independent database entries with differing details - MET (MusicBrainz release with ms durations, Discogs release with edition name 'Exclusive 2004 Edition' and country/date listing), so level 4 is reached.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) with differing details support the result, but no primary source was consulted.",
+   "evidence": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a (kind database)",
+    "discogs:release/3057907 (kind database)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Discogs barcode match is not shown as an explicit barcode field; it rests on the search filter only (evidence: Discogs barcode=4019593960000 search, 1 hit).",
+  "Discogs entry is titled 'Exclusive 2004 Edition'; the agent did not check whether a standard edition of King of Kingz with the same title or different tracklist exists, so competing editions are unverified.",
+  "Duration conflicts on track 15 'Vack You!' (MB 2:21 vs Discogs 2:18) and track 16 'Sternenstaub' (MB 3:41 vs Discogs 3:38) were resolved by the MusicBrainz rule rather than confirmed; the release-level total 3720 s depends on MusicBrainz values.",
+  "Result's 'alternatives' list is empty and the reasoning reads 'Schnellweg ohne Agent'; no primary source (cover, booklet, label print) was checked for the edition or its tracklist.",
+  "Track 20 'Outro (ersguterdevin)' lasts 23 s; plausible but unverified beyond the two databases."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.9,
+  "dur_conflicts": 2,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 2,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 13.0,
+  "tokens_in": 7117,
+  "tokens_out": 2723,
+  "cost_usd": 0.00207,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

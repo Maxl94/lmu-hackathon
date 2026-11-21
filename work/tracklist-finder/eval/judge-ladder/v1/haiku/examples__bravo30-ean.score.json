@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:23",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der EAN-Treffer 731456031125 (Prüfziffer gültig) ist in MusicBrainz, Discogs 1949898 (gescannter Barcode), im Backcover-Aufdruck und auf musik-sammler.de belegt, Format CD und Artist passen. UK- und EU-Pressungen mit gleichem Barcode haben dieselbe Trackliste und gelten damit als unkritische Pressungsvarianten.",
+   "belege": [
+    "shell tl-discogs search --barcode",
+    "tl-mb search --barcode",
+    "tl-discogs release 1949898",
+    "tl-vision Backcover",
+    "tl-scrape musik-sammler EAN"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs 1949898 und das Backcover stimmen bei 40 Tracks in Anzahl, Reihenfolge und Titeln überein (nur Schreibvarianten). Die Dauerabweichungen betreffen die Dauer, nicht Anzahl, Reihenfolge oder Titel.",
+   "belege": [
+    "tl-mb release 41b0a392",
+    "tl-discogs release 1949898",
+    "tl-vision Backcover CD1-01 bis CD2-20"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 88% von ≥ 2 Quellen bestätigt, 5 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus ein gelesenes Backcover als primäre Quelle, ergänzt durch den Sammlerseiten-Abgleich. Die Vision-Lesung hat Fehler (z. B. DEEJAY ÖTZI), bleibt aber eine unabhängige Primärquelle.",
+   "belege": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:Backcover (CAA)",
+    "web:musik-sammler.de"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "musik-sammler.de-Scrape nennt bei Track 10 CD1 den Interpreten „Nelly“ statt Britney Spears; der Widerspruch wird im Ergebnis nicht erwähnt.",
+  "Das Ergebnis behauptet „identische Trackliste mit Dauern“ auf musik-sammler.de, der Scrape zeigt aber mehrere abweichende Dauern (z. B. CD1 Track 1: 3:45 statt 224 s; CD1 Track 2: 3:48 statt 229 s; CD1 Track 13: 3:31 statt 210 s). Die Seite ist als Schiedsrichter daher nur eingeschränkt verlässlich.",
+  "CD2 Track 20 „Du & Ich“ mit 218 s steht im Ergebnis, im gezeigten Evidenzausschnitt von Discogs/MusicBrainz ist die Dauer dieses Tracks aber nicht sichtbar (Ausgabe gekürzt).",
+  "Die Dauerangaben fuer CD1 Track 5 und 7 wurden mit der Begründung „MB und musik-sammler stimmen überein“ gewählt, obwohl musik-sammler in anderen Tracks abweicht; die Auswahl ist plausibel, aber nicht vollständig belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 19.0,
+  "tokens_in": 44886,
+  "tokens_out": 4080,
+  "cost_usd": 0.00653,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

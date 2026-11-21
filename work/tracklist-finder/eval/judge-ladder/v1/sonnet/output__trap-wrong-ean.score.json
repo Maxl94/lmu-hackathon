@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:23",
+ "overall": 3.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "Ausgabe nur Stufe 2 – richtige Ausgabe nicht gesichert",
+  "Barcode im Ergebnis passt nicht zur Eingabe"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 2,
+   "begruendung": "Der Input-EAN 888837168625 gehört laut MusicBrainz und Discogs zu Daft Punk – Random Access Memories, nicht zu Bushido. Die Ausgabe wurde allein über Titel, Artist und Format gewählt (AGGRO004CD, EAN 4018939105976). Es gibt mehrere Bushido-Ausgaben mit abweichenden Tracklisten (2004 Exclusive Edition mit 20 Tracks; weitere 2003er Re-Releases ohne Barcode), die Wahl beruht also auf schwachen Signalen. Der Barcode widerspricht dem Input.",
+   "belege": [
+    "tl-mb search --barcode 0888837168625",
+    "tl-discogs search --title \"King of Kingz\"",
+    "tl-mb search --title \"King of Kingz\""
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 4,
+   "begruendung": "MusicBrainz (c3466232) und Discogs (769288) stimmen bei 16 Tracks in Anzahl, Reihenfolge und Titeln überein (nur Schreibweisen und Sekundenabweichungen). Musik-sammler.de bestätigt die Gesamtzeit 51:26. Die Tracklist gehört aber zu einer Ausgabe, deren Zuordnung zum Input-Barcode nicht belegt ist.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus die Sammlerseite musik-sammler.de liefern übereinstimmende Informationen. Das entspricht Stufe 4. Eine unabhängige Primärquelle (Cover/Booklet) fehlt.",
+   "belege": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Input-EAN 888837168625 gehört zu Daft Punk – Random Access Memories. Die Ausgabe von Bushido stimmt im Barcode nicht mit dem Input überein.",
+  "Die Wahl der Ausgabe 2003 Aggro Berlin AGGRO004CD beruht nur auf Titel, Artist und Format. Die Begründung, dies sei die ursprüngliche CD-Ausgabe, ist nicht belegt.",
+  "Es gibt weitere Bushido-CD-Ausgaben: 2004 Exclusive Edition mit 20 Tracks, zwei weitere 2003er Re-Releases (Discogs 3645154 und 18354424) sowie die MZEE.com-Edition. Wegen des fehlenden Barcodes lassen sie sich nicht ausschließen.",
+  "Die Gesamtdauer von 3096 s im Ergebnis weicht von 51:26 (3086 s) bei musik-sammler.de und Discogs (3087 s) ab, weil MusicBrainz-Werte verwendet wurden. Die Abweichung ist gering, aber vorhanden.",
+  "Der Scrape von musik-sammler.de ist abgeschnitten und zeigt nur Track 1. Die Bestätigung der vollständigen Tracklist ist daher nur für die Gesamtzeit belegt."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 8.8,
+  "tokens_in": 13443,
+  "tokens_out": 1234,
+  "cost_usd": 0.03923,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

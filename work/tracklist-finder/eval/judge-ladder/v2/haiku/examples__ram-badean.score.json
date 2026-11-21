@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:33",
+ "overall": 4.6,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: barcode 888837168625 (after check-digit correction) matches in MB DE, MB US, Discogs EU and Discogs 4581879 etc.; but format/artist match, and CAA back cover reads barcode; however 'no other edition with same barcode and different tracklist' - the barcode-sharing pressings all have identical 13-track list (MB US a8308466, MB CA/AU/BR). Conditions met in substance, but the agent did not verify the barcode in 2 independent sources for the chosen DE release beyond MB and Discogs (Discogs 4729785 lists barcode 888837168625, so two sources match). Level 5 conditions: barcode match in >=2 independent sources MET (MB DE + Discogs 4729785); format MET; artist MET; no other edition with same barcode and different tracklist: MET per MB search results (all 13 tracks). Rating 5 is defensible, though the input EAN itself is invalid and the correction is an assumption; the Level-5 wording allows correction. Choosing 4 would be more cautious given the uncorrected input barcode had 0 hits.",
+   "summary": "Corrected barcode 888837168625 matches MusicBrainz DE and Discogs EU for the same edition with identical tracklists across barcode-sharing pressings, but the input EAN itself returned no hits and the correction is an inference from a typo note.",
+   "evidence": [
+    "tl-discogs search --barcode 888837168626 (0 hits)",
+    "tl-mb search --barcode 888837168625 (5 releases, all 13 tracks)",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:CAA back cover"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: MB DE, MB US and Discogs 4729785 agree on count (13), order and titles; CAA back cover lists the same 13 titles. Agreement on count, order and titles is MET across >=2 independent sources. Durations deviate only for track 13 (384 vs 381 s) and are not part of the title/order criteria. Level 5 MET.",
+   "summary": "Thirteen titles and order agree across MusicBrainz DE, MusicBrainz US, Discogs and the printed back cover.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "musicbrainz:release/a8308466-dd18-4912-9192-ccd0eb1878e0",
+    "discogs:release/4729785",
+    "image:CAA back cover"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5 requires database + independent primary source of same edition. The image is a back cover of the CD (primary, read via vision tool) and is the same edition (barcode/catno/label printed). Discogs and MusicBrainz are databases. Level 5: database + cover image MET. Note the image was read by a model, not visually verified by me.",
+   "summary": "Two databases (MusicBrainz, Discogs) plus the readable back cover of the same CD edition satisfy the primary-source criterion.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input EAN 888837168626 is invalid (checksum fails); result rests on an inferred correction to 888837168625, which the agent labels as 'evtl. vertippt' rather than confirmed.",
+  "Track 13 'Contact' duration conflict: Discogs 381 s vs MusicBrainz CD-TOC 384 s; the agent's explanation (digital/streaming version) is speculation not supported by the tool outputs.",
+  "Track durations for tracks 1-12 differ by up to 1 s between MusicBrainz and Discogs (e.g. track 3 545 vs 544, track 4 229 vs 228); the result uses MB values without flags, which is acceptable but not noted as deviation.",
+  "Discogs release 4729785 is marked 'Needs Vote' with data_quality concern; not reflected in the result.",
+  "The back-cover reading was done by a vision model (tl-vision) and the printed barcode line is rendered oddly; the back-cover claim 'Made in the EU' and 'LC 00162' is only from the model output.",
+  "Alternative editions list states CA, AU, BR, AR, MX share barcode and tracklist, but only MB search covered DE/US/CA/AU/BR; AR/MX claims rely on Discogs search only.",
+  "The result's tracks carry position as strings while disc is int; minor schema inconsistency not affecting content."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 8.9,
+  "tokens_in": 28841,
+  "tokens_out": 1602,
+  "cost_usd": 0.00369,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:09",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen · Dauern prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode in INPUT (4251484709767, checksum OK) matches exactly in MusicBrainz and Discogs (2 independent DB sources, EVIDENCE bin/tl-mb search and bin/tl-discogs search) = MET; format Vinyl and artist K.I.Z match = MET; the only other releases in the group (CD 4251484709774, digital 602478858666) have different barcodes and are not competing editions for a physical-carrier input = MET. All conditions met, so level 5.",
+   "summary": "The EAN matches exactly in MusicBrainz and Discogs for a vinyl K.I.Z release, and no other physical edition shares that barcode.",
+   "evidence": [
+    "bin/tl-gtin 4251484709767",
+    "bin/tl-mb search --barcode 4251484709767",
+    "bin/tl-discogs search --barcode 4251484709767",
+    "bin/tl-mb release a64dbfc0-de72-4fbb-92f3-1264a6e8b6ea"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: needs >=2 independent sources agreeing on count, order and titles. MusicBrainz release tracklist (32 tracks, A1–F4) and the back-cover OCR (32 titles, same order) agree except E1 'DJ Set' vs OCR 'DICKA' (marked uncertain) = MOSTLY MET; Discogs and musik-sammler agree per the agent, but their tracklists are not visible in the shown tool output = NOT FULLY VERIFIED. Level 4: one complete source (MusicBrainz, 32 tracks, durations sum to 8533 s) confirmed by a second with one explained deviation (OCR uncertainty on E1) = MET. Rated 4 because the strict level-5 agreement is not fully shown in the evidence.",
+   "summary": "MusicBrainz gives a complete 32-track list that is confirmed by the back-cover read, with only the uncertain OCR reading of E1 deviating.",
+   "evidence": [
+    "bin/tl-mb release 9cd41bed-67ba-4330-8dc7-7387904606da",
+    "bin/tl-vision back cover 46370014883-1200.jpg",
+    "bin/tl-scrape genius.com (E1 'DJ Set' confirmed on digital tracklist)",
+    "bin/tl-scrape musik-sammler.de (tracklist truncated in output)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database plus an independent primary source (read cover/booklet/label print) of the same edition: the back cover was read via OCR from CAA, which is attached to the MusicBrainz entry itself, so it is not clearly independent = NOT CLEARLY MET. Level 4: two independent database entries with differing details (MusicBrainz durations and matrix/barcode details at Discogs) = MET, plus musik-sammler.de as specialised collector site = MET. Rated 4.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) plus the specialised collector site musik-sammler.de support the edition, but the cover read is not independent of MusicBrainz.",
+   "evidence": [
+    "musicbrainz:release/9cd41bed-67ba-4330-8dc7-7387904606da",
+    "discogs:release/35653735",
+    "web:https://www.musik-sammler.de/release/k-i-z-g%C3%B6rlitzer-park-live-aus-leipzig-3-lp-1733527/",
+    "image:https://coverartarchive.org/release/9cd41bed-67ba-4330-8dc7-7387904606da/46370014883-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Back-cover OCR reads barcode '4 051484 756757', which differs from the input EAN; the agent does not address this contradiction, although it is probably an OCR error.",
+  "E1 title: OCR reads 'DICKA' (marked uncertain) versus 'DJ Set' in MusicBrainz, Discogs and musik-sammler; the agent's resolution is reasonable but not verified by a readable primary source.",
+  "Discogs tracklist and musik-sammler tracklist are claimed by the agent as identical 32-track orders, but the shown tool output is truncated and does not display those tracklists; these claims are only partly supported.",
+  "Durations come only from MusicBrainz (no second duration source); the agent states this itself.",
+  "Genius (web:genius.com) describes the digital edition (released 2025-11-14) and is only a hint, not a physical-carrier source.",
+  "Agent's result lists 'label' as Beat the Rich! / Eklat Tonträger while the back-cover OCR shows 'Beat The Rich' only; not contradictory but the label attribution rests mostly on MusicBrainz and Discogs."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 32,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "genius",
+   "genius.com",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image",
+   "web"
+  ],
+  "conflicts": 2,
+  "alternatives": 2,
+  "agent_confidence": 0.88,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 17.8,
+  "tokens_in": 21505,
+  "tokens_out": 3554,
+  "cost_usd": 0.00393,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "partial",
+  "durations_rating": 3,
+  "credits": {
+   "tracks": 26,
+   "of": 32
+  }
+ }
+}

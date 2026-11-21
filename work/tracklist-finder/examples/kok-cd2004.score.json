@@ -1,0 +1,97 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 5,
+   "begruendung": "Der gültige Barcode 4019593960000 trifft in MusicBrainz und Discogs jeweils genau eine Ausgabe: die Exclusive 2004 Edition, CD, ersguterjunge 40195 9396000-0. musik-sammler.de bestätigt dieselbe EAN als dritte Quelle. Format, Interpret und Titel passen; alle Alternativen haben einen anderen oder keinen Barcode.",
+   "belege": [
+    "tl-gtin 4019593960000",
+    "tl-mb search --barcode 4019593960000",
+    "tl-discogs search --barcode 4019593960000",
+    "tl-scrape musik-sammler.de/…-44531",
+    "tl-mb group 85fc52d2-14af-3150-a62a-0e07048c4827"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "MusicBrainz, Discogs, musik-sammler.de (gleiche EAN) und die per Vision gelesene Rückseite stimmen in Anzahl (20), Reihenfolge und Titeln überein. Abweichend sind nur Schreibvarianten (Pitbull/Pittbull, Groß-/Kleinschreibung). Dauerabweichungen betreffen nicht die Trackliste.",
+   "belege": [
+    "tl-mb release 15996385-5426-416b-95da-0e8846196d3a",
+    "tl-discogs release 3057907",
+    "tl-scrape musik-sammler.de/…-44531",
+    "tl-vision Rückseite (Schritte 7 und 17)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 4,
+   "begruendung": "100% der Tracks mit Dauer, 85% von ≥ 2 Quellen bestätigt, 3 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Zwei eigenständige Datenbank-Einträge mit unterschiedlichen Details (ms-Dauern bzw. Matrix/Notizen) liegen vor, dazu die Sammlerseite. Hinzu kommt eine Primärquelle: die gelesene Rückseite mit identischem Barcode und identischer Katalognummer.",
+   "belege": [
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "discogs:release/3057907",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-44531/",
+    "image:https://coverartarchive.org/release/15996385-5426-416b-95da-0e8846196d3a/23078347272-1200.jpg"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Der Agent hat den Validator-Quellcode gelesen, um die Warnschwelle für die Confidence zu ermitteln. Das ist eine Optimierung gegen den Prüfmechanismus statt eine inhaltliche Begründung. Die Confidence wurde nur kosmetisch gesenkt (0,95 → 0,93 → laut Ergebnis 0,9).",
+  "Die Schreibweise von Track 20 'Outro (ersguterdevin)' ist laut zweiter Vision-Lesung auf der Rückseite unsicher lesbar. Datenbanken und musik-sammler.de stützen sie jedoch.",
+  "Der Agent konnte das Rückseitenbild selbst nicht ansehen. Der Primärbeleg beruht allein auf tl-vision-Lesungen, die durch die Discogs-Notiz gestützt werden.",
+  "Die Dauern der Tracks 10, 15 und 16 weichen bei Discogs um mehr als 2 s ab. Aufgelöst wurde das über MusicBrainz plus musik-sammler.de; für die Trackliste selbst ist das unerheblich."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 20,
+  "ean_checksum_ok": true,
+  "barcode_match": "exakt",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.85,
+  "dur_conflicts": 3,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 4,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "tokens_in": 42236,
+  "tokens_out": 1530,
+  "cost_usd": 0.19954,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:24:30",
+ "overall": 4.1,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "ausgabe": {
+   "stufe": 3,
+   "begruendung": "Input ohne Barcode (nur Titel, Interpret, Format Kassette). Titel, Interpret und Format passen in MusicBrainz, Discogs und musik-sammler.de. Es gibt sechs Kassetten-Auflagen (Discogs 1951581, 18354001, 18354166, 18354289, 17280904, 4256710), alle mit identischer Trackliste (16 Tracks, 2979 s). Die Wahl der Auflage ist daher unerheblich.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "discogs:versions 211928"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Drei Quellen derselben Edition (MusicBrainz, Discogs 1951581, musik-sammler 917995) stimmen bei 16 Tracks, Reihenfolge, Titeln und Dauern überein. Abweichungen sind nur Schreibweisen (Nute/Nutte Bounce, Pitbull/Pit Bull) und Feature-Aliasse. Vier weitere Discogs-Auflagen bestätigen dieselbe Liste.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 5,
+   "begruendung": "100% der Tracks mit Dauer, 100% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 4,
+   "begruendung": "Zwei Datenbanken (MusicBrainz, Discogs) plus eine Sammlerseite (musik-sammler.de). Die Cover-Bilder liefern keine Trackliste und sind daher keine Primärquelle für die Titel. Das passt zu Stufe 4, nicht zu 5.",
+   "belege": [
+    "musicbrainz:release/19fd3695-68df-4e95-884a-da6938aae5cf",
+    "discogs:release/1951581",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-tape-917995/"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Discogs führt die Tape-Aufkleber als 'King Of Kings'. Die Titelschreibweise 'Kingz' stützt sich nur auf die Datenbanken, nicht auf den Aufdruck.",
+  "Die Feature-Angabe bei A8 ('Bass Sultan Hengzt & King Orgasmus One') kommt aus MusicBrainz. Musik-sammler nennt 'Baktus & Orgasmus'. Die Abweichung ist im Reasoning erwähnt, aber nicht als Konflikt eingetragen.",
+  "Die Feature-Künstler stammen aus MusicBrainz und musik-sammler. Die Discogs-Ausgabe zeigt sie in den abgerufenen Ausgaben nicht (nur Track-Titel).",
+  "Es wurde nur die Erstauflage 1951581 gewählt, obwohl keine Jahres- oder Auflagenangabe im Input steht. Das ist wegen identischer Tracklisten unkritisch, aber nicht belegbar eindeutig."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 5,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-sonnet-5-5",
+  "seconds": 7.5,
+  "tokens_in": 30828,
+  "tokens_out": 1086,
+  "cost_usd": 0.07252,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

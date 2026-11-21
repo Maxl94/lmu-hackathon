@@ -1,0 +1,94 @@
+{
+ "version": 1,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:23:22",
+ "overall": 3.6,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "weniger als die Hälfte der Dauern belegt"
+ ],
+ "categories": {
+  "ausgabe": {
+   "stufe": 4,
+   "begruendung": "Input hat keinen Barcode (GEMA-Kennzeichnung), Format MC und Künstler 'Musikverein Lohnde' passen zu Folge 1 (Discogs 24165131, Kat.-Nr. MC6109, Label Fred Kersten KG). Die Ausgabe stützt sich auf Discogs plus Fotos der J-Card und des Kassettenetiketts, die Katalognummer und Label bestätigen. Folge 2 (Swinging Seelze, andere Trackliste) ist als Alternative geführt, Künstlercredit weicht aber ab. Mehrere Attribute (Titel, Künstler, Format, Kat.-Nr., Label) sind in mehreren Quellen konsistent, daher Stufe 4.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:Kassettenetikett Seite 1 MC 6109",
+    "image:Kassettenetikett Seite 2 Fred Kersten KG",
+    "alternatives: discogs:release/24154076"
+   ],
+   "by": "Prüfmodell"
+  },
+  "trackliste": {
+   "stufe": 5,
+   "begruendung": "Zehn Titel in identischer Reihenfolge stehen in Discogs-Eintrag 24165131 und auf der gelesenen J-Card-Rückseite (6 Titel Seite 1, 4 Titel Seite 2). Zwei unabhängige Quellen derselben Ausgabe stimmen bei Anzahl, Reihenfolge und Titeln überein, Abweichungen nur bei Schreibweise (z.B. 'Kein Schöner Land' vs. 'Kein schöner Land'). Das reicht für Stufe 5.",
+   "belege": [
+    "discogs:release/24165131 Tracks A1–B4",
+    "image:J-card-Rückseite tl-vision (10 Tracks gelesen)"
+   ],
+   "by": "Prüfmodell"
+  },
+  "dauern": {
+   "stufe": 1,
+   "begruendung": "0% der Tracks mit Dauer, 0% von ≥ 2 Quellen bestätigt, 0 Konflikte",
+   "belege": [],
+   "by": "Code"
+  },
+  "quellen": {
+   "stufe": 5,
+   "begruendung": "Eine Datenbank (Discogs) plus unabhängige Primärquellen: Fotos der J-Card-Rückseite und der Kassettenetiketten, mit Label-, Kat.-Nr.- und Rechtehinweisen gelesen. Das entspricht Datenbank plus primäre Quelle, Stufe 5.",
+   "belege": [
+    "discogs:release/24165131",
+    "image:J-card-Rückseite",
+    "image:Kassettenetikett Seite 1 und 2",
+    "image:J-card-Innenseite"
+   ],
+   "by": "Prüfmodell"
+  }
+ },
+ "bedenken": [
+  "Erscheinungsjahr 1991 ist nur aus dem J-Card-Text ('im 67st. Jahr seines Bestehens' bei Gründung 1925) abgeleitet, nicht gedruckt belegt; im Ergebnis als Jahr gesetzt, obwohl als 'missing' gelistet.",
+  "Alle zehn Dauern fehlen (duration_s null); Gesamtdauer nicht ermittelbar.",
+  "Kein Barcode vorhanden; Edition-Zuordnung beruht auf Katalognummer und Credit, nicht auf Barcode.",
+  "Die Confidence 0.7 wird in der Begründung mit 'einzige Datenbankquelle' begründet, obwohl Bild- und Etikettenquellen vorliegen; der Eintrag ist in Discogs als 'Needs Vote' markiert.",
+  "Die Ergebnisangabe 'Musikverein Lohnde 1925 e.V.' weicht vom Input-Künstler ab, ist aber eine plausible Variante."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 10,
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 0,
+  "alternatives": 1,
+  "agent_confidence": 0.7,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 6.2,
+  "tokens_in": 35646,
+  "tokens_out": 1177,
+  "cost_usd": 0.00415,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "ausgabe": 0.4,
+  "trackliste": 0.25,
+  "dauern": 0.25,
+  "quellen": 0.1
+ }
+}

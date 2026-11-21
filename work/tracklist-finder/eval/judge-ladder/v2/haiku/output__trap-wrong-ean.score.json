@@ -1,0 +1,103 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:07",
+ "overall": 3.3,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 1 - correct edition not secured",
+  "barcode in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: barcode match in >=2 sources - NOT MET, the input barcode 888837168625 is not the result barcode 4018939105976 (MB c3466232, Discogs 769288). Level 4: barcode match in one source - NOT MET. Level 3: unambiguous but backed by one source - NOT MET, since the 2004 Exclusive Edition (MB 15996385, Discogs 3057907, 20 tracks) and the MZEE.com edition (MB 99ca4959) also fit title/artist with different or unchecked tracklists. Level 2: several fitting editions with a DIFFERENT tracklist exist (the 2004 edition has 20 tracks and the Discogs notes mention a 2004 CD with 4 extra tracks), so the choice rests on weak signals - MET. Level 1 is also triggered because the result's barcode contradicts the input barcode, which the rubric defines as a contradiction. Final rating 1 since the stop condition for the contradiction is met.",
+   "summary": "The result's barcode 4018939105976 contradicts the input barcode 888837168625, which the tool evidence shows belongs to Daft Punk's Random Access Memories, so the agent overrode the input identifier.",
+   "evidence": [
+    "bin/tl-gtin 888837168625 (valid UPC-A)",
+    "bin/tl-mb search --barcode 0888837168625 (only Daft Punk releases)",
+    "bin/tl-mb search --title/artist (MB 15996385 with 20 tracks, MB 99ca4959)",
+    "bin/tl-discogs search --title/artist (discogs 3057907, 2004 Exclusive, 20 tracks)",
+    "result conflicts[0] EAN resolution"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order and titles (spelling variants only) - MET. MusicBrainz c3466232 and Discogs 769288 both list 16 tracks in the same order with matching titles; differences are only spelling/case (\"Ich hab euch nicht vergessen\" vs \"Ich Hab Euch Nicht Vergessen\") and featured-artist credits. Durations differ by 1-3 s on some tracks, which does not change count, order or titles.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) agree on 16 tracks, order and titles for the 2003 Aggro Berlin release, differing only in spelling variants and small duration differences.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a (tl-mb release)",
+    "discogs:release/769288 (tl-discogs release)",
+    "web:musik-sammler.de cd-505095 (tl-scrape, track 1 and total 51:26 only)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (read cover/booklet/label print) - NOT MET, no cover, booklet or label print was read; only a Discogs matrix text and MB cover flags exist. Level 4: two independent database entries with differing details - MET (MusicBrainz and Discogs, with differing durations and notes). Level 3 and below are not needed.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) plus a collector site back the release, but no primary source such as the cover or booklet was checked.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-505095/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The result overrides the input barcode 888837168625 (which the tool evidence shows is Daft Punk's barcode) with 4018939105976 and presents it as the correct EAN; this is a contradiction with the input that the result does not resolve from the input itself.",
+  "result.total_duration_s is 3096, but MusicBrainz sums to 3095 s (tl-mb release, Summe 51:36) and Discogs to 3087 s (Summe 51:27); the 3096 figure matches no source sum.",
+  "musik-sammler.de was only partially read (grep output shows track 1 'Intro | 1:54' and total 51:26); the claimed confirmation of the full tracklist is not supported by the evidence.",
+  "Competing editions with the same title and artist were not ruled out: the 2004 Exclusive Edition (MB 15996385, 20 tracks), the 2004 demotape CD (4 extra tracks per Discogs notes), and the MZEE.com edition (MB 99ca4959, 16 tracks, not checked for tracklist).",
+  "Track 16 'Sternenstaub' is a bonus track per Discogs notes and is absent from the 2001 original; the result does not mention this for the 2003 re-release it reports."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 16,
+  "ean_checksum_ok": true,
+  "barcode_match": "NO (input 888837168625, result 4018939105976)",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 13.3,
+  "tokens_in": 15259,
+  "tokens_out": 2959,
+  "cost_usd": 0.00301,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

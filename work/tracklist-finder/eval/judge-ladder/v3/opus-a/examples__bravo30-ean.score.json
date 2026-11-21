@@ -1,0 +1,110 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:22",
+ "overall": 4.75,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: input barcode 731456031125 is valid UPC-A (tl-gtin) – MET. It matches exactly this edition in ≥2 independent sources: MusicBrainz 41b0a392 (barcode 0731456031125, Polystar 560 311-2, DE 2000, CD+CD), Discogs 1949898 (barcode scanned, 560 311-2) and musik-sammler.de (EAN 731456031125, Polystar 560 311-2, step 17) – MET. The back-cover reading also shows the printed barcode. Format (2×CD) and artist (Various) match – MET. Other editions with the same barcode are Discogs 23145932 (UK-made) and 26676554 (Europe). Both are pressing variants with the same cat. no., and 23145932 shows an identical tracklist. The club edition (610930) has a different barcode and the MC has a different format – MET, no competing tracklist under this barcode. All conditions met.",
+   "summary": "The barcode leads unambiguously to the same 2×CD Polystar 560 311-2 in MusicBrainz, Discogs and musik-sammler.de, and only pressing variants share the barcode.",
+   "evidence": [
+    "tl-gtin 731456031125",
+    "tl-discogs search --barcode 731456031125",
+    "tl-mb search --barcode 731456031125",
+    "tl-discogs release 1949898",
+    "tl-discogs release 23145932",
+    "tl-scrape musik-sammler (step 17)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: ≥2 independent sources of the same edition must agree on count, order and titles. MusicBrainz shows 20+20 tracks. Discogs 1949898 and 23145932 show the same order and titles, with only spelling and version-suffix variants (e.g. 'Album Version' at 1-10, Strassen/Straßen). The back cover (vision) confirms order and titles. musik-sammler.de gives a complete 40-track list in the same order, apart from typos. Count, order and titles therefore agree – MET.",
+   "summary": "MusicBrainz, Discogs, the back-cover reading and musik-sammler.de agree on 40 tracks in identical order, with only spelling or version-suffix variants.",
+   "evidence": [
+    "tl-mb release 41b0a392-086e-45b0-9323-db56ba682941",
+    "tl-discogs release 1949898",
+    "tl-vision back cover 30859623067",
+    "tl-scrape musik-sammler (step 12)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "summary": "100% of tracks have a duration, 88% confirmed by >= 2 sources, 5 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: a database plus an independent primary source of the same edition are required. Databases: MusicBrainz and Discogs – MET. Primary source: the back cover read by vision, showing barcode 731456031125 and cat. no. 560 311-2 – MET. The image is hosted on the MusicBrainz entry (CAA), but it is a reading of the actual print. musik-sammler.de is an additional collector source. All conditions met.",
+   "summary": "Two databases plus a read back-cover print with barcode and catalogue number of the same edition.",
+   "evidence": [
+    "musicbrainz:release/41b0a392-086e-45b0-9323-db56ba682941",
+    "discogs:release/1949898",
+    "image:http://coverartarchive.org/release/41b0a392-086e-45b0-9323-db56ba682941/30859623067-1200.jpg",
+    "web:https://www.musik-sammler.de/release/bravo-hits-30-2-cd-43446/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The tool outputs are truncated: the Discogs list ends at 2-11, the MusicBrainz list ends at 2.3 and the back-cover reading ends at CD2-14. For CD2 tracks 12-20 the agreement of MusicBrainz, Discogs and the cover is not visible in the evidence, and only musik-sammler.de is fully shown.",
+  "The cover reading 'DEEJAY ÖTZI' (CD2-18) and 'NILS' (CD2-20), cited in the conflicts, are not visible in the truncated vision output.",
+  "The CD2-06 artist line-up on musik-sammler.de differs (Stieber Twins instead of Luxus Chris); this is not documented as a conflict.",
+  "CD2-19 is flagged duration_conflict, but musik-sammler.de is not listed in its duration_sources, unlike the other conflict tracks.",
+  "Discogs 23145932 is listed as 'Germany' but the discs are made in the UK; the tracklist of 26676554 (Europe) was not fetched."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 40,
+  "input_fields": [
+   "title",
+   "ean",
+   "format"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.875,
+  "dur_conflicts": 5,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database",
+   "image"
+  ],
+  "conflicts": 10,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 22.0,
+  "tokens_in": 46749,
+  "tokens_out": 2068,
+  "cost_usd": 0.22836,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

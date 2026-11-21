@@ -1,0 +1,60 @@
+{"ts": 1795185738.37, "event": "run_start", "input": {"title": "ITALIA (LP)", "artist": "TILL BRÖNNER", "ean": "4029759207641"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "$ MusicBrainz search barcode:(4029759207641): 0 hits"}
+{"ts": 1795185738.37, "event": "fast_step", "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185738.37, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: 0 matching official MusicBrainz releases (fast path only for 1–5 identical ones)"}
+{"ts": 1795185738.37, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795185742.78, "event": "tool_start", "tool": "tl-gtin", "args": "4029759207641"}
+{"ts": 1795185742.78, "event": "tool_end", "tool": "tl-gtin", "args": "4029759207641", "seconds": 0.0, "ok": true}
+{"ts": 1795185742.9, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4029759207641"}
+{"ts": 1795185742.9, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4029759207641", "seconds": 0.0, "ok": true}
+{"ts": 1795185743.02, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4029759207641"}
+{"ts": 1795185743.02, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4029759207641", "seconds": 0.0, "ok": true}
+{"ts": 1795185744.27, "event": "tool_start", "tool": "tl-discogs", "args": "release 35053985"}
+{"ts": 1795185744.27, "event": "tool_end", "tool": "tl-discogs", "args": "release 35053985", "seconds": 0.0, "ok": true}
+{"ts": 1795185744.41, "event": "tool_start", "tool": "tl-discogs", "args": "release 35061323"}
+{"ts": 1795185744.41, "event": "tool_end", "tool": "tl-discogs", "args": "release 35061323", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.04, "event": "tool_start", "tool": "tl-mb", "args": "search --title Italia --artist Till Brönner"}
+{"ts": 1795185747.04, "event": "tool_end", "tool": "tl-mb", "args": "search --title Italia --artist Till Brönner", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.17, "event": "tool_start", "tool": "tl-itunes", "args": "search Till Brönner Italia"}
+{"ts": 1795185747.17, "event": "tool_end", "tool": "tl-itunes", "args": "search Till Brönner Italia", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.3, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Till Brönner --title Italia"}
+{"ts": 1795185747.3, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Till Brönner --title Italia", "seconds": 0.0, "ok": true}
+{"ts": 1795185747.44, "event": "tool_start", "tool": "tl-discogs", "args": "versions 3967694"}
+{"ts": 1795185747.45, "event": "tool_end", "tool": "tl-discogs", "args": "versions 3967694", "seconds": 0.0, "ok": true}
+{"ts": 1795185749.24, "event": "tool_start", "tool": "tl-mb", "args": "release 34ce3886-6ac3-4f98-9ecb-7ff973dada57"}
+{"ts": 1795185749.24, "event": "tool_end", "tool": "tl-mb", "args": "release 34ce3886-6ac3-4f98-9ecb-7ff973dada57", "seconds": 0.0, "ok": true}
+{"ts": 1795185750.31, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4029759207641"}
+{"ts": 1795185750.31, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4029759207641", "seconds": 0.0, "ok": true}
+{"ts": 1795185750.41, "event": "tool_start", "tool": "tl-itunes", "args": "upc 4029759209560"}
+{"ts": 1795185750.9, "event": "tool_end", "tool": "tl-itunes", "args": "upc 4029759209560", "seconds": 0.5, "ok": true}
+{"ts": 1795185751.04, "event": "tool_start", "tool": "tl-deezer", "args": "upc 4029759209560"}
+{"ts": 1795185751.05, "event": "tool_end", "tool": "tl-deezer", "args": "upc 4029759209560", "seconds": 0.0, "ok": true}
+{"ts": 1795185751.17, "event": "tool_start", "tool": "tl-deezer", "args": "upc 4029759207641"}
+{"ts": 1795185751.18, "event": "tool_end", "tool": "tl-deezer", "args": "upc 4029759207641", "seconds": 0.0, "ok": true}
+{"ts": 1795185795.45, "event": "tool_start", "tool": "tl-mb", "args": "release ebdff475-afa0-46b3-baa9-52f75441ef14"}
+{"ts": 1795185795.46, "event": "tool_end", "tool": "tl-mb", "args": "release ebdff475-afa0-46b3-baa9-52f75441ef14", "seconds": 0.0, "ok": true}
+{"ts": 1795185795.58, "event": "tool_start", "tool": "tl-search", "args": "Till Brönner Italia 2LP 0220764EMU Tracklist --site ear-music.net"}
+{"ts": 1795185804.14, "event": "tool_end", "tool": "tl-search", "args": "Till Brönner Italia 2LP 0220764EMU Tracklist --site ear-music.net", "seconds": 8.6, "ok": true}
+{"ts": 1795185804.29, "event": "tool_start", "tool": "tl-search", "args": "Till Brönner Italia Vinyl 0220764EMU"}
+{"ts": 1795185805.73, "event": "tool_end", "tool": "tl-search", "args": "Till Brönner Italia Vinyl 0220764EMU", "seconds": 1.4, "ok": true}
+{"ts": 1795185808.79, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/track/till_brnner-italia/cp2-zs/de --grep -i a1|a2|b1|b2|c1|d1|estate|arrivederci|tracklist|seite|side"}
+{"ts": 1795185808.8, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/track/till_brnner-italia/cp2-zs/de --grep -i a1|a2|b1|b2|c1|d1|estate|arrivederci|tracklist|seite|side", "seconds": 0.0, "ok": false}
+{"ts": 1795185813.86, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.decks.de/track/till_brnner-italia/cp2-zs/de"}
+{"ts": 1795185813.87, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.decks.de/track/till_brnner-italia/cp2-zs/de", "seconds": 0.0, "ok": true}
+{"ts": 1795185820.64, "event": "tool_start", "tool": "tl-vision", "args": "https://i.discogs.com/bbz7gb7lHKBJmJ1SNeFfmk5B2fbEhknYMHF1tbiUNUg/rs:fit/g:sm/q:90/h:588/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM1MDUzOTg1LTE3NTc0MzI3/NDktNjQ0OC5qcGVn.jpeg --context Discogs back cover image of Till Brönner ITALIA 2LP, need printed tracklist with side positions A1..D2 and "}
+{"ts": 1795185821.06, "event": "tool_end", "tool": "tl-vision", "args": "https://i.discogs.com/bbz7gb7lHKBJmJ1SNeFfmk5B2fbEhknYMHF1tbiUNUg/rs:fit/g:sm/q:90/h:588/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWltYWdlcy9SLTM1MDUzOTg1LTE3NTc0MzI3/NDktNjQ0OC5qcGVn.jpeg --context Discogs back cover image of Till Brönner ITALIA 2LP, need printed tracklist with side positions A1..D2 and ", "seconds": 0.4, "ok": false}
+{"ts": 1795185822.44, "event": "tool_start", "tool": "tl-search", "args": "musik-sammler Till Brönner Italia 2LP 2025"}
+{"ts": 1795185824.26, "event": "tool_end", "tool": "tl-search", "args": "musik-sammler Till Brönner Italia 2LP 2025", "seconds": 1.8, "ok": true}
+{"ts": 1795185833.67, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/jazz/detail/-/art/till-broenner-italia/hnum/12365772 --grep -i estate|felic|amarsi|via con|trucido|donna|quando|parole|cosa|travolti|alto mare|chance|appuntamento|arrivederci|Seite|Disc 1"}
+{"ts": 1795185833.68, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/jazz/detail/-/art/till-broenner-italia/hnum/12365772 --grep -i estate|felic|amarsi|via con|trucido|donna|quando|parole|cosa|travolti|alto mare|chance|appuntamento|arrivederci|Seite|Disc 1", "seconds": 0.0, "ok": false}
+{"ts": 1795185836.29, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/jazz/detail/-/art/till-broenner-italia/hnum/12365772 --grep=estate|felic|amarsi|trucido|donna|quando|parole|cosa|travolti|alto mare|chance|appuntamento|arrivederci|Seite"}
+{"ts": 1795185836.34, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.jpc.de/jpcng/jazz/detail/-/art/till-broenner-italia/hnum/12365772 --grep=estate|felic|amarsi|trucido|donna|quando|parole|cosa|travolti|alto mare|chance|appuntamento|arrivederci|Seite", "seconds": 0.0, "ok": true}
+{"ts": 1795185841.56, "event": "tool_start", "tool": "tl-scrape", "args": "https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp --grep=Estate|Seite|A1|B1|Arrivederci|Spieldauer"}
+{"ts": 1795185841.84, "event": "tool_end", "tool": "tl-scrape", "args": "https://imusic.de/music/4029759207641/till-bronner-2025-italia-lp --grep=Estate|Seite|A1|B1|Arrivederci|Spieldauer", "seconds": 0.3, "ok": true}
+{"ts": 1795185896.05, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 17, "steps": 18}
+{"ts": 1795185896.05, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795185896.05, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 0 tracks, ISRC 0"}
+{"ts": 1795185896.05, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795185912.65, "event": "phase_end", "phase": "judge", "ok": true, "level": "gelb", "overall": 4.05, "error": null}
+{"ts": 1795185912.65, "event": "run_end", "valid": true, "status": "found", "level": "gelb", "overall": 4.05, "tracks": 14, "wall_s": 157.7, "judge_s": 16.6, "cost_usd": 0.0168, "mode": "agent", "errors": []}

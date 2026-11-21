@@ -1,0 +1,100 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:47:14",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: The INPUT contains a barcode. NOT MET (Input has no barcode).\n4: Without barcode: title, artist, format and at least one further attribute unambiguous in >= 2 sources. NOT MET (Input only provides title and format, lacking artist and further attributes).\n3: Unambiguous but backed by only one source, or several editions fit but ALL share the same tracklist. NOT MET (A search shows another matching cassette edition, 'Various - Ich Sag's Dir Mit Musik' [discogs:release/8491193], which is a compilation and therefore has a different tracklist).\n2: Several editions fit the input and at least one of them has a DIFFERENT tracklist. MET (The agent selected the Kastelruther Spatzen release, but the Various Artists compilation also perfectly fits the input title and format).",
+   "summary": "Multiple cassette releases with the same title exist, making the choice of the Kastelruther Spatzen edition arbitrary based on the input.",
+   "evidence": [
+    "tl-discogs search --title \"Ich sag's dir mit Musik\""
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "5: >= 2 independent sources of the same edition agree on count, order and titles. MET (MusicBrainz e0d210c6-ca75-3482-bff4-f33715a070c3 and Discogs 2297987 both list exactly the same 12 tracks, order, and titles).",
+   "summary": "Two independent databases confirm the tracklist perfectly.",
+   "evidence": [
+    "tl-mb release e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "tl-discogs release 2297987"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: Database + independent primary source. NOT MET (No primary sources like cover or booklet scans were parsed).\n4: Two independent database entries (recognisable by differing details). MET (MusicBrainz and Discogs are independent, which is evident from differing track durations, such as track A6 where MB has 210s and Discogs has 183s).",
+   "summary": "Two independent databases were used, verifiable by their diverging track duration data.",
+   "evidence": [
+    "tl-mb release e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "tl-discogs release 2297987"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input lacks an artist specification, and there is a Various Artists compilation cassette with the exact same title ('Ich Sag's Dir Mit Musik', discogs:release/8491193). The choice of the Kastelruther Spatzen album is unsupported by the input.",
+  "As noted in the validation errors, the track-level `artist` fields are `null` instead of listing 'Kastelruther Spatzen'."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-3.1-pro-preview",
+  "seconds": 27.0,
+  "tokens_in": 16220,
+  "tokens_out": 4025,
+  "cost_usd": 0.08074,
+  "stop_reason": "STOP"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

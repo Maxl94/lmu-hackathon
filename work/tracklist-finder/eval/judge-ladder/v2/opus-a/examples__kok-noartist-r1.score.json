@@ -1,0 +1,97 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:34",
+ "overall": 3.7,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Input has only title + format CD, no artist, no barcode. Level 5: requires input barcode match – NOT MET (no barcode in input). Level 4: title, artist, format + further attribute in >=2 sources – artist not given in input; competing editions with different tracklists exist (Sean Kingston 13 tracks, MB 82bac6d9 / Discogs 16502868; Bushido Exclusive 2004 Edition 20 tracks, MB 15996385 / Discogs 3057907) – NOT MET. Level 3: unambiguous or all fitting editions share the tracklist – NOT MET (16/20/13 tracks differ). Level 2: several editions fit, at least one with different tracklist, choice rests on weak signals (GEMA context, first CD edition) – MET.",
+   "summary": "Without artist or barcode in the input, Bushido 2003, Bushido 2004 Exclusive Edition (20 tracks) and Sean Kingston 2011 (13 tracks) all fit, so the choice rests on weak signals.",
+   "evidence": [
+    "bin/tl-discogs search",
+    "bin/tl-mb search",
+    "musicbrainz:release/15996385-5426-416b-95da-0e8846196d3a",
+    "musicbrainz:release/82bac6d9-f0a1-4db1-b03f-da83c5aecccd"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: >=2 independent sources of the same edition agree on count, order, titles – MET: MB c3466232 (barcode 4018939105976), Discogs 769288 (same barcode) and musik-sammler 140817 (same EAN) all list the same 16 tracks in the same order with identical titles (only capitalisation differs); only durations differ (Sternenstaub 3:41 vs 3:38, documented), which does not affect count/order/titles.",
+   "summary": "Three sources for barcode 4018939105976 agree on 16 tracks with identical order and titles.",
+   "evidence": [
+    "bin/tl-mb release c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "bin/tl-discogs release 769288",
+    "tl-scrape musik-sammler 140817"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 94% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: database + independent primary source (cover/label print) – NOT MET, no booklet/label print read. Level 4: two independent database entries or database + specialised collector site – MET: MusicBrainz and Discogs entries with differing details (catno AGGRO 004 vs AGGRO004CD, Sternenstaub 3:41 vs 3:38) plus musik-sammler.de with matching EAN.",
+   "summary": "MusicBrainz, Discogs and musik-sammler.de independently document the chosen edition, but no primary source was consulted.",
+   "evidence": [
+    "musicbrainz:release/c3466232-6040-4dfb-9490-f2b8077dc53a",
+    "discogs:release/769288",
+    "web:https://www.musik-sammler.de/release/bushido-king-of-kingz-cd-140817/"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input names no artist: Sean Kingston 'King of Kingz' (13 tracks) and Bushido Exclusive 2004 Edition (20 tracks) are equally valid matches; choice of Bushido 2003 is based on weak GEMA-context signal.",
+  "Track 16 Sternenstaub: duration conflict 221 s (MB, musik-sammler) vs 218 s (Discogs, also MB MZEE edition).",
+  "Featured artists in tracks 12 and 15 given as 'Frank White' while musik-sammler lists 'Fler' (same person, alias); track 8 'Hengst & Orgasmus' abbreviated vs 'Bass Sultan Hengzt & King Orgasmus One'.",
+  "Agent's reasoning calls the chosen edition 'CD-Erstveröffentlichung', but musik-sammler 140817 states it is the second CD pressing (first had no EAN)."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 16,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.938,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "musicbrainz",
+   "musik-sammler.de"
+  ],
+  "source_kinds": [
+   "collector",
+   "database"
+  ],
+  "conflicts": 1,
+  "alternatives": 3,
+  "agent_confidence": 0.45,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 12.4,
+  "tokens_in": 28134,
+  "tokens_out": 1329,
+  "cost_usd": 0.13912,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

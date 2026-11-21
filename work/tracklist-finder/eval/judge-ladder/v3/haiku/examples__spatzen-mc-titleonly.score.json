@@ -1,0 +1,115 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:26",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "5: NOT MET - input has no barcode. 4: NOT MET as stated - no barcode; but title, format (MC), artist (Kastelruther Spatzen from MB/Discogs), label/catno (D 221 190) and barcode-on-scan are unambiguous in >=2 sources (MB e0d210c6, Discogs 2297987, J-Card scan); however competing editions with DIFFERENT tracklists exist: the Various-Artists MC compilations discogs:release/8491193 (Reader's Digest 1995, totally different tracklist) and discogs:release/7800803 (Karussell MC, Various Artists) fit the title and format. The agent itself flagged them, and the Kastelruther MC variants share the tracklist. Level 4 requires no other edition fitting the input with a different tracklist. The Various-Artists MCs fit the bare title and format input, so level 4 is not met. 3: Unambiguous for the Kastelruther MC edition with several same-tracklist pressings (discogs 15349631, 24889304, 16402359) - choice does not matter for tracklist, but the Various-Artists MC compilations with different tracklists remain competing editions fitting title+format only (input lacks artist). Level 3 criterion 'no competing edition known' is not strictly met, but the 'ALL share same tracklist' clause is not met either because the compilations differ. Level 2: several editions fit the input (title+format only) and at least one has a different tracklist (the Various-Artists MCs); the choice rests on the artist assumption (input ID 'spatzen-mc-titleonly' is not in the input itself) - weak signal. Rating 2.",
+   "summary": "Input has only title and format; the Kastelruther MC is well supported but several MC editions with the same title (Various-Artists Reader's Digest and Karussell compilations) fit the input with different tracklists, so the choice rests on weak signals.",
+   "evidence": [
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyOTc5/ODctMTI3NTI0MTg4/My5qcGVn.jpeg",
+    "tool calls 1,2,3 (search results)"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "5: MET for most positions - MB, Discogs, J-Card reading and Deezer agree on count (12), order and titles up to spelling. NOT MET for full level 5 because A1 and A6 durations conflict, though tracklist titles/order are not in conflict. 4: One complete source confirmed by second except small explained deviations: titles/order confirmed by MB, Discogs, J-Card (tl-vision readings 'Hallo ihr Freunde', 'Sarner-Welle-Lied') and Deezer; deviations explained (spelling, durations resolved by printed J-Card values 3'22'' and 3'30''). 5 is arguably met for count/order/titles across >=2 sources; spelling differences (Sarner-Welle Lied vs Sarner-Welle-Lied vs Hallo Freunde on Deezer/iTunes) are spelling variants. Rating 4 chosen because the Deezer/iTunes title 'Sarner-Welle Lied Hallo Freunde' is a title deviation not fully explained in the result, and track 10 title in the J-Card-back reading differs from the printed J-Card inner-sleeve reading.",
+   "summary": "Count, order and titles agree across MusicBrainz, Discogs and the printed J-Card, with spelling variants and explained duration differences, but the digital Deezer/iTunes B4 title 'Hallo Freunde' is a deviation.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3 (tl-mb release)",
+    "discogs:release/2297987 (tl-discogs release)",
+    "image:...VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ (tl-vision readable, printed durations)",
+    "image:...RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs (tl-vision readable)",
+    "deezer:album/231158",
+    "itunes:album/1445863917"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "5: MET partly - printed J-Card read via tl-vision (primary, same edition, barcode and catno readable) plus database entries. Level 5 requires database + independent primary source of the same edition: J-Card image (kind image) is a scan of the actual cover and matches MB/Discogs barcode 9002722211901 and catno D 221 190. The J-Card scan is an image hosted on Discogs, so independence is partially limited. Rating 5 is defensible; however the primary source is a Discogs-hosted image, not an independent label print scan, so I stop at 4: database entries MB and Discogs (two independent databases with differing details like Label 'Koch-Records Special' vs DB labels) plus the J-Card image.",
+   "summary": "Two independent database entries (MusicBrainz, Discogs) plus digital/streaming cross-checks and a J-Card scan hosted on Discogs, but the cover scan is not a fully independent primary source.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:https://i.discogs.com/RGYeyADhuWn6otWriavPCxqwUt8KS3YULi2KTAVuXcs/... (J-Card Rückseite)",
+    "image:https://i.discogs.com/VyI96FTDHGAASVpTAKF6465DPWWAjvaPrYC0X84yHTQ/... (J-Card Innenseite)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Input has no artist; the agent cites an ID 'spatzen-mc-titleonly' not present in the INPUT, and selects Kastelruther Spatzen from that assumption while Various-Artists MC compilations with the same title and different tracklists exist (discogs:release/8491193, 7800803).",
+  "Track A6 duration: the result states 210 s is printed on the J-Card, but the tool output for tl-vision of the J-Card innenseite shows printed 3'30'' - consistent; however the Discogs release 2297987 lists 3:03 for A6 and the agent says this is the outlier; acceptable but worth noting.",
+  "Track A1 duration 202 s rests on printed J-Card values read by tl-vision; MB says 199 s; resolution documented.",
+  "Track B4 title: result 'Sarner-Welle Lied' is supported by MB, Discogs and J-Card, but Deezer/iTunes show 'Sarner-Welle Lied Hallo Freunde'; the result correctly notes this but the first-tool J-Card read for the rückseite is listed as 'Sarner-Welle-Lied' while the innenseite reads 'SARNER-WELLE LIED'.",
+  "Tool output tl-vision on discogs image VyI96... produced 'Sarner-Welle-Lied' in the second read and 'SARNER-WELLE LIED' in the first; the result states the rückseite reads 'Sarner-Welle-Lied' - consistent with tool output.",
+  "Result states the Discogs 3:03 entries of Koch editions are outliers while the polnische AMA 16402359 has 3:30 for A6; the Deezer UPC is the CD barcode, so the digital source is not the same edition as the MC; Deezer durations are used as confirmation only.",
+  "Result edition field '1×MC, Standardpressung 1985 mit Barcode' and label 'Koch-Records Special' are partly unsupported as 'Standardpressung' is not evidenced in tool outputs.",
+  "Output write (tool 35) was truncated in the evidence; full validity of the written JSON cannot be verified from the evidence."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 14.4,
+  "tokens_in": 50223,
+  "tokens_out": 2782,
+  "cost_usd": 0.00641,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

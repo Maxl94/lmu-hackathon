@@ -1,0 +1,566 @@
+{
+ "input": {
+  "id": "23-various-sampler-it-s-raining-cats-autocr",
+  "title": "It‘s raining Cats & AutocRats",
+  "artist": "Various (Sampler)"
+ },
+ "status": "found",
+ "release": {
+  "title": "It‘s Raining Cats & AutocRats",
+  "artist": "Various Artists",
+  "format": "CD",
+  "country": "DE",
+  "year": 2025,
+  "label": "Not On Label",
+  "catno": "none",
+  "barcode": null,
+  "edition": "Club Edition, Partially Mixed, Sampler, Special Edition",
+  "ids": {
+   "discogs": "37143216"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "demokratie",
+   "artist": "Michael Jarick, Christian Hartje",
+   "duration_s": 136,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Landschaft mit Stockflecken",
+   "artist": "Michael Jarick, Christian Hartje",
+   "duration_s": 172,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "DENK ICH KAMIKAZE JEDE NACHT",
+   "artist": "Jetzmann",
+   "duration_s": 293,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "terroristen unter 1.0",
+   "artist": "Andreas Voß",
+   "duration_s": 56,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "viva la musica!",
+   "artist": "Andreas Voss",
+   "duration_s": 87,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "denk In den film",
+   "artist": "Thomas Fleischhauer",
+   "duration_s": 72,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Meine SystemIR*RElevanz",
+   "artist": "Thomas Fleischhauer",
+   "duration_s": 80,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "zeit",
+   "artist": "Thomas Fleischhauer",
+   "duration_s": 90,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "treff bis hier",
+   "artist": "Carsten Klook",
+   "duration_s": 142,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Vorsichtiger Versuch",
+   "artist": "Carsten Klook",
+   "duration_s": 222,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Top Stalking",
+   "artist": "STEREÖTYPEN",
+   "duration_s": 166,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "jetzt auf dem papier",
+   "artist": "Carsten Klook",
+   "duration_s": 217,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "13",
+   "disc": 1,
+   "title": "weihnachten mal anders",
+   "artist": "Andreas Voss",
+   "duration_s": 74,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  },
+  {
+   "position": "14",
+   "disc": 1,
+   "title": "es gibt kein",
+   "artist": "Carsten Klook",
+   "duration_s": 89,
+   "sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "duration_sources": [
+    "discogs:release/37143216",
+    "deezer:album/838323442"
+   ],
+   "flags": [
+    "title_conflict"
+   ],
+   "credits": []
+  }
+ ],
+ "artists": [
+  {
+   "name": "Michael Jarick",
+   "role": "main",
+   "tracks": [
+    "1",
+    "2"
+   ],
+   "sources": [
+    "discogs:release/37143216"
+   ]
+  },
+  {
+   "name": "Christian Hartje",
+   "role": "main",
+   "tracks": [
+    "1",
+    "2"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "Jetzmann",
+   "role": "main",
+   "tracks": [
+    "3"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "Andreas Voß",
+   "role": "main",
+   "tracks": [
+    "4",
+    "5",
+    "13"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "Thomas Fleischhauer",
+   "role": "main",
+   "tracks": [
+    "6",
+    "7",
+    "8"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "Carsten Klook",
+   "role": "main",
+   "tracks": [
+    "9",
+    "10",
+    "12",
+    "14"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "STEREÖTYPEN",
+   "role": "main",
+   "tracks": [
+    "11"
+   ],
+   "sources": [
+    "discogs:release/37143216",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+    "web:https://www.literaturport.de/lexikon/carsten-klook/"
+   ]
+  },
+  {
+   "name": "Andreas Voss",
+   "role": "main",
+   "tracks": [
+    "5",
+    "13"
+   ],
+   "sources": [
+    "discogs:release/37143216"
+   ]
+  }
+ ],
+ "total_duration_s": 1896,
+ "confidence": 0.75,
+ "sources": [
+  {
+   "id": "discogs:release/37143216",
+   "url": "https://www.discogs.com/release/37143216",
+   "kind": "database",
+   "note": "Physical CD, Club Edition, Partially Mixed, Sampler, Special Edition; 14 tracks; no barcode."
+  },
+  {
+   "id": "deezer:album/838323442",
+   "url": "https://www.deezer.com/album/838323442",
+   "kind": "streaming",
+   "note": "Digital edition; title 'Its Raining Cats & AutocRats'; artist 'Verschiedene Interpreten'; UPC 859720243378; 14 tracks; durations within 1 s of Discogs."
+  },
+  {
+   "id": "web:https://de.wikipedia.org/wiki/Carsten_Klook",
+   "url": "https://de.wikipedia.org/wiki/Carsten_Klook",
+   "kind": "web",
+   "note": "Confirms 14-track CD release in October 2025; lists artists; no tracklist."
+  },
+  {
+   "id": "web:https://www.literaturport.de/lexikon/carsten-klook/",
+   "url": "https://www.literaturport.de/lexikon/carsten-klook/",
+   "kind": "web",
+   "note": "Confirms 14-track CD release in October 2025; lists artists; no tracklist."
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "release title",
+   "values": {
+    "input": "It‘s raining Cats & AutocRats",
+    "discogs:release/37143216": "It‘s Raining Cats & AutocRats",
+    "deezer:album/838323442": "Its Raining Cats & AutocRats"
+   },
+   "resolution": "Used Discogs title for the physical CD (capital 'Raining'); Deezer digital edition drops the apostrophe ('Its'); input uses lowercase 'raining'."
+  },
+  {
+   "field": "release artist",
+   "values": {
+    "input": "Various (Sampler)",
+    "discogs:release/37143216": "Carsten Klook, Michael Jarick, Christian Hartje, Jetzmann, Andreas Voss, Thomas Fleischhauer, StereÖtypen",
+    "deezer:album/838323442": "Verschiedene Interpreten"
+   },
+   "resolution": "Input is a generic sampler descriptor; release is a Various Artists sampler. Listed all track artists in artists array."
+  },
+  {
+   "field": "artist name Andreas Voß",
+   "values": {
+    "discogs:release/37143216": "Andreas Voß (track 4); Andreas Voss (tracks 5, 13)",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook": "Andreas Voß"
+   },
+   "resolution": "Same artist; kept track-level spelling as printed on Discogs; listed once as 'Andreas Voß' in artists."
+  },
+  {
+   "field": "artist name STEREÖTYPEN",
+   "values": {
+    "discogs:release/37143216": "StereÖtypen (release credit); STEREÖTYPEN (track 11)",
+    "web:https://de.wikipedia.org/wiki/Carsten_Klook": "STEREÖTYPEN"
+   },
+   "resolution": "Used 'STEREÖTYPEN' for the artist entry; track 11 credit is 'STEREÖTYPEN'."
+  },
+  {
+   "field": "title track 1",
+   "values": {
+    "discogs:release/37143216": "demokratie",
+    "deezer:album/838323442": "Demokratie"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 2",
+   "values": {
+    "discogs:release/37143216": "Landschaft mit Stockflecken",
+    "deezer:album/838323442": "Landschaft Mit Stockflecken"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 3",
+   "values": {
+    "discogs:release/37143216": "DENK ICH KAMIKAZE JEDE NACHT",
+    "deezer:album/838323442": "Denk Ich Kamikaze Jede Nacht"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 4",
+   "values": {
+    "discogs:release/37143216": "terroristen unter 1.0",
+    "deezer:album/838323442": "Terroristen Unter 1.0"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 5",
+   "values": {
+    "discogs:release/37143216": "viva la musica!",
+    "deezer:album/838323442": "Viva La Musica!"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 6",
+   "values": {
+    "discogs:release/37143216": "denk In den film",
+    "deezer:album/838323442": "Denk in Den Film"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 7",
+   "values": {
+    "discogs:release/37143216": "Meine SystemIR*RElevanz",
+    "deezer:album/838323442": "Meine SystemIR*Relevanz"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 8",
+   "values": {
+    "discogs:release/37143216": "zeit",
+    "deezer:album/838323442": "Zeit"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 9",
+   "values": {
+    "discogs:release/37143216": "treff bis hier",
+    "deezer:album/838323442": "Treff Bis Hier"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 12",
+   "values": {
+    "discogs:release/37143216": "jetzt auf dem papier",
+    "deezer:album/838323442": "Jetzt Auf Dem Papier"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 13",
+   "values": {
+    "discogs:release/37143216": "weihnachten mal anders",
+    "deezer:album/838323442": "Weihnachten Mal Anders"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  },
+  {
+   "field": "title track 14",
+   "values": {
+    "discogs:release/37143216": "es gibt kein",
+    "deezer:album/838323442": "Es Gibt Kein"
+   },
+   "resolution": "Used Discogs spelling for the physical CD; Deezer digital edition title-cases the track."
+  }
+ ],
+ "missing": [
+  "No physical barcode; Discogs release has no barcode. Deezer digital edition UPC 859720243378.",
+  "No MusicBrainz release found.",
+  "No cover image accessible (Discogs image HTTP 403); title spelling from Discogs page, not printed cover.",
+  "Tracklist not visually verified from the physical CD; cross-checked against Deezer digital edition (durations within 1 s).",
+  "Deezer total duration 1907 s vs Discogs 1896 s; per-track differences ≤1 s.",
+  "credits missing for 14 of 14 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Deezer digital album, 14 tracks, UPC 859720243378, title 'Its Raining Cats & AutocRats', artist 'Verschiedene Interpreten'",
+   "source": "deezer:album/838323442",
+   "why_not": "Digital edition; physical CD preferred per GEMA licensing."
+  }
+ ],
+ "reasoning": "Barcode not provided; title/artist search found a single matching physical edition on Discogs: release 37143216, a 2025 German CD (Club Edition, Partially Mixed, Sampler, Special Edition) with 14 tracks. MusicBrainz has no entry. Wikipedia and literaturport confirm a 14-track CD release in October 2025 by the same artists. Deezer has the digital edition (album 838323442, UPC 859720243378) with the same 14 tracks; durations agree within 1 s per track. Chose the physical CD as the release. Track titles follow the Discogs physical edition spelling; Deezer title-cases them, noted per track. The input title uses lowercase 'raining' and the generic artist 'Various (Sampler)'; used the Discogs title and listed all seven track artists in the artists array. No cover image was accessible (HTTP 403), so the printed title spelling could not be visually verified."
+}

@@ -1,0 +1,108 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:45",
+ "overall": 3.55,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: input has no barcode -> NOT MET. Level 4: no-barcode path needs title, artist, format plus one further attribute unambiguous in >=2 sources, with no fitting edition having a different tracklist. Kastelruther Spatzen MC D 221 190 / barcode 9002722211901 is consistent in MB e0d210c6 and Discogs 2297987 and on the J-Card (step 11/30) -> MET. Competing MCs: the input has no artist, and Discogs search (step 1) lists 'Various – Ich Sag's Dir Mit Musik' as Reader's Digest 5×MC 8491193 and Karussell MC 7800803. Both are MCs with the same title and completely different tracklists (step 8), and the input does not rule them out -> NOT MET. Level 3: several editions fit but not all share the tracklist -> NOT MET. Level 2: several editions fit, at least one has a different tracklist, and choosing the Spatzen album rests on weak signals (it is the artist album; the agent also used the sample ID 'spatzen-mc-titleonly') -> MET.",
+   "summary": "Without an artist in the input, the same-titled Various-Artists MCs (Reader's Digest box, Karussell) with completely different tracklists remain plausible, so the choice of the Kastelruther Spatzen MC rests on weak signals.",
+   "evidence": [
+    "bin/tl-discogs search (step 1)",
+    "discogs:release/8491193",
+    "discogs:release/7800803",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: needs >=2 independent sources of the same edition agreeing on count, order and titles. MB e0d210c6 (step 4) and Discogs 2297987 (step 5) both list the same 12 tracks A1–B6 in the same order with the same titles -> MET. The J-Card images (steps 28/30) confirm them; the only deviations are case and hyphenation ('Sarner-Welle-Lied' vs 'Sarner-Welle Lied'), which are spelling variants -> MET.",
+   "summary": "MusicBrainz, Discogs and the read J-Card of the same MC agree on 12 tracks, order and titles apart from spelling variants.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "image:...RGYeyADhuWn6...",
+    "image:...VyI96FTDHGAA..."
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 4,
+   "check": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "summary": "100% of tracks have a duration, 83% confirmed by >= 2 sources, 2 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 5,
+   "check": "Level 5: needs a database plus an independent primary source of the same edition. The databases are MB e0d210c6 and Discogs 2297987 -> MET. The primary source is the J-Card scan read with tl-vision, showing barcode 9002722211901 and cat. no. D 221 190 (step 11/30) plus a printed tracklist with durations (step 28) -> MET. The images are hosted on the Discogs entry, but they are reads of the actual print.",
+   "summary": "Two databases plus J-Card scans of the same barcoded edition read directly (barcode, cat. no., printed tracklist and durations).",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "bin/tl-vision step 28",
+    "bin/tl-vision step 30"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The artist was inferred partly from the sample ID 'spatzen-mc-titleonly' (agent messages after steps 2/4), not from the input; the input does not rule out the Various-Artists MCs 8491193/7800803.",
+  "Inconsistent duration choice: printed J-Card values (step 28) were used for A1 (202) and A6 (210), but for A3, A5, B1, B2, B3, B4, B5 and B6 the MusicBrainz values were used (188, 141, 152, 239, 207, 138, 187, 196) instead of the printed 187, 140, 150, 238, 206, 136, 185, 197. This contradicts the claim that printed values are preferred and makes total_duration_s 2229 instead of the printed total of 2220.",
+  "The agent message after step 26 claims iTunes confirms A6=3:30 and A1=3:22, but iTunes shows 3:27 and 3:16.",
+  "B4 title: the J-Card back reads 'Sarner-Welle-Lied' (step 30) and the inner J-Card reads 'SARNER-WELLE LIED' (step 28); the result's choice of 'Sarner-Welle Lied' is a minor spelling decision."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.833,
+  "dur_conflicts": 2,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "image",
+   "itunes",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 7,
+  "agent_confidence": 0.8,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 22.8,
+  "tokens_in": 50223,
+  "tokens_out": 2101,
+  "cost_usd": 0.24291,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

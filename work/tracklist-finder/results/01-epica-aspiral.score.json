@@ -1,0 +1,116 @@
+{
+ "version": 2,
+ "mode": "fast",
+ "scored_at": "2026-11-20T16:06:03",
+ "overall": 4.5,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: barcode 4065629733131 (checksum OK per FACTS) matches MusicBrainz da26b9bb (MB search hit) and Discogs 33705345 (Discogs barcode search hit) = MET; format CD and artist Epica match input = MET; no other edition with the same barcode found (1 hit each) = MET. Level 5 is met.",
+   "summary": "Barcode matches exactly in two independent databases (MusicBrainz and Discogs), with format and artist matching and no competing barcode edition found.",
+   "evidence": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345",
+    "FACTS barcode_match exact, ean_checksum_ok true",
+    "Tool: MusicBrainz search barcode:(4065629733131): 1 hits",
+    "Tool: Discogs search barcode=4065629733131: 1 hits"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET, because the titles differ beyond spelling variants (MusicBrainz adds subtitles such as 'A New Age Dawns, Part VII' on tracks 3, 6 and 10, and 'The Overview Effect' on track 5, while Discogs omits them). Level 4: MET, because one complete source (MusicBrainz, 11 tracks with durations) is confirmed by Discogs (11 tracks, same order, same durations within 2 s), and the deviations are explained title-suffix variants on tracks 3, 5, 6 and 10.",
+   "summary": "Count, order and durations agree across both sources, and the only deviations are subtitle suffixes that Discogs omits, so the tracklist is confirmed by a second complete source with explained deviations.",
+   "evidence": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40",
+    "discogs:release/33705345",
+    "RESULT conflicts: title track 3, 5, 6, 10",
+    "Tool: MusicBrainz release da26b9bb: 11 tracks, 11 with duration",
+    "Tool: Discogs release 33705345: 11 tracks, 11 with duration",
+    "Sum of durations 3672 s matches total_duration_s"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "100% of tracks have a duration, 100% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: NOT MET, because no primary source (cover, booklet, label print or label information) was consulted. Level 4: MET, because two independent database entries (MusicBrainz and Discogs) with differing details (title suffixes, country field) support the edition.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) are the only sources, with no primary source confirming the edition.",
+   "evidence": [
+    "musicbrainz:release/da26b9bb-57a5-4f13-b80b-b496d258ed40 (kind database)",
+    "discogs:release/33705345 (kind database)",
+    "FACTS source_kinds [database]"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Country in RESULT is 'XE', but the MusicBrainz evidence line shows 'US' and the Discogs evidence shows 'USA & Europe'; the result's country value is not supported by the tool output as stated.",
+  "Track titles in MusicBrainz include subtitles (e.g. track 3 'Darkness Dies in Light – A New Age Dawns, Part VII', track 10 'The Grand Saga of Existence – A New Age Dawns, Part IX') that Discogs omits; the agent chose the MusicBrainz form by rule, which is a reasonable but unverified choice without a primary source.",
+  "Edition field is null and the artists list has an empty tracks array; the per-track artist fields are empty, which the result does not explain.",
+  "No primary source (cover, booklet, label print) was checked; the sources rating cannot exceed 4."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 11,
+  "input_fields": [
+   "title",
+   "artist",
+   "ean"
+  ],
+  "input_has_barcode": true,
+  "ean_checksum_ok": true,
+  "barcode_match": "exact",
+  "release_format": "CD",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 1.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database"
+  ],
+  "conflicts": 4,
+  "alternatives": 0,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 11.4,
+  "tokens_in": 6596,
+  "tokens_out": 2231,
+  "cost_usd": 0.00178,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 11,
+   "of": 11
+  }
+ }
+}

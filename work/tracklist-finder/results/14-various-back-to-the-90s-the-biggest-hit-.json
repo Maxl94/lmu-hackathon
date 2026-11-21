@@ -1,0 +1,1716 @@
+{
+ "input": {
+  "id": "14-various-back-to-the-90s-the-biggest-hit-",
+  "title": "BACK TO THE 90S - THE BIGGEST HIT COLLECTION",
+  "artist": "VARIOUS",
+  "ean": "4005902510288"
+ },
+ "status": "found",
+ "release": {
+  "title": "Back To The 90s – The Biggest Hit Collection",
+  "artist": "Various Artists",
+  "format": "CD",
+  "country": "DE",
+  "year": 2024,
+  "label": "Pink Revolver",
+  "catno": "264.2475.2",
+  "barcode": "4005902510288",
+  "edition": "2×CD compilation, 40 tracks (20 per disc), released 2024-02-09",
+  "ids": {
+   "discogs": "30190112"
+  }
+ },
+ "tracks": [
+  {
+   "position": "1",
+   "disc": 1,
+   "title": "Rhythm Is A Dancer (7\" Edit)",
+   "artist": "Snap!",
+   "duration_s": 226,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Michael Münzing",
+     "role": "writer",
+     "sources": [
+      "genius:song/643971"
+     ]
+    },
+    {
+     "name": "John Virgo Garrett III",
+     "role": "writer",
+     "sources": [
+      "genius:song/643971"
+     ]
+    },
+    {
+     "name": "Thea Austin",
+     "role": "writer",
+     "sources": [
+      "genius:song/643971"
+     ]
+    },
+    {
+     "name": "Michael Münzing",
+     "role": "producer",
+     "sources": [
+      "genius:song/643971"
+     ]
+    },
+    {
+     "name": "John Virgo Garrett III",
+     "role": "producer",
+     "sources": [
+      "genius:song/643971"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 1,
+   "title": "Freed From Desire",
+   "artist": "Gala",
+   "duration_s": 213,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Gala",
+     "role": "writer",
+     "sources": [
+      "genius:song/1463574"
+     ]
+    },
+    {
+     "name": "Molella",
+     "role": "writer",
+     "sources": [
+      "genius:song/1463574"
+     ]
+    },
+    {
+     "name": "Phil Jay",
+     "role": "writer",
+     "sources": [
+      "genius:song/1463574"
+     ]
+    },
+    {
+     "name": "Molella",
+     "role": "producer",
+     "sources": [
+      "genius:song/1463574"
+     ]
+    },
+    {
+     "name": "Phil Jay",
+     "role": "producer",
+     "sources": [
+      "genius:song/1463574"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 1,
+   "title": "Saturday Night",
+   "artist": "Whigfield",
+   "duration_s": 224,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Alfredo “Larry” Pignagnoli",
+     "role": "writer",
+     "sources": [
+      "genius:song/574916"
+     ]
+    },
+    {
+     "name": "Davide Riva",
+     "role": "writer",
+     "sources": [
+      "genius:song/574916"
+     ]
+    },
+    {
+     "name": "Alfredo “Larry” Pignagnoli",
+     "role": "producer",
+     "sources": [
+      "genius:song/574916"
+     ]
+    },
+    {
+     "name": "Davide Riva",
+     "role": "producer",
+     "sources": [
+      "genius:song/574916"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "4",
+   "disc": 1,
+   "title": "Samba De Janeiro",
+   "artist": "Bellini",
+   "duration_s": 169,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Airto Moreira",
+     "role": "writer",
+     "sources": [
+      "genius:song/835461"
+     ]
+    },
+    {
+     "name": "Ramon Zenker",
+     "role": "writer",
+     "sources": [
+      "genius:song/835461"
+     ]
+    },
+    {
+     "name": "Gottfried Engels",
+     "role": "writer",
+     "sources": [
+      "genius:song/835461"
+     ]
+    },
+    {
+     "name": "Ramon Zenker",
+     "role": "producer",
+     "sources": [
+      "genius:song/835461"
+     ]
+    },
+    {
+     "name": "Gottfried Engels",
+     "role": "producer",
+     "sources": [
+      "genius:song/835461"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "5",
+   "disc": 1,
+   "title": "I Like To Move It (Erick \"More\" Club Mix)",
+   "artist": "Reel 2 Real, The Mad Stuntman",
+   "duration_s": 354,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "6",
+   "disc": 1,
+   "title": "Satisfaction",
+   "artist": "Benny Benassi, The Biz",
+   "duration_s": 188,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Benny Benassi",
+     "role": "writer",
+     "sources": [
+      "genius:song/844568"
+     ]
+    },
+    {
+     "name": "Alle Benassi",
+     "role": "writer",
+     "sources": [
+      "genius:song/844568"
+     ]
+    },
+    {
+     "name": "Benny Benassi",
+     "role": "producer",
+     "sources": [
+      "genius:song/844568"
+     ]
+    },
+    {
+     "name": "Alfredo “Larry” Pignagnoli",
+     "role": "producer",
+     "sources": [
+      "genius:song/844568"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "7",
+   "disc": 1,
+   "title": "Coco Jamboo (Radio Edit)",
+   "artist": "Mr. President",
+   "duration_s": 220,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "8",
+   "disc": 1,
+   "title": "Hardcore Vibes (Video Mix)",
+   "artist": "Dune",
+   "duration_s": 212,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "9",
+   "disc": 1,
+   "title": "It's My Life (Radio Edit)",
+   "artist": "Dr. Alban",
+   "duration_s": 241,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Denniz PoP",
+     "role": "writer",
+     "sources": [
+      "genius:song/6834429"
+     ]
+    },
+    {
+     "name": "Dr. Alban",
+     "role": "writer",
+     "sources": [
+      "genius:song/6834429"
+     ]
+    },
+    {
+     "name": "Denniz PoP",
+     "role": "producer",
+     "sources": [
+      "genius:song/6834429"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "10",
+   "disc": 1,
+   "title": "Toca Me (Radio Cut)",
+   "artist": "Fragma",
+   "duration_s": 214,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "11",
+   "disc": 1,
+   "title": "Komodo (Radio Mix)",
+   "artist": "Mauro Picotto",
+   "duration_s": 203,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "12",
+   "disc": 1,
+   "title": "Show Me Love (Stonebridge Radio Edit)",
+   "artist": "Robin S.",
+   "duration_s": 200,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "13",
+   "disc": 1,
+   "title": "The Theme (Of Progressive Attack) (Trip Mix Radio Edit)",
+   "artist": "Brooklyn Bounce",
+   "duration_s": 219,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "14",
+   "disc": 1,
+   "title": "Where Are You (Radio Edit)",
+   "artist": "Paffendorf",
+   "duration_s": 208,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Gottfried Engels",
+     "role": "writer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    },
+    {
+     "name": "Ramon Zenker",
+     "role": "writer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    },
+    {
+     "name": "Nathalie De Borah",
+     "role": "writer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    },
+    {
+     "name": "Ramon Zenker",
+     "role": "producer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    },
+    {
+     "name": "Gottfried Engels",
+     "role": "producer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    },
+    {
+     "name": "Nathalie De Borah",
+     "role": "producer",
+     "sources": [
+      "genius:song/1991634"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "15",
+   "disc": 1,
+   "title": "Hard To Say I'm Sorry (Original Radio Edit)",
+   "artist": "Aquagen",
+   "duration_s": 203,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "16",
+   "disc": 1,
+   "title": "I Believe (Radio Edit)",
+   "artist": "Celvin Rotane",
+   "duration_s": 210,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "17",
+   "disc": 1,
+   "title": "Why Don't You Dance With Me? (Radio Edit)",
+   "artist": "Future Breeze",
+   "duration_s": 205,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "18",
+   "disc": 1,
+   "title": "Pizza (Radio Cut)",
+   "artist": "Shaun Baker",
+   "duration_s": 227,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "19",
+   "disc": 1,
+   "title": "Another Day In Paradise (Edit)",
+   "artist": "Jam Tronik",
+   "duration_s": 224,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "20",
+   "disc": 1,
+   "title": "Got The Groove (SM Radio Edit)",
+   "artist": "SM-Trax",
+   "duration_s": 237,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "1",
+   "disc": 2,
+   "title": "L'amour Toujours",
+   "artist": "Gigi D'Agostino",
+   "duration_s": 238,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ola Onabule",
+     "role": "writer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    },
+    {
+     "name": "Diego Leoni",
+     "role": "writer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    },
+    {
+     "name": "Paolo Sandrini",
+     "role": "writer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    },
+    {
+     "name": "Carlo Montagnèr",
+     "role": "writer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    },
+    {
+     "name": "Gigi D’Agostino",
+     "role": "writer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    },
+    {
+     "name": "Gigi D’Agostino",
+     "role": "producer",
+     "sources": [
+      "genius:song/1180868"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "2",
+   "disc": 2,
+   "title": "I Wanna Be A Hippy",
+   "artist": "Technohead",
+   "duration_s": 196,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Technohead",
+     "role": "writer",
+     "sources": [
+      "genius:song/933288"
+     ]
+    },
+    {
+     "name": "Technohead",
+     "role": "producer",
+     "sources": [
+      "genius:song/933288"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "3",
+   "disc": 2,
+   "title": "Ecuador (Original Radio Edit)",
+   "artist": "Sash!",
+   "duration_s": 212,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "4",
+   "disc": 2,
+   "title": "King Of My Castle (Roy Malone Kings Mix Edit)",
+   "artist": "Wamdue Project",
+   "duration_s": 207,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "5",
+   "disc": 2,
+   "title": "Free (Mood II Swing Radio Edit)",
+   "artist": "Ultra Naté",
+   "duration_s": 232,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Ultra Naté",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313649"
+     ]
+    },
+    {
+     "name": "John Ciafone",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313649"
+     ]
+    },
+    {
+     "name": "Lem Springsteen",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313649"
+     ]
+    },
+    {
+     "name": "John Ciafone",
+     "role": "producer",
+     "sources": [
+      "genius:song/8313649"
+     ]
+    },
+    {
+     "name": "Lem Springsteen",
+     "role": "producer",
+     "sources": [
+      "genius:song/8313649"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "6",
+   "disc": 2,
+   "title": "Sonic Empire (Short Mix)",
+   "artist": "Members Of Mayday",
+   "duration_s": 238,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "7",
+   "disc": 2,
+   "title": "Children (Dream Version Special Radio Edit)",
+   "artist": "Robert Miles",
+   "duration_s": 216,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "8",
+   "disc": 2,
+   "title": "The Bomb (These Sounds Fall Into My Mind) (Radio Edit)",
+   "artist": "The Bucketheads",
+   "duration_s": 203,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "David “Hawk” Wolinski",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313650"
+     ]
+    },
+    {
+     "name": "Danny Seraphine",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313650"
+     ]
+    },
+    {
+     "name": "Kenny Dope",
+     "role": "writer",
+     "sources": [
+      "genius:song/8313650"
+     ]
+    },
+    {
+     "name": "Kenny Dope",
+     "role": "producer",
+     "sources": [
+      "genius:song/8313650"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "9",
+   "disc": 2,
+   "title": "Beachball (Vocal Radio Edit)",
+   "artist": "Nalin & Kane",
+   "duration_s": 231,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "10",
+   "disc": 2,
+   "title": "The Nighttrain (Radio Edit)",
+   "artist": "Kadoc",
+   "duration_s": 199,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "11",
+   "disc": 2,
+   "title": "Baker Street (Edit)",
+   "artist": "Undercover",
+   "duration_s": 250,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "12",
+   "disc": 2,
+   "title": "Gipsy Woman (Piano Version)",
+   "artist": "Glass Waters",
+   "duration_s": 249,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "13",
+   "disc": 2,
+   "title": "Keep On Dancin' (Let's Go) (Radio Edit)",
+   "artist": "Perpetual Motion",
+   "duration_s": 204,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "14",
+   "disc": 2,
+   "title": "Techno Cat (Dance Like Your Dad Radio Mix)",
+   "artist": "Tom Wilson",
+   "duration_s": 239,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "15",
+   "disc": 2,
+   "title": "Da Beat Goes (Radio Version)",
+   "artist": "Red 5",
+   "duration_s": 227,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "16",
+   "disc": 2,
+   "title": "Keep On Pushing (Radio Edit)",
+   "artist": "Bass Bumpers",
+   "duration_s": 236,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "17",
+   "disc": 2,
+   "title": "Tears Don't Lie (Original Short Mix)",
+   "artist": "Mark 'Oh",
+   "duration_s": 218,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "18",
+   "disc": 2,
+   "title": "Ride Like The Wind",
+   "artist": "East Side Beat",
+   "duration_s": 238,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Christopher Cross",
+     "role": "writer",
+     "sources": [
+      "genius:song/1951068"
+     ]
+    },
+    {
+     "name": "Phil Kelsey",
+     "role": "producer",
+     "sources": [
+      "genius:song/1951068"
+     ]
+    },
+    {
+     "name": "Dave Seaman",
+     "role": "producer",
+     "sources": [
+      "genius:song/1951068"
+     ]
+    }
+   ]
+  },
+  {
+   "position": "19",
+   "disc": 2,
+   "title": "I Feel Love (DJ JamX & De Leon Remix)",
+   "artist": "CRW",
+   "duration_s": 431,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": []
+  },
+  {
+   "position": "20",
+   "disc": 2,
+   "title": "Forever Young",
+   "artist": "Interactive",
+   "duration_s": 221,
+   "sources": [
+    "discogs:release/30190112",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "duration_sources": [
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html"
+   ],
+   "flags": [],
+   "credits": [
+    {
+     "name": "Marian Gold",
+     "role": "writer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    },
+    {
+     "name": "Frank Mertens",
+     "role": "writer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    },
+    {
+     "name": "Bernhard Lloyd",
+     "role": "writer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    },
+    {
+     "name": "Ramon Zenker",
+     "role": "producer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    },
+    {
+     "name": "Jens Lissat",
+     "role": "producer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    },
+    {
+     "name": "Andreas Geraldo Schneider",
+     "role": "producer",
+     "sources": [
+      "genius:song/1267659"
+     ]
+    }
+   ]
+  }
+ ],
+ "artists": [
+  {
+   "name": "Snap!",
+   "role": "main",
+   "tracks": [
+    "1-1"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Gala",
+   "role": "main",
+   "tracks": [
+    "1-2"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Whigfield",
+   "role": "main",
+   "tracks": [
+    "1-3"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Bellini",
+   "role": "main",
+   "tracks": [
+    "1-4"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Reel 2 Real",
+   "role": "main",
+   "tracks": [
+    "1-5"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "The Mad Stuntman",
+   "role": "featured",
+   "tracks": [
+    "1-5",
+    "5"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Erick Morillo",
+   "role": "remixer",
+   "tracks": [
+    "1-5"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Benny Benassi",
+   "role": "main",
+   "tracks": [
+    "1-6"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "The Biz",
+   "role": "featured",
+   "tracks": [
+    "1-6",
+    "6"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Mr. President",
+   "role": "main",
+   "tracks": [
+    "1-7"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Dune",
+   "role": "main",
+   "tracks": [
+    "1-8"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Dr. Alban",
+   "role": "main",
+   "tracks": [
+    "1-9"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Fragma",
+   "role": "main",
+   "tracks": [
+    "1-10"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Mauro Picotto",
+   "role": "main",
+   "tracks": [
+    "1-11"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Robin S.",
+   "role": "main",
+   "tracks": [
+    "1-12"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "StoneBridge",
+   "role": "remixer",
+   "tracks": [
+    "1-12"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Brooklyn Bounce",
+   "role": "main",
+   "tracks": [
+    "1-13"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Paffendorf",
+   "role": "main",
+   "tracks": [
+    "1-14"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Aquagen",
+   "role": "main",
+   "tracks": [
+    "1-15"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Celvin Rotane",
+   "role": "main",
+   "tracks": [
+    "1-16"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Future Breeze",
+   "role": "main",
+   "tracks": [
+    "1-17"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Shaun Baker",
+   "role": "main",
+   "tracks": [
+    "1-18"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Jam Tronik",
+   "role": "main",
+   "tracks": [
+    "1-19"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "SM-Trax",
+   "role": "main",
+   "tracks": [
+    "1-20"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Gigi D'Agostino",
+   "role": "main",
+   "tracks": [
+    "2-1"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Technohead",
+   "role": "main",
+   "tracks": [
+    "2-2"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Sash!",
+   "role": "main",
+   "tracks": [
+    "2-3"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Wamdue Project",
+   "role": "main",
+   "tracks": [
+    "2-4"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Roy Malone",
+   "role": "remixer",
+   "tracks": [
+    "2-4"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Ultra Naté",
+   "role": "main",
+   "tracks": [
+    "2-5"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Members Of Mayday",
+   "role": "main",
+   "tracks": [
+    "2-6"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Robert Miles",
+   "role": "main",
+   "tracks": [
+    "2-7"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "The Bucketheads",
+   "role": "main",
+   "tracks": [
+    "2-8"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Nalin & Kane",
+   "role": "main",
+   "tracks": [
+    "2-9"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Kadoc",
+   "role": "main",
+   "tracks": [
+    "2-10"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Undercover",
+   "role": "main",
+   "tracks": [
+    "2-11"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Glass Waters",
+   "role": "main",
+   "tracks": [
+    "2-12"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Perpetual Motion",
+   "role": "main",
+   "tracks": [
+    "2-13"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Tom Wilson",
+   "role": "main",
+   "tracks": [
+    "2-14"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Red 5",
+   "role": "main",
+   "tracks": [
+    "2-15"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Bass Bumpers",
+   "role": "main",
+   "tracks": [
+    "2-16"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Mark 'Oh",
+   "role": "main",
+   "tracks": [
+    "2-17"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "East Side Beat",
+   "role": "main",
+   "tracks": [
+    "2-18"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "CRW",
+   "role": "main",
+   "tracks": [
+    "2-19"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "JamX & De Leon",
+   "role": "remixer",
+   "tracks": [
+    "2-19"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  },
+  {
+   "name": "Interactive",
+   "role": "main",
+   "tracks": [
+    "2-20"
+   ],
+   "sources": [
+    "discogs:release/30190112"
+   ]
+  }
+ ],
+ "total_duration_s": 9082,
+ "confidence": 0.9,
+ "sources": [
+  {
+   "id": "discogs:release/30190112",
+   "url": "https://www.discogs.com/release/30190112",
+   "kind": "database",
+   "note": "Barcode 4005902510288, 2×CD, Pink Revolver 264.2475.2, full 40-track list with per-track artists; no durations, country/year not stated"
+  },
+  {
+   "id": "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+   "url": "https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759",
+   "kind": "shop",
+   "note": "EAN 4005902510288, 2 CDs, Pink Revolver, release 9.2.2024; tracklist per disc matches Discogs"
+  },
+  {
+   "id": "web:https://www.decks.de/track/various-back_to_the_90s_-_the_biggest_hit_collection/cm5-ip",
+   "url": "https://www.decks.de/track/various-back_to_the_90s_-_the_biggest_hit_collection/cm5-ip",
+   "kind": "shop",
+   "note": "GTIN 4005902510288, Pink Revolver 26424752, 2CD, release 09.02.2024, BPM per track"
+  },
+  {
+   "id": "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html",
+   "url": "https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html",
+   "kind": "web",
+   "note": "2×CD rip listing of the same 40 tracks in the same order with track durations, total 02:31:21 (= sum of listed durations); mix-title tags partly abbreviated/renamed"
+  },
+  {
+   "id": "genius:song/643971",
+   "url": "https://genius.com/Snap-rhythm-is-a-dancer-7-edit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/1463574",
+   "url": "https://genius.com/Gala-freed-from-desire-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/574916",
+   "url": "https://genius.com/Whigfield-saturday-night-radio-mix-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/835461",
+   "url": "https://genius.com/Bellini-group-samba-de-janeiro-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/844568",
+   "url": "https://genius.com/Benny-benassi-and-the-biz-ita-satisfaction-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/6834429",
+   "url": "https://genius.com/Dr-alban-its-my-life-radio-edit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/1991634",
+   "url": "https://genius.com/Paffendorf-where-are-you-radio-edit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/1180868",
+   "url": "https://genius.com/Gigi-dagostino-lamour-toujours-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/933288",
+   "url": "https://genius.com/Technohead-i-wanna-be-a-hippy-original-mix-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/8313649",
+   "url": "https://genius.com/Ultra-nate-free-mood-ii-swing-radio-edit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/8313650",
+   "url": "https://genius.com/The-bucketheads-the-bomb-these-sounds-fall-into-my-mind-radio-edit-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/1951068",
+   "url": "https://genius.com/East-side-beat-ride-like-the-wind-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  },
+  {
+   "id": "genius:song/1267659",
+   "url": "https://genius.com/Interactive-forever-young-lyrics",
+   "kind": "database",
+   "note": "song credits (writer/producer)"
+  }
+ ],
+ "conflicts": [
+  {
+   "field": "title track 1-8",
+   "values": {
+    "discogs:release/30190112": "Hardcore Vibes (Video Mix)",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759": "Hardcore Vibes (Video Mix)",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html": "Hardcore Vibes"
+   },
+   "resolution": "Use Discogs/jpc spelling 'Hardcore Vibes (Video Mix)'; the duration source lists only 'Hardcore Vibes'."
+  },
+  {
+   "field": "title track 1-12",
+   "values": {
+    "discogs:release/30190112": "Show Me Love (Stonebridge Radio Edit)",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759": "Show Me Love (Stonebridge Radio Edit)",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html": "Show Me Love (Radio Mix)"
+   },
+   "resolution": "Use 'Show Me Love (Stonebridge Radio Edit)' (Discogs + jpc)."
+  },
+  {
+   "field": "title track 2-4",
+   "values": {
+    "discogs:release/30190112": "King Of My Castle (Roy Malone Kings Mix Edit)",
+    "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection/hnum/11714759": "King Of My Castle (Roy Malone Kings Mix Edit)",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html": "King Of My Castle (Roy Malone's Radio Edit)"
+   },
+   "resolution": "Use 'King Of My Castle (Roy Malone Kings Mix Edit)' (Discogs + jpc)."
+  },
+  {
+   "field": "title track 2-14",
+   "values": {
+    "discogs:release/30190112": "Techno Cat (Dance Like Your Dad Radio Mix)",
+    "web:https://music-box.life/dance/39727-back-to-the-90s-the-biggest-hit-collection-2024.html": "Techno Cat"
+   },
+   "resolution": "Use Discogs spelling with mix suffix."
+  }
+ ],
+ "missing": [
+  "No MusicBrainz release exists for this barcode/title; no physical-edition duration data in Discogs, jpc or decks.de - all 40 durations come from one web listing of the same 2×CD (music-box.life), so they are single-sourced",
+  "Discogs gives neither release country nor year; year 2024 taken from jpc.de and decks.de (both 2024-02-09), country DE inferred from German EAN prefix/label/distributor",
+  "Back/cover images on Discogs could not be read (HTTP 403), so printed title spelling is unverified",
+  "credits missing for 27 of 40 tracks"
+ ],
+ "alternatives": [
+  {
+   "description": "Back To The 90s: The Biggest Hit Collection Vol. 2, 2×CD, Pink Revolver, 2025, EAN 4018939546533",
+   "source": "web:https://www.jpc.de/jpcng/poprock/detail/-/art/various-artists-back-to-the-90s-the-biggest-hit-collection-vol-2/hnum/12022287",
+   "why_not": "different release (Vol. 2) and different barcode"
+  }
+ ],
+ "reasoning": "The barcode 4005902510288 is a valid EAN-13 and hits exactly one Discogs release (r30190112): 2×CD, Pink Revolver 264.2475.2, 40 tracks in 2×20 order. German retailers jpc.de and decks.de list the same EAN, label and catalogue number as a 2CD released 2024-02-09 and print a tracklist that matches Discogs track by track, so the edition (2CD, 2024) is secured. MusicBrainz has no release with this barcode or title, and there is no digital/streaming counterpart (iTunes, Deezer: no hit), which is consistent with a physical-only compilation. Discogs, jpc and decks give no track durations, so durations are taken from a web listing of the same 2×CD whose 40 titles are in identical order and whose stated total (2:31:21) equals the sum of its track times (9082 s); a few mix-name tags there are abbreviated, so the printed/Discogs titles were kept. All 46 performing artists (40 track acts plus featured The Mad Stuntman, The Biz and remixers Erick Morillo, StoneBridge, Roy Malone, JamX & De Leon) are listed with their tracks."
+}

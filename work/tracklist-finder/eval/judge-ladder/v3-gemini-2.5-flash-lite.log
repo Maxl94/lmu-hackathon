@@ -1,0 +1,62 @@
+⚪ <scratch>/jl/output/bravo30-ean.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ <scratch>/jl/output/kok-cd2004.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ <scratch>/jl/output/lohnde-mc.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ <scratch>/jl/output/ram-cd-us.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ <scratch>/jl/output/spatzen-mc-titleonly.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+🔴 trap-artist-mismatch: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+🔴 trap-fake-album: manuell klären (1.0) · edition 1 · tracklist 1 · durations 1 · sources 1 · 0 s · $0.000 · gates: not found; edition only level 1 - correct edition not secured; tracklist only level 1; less than half of the durations backed
+⚪ <scratch>/jl/output/trap-wrong-ean.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ <scratch>/jl/output/trap-wrong-format.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/bravo30-ean.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/kok-cd2004.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/kok-mc.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/kok-noartist-r1.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/lohnde-mc.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/ram-badean.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/ram-vinyl-r3.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode
+⚪ examples/spatzen-mc-titleonly.json: Fehler ToolError: Gemini gemini-2.5-flash-lite: HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use mode

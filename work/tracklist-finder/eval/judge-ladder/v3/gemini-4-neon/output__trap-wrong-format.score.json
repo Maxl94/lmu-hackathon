@@ -1,0 +1,113 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T14:55:32",
+ "overall": 1.45,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "result violates the output contract",
+  "edition only level 1 - correct edition not secured",
+  "tracklist only level 2",
+  "less than half of the durations backed",
+  "format in the result does not match the input"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 1,
+   "check": "Level 5: barcode in input -> NOT MET (input has no barcode); matches in >= 2 independent sources -> NOT MET (only discogs:release/24165131 and its own hosted image); format matches -> NOT MET (input is CD, result is Kassette). Level 4: barcode match in one source -> NOT MET; without barcode, title/artist/format unambiguous in >= 2 sources -> NOT MET (format contradicts input CD vs Kassette in discogs:release/24165131, and only one source family). Level 3: unambiguous in one source or multiple fitting editions with same tracklist -> NOT MET (the returned Cassette MC6109 contradicts the input format CD, and no CD edition was found in tl-mb, tl-discogs, or web search). Level 2: several editions fit the input with different tracklists -> NOT MET (no edition fits the input format CD). Level 1: no edition fits reliably, or the result contradicts the input (other format), or not found -> MET (input specifies format CD, but result returns Kassette discogs:release/24165131 because no CD edition was found).",
+   "summary": "The result contradicts the input format (returning Cassette MC6109 instead of the requested CD) because no CD edition was found in any source.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-mb search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD",
+    "bin/tl-discogs search --title \"Blasmusik aus Lohnde\" --artist \"Musikverein Lohnde\" --format CD"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 2,
+   "check": "Level 5: >= 2 independent sources of the same edition agree -> NOT MET (tracklist is from the Cassette edition, not the input CD edition, and image:discogs/back-cover is hosted on discogs:release/24165131 so they are not independent). Level 4: one complete source of the same edition confirmed by a second -> NOT MET (not the same edition as the input CD and no independent second source). Level 3: one source of the same edition, complete and plausible -> NOT MET (discogs:release/24165131 and image:discogs/back-cover document the Cassette edition with side positions A1-A6 and B1-B4, not the input CD edition). Level 2: tracklist taken from another edition, or gaps/unexplained deviations -> MET (all 10 tracks A1-A6 and B1-B4 are taken from the Cassette edition discogs:release/24165131 and its J-card image rather than the requested CD edition, though count, order, and titles match those cassette sources consistently).",
+   "summary": "The 10-track list matches the Cassette sources completely, but it is taken from another edition (Cassette MC6109 with A/B side positions) rather than the requested CD edition.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-discogs release 24165131",
+    "bin/tl-vision (secondary J-card image of 24165131)"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 1,
+   "check": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "0% of tracks have a duration, 0% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: database + independent primary source of the same edition -> NOT MET (image:discogs/back-cover is a secondary image hosted on the same Discogs release entry discogs:release/24165131 rather than an independent source, and both document the Cassette rather than the input CD). Level 4: two independent database entries or database + specialised collector site -> NOT MET (only one database entry discogs:release/24165131 was found; MusicBrainz and musik-sammler.de returned no hits). Level 3: one good database, or two sources that may have copied from each other (e.g. cover images hosted on the same database entry) -> MET (discogs:release/24165131 is a good database entry paired with its own hosted J-card image image:discogs/back-cover).",
+   "summary": "The evidence consists of one good database entry (Discogs) plus a J-card cover image hosted on that same Discogs entry, which are not independent.",
+   "evidence": [
+    "discogs:release/24165131",
+    "image:discogs/back-cover",
+    "bin/tl-discogs release 24165131",
+    "bin/tl-vision (secondary J-card image of 24165131)"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "Format contradiction with input: input requests format 'CD', whereas the returned release (discogs:release/24165131, catno MC6109) is a Cassette ('Kassette') with cassette side positions A1-A6 and B1-B4; no CD edition was found.",
+  "Non-independent sources: image:discogs/back-cover is hosted on the same Discogs release page (discogs:release/24165131) and cannot serve as an independent corroborating source.",
+  "Validation error and missing artist metadata: top-level 'artists' list is empty (flagged by validation_errors), and track-level artist fields are blank for all tracks A1-B4.",
+  "Missing durations: all 10 tracks (A1-A6, B1-B4) have no durations available in discogs:release/24165131 or image:discogs/back-cover.",
+  "Tool misuse during search: 'bin/tl-discogs versions 24165131 --format CD' was called with a release ID instead of a master ID (release 24165131 has no master), returning unrelated CDs."
+ ],
+ "facts": {
+  "status": "ambiguous",
+  "tracks": 10,
+  "input_fields": [
+   "title",
+   "artist",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": false,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 0.0,
+  "dur_confirmed_share": 0.0,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "image"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 1,
+  "agent_confidence": 0.5,
+  "validation_errors": [
+   "artists is empty: list every distinct artist on the carrier (main, featured, remixer), each once"
+  ],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "gemini-4-neon",
+  "seconds": 42.2,
+  "tokens_in": 15569,
+  "tokens_out": 5123,
+  "cost_usd": null,
+  "stop_reason": "STOP",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

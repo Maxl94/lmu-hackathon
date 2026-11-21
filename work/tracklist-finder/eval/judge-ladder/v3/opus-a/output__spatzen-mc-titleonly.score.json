@@ -1,0 +1,104 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:40:00",
+ "overall": 3.2,
+ "level": "rot",
+ "label": "manuell klären",
+ "gates": [
+  "edition only level 2 - correct edition not secured"
+ ],
+ "categories": {
+  "edition": {
+   "rating": 2,
+   "check": "Level 5: requires a barcode in the INPUT – NOT MET (input has only title and format MC). Level 4: needs title, artist, format and one further attribute unambiguous in >= 2 sources, with no fitting competing edition having a different tracklist. Title and format are MET (MB e0d210c6 cassette and Discogs 2297987 cassette agree on label Koch Records Special, cat. no. 221 190, 1985, barcode 9002722211901). The no-competitor condition is NOT MET: the input gives no artist, and the Discogs search lists discogs:release/8491193 'Various – Ich Sag's Dir Mit Musik' (Reader's Digest 1995, Box Set, Cassette). That release fits title + MC but is a different artist and certainly has a different tracklist. Level 3: requires either no competing edition or all fitting editions sharing a tracklist – NOT MET for the same reason. The Koch cassette variants (2297987, 15349631, 24889304) do share one tracklist, but the Reader's Digest cassette does not; the Polish AMA cassette 16402359 was not checked. Level 2: several editions fit the input and one has a different tracklist; the choice of Kastelruther Spatzen rests on plausibility (the album, not a compilation) – MET.",
+   "summary": "Without an artist in the input, the Reader's Digest various-artists cassette box 'Ich Sag's Dir Mit Musik' (discogs 8491193) also fits title and MC format and has a different tracklist, so the edition cannot exceed 2.",
+   "evidence": [
+    "tl-discogs search --title \"Ich sag's dir mit Musik\"",
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "discogs:release/8491193"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5 requires >= 2 independent sources of the same edition agreeing on count, order and titles. MB cassette e0d210c6 and Discogs cassette 2297987 both list the same 12 tracks A1–B6 in the same order with identical titles apart from capitalisation – MET. They are independent, as shown by their differing durations – MET. The official band site (MC-Nummer 221190) also confirms the 12 titles and their order.",
+   "summary": "MusicBrainz and Discogs entries for the same cassette independently agree on all 12 titles and their order, confirmed by the band's official site.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987",
+    "web:https://kastelrutherspatzen.de/merlin/taxonomy/term/26"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 3,
+   "check": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 50% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5 requires a database plus an independent primary source of the same edition (read print, or label/manufacturer information). The databases are MET. The primary-source condition is only partially met: the official artist site lists MC no. 221190 with the tracklist, but it is artist information, not label print, and the agent did not cite it. Discogs notes do quote the cassette print, but they are part of the database entry. Counted as NOT MET, conservatively. Level 4 requires two independent database entries with differing details: MB e0d210c6 and Discogs 2297987 differ in durations and label formatting – MET.",
+   "summary": "Two independent database entries (MusicBrainz and Discogs) for the same cassette, without a cited primary source.",
+   "evidence": [
+    "musicbrainz:release/e0d210c6-ca75-3482-bff4-f33715a070c3",
+    "discogs:release/2297987"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The competing release discogs:release/8491193 (Various, Reader's Digest 1995 cassette box 'Ich Sag's Dir Mit Musik') fits title + MC but is not listed among the alternatives or ruled out.",
+  "The Polish AMA cassette discogs:release/16402359 (same title, MC) was not examined.",
+  "A6 duration: Deezer and Last.fm are digital/other-edition sources (the Last.fm mbid points to the vinyl a1ca35f7). They do not confirm the cassette duration specifically, and all Discogs cassette entries give 3:03.",
+  "Durations of other tracks also differ slightly between MB and Discogs (e.g. A1 199 vs 202 s, B4 138 vs 136 s); MB values were adopted without noting this.",
+  "Edition label 'Original 1985 Edition' and country AT are agent interpretations; Discogs gives Germany, Austria & Switzerland."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 12,
+  "input_fields": [
+   "title",
+   "format"
+  ],
+  "input_has_barcode": false,
+  "format_match": true,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.5,
+  "dur_conflicts": 1,
+  "source_families": [
+   "deezer",
+   "discogs",
+   "lastfm",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "streaming",
+   "web"
+  ],
+  "conflicts": 1,
+  "alternatives": 2,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 20.6,
+  "tokens_in": 22984,
+  "tokens_out": 2059,
+  "cost_usd": 0.13312,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

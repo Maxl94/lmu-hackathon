@@ -1,0 +1,119 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T16:06:36",
+ "overall": 3.85,
+ "level": "gelb",
+ "label": "kurz prüfen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 4,
+   "check": "Level 5: input has no barcode, NOT MET. Level 4: title and artist match in both Discogs and MB; label Can Can Recordings, catno CC001, year 2013 and country DE each appear in both databases (MET). The only other fitting editions are the MB digital 12-track release (digital, so not a competing edition) and the DJ-mix digital single (23:34 continuous mix, not the album). The MB CD entry has the same tracklist as the LP, so it does not conflict on tracklist. Level 4 MET.",
+   "summary": "Title, artist, label, catno and year agree across two databases and the only competing physical entry shares the same tracklist, but the input has no barcode and the format conflict is resolved by inference.",
+   "evidence": [
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "discogs:release/5204273",
+    "web:hhv",
+    "musicbrainz:release/eef84b47-74b8-4b6d-a6c0-131173f5c577",
+    "musicbrainz:release/81e77c20-e36b-473b-b42a-f45fe43e7c4a"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 4,
+   "check": "Level 5: NOT MET, only Discogs confirms the LP tracklist independently; the MB CD entry is treated by the agent as a format error of the same product, so independence is not established. Level 4: one complete source (Discogs LP, 13 tracks, B1 duration missing) confirmed by MB (13 tracks, same order and durations); deviations are explained spelling variants of the skit titles (Kippen (Skit) vs Kippen Skit; Cüneyt (Skit) vs Cüneyt Skit). MET.",
+   "summary": "Discogs LP is complete and MB confirms count, order and durations, with only explained skit-title spelling deviations.",
+   "evidence": [
+    "discogs:release/5204273",
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "tl-mb release ad68439b-6423-4a79-a543-f68edacf5363",
+    "tl-discogs release 5204273"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "92% of tracks have a duration, 92% confirmed by >= 2 sources, 0 conflicts",
+   "summary": "92% of tracks have a duration, 92% confirmed by >= 2 sources, 0 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 3,
+   "check": "Level 5: NOT MET, the back cover could not be read (HTTP 403) and matrix etchings are only quoted from the Discogs database notes, so no independent primary source of this edition was read. Level 4: MB and Discogs are two database entries but MB's CD entry may be copied from Discogs (same barcode, catno, tracklist), so independence is doubtful. Level 3: one good database (Discogs) plus MB that may have copied from it; HHV shop only confirms vinyl LP 2013 DE. Level 3 applies.",
+   "summary": "Discogs is the main database source, MB likely shares its data, and no primary read of the cover or label print was achieved.",
+   "evidence": [
+    "discogs:release/5204273",
+    "musicbrainz:release/ad68439b-6423-4a79-a543-f68edacf5363",
+    "web:hhv",
+    "tl-vision 403 error on Discogs image"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The input contains no barcode and no format; the agent chose Vinyl LP over the MB entry's CD format, based on the Discogs back-cover barcode and matrix etchings, which were not read directly (back cover HTTP 403).",
+  "The MB CD entry (ad68439b) is asserted to be a format data error without evidence; a physical CD with the same barcode and catno cannot be excluded.",
+  "Discogs matrix etchings are cited as evidence but are only in the Discogs database notes, not verified on the medium.",
+  "Missing info says credits are missing for 13 of 13 tracks, yet track artist fields list Tua (A5), Amewu (A6, B4) from both databases; the 'missing' claim is inconsistent with the result.",
+  "Track B1 'Kippen (Skit)' has no duration in either database; total 1632 s is therefore incomplete for that track.",
+  "Spelling of skit titles (B1, B3) taken from MB while Discogs shows no parentheses; the agent's assumption that Discogs dropped parentheses is not verified.",
+  "The 'Digital Media' MB release (eef84b47) has a different tracklist (12 tracks, no Kippen skit, different durations) and was correctly excluded as digital."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "input_fields": [
+   "title",
+   "artist"
+  ],
+  "input_has_barcode": false,
+  "release_format": "Vinyl",
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_other_edition": 0,
+  "dur_share": 0.923,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 0,
+  "source_families": [
+   "discogs",
+   "genius",
+   "musicbrainz",
+   "web"
+  ],
+  "source_kinds": [
+   "database",
+   "shop",
+   "streaming"
+  ],
+  "conflicts": 3,
+  "alternatives": 3,
+  "agent_confidence": 0.85,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-haiku-5-5",
+  "seconds": 18.1,
+  "tokens_in": 13051,
+  "tokens_out": 3617,
+  "cost_usd": 0.00311,
+  "stop_reason": "end_turn",
+  "fallback_from": null
+ },
+ "weights": {
+  "edition": 0.5,
+  "tracklist": 0.35,
+  "durations": 0.0,
+  "sources": 0.15
+ },
+ "bonus": {
+  "durations": "ok",
+  "durations_rating": 5,
+  "credits": {
+   "tracks": 9,
+   "of": 13
+  }
+ }
+}

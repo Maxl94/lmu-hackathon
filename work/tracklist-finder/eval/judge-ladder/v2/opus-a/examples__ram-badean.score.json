@@ -1,0 +1,101 @@
+{
+ "version": 2,
+ "mode": "agent",
+ "scored_at": "2026-11-20T12:38:55",
+ "overall": 4.9,
+ "level": "grün",
+ "label": "übernehmen",
+ "gates": [],
+ "categories": {
+  "edition": {
+   "rating": 5,
+   "check": "Level 5: The input EAN 888837168626 has an invalid check digit. Correcting only the check digit gives 888837168625 (step 1). MET: this barcode matches the chosen Daft Punk CD edition in MusicBrainz f6758afb (step 6, barcode 0888837168625, Columbia 88883716862) and in Discogs 4729785 (step 7, barcode 888837168625, Europe). Those are 2 independent sources. MET: format CD and artist match (FACTS format_match true, artist_similarity 100). MET: no other edition with the same barcode and a different tracklist was found. All MB hits for this barcode are 13-track CDs (step 4), and the Discogs hits are CD pressings of master 556257 plus one unofficial Russian cassette (step 5). Editions with different tracklists (JP 14 tracks, 10th Anniversary 2CD, vinyl) carry other barcodes (step 14). Minor caveat: the tl-gtin output notes that a typo in another digit is also possible, but title and artist confirm the corrected barcode. All conditions met, so I stop at 5.",
+   "summary": "The check-digit-corrected barcode 888837168625 matches the 13-track standard CD in both MusicBrainz and Discogs, and every competing edition with a different tracklist has a different barcode.",
+   "evidence": [
+    "tl-gtin 888837168626",
+    "tl-mb search --barcode 888837168625",
+    "tl-discogs search --barcode 0888837168625",
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "tl-mb group aa997ea0-2936-40bd-884d-3af8a0e064dc"
+   ],
+   "by": "judge"
+  },
+  "tracklist": {
+   "rating": 5,
+   "check": "Level 5: at least 2 independent sources of the same edition must agree on count, order and titles. MET: MusicBrainz f6758afb (step 6) and Discogs 4729785 (step 7) both list the same 13 titles in the same order, with only capitalisation and apostrophe variants. The back cover read via vision (step 9) also shows the same 13 titles in the same sequence, though without position numbers. Durations differ only by rounding, except Contact (384 vs 381 s); this is documented as a conflict and does not affect count, order or titles. All conditions met, so I stop at 5.",
+   "summary": "MusicBrainz and Discogs for the same EU edition agree on all 13 titles and their order, and the back cover confirms them.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  },
+  "durations": {
+   "rating": 5,
+   "check": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "summary": "100% of tracks have a duration, 92% confirmed by >= 2 sources, 1 conflicts",
+   "evidence": [],
+   "by": "code"
+  },
+  "sources": {
+   "rating": 4,
+   "check": "Level 5: a database plus an independent primary source of the same edition. Partially MET: the back cover was read (step 9). NOT MET as independent: that image is hosted on the same MusicBrainz entry (CAA for f6758afb), which the rubric names as a possibly-copied case. Level 4: two independent database entries recognisable by differing details. MET: MusicBrainz (CD-TOC ms durations, Contact 6:24) and Discogs (different durations, Contact 6:21, matrix/SID details, GEMA/BIEM) show differing details. I stop at 4.",
+   "summary": "There are two independent database entries (MusicBrainz and Discogs) with differing details, but the cover scan comes from the MusicBrainz/CAA entry and is not an independent primary source.",
+   "evidence": [
+    "musicbrainz:release/f6758afb-ecff-410e-8979-b131cfa3c6d3",
+    "discogs:release/4729785",
+    "image:https://coverartarchive.org/release/f6758afb-ecff-410e-8979-b131cfa3c6d3/5748588554-1200.jpg"
+   ],
+   "by": "judge"
+  }
+ },
+ "concerns": [
+  "The barcode match exists only after check-digit correction. The tl-gtin output (step 1) itself notes that a typo in another digit is also possible; the choice rests on title/artist plausibility.",
+  "Track 13 'Contact': duration conflict, 384 s (MusicBrainz CD-TOC) vs 381 s (Discogs). The claim that Discogs reflects the digital version is an unsupported assumption.",
+  "Track 13 duration_sources cites the US pressing musicbrainz:release/a8308466; this is another pressing, not the chosen DE edition.",
+  "The MusicBrainz search lists f6758afb as '2013-05-20 FR' (step 4), while the release view shows 'DE 2013-05-17' (step 6). The country 'DE' in the result is not cleanly explained.",
+  "The back-cover image has no position numbers (step 9), so the order confirmation from the cover relies on the printed sequence only."
+ ],
+ "facts": {
+  "status": "found",
+  "tracks": 13,
+  "ean_checksum_ok": false,
+  "barcode_match": "after check-digit correction",
+  "format_match": true,
+  "artist_similarity": 100,
+  "title_similarity": 100,
+  "dur_share": 1.0,
+  "dur_confirmed_share": 0.923,
+  "dur_conflicts": 1,
+  "source_families": [
+   "discogs",
+   "image",
+   "musicbrainz"
+  ],
+  "source_kinds": [
+   "database",
+   "image"
+  ],
+  "conflicts": 1,
+  "alternatives": 4,
+  "agent_confidence": 0.9,
+  "validation_errors": [],
+  "validation_warnings": []
+ },
+ "judge": {
+  "model": "claude-opus-5-5",
+  "seconds": 21.9,
+  "tokens_in": 28841,
+  "tokens_out": 2291,
+  "cost_usd": 0.16118,
+  "stop_reason": "end_turn"
+ },
+ "weights": {
+  "edition": 0.4,
+  "tracklist": 0.25,
+  "durations": 0.25,
+  "sources": 0.1
+ }
+}

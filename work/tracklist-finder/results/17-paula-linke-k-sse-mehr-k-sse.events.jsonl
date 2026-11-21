@@ -1,0 +1,101 @@
+{"ts": 1795186355.1, "event": "run_start", "input": {"title": "Küsse! Mehr Küsse!", "artist": "Paula Linke"}, "model": "openrouter/deepseek/deepseek-v4.1-flash-1017", "fast": true, "judge": true, "judge_model": "claude-haiku-5-5"}
+{"ts": 1795186355.1, "event": "phase_start", "phase": "fast", "actor": "Schnellweg (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186355.1, "event": "fast_step", "msg": "→ no fast path: no EAN"}
+{"ts": 1795186355.1, "event": "phase_end", "phase": "fast", "ok": false, "msg": "→ no fast path: no EAN"}
+{"ts": 1795186355.1, "event": "phase_start", "phase": "agent", "actor": "Recherche-Agent (openrouter/deepseek/deepseek-v4.1-flash-1017)"}
+{"ts": 1795186365.58, "event": "tool_start", "tool": "tl-search", "args": "\"Küsse! Mehr Küsse!\" Paula Linke"}
+{"ts": 1795186365.59, "event": "tool_start", "tool": "tl-mb", "args": "search --title Küsse! Mehr Küsse! --artist Paula Linke"}
+{"ts": 1795186365.59, "event": "tool_end", "tool": "tl-mb", "args": "search --title Küsse! Mehr Küsse! --artist Paula Linke", "seconds": 0.0, "ok": true}
+{"ts": 1795186365.59, "event": "tool_end", "tool": "tl-search", "args": "\"Küsse! Mehr Küsse!\" Paula Linke", "seconds": 0.0, "ok": true}
+{"ts": 1795186365.71, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Küsse! Mehr Küsse! --artist Paula Linke"}
+{"ts": 1795186365.71, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Küsse! Mehr Küsse! --artist Paula Linke", "seconds": 0.0, "ok": true}
+{"ts": 1795186454.4, "event": "tool_start", "tool": "tl-mb", "args": "search --title Küsse --artist Paula Linke"}
+{"ts": 1795186454.4, "event": "tool_end", "tool": "tl-mb", "args": "search --title Küsse --artist Paula Linke", "seconds": 0.0, "ok": true}
+{"ts": 1795186454.45, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep track|Track|Lied|Minuten|:.*[0-9]"}
+{"ts": 1795186454.5, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep track|Track|Lied|Minuten|:.*[0-9]", "seconds": 0.1, "ok": true}
+{"ts": 1795186454.53, "event": "tool_start", "tool": "tl-mb", "args": "search --title Küsse"}
+{"ts": 1795186476.47, "event": "tool_end", "tool": "tl-mb", "args": "search --title Küsse", "seconds": 21.9, "ok": true}
+{"ts": 1795186476.62, "event": "tool_start", "tool": "tl-discogs", "args": "search --artist Paula Linke"}
+{"ts": 1795186476.62, "event": "tool_end", "tool": "tl-discogs", "args": "search --artist Paula Linke", "seconds": 0.0, "ok": true}
+{"ts": 1795186608.27, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep ^[0-9]+\\. \\|"}
+{"ts": 1795186608.28, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep Titel kaufen\\|^[0-9]\\."}
+{"ts": 1795186608.34, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep ^[0-9]+\\. \\|", "seconds": 0.1, "ok": true}
+{"ts": 1795186608.35, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --grep Titel kaufen\\|^[0-9]\\.", "seconds": 0.1, "ok": true}
+{"ts": 1795186616.61, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep trackinfo\\|data-tralbum\\|duration"}
+{"ts": 1795186616.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode browser --grep Titel kaufen"}
+{"ts": 1795186616.68, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep trackinfo\\|data-tralbum\\|duration", "seconds": 0.1, "ok": true}
+{"ts": 1795186620.83, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode browser --grep Titel kaufen", "seconds": 4.2, "ok": true}
+{"ts": 1795186625.13, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep data-tralbum|band_id|tralbum_id|current"}
+{"ts": 1795186625.13, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Tampon|Geputzte|Flügel|Sorgen"}
+{"ts": 1795186625.2, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep data-tralbum|band_id|tralbum_id|current", "seconds": 0.1, "ok": true}
+{"ts": 1795186625.2, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Tampon|Geputzte|Flügel|Sorgen", "seconds": 0.1, "ok": true}
+{"ts": 1795186629.57, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep 8\\. \\||9\\. \\||10\\. \\|"}
+{"ts": 1795186629.64, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep 8\\. \\||9\\. \\||10\\. \\|", "seconds": 0.1, "ok": true}
+{"ts": 1795186639.51, "event": "tool_start", "tool": "tl-mb", "args": "search --artist Paula Linke"}
+{"ts": 1795186639.51, "event": "tool_end", "tool": "tl-mb", "args": "search --artist Paula Linke", "seconds": 0.0, "ok": false}
+{"ts": 1795186639.57, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep released|2026|Label|©|℗|barcode|EAN|LC |Zoundr|Kick"}
+{"ts": 1795186639.64, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep released|2026|Label|©|℗|barcode|EAN|LC |Zoundr|Kick", "seconds": 0.1, "ok": true}
+{"ts": 1795186639.68, "event": "tool_start", "tool": "tl-mb", "args": "search --title KÜSSE --artist Paula Linke"}
+{"ts": 1795186670.68, "event": "tool_end", "tool": "tl-mb", "args": "search --title KÜSSE --artist Paula Linke", "seconds": 31.0, "ok": true}
+{"ts": 1795186678.64, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Zoundr|LC |GEMA|Label|Katalognummer|Bestellnummer|EAN|Barcode"}
+{"ts": 1795186678.66, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436569_10.jpg --context Read the back cover of this CD. Extract the tracklist, barcode, label, catalogue number, and any release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke."}
+{"ts": 1795186678.71, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Zoundr|LC |GEMA|Label|Katalognummer|Bestellnummer|EAN|Barcode", "seconds": 0.1, "ok": true}
+{"ts": 1795186681.7, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436569_10.jpg --context Read the back cover of this CD. Extract the tracklist, barcode, label, catalogue number, and any release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke.", "seconds": 3.0, "ok": true}
+{"ts": 1795186685.44, "event": "tool_start", "tool": "tl-discogs", "args": "search --title Küsse --artist Paula Linke"}
+{"ts": 1795186685.51, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436572_10.jpg --context Read this CD package image. Extract the tracklist, barcode, label, catalogue number, and release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke."}
+{"ts": 1795186685.54, "event": "tool_start", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436570_10.jpg --context Read this CD package image. Extract the tracklist, barcode, label, catalogue number, and release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke."}
+{"ts": 1795186685.87, "event": "tool_end", "tool": "tl-discogs", "args": "search --title Küsse --artist Paula Linke", "seconds": 0.4, "ok": true}
+{"ts": 1795186686.11, "event": "tool_start", "tool": "tl-mb", "args": "search --title Küsse! Mehr Küsse!"}
+{"ts": 1795186686.11, "event": "tool_end", "tool": "tl-mb", "args": "search --title Küsse! Mehr Küsse!", "seconds": 0.0, "ok": true}
+{"ts": 1795186690.05, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436572_10.jpg --context Read this CD package image. Extract the tracklist, barcode, label, catalogue number, and release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke.", "seconds": 4.5, "ok": true}
+{"ts": 1795186692.11, "event": "tool_end", "tool": "tl-vision", "args": "https://f4.bcbits.com/img/0045436570_10.jpg --context Read this CD package image. Extract the tracklist, barcode, label, catalogue number, and release date. The album is KÜSSE! MEHR KÜSSE! by Paula Linke.", "seconds": 6.6, "ok": true}
+{"ts": 1795186706.75, "event": "tool_start", "tool": "tl-search", "args": "Paula Linke Küsse Mehr Küsse CD Zoundr Label"}
+{"ts": 1795186706.79, "event": "tool_start", "tool": "tl-scrape", "args": "https://paula-linke.de/ --grep Küsse|CD|Shop|Album|Kaufen"}
+{"ts": 1795186706.8, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Text & Musik|Violine|Gesang|Gitarre|Bass|Schlagzeug|Produktion|Mix|Master|Label|Zoundr|Leipzig|Aufnahme"}
+{"ts": 1795186706.82, "event": "tool_end", "tool": "tl-scrape", "args": "https://paula-linke.de/ --grep Küsse|CD|Shop|Album|Kaufen", "seconds": 0.0, "ok": true}
+{"ts": 1795186706.86, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Text & Musik|Violine|Gesang|Gitarre|Bass|Schlagzeug|Produktion|Mix|Master|Label|Zoundr|Leipzig|Aufnahme", "seconds": 0.1, "ok": true}
+{"ts": 1795186707.95, "event": "tool_end", "tool": "tl-search", "args": "Paula Linke Küsse Mehr Küsse CD Zoundr Label", "seconds": 1.2, "ok": true}
+{"ts": 1795186719.6, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Lizenz|Sorgen von morgen|Tampon|Geputzte|Flügel"}
+{"ts": 1795186719.65, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Lizenz|Sorgen von morgen|Tampon|Geputzte|Flügel", "seconds": 0.0, "ok": true}
+{"ts": 1795186719.66, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep ^[0-9]+\\."}
+{"ts": 1795186719.71, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep ^[0-9]+\\.", "seconds": 0.0, "ok": true}
+{"ts": 1795186722.84, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep ^8\\.|^9\\.|^10\\."}
+{"ts": 1795186722.87, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Lizenz"}
+{"ts": 1795186722.88, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep ^8\\.|^9\\.|^10\\.", "seconds": 0.0, "ok": true}
+{"ts": 1795186722.91, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Lizenz", "seconds": 0.0, "ok": true}
+{"ts": 1795186723.11, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Titel kaufen"}
+{"ts": 1795186723.15, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Titel kaufen", "seconds": 0.0, "ok": true}
+{"ts": 1795186726.59, "event": "tool_start", "tool": "tl-scrape", "args": "https://www.startnext.com/paula-linke-kuesse-mehr-kuesse --grep Track|Lied|Titel|CD|Label|Zoundr|Barcode|EAN"}
+{"ts": 1795186726.6, "event": "tool_start", "tool": "tl-scrape", "args": "https://1.brf.be/sendungen/chansons/1220767/ --grep Küsse|Titel|Track|Lied|Label|Zoundr|erschienen|3. Juli"}
+{"ts": 1795186726.6, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Die Stunden ziehen vorbei"}
+{"ts": 1795186726.63, "event": "tool_end", "tool": "tl-scrape", "args": "https://1.brf.be/sendungen/chansons/1220767/ --grep Küsse|Titel|Track|Lied|Label|Zoundr|erschienen|3. Juli", "seconds": 0.0, "ok": true}
+{"ts": 1795186726.66, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --mode http --grep Die Stunden ziehen vorbei", "seconds": 0.1, "ok": true}
+{"ts": 1795186728.38, "event": "tool_end", "tool": "tl-scrape", "args": "https://www.startnext.com/paula-linke-kuesse-mehr-kuesse --grep Track|Lied|Titel|CD|Label|Zoundr|Barcode|EAN", "seconds": 1.8, "ok": true}
+{"ts": 1795186736.57, "event": "tool_start", "tool": "tl-itunes", "args": "search Paula Linke Küsse"}
+{"ts": 1795186736.57, "event": "tool_end", "tool": "tl-itunes", "args": "search Paula Linke Küsse", "seconds": 0.0, "ok": true}
+{"ts": 1795186736.63, "event": "tool_start", "tool": "tl-scrape", "args": "https://paula-linke.de/shop --grep Küsse|CD|Track|Titel|Lied"}
+{"ts": 1795186736.73, "event": "tool_start", "tool": "tl-deezer", "args": "search --artist Paula Linke --title Küsse"}
+{"ts": 1795186737.13, "event": "tool_end", "tool": "tl-deezer", "args": "search --artist Paula Linke --title Küsse", "seconds": 0.4, "ok": true}
+{"ts": 1795186746.66, "event": "tool_end", "tool": "tl-scrape", "args": "https://paula-linke.de/shop --grep Küsse|CD|Track|Titel|Lied", "seconds": 10.0, "ok": true}
+{"ts": 1795186750.24, "event": "tool_start", "tool": "tl-itunes", "args": "album 6798000134"}
+{"ts": 1795186750.24, "event": "tool_end", "tool": "tl-itunes", "args": "album 6798000134", "seconds": 0.0, "ok": true}
+{"ts": 1795186750.41, "event": "tool_start", "tool": "tl-deezer", "args": "album 1046252222"}
+{"ts": 1795186750.41, "event": "tool_end", "tool": "tl-deezer", "args": "album 1046252222", "seconds": 0.0, "ok": true}
+{"ts": 1795186820.17, "event": "tool_start", "tool": "tl-gtin", "args": "4068992790596"}
+{"ts": 1795186820.17, "event": "tool_end", "tool": "tl-gtin", "args": "4068992790596", "seconds": 0.0, "ok": true}
+{"ts": 1795186820.17, "event": "tool_start", "tool": "tl-mb", "args": "search --title KÜSSE! MEHR KÜSSE!"}
+{"ts": 1795186820.34, "event": "tool_start", "tool": "tl-mb", "args": "search --barcode 4068992790596"}
+{"ts": 1795186821.55, "event": "tool_end", "tool": "tl-mb", "args": "search --barcode 4068992790596", "seconds": 1.2, "ok": true}
+{"ts": 1795186821.73, "event": "tool_start", "tool": "tl-discogs", "args": "search --barcode 4068992790596"}
+{"ts": 1795186823.13, "event": "tool_end", "tool": "tl-discogs", "args": "search --barcode 4068992790596", "seconds": 1.4, "ok": true}
+{"ts": 1795186826.88, "event": "tool_end", "tool": "tl-mb", "args": "search --title KÜSSE! MEHR KÜSSE!", "seconds": 6.7, "ok": true}
+{"ts": 1795186827.06, "event": "tool_start", "tool": "tl-discogs", "args": "search --title KÜSSE! MEHR KÜSSE!"}
+{"ts": 1795186827.49, "event": "tool_end", "tool": "tl-discogs", "args": "search --title KÜSSE! MEHR KÜSSE!", "seconds": 0.4, "ok": true}
+{"ts": 1795186832.92, "event": "tool_start", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --links"}
+{"ts": 1795186832.96, "event": "tool_end", "tool": "tl-scrape", "args": "https://paulalinke.bandcamp.com/album/k-sse-mehr-k-sse --links", "seconds": 0.0, "ok": true}
+{"ts": 1795186870.41, "event": "phase_end", "phase": "agent", "ok": true, "rc": "0", "tool_calls": 41, "steps": 24}
+{"ts": 1795186870.42, "event": "phase_start", "phase": "credits", "actor": "Credits + ISRC (Code: MusicBrainz + Discogs)"}
+{"ts": 1795186870.42, "event": "phase_end", "phase": "credits", "ok": true, "msg": "credits 10 tracks, ISRC 0"}
+{"ts": 1795186870.42, "event": "phase_start", "phase": "judge", "actor": "Prüfmodell (claude-haiku-5-5)"}
+{"ts": 1795186885.93, "event": "phase_end", "phase": "judge", "ok": true, "level": "grün", "overall": 4.15, "error": null}
+{"ts": 1795186885.93, "event": "run_end", "valid": true, "status": "found", "level": "grün", "overall": 4.15, "tracks": 10, "wall_s": 515.3, "judge_s": 15.5, "cost_usd": 0.0525, "mode": "agent", "errors": []}
